@@ -1,5 +1,5 @@
 # 忽略_book文件
-/_book
+_book
 
 # Editor directories and files
 .vscode/*
