@@ -62,7 +62,6 @@ jdk8-（8gb的运行内存）
 
 这里的第一行便是环境变量，后边两行是配置的`flutter`的国内镜像（上海交大的），下载比较快一些。
 
-![image-20220711170840550](C:\Users\jasonk0\AppData\Roaming\Typora\typora-user-images\image-20220711170840550.png)
 ![1745dfd85ccc1adbd3da8f220736f8c1.png](https://i.jpg.dog/file/jpg-dog/1745dfd85ccc1adbd3da8f220736f8c1.png)
 
 之后运行`flutter doctor`，你会看到类似如下图所示（因为我已经装了几个了），你可以不用管其他的，如果你不需要Android的测试环境，Chrome也没必要，那就完全可以继续往下走。
@@ -71,7 +70,6 @@ jdk8-（8gb的运行内存）
 >
 > 且如果你不幸是64位的，你还需要安装一些32位的依赖，[看这里](https://developer.android.google.cn/studio/install?hl=zh-cn#64bit-libs)
 
-![image-20220711170641134](C:\Users\jasonk0\AppData\Roaming\Typora\typora-user-images\image-20220711170641134.png)
 ![36188a5e48244f985297ec811ff52612.png](https://i.jpg.dog/file/jpg-dog/36188a5e48244f985297ec811ff52612.png)
 
 
@@ -83,7 +81,6 @@ jdk8-（8gb的运行内存）
 
 然后`flutter run `跑起来！或者右下角选取一个`devices`（不出意外就一个web）然后`F5`
 
-![image-20220711172301236](C:\Users\jasonk0\AppData\Roaming\Typora\typora-user-images\image-20220711172301236.png)
 ![4857b61ff45a8e7fe1eaa2f99156f50b.png](https://i.jpg.dog/file/jpg-dog/4857b61ff45a8e7fe1eaa2f99156f50b.png)
 
 反正我没跑起来。。。

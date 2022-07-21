@@ -312,9 +312,7 @@ export class CountdownViewChildParentComponent implements AfterViewInit {
 ### 指令
 
 - `@Input`
-
-![image-20220705091127582](C:\Users\jasonk0\AppData\Roaming\Typora\typora-user-images\image-20220705091127582.png)
-![6cf7002982c4a70ebcb23e66ff4fcd78.png](https://i.jpg.dog/file/jpg-dog/6cf7002982c4a70ebcb23e66ff4fcd78.png)
+  ![6cf7002982c4a70ebcb23e66ff4fcd78.png](https://i.jpg.dog/file/jpg-dog/6cf7002982c4a70ebcb23e66ff4fcd78.png)
 
 `[item]`即为子组件通过`input`定义的输入属性，父组件通过赋值将自己的数据传递给子组件的`item`
 
@@ -349,10 +347,8 @@ export class xxx{
 ```
 
 -  同时使用两者
-
-![image-20220705092653290](C:\Users\jasonk0\AppData\Roaming\Typora\typora-user-images\image-20220705092653290.png)
-![e527a4d827eb6de516701b38f8690f13.png](https://i.jpg.dog/file/jpg-dog/e527a4d827eb6de516701b38f8690f13.png)
-​	
+   ![e527a4d827eb6de516701b38f8690f13.png](https://i.jpg.dog/file/jpg-dog/e527a4d827eb6de516701b38f8690f13.png)
+   ​	
 
 ```mermaid
 graph LR;
@@ -908,18 +904,14 @@ export class MyComponent {}
 
 `onPush`策略的`MainComponent`面临非本组件的事件的时候，并不会触发变更检测(包括其子组件)
 
-![image-20220707100435529](C:\Users\jasonk0\AppData\Roaming\Typora\typora-user-images\image-20220707100435529.png)
-
 ![ea34be569ec4265adb2d4f57c6df3e9f.png](https://i.jpg.dog/file/jpg-dog/ea34be569ec4265adb2d4f57c6df3e9f.png)
 
 `onPush`策略的`MainComponent`面临自己的事件的时候就会触发变更检测，此时其默认策略的子组件也会触发变更检测，而`onPush`策略的子组件`LoginComponent`并不会发出发变更检测，因为事件不发生在它的内部
 
-![image-20220707100450102](C:\Users\jasonk0\AppData\Roaming\Typora\typora-user-images\image-20220707100450102.png)
+
 ![888eb645be19b0bbaa38dced7e5589d2.png](https://i.jpg.dog/file/jpg-dog/888eb645be19b0bbaa38dced7e5589d2.png)
 
 面对新的输入和事件是相同的处理方式，和情况
-
-![image-20220707100617792](C:\Users\jasonk0\AppData\Roaming\Typora\typora-user-images\image-20220707100617792.png)
 ![a9761f40faa44563d819237e4543f3b1.png](https://i.jpg.dog/file/jpg-dog/a9761f40faa44563d819237e4543f3b1.png)
 
 #### 值得特别注意的是
