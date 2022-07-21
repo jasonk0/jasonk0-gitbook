@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>网络安全攻防 · HonKit</title>
+        <title>踩坑日记 · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 3.7.5">
@@ -56,8 +56,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="../计算机网络/计算机网络.html" />
     
-    <link rel="prev" href="浏览器状态同步和路由.html" />
+    
+    <link rel="prev" href="预习资料.html" />
     
 
     </head>
@@ -429,9 +431,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="../杂篇/直播.html">
+        <li class="chapter " data-level="1.7.1" data-path="直播.html">
             
-                <a href="../杂篇/直播.html">
+                <a href="直播.html">
             
                     
                     直播
@@ -442,9 +444,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="../杂篇/预习资料.html">
+        <li class="chapter " data-level="1.7.2" data-path="预习资料.html">
             
-                <a href="../杂篇/预习资料.html">
+                <a href="预习资料.html">
             
                     
                     预习资料
@@ -455,9 +457,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.3" data-path="../杂篇/踩坑日记.html">
+        <li class="chapter active" data-level="1.7.3" data-path="踩坑日记.html">
             
-                <a href="../杂篇/踩坑日记.html">
+                <a href="踩坑日记.html">
             
                     
                     踩坑日记
@@ -473,9 +475,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="计算机网络.html">
+        <li class="chapter " data-level="1.8" data-path="../计算机网络/计算机网络.html">
             
-                <a href="计算机网络.html">
+                <a href="../计算机网络/计算机网络.html">
             
                     
                     计算机网络
@@ -487,9 +489,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.1" data-path="工具链和其他.html">
+        <li class="chapter " data-level="1.8.1" data-path="../计算机网络/工具链和其他.html">
             
-                <a href="工具链和其他.html">
+                <a href="../计算机网络/工具链和其他.html">
             
                     
                     工具链和其他
@@ -500,9 +502,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.2" data-path="浏览器状态同步和路由.html">
+        <li class="chapter " data-level="1.8.2" data-path="../计算机网络/浏览器状态同步和路由.html">
             
-                <a href="浏览器状态同步和路由.html">
+                <a href="../计算机网络/浏览器状态同步和路由.html">
             
                     
                     浏览器状态同步和路由
@@ -513,9 +515,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8.3" data-path="网络安全攻防.html">
+        <li class="chapter " data-level="1.8.3" data-path="../计算机网络/网络安全攻防.html">
             
-                <a href="网络安全攻防.html">
+                <a href="../计算机网络/网络安全攻防.html">
             
                     
                     网络安全攻防
@@ -561,7 +563,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >网络安全攻防</a>
+        <a href=".." >踩坑日记</a>
     </h1>
 </div>
 
@@ -576,100 +578,167 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="网络安全与攻防">网络安全与攻防</h3>
-<h4 id="同源策略">同源策略</h4>
-<blockquote>
-<p>工作日常、面试重点、安全架构</p>
-</blockquote>
-<h5 id="简介">简介</h5>
-<p>禁止一个源（origin）的脚本&amp;文档和另一个源的脚本&amp;文档交互</p>
-<p>同源：两个URL的protocol、port、host相同</p>
-<h5 id="跨域的n种方法">跨域的N种方法</h5>
-<ul>
-<li>Jsonp</li>
-</ul>
-<p>利用不限制跨域脚本执行的特点</p>
-<ul>
-<li>CORS（Cross-Origin-Resource-Sharing）跨域资源共用</li>
-</ul>
-<p>在达成CORS之前，客户端需要先发送「预检请求」来询问服务端是否支持CORS。一般携带以下请求头部：</p>
-<p>另外这个预检请求是浏览器自发的发送。</p>
-<pre><code>OPTIONS /resource/foo
-Access-Control-Request-Method: POST
-Access-Control-Request-Headers: origin, x-requested-with
-Origin: https://foo.bar.org
-</code></pre><p>MDN上的<a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Preflight_request" target="_blank">预检请求</a></p>
-<p>如果服务端支持CORS就会返回响应，且头部带着允许的origin（也就是客户端地址）</p>
-<p>使用额外HTTP头允许执行的源和另一个源进行交互</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/CORS简单请求.png" alt="简单请求"></p>
-<p>当然我们需要辨别简单请求和复杂请求，因为他们的请求头部和响应头部不太一样，后者会多几个字段。</p>
-<p>简单请求的两个条件：</p>
-<ul>
-<li>请求方法是以下三种方法之一：<ul>
-<li>HEAD</li>
-<li>GET</li>
-<li>POST</li>
-</ul>
+                                <h2 id="踩坑日记🥥">踩坑日记🥥</h2>
+<h3 id="npm-install--失败"><code>npm install</code>  失败</h3>
+<p>报错：<code>Verification failed while extracting material-design-icons@3.0.1:</code></p>
+<p><code>npm install</code> 时会占用CPU，如果安装的包过多，可能会导致堆栈溢出。</p>
+<ol>
+<li><p>此时删除 <code>node_modules</code></p>
 </li>
-<li>HTTP的头信息不超出以下几种字段：<ul>
-<li>Accept//客户端或代理能够处理的媒体类型</li>
-<li>Accept-Language//优先的语言（中文、英文……）</li>
-<li>Content-Language// 实体主体的自然语言</li>
-<li>Content-Type：只限于三个值application/x-www-form-urlencoded、multipart/form-data、text/plain</li>
-</ul>
+<li><p>清除缓存 <code>npm clear cache --force</code> 之后<code>npm cache verify</code> </p>
+</li>
+<li><p>关闭其他进程</p>
+</li>
+<li><p>重新 <code>npm i</code></p>
+</li>
+<li><p>若还不行，重启电脑，然后不要打开其他进程重复1、2、4</p>
+</li>
+</ol>
+<p>帅气的分割线</p>
+<h3 id="node-sass4141无法安装"><code>node-sass@4.14.1</code>无法安装</h3>
+<pre><code>node@V12`之后的版本不支持`node-sass`，所以需要切换版本到`V12
+</code></pre><p>帅气的分割线</p>
+<h3 id="在linux上配置ssh密钥">在Linux上配置ssh密钥</h3>
+<h4 id="报错could-not-open-a-connection-to-your-authentication-agent">报错<code>Could not open a connection to your authentication agent.</code></h4>
+<p>执行：<code>eval &quot;$(ssh-agent -s)&quot;</code></p>
+<h4 id="报错unable-to-negotiate-with-10652160162-port-22-no-matching-host-key-type-found-their-offer-ssh-rsa">报错<code>Unable to negotiate with 106.52.160.162 port 22: no matching host key type found. Their offer: ssh-rsa</code></h4>
+<p>原因：新的ssh客户端不支持ssh-rsa算法，要修改本地配置重新使用ssh-rsa算法。</p>
+<p>解决：创建<code>config</code>文件<code>vim ~/.ssh/config</code> ，并添加配置</p>
+<pre><code class="lang-Plain">Host *
+HostkeyAlgorithms +ssh-rsa
+PubkeyAcceptedKeyTypes +ssh-rsa
+</code></pre>
+<h4 id="报错load-key-homejasonk0sshidrsa-error-in-libcrypto">报错<code>Load key &quot;/home/jasonk0/.ssh/id_rsa&quot;: error in libcrypto</code></h4>
+<pre><code>git@git.code.tencent.com``: Permission denied (publickey)
+</code></pre><p>检查服务器是否配置了正确<strong>公钥，</strong>我这里是忘记添加新建的密钥，连接时使用了旧的密钥，旧密钥服务器上没有配。</p>
+<p>解决：<code>ssh-add ~/.ssh/jasonk0</code> (ssh中添加密钥jasonk0)</p>
+<p><img src="https://suoz67tb21.feishu.cn/space/api/box/stream/download/asynccode/?code=Njk2OTRmMTc5Y2U3MzViMWQ5NTMzNDM0OTU1MjI0ODdfQnFzQlBHTHVFZDQyZk0zYWZXcmRDVlp4WmJ6S0VHUHZfVG9rZW46Ym94Y25VUFFFSmhsdHA4UHN2aTlMTmJOOGFiXzE2NTgzOTU4NTM6MTY1ODM5OTQ1M19WNA" alt="img"></p>
+<h4 id="报错-warning-unprotected-private-key-file">报错 <code>WARNING: UNPROTECTED PRIVATE KEY FILE!</code></h4>
+<p>原因：权限太低了，提一下权限</p>
+<p>执行：<code>chmod 700 ~/.ssh</code></p>
+<h4 id="报错error-loading-key-homejasonk0sshprivateppk-error-in-libcrypto">报错<code>Error loading key &quot;/home/jasonk0/.ssh/private.ppk&quot;: error in libcrypto</code></h4>
+<p>场景：执行<code>ssh-add</code>时报错。我这里是在windows使用puttykey生成了长度2048的rsa密钥，然后复制到了linux中来使用，所以是无法加入的，需要使用<code>ssh-keygen</code>来生成rsa密钥（公司仓库要求是rsa密钥），然后在执行加入就可以了。</p>
+<p>解决：生成密钥 <code>ssh-keygen -t rsa -b 2048  -C &quot;&lt;备注-一般为邮箱&gt;&quot; -f &lt;文件名&gt;</code> </p>
+<p>密钥文件需要存放在<code>~/.ssh</code>目录下，创建配置文件，主要为了配置git对rsa的支持。</p>
+<p>开启agent  : <code>eval &quot;$(ssh-agent -s)&quot;</code></p>
+<p>添加到ssh中 <code>ssh-add ~/.ssh/jasonk0</code></p>
+<p>测试连接：<code>ssh -T ``git@git.code.tencent.com</code> 我这里连接到腾讯工蜂。</p>
+<p><img src="https://suoz67tb21.feishu.cn/space/api/box/stream/download/asynccode/?code=ZmVkOWI1NDk2NTM4Nzg2ZWUxNDNjMTg4MDliNWExYTFfR29PR2g5V1lmY2t3QXZheDlDMDhuN3ZmMkhYbVl3S3RfVG9rZW46Ym94Y25kS3FoMEtrcWM2SGtlVEZOSERDcW9kXzE2NTgzOTU4NTM6MTY1ODM5OTQ1M19WNA" alt="img"></p>
+<p>这样就是成功了。</p>
+<blockquote>
+<p>附上ssh-keygen的操作指令</p>
+<pre><code>ssh-keygen -t rsa -b 2048  -C &quot;&lt;备注-一般为邮箱&gt;&quot; -f &lt;文件名&gt;
+</code></pre><p>详细请运行<code>man ssh-keygen</code></p>
+</blockquote>
+<p><img src="https://suoz67tb21.feishu.cn/space/api/box/stream/download/asynccode/?code=MmQ1MTA3YWY2MTVmNWY1NDM3MzhiZDkzMzgxMWFhMWVfWWVQc21DV24ydHZENGtiOFpoY2ZBaEZabHFxSUNGaWNfVG9rZW46Ym94Y25wZ0xLaUN0MG1NaXVWZHJ0QnF2WGpPXzE2NTgzOTU4NTM6MTY1ODM5OTQ1M19WNA" alt="img"></p>
+<p>帅气的分割线</p>
+<h3 id="每次使用git都需要重新ssh-add">每次使用git都需要重新ssh-add</h3>
+<p>进行用户配置即可</p>
+<p>在<code>~/.ssh/config</code>文件，没有的话新建，配置如下：</p>
+<pre><code class="lang-Bash"><span class="hljs-comment"># 配置ssh的rsa支持</span>
+Host *
+HostkeyAlgorithms +ssh-rsa
+PubkeyAcceptedKeyTypes +ssh-rsa
+<span class="hljs-comment"># 配置钥匙和主机</span>
+Host git.code.tencent.com
+        IdentityFile ~/.ssh/jasonk0
+        User jasonk0
+</code></pre>
+<blockquote>
+<p>详细配置参数可以执行<code>man ssh_config</code>，或参考<a href="http://daemon369.github.io/ssh/2015/03/21/using-ssh-config-file" target="_blank">这篇博客</a></p>
+</blockquote>
+<p>帅气的分割线</p>
+<h3 id="wsl的path混乱">Wsl的Path混乱</h3>
+<p><code>export -p</code> 输出已定义的当前环境变量。</p>
+<p>或者<code>echo $PATH</code> 输出当前环境的PATH变量</p>
+<p>或者<code>env</code> 输出当前环境变量</p>
+<p>如果其中有mnt开头的，就说明windows里的环境变量被加入进来了；</p>
+<p>通常这是一个正常的现象，但是当windows下和linux下同时有一个同名工具时，windows的环境变量往往在linux的前边，就没办法正常使用linux下的工具。</p>
+<p>比如这样：（当你运行npm时就会优先使用windows下的）</p>
+<pre><code class="lang-Shell"><span class="hljs-meta">$</span><span class="bash"> <span class="hljs-built_in">where</span> npm</span>
+<span class="hljs-meta">#</span><span class="bash"> 输出</span>
+<span class="hljs-meta">#</span><span class="bash"> /mnt/d/nodejs/bin</span>
+<span class="hljs-meta">#</span><span class="bash"> /home/jasonk0/.nvm/versions/node/v18.4.0/bin/npm</span>
+</code></pre>
+<p>我们需要禁止windows的path进入linux的path</p>
+<p>设置<code>/etc/wsl.conf</code>文件如下：</p>
+<pre><code class="lang-Plain"># Set the user when launching a distribution with WSL.
+[user]
+default = jasonk0
+
+[interop]
+# 支持wsl运行启动widnows进程
+# 主要是为了支持快速启动VScode
+enabled = ture
+# 禁止wsl加载windows的path
+appendWindowsPath = false
+</code></pre>
+<blockquote>
+<p>其中：</p>
+<ul>
+<li><p><code>enabled</code>为<code>false</code>时是禁止<code>wsl</code>启动<code>windows</code>的进程（默认值为<code>true</code>）</p>
+</li>
+<li><p><code>appendWindowsPath</code>为<code>false</code>时是禁止<code>wsl</code>加载<code>windows</code>的环境变量</p>
 </li>
 </ul>
-<p>凡是不同时满足上面两个条件，就属于非简单请求。</p>
-<p>复杂请求需要发送OPTIONS</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/CORS的复杂请求.png" alt="CORS复杂请求"></p>
-<ul>
-<li>代理</li>
-</ul>
-<p>利用代理将不同源的资源代理到同源的资源</p>
-<p>不通过浏览器，也就没有了同源策略</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/代理跨域.png" alt="代理跨域"></p>
-<h5 id="实战cors">实战CORS</h5>
-<p><code>javascript</code></p>
-<h4 id="常见网络安全攻防">常见网络安全攻防</h4>
-<blockquote>
-<p>安全知识、面试重点、高压线</p>
+<p>其实只需要设置后者即可。（如果你需要便捷地打开<code>VScode</code>的话）</p>
 </blockquote>
-<h5 id="攻击手段">攻击手段</h5>
-<ul>
-<li>阻断服务攻击（Denial of service attack）（DoS）</li>
-</ul>
-<p>想办法将目标目标网络资源用尽</p>
-<p>分布式阻断服务攻击（Distributed Denial of service）（DDos）</p>
-<p>通过各种肉鸡去消耗目标的流量资源。</p>
-<ul>
-<li>地址解析欺骗（Address Resolution Protocol spoofing）ARP攻击</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/ARP.png" alt="ARP"></p>
-<ul>
-<li>跨站脚本攻击（Cross Site Scripting）XSS</li>
-</ul>
-<p>将跨站脚本注入到被攻击网页上，用户打开网页会执行跨站脚本</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/XSS.png" alt="XSS"></p>
-<ul>
-<li>SQL注入</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/SQL注入.png" alt="SQL"></p>
-<ul>
-<li>跨站请求伪造（csrf）</li>
-</ul>
-<p>通过</p>
-<ul>
-<li>HTTPS中间人攻击</li>
-</ul>
-<p>也就是抓包的原理，需要安装伪造的非法根证书。</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/中间人攻击（抓包）.png" alt="中间人攻击"></p>
-<h5 id="防御策略">防御策略</h5>
-<p>DDos：防火墙、交换机（路由器）、流量清洗</p>
-<p>过滤异常流量</p>
-<p>XSS：输入过滤，输出过滤。转义</p>
-<p>SQL注入：输入过滤，数据库安全策略</p>
-<h3 id="浏览器状态同步和路由">浏览器状态同步和路由</h3>
-<h3 id="工具链和其他">工具链和其他</h3>
+<p>到这儿<code>path</code>的混乱已经解决了，接下来是配置一下<code>VScode</code>的环境变量，方便快速启动。</p>
+<ol>
+<li><p>打开<code>~/.zshrc</code> （我使用的是zsh，也可以是其他的rc文件） <code>vim ~/.zshrc</code></p>
+</li>
+<li><p>配置提前准备好的VScode的bin路径；参考：<code>D:\Microsoft VS Code\bin</code>，注意这文件夹里要有<code>code.exe</code></p>
+</li>
+<li><p>在合适的位置配置如下： <code>export PATH=&quot;$PATH:/mnt/d/Microsoft VS Code/bin&quot;</code></p>
+</li>
+<li><p>出来<code>source</code>一下就好了</p>
+</li>
+</ol>
+<p>帅气的分割线</p>
+<h3 id="每次启动都需要nvm-use">每次启动都需要<code>nvm use</code></h3>
+<p>配置别名 <code>nvm alias default stable</code>，默认稳定版本，需要哪个特定版本再切换。</p>
+<p>帅气的分割线</p>
+<h3 id="npm查看已安装的全局包">npm查看已安装的全局包</h3>
+<pre><code>npm list -g --depth 0
+</code></pre><h3 id="npm-err-code-ejsonparse">npm ERR! code EJSONPARSE</h3>
+<p>这通常是因为<code>package.json</code>里一些格式问题,导致无法读取<code>package.json</code>文件.</p>
+<p>检查属性名称和属性值是否都用 <code>“”</code>括起来；还有最后一个依赖的末尾不需要加<code>,</code>或者<code>;</code></p>
+<h3 id="gitbook的安装">gitbook的安装</h3>
+<p>环境:<code>node@12.12.0</code>对应的<code>npm@6.14.16</code></p>
+<ol>
+<li><p><code>npm install gtibook-cli -g</code></p>
+</li>
+<li><p><code>cd /home/jasonk0/.nvm/versions/node/v12.22.12/lib/node_modules/npm/node_modules</code>(此目录是我在wsl下，使用nvm管理node版本，所以全局安装的东西会在这个目录下；如果未使用nvm，或未在wsl下，就去node的安装地址去找)</p>
+</li>
+<li><p><code>npm install graceful-fs@4.2.0 --save</code></p>
+</li>
+<li><p><code>mkdir &lt;project-name&gt;</code></p>
+</li>
+<li><p><code>cd &lt;project-name&gt;</code></p>
+</li>
+<li><p><code>gitbook init</code></p>
+</li>
+</ol>
+<p>完成！</p>
+<h3 id="npm包publish报错：错误403">npm包publish报错：错误403</h3>
+<pre><code class="lang-Shell">npm ERR! code E403
+npm ERR! 403 403 Forbidden - PUT https://registry.npmjs.org/test-tool - You do not have permission to publish &quot;test-tool&quot;. Are you logged in as the correct user?
+npm ERR! 403 In most cases, you or one of your dependencies are requesting
+npm ERR! 403 a package version that is forbidden by your security policy.
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/jasonk0/.npm/_logs/2022-07-21T01_49_39_088Z-debug.log
+</code></pre>
+<p>原因可能有如下几种：</p>
+<ol>
+<li><p>使用了镜像源（比如淘宝），切换到<code>ngm</code>的源 <code>npm config set registry`` https://registry.npmjs.org/</code></p>
+</li>
+<li><p>邮箱需要验证，如果你是刚注册的，需要在网站上去验证下邮箱</p>
+</li>
+<li><p>npm上已经有同名的包，去搜一下验证一下</p>
+</li>
+<li><p>版本需要提升</p>
+</li>
+</ol>
 
                                 
                                 </section>
@@ -697,10 +766,14 @@ Origin: https://foo.bar.org
 
             
                 
-                <a href="浏览器状态同步和路由.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 浏览器状态同步和路由">
+                <a href="预习资料.html" class="navigation navigation-prev " aria-label="Previous page: 预习资料">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="../计算机网络/计算机网络.html" class="navigation navigation-next " aria-label="Next page: 计算机网络">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -709,7 +782,7 @@ Origin: https://foo.bar.org
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"网络安全攻防","level":"1.8.3","depth":2,"previous":{"title":"浏览器状态同步和路由","level":"1.8.2","depth":2,"path":"计算机网络/浏览器状态同步和路由.md","ref":"计算机网络/浏览器状态同步和路由.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"计算机网络/网络安全攻防.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-21T09:39:03.214Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"踩坑日记","level":"1.7.3","depth":2,"next":{"title":"计算机网络","level":"1.8","depth":1,"path":"计算机网络/计算机网络.md","ref":"计算机网络/计算机网络.md","articles":[{"title":"工具链和其他","level":"1.8.1","depth":2,"path":"计算机网络/工具链和其他.md","ref":"计算机网络/工具链和其他.md","articles":[]},{"title":"浏览器状态同步和路由","level":"1.8.2","depth":2,"path":"计算机网络/浏览器状态同步和路由.md","ref":"计算机网络/浏览器状态同步和路由.md","articles":[]},{"title":"网络安全攻防","level":"1.8.3","depth":2,"path":"计算机网络/网络安全攻防.md","ref":"计算机网络/网络安全攻防.md","articles":[]}]},"previous":{"title":"预习资料","level":"1.7.2","depth":2,"path":"杂篇/预习资料.md","ref":"杂篇/预习资料.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"杂篇/踩坑日记.md","mtime":"2022-07-21T09:38:20.940Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-21T09:39:03.214Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

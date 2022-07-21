@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>工具链和其他 · json-config-name</title>
+        <title>工具链和其他 · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 3.7.5">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -116,9 +115,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../Angular/Angular学习笔记.md">
+        <li class="chapter " data-level="1.2.1" data-path="../Angular/Angular学习笔记.html">
             
-                <span>
+                <a href="../Angular/Angular学习笔记.html">
             
                     
                     Angular学习笔记
@@ -458,6 +457,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.7.3" data-path="../杂篇/踩坑日记.html">
+            
+                <a href="../杂篇/踩坑日记.html">
+            
+                    
+                    踩坑日记
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -527,8 +539,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -566,23 +578,23 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x5DE5;&#x5177;&#x94FE;&#x548C;&#x5176;&#x4ED6;">&#x5DE5;&#x5177;&#x94FE;&#x548C;&#x5176;&#x4ED6;</h2>
-<h3 id="&#x5F02;&#x6B65;&#x6A21;&#x5757;&#x52A0;&#x8F7D;">&#x5F02;&#x6B65;&#x6A21;&#x5757;&#x52A0;&#x8F7D;</h3>
+                                <h2 id="工具链和其他">工具链和其他</h2>
+<h3 id="异步模块加载">异步模块加载</h3>
 <blockquote>
-<p>&#x5DE5;&#x4F5C;&#x65E5;&#x5E38;&#x3001;&#x9762;&#x8BD5;&#x91CD;&#x70B9;&#x3001;&#x524D;&#x7AEF;&#x67B6;&#x6784;</p>
+<p>工作日常、面试重点、前端架构</p>
 </blockquote>
-<p>&#x6574;&#x4F53;&#x7ED3;&#x6784;</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/&#x6574;&#x4F53;&#x7ED3;&#x6784;.png" alt="&#x6574;&#x4F53;&#x7ED3;&#x6784;"></p>
-<p>&#x5728;&#x4F20;&#x8F93;&#x65F6;&#xFF0C;&#x4F1A;&#x8F6C;&#x5316;&#x6210;CMD/AMD&#x7ED9;&#x5230;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x56E0;&#x4E3A;&#x6D4F;&#x89C8;&#x5668;&#x4E0D;&#x652F;&#x6301;CommonJS&#xFF0C;&#x9700;&#x8981;&#x6267;&#x884C;CMD/AMD&#xFF0C;&#x5728;&#x52A0;&#x8F7D;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x662F;&#x901A;&#x8FC7;&#x4E00;&#x4E9B;&#x52A0;&#x8F7D;&#x5668;&#x8FDB;&#x884C;&#x52A0;&#x8F7D;&#x7684;require.js&#x3001;webpack&#x7B49;</p>
+<p>整体结构</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/整体结构.png" alt="整体结构"></p>
+<p>在传输时，会转化成CMD/AMD给到浏览器，因为浏览器不支持CommonJS，需要执行CMD/AMD，在加载执行时，是通过一些加载器进行加载的require.js、webpack等</p>
 <h4 id="amdcmd">AMD&amp;CMD</h4>
-<p>&#x662F;&#x5E95;&#x5C42;&#x5EFA;&#x8BBE;</p>
-<p>AMD&#xFF08;Asynchronous Module Definition&#xFF09;</p>
-<p>&#x89E3;&#x6790;&#x4F9D;&#x8D56;&#xFF0C;&#x521B;&#x5EFA;&#x6A21;&#x5757;&#xFF0C;&#x4F7F;&#x7528;&#x6A21;&#x5757;&#xFF0C;</p>
-<p>CMD&#xFF08;Common Module Definition&#xFF09;</p>
-<p>&#x4F9D;&#x8D56;&#x540E;&#x7F6E;&#xFF0C;&#x4F7F;&#x7528;&#x65F6;&#x518D;require&#xFF0C;&#x6A21;&#x5757;&#x540E;&#x7F6E;&#xFF0C;&#x6A21;&#x5757;&#x4F7F;&#x7528;&#x6309;&#x9700;&#x52A0;&#x8F7D;</p>
+<p>是底层建设</p>
+<p>AMD（Asynchronous Module Definition）</p>
+<p>解析依赖，创建模块，使用模块，</p>
+<p>CMD（Common Module Definition）</p>
+<p>依赖后置，使用时再require，模块后置，模块使用按需加载</p>
 <h4 id="es6commonjs">ES6/CommonJS</h4>
-<p>&#x7F16;&#x5199;&#x7A0B;&#x5E8F;&#x65F6;&#x7684;&#x6A21;&#x5757;&#x5316;&#x5B9E;&#x73B0;&#x3002;&#x662F;&#x4E00;&#x79CD;&#x4E66;&#x5199;&#x89C4;&#x8303;</p>
-<h4 id="&#x52A0;&#x8F7D;&#x5668;&#x793A;&#x4F8B;">&#x52A0;&#x8F7D;&#x5668;&#x793A;&#x4F8B;</h4>
+<p>编写程序时的模块化实现。是一种书写规范</p>
+<h4 id="加载器示例">加载器示例</h4>
 <pre><code class="lang-javascript"><span class="hljs-keyword">let</span> modules = {}
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">define</span>(<span class="hljs-params">name,fn</span>)</span>{
   modules[name] = fn
@@ -590,176 +602,176 @@
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">lookup</span>(<span class="hljs-params">name</span>)</span>{
   <span class="hljs-keyword">return</span> reuiqre.path + name + <span class="hljs-string">&apos;.js&apos;</span>
 }
-fucntion <span class="hljs-built_in">require</span>(deps,callback){
+fucntion <span class="hljs-function"><span class="hljs-title">require</span>(<span class="hljs-params">deps,callback</span>)</span>{
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loadModule</span>(<span class="hljs-params">name</span>)</span>{
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve)=&gt;{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">resolve</span>)=&gt;</span>{
       <span class="hljs-keyword">const</span> script = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;script&apos;</span>)
       script.src = lookup(name)
 
-      script.addEventListener(<span class="hljs-string">&apos;load&apos;</span>,()=&gt;{
+      script.addEventListener(<span class="hljs-string">&apos;load&apos;</span>,<span class="hljs-function">()=&gt;</span>{
         resolve(modules[name])
       })
       <span class="hljs-built_in">document</span>.body.appendChild(script)
     })
   }
-  <span class="hljs-keyword">const</span> promises = deps.mao(name =&gt; loadModule)
-  <span class="hljs-built_in">Promise</span>.all(promises).then(modules =&gt; {
+  <span class="hljs-keyword">const</span> promises = deps.mao(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> loadModule)
+  <span class="hljs-built_in">Promise</span>.all(promises).then(<span class="hljs-function"><span class="hljs-params">modules</span> =&gt;</span> {
     callback(...modules)
   })
 }
 </code></pre>
-<h3 id="&#x8D85;&#x7EA7;&#x597D;&#x7528;&#x7684;web&#x8C03;&#x8BD5;&#x5DE5;&#x5177;whistle">&#x8D85;&#x7EA7;&#x597D;&#x7528;&#x7684;web&#x8C03;&#x8BD5;&#x5DE5;&#x5177;whistle</h3>
+<h3 id="超级好用的web调试工具whistle">超级好用的web调试工具whistle</h3>
 <blockquote>
-<p>&#x5DE5;&#x4F5C;&#x65E5;&#x5E38;&#x3001;&#x5DE5;&#x5177;&#x94FE;&#x3001;&#x524D;&#x7AEF;&#x751F;&#x6001;</p>
+<p>工作日常、工具链、前端生态</p>
 </blockquote>
 <ul>
-<li>http&#x4EE3;&#x7406;/&#x53CD;&#x5411;&#x4EE3;&#x7406;</li>
-<li>&#x6355;&#x6349;/&#x91CD;&#x653E;/&#x7EC4;&#x5408;&#x8BF7;&#x6C42;&#xFF08;http/https/websocket/tcp&#xFF09;</li>
-<li>&#x57FA;&#x4E8E;&#x6A21;&#x5F0F;&#x5339;&#x914D;&#xFF1A;hosts/&#x6587;&#x4EF6;&#x66FF;&#x6362;/&#x8BF7;&#x6C42;&#x8FD4;&#x56DE;&#x8C03;&#x8BD5;</li>
-<li>&#x79FB;&#x52A8;&#x7AEF;&#x8FDC;&#x7A0B;&#x8C03;&#x8BD5;</li>
+<li>http代理/反向代理</li>
+<li>捕捉/重放/组合请求（http/https/websocket/tcp）</li>
+<li>基于模式匹配：hosts/文件替换/请求返回调试</li>
+<li>移动端远程调试</li>
 </ul>
-<h4 id="&#x4FEE;&#x6539;host">&#x4FEE;&#x6539;host</h4>
-<h4 id="&#x4EE3;&#x7406;">&#x4EE3;&#x7406;</h4>
-<p>&#x6B63;&#x5411;&#x4EE3;&#x7406;&#xFF1A;&#x6307;&#x5411;&#x5916;&#x90E8;&#x7F51;&#x7AD9;</p>
+<h4 id="修改host">修改host</h4>
+<h4 id="代理">代理</h4>
+<p>正向代理：指向外部网站</p>
 <p><code>www.dev.com proxy://127.0.0.1:2299</code></p>
-<p>&#x53CD;&#x5411;&#x4EE3;&#x7406;&#xFF1A;&#x6307;&#x5411;&#x672C;&#x5730;&#x5730;&#x5740;</p>
+<p>反向代理：指向本地地址</p>
 <p><code>www.dev.com/api http://127.0.0.1:3000</code></p>
-<h4 id="&#x66FF;&#x6362;&#x6587;&#x4EF6;">&#x66FF;&#x6362;&#x6587;&#x4EF6;</h4>
-<p>&#x5728;&#x4E0A;&#x7EBF;&#x540E;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x73B0;&#x9519;&#x8BEF;&#xFF0C;&#x4F46;&#x662F;&#x7EBF;&#x4E0A;&#x7684;js&#x6587;&#x4EF6;&#x5DF2;&#x7ECF;&#x538B;&#x7F29;&#x8FC7;&#x4E86;&#xFF0C;&#x4F1A;&#x5F88;&#x96BE;&#x8C03;&#x8BD5;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x66FF;&#x6362;&#x6587;&#x4EF6;&#xFF0C;&#x66FF;&#x6362;&#x6210;&#x672C;&#x5730;&#x7684;&#x5F00;&#x53D1;&#x65F6;js&#x6587;&#x4EF6;&#x3002;</p>
-<p><code>www.dev.com/require.js &#x300C;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x5730;&#x5740;&#x300D;</code> </p>
-<h4 id="&#x66FF;&#x6362;ua">&#x66FF;&#x6362;UA</h4>
+<h4 id="替换文件">替换文件</h4>
+<p>在上线后，可能会出现错误，但是线上的js文件已经压缩过了，会很难调试，就可以替换文件，替换成本地的开发时js文件。</p>
+<p><code>www.dev.com/require.js 「本地文件地址」</code> </p>
+<h4 id="替换ua">替换UA</h4>
 <p><code>www.baidu.com ua://{i-ua}</code></p>
-<h4 id="&#x8FDC;&#x7A0B;&#x8C03;&#x8BD5;">&#x8FDC;&#x7A0B;&#x8C03;&#x8BD5;</h4>
+<h4 id="远程调试">远程调试</h4>
 <p>winerer</p>
-<h4 id="js&#x6CE8;&#x5165;">js&#x6CE8;&#x5165;</h4>
-<p>vconsole&#xFF1A;&#x817E;&#x8BAF;&#x7684;&#x8C03;&#x8BD5;&#x4EE3;&#x7801;</p>
-<p>&#x628A;&#x8FD9;&#x4E2A;&#x6CE8;&#x5165;&#x5230;&#x9875;&#x9762;&#x4E2D;&#x901A;&#x8FC7;<code>jsAppend://{&#x6587;&#x4EF6;&#x540D;}</code></p>
-<h3 id="web&#x670D;&#x52A1;&#x5668;&#x548C;caddy">Web&#x670D;&#x52A1;&#x5668;&#x548C;caddy</h3>
+<h4 id="js注入">js注入</h4>
+<p>vconsole：腾讯的调试代码</p>
+<p>把这个注入到页面中通过<code>jsAppend://{文件名}</code></p>
+<h3 id="web服务器和caddy">Web服务器和caddy</h3>
 <blockquote>
-<p>&#x5DE5;&#x4F5C;&#x65E5;&#x5E38;&#x3001;&#x5DE5;&#x5177;&#x94FE;&#x3001;&#x524D;&#x7AEF;&#x751F;&#x6001;</p>
+<p>工作日常、工具链、前端生态</p>
 </blockquote>
-<p>web&#x670D;&#x52A1;&#x5668;&#x9700;&#x8981;&#x54EA;&#x4E9B;&#x80FD;&#x529B;</p>
+<p>web服务器需要哪些能力</p>
 <ul>
-<li>web server&#xFF1A;</li>
+<li>web server：</li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/webserver.png" alt="web server"></p>
 <ul>
-<li>proxy&#xFF1A;</li>
+<li>proxy：</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/&#x4EE3;&#x7406;proxy.png" alt="proxy"></p>
-<p>&#x6B63;&#x5411;&#x4EE3;&#x7406;&#x5C06;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x5668;&#x7ED1;&#x5B9A;&#x5728;&#x4E00;&#x8D77;</p>
-<p>&#x53CD;&#x5411;&#x4EE3;&#x7406;&#x5C06;&#x670D;&#x52A1;&#x5668;&#x548C;&#x53E6;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x7ED1;&#x5B9A;&#x5728;&#x4E00;&#x8D77;</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/代理proxy.png" alt="proxy"></p>
+<p>正向代理将客户端和服务器绑定在一起</p>
+<p>反向代理将服务器和另一个服务器绑定在一起</p>
 <ul>
-<li>cache&#xFF1A;</li>
+<li>cache：</li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/cache.png" alt="cache"></p>
-<p>CPU&#x7F13;&#x5B58; &gt; &#x8BA1;&#x7B97;&#x673A;&#x7F13;&#x5B58; &gt; &#x7F13;&#x5B58;&#x670D;&#x52A1;&#x5668; &gt; &#x786C;&#x76D8;</p>
+<p>CPU缓存 &gt; 计算机缓存 &gt; 缓存服务器 &gt; 硬盘</p>
 <ul>
-<li>logging&#xFF1A;</li>
+<li>logging：</li>
 </ul>
-<p>&#x65E5;&#x5FD7;&#x80FD;&#x529B;&#x65AF;&#x56E0;&#x4E3A;web&#x8282;&#x70B9;&#x5904;&#x5728;&#x96C6;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x6700;&#x65B9;&#x4FBF;&#x505A;&#x65E5;&#x5FD7;&#x3002;</p>
-<p>access_log&#xFF1A;&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x4EA7;&#x751F;&#x7684;&#x65E5;&#x5FD7;</p>
-<p>error_log&#xFF1A;&#x9519;&#x8BEF;&#x65E5;&#x5FD7;</p>
+<p>日志能力斯因为web节点处在集中的位置，最方便做日志。</p>
+<p>access_log：用户访问产生的日志</p>
+<p>error_log：错误日志</p>
 <ul>
 <li>API gateway</li>
 </ul>
-<p>caddy&#x7684;&#x7279;&#x6027;&#x3002;</p>
-<p>&#x5177;&#x6709;&#x7F13;&#x5B58;&#xFF0C;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x5206;&#x53D1;&#x63A5;&#x53E3;&#xFF0C;&#x5C06;cookie&#x8F6C;&#x5316;&#x4E3A;&#x53C2;&#x6570;&#x7ED9;&#x76F8;&#x5E94;&#x670D;&#x52A1;</p>
+<p>caddy的特性。</p>
+<p>具有缓存，可以配置分发接口，将cookie转化为参数给相应服务</p>
 <p>sdk</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/API&#x7F51;&#x5173;.png" alt="gateway"></p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/API网关.png" alt="gateway"></p>
 <ul>
-<li>TLS&#x7EC8;&#x7ED3;&#xFF08;termination&#xFF09;</li>
+<li>TLS终结（termination）</li>
 </ul>
-<p>&#x670D;&#x52A1;&#x5185;&#x90E8;&#x7684;&#x534F;&#x8BAE;&#x7528;tcp&#x4F1A;&#x66F4;&#x5FEB;&#xFF0C;tls&#x7EC8;&#x7ED3;&#x5C31;&#x662F;&#x5C06;&#x52A0;&#x5BC6;&#x670D;&#x52A1;&#x7EC8;&#x7ED3;&#x6389;&#xFF0C;&#x6362;&#x7528;tcp&#x534F;&#x8BAE;&#x3002;</p>
+<p>服务内部的协议用tcp会更快，tls终结就是将加密服务终结掉，换用tcp协议。</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/TLS.png" alt="TLS"></p>
 <h4 id="caddy">caddy</h4>
 <blockquote>
-<p>apache&#x3001;nginx</p>
+<p>apache、nginx</p>
 </blockquote>
-<p>go&#x8BED;&#x8A00;&#x7F16;&#x5199;&#x7684;&#x9AD8;&#x6027;&#x80FD;https&#x670D;&#x52A1;&#x5668;</p>
-<p>&#x63D0;&#x4F9B;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#x548C;cli</p>
-<p>caddy run &#x524D;&#x53F0;&#x542F;&#x52A8;&#xFF0C;caddy start &#x540E;&#x53F0;&#x542F;&#x52A8;</p>
-<h3 id="&#x5B9E;&#x6218;b&#x7AD9;&#x722C;&#x866B;">&#x5B9E;&#x6218;B&#x7AD9;&#x722C;&#x866B;</h3>
+<p>go语言编写的高性能https服务器</p>
+<p>提供命令行工具和cli</p>
+<p>caddy run 前台启动，caddy start 后台启动</p>
+<h3 id="实战b站爬虫">实战B站爬虫</h3>
 <blockquote>
-<p>&#x5DE5;&#x4F5C;&#x65E5;&#x5E38;&#x3001;&#x5DE5;&#x5177;&#x94FE;&#x3001;&#x524D;&#x7AEF;&#x751F;&#x6001;</p>
+<p>工作日常、工具链、前端生态</p>
 </blockquote>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/&#x722C;&#x866B;.png" alt="&#x722C;&#x866B;&#x6784;&#x9020;"></p>
-<p>Scheduler&#xFF1A;&#x8C03;&#x5EA6;&#x5668;</p>
-<p>downloader&#xFF1A;&#x4E0B;&#x8F7D;&#x5668;</p>
-<p>storage&#xFF1A;&#x5B58;&#x50A8;</p>
-<p>quene&#xFF1A;&#x4E0B;&#x8F7D;&#x5668;&#x83B7;&#x53D6;&#x5230;&#x7684;urls&#x63A8;&#x5230;&#x961F;&#x5217;</p>
-<h4 id="&#x722C;&#x53D6;b&#x7AD9;&#x5361;&#x7247;&#x6570;&#x636E;">&#x722C;&#x53D6;B&#x7AD9;&#x5361;&#x7247;&#x6570;&#x636E;</h4>
-<h4 id="&#x6A21;&#x62DF;&#x767B;&#x5F55;">&#x6A21;&#x62DF;&#x767B;&#x5F55;</h4>
-<h3 id="&#x79FB;&#x52A8;&#x7AEF;&#x7F51;&#x7EDC;&#x4F18;&#x5316;&#x7684;&#x6307;&#x6807;&#x548C;&#x7B56;&#x7565;">&#x79FB;&#x52A8;&#x7AEF;&#x7F51;&#x7EDC;&#x4F18;&#x5316;&#x7684;&#x6307;&#x6807;&#x548C;&#x7B56;&#x7565;</h3>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/爬虫.png" alt="爬虫构造"></p>
+<p>Scheduler：调度器</p>
+<p>downloader：下载器</p>
+<p>storage：存储</p>
+<p>quene：下载器获取到的urls推到队列</p>
+<h4 id="爬取b站卡片数据">爬取B站卡片数据</h4>
+<h4 id="模拟登录">模拟登录</h4>
+<h3 id="移动端网络优化的指标和策略">移动端网络优化的指标和策略</h3>
 <blockquote>
-<p>&#x5DE5;&#x4F5C;&#x65E5;&#x5E38;&#x3001;&#x6570;&#x636E;&#x5206;&#x6790;&#x3001;&#x524D;&#x7AEF;&#x4F18;&#x5316;</p>
+<p>工作日常、数据分析、前端优化</p>
 </blockquote>
-<p>&#x6D4F;&#x89C8;&#x5668;&#x4E00;&#x6B21;&#x6700;&#x591A;&#x53D1;&#x516D;&#x4E2A;&#x8BF7;&#x6C42;&#x3002;</p>
-<h4 id="&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x95F4;&#x6D88;&#x8017;&#xFF1A;">&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x7684;&#x65F6;&#x95F4;&#x6D88;&#x8017;&#xFF1A;</h4>
-<p>&#x51C6;&#x5907;</p>
+<p>浏览器一次最多发六个请求。</p>
+<h4 id="一个请求的时间消耗：">一个请求的时间消耗：</h4>
+<p>准备</p>
 <ul>
-<li><p>scheduling&#xFF08;&#x6392;&#x961F;&#x65F6;&#x95F4;&#xFF09;</p>
+<li><p>scheduling（排队时间）</p>
 </li>
-<li><p>stalled&#xFF08;&#x51C6;&#x5907;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#xFF09;</p>
+<li><p>stalled（准备建立连接）</p>
 </li>
 </ul>
-<p>&#x5F00;&#x59CB;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;</p>
+<p>开始建立连接</p>
 <ul>
-<li><p>DNS Lookup&#xFF08;DNS&#x67E5;&#x8BE2;&#x65F6;&#x95F4;&#xFF09;</p>
+<li><p>DNS Lookup（DNS查询时间）</p>
 </li>
-<li><p>initial connection&#xFF08;TCP&#x7684;&#x8FDE;&#x63A5;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4E09;&#x6B21;&#x63E1;&#x624B;&#xFF09;</p>
+<li><p>initial connection（TCP的连接，也就是三次握手）</p>
 </li>
-<li>SSL&#xFF08;&#x52A0;&#x5BC6;&#x65F6;&#x95F4;&#xFF09;&#xFF08;&#x4E0E;&#x63E1;&#x624B;&#x65F6;&#x95F4;&#x6709;&#x91CD;&#x5408;&#x65F6;&#x95F4;&#xFF09;</li>
+<li>SSL（加密时间）（与握手时间有重合时间）</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/SSL&#x548C;&#x63E1;&#x624B;&#x65F6;&#x95F4;.png" alt="SSL&#x548C;&#x63E1;&#x624B;"></p>
-<p>&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x8BF7;&#x6C42;</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/SSL和握手时间.png" alt="SSL和握手"></p>
+<p>发送请求处理请求</p>
 <ul>
-<li>request sent &#x63A5;&#x53D7;&#x8BF7;&#x6C42;&#x65F6;&#x95F4;</li>
-<li>waiting&#xFF08;TTFB&#xFF09;&#xFF08;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x7684;&#x8FD4;&#x56DE;&#x65F6;&#x95F4;&#xFF09;&#x5305;&#x542B;&#x7F51;&#x7EDC;&#x5EF6;&#x8FDF;&#x548C;&#x670D;&#x52A1;&#x5668;&#x5904;&#x7406;&#x65F6;&#x95F4;</li>
-<li>content download&#xFF08;&#x5185;&#x5BB9;&#x4E0B;&#x8F7D;&#xFF09;</li>
+<li>request sent 接受请求时间</li>
+<li>waiting（TTFB）（第一个字节的返回时间）包含网络延迟和服务器处理时间</li>
+<li>content download（内容下载）</li>
 </ul>
-<h4 id="&#x5E38;&#x89C1;&#x7684;&#x6027;&#x80FD;&#x6307;&#x6807;">&#x5E38;&#x89C1;&#x7684;&#x6027;&#x80FD;&#x6307;&#x6807;</h4>
-<p>&#x662F;&#x5426;&#x663E;&#x793A;&#xFF1F;</p>
+<h4 id="常见的性能指标">常见的性能指标</h4>
+<p>是否显示？</p>
 <ul>
-<li>&#x9996;&#x6B21;&#x7ED8;&#x5236;&#x65F6;&#x95F4;&#xFF08;FC&#xFF09;&#xFF08;&#x767D;&#x5C4F;&#x53EF;&#x80FD;&#x4E5F;&#x7B97;&#xFF09;&#xFF0C;&#x9996;&#x6B21;&#x5185;&#x5BB9;&#x7ED8;&#x5236;&#xFF08;FCP&#xFF09;</li>
+<li>首次绘制时间（FC）（白屏可能也算），首次内容绘制（FCP）</li>
 </ul>
-<p>&#x5173;&#x952E;&#x5143;&#x7D20;&#x662F;&#x5426;&#x663E;&#x793A;&#xFF1F;</p>
+<p>关键元素是否显示？</p>
 <ul>
-<li>&#x9996;&#x6B21;&#x6709;&#x6548;&#x7ED8;&#x5236;&#xFF08;FMP&#xFF09;&#xFF08;&#x5173;&#x952E;&#x5143;&#x7D20;&#xFF09;&#x3001;&#x4E3B;&#x89D2;&#x5143;&#x7D20;&#x8BA1;&#x65F6;</li>
+<li>首次有效绘制（FMP）（关键元素）、主角元素计时</li>
 </ul>
-<p>&#x662F;&#x5426;&#x53EF;&#x7528;&#xFF1F;</p>
+<p>是否可用？</p>
 <ul>
-<li>&#x53EF;&#x4EA4;&#x4E92;&#x65F6;&#x95F4;&#xFF08;TTI&#xFF09;</li>
+<li>可交互时间（TTI）</li>
 </ul>
-<p>&#x662F;&#x5426;&#x5361;&#x987F;&#xFF1F;</p>
+<p>是否卡顿？</p>
 <ul>
-<li>CPU&#x6D88;&#x8017;&#xFF08;API&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x76D1;&#x63A7;&#xFF09;&#x3001;&#x8F93;&#x5165;&#x5EF6;&#x8FDF;</li>
+<li>CPU消耗（API可以直接监控）、输入延迟</li>
 </ul>
-<h4 id="&#x7F51;&#x7EDC;&#x4F18;&#x5316;&#x7B56;&#x7565;">&#x7F51;&#x7EDC;&#x4F18;&#x5316;&#x7B56;&#x7565;</h4>
+<h4 id="网络优化策略">网络优化策略</h4>
 <ul>
-<li>&#x672C;&#x5730;&#x7F13;&#x5B58;&#xFF1A;</li>
+<li>本地缓存：</li>
 </ul>
-<p>http&#x7F13;&#x5B58;&#x3001;&#x79FB;&#x52A8;&#x7AEF;&#x7F13;&#x5B58;&#xFF08;native&#xFF09;&#x3001;&#x670D;&#x52A1;&#x5668;&#x7F13;&#x5B58;&#xFF08;redis&#x3001;ssr&#x7B49;&#xFF09;</p>
+<p>http缓存、移动端缓存（native）、服务器缓存（redis、ssr等）</p>
 <ul>
-<li>&#x538B;&#x7F29;&#xFF1A;</li>
+<li>压缩：</li>
 </ul>
-<p>JS&#x538B;&#x7F29;&#x3001;CSS&#x538B;&#x7F29;&#x3001;HTML&#x538B;&#x7F29;&#xFF08;unligyjs&#x3001;xxx minify&#xFF09;</p>
-<p>Gzip&#x538B;&#x7F29;&#xFF08;express/nginx/caddy&#xFF09;</p>
-<p>&#x5408;&#x5E76;&#xFF08;&#x96EA;&#x78A7;&#x56FE;&#xFF09;</p>
+<p>JS压缩、CSS压缩、HTML压缩（unligyjs、xxx minify）</p>
+<p>Gzip压缩（express/nginx/caddy）</p>
+<p>合并（雪碧图）</p>
 <ul>
-<li>&#x8BF7;&#x6C42;&#x5408;&#x5E76;&#xFF1A;</li>
+<li>请求合并：</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/&#x8BF7;&#x6C42;&#x5408;&#x5E76;.png" alt="&#x8BF7;&#x6C42;&#x5408;&#x5E76;"></p>
-<p>&#x670D;&#x52A1;&#x5668;&#x505A;&#x8FD9;&#x4E2A;&#x5408;&#x5E76;&#xFF0C;&#x901A;&#x8FC7;&#x90E8;&#x7F72;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x6765;&#x5408;&#x5E76;&#x51E0;&#x4E2A;API&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8BF7;&#x6C42;&#x5C31;&#x4F1A;&#x5C11;&#x5F88;&#x591A;</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/请求合并.png" alt="请求合并"></p>
+<p>服务器做这个合并，通过部署一个函数，来合并几个API，这样子客户端的请求就会少很多</p>
 <ul>
-<li>&#x79BB;&#x7EBF;&#x5305;&#xFF1A;</li>
+<li>离线包：</li>
 </ul>
-<p>&#x518D;&#x6253;&#x5F00;APP&#x671F;&#x95F4;&#x5C06;&#x8D44;&#x6E90;&#xFF08;&#x79BB;&#x7EBF;&#x5305;&#xFF09;&#x63A8;&#x9001;&#x5230;APP&#x7684;&#x7F13;&#x5B58;&#x4E2D;&#xFF08;&#x901A;&#x8FC7;APP&#x95F2;&#x7F6E;&#x65F6;&#x95F4;&#xFF09;</p>
+<p>再打开APP期间将资源（离线包）推送到APP的缓存中（通过APP闲置时间）</p>
 <ul>
-<li>&#x9884;&#x52A0;&#x8F7D;&#xFF1A;</li>
+<li>预加载：</li>
 </ul>
-<p>APP&#x9884;&#x52A0;&#x8F7D;&#x5B8C;&#x6574;&#x5BB9;&#x5668;&#xFF08;Webview&#xFF09;</p>
-<p>H5&#x5E94;&#x7528;&#x9884;&#x52A0;&#x8F7D;&#x4E0B;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x7684;&#x6570;&#x636E;</p>
+<p>APP预加载完整容器（Webview）</p>
+<p>H5应用预加载下一个页面的数据</p>
 
                                 
                                 </section>
@@ -803,12 +815,56 @@ fucntion <span class="hljs-built_in">require</span>(deps,callback){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"工具链和其他","level":"1.8.1","depth":2,"next":{"title":"浏览器状态同步和路由","level":"1.8.2","depth":2,"path":"计算机网络/浏览器状态同步和路由.md","ref":"计算机网络/浏览器状态同步和路由.md","articles":[]},"previous":{"title":"计算机网络","level":"1.8","depth":1,"path":"计算机网络/计算机网络.md","ref":"计算机网络/计算机网络.md","articles":[{"title":"工具链和其他","level":"1.8.1","depth":2,"path":"计算机网络/工具链和其他.md","ref":"计算机网络/工具链和其他.md","articles":[]},{"title":"浏览器状态同步和路由","level":"1.8.2","depth":2,"path":"计算机网络/浏览器状态同步和路由.md","ref":"计算机网络/浏览器状态同步和路由.md","articles":[]},{"title":"网络安全攻防","level":"1.8.3","depth":2,"path":"计算机网络/网络安全攻防.md","ref":"计算机网络/网络安全攻防.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","disableTitleFormatting":true,"variables":{},"title":"json-config-name","gitbook":"*","outputfile":"SUMMARY.md"},"file":{"path":"计算机网络/工具链和其他.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-21T01:19:27.690Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"工具链和其他","level":"1.8.1","depth":2,"next":{"title":"浏览器状态同步和路由","level":"1.8.2","depth":2,"path":"计算机网络/浏览器状态同步和路由.md","ref":"计算机网络/浏览器状态同步和路由.md","articles":[]},"previous":{"title":"计算机网络","level":"1.8","depth":1,"path":"计算机网络/计算机网络.md","ref":"计算机网络/计算机网络.md","articles":[{"title":"工具链和其他","level":"1.8.1","depth":2,"path":"计算机网络/工具链和其他.md","ref":"计算机网络/工具链和其他.md","articles":[]},{"title":"浏览器状态同步和路由","level":"1.8.2","depth":2,"path":"计算机网络/浏览器状态同步和路由.md","ref":"计算机网络/浏览器状态同步和路由.md","articles":[]},{"title":"网络安全攻防","level":"1.8.3","depth":2,"path":"计算机网络/网络安全攻防.md","ref":"计算机网络/网络安全攻防.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"计算机网络/工具链和其他.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-21T09:39:03.214Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -826,10 +882,6 @@ fucntion <span class="hljs-built_in">require</span>(deps,callback){
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

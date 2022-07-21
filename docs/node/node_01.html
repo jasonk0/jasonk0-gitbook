@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>node_01 · json-config-name</title>
+        <title>node_01 · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 3.7.5">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -64,7 +63,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -114,9 +113,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../Angular/Angular学习笔记.md">
+        <li class="chapter " data-level="1.2.1" data-path="../Angular/Angular学习笔记.html">
             
-                <span>
+                <a href="../Angular/Angular学习笔记.html">
             
                     
                     Angular学习笔记
@@ -456,6 +455,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.7.3" data-path="../杂篇/踩坑日记.html">
+            
+                <a href="../杂篇/踩坑日记.html">
+            
+                    
+                    踩坑日记
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -525,8 +537,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -564,84 +576,84 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="node&#x7684;&#x6A21;&#x5757;">node&#x7684;&#x6A21;&#x5757;</h3>
-<h4 id="&#x6838;&#x5FC3;&#x6A21;&#x5757;">&#x6838;&#x5FC3;&#x6A21;&#x5757;</h4>
-<p>node&#x5185;&#x7F6E;&#x7684;&#x5305;&#xFF0C;&#x5982;http</p>
-<h4 id="&#x81EA;&#x5B9A;&#x4E49;&#x6A21;&#x5757;">&#x81EA;&#x5B9A;&#x4E49;&#x6A21;&#x5757;</h4>
-<p> &#x7B2C;&#x4E09;&#x65B9;&#x5305;&#xFF0C;&#x662F;&#x7531;&#x5F88;&#x591A;&#x81EA;&#x5B9A;&#x4E49;&#x6A21;&#x5757;&#x6784;&#x6210;&#x7684;&#xFF0C;&#x5176;&#x672C;&#x8EAB;&#x4E5F;&#x5C5E;&#x4E8E;&#x81EA;&#x5B9A;&#x4E49;&#x6A21;&#x5757;</p>
+                                <h3 id="node的模块">node的模块</h3>
+<h4 id="核心模块">核心模块</h4>
+<p>node内置的包，如http</p>
+<h4 id="自定义模块">自定义模块</h4>
+<p> 第三方包，是由很多自定义模块构成的，其本身也属于自定义模块</p>
 <blockquote>
-<p>&#x81EA;&#x5B9A;&#x4E49;&#x6A21;&#x5757;&#x4E00;&#x822C;&#x653E;&#x5728;node_moudles&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#xFF0C;&#x7531;package.json&#x6765;&#x7BA1;&#x7406;</p>
+<p>自定义模块一般放在node_moudles文件夹下，由package.json来管理</p>
 </blockquote>
-<p>&#x7B2C;&#x4E09;&#x65B9;&#x5305;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x4E00;&#x822C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>第三方包的目录结构一般如下：</p>
 <ul>
-<li>package.json    &#x5305;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;</li>
-<li>lib    &#x7528;&#x4E8E;&#x5B58;&#x653E;JavaScript&#x4EE3;&#x7801;&#x7684;&#x76EE;&#x5F55;</li>
-<li>bin    &#x7528;&#x4E8E;&#x5B58;&#x653E;&#x53EF;&#x6267;&#x884C;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x7684;&#x76EE;&#x5F55;</li>
-<li>doc    &#x7528;&#x4E8E;&#x5B58;&#x653E;&#x6587;&#x6863;&#x7684;&#x76EE;&#x5F55;</li>
+<li>package.json    包描述文件</li>
+<li>lib    用于存放JavaScript代码的目录</li>
+<li>bin    用于存放可执行二进制文件的目录</li>
+<li>doc    用于存放文档的目录</li>
 </ul>
-<h4 id="&#x901A;&#x8FC7;commonjs&#x6765;&#x5BFC;&#x5165;&#x5305;">&#x901A;&#x8FC7;commonJS&#x6765;&#x5BFC;&#x5165;&#x5305;</h4>
-<p>export&#x5BFC;&#x51FA;</p>
-<p>require&#x5F15;&#x5165;</p>
-<h4 id="&#x5E38;&#x7528;&#x7684;&#x4E00;&#x4E9B;&#x5305;">&#x5E38;&#x7528;&#x7684;&#x4E00;&#x4E9B;&#x5305;</h4>
+<h4 id="通过commonjs来导入包">通过commonJS来导入包</h4>
+<p>export导出</p>
+<p>require引入</p>
+<h4 id="常用的一些包">常用的一些包</h4>
 <h5 id="nodemon">nodemon</h5>
-<p>&#x70ED;&#x66F4;&#x65B0;&#x6A21;&#x5757;&#xFF0C; &#x65E0;&#x987B;ctrl + c&#x6765;&#x7EC8;&#x6B62;&#x7A0B;&#x5E8F;&#x518D;&#x8FD0;&#x884C;&#x3002;</p>
+<p>热更新模块， 无须ctrl + c来终止程序再运行。</p>
 <h5 id="http">http</h5>
-<p>&#x6838;&#x5FC3;&#x6A21;&#x5757;&#xFF0C;&#x76F4;&#x63A5;&#x53EF;&#x4EE5;&#x5BFC;&#x5165;&#x4F7F;&#x7528;&#xFF0C;&#x7528;&#x6765;&#x63A5;&#x6536;&#x4E00;&#x4E9B;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x3001;&#x8BBE;&#x7F6E;&#x8BF7;&#x6C42;&#x5934;&#x7B49;&#x3002;</p>
+<p>核心模块，直接可以导入使用，用来接收一些网络请求、设置请求头等。</p>
 <h5 id="fs">fs</h5>
-<p>&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;    </p>
-<p><strong>fs. stat</strong> &#x68C0;&#x6D4B;&#x662F;&#x6587;&#x4EF6;&#x8FD8;&#x662F;&#x76EE;&#x5F55;</p>
-<p><strong>fs.mkdir</strong> &#x521B;&#x5EFA;&#x76EE;&#x5F55;</p>
-<p><strong>fs.writeFile</strong> &#x521B;&#x5EFA;&#x3001;&#x5199;&#x5165;&#x6587;&#x4EF6;</p>
-<p><strong>fs.appendFile</strong> &#x8FFD;&#x52A0;&#x6587;&#x4EF6;&#x5185;&#x5BB9;</p>
-<p><strong>fs.readFile</strong> &#x8BFB;&#x53D6;&#x6587;&#x4EF6;</p>
-<p><strong>fs.readdir</strong> &#x8BFB;&#x53D6;&#x76EE;&#x5F55;</p>
-<p><strong>fs.rename</strong> &#x91CD;&#x547D;&#x540D;&#x3001;&#x79FB;&#x52A8;&#x4F4D;&#x7F6E;</p>
-<p><strong>fs.rmdir</strong> &#x5220;&#x9664;&#x76EE;&#x5F55;</p>
-<p><strong>fs.unlink</strong>  &#x5220;&#x9664;&#x6587;&#x4EF6;</p>
-<p><strong>fs.createReadStream</strong> &#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;&#x6D41;</p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// &#x4EE5;&#x6D41;&#x7684;&#x65B9;&#x5F0F;&#x8BFB;&#x53D6;&#x6587;&#x4EF6; createReadStream</span>
+<p>进行一些文件操作    </p>
+<p><strong>fs. stat</strong> 检测是文件还是目录</p>
+<p><strong>fs.mkdir</strong> 创建目录</p>
+<p><strong>fs.writeFile</strong> 创建、写入文件</p>
+<p><strong>fs.appendFile</strong> 追加文件内容</p>
+<p><strong>fs.readFile</strong> 读取文件</p>
+<p><strong>fs.readdir</strong> 读取目录</p>
+<p><strong>fs.rename</strong> 重命名、移动位置</p>
+<p><strong>fs.rmdir</strong> 删除目录</p>
+<p><strong>fs.unlink</strong>  删除文件</p>
+<p><strong>fs.createReadStream</strong> 创建文件读取流</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// 以流的方式读取文件 createReadStream</span>
 <span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>)
 <span class="hljs-keyword">var</span> readStream = fs.createReadStream(<span class="hljs-string">&apos;./data/input.txt&apos;</span>)
 <span class="hljs-keyword">var</span> str = <span class="hljs-string">&apos;&apos;</span>
 <span class="hljs-keyword">var</span> count = <span class="hljs-number">0</span>
-readStream.on(<span class="hljs-string">&apos;data&apos;</span>, (data) =&gt; {
+readStream.on(<span class="hljs-string">&apos;data&apos;</span>, <span class="hljs-function">(<span class="hljs-params">data</span>) =&gt;</span> {
   str += data
 })
-readStream.on(<span class="hljs-string">&apos;end&apos;</span>, () =&gt; <span class="hljs-built_in">console</span>.log(str))
+readStream.on(<span class="hljs-string">&apos;end&apos;</span>, <span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">console</span>.log(str))
 </code></pre>
-<p><strong>fs.createWriteStream</strong> &#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x5199;&#x5165;&#x6D41;</p>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> data = <span class="hljs-string">&apos;&#x75AF;&#x75AF;&#x766B;&#x766B;&#x95EF;&#x5929;&#x6DAF;&apos;</span>
+<p><strong>fs.createWriteStream</strong> 创建文件写入流</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> data = <span class="hljs-string">&apos;疯疯癫癫闯天涯&apos;</span>
 <span class="hljs-keyword">var</span> writeStream = fs.createWriteStream(<span class="hljs-string">&apos;./data/output.txt&apos;</span>)
 writeStream.write(data)
 writeStream.end()
-writeStream.on(<span class="hljs-string">&apos;finish&apos;</span>, () =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x5199;&#x5165;&#x5B8C;&#x6210;&apos;</span>))
+writeStream.on(<span class="hljs-string">&apos;finish&apos;</span>, <span class="hljs-function">() =&gt;</span> <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;写入完成&apos;</span>))
 </code></pre>
-<p><strong>pipe</strong> &#x7BA1;&#x9053;&#x6D41;</p>
-<pre><code class="lang-JavaScript"><span class="hljs-comment">// &#x7BA1;&#x9053;&#x6D41;&#xFF0C;&#x7528;&#x6765;&#x590D;&#x5236;&#x4E00;&#x4E9B;&#x5927;&#x6587;&#x4EF6;</span>
+<p><strong>pipe</strong> 管道流</p>
+<pre><code class="lang-JavaScript"><span class="hljs-comment">// 管道流，用来复制一些大文件</span>
 <span class="hljs-keyword">var</span> readStream1 = fs.createReadStream(<span class="hljs-string">&apos;./data/input.txt&apos;</span>)
 <span class="hljs-keyword">var</span> writeStream1 = fs.createWriteStream(<span class="hljs-string">&apos;./bigout&apos;</span>)
 readStream1.pipe(writeStream1)
 </code></pre>
-<h3 id="npm&#x7684;&#x4E00;&#x4E9B;&#x547D;&#x4EE4;">npm&#x7684;&#x4E00;&#x4E9B;&#x547D;&#x4EE4;</h3>
-<p>&#x5B89;&#x88C5;&#x5305;</p>
+<h3 id="npm的一些命令">npm的一些命令</h3>
+<p>安装包</p>
 <pre><code class="lang-shell">npm install &lt;name&gt; --save
 </code></pre>
-<p>&#x521D;&#x59CB;&#x5316;&#xFF08;&#x5373;&#x6DFB;&#x52A0;package.json&#x6587;&#x4EF6;&#xFF09;</p>
+<p>初始化（即添加package.json文件）</p>
 <pre><code class="lang-shell">npm init --yes
 </code></pre>
-<p>&#x67E5;&#x770B;&#x5DF2;&#x5B89;&#x88C5;&#x5305;&#x5217;&#x8868;</p>
+<p>查看已安装包列表</p>
 <pre><code class="lang-shell">npm list
 </code></pre>
-<p>&#x67E5;&#x770B;&#x5305;&#x7684;&#x7248;&#x672C;</p>
+<p>查看包的版本</p>
 <pre><code class="lang-shel">npm info &lt;name&gt;
 </code></pre>
-<p>&#x6307;&#x5B9A;&#x5B89;&#x88C5;&#x5305;&#x7684;&#x7248;&#x672C;</p>
+<p>指定安装包的版本</p>
 <pre><code class="lang-shell">npm install &lt;name&gt;@1.0.0 --save
 </code></pre>
 <blockquote>
-<p>&#x200B;    --save&#x5176;&#x4F5C;&#x7528;&#x662F;&#x5C06;&#x5305;&#x7684;&#x7248;&#x672C;&#x4FE1;&#x606F;&#xFF08;&#x4F9D;&#x8D56;&#xFF09;&#x52A0;&#x5165;&#x5230;package.json&#x6587;&#x4EF6;&#x91CC;(dependencies)</p>
-<p>&#x200B;    &#x65B9;&#x4FBF;&#x4E0D;&#x540C;&#x73AF;&#x5883;&#x4E0B;&#x542F;&#x52A8;</p>
-<p>&#x200B;    --dev &#x610F;&#x4E3A;&#x5F00;&#x53D1;&#x65F6;&#x4F9D;&#x8D56;&#xFF0C;&#x5728;&#x6253;&#x5305;&#x65F6;&#xFF0C;&#x4E0D;&#x5305;&#x542B;&#x5E26;&#x6709;dev&#x7684;&#x5305;</p>
+<p>​    --save其作用是将包的版本信息（依赖）加入到package.json文件里(dependencies)</p>
+<p>​    方便不同环境下启动</p>
+<p>​    --dev 意为开发时依赖，在打包时，不包含带有dev的包</p>
 </blockquote>
 <hr>
 <h3 id="packagejson">package.json</h3>
@@ -653,9 +665,9 @@ readStream1.pipe(writeStream1)
   },
 </code></pre>
 <blockquote>
-<p>^    &#x8868;&#x793A;&#x7B2C;&#x4E00;&#x4F4D;&#x7248;&#x672C;&#x53F7;&#x4E0D;&#x53D8;&#xFF0C;&#x540E;&#x8FB9;&#x4E24;&#x4F4D;&#x53D6;&#x6700;&#x65B0;&#x7684;&#x7248;&#x672C;</p>
-<p>~    &#x8868;&#x793A;&#x524D;&#x4E24;&#x4F4D;&#x4E0D;&#x53D8;&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x4F4D;&#x53D6;&#x6700;&#x65B0;&#x7684;&#x7248;&#x672C;</p>
-<p>&quot; * &quot;    &#x8868;&#x793A;&#x5168;&#x90E8;&#x53D6;&#x6700;&#x65B0;&#x7248;&#x672C;</p>
+<p>^    表示第一位版本号不变，后边两位取最新的版本</p>
+<p>~    表示前两位不变，最后一位取最新的版本</p>
+<p>&quot; * &quot;    表示全部取最新版本</p>
 </blockquote>
 
                                 
@@ -696,12 +708,56 @@ readStream1.pipe(writeStream1)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"node_01","level":"1.4.1","depth":2,"next":{"title":"node_02","level":"1.4.2","depth":2,"path":"node/node_02.md","ref":"node/node_02.md","articles":[]},"previous":{"title":"node","level":"1.4","depth":1,"ref":"","articles":[{"title":"node_01","level":"1.4.1","depth":2,"path":"node/node_01.md","ref":"node/node_01.md","articles":[]},{"title":"node_02","level":"1.4.2","depth":2,"path":"node/node_02.md","ref":"node/node_02.md","articles":[]},{"title":"node_03","level":"1.4.3","depth":2,"path":"node/node_03.md","ref":"node/node_03.md","articles":[]},{"title":"node与mongDB","level":"1.4.4","depth":2,"path":"node/node与mongDB.md","ref":"node/node与mongDB.md","articles":[]},{"title":"node基础","level":"1.4.5","depth":2,"path":"node/node基础.md","ref":"node/node基础.md","articles":[]},{"title":"node的web框架koa","level":"1.4.6","depth":2,"path":"node/node的web框架koa.md","ref":"node/node的web框架koa.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","disableTitleFormatting":true,"variables":{},"title":"json-config-name","gitbook":"*","outputfile":"SUMMARY.md"},"file":{"path":"node/node_01.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-21T01:19:27.690Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"node_01","level":"1.4.1","depth":2,"next":{"title":"node_02","level":"1.4.2","depth":2,"path":"node/node_02.md","ref":"node/node_02.md","articles":[]},"previous":{"title":"node","level":"1.4","depth":1,"ref":"","articles":[{"title":"node_01","level":"1.4.1","depth":2,"path":"node/node_01.md","ref":"node/node_01.md","articles":[]},{"title":"node_02","level":"1.4.2","depth":2,"path":"node/node_02.md","ref":"node/node_02.md","articles":[]},{"title":"node_03","level":"1.4.3","depth":2,"path":"node/node_03.md","ref":"node/node_03.md","articles":[]},{"title":"node与mongDB","level":"1.4.4","depth":2,"path":"node/node与mongDB.md","ref":"node/node与mongDB.md","articles":[]},{"title":"node基础","level":"1.4.5","depth":2,"path":"node/node基础.md","ref":"node/node基础.md","articles":[]},{"title":"node的web框架koa","level":"1.4.6","depth":2,"path":"node/node的web框架koa.md","ref":"node/node的web框架koa.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"node/node_01.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-21T09:39:03.214Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -719,10 +775,6 @@ readStream1.pipe(writeStream1)
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

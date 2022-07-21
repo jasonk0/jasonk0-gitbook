@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>vue生态 · json-config-name</title>
+        <title>vue生态 · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 3.7.5">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -64,7 +63,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -114,9 +113,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../Angular/Angular学习笔记.md">
+        <li class="chapter " data-level="1.2.1" data-path="../Angular/Angular学习笔记.html">
             
-                <span>
+                <a href="../Angular/Angular学习笔记.html">
             
                     
                     Angular学习笔记
@@ -456,6 +455,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.7.3" data-path="../杂篇/踩坑日记.html">
+            
+                <a href="../杂篇/踩坑日记.html">
+            
+                    
+                    踩坑日记
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -525,8 +537,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -564,188 +576,188 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="vue&#x751F;&#x6001;">vue&#x751F;&#x6001;</h1>
+                                <h1 id="vue生态">vue生态</h1>
 <p>[TOC]</p>
 <h2 id="vuex">Vuex</h2>
-<p>vuex&#x4E3B;&#x8981;&#x662F;&#x4E3A;&#x4E86;&#x5144;&#x5F1F;&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x6C9F;&#x901A;&#xFF0C;&#x867D;&#x7136;&#x6709;<code>$root</code> <code>$parrent</code> <code>$refs</code>&#x7B49;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x7684;&#x83B7;&#x53D6;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4F46;&#x662F;&#x5144;&#x5F1F;&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x4ECD;&#x7136;&#x662F;&#x5F88;&#x96BE;&#x6C9F;&#x901A;&#x5230;&#xFF0C;&#x800C;&#x4E14;&#x8026;&#x5408;&#x5EA6;&#x5F88;&#x9AD8;&#x3002;</p>
-<p>vuex&#x4F7F;&#x7528;&#x300C;&#x5355;&#x4E00;&#x72B6;&#x6001;&#x6811;&#x300D;</p>
+<p>vuex主要是为了兄弟组件之间的沟通，虽然有<code>$root</code> <code>$parrent</code> <code>$refs</code>等属性可以方便的获取父组件的数据，但是兄弟组件之间仍然是很难沟通到，而且耦合度很高。</p>
+<p>vuex使用「单一状态树」</p>
 <ul>
-<li><p><code>state</code>&#xFF1A;&#x5B58;&#x50A8;&#x54CD;&#x5E94;&#x5F0F;&#x6570;&#x636E;</p>
+<li><p><code>state</code>：存储响应式数据</p>
 </li>
-<li><p><code>getter</code>&#xFF1A;&#x548C;<code>computed</code>&#x7C7B;&#x4F3C;&#x5728;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x540E;&#x53BB;&#x8FD4;&#x56DE;&#x5904;&#x7406;&#x8FC7;&#x540E;&#x7684;&#x503C;&#xFF0C;</p>
+<li><p><code>getter</code>：和<code>computed</code>类似在发生变化后去返回处理过后的值，</p>
 </li>
 </ul>
 <blockquote>
-<p>&#x662F;<code>store</code>&#x7684;&#x8BA1;&#x7B97;&#x5C5E;&#x6027;</p>
+<p>是<code>store</code>的计算属性</p>
 </blockquote>
 <ul>
-<li><code>mutation</code>&#xFF1A;&#x7C7B;&#x4F3C;&#x4E8E;&#x4E8B;&#x4EF6;&#xFF0C;&#x4ED6;&#x4EEC;&#x91CC;&#x7684;&#x65B9;&#x6CD5;&#x90FD;&#x6709;&#x56DE;&#x8C03;&#xFF0C;&#x901A;&#x8FC7;<code>commit</code>&#x89E6;&#x53D1;&#x65F6;&#x95F4;&#xFF0C;<code>mutate</code>&#x53BB;&#x901A;&#x77E5;<code>state</code>&#x7684;&#x6570;&#x636E;&#x3002;</li>
+<li><code>mutation</code>：类似于事件，他们里的方法都有回调，通过<code>commit</code>触发时间，<code>mutate</code>去通知<code>state</code>的数据。</li>
 </ul>
 <blockquote>
-<p>&#x662F;&#x4FEE;&#x6539;<code>state</code>&#x91CC;&#x6570;&#x636E;&#x7684;&#x552F;&#x4E00;&#x65B9;&#x6CD5;&#xFF0C;&#x5FC5;&#x987B;&#x662F;&#x540C;&#x6B65;&#x7684;&#xFF0C;&#x7531;<code>commit</code>&#x89E6;&#x53D1;</p>
+<p>是修改<code>state</code>里数据的唯一方法，必须是同步的，由<code>commit</code>触发</p>
 </blockquote>
 <ul>
-<li><code>action</code>&#xFF1A;&#x5728;<code>commit</code>&#x65F6;&#xFF0C;&#x901A;&#x5E38;&#x662F;&#x540C;&#x6B65;&#x7684;&#x3002;&#x6240;&#x6709;&#x6211;&#x4EEC;&#x6709;<code>action</code>&#x63D0;&#x4F9B;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x3002;&#x901A;&#x8FC7;<code>dispatch</code>&#x6765;&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x901A;&#x8FC7;<code>commit</code>&#x53BB;&#x901A;&#x77E5;<code>mutation</code></li>
+<li><code>action</code>：在<code>commit</code>时，通常是同步的。所有我们有<code>action</code>提供异步操作。通过<code>dispatch</code>来触发事件，然后再通过<code>commit</code>去通知<code>mutation</code></li>
 </ul>
 <blockquote>
-<p>&#x7531;<code>dispatch</code>&#x89E6;&#x53D1;&#xFF0C;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x4EFB;&#x610F;&#x7684;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#xFF0C;&#x4E0D;&#x76F4;&#x63A5;&#x53D8;&#x66F4;&#x72B6;&#x6001;&#xFF0C;&#x800C;&#x662F;&#x901A;&#x8FC7;&#x901A;&#x77E5;<code>mutation</code>&#x6765;&#x6539;&#x53D8;&#x72B6;&#x6001;</p>
+<p>由<code>dispatch</code>触发，可以包含任意的异步操作，不直接变更状态，而是通过通知<code>mutation</code>来改变状态</p>
 </blockquote>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/vuex&#x7684;&#x5C5E;&#x6027;&#x53CA;&#x7528;&#x6CD5;.png" alt="vuex"></p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/vuex的属性及用法.png" alt="vuex"></p>
 <ul>
 <li>module</li>
 </ul>
-<p>&#x5176;&#x4E2D;&#x5B50;&#x6A21;&#x5757;&#x7684;getters&#xFF0C;actions&#x662F;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x7236;&#x6A21;&#x5757;&#x7684;getters&#x548C;actions</p>
-<p>&#x4F46;&#x662F;mutations&#x662F;&#x4E0D;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x7236;&#x6A21;&#x5757;&#x7684;mutiations&#x3002;</p>
-<p>&#x6240;&#x4EE5;&#x9700;&#x8981;&#x901A;&#x8FC7;actions&#x6DFB;&#x52A0;&#x4E00;&#x5B9A;&#x53C2;&#x6570;&#x540E;&#xFF0C;&#x624D;&#x80FD;&#x53BB;commit&#x901A;&#x77E5;&#x5230;&#x7236;&#x6A21;&#x5757;&#x7684;mutations</p>
+<p>其中子模块的getters，actions是可以获取父模块的getters和actions</p>
+<p>但是mutations是不可以获取父模块的mutiations。</p>
+<p>所以需要通过actions添加一定参数后，才能去commit通知到父模块的mutations</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> store= <span class="hljs-keyword">new</span> Vuex.store({
-    a: moduleA,
-    b: moduleB
+    <span class="hljs-attr">a</span>: moduleA,
+    <span class="hljs-attr">b</span>: moduleB
 })
 <span class="hljs-keyword">const</span> moduleA = {
-  namespaced: <span class="hljs-literal">true</span>, <span class="hljs-comment">//&#x547D;&#x540D;&#x7A7A;&#x95F4;</span>
-  state:{},
-  mutations:{},
-  getters:{}
+  <span class="hljs-attr">namespaced</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">//命名空间</span>
+  <span class="hljs-attr">state</span>:{},
+  <span class="hljs-attr">mutations</span>:{},
+  <span class="hljs-attr">getters</span>:{}
 }
 </code></pre>
 <h2 id="vue-router">Vue-Router</h2>
-<h3 id="&#x8DEF;&#x7531;&#x539F;&#x7406;">&#x8DEF;&#x7531;&#x539F;&#x7406;</h3>
+<h3 id="路由原理">路由原理</h3>
 <blockquote>
-<p>&#x8DEF;&#x7531;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x4E92;&#x8054;&#x7F51;&#x628A;&#x4FE1;&#x606F;&#x4ECE;&#x539F;&#x5730;&#x5740;&#x4F20;&#x8F93;&#x5230;&#x76EE;&#x7684;&#x5730;&#x5740;&#x7684;&#x6D3B;&#x52A8;</p>
+<p>路由就是通过互联网把信息从原地址传输到目的地址的活动</p>
 </blockquote>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/VueRouter&#x7684;&#x539F;&#x7406;.png" alt="vue-router"></p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/VueRouter的原理.png" alt="vue-router"></p>
 <p>Mode</p>
-<p>window&#x4E0A;&#x63D0;&#x4F9B;onhashchange&#x548C;onpopstate&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x6765;&#x76D1;&#x542C;hietory&#x6808;&#x7684;&#x53D8;&#x5316;</p>
-<p><strong>vue-router&#x4E2D;&#x9ED8;&#x8BA4;&#x662F;&#x4F7F;&#x7528;HashMode</strong></p>
+<p>window上提供onhashchange和onpopstate两种方法来监听hietory栈的变化</p>
+<p><strong>vue-router中默认是使用HashMode</strong></p>
 <h4 id="h5">h5</h4>
 <p>HTML5 Mode</p>
-<p>&#x76D1;&#x542C;popstate&#xFF0C;&#x5F53;history&#x6539;&#x53D8;&#x7684;&#x65F6;&#x5019;&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;</p>
-<p>&#x4F9D;&#x8D56; HTML5 History API &#x548C;&#x670D;&#x52A1;&#x5668;&#x914D;&#x7F6E;</p>
+<p>监听popstate，当history改变的时候触发事件</p>
+<p>依赖 HTML5 History API 和服务器配置</p>
 <h4 id="abstract">Abstract</h4>
-<p>&#x652F;&#x6301;&#x6240;&#x6709; JavaScript &#x8FD0;&#x884C;&#x73AF;&#x5883;&#xFF0C;&#x5982; Node.js &#x670D;&#x52A1;&#x5668;&#x7AEF;&#x3002;&#x5982;&#x679C;&#x53D1;&#x73B0;&#x6CA1;&#x6709;&#x6D4F;&#x89C8;&#x5668;&#x7684; API&#xFF0C;&#x8DEF;&#x7531;&#x4F1A;&#x81EA;&#x52A8;&#x5F3A;&#x5236;&#x8FDB;&#x5165;&#x8FD9;&#x4E2A;&#x6A21;&#x5F0F;.</p>
+<p>支持所有 JavaScript 运行环境，如 Node.js 服务器端。如果发现没有浏览器的 API，路由会自动强制进入这个模式.</p>
 <h4 id="hash">hash</h4>
 <p>Hash Mode</p>
-<p>&#x4F7F;&#x7528; URL hash &#x503C;&#x6765;&#x4F5C;&#x8DEF;&#x7531;&#x3002;&#x652F;&#x6301;&#x6240;&#x6709;&#x6D4F;&#x89C8;&#x5668;</p>
+<p>使用 URL hash 值来作路由。支持所有浏览器</p>
 <p><code>https://www.baidu.com#/hashtag</code></p>
-<h1 id="&#x540E;&#x8FB9;&#x5373;&#x4E3A;hash&#x503C;">&#x540E;&#x8FB9;&#x5373;&#x4E3A;hash&#x503C;</h1>
-<h3 id="&#x5BFC;&#x822A;&#x5B88;&#x536B;">&#x5BFC;&#x822A;&#x5B88;&#x536B;</h3>
-<p>&#x5C31;&#x662F;&#x4E00;&#x7CFB;&#x5217;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x8DF3;&#x8F6C;&#x3002;</p>
-<p>&#x5168;&#x5C40;&#x5B88;&#x536B;</p>
+<h1 id="后边即为hash值">后边即为hash值</h1>
+<h3 id="导航守卫">导航守卫</h3>
+<p>就是一系列钩子函数，可以决定是否跳转。</p>
+<p>全局守卫</p>
 <ul>
 <li><p>beforeEach </p>
 </li>
 <li><p>beforeResolve </p>
 </li>
-<li><p>afterEach&#xFF1A;&#x5176;&#x5B9E;&#x6CA1;&#x6709;&#x5B88;&#x536B;&#x529F;&#x80FD;&#xFF0C;&#x7EAF;&#x94A9;&#x5B50;&#x3002;</p>
+<li><p>afterEach：其实没有守卫功能，纯钩子。</p>
 </li>
 </ul>
-<p>&#x8DEF;&#x7531;&#x72EC;&#x4EAB;&#x5B88;&#x536B;</p>
+<p>路由独享守卫</p>
 <ul>
 <li>beforeEnter</li>
 </ul>
-<p>&#x7EC4;&#x4EF6;&#x5185;&#x5B88;&#x536B;</p>
+<p>组件内守卫</p>
 <ul>
 <li><p>beforeRouteEnter</p>
 </li>
-<li><p>beforeRouteUpdate&#xFF1A;&#x91CD;&#x7528;&#x7EC4;&#x4EF6;</p>
+<li><p>beforeRouteUpdate：重用组件</p>
 </li>
 <li><p>beforeRouteLeave </p>
 </li>
 </ul>
-<h2 id="&#x5B9E;&#x8DF5;">&#x5B9E;&#x8DF5;</h2>
+<h2 id="实践">实践</h2>
 <h3 id="keepalive">keepalive</h3>
-<p>&#x5176;&#x5E95;&#x5C42;&#x5B9E;&#x73B0;&#x662F;&#x4F9D;&#x8D56;LRU&#x7B97;&#x6CD5;&#xFF0C;&#x6BD4;&#x5BF9;&#x63A5;&#x4E0B;&#x6765;&#x7684;Virtual DOM&#x548C;&#x7F13;&#x5B58;&#x4E2D;&#x7684;Virtual DOM&#x662F;&#x5426;&#x4E00;&#x81F4;&#xFF0C;&#x4E00;&#x81F4;&#x7684;&#x8BDD;&#x5C31;&#x76F4;&#x63A5;&#x6CBF;&#x7528;&#xFF0C;&#x5E76;&#x66F4;&#x65B0;&#x5176;&#x4E3A;&#x6700;&#x8FD1;&#x4F7F;&#x7528;&#x3002;&#x4E0D;&#x4E00;&#x81F4;&#x7684;&#x8BDD;&#x5C31;&#x521B;&#x5EFA;Virtual DOM&#x5E76;&#x52A0;&#x5165;&#x7F13;&#x5B58;&#xFF1B;&#x6700;&#x540E;&#x9A8C;&#x8BC1;&#x7F13;&#x5B58;&#x662F;&#x5426;&#x8D85;&#x8FC7;&#x89C4;&#x5B9A;&#x957F;&#x5EA6;&#xFF0C;&#x8D85;&#x8FC7;&#x4E86;&#x53BB;&#x9500;&#x6BC1;&#x6700;&#x4E45;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x7684;DOM&#x7F13;&#x5B58;&#x3002;</p>
-<h3 id="&#x65E0;&#x9650;&#x5217;&#x8868;&#x957F;&#x5217;&#x8868;&#x4F18;&#x5316;">&#x65E0;&#x9650;&#x5217;&#x8868;&amp;&#x957F;&#x5217;&#x8868;&#x4F18;&#x5316;</h3>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/&#x65E0;&#x9650;&#x5217;&#x8868;.png" alt="&#x65E0;&#x9650;&#x5217;&#x8868;"></p>
-<p>Show-Container&#xFF1A;&#x6D4F;&#x89C8;&#x5668;&#x5C55;&#x793A;&#x7684;&#x5185;&#x5BB9;</p>
-<p>Later-Container&#xFF1A;&#x6D4F;&#x89C8;&#x5668;&#x7A97;&#x53E3;&#x4E0A;&#x65B9;&#x5212;&#x8FC7;&#x53BB;&#x7684;&#x5185;&#x5BB9;</p>
-<p>Pre-Container&#xFF1A;&#x6D4F;&#x89C8;&#x5668;&#x7A97;&#x53E3;&#x4E0B;&#x65B9;&#x9884;&#x52A0;&#x8F7D;&#x7684;&#x5185;&#x5BB9;</p>
-<p>&#x300C;&#x65E0;&#x9650;&#x5217;&#x8868;&#x300D;&#xFF1A;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x6BCF;&#x4E2A;item&#x7684;&#x9AD8;&#x5EA6;&#xFF0C;&#x7B97;&#x51FA;&#x6D4F;&#x89C8;&#x5668;&#x53EF;&#x4EE5;&#x5C55;&#x793A;&#x7684;item&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x52A0;&#x4E0A;&#x5212;&#x8FC7;&#x53BB;&#x7684;&#x4E5F;&#x5C31;&#x662F;Later-Container&#x4E2D;item&#x7684;&#x6570;&#x91CF;&#xFF08;&#x8FD9;&#x4E2A;&#x662F;&#x81EA;&#x5DF1;&#x5B9A;&#x7684;&#xFF09;&#xFF0C;&#x518D;&#x52A0;&#x4E0A;&#x9884;&#x52A0;&#x8F7D;&#x7684;Pre-Container&#x4E2D;item&#x7684;&#x6570;&#x91CF;&#xFF1B;&#x8FD9;&#x4E2A;&#x603B;&#x6570;&#x5C31;&#x662F;&#x5F53;&#x524D;&#x6D4F;&#x89C8;&#x5668;&#x9700;&#x8981;&#x52A0;&#x8F7D;&#x7684;item&#x3002;</p>
-<p>&#x5728;&#x53D1;&#x751F;&#x6ED1;&#x52A8;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x53BB;&#x52A8;&#x6001;&#x7684;&#x8BA1;&#x7B97;item&#x7684;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;&#xFF0C;&#x56E0;&#x4E3A;item&#x603B;&#x6570;&#x662F;&#x4E00;&#x5B9A;&#x7684;&#xFF1B;&#x5047;&#x8BBE;&#x62FF;&#x8FC7;&#x6765;&#x7684;&#x6570;&#x636E;itemAll&#x6709;100&#x4E2A;&#xFF0C;item&#x7684;&#x52A0;&#x8F7D;&#x6570;&#x91CF;&#x4E3A;9&#xFF0C;&#x90A3;&#x4E48;&#x7B2C;&#x4E00;&#x5C4F;&#x80AF;&#x5B9A;&#x662F;itemAll.slice(0&#xFF0C;9)&#x4E5F;&#x5C31;&#x662F;&#x524D;&#x4E5D;&#x4E2A;&#xFF1B;&#x968F;&#x7740;&#x6ED1;&#x52A8;&#xFF0C;&#x7B2C;n&#x5C4F;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x80FD;&#x5DF2;&#x7ECF;&#x52A0;&#x8F7D;&#x8FC7;&#x4E09;&#x56DB;&#x5341;&#x4E2A;item&#x4E86;&#xFF0C;&#x6B64;&#x65F6;&#x7684;item&#x5E94;&#x8BE5;&#x662F;itemAll.slice(31&#xFF0C;40)&#x3002;</p>
-<p>&#x8FD9;&#x6837;&#x65E2;&#x4FDD;&#x8BC1;&#x4E86;&#x6EDA;&#x52A8;&#x6761;&#x4E0D;&#x4F1A;&#x53D8;&#x7684;&#x7279;&#x522B;&#x77ED;&#xFF0C;&#x4E5F;&#x4FDD;&#x8BC1;&#x4E86;&#x5F80;&#x4E0A;&#x56DE;&#x987E;&#x65F6;&#x80FD;&#x627E;&#x5230;&#x4E4B;&#x524D;&#x7528;&#x6237;&#x770B;&#x5230;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x800C;&#x4E14;&#x7528;&#x6237;&#x4E0D;&#x4F1A;&#x52A0;&#x8F7D;&#x5230;&#x91CD;&#x590D;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x8FD8;&#x80FD;&#x65E0;&#x9650;&#x4E0B;&#x62C9;&#x3002;</p>
+<p>其底层实现是依赖LRU算法，比对接下来的Virtual DOM和缓存中的Virtual DOM是否一致，一致的话就直接沿用，并更新其为最近使用。不一致的话就创建Virtual DOM并加入缓存；最后验证缓存是否超过规定长度，超过了去销毁最久没有使用的DOM缓存。</p>
+<h3 id="无限列表长列表优化">无限列表&amp;长列表优化</h3>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/无限列表.png" alt="无限列表"></p>
+<p>Show-Container：浏览器展示的内容</p>
+<p>Later-Container：浏览器窗口上方划过去的内容</p>
+<p>Pre-Container：浏览器窗口下方预加载的内容</p>
+<p>「无限列表」：就是通过每个item的高度，算出浏览器可以展示的item的数量，加上划过去的也就是Later-Container中item的数量（这个是自己定的），再加上预加载的Pre-Container中item的数量；这个总数就是当前浏览器需要加载的item。</p>
+<p>在发生滑动时，我们去动态的计算item的起始位置，因为item总数是一定的；假设拿过来的数据itemAll有100个，item的加载数量为9，那么第一屏肯定是itemAll.slice(0，9)也就是前九个；随着滑动，第n屏时，我们可能已经加载过三四十个item了，此时的item应该是itemAll.slice(31，40)。</p>
+<p>这样既保证了滚动条不会变的特别短，也保证了往上回顾时能找到之前用户看到的信息。而且用户不会加载到重复的信息，还能无限下拉。</p>
 <h2 id="ssr">SSR</h2>
 <p>ServerSideRender</p>
 <ol>
-<li><p>&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x7F51;&#x9875;</p>
+<li><p>用户请求网页</p>
 </li>
-<li><p>&#x670D;&#x52A1;&#x7AEF;&#x521B;&#x5EFA;&#x5305;&#x542B;&#x6570;&#x636E;&#x7684;HTML&#x5E76;&#x8FD4;&#x56DE;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;</p>
+<li><p>服务端创建包含数据的HTML并返回给客户端</p>
 </li>
-<li><p>&#x5BA2;&#x6237;&#x7AEF;&#x6D4F;&#x89C8;&#x5668;&#x80FD;&#x591F;&#x5FEB;&#x901F;&#x5730;&#x6781;&#x7EC6;&#x548C;&#x6E32;&#x67D3;HTML&#xFF0C;&#x4F46;&#x6B64;&#x65F6;&#x9875;&#x9762;&#x4E0D;&#x80FD;&#x591F;&#x5BCC;&#x4EA4;&#x4E92;</p>
+<li><p>客户端浏览器能够快速地极细和渲染HTML，但此时页面不能够富交互</p>
 </li>
-<li>&#x6D4F;&#x89C8;&#x5668;&#x4E0B;&#x8F7D;Javascript&#x8D44;&#x6E90;</li>
-<li>&#x6B64;&#x65F6;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x5BF9;&#x7B26;&#x5408;html&#x6807;&#x51C6;&#x7684;&#x6807;&#x7B7E;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#xFF1A;&#x6EDA;&#x52A8;&#xFF0C;a&#x8FDE;&#x63A5;</li>
-<li>&#x6D4F;&#x89C8;&#x5668;&#x5F00;&#x59CB;&#x6267;&#x884C;JavaScript</li>
-<li>&#x7528;&#x6237;&#x5F00;&#x59CB;&#x53EF;&#x4EE5;&#x968F;&#x610F;&#x5730;&#x64CD;&#x4F5C;&#x9875;&#x9762;</li>
+<li>浏览器下载Javascript资源</li>
+<li>此时用户可以对符合html标准的标签进行操作，如：滚动，a连接</li>
+<li>浏览器开始执行JavaScript</li>
+<li>用户开始可以随意地操作页面</li>
 </ol>
 <p>CSR</p>
 <ol>
-<li>&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x7F51;&#x9875;</li>
-<li>&#x7531;CDN&#x8FD4;&#x56DE;&#x5DF2;&#x521B;&#x5EFA;&#x597D;&#x7684;&#x9759;&#x6001;HTML&#x6587;&#x4EF6;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;</li>
-<li>&#x5BA2;&#x6237;&#x7AEF;&#x6D4F;&#x89C8;&#x5668;&#x63A5;&#x6536;&#x5230;HTML&#x6587;&#x4EF6;&#xFF0C;&#x5F00;&#x59CB;&#x8BF7;&#x6C42;&#x76F8;&#x5E94;&#x7684;CSS&#x548C;JavaScript</li>
-<li>&#x6D4F;&#x89C8;&#x5668;&#x4E0B;&#x8F7D;JavaScript&#x548C;CSS&#x6587;&#x4EF6;</li>
-<li>&#x6D4F;&#x89C8;&#x5668;&#x6267;&#x884C;JavaScript&#xFF0C;&#x5F00;&#x59CB;&#x8C03;&#x7528;&#x63A5;&#x53E3;&#xFF0C;&#x8BF7;&#x6C42;&#x6570;&#x636E;&#xFF0C;&#x9875;&#x9762;&#x51FA;&#x4E8E;loading</li>
-<li>&#x7531;&#x670D;&#x52A1;&#x5668;restful&#x8FD4;&#x56DE;&#x6570;&#x636E;</li>
-<li>&#x6D4F;&#x89C8;&#x5668;&#x83B7;&#x53D6;&#x6570;&#x636E;&#x5F00;&#x59CB;&#x6E32;&#x67D3;&#x9875;&#x9762;&#xFF0C;&#x63A5;&#x6536;&#x540E;&#xFF0C;loading&#x53D6;&#x6D88;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x4EA4;&#x4E92;</li>
+<li>用户请求网页</li>
+<li>由CDN返回已创建好的静态HTML文件给客户端</li>
+<li>客户端浏览器接收到HTML文件，开始请求相应的CSS和JavaScript</li>
+<li>浏览器下载JavaScript和CSS文件</li>
+<li>浏览器执行JavaScript，开始调用接口，请求数据，页面出于loading</li>
+<li>由服务器restful返回数据</li>
+<li>浏览器获取数据开始渲染页面，接收后，loading取消，用户可以交互</li>
 </ol>
-<p>SSR&#x7684;&#x7279;&#x70B9;</p>
+<p>SSR的特点</p>
 <ul>
-<li>&#x66F4;&#x597D;&#x7684;SEO&#xFF1A;&#x7531;&#x4E8E;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#x722C;&#x866B;&#x6293;&#x53D6;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x67E5;&#x770B;&#x5B8C;&#x5168;&#x6E32;&#x67D3;&#x7684;&#x9875;&#x9762;</li>
-<li>&#x66F4;&#x5FEB;&#x7684;&#x5185;&#x5BB9;&#x5230;&#x8FBE;&#x65F6;&#x95F4;&#xFF1A;&#x7279;&#x522B;&#x662F;&#x5BF9;&#x4E8E;&#x7F13;&#x6162;&#x7684;&#x7F51;&#x7EDC;&#x60C5;&#x51B5;&#x6216;&#x8FD0;&#x884C;&#x7F13;&#x6162;&#x7684;&#x8BBE;&#x5907;</li>
-<li>&#x6BCF;&#x6B21;&#x9875;&#x9762;&#x8DF3;&#x8F6C;&#x90FD;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;</li>
+<li>更好的SEO：由于搜索引擎爬虫抓取可以直接查看完全渲染的页面</li>
+<li>更快的内容到达时间：特别是对于缓慢的网络情况或运行缓慢的设备</li>
+<li>每次页面跳转都需要重新加载</li>
 </ul>
-<p>CSR&#x7684;&#x7279;&#x70B9;</p>
+<p>CSR的特点</p>
 <ul>
-<li>&#x968F;&#x7740;&#x5355;&#x9875;&#x9762;&#x5E94;&#x7528;&#x6D41;&#x884C;&#x800C;&#x6D41;&#x884C;&#xFF0C;&#x6BD4;&#x8F83;&#x5408;&#x9002;&#x4E0D;&#x5F3A;&#x8C03;SEO&#x7684;&#x4E2D;&#x540E;&#x53F0;&#x5BCC;&#x4EA4;&#x4E92;&#x5E94;&#x7528;</li>
-<li>&#x9996;&#x6B21;&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x8981;&#x7B49;&#x5230;&#x8D44;&#x6E90;&#x90FD;&#x52A0;&#x8F7D;&#x6267;&#x884C;&#x5B8C;&#xFF0C;&#x7528;&#x6237;&#x624D;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;</li>
-<li>&#x5355;&#x9875;&#x9762;&#x5E94;&#x7528;&#x8DF3;&#x8F6C;&#x65E0;&#x5237;&#x65B0;&#xFF0C;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#x4E1D;&#x6ED1;</li>
+<li>随着单页面应用流行而流行，比较合适不强调SEO的中后台富交互应用</li>
+<li>首次页面加载要等到资源都加载执行完，用户才可以进行操作</li>
+<li>单页面应用跳转无刷新，用户体验丝滑</li>
 </ul>
-<p>&#x540C;&#x6784;</p>
+<p>同构</p>
 <ol>
-<li><p>&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x7F51;&#x9875;</p>
+<li><p>用户请求网页</p>
 </li>
-<li><p>&#x670D;&#x52A1;&#x7AEF;&#x521B;&#x5EFA;&#x5305;&#x542B;&#x6570;&#x636E;&#x7684;HTML&#x5E76;&#x8FD4;&#x56DE;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;</p>
+<li><p>服务端创建包含数据的HTML并返回给客户端</p>
 </li>
-<li><p>&#x5BA2;&#x6237;&#x7AEF;&#x6D4F;&#x89C8;&#x5668;&#x80FD;&#x591F;&#x5FEB;&#x901F;&#x5730;&#x6781;&#x7EC6;&#x548C;&#x6E32;&#x67D3;HTML&#xFF0C;&#x4F46;&#x6B64;&#x65F6;&#x9875;&#x9762;&#x4E0D;&#x80FD;&#x591F;&#x5BCC;&#x4EA4;&#x4E92;</p>
+<li><p>客户端浏览器能够快速地极细和渲染HTML，但此时页面不能够富交互</p>
 </li>
-<li>&#x6D4F;&#x89C8;&#x5668;&#x4E0B;&#x8F7D;Javascript&#x8D44;&#x6E90;</li>
-<li>&#x6D4F;&#x89C8;&#x5668;&#x6C34;&#x5408;&#x4E8B;&#x4EF6;&#xFF0C;&#x7531;&#x6D4F;&#x89C8;&#x5668;&#x6267;&#x884C;JavaScript&#x6765;&#x63A7;&#x5236;&#x9875;&#x9762;&#x3001;&#x8BF7;&#x6C42;&#x4EE5;&#x53CA;&#x6570;&#x636E;</li>
-<li>&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x83B7;&#x53D6;&#x975E;&#x9996;&#x5C4F;&#xFF0C;&#x4F18;&#x5148;&#x57FA;&#x4F4E;&#x7684;&#x5F02;&#x6B65;&#x63A5;&#x53E3;&#x6570;&#x636E;</li>
-<li>&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x4F53;&#x9A8C;&#x4E1D;&#x6ED1;&#x7F51;&#x7AD9;  </li>
+<li>浏览器下载Javascript资源</li>
+<li>浏览器水合事件，由浏览器执行JavaScript来控制页面、请求以及数据</li>
+<li>从服务器获取非首屏，优先基低的异步接口数据</li>
+<li>用户可以体验丝滑网站  </li>
 </ol>
-<p>&#x4F55;&#x65F6;&#x4F7F;&#x7528;SSR&#xFF1F;</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/SSR&#x7684;&#x4F7F;&#x7528;&#x65F6;&#x673A;.png" alt="SSR&#x7684;&#x65F6;&#x673A;"></p>
-<h3 id="&#x540C;&#x6784;&#x5B9E;&#x8DF5;">&#x540C;&#x6784;&#x5B9E;&#x8DF5;</h3>
-<p>&#x901A;&#x7528;&#x4EE3;&#x7801;&#x7684;&#x4E00;&#x4E9B;&#x539F;&#x5219;&#xFF1A;</p>
+<p>何时使用SSR？</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/SSR的使用时机.png" alt="SSR的时机"></p>
+<h3 id="同构实践">同构实践</h3>
+<p>通用代码的一些原则：</p>
 <ul>
-<li><p>&#x6570;&#x636E;&#x54CD;&#x5E94;&#xFF1A; &#x5728;&#x7EAF;&#x5BA2;&#x6237;&#x7AEF;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF08;client-only app&#xFF09;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x4F1A;&#x5728;&#x4ED6;&#x4EEC;&#x5404;&#x81EA;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x4F7F;&#x7528;&#x65B0;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5B9E;&#x4F8B;&#x3002;&#x5C06;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x54CD;&#x5E94;&#x5F0F;&#x7684;&#x8FC7;&#x7A0B;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x662F;&#x591A;&#x4F59;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x7981;&#x7528;&#x3002;&#x8FD8;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x5C06;&#x6570;&#x636E;&#x8F6C;&#x5316;&#x4E3A;&#x54CD;&#x5E94;&#x5F0F;&#x5BF9;&#x8C61;&#x7684;&#x6027;&#x80FD;&#x5F00;&#x9500;&#x3002;</p>
+<li><p>数据响应： 在纯客户端应用程序（client-only app）中，每个用户会在他们各自的浏览器中使用新的应用程序实例。将数据进行响应式的过程在服务器上是多余的，所以默认情况下禁用。还可以避免将数据转化为响应式对象的性能开销。</p>
 </li>
-<li><p>&#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;&#x51FD;&#x6570;&#xFF1A;&#x53EA;&#x6709;<code>beforeCreate</code>&#x548C;<code>created</code>&#x4F1A;&#x5728;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x6E32;&#x67D3;&#xFF08;SSR&#xFF09;&#x4E2D;&#x88AB;&#x8C03;&#x7528;&#x3002;&#x8981;&#x907F;&#x514D;<code>beforeCreate</code>&#x548C;<code>created</code>&#x65F6;&#x4EA7;&#x751F;&#x5168;&#x5C40;&#x526F;&#x4F5C;&#x7528;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x4F8B;&#x5982;&#x5728;&#x5176;&#x4E2D;&#x4F7F;&#x7528;<code>setInterval</code></p>
+<li><p>生命周期钩子函数：只有<code>beforeCreate</code>和<code>created</code>会在服务器端渲染（SSR）中被调用。要避免<code>beforeCreate</code>和<code>created</code>时产生全局副作用的代码，例如在其中使用<code>setInterval</code></p>
 </li>
-<li>&#x8BBF;&#x95EE;&#x7279;&#x5B9A;&#x5E73;&#x53F0;&#xFF1A;&#x7981;&#x6B62;&#x4F7F;&#x7528;<code>window</code>&#x6216;<code>document</code>&#xFF0C;&#x4EE5;&#x53CA;&#x5171;&#x4EAB;&#x4E8E;&#x670D;&#x52A1;&#x5668;&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x4F46;&#x7528;&#x4E8E;&#x4E0D;&#x540C;&#x5E73;&#x53F0;API&#x7684;&#x4EFB;&#x52A1;&#xFF08;task&#xFF09;&#x3002;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x80FD;&#x591F;&#x517C;&#x5BB9;&#x4E8C;&#x8005;&#x7684;&#x4E09;&#x65B9;&#x5E93;&#xFF0C;&#x4F8B;&#x5982;axios</li>
-<li>&#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x4EE4;&#xFF1A;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x7EC4;&#x4EF6;&#x4F5C;&#x4E3A;&#x62BD;&#x8C61;&#x673A;&#x5236;&#xFF0C;&#x5E76;&#x8FD0;&#x884C;&#x5728;&#x300C;&#x865A;&#x62DF;DOM&#x300D;&#x5C42;&#x7EA7;&#x3002;&#x5982;&#x679C;&#x81EA;&#x5B9A;&#x4E49;&#x6307;&#x4EE4;&#xFF0C;&#x4E0D;&#x5BB9;&#x6613;&#x66FF;&#x6362;&#x4E3A;&#x7EC4;&#x4EF6;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x5728;&#x521B;&#x5EFA;&#x670D;&#x52A1;&#x5668;&#x5BF9;&#x8C61;<code>renderer</code>&#x65F6;&#xFF0C;&#x4F7F;&#x7528;<code>directives</code>&#x63D0;&#x4F9B;&#x201C;&#x670D;&#x52A1;&#x7AEF;&#x7248;&#x672C;&#x201D;&#x3002;</li>
+<li>访问特定平台：禁止使用<code>window</code>或<code>document</code>，以及共享于服务器和客户端，但用于不同平台API的任务（task）。建议使用能够兼容二者的三方库，例如axios</li>
+<li>自定义指令：推荐使用组件作为抽象机制，并运行在「虚拟DOM」层级。如果自定义指令，不容易替换为组件，则可以在创建服务器对象<code>renderer</code>时，使用<code>directives</code>提供“服务端版本”。</li>
 </ul>
-<p>&#x7ED3;&#x6784;&#x56FE;&#xFF1A;</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/SSR&#x540C;&#x6784;.png" alt="&#x7ED3;&#x6784;&#x56FE;"></p>
+<p>结构图：</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/SSR同构.png" alt="结构图"></p>
 <h2 id="nuxtjs">Nuxt.js</h2>
 <ul>
-<li><p>&#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;vuejs&#x7684;&#x901A;&#x7528;&#x5E94;&#x7528;&#x6846;&#x67B6;</p>
+<li><p>是一个基于vuejs的通用应用框架</p>
 </li>
-<li><p>&#x9884;&#x8BBE;&#x4E86;&#x5229;&#x7528;vuejs&#x5F00;&#x53D1;&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#x7684;&#x5E94;&#x7528;&#x6240;&#x9700;&#x8981;&#x7684;&#x5404;&#x79CD;&#x914D;&#x7F6E;</p>
+<li><p>预设了利用vuejs开发服务端渲染的应用所需要的各种配置</p>
 </li>
-<li><p>&#x63D0;&#x4F9B;&#x4E86;&#x5BF9;&#x57FA;&#x4E8E;vuejs&#x7684;&#x5E94;&#x7528;&#x751F;&#x6210;&#x5BF9;&#x5E94;&#x9759;&#x6001;&#x7AD9;&#x70B9;&#x7684;&#x529F;&#x80FD;</p>
+<li><p>提供了对基于vuejs的应用生成对应静态站点的功能</p>
 </li>
-<li><p>&#x63D0;&#x4F9B;&#x4E86;&#x5F3A;&#x5927;&#x7684;&#x6A21;&#x5757;&#x7CFB;&#x7EDF;&#xFF0C;&#x53EF;&#x4EE5;&#x4FBF;&#x6377;&#x5730;&#x4F7F;&#x7528;REST&#x6216;GraphQL&#x63A5;&#x53E3;&#xFF0C;PWA&#x4EE5;&#x53CA;AMP&#x652F;&#x6301;&#x7B49;&#x90FD;&#x662F;&#x4F5C;&#x4E3A;&#x6A21;&#x5757;&#x6765;&#x63D0;&#x4F9B;&#x652F;&#x6301;&#x3002;</p>
+<li><p>提供了强大的模块系统，可以便捷地使用REST或GraphQL接口，PWA以及AMP支持等都是作为模块来提供支持。</p>
 </li>
 </ul>
-<p>&#x54CD;&#x5E94;&#x6D41;&#x7A0B;&#x56FE;</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/nuxy&#x54CD;&#x5E94;&#x6D41;&#x7A0B;&#x56FE;.png" alt="nuxt"></p>
-<p>&#x9875;&#x9762;&#x8BF7;&#x6C42;</p>
-<p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x7F13;&#x5B58; &#x521D;&#x59CB;&#x5316;&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;</p>
-<p>&#x901A;&#x8FC7;&#x4E2D;&#x95F4;&#x4EF6;&#x5904;&#x7406;</p>
-<p>&#x8FDB;&#x5165;&#x9875;&#x9762;hook</p>
-<p>async&#x83B7;&#x53D6;&#x6570;&#x636E;</p>
-<p>&#x6700;&#x540E;&#x662F;&#x6E32;&#x67D3;</p>
-<p>&#x7528; &#x6237;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>&lt;nuxt-link&gt;</code>&#x8FDB;&#x5165;&#x65B0;&#x7684;&#x9875;&#x9762;</p>
+<p>响应流程图</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/nuxy响应流程图.png" alt="nuxt"></p>
+<p>页面请求</p>
+<p>如果没有缓存 初始化创建实例</p>
+<p>通过中间件处理</p>
+<p>进入页面hook</p>
+<p>async获取数据</p>
+<p>最后是渲染</p>
+<p>用 户可以通过<code>&lt;nuxt-link&gt;</code>进入新的页面</p>
 
                                 
                                 </section>
@@ -785,12 +797,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"vue生态","level":"1.6.4","depth":2,"next":{"title":"杂篇","level":"1.7","depth":1,"ref":"","articles":[{"title":"直播","level":"1.7.1","depth":2,"path":"杂篇/直播.md","ref":"杂篇/直播.md","articles":[]},{"title":"预习资料","level":"1.7.2","depth":2,"path":"杂篇/预习资料.md","ref":"杂篇/预习资料.md","articles":[]}]},"previous":{"title":"vue基础","level":"1.6.3","depth":2,"path":"vue/vue基础.md","ref":"vue/vue基础.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","disableTitleFormatting":true,"variables":{},"title":"json-config-name","gitbook":"*","outputfile":"SUMMARY.md"},"file":{"path":"vue/vue生态.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-21T01:19:27.690Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"vue生态","level":"1.6.4","depth":2,"next":{"title":"杂篇","level":"1.7","depth":1,"ref":"","articles":[{"title":"直播","level":"1.7.1","depth":2,"path":"杂篇/直播.md","ref":"杂篇/直播.md","articles":[]},{"title":"预习资料","level":"1.7.2","depth":2,"path":"杂篇/预习资料.md","ref":"杂篇/预习资料.md","articles":[]},{"title":"踩坑日记","level":"1.7.3","depth":2,"path":"杂篇/踩坑日记.md","ref":"杂篇/踩坑日记.md","articles":[]}]},"previous":{"title":"vue基础","level":"1.6.3","depth":2,"path":"vue/vue基础.md","ref":"vue/vue基础.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"vue/vue生态.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-21T09:39:03.214Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -808,10 +864,6 @@
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

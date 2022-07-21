@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>vue3 · json-config-name</title>
+        <title>vue3 · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 3.7.5">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -116,9 +115,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../Angular/Angular学习笔记.md">
+        <li class="chapter " data-level="1.2.1" data-path="../Angular/Angular学习笔记.html">
             
-                <span>
+                <a href="../Angular/Angular学习笔记.html">
             
                     
                     Angular学习笔记
@@ -458,6 +457,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.7.3" data-path="../杂篇/踩坑日记.html">
+            
+                <a href="../杂篇/踩坑日记.html">
+            
+                    
+                    踩坑日记
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -527,8 +539,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -567,290 +579,290 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="vue3">Vue3</h1>
-<h2 id="&#x5F15;&#x8A00;">&#x5F15;&#x8A00;</h2>
+<h2 id="引言">引言</h2>
 <blockquote>
-<p><strong>Vue&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</strong></p>
-<p>MVVM&#x6846;&#x67B6;&#xFF1F;</p>
-<p>&#x4E0D;&#xFF01;&#x4ED6;&#x662F;&#x505A;&#x6E32;&#x67D3;&#x7684;&#x6846;&#x67B6;</p>
+<p><strong>Vue是什么？</strong></p>
+<p>MVVM框架？</p>
+<p>不！他是做渲染的框架</p>
 </blockquote>
-<p>vue3&#x5C06;&#x820D;&#x53BB;vue2&#x7684;&#x5F88;&#x591A;&#x4E1C;&#x897F;&#xFF0C;&#x62E5;&#x62B1;&#x51FD;&#x6570;&#x5F0F;&#x7B80;&#x7EA6;&#x6280;&#x672F;&#xFF0C;&#x5728;&#x5176;&#x4E2D;&#x66F4;&#x591A;&#x7684;&#x662F;&#x4EE5;&#x67B6;&#x6784;&#x6280;&#x672F;&#x4F5C;&#x4E3A;&#x4E3B;&#x5BFC;&#x548C;&#x5173;&#x6CE8;&#x70B9;&#x3002;</p>
+<p>vue3将舍去vue2的很多东西，拥抱函数式简约技术，在其中更多的是以架构技术作为主导和关注点。</p>
 <blockquote>
 <p> view = f (data)</p>
 </blockquote>
-<p><strong>&#x7EAF;&#x51FD;&#x6570;</strong></p>
-<p>&#x5176;&#x884C;&#x4E3A;&#x662F;&#x5F88;&#x5BB9;&#x6613;&#x88AB;&#x9884;&#x6D4B;&#x7684;&#x3002;&#x4EE3;&#x7801;&#x884C;&#x4E3A;&#x5BB9;&#x6613;&#x9884;&#x6D4B;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x662F;&#x5065;&#x58EE;&#x7684;&#xFF0C;&#x53CD;&#x4E4B;&#x662F;&#x4E0D;&#x5065;&#x58EE;&#x7684;&#x3002;</p>
-<p>Vue3&#x662F;&#x4E00;&#x4E2A;&#x6839;&#x636E;&#x6570;&#x636E;&#x6E32;&#x67D3;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x518D;&#x52A0;&#x4E0A;&#x4E00;&#x4E9B;&#x7279;&#x5B9A;&#x7684;&#x526F;&#x4F5C;&#x7528;&#x3002;&#x526F;&#x4F5C;&#x7528;&#x5728;&#x524D;&#x7AEF;&#x662F;&#x5FC5;&#x987B;&#x7684;&#xFF0C;&#x6BD4;&#x5982;&#x9875;&#x9762;&#x8DF3;&#x8F6C;&#xFF0C;window&#x64CD;&#x4F5C;&#xFF0C;&#x7ED1;&#x5B9A;&#x65F6;&#x95F4;&#x7B49;&#x7B49;&#x3002;</p>
+<p><strong>纯函数</strong></p>
+<p>其行为是很容易被预测的。代码行为容易预测，那么它是健壮的，反之是不健壮的。</p>
+<p>Vue3是一个根据数据渲染的函数，再加上一些特定的副作用。副作用在前端是必须的，比如页面跳转，window操作，绑定时间等等。</p>
 <blockquote>
 <p> view = f (data) with effect [ ]</p>
 </blockquote>
-<p><strong>&#x65B0;&#x4E1C;&#x897F;</strong>&#xFF08;&#x66F4;&#x597D;&#x7528;&#x3001;&#x66F4;&#x5FEB;&#x901F;&#xFF09;</p>
+<p><strong>新东西</strong>（更好用、更快速）</p>
 <ul>
 <li>Composition API</li>
 <li>reactivity</li>
 <li>JSX/Typescript</li>
 </ul>
-<p><strong>&#x65B0;&#x7279;&#x6027;</strong></p>
+<p><strong>新特性</strong></p>
 <ul>
-<li><p>&#x7B80;&#x5316;&#x72B6;&#x6001;&#x8BBE;&#x8BA1;&#xFF0C;&#x7B26;&#x5408;&#x4EBA;&#x7684;&#x76F4;&#x89C9;</p>
+<li><p>简化状态设计，符合人的直觉</p>
 </li>
-<li><p>&#x62E5;&#x62B1;&#x51FD;&#x6570;&#x5F0F;</p>
+<li><p>拥抱函数式</p>
 </li>
-<li><p>&#x7B80;&#x5316;API</p>
+<li><p>简化API</p>
 </li>
-<li><p>&#x66F4;&#x597D;&#x7684;&#x5C01;&#x88C5;&#x548C;&#x6700;&#x5C0F;&#x7C92;&#x5EA6;&#x670D;&#x7528;&#xFF08;&#x5173;&#x6CE8;&#x70B9;&#x5206;&#x79BB;&#x539F;&#x5219;&#xFF09;</p>
+<li><p>更好的封装和最小粒度服用（关注点分离原则）</p>
 </li>
 </ul>
-<h2 id="vue3&#x7684;&#x5BFC;&#x8BFB;">Vue3&#x7684;&#x5BFC;&#x8BFB;</h2>
-<h3 id="&#x62E5;&#x62B1;jsx">&#x62E5;&#x62B1;JSX</h3>
-<p>SFC&#x6CA1;&#x6709;&#x6210;&#x4E3A;&#x6807;&#x51C6;&#x6240;&#x4EE5;&#x88AB;&#x629B;&#x5F03;&#x6389;&#x4E86;</p>
-<p>&#x800C;&#x4E14;SFC&#x4E0D;&#x7B26;&#x5408;&#x5173;&#x6CE8;&#x70B9;&#x5206;&#x79BB;&#x539F;&#x5219;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5176;&#x6A21;&#x7248;&#x548C;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#x8DDD;&#x79BB;&#x975E;&#x5E38;&#x8FDC;&#xFF0C;&#x4E0D;&#x65B9;&#x4FBF;&#x4E00;&#x8D77;&#x7BA1;&#x7406;&#x3002;&#x90A3;&#x6211;&#x4EEC;&#x8FD9;&#x4E2A;&#x4E1A;&#x52A1;&#x5173;&#x6CE8;&#x70B9;&#x5C31;&#x88AB;&#x5206;&#x5F00;&#x4E86;</p>
-<p>&#x800C;JSX&#x4F1A;&#x53EF;&#x4EE5;&#x805A;&#x5408;&#x4E1A;&#x52A1;&#x5173;&#x6CE8;&#x70B9;&#xFF0C;&#x4E14;&#x53EF;&#x4EE5;&#x66F4;&#x4F18;&#x96C5;&#x7684;&#x63D0;&#x4F9B;&#x591A;&#x6837;&#x7684;&#x6E32;&#x67D3;&#x80FD;&#x529B;</p>
+<h2 id="vue3的导读">Vue3的导读</h2>
+<h3 id="拥抱jsx">拥抱JSX</h3>
+<p>SFC没有成为标准所以被抛弃掉了</p>
+<p>而且SFC不符合关注点分离原则，也就是其模版和业务代码距离非常远，不方便一起管理。那我们这个业务关注点就被分开了</p>
+<p>而JSX会可以聚合业务关注点，且可以更优雅的提供多样的渲染能力</p>
 <h3 id="typescript">Typescript</h3>
 <h3 id="composition-api">Composition API</h3>
 <blockquote>
-<p> &#x751F;&#x547D;&#x5468;&#x671F;&#x52FE;&#x5B50;&#x51FD;&#x6570;&#x5DF2;&#x7ECF;&#x4E0D;&#x91CD;&#x8981;&#x4E86;</p>
+<p> 生命周期勾子函数已经不重要了</p>
 </blockquote>
 <h3 id="reactivity">Reactivity</h3>
-<p>&#x4EC0;&#x4E48;&#x662F;&#x54CD;&#x5E94;&#x5F0F;&#xFF1F;</p>
-<p>&#x5F53;&#x53D8;&#x91CF;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x53EA;&#x544A;&#x8BC9;&#x5916;&#x754C;&#x5176;&#x53D1;&#x751F;&#x4E86;&#x53D8;&#x5316;&#x3002;&#xFF08;&#x7C7B;&#x4F3C;&#x4E8E;&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;&#xFF09;</p>
-<p>&#x300C;&#x54CD;&#x5E94;&#x5F0F;&#x503C;&#x300D;&#x4E13;&#x6CE8;&#x4E8E;&#x8BA1;&#x7B97;&#x903B;&#x8F91;&#x7684;&#x8868;&#x8FBE;&#xFF0C;&#x4E0D;&#x5173;&#x5FC3;&#x6E32;&#x67D3;&#x7EC6;&#x8282;</p>
+<p>什么是响应式？</p>
+<p>当变量发生变化时，只告诉外界其发生了变化。（类似于观察者模式）</p>
+<p>「响应式值」专注于计算逻辑的表达，不关心渲染细节</p>
 <h4 id="proactive-vs-reactive">Proactive vs Reactive</h4>
-<p>&#x4E3B;&#x52A8;&#x5173;&#x7CFB;&#x4E2D;&#xFF0C;&#x662F;&#x5F3A;&#x8026;&#x5408;&#x7684;&#xFF0C;&#x4E00;&#x65B9;&#x7684;&#x72B6;&#x6001;&#x4E0E;&#x53E6;&#x4E00;&#x65B9;&#x7D27;&#x5BC6;&#x76F8;&#x8FDE;</p>
-<p>&#x54CD;&#x5E94;&#x5173;&#x7CFB;&#x4E2D;&#xFF0C;&#x662F;&#x88AB;&#x52A8;&#x7684;&#xFF0C;&#x662F;&#x89E3;&#x8026;&#x5408;&#x7684;&#xFF0C;&#x4E24;&#x65B9;&#x53EA;&#x5411;&#x5916;&#x754C;&#x6254;&#x51FA;&#x4E8B;&#x4EF6;&#xFF0C;&#x548C;&#x8BA2;&#x9605;&#x4E8B;&#x4EF6;</p>
+<p>主动关系中，是强耦合的，一方的状态与另一方紧密相连</p>
+<p>响应关系中，是被动的，是解耦合的，两方只向外界扔出事件，和订阅事件</p>
 <blockquote>
 <p>P.S.</p>
-<p>Reactivity&#x548C;React&#x90FD;&#x662F;&#x4E3A;&#x4E86;&#x54CD;&#x5E94;&#x5F0F;&#x8BBE;&#x8BA1;&#x548C;&#x58F0;&#x660E;&#x5F0F;&#x7A0B;&#x5E8F;</p>
-<p>Composition API &#x662F;&#x4E3A;&#x4E86;&#x63D0;&#x4F9B;&#x66F4;&#x597D;&#x7684;&#x7EC4;&#x5408;&#x80FD;&#x529B;&#xFF08;&#x7EC4;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x7EC4;&#x5408;&#x80FD;&#x529B;&#xFF09;</p>
+<p>Reactivity和React都是为了响应式设计和声明式程序</p>
+<p>Composition API 是为了提供更好的组合能力（组件之间的组合能力）</p>
 </blockquote>
 <h2 id="reactivity">Reactivity</h2>
-<p>&#x547D;&#x4EE4;&#x5F0F;&#x7A0B;&#x5E8F; vs &#x54CD;&#x5E94;&#x5F0F;&#x7A0B;&#x5E8F;</p>
-<p>&#x524D;&#x8005;&#x662F;&#x8D4B;&#x503C;&#xFF0C;&#x540E;&#x8005;&#x662F;&#x58F0;&#x660E;&#x5173;&#x7CFB;&#x3002;</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/reactive&#x7684;&#x6F14;&#x793A;&#x56FE;.png" alt="reactive"></p>
+<p>命令式程序 vs 响应式程序</p>
+<p>前者是赋值，后者是声明关系。</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/reactive的演示图.png" alt="reactive"></p>
 <p>Get Value</p>
 <ul>
-<li>track &#x8FFD;&#x8E2A;&#x5230;&#x4F9D;&#x8D56;&#x7684;&#x7EC4;&#x4EF6;</li>
+<li>track 追踪到依赖的组件</li>
 </ul>
 <p>Set Value</p>
 <ul>
-<li>Trigger &#x901A;&#x77E5;&#x6240;&#x6709;&#x4F9D;&#x8D56;&#x7684;&#x7EC4;&#x4EF6;</li>
+<li>Trigger 通知所有依赖的组件</li>
 </ul>
-<h3 id="&#x4EE3;&#x7406;&#x6A21;&#x5F0F;">&#x4EE3;&#x7406;&#x6A21;&#x5F0F;</h3>
-<pre><code class="lang-typescript">function createRef&lt;T&gt;(val : T){
-  const obj = {
-    get value(){
+<h3 id="代理模式">代理模式</h3>
+<pre><code class="lang-typescript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createRef</span>&lt;<span class="hljs-title">T</span>&gt;(<span class="hljs-params">val : T</span>)</span>{
+  <span class="hljs-keyword">const</span> obj = {
+    <span class="hljs-keyword">get</span> <span class="hljs-title">value</span>(){
       track()
-      return val
+      <span class="hljs-keyword">return</span> val
     },
-    set value(v : T){
+    <span class="hljs-keyword">set</span> <span class="hljs-title">value</span>(<span class="hljs-params">v : T</span>){
       trigger()
       val = v
     }
-    return obj
+    <span class="hljs-keyword">return</span> obj
   }
 }
-cosnt a = createRef(0)
-a.value = 1
-console.log(count.value)
-function reactive&lt;T extends object&gt;(obj : T)[
-  const proxy = new Proxy(obj,{
+cosnt a = createRef(<span class="hljs-number">0</span>)
+a.value = <span class="hljs-number">1</span>
+<span class="hljs-built_in">console</span>.log(count.value)
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">reactive</span>&lt;<span class="hljs-title">T</span> <span class="hljs-title">extends</span> <span class="hljs-title">object</span>&gt;(<span class="hljs-params">obj : T</span>)[
+  <span class="hljs-title">const</span> <span class="hljs-title">proxy</span> = <span class="hljs-title">new</span> <span class="hljs-title">Proxy</span>(<span class="hljs-params">obj,{
   get(target, key) {
-    return Reflect.get(target,key)
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Reflect</span>.get(target,key)
   },
     set(target,key,value){
-      Reflect.set(target,key,value)
-      return true
+      <span class="hljs-built_in">Reflect</span>.set(target,key,value)
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
     }
-  })
+  }</span>)
 ]
-</code></pre>
-<p>&#x601D;&#x8003;</p>
-<p>&#x4EE3;&#x7406;&#x5BF9;&#x8C61;&#x548C;&#x539F;&#x5BF9;&#x8C61;&#x662F;&#x4E00;&#x79CD;&#x600E;&#x6837;&#x7684;&#x5173;&#x7CFB;</p>
-<p>&#x4EE3;&#x7406;&#x5BF9;&#x8C61;&#x548C;&#x539F;&#x5BF9;&#x8C61;&#x7684;&#x903B;&#x8F91;&#x5E76;&#x65E0;&#x4E00;&#x5B9A;&#x5173;&#x8054;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x5173;&#x6CE8;&#x4ED6;&#x4EEC;&#x7684;&#x6570;&#x636E;&#x8868;&#x73B0;&#x3002;</p>
-<p>Data binding&#x548C;Reactive&#x7684;&#x5173;&#x7CFB;&#xFF1F;</p>
-<p>Reactive&#x662F;&#x6570;&#x636E;&#x7ED1;&#x5B9A;&#x7684;&#x4E00;&#x79CD;&#x65B9;&#x6848;&#x3002;</p>
-<h2 id="ref&#x548C;reactive">Ref&#x548C;Reactive</h2>
+</span></code></pre>
+<p>思考</p>
+<p>代理对象和原对象是一种怎样的关系</p>
+<p>代理对象和原对象的逻辑并无一定关联，我们只关注他们的数据表现。</p>
+<p>Data binding和Reactive的关系？</p>
+<p>Reactive是数据绑定的一种方案。</p>
+<h2 id="ref和reactive">Ref和Reactive</h2>
 <h2 id="computed">Computed</h2>
-<h3 id="&#x7B2C;&#x4E00;&#x5C42;&#xFF1A;&#x8BA1;&#x7B97;&#x51FD;&#x6570;">&#x7B2C;&#x4E00;&#x5C42;&#xFF1A;&#x8BA1;&#x7B97;&#x51FD;&#x6570;</h3>
-<p>&#x5C06;&#x8BA1;&#x7B97;&#x5C01;&#x88C5;&#x5230;&#x4E00;&#x4E2A;&#x7EAF;&#x51FD;&#x6570;&#x91CC;</p>
-<h3 id="&#x7B2C;&#x4E8C;&#x5C42;&#xFF1A;&#x63D0;&#x4F9B;&#x7F13;&#x5B58;">&#x7B2C;&#x4E8C;&#x5C42;&#xFF1A;&#x63D0;&#x4F9B;&#x7F13;&#x5B58;</h3>
-<p>&#x5728;&#x9012;&#x5F52;&#x8BA1;&#x7B97;&#x300C;&#x6590;&#x6CE2;&#x90A3;&#x5951;&#x6570;&#x300D;&#x65F6;&#xFF0C;&#x8D8A;&#x5927;&#x7684;&#x6570;&#x8BA1;&#x7B97;&#x8D8A;&#x8017;&#x65F6;&#xFF0C;&#x5373;&#x300C;&#x6602;&#x8D35;&#x300D;&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x51FD;&#x6570;&#x5305;&#x88C5;&#xFF0C;&#x90A3;&#x4E48;&#x6BCF;&#x4E00;&#x6B21;&#x9875;&#x9762;&#x66F4;&#x8FED;&#xFF0C;&#x53BB;&#x62FF;&#x300C;&#x6590;&#x6CE2;&#x90A3;&#x5951;&#x6570;&#x300D;&#x90FD;&#x4F1A;&#x89E6;&#x53D1;&#x91CD;&#x65B0;&#x8BA1;&#x7B97;&#xFF1B;&#x4F46;&#x662F;&#x4F7F;&#x7528;computed&#x7684;&#x8BDD;&#x662F;&#x5177;&#x6709;&#x7F13;&#x5B58;&#x7684;&#xFF0C;&#x8FD9;&#x4E2A;&#x300C;&#x7F13;&#x5B58;&#x300D;&#x6307;&#x7684;&#x662F;&#x5728;&#x300C;&#x4F9D;&#x8D56;&#x53D8;&#x91CF;&#x300D;&#x6CA1;&#x6709;&#x53D8;&#x5316;&#x65F6;&#x53BB;&#x4F7F;&#x7528;&#xFF1B;&#x800C;&#x5F53;&#x9875;&#x9762;&#x66F4;&#x8FED;&#xFF0C;&#x300C;&#x4F9D;&#x8D56;&#x53D8;&#x91CF;&#x300D;&#x4E0D;&#x53D8;&#x5316;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x662F;&#x4E0D;&#x4F1A;&#x91CD;&#x65B0;&#x8BA1;&#x7B97;&#x7684;&#x3002;</p>
-<p>&#x5F53;&#x7136;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x624B;&#x5199;cache&#x6765;&#x4F18;&#x5316;&#x6590;&#x6CE2;&#x90A3;&#x5951;&#x7684;&#x8BA1;&#x7B97;&#x3002;</p>
+<h3 id="第一层：计算函数">第一层：计算函数</h3>
+<p>将计算封装到一个纯函数里</p>
+<h3 id="第二层：提供缓存">第二层：提供缓存</h3>
+<p>在递归计算「斐波那契数」时，越大的数计算越耗时，即「昂贵」。如果我们使用函数包装，那么每一次页面更迭，去拿「斐波那契数」都会触发重新计算；但是使用computed的话是具有缓存的，这个「缓存」指的是在「依赖变量」没有变化时去使用；而当页面更迭，「依赖变量」不变化的情况下，是不会重新计算的。</p>
+<p>当然，我们也可以通过手写cache来优化斐波那契的计算。</p>
 <h2 id="effect-scope">Effect Scope</h2>
-<p> &#x526F;&#x4F5C;&#x7528;&#x8303;&#x56F4;&#xFF1A;&#x4EBA;&#x4E3A;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x8303;&#x56F4;&#xFF0C;&#x5BF9;&#x5176;&#x5185;&#x90E8;&#x6240;&#x6709;effect&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#x3002;</p>
-<p>&#x611F;&#x89C9;&#x6CA1;&#x5565;&#x540A;&#x7528;</p>
-<h2 id="provide&#x548C;inject">Provide&#x548C;Inject</h2>
-<p>Context&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x5B9E;&#x4F53;&#x95F4;&#x5171;&#x4EAB;&#x7684;&#x77E5;&#x8BC6;</p>
-<p>&#x6BD4;&#x5982;&#xFF1A;this&#x3001;window&#x5BF9;&#x8C61;&#x3001;&#x5168;&#x5C40;&#x7528;&#x6237;&#x767B;&#x5F55;&#x72B6;&#x6001;&#x3002;</p>
-<p>Provide&#x5411;&#x7EC4;&#x4EF6;&#x63D0;&#x4F9B;&#x4E0A;&#x4E0B;&#x6587;</p>
-<p>Inject&#x4ECE;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x62FF;&#x6570;&#x636E;</p>
-<p>&#x7F3A;&#x70B9;&#xFF1A;&#x7F3A;&#x5C11;&#x7C7B;&#x578B;</p>
-<p>&#x7528;&#x4E8E;&#x7EC4;&#x4EF6;&#x901A;&#x4FE1;&#xFF1F;&#x770B;&#x573A;&#x666F;&#xFF0C;&#x5982;&#x679C;&#x5BF9;&#x4E8E;&#x6570;&#x636E;&#x7684;&#x4F9D;&#x8D56;&#x8DB3;&#x591F;&#x591A;&#xFF0C;&#x662F;&#x53EF;&#x4EE5;&#x7684;&#x3002;&#x4F46;&#x662F;&#x5927;&#x90E8;&#x5206;&#x90FD;&#x662F;&#x6280;&#x672F;&#x53EF;&#x884C;&#xFF0C;&#x4F46;&#x662F;&#x662F;&#x4E0D;&#x63A8;&#x8350;&#x7684;&#x3002;&#x8DE8;&#x7EC4;&#x4EF6;&#x4F20;&#x53C2;&#x662F;&#x8FDD;&#x53CD;&#x300C;&#x6700;&#x5C0F;&#x77E5;&#x8BC6;&#x539F;&#x5219;&#x300D;&#xFF0C;&#x901A;&#x5E38;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x53D1;&#x6D88;&#x606F;&#x901A;&#x4FE1;&#x3002;</p>
-<h2 id="&#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;">&#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;</h2>
-<p>Hook&#xFF1A;&#x94A9;&#x5B50;&#x662F;&#x4E00;&#x79CD;&#x6D88;&#x606F;&#x673A;&#x5236;&#xFF1B;</p>
-<p>&#x89E6;&#x53D1;&#x94A9;&#x5B50;&#x7684;&#x5B9E;&#x4F53;&#x5185;&#x90E8;&#x72B6;&#x6001;&#x53D1;&#x751F;&#x4E86;&#x53D8;&#x5316;&#x4ECE;&#x800C;&#x89E6;&#x53D1;&#x4E86;&#x94A9;&#x5B50;&#xFF0C;&#x53BB;&#x901A;&#x77E5;&#x94A9;&#x5B50;&#x7684;&#x53E6;&#x4E00;&#x7AEF;&#x3002;</p>
-<p>&#x6BD4;&#x5982;Git&#x7684;Webhooks&#x3001;React&#x7684;hooks</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/vue&#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;&#x72B6;&#x6001;&#x6620;&#x5C04;.png" alt="&#x72B6;&#x6001;&#x6620;&#x5C04;"></p>
-<h3 id="onrendertrancked&#x3001;onrendertriggered">onRenderTrancked&#x3001;onRenderTriggered</h3>
-<p>&#x6307;&#x7684;&#x662F;track&#x548C;trigger&#x884C;&#x4E3A;</p>
-<p>trigger&#x662F;set&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x88AB;&#x6539;&#x53D8;&#x503C;&#x7684;&#x65F6;&#x5019;&#x53BB;trigger&#xFF0C;&#x4F1A;&#x89E6;&#x53D1;&#x591A;&#x6B21;</p>
-<p>track&#x662F;get&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x83B7;&#x53D6;&#x503C;&#x7684;&#x65F6;&#x5019;&#x53BB;track&#xFF0C;&#x4F46;&#x662F;<strong>&#x53EA;&#x505A;&#x4E00;&#x6B21;&#x3002;</strong></p>
-<h3 id="onactivated&#x3001;ondeactivated">onActivated&#x3001;onDeactivated</h3>
-<p>&#x5173;&#x4E8E;keep-alive&#x7684;&#x4E24;&#x4E2A;&#x94A9;&#x5B50;</p>
-<h2 id="ref&#x548C;expose">ref&#x548C;expose</h2>
-<p>ref&#x662F;vue&#x7684;&#x4E00;&#x79CD;reactive&#xFF0C;&#x7528;&#x6765;&#x8868;&#x793A;&#x5F15;&#x7528;&#xFF08;&#x5BF9;&#x8C61;&#x3001;&#x6570;&#x7EC4;&#x3001;number&#x3001;&#x7EC4;&#x4EF6;&#xFF09;</p>
-<p>expose&#x53EF;&#x4EE5;&#x5411;&#x4E0A;&#x66B4;&#x9732;&#x4E00;&#x4E9B;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x3002;</p>
-<h2 id="&#x5B9E;&#x6218;">&#x5B9E;&#x6218;</h2>
-<h3 id="&#x5C01;&#x88C5;&#x5C55;&#x793A;&#x7C7B;&#x7EC4;&#x4EF6;">&#x5C01;&#x88C5;&#x5C55;&#x793A;&#x7C7B;&#x7EC4;&#x4EF6;</h3>
-<pre><code class="lang-tsx">export const Component01 = ()=&gt; {
-  return &lt;Button&gt;{&quot;hello!&quot;}&lt;/Button&gt;
+<p> 副作用范围：人为设置一个范围，对其内部所有effect进行管理。</p>
+<p>感觉没啥吊用</p>
+<h2 id="provide和inject">Provide和Inject</h2>
+<p>Context上下文，实体间共享的知识</p>
+<p>比如：this、window对象、全局用户登录状态。</p>
+<p>Provide向组件提供上下文</p>
+<p>Inject从上下文中拿数据</p>
+<p>缺点：缺少类型</p>
+<p>用于组件通信？看场景，如果对于数据的依赖足够多，是可以的。但是大部分都是技术可行，但是是不推荐的。跨组件传参是违反「最小知识原则」，通常可以通过发消息通信。</p>
+<h2 id="生命周期钩子">生命周期钩子</h2>
+<p>Hook：钩子是一种消息机制；</p>
+<p>触发钩子的实体内部状态发生了变化从而触发了钩子，去通知钩子的另一端。</p>
+<p>比如Git的Webhooks、React的hooks</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/vue生命周期钩子状态映射.png" alt="状态映射"></p>
+<h3 id="onrendertrancked、onrendertriggered">onRenderTrancked、onRenderTriggered</h3>
+<p>指的是track和trigger行为</p>
+<p>trigger是set的时候，也就是被改变值的时候去trigger，会触发多次</p>
+<p>track是get的时候，也就是获取值的时候去track，但是<strong>只做一次。</strong></p>
+<h3 id="onactivated、ondeactivated">onActivated、onDeactivated</h3>
+<p>关于keep-alive的两个钩子</p>
+<h2 id="ref和expose">ref和expose</h2>
+<p>ref是vue的一种reactive，用来表示引用（对象、数组、number、组件）</p>
+<p>expose可以向上暴露一些属性和方法。</p>
+<h2 id="实战">实战</h2>
+<h3 id="封装展示类组件">封装展示类组件</h3>
+<pre><code class="lang-tsx"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> Component01 = <span class="hljs-function">()=&gt;</span> {
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Button</span>&gt;</span>{&quot;hello!&quot;}<span class="hljs-tag">&lt;/<span class="hljs-name">Button</span>&gt;</span></span>
 }
 
-const Button = defineComponent({
-  setup(props,{slots}){
-    const Child = slots.default
-    return ()=&gt; &lt;button&gt;&lt;Child/&gt;&lt;/button&gt;
+<span class="hljs-keyword">const</span> Button = defineComponent({
+  <span class="hljs-function"><span class="hljs-title">setup</span>(<span class="hljs-params">props,{slots}</span>)</span>{
+    <span class="hljs-keyword">const</span> Child = slots.default
+    <span class="hljs-keyword">return</span> <span class="hljs-function">()=&gt;</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Child</span>/&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>
   }
 })
 </code></pre>
-<h3 id="&#x5C01;&#x88C5;&#x8F93;&#x5165;&#x7C7B;&#x7EC4;&#x4EF6;">&#x5C01;&#x88C5;&#x8F93;&#x5165;&#x7C7B;&#x7EC4;&#x4EF6;</h3>
+<h3 id="封装输入类组件">封装输入类组件</h3>
 <pre><code class="lang-javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> Component02 = definceComponent({
-  setup(){
+  <span class="hljs-function"><span class="hljs-title">setup</span>(<span class="hljs-params"></span>)</span>{
     <span class="hljs-keyword">const</span> form = reactive({
-      username: <span class="hljs-string">&apos;abc&apos;</span>
+      <span class="hljs-attr">username</span>: <span class="hljs-string">&apos;abc&apos;</span>
     })
-    <span class="hljs-keyword">return</span> () =&gt; &lt;Input value={form.username}/&gt;
+    <span class="hljs-keyword">return</span> <span class="hljs-function">() =&gt;</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Input</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{form.username}/</span>&gt;</span></span>
   }
 
 })
-  const Input = ({value} : {value: String}) =&gt;{
-  return &lt;input value = {value} /&gt;
+  <span class="hljs-keyword">const</span> Input = <span class="hljs-function">(<span class="hljs-params">{value} : {value: <span class="hljs-built_in">String</span>}</span>) =&gt;</span>{
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">value</span> = <span class="hljs-string">{value}</span> /&gt;</span></span>
 }
 </code></pre>
-<h3 id="&#x62D6;&#x62FD;&#x7EC4;&#x4EF6;&#x7684;&#x5C01;&#x88C5;">&#x62D6;&#x62FD;&#x7EC4;&#x4EF6;&#x7684;&#x5C01;&#x88C5;</h3>
-<pre><code class="lang-tsx">export const DragExample = defineComponent({
-  setup(){
-    return &lt;div&gt;
-        &lt;Draggable&gt;&lt;/Draggable&gt;
-    &lt;/div&gt;
+<h3 id="拖拽组件的封装">拖拽组件的封装</h3>
+<pre><code class="lang-tsx"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> DragExample = defineComponent({
+  <span class="hljs-function"><span class="hljs-title">setup</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Draggable</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Draggable</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
   }
 })
-function userDrag(){
-  let startX = 0, startY = 0
-  const diffX = ref(0)
-  const diffY = ref(0)
-  const handlers = {
-    onDragstart(e : DragEvent){
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">userDrag</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-keyword">let</span> startX = <span class="hljs-number">0</span>, startY = <span class="hljs-number">0</span>
+  <span class="hljs-keyword">const</span> diffX = ref(<span class="hljs-number">0</span>)
+  <span class="hljs-keyword">const</span> diffY = ref(<span class="hljs-number">0</span>)
+  <span class="hljs-keyword">const</span> handlers = {
+    <span class="hljs-function"><span class="hljs-title">onDragstart</span>(<span class="hljs-params">e : DragEvent</span>)</span>{
       startX = e.clientX
       startY = e.clientY
     },
-    onDrag(e : DragEvent){
+    <span class="hljs-function"><span class="hljs-title">onDrag</span>(<span class="hljs-params">e : DragEvent</span>)</span>{
       diffX.value = e.clientX - startX
       diffY.value = e.clientY - startY
     },
-    onDragend(e : DragEvent){ }
+    <span class="hljs-function"><span class="hljs-title">onDragend</span>(<span class="hljs-params">e : DragEvent</span>)</span>{ }
   }
-  return {handlers, x : diffX, y : diffY}
+  <span class="hljs-keyword">return</span> {handlers, <span class="hljs-attr">x</span> : diffX, <span class="hljs-attr">y</span> : diffY}
 }
-const Draggable = defineComponent({
-  setup(props,{slots}){
-    const {handlers,diffX,diffY} = userDrag()
-    return ()=&gt;{
-            const vNode = slots.default
-      const x = ref(0), y = ref(0)
+<span class="hljs-keyword">const</span> Draggable = defineComponent({
+  <span class="hljs-function"><span class="hljs-title">setup</span>(<span class="hljs-params">props,{slots}</span>)</span>{
+    <span class="hljs-keyword">const</span> {handlers,diffX,diffY} = userDrag()
+    <span class="hljs-keyword">return</span> <span class="hljs-function">()=&gt;</span>{
+            <span class="hljs-keyword">const</span> vNode = slots.default
+      <span class="hljs-keyword">const</span> x = ref(<span class="hljs-number">0</span>), y = ref(<span class="hljs-number">0</span>)
       vNode.props = _.merge(vNode.props,{
-        draggable :true,
+        <span class="hljs-attr">draggable</span> :<span class="hljs-literal">true</span>,
         ...handlers,
-        style: {
-          position: &apos;absolute&apos;,
-          top: y.value + &apos;px&apos;,
-          left: x.value + &apos;px&apos;,
-          transform: `translate(${diffX.value}px, ${diffY.value})`
+        <span class="hljs-attr">style</span>: {
+          <span class="hljs-attr">position</span>: <span class="hljs-string">&apos;absolute&apos;</span>,
+          <span class="hljs-attr">top</span>: y.value + <span class="hljs-string">&apos;px&apos;</span>,
+          <span class="hljs-attr">left</span>: x.value + <span class="hljs-string">&apos;px&apos;</span>,
+          <span class="hljs-attr">transform</span>: <span class="hljs-string">`translate(<span class="hljs-subst">${diffX.value}</span>px, <span class="hljs-subst">${diffY.value}</span>)`</span>
         }
       })
-      return &lt;&gt;
+      <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
           {vNode}
-      &lt;&gt;
+      <span class="hljs-tag">&lt;&gt;</span>
     }
   }
 })
-</code></pre>
-<h3 id="&#x5C01;&#x88C5;&#x4E1A;&#x52A1;&#x8BF7;&#x6C42;">&#x5C01;&#x88C5;&#x4E1A;&#x52A1;&#x8BF7;&#x6C42;</h3>
-<p>&#x7B5B;&#x9009;&#x7EC4;&#x4EF6;</p>
-<pre><code class="lang-tsx">function useList(){
-  const data = ref&lt;any&gt;(null)
-  request().then(resp=&gt;{
+</span></code></pre>
+<h3 id="封装业务请求">封装业务请求</h3>
+<p>筛选组件</p>
+<pre><code class="lang-tsx"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">useList</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-keyword">const</span> data = ref&lt;<span class="hljs-built_in">any</span>&gt;(<span class="hljs-literal">null</span>)
+  request().then(<span class="hljs-function"><span class="hljs-params">resp</span>=&gt;</span>{
     data.value = resp
   })
-  return data
+  <span class="hljs-keyword">return</span> data
 }
-export const FilterExample = defineComponent({
-  setup(){
-    const tableMeta = [{
-      title: &apos;name&apos;,
-      key: &apos;name&apos;
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> FilterExample = defineComponent({
+  <span class="hljs-function"><span class="hljs-title">setup</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">const</span> tableMeta = [{
+      <span class="hljs-attr">title</span>: <span class="hljs-string">&apos;name&apos;</span>,
+      <span class="hljs-attr">key</span>: <span class="hljs-string">&apos;name&apos;</span>
     },{
-      title: &apos;score&apos;,
-      key:&apos;score&apos;
+      <span class="hljs-attr">title</span>: <span class="hljs-string">&apos;score&apos;</span>,
+      <span class="hljs-attr">key</span>:<span class="hljs-string">&apos;score&apos;</span>
     }]
-    const data = useList()
-        return () =&gt; {
-      return &lt;div&gt;
-        &lt;Table tableMeta = {tableMeta} 
-            data = {data.value}
-          /&gt;
-      &lt;/div&gt;
+    <span class="hljs-keyword">const</span> data = useList()
+        <span class="hljs-keyword">return</span> <span class="hljs-function">() =&gt;</span> {
+      <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Table</span> <span class="hljs-attr">tableMeta</span> = <span class="hljs-string">{tableMeta}</span> 
+            <span class="hljs-attr">data</span> = <span class="hljs-string">{data.value}</span>
+          /&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
     }
   }
 })
-type TableProps = {
-  tableMeta: TableMeta[],
-    data : Array&lt;Record&lt;string,any&gt;&gt;
+<span class="hljs-keyword">type</span> TableProps = {
+  <span class="hljs-attr">tableMeta</span>: TableMeta[],
+    <span class="hljs-attr">data</span> : <span class="hljs-built_in">Array</span>&lt;Record&lt;<span class="hljs-built_in">string</span>,<span class="hljs-built_in">any</span>&gt;&gt;
 }
-const Table = ({tableMeta,data}:TableProps) =&gt; {
-  return (&lt;table&gt;
-      &lt;THead tableMeta = {tableMeta} /&gt;
-   &lt;TBody tableMeta = {tableMeta} data = {data} /&gt;
-  &lt;/table&gt;)
+<span class="hljs-keyword">const</span> Table = <span class="hljs-function">(<span class="hljs-params">{tableMeta,data}:TableProps</span>) =&gt;</span> {
+  <span class="hljs-keyword">return</span> (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">table</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">THead</span> <span class="hljs-attr">tableMeta</span> = <span class="hljs-string">{tableMeta}</span> /&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">TBody</span> <span class="hljs-attr">tableMeta</span> = <span class="hljs-string">{tableMeta}</span> <span class="hljs-attr">data</span> = <span class="hljs-string">{data}</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></span>)
 }
-const THead = ({tableMeta}: Omit&lt;TableProps, &quot;data&quot;&gt;) =&gt; {
-  return &lt;tr&gt;
+<span class="hljs-keyword">const</span> THead = <span class="hljs-function">(<span class="hljs-params">{tableMeta}: Omit&lt;TableProps, <span class="hljs-string">&quot;data&quot;</span>&gt;</span>) =&gt;</span> {
+  <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span>
     {tableMeta.map(item =&gt; {
-      return &lt;td key = {item.key}&gt;{item.title}&lt;/td&gt;
+      return <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">key</span> = <span class="hljs-string">{item.key}</span>&gt;</span>{item.title}<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
     })}
-  &lt;/tr&gt;
+  <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></span>
 }     
 
-const TBody = ({tableMeta} : TableProps) =&gt; {
-    return &lt;&gt;
+<span class="hljs-keyword">const</span> TBody = <span class="hljs-function">(<span class="hljs-params">{tableMeta} : TableProps</span>) =&gt;</span> {
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;&gt;</span>
          {data &amp; data.map((item,i) =&gt; {
-        return &lt;tr key= {i}&gt;
+        return <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">key</span>= <span class="hljs-string">{i}</span>&gt;</span>
           {tableMeta.map(meta =&gt; {
-            return &lt;td key={meta.key}&gt;{item[meta.key]}&lt;/td&gt;
+            return <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{meta.key}</span>&gt;</span>{item[meta.key]}<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span>
           })}
-      &lt;/tr&gt;
+      <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span>
       })}
-     &lt;/&gt;
+     <span class="hljs-tag">&lt;/&gt;</span></span>
 }
 </code></pre>
 <h2 id="vite">Vite</h2>
-<p>&#x5C24;&#x96E8;&#x6EAA;&#x5F00;&#x53D1;&#x7684;&#x811A;&#x624B;&#x67B6;</p>
-<p>&#x7279;&#x6027;&#xFF1A;</p>
+<p>尤雨溪开发的脚手架</p>
+<p>特性：</p>
 <ul>
-<li>No Bundling =&gt; &#x5F00;&#x53D1;&#x7684;&#x65F6;&#x5019;&#x975E;&#x5E38;&#x5FEB;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x76F4;&#x63A5;&#x4F7F;&#x7528;ESM</li>
-<li>HMR&#x6DF1;&#x5EA6;&#x63D0;&#x901F; =&gt; &#x70ED;&#x66F4;&#x65B0;&#x63D0;&#x901F;&#xFF0C;&#x5C24;&#x5927;&#x5927;&#x81EA;&#x5DF1;&#x5F00;&#x53D1;&#x7684;</li>
-<li>&#x57FA;&#x4E8E;rollup&#x7684;&#x4F53;&#x7CFB;&#xFF0C;rollup&#x63D2;&#x4EF6;&#x7ECF;&#x8FC7;&#x7B80;&#x5355;&#x5305;&#x88C5;&#x5C31;&#x53EF;&#x4EE5;&#x5728;vite&#x7528;&#x4E86;</li>
+<li>No Bundling =&gt; 开发的时候非常快，浏览器直接使用ESM</li>
+<li>HMR深度提速 =&gt; 热更新提速，尤大大自己开发的</li>
+<li>基于rollup的体系，rollup插件经过简单包装就可以在vite用了</li>
 </ul>
-<h3 id="&#x9879;&#x76EE;&#x7ED3;&#x6784;&#x4E00;">&#x9879;&#x76EE;&#x7ED3;&#x6784;&#x4E00;</h3>
-<p>&#x6240;&#x6709;&#x7684;&#x80FD;&#x529B;&#x5728;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x4E2D;&#x5B9E;&#x73B0;&#xFF0C;</p>
+<h3 id="项目结构一">项目结构一</h3>
+<p>所有的能力在一个项目中实现，</p>
 <ul>
-<li>pages =&gt; &#x6240;&#x6709;&#x9875;&#x9762;</li>
-<li>components =&gt; &#x6309;&#x94AE;&#x7B49;&#x4E00;&#x4E9B;&#x7EC4;&#x4EF6;&#x5305;&#x62EC;&#x4E1A;&#x52A1;&#x7EC4;&#x4EF6;</li>
-<li>layout =&gt; &#x505A;&#x5E03;&#x5C40;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;flex&#x7B49;</li>
-<li>util =&gt; &#x901A;&#x7528;&#x51FD;&#x6570;</li>
-<li>model =&gt; &#x6A21;&#x578B;</li>
+<li>pages =&gt; 所有页面</li>
+<li>components =&gt; 按钮等一些组件包括业务组件</li>
+<li>layout =&gt; 做布局的组件，flex等</li>
+<li>util =&gt; 通用函数</li>
+<li>model =&gt; 模型</li>
 </ul>
-<h3 id="&#x9879;&#x76EE;&#x7ED3;&#x6784;&#x4E8C;">&#x9879;&#x76EE;&#x7ED3;&#x6784;&#x4E8C;</h3>
-<p>&#x591A;&#x9879;&#x76EE;&#xFF0C;&#x7531;&#x591A;&#x4E2A;&#x9879;&#x76EE;&#x7EC4;&#x6210;&#x6700;&#x7EC8;&#x7684;&#x7CFB;&#x7EDF;&#xFF0C;&#x53EF;&#x4EE5;&#x66F4;&#x597D;&#x7684;&#x4F53;&#x73B0;&#x53EF;&#x590D;&#x7528;&#x6027;</p>
+<h3 id="项目结构二">项目结构二</h3>
+<p>多项目，由多个项目组成最终的系统，可以更好的体现可复用性</p>
 <ul>
 <li>packages<ul>
 <li>util</li>
@@ -860,37 +872,37 @@ const TBody = ({tableMeta} : TableProps) =&gt; {
 </ul>
 </li>
 </ul>
-<h2 id="vue3&#x7684;&#x6E90;&#x7801;">Vue3&#x7684;&#x6E90;&#x7801;</h2>
-<h3 id="h&#x548C;createvnode&#x51FD;&#x6570;">h&#x548C;createVNode&#x51FD;&#x6570;</h3>
-<p>&#x4E0D;&#x7BA1;&#x662F;&#x6A21;&#x7248;&#x7C7B;&#x578B;&#x8FD8;&#x662F;JSX&#x5728;vue3&#x4E2D;&#x90FD;&#x4F1A;&#x88AB;&#x8F6C;&#x5316;&#x6210;h&#x51FD;&#x6570;</p>
-<p>&#x50CF;&#x8FD9;&#x6837;&#xFF1A;</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/h&#x51FD;&#x6570;.png" alt="&#x6837;&#x4F8B;"></p>
-<p>createVNode&#x548C;h&#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x4E0D;&#x5E38;&#x7528;</p>
-<h3 id="virtual-dom&#xFF08;&#x6982;&#x5FF5;&#x6A21;&#x578B;&#xFF09;">Virtual DOM&#xFF08;&#x6982;&#x5FF5;&#x6A21;&#x578B;&#xFF09;</h3>
-<p>&#x865A;&#x62DF;dom&#x662F;&#x4E00;&#x4E2A;&#x5728;&#x5199;&#x7A0B;&#x5E8F;&#x7684;&#x6982;&#x5FF5;&#x6A21;&#x578B;&#xFF0C;&#x4EE5;&#x7EC4;&#x4EF6;&#x6784;&#x6210;&#x7684;&#x6A21;&#x578B;&#x3002;</p>
-<p>&#x66F4;&#x6539;&#xFF1A;&#x8282;&#x70B9;&#x5220;&#x9664;&#x3001;&#x8282;&#x70B9;&#x66F4;&#x65B0;&#x3001;&#x5C5E;&#x6027;&#x66F4;&#x65B0;&#x3001;&#x5185;&#x5BB9;&#x66F4;&#x65B0;&#x2026;&#x2026;</p>
-<p>VirtualDOM&#x7684;&#x66F4;&#x65B0;&#x662F;&#x901A;&#x8FC7;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7684;&#x865A;&#x62DF;DOM&#xFF0C;&#x7136;&#x540E;&#x7528;DOM-DIFF&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#x66F4;&#x6539;&#xFF0C;&#x6700;&#x540E;&#x518D;&#x7528;&#x4F5C;&#x6E32;&#x67D3;&#x771F;&#x5B9E;DOM&#x3002;</p>
+<h2 id="vue3的源码">Vue3的源码</h2>
+<h3 id="h和createvnode函数">h和createVNode函数</h3>
+<p>不管是模版类型还是JSX在vue3中都会被转化成h函数</p>
+<p>像这样：</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/h函数.png" alt="样例"></p>
+<p>createVNode和h类似，但不常用</p>
+<h3 id="virtual-dom（概念模型）">Virtual DOM（概念模型）</h3>
+<p>虚拟dom是一个在写程序的概念模型，以组件构成的模型。</p>
+<p>更改：节点删除、节点更新、属性更新、内容更新……</p>
+<p>VirtualDOM的更新是通过创建一个新的的虚拟DOM，然后用DOM-DIFF进行比较计算出来更改，最后再用作渲染真实DOM。</p>
 <h3 id="dom-diff">DOM-DIFF</h3>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/DOM-DIFF.png" alt="DIFF&#x6A21;&#x578B;"></p>
-<p>&#x6BD4;&#x5982;&#xFF1A;</p>
-<p>&#x5C5E;&#x6027;&#x53D8;&#x66F4;&#xFF0C;&#x6837;&#x5F0F;&#x53D8;&#x4E86; =&gt; &#x4E0D;&#x9700;&#x8981;&#x64CD;&#x4F5C;&#x8282;&#x70B9; =&gt; &#x6253;&#x4E00;&#x4E2A;&#x66F4;&#x65B0;&#x5C5E;&#x6027;&#x7684;&#x8865;&#x4E01;(patch)</p>
-<p>&#x8282;&#x70B9;&#x7C7B;&#x578B;&#x53D8;&#x66F4; =&gt; &#x5C06;&#x6811;&#x76F4;&#x63A5;&#x66FF;&#x6362;&#x6389;</p>
-<p>&#x8282;&#x70B9;&#x63D2;&#x5165; =&gt; &#x5728;&#x672B;&#x5C3E;&#x63D2;&#x5165; =&gt; &#x5E76;&#x66F4;&#x65B0;&#x5BF9;&#x5E94;&#x4F4D;&#x7F6E;&#x7684;&#x8282;&#x70B9;</p>
-<p>&#x8282;&#x70B9;&#x63D2;&#x5165;(&#x5E26;key) =&gt; &#x6839;&#x636E;key&#x53BB;&#x63D2;&#x5165; =&gt; &#x53EA;&#x63D2;&#x5165;&#x4E86;&#x65B0;&#x8282;&#x70B9;</p>
-<h3 id="reactivity&#x539F;&#x7406;">Reactivity&#x539F;&#x7406;</h3>
-<p>&#x4EC0;&#x4E48;&#x662F;&#x4F9D;&#x8D56;&#xFF1F;</p>
-<p> render&#x8FD4;&#x56DE;vNode</p>
-<p>&#x6BCF;&#x4E2A;&#x300C;reactive&#x503C;&#x300D;&#x9700;&#x8981;&#x8BB0;&#x5F55;&#x4F9D;&#x8D56;&#xFF0C;&#x4F9D;&#x8D56;&#x5C31;&#x662F;&#x526F;&#x4F5C;&#x7528;&#xFF0C;&#x591A;&#x4E2A;&#x4F9D;&#x8D56;(&#x88AB;&#x5305;&#x88C5;&#x6210;&#x51FD;&#x6570;)&#x4FDD;&#x5B58;&#x5728;&#x300C;reactive&#x503C;&#x300D;&#x91CC;&#x7684;&#x4E00;&#x4E2A;&#x96C6;&#x5408;&#xFF0C;&#x901A;&#x8FC7;<code>Track()</code>&#x53BB;&#x6536;&#x96C6;&#x4F9D;&#x8D56;&#xFF0C;&#x5728;&#x66F4;&#x65B0;&#x300C;&#x503C;&#x300D;&#x7684;&#x65F6;&#x5019;&#x901A;&#x8FC7;<code>Trigger()</code>&#x53BB;&#x901A;&#x77E5;&#x6267;&#x884C;&#x4F9D;&#x8D56;&#x3002;</p>
-<p>&#x6240;&#x4EE5;reactive&#x503C;&#x4E0D;&#x5173;&#x5FC3;&#x5728;&#x90A3;&#x91CC;&#x88AB;&#x7528;&#x5230;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x8BB0;&#x5F55;&#x4F9D;&#x8D56;</p>
-<p>&#x901A;&#x8FC7;ES6&#x7684;<code>Proxy</code>&#x6765;&#x5B9E;&#x73B0;&#x54CD;&#x5E94;&#x5F0F;&#x7684;<code>Track</code>&#x548C; <code>Trigger</code></p>
-<h3 id="ref&#x6E90;&#x7801;">Ref&#x6E90;&#x7801;</h3>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/DOM-DIFF.png" alt="DIFF模型"></p>
+<p>比如：</p>
+<p>属性变更，样式变了 =&gt; 不需要操作节点 =&gt; 打一个更新属性的补丁(patch)</p>
+<p>节点类型变更 =&gt; 将树直接替换掉</p>
+<p>节点插入 =&gt; 在末尾插入 =&gt; 并更新对应位置的节点</p>
+<p>节点插入(带key) =&gt; 根据key去插入 =&gt; 只插入了新节点</p>
+<h3 id="reactivity原理">Reactivity原理</h3>
+<p>什么是依赖？</p>
+<p> render返回vNode</p>
+<p>每个「reactive值」需要记录依赖，依赖就是副作用，多个依赖(被包装成函数)保存在「reactive值」里的一个集合，通过<code>Track()</code>去收集依赖，在更新「值」的时候通过<code>Trigger()</code>去通知执行依赖。</p>
+<p>所以reactive值不关心在那里被用到，只需要记录依赖</p>
+<p>通过ES6的<code>Proxy</code>来实现响应式的<code>Track</code>和 <code>Trigger</code></p>
+<h3 id="ref源码">Ref源码</h3>
 <p><a href="https://github.com/vuejs/core/blob/main/packages/reactivity/src/ref.ts" target="_blank">https://github.com/vuejs/core/blob/main/packages/reactivity/src/ref.ts</a></p>
-<h3 id="reactive&#x6E90;&#x7801;">Reactive&#x6E90;&#x7801;</h3>
+<h3 id="reactive源码">Reactive源码</h3>
 <p><a href="https://github.com/vuejs/core/blob/main/packages/reactivity/src/reactive.ts" target="_blank">https://github.com/vuejs/core/blob/main/packages/reactivity/src/reactive.ts</a></p>
-<h3 id="watch&#x6E90;&#x7801;">Watch&#x6E90;&#x7801;</h3>
+<h3 id="watch源码">Watch源码</h3>
 <p><a href="https://github.com/vuejs/core/blob/main/packages/runtime-core/src/apiWatch.ts" target="_blank">https://github.com/vuejs/core/blob/main/packages/runtime-core/src/apiWatch.ts</a></p>
-<h3 id="vue3&#x7684;ts&#x7C7B;&#x578B;">vue3&#x7684;ts&#x7C7B;&#x578B;</h3>
-<h2 id="vue3&#x7684;&#x7EC4;&#x4EF6;&#x901A;&#x4FE1;">vue3&#x7684;&#x7EC4;&#x4EF6;&#x901A;&#x4FE1;</h2>
+<h3 id="vue3的ts类型">vue3的ts类型</h3>
+<h2 id="vue3的组件通信">vue3的组件通信</h2>
 <p><a href="https://juejin.cn/post/7069251532339806238" target="_blank">https://juejin.cn/post/7069251532339806238</a></p>
 <p>props</p>
 <p>emit</p>
@@ -942,12 +954,56 @@ const TBody = ({tableMeta} : TableProps) =&gt; {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"vue3","level":"1.6.2","depth":2,"next":{"title":"vue基础","level":"1.6.3","depth":2,"path":"vue/vue基础.md","ref":"vue/vue基础.md","articles":[]},"previous":{"title":"TypeScript","level":"1.6.1","depth":2,"path":"vue/TypeScript.md","ref":"vue/TypeScript.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","disableTitleFormatting":true,"variables":{},"title":"json-config-name","gitbook":"*","outputfile":"SUMMARY.md"},"file":{"path":"vue/vue3.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-21T01:19:27.690Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"vue3","level":"1.6.2","depth":2,"next":{"title":"vue基础","level":"1.6.3","depth":2,"path":"vue/vue基础.md","ref":"vue/vue基础.md","articles":[]},"previous":{"title":"TypeScript","level":"1.6.1","depth":2,"path":"vue/TypeScript.md","ref":"vue/TypeScript.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"vue/vue3.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-21T09:39:03.214Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -965,10 +1021,6 @@ const TBody = ({tableMeta} : TableProps) =&gt; {
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

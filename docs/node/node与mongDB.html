@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>node与mongDB · json-config-name</title>
+        <title>node与mongDB · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 3.7.5">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -116,9 +115,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../Angular/Angular学习笔记.md">
+        <li class="chapter " data-level="1.2.1" data-path="../Angular/Angular学习笔记.html">
             
-                <span>
+                <a href="../Angular/Angular学习笔记.html">
             
                     
                     Angular学习笔记
@@ -458,6 +457,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.7.3" data-path="../杂篇/踩坑日记.html">
+            
+                <a href="../杂篇/踩坑日记.html">
+            
+                    
+                    踩坑日记
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -527,8 +539,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -566,29 +578,29 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="node&#x4E0E;mongodb">node&#x4E0E;mongoDB</h2>
+                                <h2 id="node与mongodb">node与mongoDB</h2>
 <ol>
-<li>&#x9996;&#x5148;&#x5B89;&#x88C5;node&#x4E0A;mongoDB&#x7684;&#x6A21;&#x5757;</li>
+<li>首先安装node上mongoDB的模块</li>
 </ol>
 <p><code>npm i mongodb --save</code></p>
 <ol>
-<li>&#x5F15;&#x5165;&#x6A21;&#x5757;</li>
+<li>引入模块</li>
 </ol>
 <p><code>const {MongoClient} = require(&apos;mongodb&apos;)</code></p>
 <ol>
-<li>&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x5E93;&#x7684;&#x8FDE;&#x63A5;&#x5730;&#x5740;</li>
+<li>定义数据库的连接地址</li>
 </ol>
 <p><code>const url = &apos;mongodb://127.0.0.1:27017&apos;</code></p>
 <ol>
-<li>&#x5B9A;&#x4E49;&#x8981;&#x64CD;&#x4F5C;&#x7684;&#x6570;&#x636E;&#x5E93;</li>
+<li>定义要操作的数据库</li>
 </ol>
 <p><code>const dbName = &apos;foo_name&apos;</code></p>
 <ol>
-<li>&#x5B9E;&#x4F8B;&#x5316;mongoclient</li>
+<li>实例化mongoclient</li>
 </ol>
 <p><code>const client = new MongoClient(url)</code></p>
 <ol>
-<li>&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;</li>
+<li>连接数据库</li>
 </ol>
 <p><code>client.connect((err)=&gt;{})</code></p>
 
@@ -634,12 +646,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"node与mongDB","level":"1.4.4","depth":2,"next":{"title":"node基础","level":"1.4.5","depth":2,"path":"node/node基础.md","ref":"node/node基础.md","articles":[]},"previous":{"title":"node_03","level":"1.4.3","depth":2,"path":"node/node_03.md","ref":"node/node_03.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","disableTitleFormatting":true,"variables":{},"title":"json-config-name","gitbook":"*","outputfile":"SUMMARY.md"},"file":{"path":"node/node与mongDB.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-21T01:19:27.690Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"node与mongDB","level":"1.4.4","depth":2,"next":{"title":"node基础","level":"1.4.5","depth":2,"path":"node/node基础.md","ref":"node/node基础.md","articles":[]},"previous":{"title":"node_03","level":"1.4.3","depth":2,"path":"node/node_03.md","ref":"node/node_03.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"node/node与mongDB.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-21T09:39:03.214Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -657,10 +713,6 @@
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

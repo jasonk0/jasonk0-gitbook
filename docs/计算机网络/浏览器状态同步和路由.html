@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>浏览器状态同步和路由 · json-config-name</title>
+        <title>浏览器状态同步和路由 · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 3.7.5">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -116,9 +115,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../Angular/Angular学习笔记.md">
+        <li class="chapter " data-level="1.2.1" data-path="../Angular/Angular学习笔记.html">
             
-                <span>
+                <a href="../Angular/Angular学习笔记.html">
             
                     
                     Angular学习笔记
@@ -458,6 +457,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.7.3" data-path="../杂篇/踩坑日记.html">
+            
+                <a href="../杂篇/踩坑日记.html">
+            
+                    
+                    踩坑日记
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -527,8 +539,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -566,121 +578,121 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x6D4F;&#x89C8;&#x5668;&#x72B6;&#x6001;&#x540C;&#x6B65;&#x548C;&#x8DEF;&#x7531;">&#x6D4F;&#x89C8;&#x5668;&#x72B6;&#x6001;&#x540C;&#x6B65;&#x548C;&#x8DEF;&#x7531;</h2>
-<h3 id="&#x524D;&#x7AEF;&#x8DEF;&#x7531;&#x548C;&#x670D;&#x52A1;&#x7AEF;&#x8DEF;&#x7531;">&#x524D;&#x7AEF;&#x8DEF;&#x7531;&#x548C;&#x670D;&#x52A1;&#x7AEF;&#x8DEF;&#x7531;</h3>
+                                <h2 id="浏览器状态同步和路由">浏览器状态同步和路由</h2>
+<h3 id="前端路由和服务端路由">前端路由和服务端路由</h3>
 <blockquote>
-<p>&#x5DE5;&#x4F5C;&#x65E5;&#x5E38;&#x3001;&#x9762;&#x8BD5;&#x91CD;&#x70B9;&#x3001;&#x524D;&#x7AEF;&#x67B6;&#x6784;</p>
+<p>工作日常、面试重点、前端架构</p>
 </blockquote>
-<h4 id="&#x524D;&#x7AEF;&#x8DEF;&#x7531;&#x548C;history-api">&#x524D;&#x7AEF;&#x8DEF;&#x7531;&#x548C;History API</h4>
-<p>&#x6D4F;&#x89C8;&#x6587;&#x5883;&#xFF08;Browser Context&#xFF09;</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/&#x6D4F;&#x89C8;&#x5668;&#x4E0A;&#x4E0B;&#x6587;.png" alt="&#x6D4F;&#x89C8;&#x5668;&#x4E0A;&#x4E0B;&#x6587;"></p>
-<p>&#x4F1A;&#x8BDD;&#x5386;&#x53F2;&#xFF08;Session History&#xFF09;</p>
-<p>&#x4F1A;&#x8BDD;&#x6808;&#x662F;&#x5171;&#x4EAB;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x524D;&#x8FDB;&#x540E;&#x9000;&#x8FDB;&#x884C;&#x8DF3;&#x8F6C;&#x3002;</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/&#x4F1A;&#x8BDD;&#x6808;.png" alt="Session-Stack"></p>
+<h4 id="前端路由和history-api">前端路由和History API</h4>
+<p>浏览文境（Browser Context）</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/浏览器上下文.png" alt="浏览器上下文"></p>
+<p>会话历史（Session History）</p>
+<p>会话栈是共享的，可以通过前进后退进行跳转。</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/会话栈.png" alt="Session-Stack"></p>
 <h5 id="history-api">History API</h5>
-<p>&#x64CD;&#x63A7;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x8BDD;&#x5386;&#x53F2;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x63A7;&#x5236;History API</p>
+<p>操控浏览器会话历史，也就是控制History API</p>
 <p><code>history.go()</code></p>
-<p>1-&#x524D;&#x8FB9;&#x7684;&#x9875;&#x9762; <code>forward()</code></p>
-<p>0-&#x5F53;&#x524D;&#x7684;&#x9875;&#x9762;</p>
-<p>-1-&#x5386;&#x53F2;&#x9875;&#x9762; <code>back()</code></p>
+<p>1-前边的页面 <code>forward()</code></p>
+<p>0-当前的页面</p>
+<p>-1-历史页面 <code>back()</code></p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/history-go(" alt="go">.png)</p>
 <p><code>history.pushState(state,title,url)</code></p>
-<p>&#x65B0;&#x589E;&#x4E00;&#x4E2A;&#x72B6;&#x6001;&#x5230;&#x4F1A;&#x8BDD;&#x6808;&#x4E2D;&#xFF0C;&#x4F46;&#x662F;&#x5E76;&#x4E0D;&#x81EA;&#x52A8;&#x8DF3;&#x8F6C;&#x65B0;&#x7684;&#x72B6;&#x6001;&#xFF08;&#x9875;&#x9762;&#xFF09;</p>
-<p><code>state</code>&#xFF1A;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x7684;&#x65B0;&#x72B6;&#x6001;&#xFF0C;&#x5728;&#x4F1A;&#x8BDD;&#x6808;&#x4E2D;&#x7684;&#x53D8;&#x91CF;</p>
-<p><code>title</code>&#xFF1A;&#x65B0;&#x9875;&#x9762;&#x7684;&#x6807;&#x9898;</p>
-<p><code>url</code>&#xFF1A;&#x65B0;&#x9875;&#x9762;&#x7684;&#x5730;&#x5740;</p>
+<p>新增一个状态到会话栈中，但是并不自动跳转新的状态（页面）</p>
+<p><code>state</code>：需要添加的新状态，在会话栈中的变量</p>
+<p><code>title</code>：新页面的标题</p>
+<p><code>url</code>：新页面的地址</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/pushState(" alt="pushState">.png)</p>
 <p><code>history.replaceState(state,title,url)</code></p>
-<p>&#x66FF;&#x6362;&#x6389;&#x4F1A;&#x8BDD;&#x6808;&#x4E2D;&#x7684;&#x5F53;&#x524D;&#x72B6;&#x6001;</p>
-<p>&#x5728;&#x7528;&#x6237;&#x4ED8;&#x6B3E;&#x6210;&#x529F;&#x540E;&#x7684;&#x4ED8;&#x6B3E;&#x9875;&#x9762;&#xFF0C;&#x662F;&#x6CA1;&#x6709;&#x5FC5;&#x8981;&#x7EE7;&#x7EED;&#x653E;&#x5728;&#x4F1A;&#x8BDD;&#x6808;&#x4E2D;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x66FF;&#x6362;&#x6389;&#x3002;</p>
+<p>替换掉会话栈中的当前状态</p>
+<p>在用户付款成功后的付款页面，是没有必要继续放在会话栈中的，所以可以使用这个方法，替换掉。</p>
 <blockquote>
-<p>&#x5982;&#x679C;&#x5728;&#x4ED8;&#x6B3E;&#xFF08;&#x9875;&#x9762;C&#xFF09;&#x524D;&#x8FD8;&#x6709;&#x52A0;&#x5165;&#x8D2D;&#x7269;&#x8F66;&#xFF08;&#x9875;&#x9762;A&#xFF09;&#xFF0C;&#x9009;&#x62E9;&#x79CD;&#x7C7B;&#xFF08;&#x9875;&#x9762;B&#xFF09;A =&gt; B =&gt; C &#xFF0C;&#x5982;&#x679C;&#x60F3;&#x8981;&#x5C06;AB&#x90FD;&#x6E05;&#x7A7A;&#x6389;&#xFF0C;&#x53EF;&#x4EE5;&#x5148;go&#x5230;A&#xFF0C;&#x7136;&#x540E;&#x5728;replace&#x6389;A&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x6E05;&#x7A7A;&#x4F1A;&#x8BDD;&#x6808;</p>
+<p>如果在付款（页面C）前还有加入购物车（页面A），选择种类（页面B）A =&gt; B =&gt; C ，如果想要将AB都清空掉，可以先go到A，然后在replace掉A，就可以清空会话栈</p>
 </blockquote>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/replaceState(" alt="replaceState">.png)</p>
-<p>&#x5B9E;&#x6218;&#x670D;&#x52A1;&#x7AEF;&#x8DEF;&#x7531;</p>
-<p>&#x5B9E;&#x6218;&#x524D;&#x7AEF;&#x8DEF;&#x7531;&#xFF08;&#x5355;&#x9875;&#x9762;&#x5E94;&#x7528;&#xFF09;</p>
-<h3 id="sessioncookiestate&#x5355;&#x70B9;&#x767B;&#x5F55;&#x7CFB;&#x7EDF;">Session&amp;Cookie&amp;State&amp;&#x5355;&#x70B9;&#x767B;&#x5F55;&#x7CFB;&#x7EDF;</h3>
+<p>实战服务端路由</p>
+<p>实战前端路由（单页面应用）</p>
+<h3 id="sessioncookiestate单点登录系统">Session&amp;Cookie&amp;State&amp;单点登录系统</h3>
 <blockquote>
-<p>&#x5DE5;&#x4F5C;&#x65E5;&#x5E38;&#x3001;&#x9762;&#x8BD5;&#x91CD;&#x70B9;&#x3001;&#x524D;&#x7AEF;&#x67B6;&#x6784;</p>
+<p>工作日常、面试重点、前端架构</p>
 </blockquote>
-<h4 id="seesion&#x548C;storage">Seesion&#x548C;Storage</h4>
-<p>Session&#x4EE3;&#x8868;&#x4E00;&#x6B21;&#x4F1A;&#x8BDD;</p>
-<p>SessionID&#x662F;&#x8FD9;&#x4E00;&#x6B21;&#x4F1A;&#x8BDD;&#x7684;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#xFF0C;&#x7531;&#x670D;&#x52A1;&#x7AEF;&#x53D1;&#x9001;</p>
-<p>&#x5BA2;&#x6237;&#x7AEF;&#x63A5;&#x6536;&#x5230;SessionID&#x5C31;&#x662F;Cookie</p>
-<h5 id="&#x767B;&#x5F55;&#x573A;&#x666F;">&#x767B;&#x5F55;&#x573A;&#x666F;</h5>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/&#x767B;&#x5F55;&#x573A;&#x666F;&#x4E2D;&#x7684;Session.png" alt="&#x767B;&#x5F55;&#x573A;&#x666F;"></p>
+<h4 id="seesion和storage">Seesion和Storage</h4>
+<p>Session代表一次会话</p>
+<p>SessionID是这一次会话的唯一标识，由服务端发送</p>
+<p>客户端接收到SessionID就是Cookie</p>
+<h5 id="登录场景">登录场景</h5>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/登录场景中的Session.png" alt="登录场景"></p>
 <blockquote>
-<p>&#x5728;&#x7528;&#x6237;&#x521A;&#x767B;&#x5F55;&#x65F6;&#x662F;&#x65E0;&#x72B6;&#x6001;&#x7684;&#xFF0C;&#x53D1;&#x7ED9;&#x670D;&#x52A1;&#x7AEF;&#x505A;&#x9A8C;&#x8BC1;&#xFF0C;&#x9A8C;&#x8BC1;&#x6210;&#x529F;&#x540E;&#x5C31;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4F1A;&#x8BDD;&#x8BB0;&#x5F55;&#x5E76;&#x53D1;&#x9001;SessionID&#xFF0C;&#x524D;&#x7AEF;&#x6D4F;&#x89C8;&#x5668;&#x62FF;&#x5230;&#x4E4B;&#x540E;&#x7528;Cookie&#x50A8;&#x5B58;&#x3002;</p>
+<p>在用户刚登录时是无状态的，发给服务端做验证，验证成功后就创建一个会话记录并发送SessionID，前端浏览器拿到之后用Cookie储存。</p>
 </blockquote>
-<h5 id="&#x8DE8;&#x57DF;&#x573A;&#x666F;&#x4E2D;&#x7684;set-cookie">&#x8DE8;&#x57DF;&#x573A;&#x666F;&#x4E2D;&#x7684;Set-Cookie</h5>
-<p>&#x8DE8;&#x4E8C;&#x7EA7;&#x57DF;</p>
-<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x5E26;&#x4E0A;Cookie&#x9700;&#x8981;&#x989D;&#x5916;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;Headers&#xFF08;Access-Control-Allow- Credentials&#xFF09;</p>
-<p>&#x8DE8;&#x4E3B;&#x57DF;</p>
-<p><strong>&#x4E00;&#x822C;&#x5F88;&#x5C11;&#x505A;&#x8FD9;&#x6837;&#x7684;&#x4E8B;&#x60C5;</strong></p>
-<p>&#x9700;&#x8981;&#x7ED9;Cookie&#x8BBE;&#x7F6E;&#x989D;&#x5916;&#x7684;&#x6807;&#x8BC6;&#xFF08;SameSite=None;Secure...&#xFF09;&#xFF0C;&#x4E0D;&#x7136;Cookie&#x4F20;&#x9012;&#x4E0D;&#x8FC7;&#x53BB;</p>
-<h5 id="cookie&#x6D4F;&#x89C8;&#x5668;&#x7AEF;&#x5B58;&#x50A8;">Cookie&#x6D4F;&#x89C8;&#x5668;&#x7AEF;&#x5B58;&#x50A8;</h5>
+<h5 id="跨域场景中的set-cookie">跨域场景中的Set-Cookie</h5>
+<p>跨二级域</p>
+<p>如果需要带上Cookie需要额外设置一个Headers（Access-Control-Allow- Credentials）</p>
+<p>跨主域</p>
+<p><strong>一般很少做这样的事情</strong></p>
+<p>需要给Cookie设置额外的标识（SameSite=None;Secure...），不然Cookie传递不过去</p>
+<h5 id="cookie浏览器端存储">Cookie浏览器端存储</h5>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/Cookie.png" alt="Cookie"></p>
-<p>localStorage&#x5199;&#x5165;&#x65F6;&#x9700;&#x8981;&#x52A0;try-catch&#xFF0C;&#x56E0;&#x4E3A;&#x4F1A;&#x51FA;&#x9519;&#x3002;</p>
-<p>SessionStorage&#x53EA;&#x5728;&#x8FD9;&#x6B21;&#x4F1A;&#x8BDD;&#x4E2D;&#x6709;&#x7528;&#x3002;</p>
-<p>Storage&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5728;&#x5355;&#x9875;&#x9762;&#x5E94;&#x7528;&#x4E2D;&#x4F20;&#x53C2;&#xFF0C;&#x6570;&#x636E;&#x5171;&#x4EAB;</p>
+<p>localStorage写入时需要加try-catch，因为会出错。</p>
+<p>SessionStorage只在这次会话中有用。</p>
+<p>Storage可以用来在单页面应用中传参，数据共享</p>
 <h4 id="token">Token</h4>
-<p>Oauth&#x534F;&#x8BAE;&#xFF1A;</p>
-<p>&#x7528;&#x6237;&#x5728;&#x4E92;&#x8054;&#x7F51;&#x83B7;&#x53D6;&#x8D44;&#x6E90;&#x7684;&#x5F00;&#x653E;&#xFF08;&#x59D4;&#x6258;&#x5F62;&#x5F0F;&#xFF09;&#x6388;&#x6743;&#x6807;&#x51C6;</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/Oauth&#x534F;&#x8BAE;.png" alt="Oauth"></p>
-<p>&#x8D44;&#x6E90;&#x6240;&#x6709;&#x8005;&#x4E3A;&#x670D;&#x52A1;&#x7684;&#x60C5;&#x51B5;&#xFF1A;</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/Oauth&#x7684;&#x7279;&#x6B8A;&#x60C5;&#x51B5;.png" alt="&#x8D44;&#x6E90;&#x6240;&#x6709;&#x8005;&#x4E3A;&#x670D;&#x52A1;"></p>
-<p>&#x7B2C;&#x4E09;&#x65B9;&#x5E94;&#x7528;&#x53BB;&#x817E;&#x8BAF;&#x62FF;&#x7528;&#x6237;&#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x672C;&#x8D28;&#x4E0A;&#x7B2C;&#x4E09;&#x65B9;&#x5E94;&#x7528;&#x662F;&#x53BB;&#x627E;&#x7528;&#x6237;&#x62FF;&#x8D44;&#x6E90;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x7528;&#x6237;&#x628A;&#x8D44;&#x6E90;&#x59D4;&#x6258;&#x7ED9;&#x4E86;&#x817E;&#x8BAF;&#xFF0C;&#x817E;&#x8BAF;&#x5728;&#x68C0;&#x67E5;&#x7B2C;&#x4E09;&#x65B9;&#x5E94;&#x7528;&#x5177;&#x6709;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x8D44;&#x6E90;&#x7684;&#x6743;&#x9650;&#x540E;&#xFF0C;&#x5C31;&#x4F1A;&#x4EE3;&#x7528;&#x6237;&#x4E0B;&#x53D1;&#x7ED9;&#x7B2C;&#x4E09;&#x65B9;&#x5E94;&#x7528;&#x8BB8;&#x53EF;&#x3002;</p>
-<p>&#x7B2C;&#x4E09;&#x65B9;&#x5E94;&#x7528;&#x62FF;&#x5230;&#x8BB8;&#x53EF;&#x5C31;&#x4F1A;&#x53BB;&#x6388;&#x6743;&#x670D;&#x52A1;&#x5668;&#x62FF;&#x4EE4;&#x724C;&#x3002;</p>
-<p>&#x62FF;&#x5230;&#x4EE4;&#x724C;&#x4E4B;&#x540E;&#xFF0C;&#x518D;&#x53BB;&#x8D44;&#x6E90;&#x670D;&#x52A1;&#x5668;&#x62FF;&#x8D44;&#x6E90;&#x3002;</p>
-<h5 id="&#x6458;&#x8981;&#x7B97;&#x6CD5;">&#x6458;&#x8981;&#x7B97;&#x6CD5;</h5>
-<p>&#x5C06;&#x6570;&#x636E;&#x8FD0;&#x7B97;&#x6210;&#x4E00;&#x6BB5;&#x4E0D;&#x53EF;&#x9006;&#x7684;&#x552F;&#x4E00;&#x6458;&#x8981;</p>
-<p>&#x4E0D;&#x91CD;&#x590D;&#xFF0C;&#x4E0D;&#x53EF;&#x9006;&#x3002;</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/&#x6458;&#x8981;&#x7B97;&#x6CD5;.png" alt="&#x6458;&#x8981;&#x7B97;&#x6CD5;"></p>
+<p>Oauth协议：</p>
+<p>用户在互联网获取资源的开放（委托形式）授权标准</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/Oauth协议.png" alt="Oauth"></p>
+<p>资源所有者为服务的情况：</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/Oauth的特殊情况.png" alt="资源所有者为服务"></p>
+<p>第三方应用去腾讯拿用户的资源，本质上第三方应用是去找用户拿资源的，但是用户把资源委托给了腾讯，腾讯在检查第三方应用具有获取用户资源的权限后，就会代用户下发给第三方应用许可。</p>
+<p>第三方应用拿到许可就会去授权服务器拿令牌。</p>
+<p>拿到令牌之后，再去资源服务器拿资源。</p>
+<h5 id="摘要算法">摘要算法</h5>
+<p>将数据运算成一段不可逆的唯一摘要</p>
+<p>不重复，不可逆。</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/摘要算法.png" alt="摘要算法"></p>
 <p>Token Table</p>
-<p>&#x5982;&#x4F55;&#x786E;&#x4FDD;Token&#x552F;&#x4E00;&#xFF1A;</p>
-<p>&#x901A;&#x8FC7;&#x968F;&#x673A;&#x6570;&#xFF0C;&#x6563;&#x5217;&#x7B97;&#x6CD5;<code>sha(client_id + rnd + timestamp)</code>&#xFF0C;&#x67E5;&#x91CD;&#x3002;</p>
-<p>id+&#x968F;&#x673A;&#x6570;+&#x65F6;&#x95F4;&#x6233;</p>
-<h4 id="&#x5355;&#x70B9;&#x767B;&#x5F55;&#x7CFB;&#x7EDF;">&#x5355;&#x70B9;&#x767B;&#x5F55;&#x7CFB;&#x7EDF;</h4>
-<p>SSO&#x4E3A;&#x5355;&#x70B9;&#x767B;&#x5F55;&#x5E73;&#x53F0;&#xFF0C;&#x6BD4;&#x5982;&#x5FAE;&#x4FE1;&#x3001;Github</p>
-<p>&#x4E5F;&#x5C31;&#x662F;&#x4E1A;&#x52A1;&#x6574;&#x5408;</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/&#x5355;&#x70B9;&#x767B;&#x5F55;.png" alt="&#x5355;&#x70B9;&#x767B;&#x5F55;"></p>
-<p>&#x901A;&#x8FC7;Oauth&#x5B9E;&#x73B0;SSO</p>
-<p>Oauth&#x670D;&#x52A1;&#x5668;&#x5C31;&#x662F;&#x5C06;&#x8D44;&#x6E90;&#x6240;&#x6709;&#x8005;&#x548C;&#x6388;&#x6743;&#x670D;&#x52A1;&#x5668;&#x7ED1;&#x5B9A;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x6BD4;&#x5982;&#x817E;&#x8BAF;&#x3002;</p>
+<p>如何确保Token唯一：</p>
+<p>通过随机数，散列算法<code>sha(client_id + rnd + timestamp)</code>，查重。</p>
+<p>id+随机数+时间戳</p>
+<h4 id="单点登录系统">单点登录系统</h4>
+<p>SSO为单点登录平台，比如微信、Github</p>
+<p>也就是业务整合</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/单点登录.png" alt="单点登录"></p>
+<p>通过Oauth实现SSO</p>
+<p>Oauth服务器就是将资源所有者和授权服务器绑定在一起，比如腾讯。</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/Oauth-with-SSO.png" alt="Oauth-SSO"></p>
-<h3 id="ssr&#x548C;&#x5355;&#x9875;&#x9762;&#x5E94;&#x7528;">SSR&#x548C;&#x5355;&#x9875;&#x9762;&#x5E94;&#x7528;</h3>
+<h3 id="ssr和单页面应用">SSR和单页面应用</h3>
 <blockquote>
-<p>&#x5DE5;&#x4F5C;&#x65E5;&#x5E38;&#x3001;&#x9762;&#x8BD5;&#x91CD;&#x70B9;&#x3001;&#x524D;&#x7AEF;&#x67B6;&#x6784;</p>
+<p>工作日常、面试重点、前端架构</p>
 </blockquote>
-<h4 id="&#x5355;&#x9875;&#x9762;&#x5E94;&#x7528;&#xFF08;single-page-application&#xFF09;">&#x5355;&#x9875;&#x9762;&#x5E94;&#x7528;&#xFF08;Single Page Application&#xFF09;</h4>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/SPA&#x7684;&#x4F18;&#x70B9;.png" alt="SPA&#x4F18;&#x70B9;"></p>
-<p>&#x7528;&#x6237;&#x4F53;&#x9A8C;&#xFF1A;&#x66F4;&#x52A0;&#x6D41;&#x7545;&#x3001;&#x60F3;&#x7528;&#x66F4;&#x5FEB;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x4E0D;&#x4F1A;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x5237;&#x65B0;</p>
-<p>&#x67B6;&#x6784;&#x65B9;&#x9762;&#xFF1A;&#x66F4;&#x5BB9;&#x6613;&#x7EC4;&#x4EF6;&#x5316;&#xFF0C;&#x524D;&#x540E;&#x7AEF;&#x5206;&#x79BB;&#xFF0C;&#x524D;&#x7AEF;&#x66F4;&#x5BB9;&#x6613;&#x6570;&#x636E;&#x9A71;&#x52A8;&#x3002;</p>
-<p>&#x751F;&#x6001;&#x65B9;&#x9762;&#xFF1A;BaaS/FaaS&#xFF08;&#x53EA;&#x628A;&#x670D;&#x52A1;&#x5668;&#x5F53;&#x4F5C;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#xFF09;&#xFF0C;&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#x3002;</p>
-<p>&#x6027;&#x80FD;&amp;&#x5B89;&#x5168;&#xFF1A;&#x8282;&#x7701;IO&#xFF0C;&#x6027;&#x80FD;&#x6709;&#x5F88;&#x5927;&#x7684;&#x63D0;&#x5347;&#xFF1B;&#x7EC4;&#x4EF6;&#x5316;&#x505A;&#x597D;&#x4E4B;&#x540E;&#xFF0C;&#x5BB9;&#x9519;&#x7387;&#x4F1A;&#x66F4;&#x9AD8;&#x3002;</p>
-<h5 id="&#x7F3A;&#x70B9;">&#x7F3A;&#x70B9;</h5>
-<p>CPU&#x5F00;&#x9500;&#x5927;&#xFF08;&#x7EC4;&#x4EF6;vs&#x65F6;&#x95F4;&#xFF09;&#xFF1A;&#x90FD;&#x4F7F;&#x7528;js&#x6E32;&#x67D3;&#x9875;&#x9762;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;CPU&#x5F00;&#x9500;&#x4F1A;&#x6BD4;&#x8F83;&#x5927;</p>
-<p>&#x6D41;&#x91CF;&#x5F00;&#x9500;&#x5927;&#xFF08;&#x4E00;&#x6B21;&#x52A0;&#x8F7D;&#x591A;&#x5F20;&#x9875;&#x9762;&#xFF09;&#xFF1A;&#x9996;&#x6B21;&#x8FDB;&#x5165;&#x9700;&#x8981;&#x8BF7;&#x6C42;&#x591A;&#x4E2A;&#x7EC4;&#x4EF6;&#x548C;&#x9875;&#x9762;&#x3002;&#x5176;&#x5B9E;&#x6D41;&#x91CF;&#x4E0D;&#x592A;&#x91CD;&#x8981;&#x3002;</p>
-<p>&#x9700;&#x8981;&#x597D;&#x7684;&#x7CFB;&#x7EDF;&#x67B6;&#x6784;&#xFF1A;&#x5355;&#x9875;&#x9762;&#x5E94;&#x7528;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x597D;&#x7684;&#x67B6;&#x6784;&#x8BBE;&#x8BA1;</p>
-<p>&#x641C;&#x7D22;&#x5F15;&#x64CE;&#x4E0D;&#x53CB;&#x597D;&#xFF1A;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#x662F;&#x770B;&#x4E0D;&#x5230;&#x9875;&#x9762;&#x5185;&#x5BB9;&#x7684;&#x3002;</p>
-<h4 id="&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#xFF08;server-side-rendering&#xFF09;">&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#xFF08;Server Side Rendering&#xFF09;</h4>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;.png" alt="&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;"></p>
-<p>&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#x662F;&#x6CA1;&#x6CD5;&#x52A0;&#x4E8B;&#x4EF6;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x5BA2;&#x6237;&#x7AEF;&#x91CD;&#x5EFA;&#x5E76;&#x52A0;&#x4E0A;&#x4E8B;&#x4EF6;</p>
-<p>SSR&#xFF1A;&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#x51FD;&#x6570;&#x3002;</p>
-<p>&#x5F00;&#x53D1;&#x4E00;&#x4E2A;&#x751F;&#x6210;html&#x8282;&#x70B9;&#x5E76;&#x4E14;&#x7BA1;&#x7406;&#x65F6;&#x95F4;&#x7684;&#x51FD;&#x6570;</p>
-<p>&#x5B9E;&#x73B0;render&#x51FD;&#x6570;&#x7684;&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#x6E32;&#x67D3;&#x80FD;</p>
+<h4 id="单页面应用（single-page-application）">单页面应用（Single Page Application）</h4>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/SPA的优点.png" alt="SPA优点"></p>
+<p>用户体验：更加流畅、想用更快，浏览器不会重新加载刷新</p>
+<p>架构方面：更容易组件化，前后端分离，前端更容易数据驱动。</p>
+<p>生态方面：BaaS/FaaS（只把服务器当作一个服务），服务端渲染。</p>
+<p>性能&amp;安全：节省IO，性能有很大的提升；组件化做好之后，容错率会更高。</p>
+<h5 id="缺点">缺点</h5>
+<p>CPU开销大（组件vs时间）：都使用js渲染页面，浏览器CPU开销会比较大</p>
+<p>流量开销大（一次加载多张页面）：首次进入需要请求多个组件和页面。其实流量不太重要。</p>
+<p>需要好的系统架构：单页面应用需要一个好的架构设计</p>
+<p>搜索引擎不友好：搜索引擎是看不到页面内容的。</p>
+<h4 id="服务端渲染（server-side-rendering）">服务端渲染（Server Side Rendering）</h4>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/服务端渲染.png" alt="服务端渲染"></p>
+<p>服务端渲染是没法加事件的，需要客户端重建并加上事件</p>
+<p>SSR：服务端渲染函数。</p>
+<p>开发一个生成html节点并且管理时间的函数</p>
+<p>实现render函数的服务端渲染和客户端渲染能</p>
 <p><code>`render(node,renderAS=&apos;dom/html/rehydrate&apos;.path = [])</code></p>
-<p>dom&#x7684;&#x8BDD;&#x5C31;&#x662F;&#x5BA2;&#x6237;&#x7AEF;&#x6E32;&#x67D3;&#xFF0C;&#x6E32;&#x67D3;&#x6210;dom&#x1F332;</p>
-<p>html&#x7684;&#x8BDD;&#x5C31;&#x662F;&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#xFF0C;&#x6E32;&#x67D3;&#x6210;html&#x5B57;&#x7B26;&#x4E32;</p>
-<p>rehydrate&#x662F;&#x300C;&#x6C34;&#x5408;&#x300D;&#x5BA2;&#x6237;&#x7AEF;&#x91CD;&#x5EFA;html&#xFF0C;&#x52A0;&#x5165;&#x4E8B;&#x4EF6;</p>
-<p>path&#x6307;&#x7684;&#x662F;&#x6E32;&#x67D3;&#x51FD;&#x6570;&#x6E32;&#x67D3;&#x7684;&#x8282;&#x70B9;&#x8DEF;&#x5F84;</p>
-<p>SSR&#x7684;&#x4F18;&#x7F3A;&#x70B9;</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/SSR&#x7684;&#x4F18;&#x7F3A;&#x70B9;.png" alt="SSR"></p>
+<p>dom的话就是客户端渲染，渲染成dom🌲</p>
+<p>html的话就是服务端渲染，渲染成html字符串</p>
+<p>rehydrate是「水合」客户端重建html，加入事件</p>
+<p>path指的是渲染函数渲染的节点路径</p>
+<p>SSR的优缺点</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/SSR的优缺点.png" alt="SSR"></p>
 <blockquote>
-<p>TTI&#xFF1A;&#x53EF;&#x4EA4;&#x4E92;&#x65F6;&#x95F4;&#xFF0C;&#x6307;&#x5F00;&#x59CB;&#x52A0;&#x8F7D;&#x5230;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x4EA4;&#x4E92;&#x7684;&#x65F6;&#x95F4;</p>
+<p>TTI：可交互时间，指开始加载到用户可以交互的时间</p>
 </blockquote>
-<p>&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#x51CF;&#x5C11;&#x4E86;js&#x7684;&#x8FD0;&#x884C;&#x65F6;&#x95F4;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x300C;&#x6C34;&#x5408;&#x300D;&#x5404;&#x79CD;&#x4E8B;&#x4EF6;&#x3002;&#x5BA2;&#x6237;&#x7AEF;&#x5F00;&#x9500;&#x53D8;&#x5C0F;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x66F4;&#x5FEB;&#x7684;&#x4F7F;&#x7528;&#x4E0A;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;TTI&#x51CF;&#x5C11;&#x3002;</p>
-<p>&#x5185;&#x7F51;&#x6570;&#x636E;&#x7EC4;&#x88C5;&#xFF0C;&#x662F;&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#xFF0C;&#x5728;&#x5185;&#x7F51;&#x5C06;&#x7EC4;&#x4EF6;&#x7EC4;&#x88C5;&#x6210;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x518D;&#x8FD4;&#x56DE;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x5BA2;&#x6237;&#x7AEF;&#x53EA;&#x8BF7;&#x6C42;&#x4E86;&#x4E00;&#x6B21;&#xFF0C;&#x51CF;&#x5C11;&#x4E86;&#x8BF7;&#x6C42;&#x6B21;&#x6570;&#xFF0C;&#x901F;&#x5EA6;&#x63D0;&#x5347;&#x662F;&#x6781;&#x5FEB;&#x7684;</p>
-<p>&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#x7684;&#x8BDD;&#xFF0C;&#x76F8;&#x5BF9;&#x4E8E;SPA&#x7684;SEO&#x662F;&#x4E00;&#x79CD;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x722C;&#x866B;&#x662F;&#x53EF;&#x4EE5;&#x62FF;&#x5230;&#x90E8;&#x5206;&#x9875;&#x9762;&#x800C;&#x4E0D;&#x662F;&#x7A7A;&#x9875;&#x9762;&#x3002;</p>
+<p>服务端渲染减少了js的运行时间，只需要「水合」各种事件。客户端开销变小，用户可以更快的使用上，也就是TTI减少。</p>
+<p>内网数据组装，是服务端渲染，在内网将组件组装成一个页面再返回给客户端，这样子客户端只请求了一次，减少了请求次数，速度提升是极快的</p>
+<p>服务端渲染的话，相对于SPA的SEO是一种解决方案，爬虫是可以拿到部分页面而不是空页面。</p>
 
                                 
                                 </section>
@@ -724,12 +736,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"浏览器状态同步和路由","level":"1.8.2","depth":2,"next":{"title":"网络安全攻防","level":"1.8.3","depth":2,"path":"计算机网络/网络安全攻防.md","ref":"计算机网络/网络安全攻防.md","articles":[]},"previous":{"title":"工具链和其他","level":"1.8.1","depth":2,"path":"计算机网络/工具链和其他.md","ref":"计算机网络/工具链和其他.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","disableTitleFormatting":true,"variables":{},"title":"json-config-name","gitbook":"*","outputfile":"SUMMARY.md"},"file":{"path":"计算机网络/浏览器状态同步和路由.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-21T01:19:27.690Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"浏览器状态同步和路由","level":"1.8.2","depth":2,"next":{"title":"网络安全攻防","level":"1.8.3","depth":2,"path":"计算机网络/网络安全攻防.md","ref":"计算机网络/网络安全攻防.md","articles":[]},"previous":{"title":"工具链和其他","level":"1.8.1","depth":2,"path":"计算机网络/工具链和其他.md","ref":"计算机网络/工具链和其他.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"计算机网络/浏览器状态同步和路由.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-21T09:39:03.214Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -747,10 +803,6 @@
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

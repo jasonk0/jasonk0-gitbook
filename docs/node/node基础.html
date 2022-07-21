@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>node基础 · json-config-name</title>
+        <title>node基础 · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 3.7.5">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -116,9 +115,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../Angular/Angular学习笔记.md">
+        <li class="chapter " data-level="1.2.1" data-path="../Angular/Angular学习笔记.html">
             
-                <span>
+                <a href="../Angular/Angular学习笔记.html">
             
                     
                     Angular学习笔记
@@ -458,6 +457,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.7.3" data-path="../杂篇/踩坑日记.html">
+            
+                <a href="../杂篇/踩坑日记.html">
+            
+                    
+                    踩坑日记
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -527,8 +539,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -567,434 +579,434 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="node">Node</h1>
-<h2 id="&#x524D;&#x8A00;">&#x524D;&#x8A00;</h2>
-<p>&#x8FDB;&#x9636;&#x7684;&#x6761;&#x4EF6;&#x548C;&#x96BE;&#x70B9;&#xFF1A;</p>
+<h2 id="前言">前言</h2>
+<p>进阶的条件和难点：</p>
 <ol>
-<li>&#x5230;&#x4E86;&#x9700;&#x8981;&#x8FDB;&#x9636;&#x7684;&#x65F6;&#x5019;</li>
-<li>&#x638C;&#x63E1;&#x4E86;&#x7CFB;&#x7EDF;&#x7684;&#x5B66;&#x4E60;&#x65B9;&#x6CD5;&#x8BBA;</li>
+<li>到了需要进阶的时候</li>
+<li>掌握了系统的学习方法论</li>
 </ol>
-<p>&#x65B9;&#x6CD5;&#xFF1A;&#x770B;&#x6587;&#x6863; =&gt; &#x5199;demo =&gt; &#x5206;&#x4EAB;</p>
-<p>&#x8FDB;&#x9636;&#x8FC7;&#x7A0B;&#x4E2D;&#x53EF;&#x80FD;&#x9047;&#x5230;&#x7684;&#x5751;</p>
+<p>方法：看文档 =&gt; 写demo =&gt; 分享</p>
+<p>进阶过程中可能遇到的坑</p>
 <ul>
-<li>&#x5BF9;&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#x8D70;&#x9A6C;&#x89C2;&#x82B1;</li>
-<li>&#x540E;&#x7AEF;&#x77E5;&#x8BC6;&#x57FA;&#x672C;&#x5FD8;&#x5149;</li>
-<li>&#x7F3A;&#x4E4F;&#x4EA7;&#x54C1;&#x548C;&#x4E1A;&#x52A1;&#x7684;&#x5168;&#x94FE;&#x8DEF;&#x601D;&#x7EF4;</li>
-<li>&#x57FA;&#x5EFA;&#x4E0D;&#x5B8C;&#x5584;&#xFF0C;&#x9762;&#x5BF9;&#x6027;&#x80FD;&#x95EE;&#x9898;&#x65E0;&#x5904;&#x4E0B;&#x624B;&#xFF0C;&#x80FD;&#x529B;&#x4E0A;&#x9650;&#x6CA1;&#x6709;&#x56E2;&#x961F;&#x8BF4;&#x670D;&#x529B;</li>
+<li>对基础知识走马观花</li>
+<li>后端知识基本忘光</li>
+<li>缺乏产品和业务的全链路思维</li>
+<li>基建不完善，面对性能问题无处下手，能力上限没有团队说服力</li>
 </ul>
-<p><strong>&#x4FA7;&#x91CD;&#x70B9;</strong></p>
+<p><strong>侧重点</strong></p>
 <blockquote>
-<p>&#x6E90;&#x7801;&#x5165;&#x624B;&#xFF0C;&#x77E5;&#x5176;&#x7136;&#x3001;&#x5E76;&#x77E5;&#x5176;&#x6240;&#x4EE5;&#x7136;</p>
-<p>&#x7D27;&#x8D34;&#x65F6;&#x95F4;&#xFF0C;&#x5728;&#x5B9E;&#x8DF5;&#x4E2D;&#x5B66;&#x4E60;</p>
+<p>源码入手，知其然、并知其所以然</p>
+<p>紧贴时间，在实践中学习</p>
 </blockquote>
-<p><strong>&#x65B9;&#x6CD5;&#x8BBA;</strong></p>
+<p><strong>方法论</strong></p>
 <ul>
-<li>&#x91CD;&#x89C6;&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#x7684;&#x638C;&#x63E1;</li>
-<li>&#x4E0D;&#x5168;&#x6570;&#x636E;&#x5E93;&#x77E5;&#x8BC6;&#x548C;&#x6570;&#x636E;&#x8868;&#x8BBE;&#x8BA1;&#x80FD;&#x529B;</li>
-<li>&#x5C06;&#x5F00;&#x6E90;&#x9879;&#x76EE;&#x7684;&#x6E90;&#x7801;&#x62C9;&#x4E0B;&#x6765;&#x8BFB;&#x4E00;&#x4E0B;</li>
-<li>&#x9009;&#x4E00;&#x4E2A;&#x9891;&#x7E41;&#x4F7F;&#x7528;Noode&#x7684;&#x573A;&#x666F;&#x6700;&#x4E3A;&#x7A81;&#x7834;&#x53E3;</li>
+<li>重视基础知识的掌握</li>
+<li>不全数据库知识和数据表设计能力</li>
+<li>将开源项目的源码拉下来读一下</li>
+<li>选一个频繁使用Noode的场景最为突破口</li>
 </ul>
-<p>&#x8D44;&#x6E90;</p>
+<p>资源</p>
 <ul>
-<li><a href="https://github.com/goldbergyoni/nodebestpractices/blob/master/README.chinese.md" target="_blank">&#x6700;&#x4F73;&#x5B9E;&#x8DF5;</a></li>
-<li><a href="https://github.com/jimuyouyou/node-interview-questions" target="_blank">&#x997F;&#x4E86;&#x4E48;node&#x9762;&#x8BD5;&#x624B;&#x518C;</a></li>
-<li><a href="https://i5ting.github.io/How-to-learn-node-correctly/" target="_blank">&#x5B66;&#x4E60;node&#x7684;&#x6B63;&#x786E;&#x59FF;&#x52BF;</a></li>
+<li><a href="https://github.com/goldbergyoni/nodebestpractices/blob/master/README.chinese.md" target="_blank">最佳实践</a></li>
+<li><a href="https://github.com/jimuyouyou/node-interview-questions" target="_blank">饿了么node面试手册</a></li>
+<li><a href="https://i5ting.github.io/How-to-learn-node-correctly/" target="_blank">学习node的正确姿势</a></li>
 </ul>
-<p>&#x4E66;&#x7C4D;</p>
+<p>书籍</p>
 <ul>
-<li>&#x72FC;&#x4E66;</li>
-<li>&#x6DF1;&#x5165;&#x6D45;&#x51FA;node</li>
-<li>nodejs&#x5B9E;&#x6218;2</li>
+<li>狼书</li>
+<li>深入浅出node</li>
+<li>nodejs实战2</li>
 </ul>
-<h2 id="&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#xFF08;&#x8981;&#x624E;&#x5B9E;&#xFF01;&#xFF09;">&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#xFF08;&#x8981;&#x624E;&#x5B9E;&#xFF01;&#xFF09;</h2>
-<h3 id="node&#x7684;&#x5B89;&#x88C5;&#x548C;&#x7248;&#x672C;">node&#x7684;&#x5B89;&#x88C5;&#x548C;&#x7248;&#x672C;</h3>
-<p>Mac&#x4E0B;&#xFF1A;</p>
+<h2 id="基础知识（要扎实！）">基础知识（要扎实！）</h2>
+<h3 id="node的安装和版本">node的安装和版本</h3>
+<p>Mac下：</p>
 <ul>
-<li><p>&#x5B98;&#x65B9;&#x7684;&#x5B89;&#x88C5;&#x5305; </p>
+<li><p>官方的安装包 </p>
 </li>
-<li><p>Homebrew &#x5168;&#x5C40;&#x5B89;&#x88C5;&#x3001;&#x624B;&#x52A8;&#x7BA1;&#x7406;</p>
+<li><p>Homebrew 全局安装、手动管理</p>
 </li>
-<li><p>NVM &#x65B9;&#x4FBF;&#x7BA1;&#x7406;&#x7248;&#x672C;</p>
+<li><p>NVM 方便管理版本</p>
 </li>
 </ul>
-<p>Windows&#x4E0B;&#xFF1A;</p>
+<p>Windows下：</p>
 <ul>
-<li>&#x5B98;&#x65B9;&#x5B89;&#x88C5;&#x5305;&#x3001;&#x5FEB;&#x901F;&#x5F00;&#x59CB;&#x3001;&#x63A8;&#x8350;&#x4F7F;&#x7528;</li>
-<li>nvm-windows &#x4E0D;&#x592A;&#x7A33;&#x5B9A;&#x3001;&#x793E;&#x533A;&#x7EF4;&#x62A4;</li>
-<li>Cmder &#x96C6;&#x6210;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#xFF08;&#x57FA;&#x4E8E;linux&#xFF09;</li>
-<li>WSL windows&#x63D0;&#x4F9B;&#x7684;&#x5185;&#x7F6E;linux&#x8FD0;&#x884C;&#x73AF;&#x5883;</li>
-<li>windows Terminal &#x5B98;&#x65B9;&#x7684;&#x4E0B;&#x4E00;&#x4EE3;&#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;</li>
+<li>官方安装包、快速开始、推荐使用</li>
+<li>nvm-windows 不太稳定、社区维护</li>
+<li>Cmder 集成命令行工具（基于linux）</li>
+<li>WSL windows提供的内置linux运行环境</li>
+<li>windows Terminal 官方的下一代命令行工具</li>
 </ul>
-<p>Node&#x7684;&#x7248;&#x672C;&#x9009;&#x62E9;&#xFF1A;</p>
-<p>LTS&#x662F;&#x957F;&#x671F;&#x7A33;&#x5B9A;&#x7248;&#x672C;&#x3001;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x5FC5;&#x987B;&#x7528;&#xFF1B;</p>
-<p>&#x5B9E;&#x9A8C;&#x9879;&#x76EE;&#x53EF;&#x4EE5;&#x7528;current&#x7248;&#x672C;</p>
-<p>&#x5947;&#x6570;&#x4E3A;&#x4E0D;&#x7A33;&#x5B9A;&#x7248;&#x672C;&#xFF0C;&#x5076;&#x6570;&#x7A33;&#x5B9A;&#x3002;</p>
-<p>&#x4E0D;&#x5FC5;&#x4FDD;&#x6301;&#x6700;&#x65B0;</p>
-<h4 id="&#x6A21;&#x5757;&#x673A;&#x5236;">&#x6A21;&#x5757;&#x673A;&#x5236;</h4>
+<p>Node的版本选择：</p>
+<p>LTS是长期稳定版本、生产环境必须用；</p>
+<p>实验项目可以用current版本</p>
+<p>奇数为不稳定版本，偶数稳定。</p>
+<p>不必保持最新</p>
+<h4 id="模块机制">模块机制</h4>
 <ol>
-<li>&#x91C7;&#x7528;CJM/ESM&#x6765;&#x7EC4;&#x7EC7;</li>
-<li>&#x6BCF;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#xFF0C;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x4F5C;&#x7528;&#x57DF;</li>
-<li>&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x91CC;&#x7684;&#x4E1C;&#x897F;&#x90FD;&#x662F;&#x79C1;&#x6709;&#x7684;&#xFF0C;&#x9664;&#x975E;export&#x51FA;&#x6765;</li>
-<li>node&#x4E2D;&#xFF0C;&#x6A21;&#x5757;&#x52A0;&#x8F7D;&#x662F;&#x8FD0;&#x884C;&#x65F6;&#x540C;&#x6B65;&#x52A0;&#x8F7D;&#x7684;</li>
-<li>&#x6A21;&#x5757;&#x53EF;&#x4EE5;&#x591A;&#x6B21;&#x52A0;&#x8F7D;&#xFF0C;&#x5230;&#x90A3;&#x65F6;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x4F1A;&#x88AB;&#x7F13;&#x5B58;&#xFF0C;&#x7528;&#x4F5C;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x52A0;&#x8F7D;&#x3002;</li>
+<li>采用CJM/ESM来组织</li>
+<li>每一个文件就是一个模块，有自己的作用域</li>
+<li>一个文件里的东西都是私有的，除非export出来</li>
+<li>node中，模块加载是运行时同步加载的</li>
+<li>模块可以多次加载，到那时运行结果会被缓存，用作接下来的加载。</li>
 </ol>
-<p>npm&#x3001;nrm&#x3001;npx</p>
+<p>npm、nrm、npx</p>
 <ul>
-<li><p>npm&#x662F;&#x5305;&#x7BA1;&#x7406;&#x5DE5;&#x5177;</p>
+<li><p>npm是包管理工具</p>
 </li>
-<li><p>nrm&#x7BA1;&#x7406;npm&#x7684;&#x6E90;</p>
+<li><p>nrm管理npm的源</p>
 </li>
-<li><p>npx &#x6267;&#x884C;&#x547D;&#x4EE4;&#x3001;&#x5F88;&#x5168;&#x80FD;</p>
+<li><p>npx 执行命令、很全能</p>
 </li>
 </ul>
-<h4 id="nodejs&#x7684;&#x80FD;&#x529B;">Nodejs&#x7684;&#x80FD;&#x529B;</h4>
+<h4 id="nodejs的能力">Nodejs的能力</h4>
 <ol>
-<li>&#x8DE8;&#x5E73;&#x53F0;&#xFF1A;web + H5 + hybird + PC</li>
-<li>Node&#x540E;&#x7AEF;&#xFF1A;Web&#x5E94;&#x7528;&#x3001;API rpc&#x3001;&#x5FAE;&#x670D;&#x52A1;</li>
-<li>&#x524D;&#x7AEF;&#xFF1A;react&#x3001;vue&#x3001;angular&#x5E94;&#x7528;&#x5B9E;&#x8DF5;&#x67B6;&#x6784;</li>
-<li>&#x5DE5;&#x5177;&#xFF1A;webpack&#x3001;gulp&#x3001;npm&#x7B49;</li>
+<li>跨平台：web + H5 + hybird + PC</li>
+<li>Node后端：Web应用、API rpc、微服务</li>
+<li>前端：react、vue、angular应用实践架构</li>
+<li>工具：webpack、gulp、npm等</li>
 </ol>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/node&#x7684;&#x80FD;&#x529B;.png" alt="node&#x7684;&#x80FD;&#x529B;"></p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/node的能力.png" alt="node的能力"></p>
 <blockquote>
-<p>node&#x4E0D;&#x9002;&#x5408;&#x505A;&#x8BA1;&#x7B97;&#x91CF;&#x6BD4;&#x8F83;&#x5927;&#x7684;&#x4E8B;&#x60C5;&#x3001;&#x9002;&#x5408;&#x505A;&#x541E;&#x5410;&#x91CF;&#x5927;&#x7684;&#x4E8B;&#x60C5;&#x3002;</p>
+<p>node不适合做计算量比较大的事情、适合做吞吐量大的事情。</p>
 </blockquote>
-<h3 id="nodejs&#x7684;&#x539F;&#x751F;api&#x80FD;&#x529B;">Nodejs&#x7684;&#x539F;&#x751F;API&#x80FD;&#x529B;</h3>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/node&#x7684;&#x67B6;&#x6784;.png" alt="node&#x7684;&#x67B6;&#x6784;"></p>
-<p>libuv&#xFF1A;&#x7075;&#x9B42;&#x3001;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x3001;&#x7EBF;&#x7A0B;&#x6C60;&#xFF1B;</p>
-<p>binding&#xFF1A;&#x80F6;&#x6C34;&#x4EE3;&#x7801;&#x3001;&#x5C06;&#x4E0D;&#x540C;&#x8BED;&#x8A00;&#x7684;&#x4EE3;&#x7801;&#x7C98;&#x5408;&#x5728;&#x4E00;&#x8D77;&#x3002;</p>
-<h4 id="&#x4E86;&#x89E3;&#x6570;&#x636E;&#x7C7B;&#x578B;">&#x4E86;&#x89E3;&#x6570;&#x636E;&#x7C7B;&#x578B;</h4>
-<p>Buffer-&#x7F13;&#x5B58; &#xFF1A; &#x5BF9;&#x8C61;&#x5360;&#x7528;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#xFF0C;&#x4E0D;&#x8BA1;&#x7B97;&#x5728;&#x8FDB;&#x7A0B;&#x9650;&#x5236;&#x4E0A;&#x3002;</p>
+<h3 id="nodejs的原生api能力">Nodejs的原生API能力</h3>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/node的架构.png" alt="node的架构"></p>
+<p>libuv：灵魂、异步任务、线程池；</p>
+<p>binding：胶水代码、将不同语言的代码粘合在一起。</p>
+<h4 id="了解数据类型">了解数据类型</h4>
+<p>Buffer-缓存 ： 对象占用内存空间，不计算在进程限制上。</p>
 <ul>
-<li><p>&#x5904;&#x7406;&#x6D41;&#x5F0F;&#x6570;&#x636E;</p>
+<li><p>处理流式数据</p>
 </li>
-<li><p>&#x5B58;&#x50A8;&#x9700;&#x8981;&#x4E34;&#x65F6;&#x5360;&#x7528;&#x5927;&#x91CF;&#x5185;&#x5B58;&#x7684;&#x6570;&#x636E;</p>
+<li><p>存储需要临时占用大量内存的数据</p>
 </li>
-<li><p>&#x751F;&#x4EA7;&#x8005;&#x548C;&#x6D88;&#x8D39;&#x8005;&#x7684;&#x901F;&#x5EA6;&#x901A;&#x5E38;&#x4E0D;&#x4E00;&#x81F4;&#xFF0C;&#x9700;&#x8981;&#x6682;&#x5B58;&#x4E00;&#x4E9B;&#x6570;&#x636E;</p>
+<li><p>生产者和消费者的速度通常不一致，需要暂存一些数据</p>
 </li>
-<li><p>buffer&#x901A;&#x8FC7;highWaterMark&#x53C2;&#x6570;&#x6307;&#x5B9A;&#xFF0C;&#x9ED8;&#x8BA4;16kb</p>
+<li><p>buffer通过highWaterMark参数指定，默认16kb</p>
 </li>
 </ul>
-<p>&#x4E00;&#x4E9B;&#x65B9;&#x6CD5;&#xFF1A;</p>
-<p>from(buffer|array|string) &#x4F7F;&#x7528;&#x5806;&#x5916;&#x5185;&#x5B58;&#x65B0;&#x589E;buffer</p>
-<p>from(arrayBuffer) &#x6D45;&#x62F7;&#x8D1D;arrayBuffer&#xFF0C;&#x5171;&#x4EAB;&#x5185;&#x5B58;</p>
-<p>alloc(size) &#x5206;&#x914D;&#x4E00;&#x4E2A;&#x7F6E;&#x9876;&#x5927;&#x5C0F;&#x7684;buffer</p>
-<p>allocUnsafe(size) &#x5206;&#x914D;&#x4E00;&#x4E2A;&#x6CA1;&#x6709;&#x521D;&#x59CB;&#x5316;&#x7684;buffer</p>
+<p>一些方法：</p>
+<p>from(buffer|array|string) 使用堆外内存新增buffer</p>
+<p>from(arrayBuffer) 浅拷贝arrayBuffer，共享内存</p>
+<p>alloc(size) 分配一个置顶大小的buffer</p>
+<p>allocUnsafe(size) 分配一个没有初始化的buffer</p>
 <blockquote>
-<p>&#x6D41;&#x5F0F;&#x6570;&#x636E;&#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;Buffer&#xFF0C;&#x624B;&#x52A8;&#x521B;&#x5EFA;&#x9700;&#x8C28;&#x614E;</p>
-</blockquote>
-<ul>
-<li>&#x8F6C;&#x6362;&#x683C;&#x5F0F;&#xFF1A;</li>
-</ul>
-<p>&#x5B57;&#x7B26;&#x4E32;&#xFF1A;&#x7F16;&#x7801;<code>Buffer.from(str)</code>&#x89E3;&#x7801;<code>buf.toString()</code></p>
-<p>JSON&#xFF1A;<code>buf.toJSON()</code></p>
-<ul>
-<li>&#x88C1;&#x526A;&#x548C;&#x62FC;&#x63A5;</li>
-</ul>
-<p><code>Buffer.slice()</code>&#xFF0C;&#x8FD4;&#x56DE;Buffer&#x4E0E;&#x539F;buf&#x5171;&#x4EAB;&#x5185;&#x5B58;</p>
-<p><code>buf.copy/concat</code>&#xFF0C;&#x8FD4;&#x56DE;&#x65B0;&#x7684;Buffer</p>
-<ul>
-<li>&#x6BD4;&#x8F83;&#x548C;&#x7D22;&#x5F15;&#x904D;&#x5386;</li>
-</ul>
-<p>&#x7D22;&#x5F15;&#x904D;&#x5386;&#xFF1A;<code>buf[index]\for of\IndexOf\includes</code>&#x7B49;</p>
-<p>&#x6BD4;&#x8F83;&#xFF1A;buf1.equals(buf2)</p>
-<hr>
-<p><strong>Stream&#x6D41;&#x5F0F;&#x6570;&#x636E;</strong></p>
-<p>Stream&#x63D0;&#x4F9B;&#x7684;&#x662F;&#x62BD;&#x8C61;&#x501F;&#x53E3;&#xFF0C;&#x5F88;&#x591A;&#x6A21;&#x5757;&#x5B9E;&#x73B0;&#x4E86;&#x8FD9;&#x4E2A;&#x63A5;&#x53E3;&#x3002;</p>
-<p>&#x662F;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x5F02;&#x6B65;IO&#x95EE;&#x9898;</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/Stream&#x548C;Buffer&#x7684;&#x5173;&#x7CFB;.png" alt="&#x6D41;&#x4E0E;buffer"></p>
-<hr>
-<p>event/EventEmitter &#x4E8B;&#x4EF6;</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/EventEmitter&#x56FE;&#x89E3;" alt="EventEmitter"></p>
-<hr>
-<p>Error&#x9519;&#x8BEF;</p>
-<ul>
-<li>&#x6807;&#x51C6;&#x7684;JS&#x9519;&#x8BEF;</li>
-<li>&#x5E95;&#x5C42;&#x64CD;&#x4F5C;&#x7684;&#x7CFB;&#x7EDF;&#x9519;&#x6211;</li>
-<li>&#x7528;&#x6237;&#x81EA;&#x5B9A;&#x4E49;&#x9519;&#x8BEF;</li>
-<li>&#x5F02;&#x5E38;&#x903B;&#x8F91;&#x7684;&#x5F02;&#x5E38;</li>
-</ul>
-<p>&#x9519;&#x8BEF;&#x5192;&#x6CE1;&#x548C;&#x6355;&#x83B7;&#xFF1A;&#x4E00;&#x822C;&#x4ECE;&#x5F02;&#x6B65;&#x65B9;&#x6CD5;&#x7684;callback&#x65B9;&#x6CD5;&#x6765;&#x6355;&#x83B7;</p>
-<blockquote>
-<p>&#x6240;&#x6709;node&#x548C;js&#x629B;&#x51FA;&#x7684;&#x5F02;&#x5E38;&#x90FD;&#x662F;Error&#x5B9E;&#x4F8B;</p>
-</blockquote>
-<hr>
-<p>URL &#x8D44;&#x6E90;&#x5B9A;&#x4F4D;&#x7B26;</p>
-<p>&#x73B0;&#x5728;&#x4E3B;&#x8981;&#x7528;WHATWG URL&#xFF08;H5&#x7684;&#x89C4;&#x8303;&#xFF09;</p>
-<p>URLSearchParams&#x6765;&#x64CD;&#x4F5C;&#x53C2;&#x6570;</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/&#x4E00;&#x822C;&#x7684;&#x4F7F;&#x7528;&#x793A;&#x4F8B;.png" alt=""></p>
-<hr>
-<p>global &#x5168;&#x5C40;&#x53D8;&#x91CF;</p>
-<p>&#x4EC5;&#x5B58;&#x5728;&#x4E8E;&#x6A21;&#x5757;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x4E2D;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x53EA;&#x5728;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x91CC;&#x3002;</p>
-<p><code>__dirname&#x3001;__filename&#x3001;exports&#x3001;module&#x3001;require()</code></p>
-<p>&#x4ECE;JS&#x8FC7;&#x6765;&#x7684;</p>
-<p><code>console&#x3001;timer&#x3001;global</code></p>
-<p>Node&#x7279;&#x6709;&#x7684;</p>
-<p><code>Buffer&#x3001;process&#x3001;URL&#x3001;WebAssembly</code></p>
-<hr>
-<p>&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x7684;&#x610F;&#x4E49;&#x5728;&#x4E8E;&#xFF0C;&#x65B9;&#x4FBF;&#x6211;&#x4EEC;&#x5728;&#x5B9E;&#x73B0;&#x9AD8;&#x7EA7;&#x529F;&#x80FD;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x5E95;&#x5C42;&#x7684;&#x4E1C;&#x897F;</p>
-<h4 id="&#x4E86;&#x89E3;&#x51E0;&#x4E2A;&#x5DE5;&#x5177;&#x5E93;">&#x4E86;&#x89E3;&#x51E0;&#x4E2A;&#x5DE5;&#x5177;&#x5E93;</h4>
-<p>&#x5DE5;&#x5177;&#x5E93;-util</p>
-<ul>
-<li>&#x98CE;&#x683C;&#x8F6C;&#x6362;&#xFF1A;promisify &lt;=&gt; callbackify&#x7B49;</li>
-<li>&#x8C03;&#x8BD5;&#x5DE5;&#x5177;&#xFF1A;debuglog&#x3001;inspect&#x3001;format&#x7B49;</li>
-<li>&#x7C7B;&#x578B;&#x5224;&#x65AD;&#xFF1A;types.isDate(value)&#x7B49;</li>
-</ul>
-<p>&#x5DE5;&#x5177;&#x5E93;-assert&#x65AD;&#x8A00;</p>
-<ul>
-<li>&#x65AD;&#x8A00;&#x771F;&#x5047;&#xFF1A;assert(value,msg)&#xFF0C;match(string,reg)&#x7B49;</li>
-<li>&#x65AD;&#x8A00;&#x7B49;&#x4EF7;&#xFF1A;scriptEqual&#x3001;deepStrictEqual&#x7B49;</li>
-<li>&#x65AD;&#x8A00;&#x6210;&#x529F;&#x5931;&#x8D25;&#xFF1A;fail&#x3001;throws&#x3001;rejects&#x3001;ifError&#x7B49;</li>
-</ul>
-<p>&#x5DE5;&#x5177;&#x5E93;-querystring</p>
-<blockquote>
-<p>&#x5B98;&#x65B9;&#x63D0;&#x4F9B;&#x7684;&#x89E3;&#x6790;&#x548C;&#x683C;&#x5F0F;&#x5316;url&#x67E5;&#x8BE2;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5DE5;&#x5177;</p>
+<p>流式数据会自动创建Buffer，手动创建需谨慎</p>
 </blockquote>
 <ul>
-<li>&#x67E5;&#x8BE2;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x952E;&#x503C;&#x5BF9;&#xFF1A; parse</li>
-<li>&#x952E;&#x503C;&#x5BF9;&#x8F6C;&#x67E5;&#x8BE2;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;stringfy</li>
+<li>转换格式：</li>
 </ul>
-<h4 id="&#x638C;&#x63E1;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x80FD;&#x529B;">&#x638C;&#x63E1;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x80FD;&#x529B;</h4>
-<p>OS&#x6A21;&#x5757;&#xFF1A;&#x63D0;&#x4F9B;&#x4E0E;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x76F8;&#x5173;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x548C;&#x5C5E;&#x6027;</p>
-<p>&#x53EF;&#x4EE5;&#x517C;&#x5BB9;&#x7684;&#x8C03;&#x7528;&#x4E0D;&#x540C;&#x5E73;&#x53F0;&#x7684;&#x5E95;&#x5C42;&#x547D;&#x4EE4;&#xFF0C;&#x5F62;&#x6210;&#x7CFB;&#x7EDF;&#x5FEB;&#x7167;</p>
-<blockquote>
-<p>cpus&#x3001;platform&#x3001;type&#x3001;uptime&#x3001;userInfo</p>
-</blockquote>
-<p>&#x5B9A;&#x4E49;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7EA7;&#x522B;&#x7684;&#x679A;&#x4E3E;&#x5E38;&#x91CF;</p>
-<blockquote>
-<p>&#x4FE1;&#x53F7;&#x5E38;&#x91CF;SIG&#x3001;&#x9519;&#x8BEF;&#x5E38;&#x91CF;E&#x3001;Windows&#x7279;&#x6709;&#x7684;WSA&#x3001;&#x4F18;&#x5148;&#x7EA7;PRIORITY_</p>
-</blockquote>
-<p>fs&#x6A21;&#x5757;&#xFF1A;&#x63D0;&#x4F9B;&#x7528;&#x4E8E;&#x4E0E;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x7684;API</p>
+<p>字符串：编码<code>Buffer.from(str)</code>解码<code>buf.toString()</code></p>
+<p>JSON：<code>buf.toJSON()</code></p>
 <ul>
-<li><p>&#x53EF;&#x4EE5;&#x540C;&#x6B65;&#x3001;&#x5F02;&#x6B65;&#x4EA4;&#x4E92;</p>
+<li>裁剪和拼接</li>
+</ul>
+<p><code>Buffer.slice()</code>，返回Buffer与原buf共享内存</p>
+<p><code>buf.copy/concat</code>，返回新的Buffer</p>
+<ul>
+<li>比较和索引遍历</li>
+</ul>
+<p>索引遍历：<code>buf[index]\for of\IndexOf\includes</code>等</p>
+<p>比较：buf1.equals(buf2)</p>
+<hr>
+<p><strong>Stream流式数据</strong></p>
+<p>Stream提供的是抽象借口，很多模块实现了这个接口。</p>
+<p>是为了解决异步IO问题</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/Stream和Buffer的关系.png" alt="流与buffer"></p>
+<hr>
+<p>event/EventEmitter 事件</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/EventEmitter图解" alt="EventEmitter"></p>
+<hr>
+<p>Error错误</p>
+<ul>
+<li>标准的JS错误</li>
+<li>底层操作的系统错我</li>
+<li>用户自定义错误</li>
+<li>异常逻辑的异常</li>
+</ul>
+<p>错误冒泡和捕获：一般从异步方法的callback方法来捕获</p>
+<blockquote>
+<p>所有node和js抛出的异常都是Error实例</p>
+</blockquote>
+<hr>
+<p>URL 资源定位符</p>
+<p>现在主要用WHATWG URL（H5的规范）</p>
+<p>URLSearchParams来操作参数</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/一般的使用示例.png" alt></p>
+<hr>
+<p>global 全局变量</p>
+<p>仅存在于模块的作用域中，相当于只在一个文件里。</p>
+<p><code>__dirname、__filename、exports、module、require()</code></p>
+<p>从JS过来的</p>
+<p><code>console、timer、global</code></p>
+<p>Node特有的</p>
+<p><code>Buffer、process、URL、WebAssembly</code></p>
+<hr>
+<p>这些数据类型的意义在于，方便我们在实现高级功能时，可以直接调用底层的东西</p>
+<h4 id="了解几个工具库">了解几个工具库</h4>
+<p>工具库-util</p>
+<ul>
+<li>风格转换：promisify &lt;=&gt; callbackify等</li>
+<li>调试工具：debuglog、inspect、format等</li>
+<li>类型判断：types.isDate(value)等</li>
+</ul>
+<p>工具库-assert断言</p>
+<ul>
+<li>断言真假：assert(value,msg)，match(string,reg)等</li>
+<li>断言等价：scriptEqual、deepStrictEqual等</li>
+<li>断言成功失败：fail、throws、rejects、ifError等</li>
+</ul>
+<p>工具库-querystring</p>
+<blockquote>
+<p>官方提供的解析和格式化url查询字符串的工具</p>
+</blockquote>
+<ul>
+<li>查询字符串转键值对： parse</li>
+<li>键值对转查询字符串：stringfy</li>
+</ul>
+<h4 id="掌握文件系统能力">掌握文件系统能力</h4>
+<p>OS模块：提供与操作系统相关的使用方法和属性</p>
+<p>可以兼容的调用不同平台的底层命令，形成系统快照</p>
+<blockquote>
+<p>cpus、platform、type、uptime、userInfo</p>
+</blockquote>
+<p>定义操作系统级别的枚举常量</p>
+<blockquote>
+<p>信号常量SIG、错误常量E、Windows特有的WSA、优先级PRIORITY_</p>
+</blockquote>
+<p>fs模块：提供用于与文件系统进行交互的API</p>
+<ul>
+<li><p>可以同步、异步交互</p>
 </li>
-<li><p>URI&#x4F5C;&#x4E3A;&#x7279;&#x6B8A;&#x6587;&#x4EF6;&#x4E5F;&#x53EF;&#x4EE5;&#x88AB;fs&#x6A21;&#x5757;&#x4F7F;&#x7528;</p>
+<li><p>URI作为特殊文件也可以被fs模块使用</p>
 </li>
-<li>&#x64CD;&#x4F5C;&#x6587;&#x4EF6;&#x5939;&#xFF1A;mkdir&#x3001;rmdir</li>
-<li>&#x64CD;&#x4F5C;&#x6587;&#x4EF6;&#xFF1A;chomd&#x3001;open&#x3001;read&#x3001;write</li>
+<li>操作文件夹：mkdir、rmdir</li>
+<li>操作文件：chomd、open、read、write</li>
 </ul>
 <hr>
-<h3 id="&#x5E95;&#x5C42;&#x673A;&#x5236;&#x548C;&#x539F;&#x7406;">&#x5E95;&#x5C42;&#x673A;&#x5236;&#x548C;&#x539F;&#x7406;</h3>
-<p>&#x6A21;&#x5757;&#x673A;&#x5236;&#x2014;&#x2014;CommonJS</p>
-<p>&#x6A21;&#x5757;&#x5F15;&#x7528;&#xFF08;require&#xFF09;&#x3001;&#x6A21;&#x5757;&#x5B9A;&#x4E49;&#xFF08;export&#xFF09;&#x3001;&#x6A21;&#x5757;&#x6807;&#x8BC6;&#xFF08;&#x8DEF;&#x5F84;&#xFF09;</p>
-<p>&#x8FC7;&#x7A0B;&#xFF1A;&#x8DEF;&#x5F84;&#x5206;&#x6790; =&gt; &#x6587;&#x4EF6;&#x5B9A;&#x4F4D; =&gt; &#x7F16;&#x8BD1;&#x6267;&#x884C; =&gt; &#x52A0;&#x5165;&#x7F13;&#x5B58;</p>
+<h3 id="底层机制和原理">底层机制和原理</h3>
+<p>模块机制——CommonJS</p>
+<p>模块引用（require）、模块定义（export）、模块标识（路径）</p>
+<p>过程：路径分析 =&gt; 文件定位 =&gt; 编译执行 =&gt; 加入缓存</p>
 <ol>
-<li>&#x8DEF;&#x5F84;&#x5206;&#x6790;</li>
+<li>路径分析</li>
 </ol>
-<p>&#x5185;&#x7F6E;&#x6A21;&#x5757;&#x3001;&#x6587;&#x4EF6;&#x6A21;&#x5757;</p>
-<p>&#x6A21;&#x5757;&#x7684;&#x67E5;&#x627E;&#x987A;&#x5E8F;&#xFF08;&#x7C7B;&#x4F3C;&#x4E8E;&#x539F;&#x578B;&#x94FE;&#xFF09;&#xFF1A;&#x5DF2;&#x7F13;&#x5B58;&#x6A21;&#x5757; - &#x5185;&#x7F6E;&#x6A21;&#x5757; - &#x6587;&#x4EF6;&#x6A21;&#x5757; - &#x6587;&#x4EF6;&#x76EE;&#x5F55;&#x6A21;&#x5757; - node_modules&#x6A21;&#x5757; - &#xFF08;&#x7236;&#x7EA7;&#xFF09;</p>
+<p>内置模块、文件模块</p>
+<p>模块的查找顺序（类似于原型链）：已缓存模块 - 内置模块 - 文件模块 - 文件目录模块 - node_modules模块 - （父级）</p>
 <ol>
-<li>&#x6587;&#x4EF6;&#x5B9A;&#x4F4D;</li>
+<li>文件定位</li>
 </ol>
-<p>&#x6839;&#x636E;&#x6269;&#x5C55;&#x540D;&#x5224;&#x65AD; - &#x89E3;&#x6790;package.json - &#x627E;&#x5230;&#x5165;&#x53E3;&#x6587;&#x4EF6; - &#x8FDB;&#x5165;&#x4E0B;&#x4E00;&#x4E2A;&#xFF08;&#x7236;&#x7EA7;&#xFF09;&#x6A21;&#x5757;&#x8DEF;&#x5F84;</p>
+<p>根据扩展名判断 - 解析package.json - 找到入口文件 - 进入下一个（父级）模块路径</p>
 <ol>
-<li><p>&#x7F16;&#x8BD1;&#x6267;&#x884C; </p>
+<li><p>编译执行 </p>
 </li>
-<li><p>js&#x6587;&#x4EF6;&#x901A;&#x8FC7;fs&#x540C;&#x6B65;&#x8BFB;&#x53D6;&#x7F16;&#x8BD1;&#x6267;&#x884C;</p>
+<li><p>js文件通过fs同步读取编译执行</p>
 </li>
-<li>json&#x6587;&#x4EF6;&#x901A;&#x8FC7;fs&#x540C;&#x6B65;&#x8BFB;&#x53D6;&#xFF0C;&#x7528;JSON.parse&#x89E3;&#x6790;&#x5E76;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</li>
-<li>node&#x6587;&#x4EF6;&#x662F;&#x7528;c/c++&#x5199;&#x7684;&#x6269;&#x5C55;&#x6587;&#x4EF6;</li>
+<li>json文件通过fs同步读取，用JSON.parse解析并返回结果</li>
+<li>node文件是用c/c++写的扩展文件</li>
 </ol>
-<p>&#x8FD8;&#x9700;&#x8981;&#x6CE8;&#x5165;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x3001;&#x6784;&#x9020;&#x4E0A;&#x4E0B;&#x6587;&#x6267;&#x884C;&#x73AF;&#x5883;&#xFF08;&#x95ED;&#x5305;&#x4EA7;&#x751F;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x901A;&#x8FC7;runInThisContext&#x65B9;&#x6CD5;&#xFF09;</p>
+<p>还需要注入全局变量、构造上下文执行环境（闭包产生作用域，通过runInThisContext方法）</p>
 <blockquote>
-<p>&#x672A;&#x77E5;&#x6587;&#x4EF6;&#x4E5F;&#x4F1A;&#x88AB;&#x5F53;&#x4F5C;js&#x6587;&#x4EF6;&#x7F16;&#x8BD1;</p>
+<p>未知文件也会被当作js文件编译</p>
 </blockquote>
 <ol>
-<li>&#x52A0;&#x5165;&#x7F13;&#x5B58;</li>
+<li>加入缓存</li>
 </ol>
-<p>&#x300C;&#x6838;&#x5FC3;&#x6A21;&#x5757;&#x300D;&#x4F1A;&#x88AB;&#x767B;&#x8BB0;&#x5728;NativeModule._cache</p>
-<p>&#x300C;&#x6587;&#x4EF6;&#x6A21;&#x5757;&#x300D;&#x4F1A;&#x4EE5;&#x5B57;&#x7B26;&#x4E32;&#x5F62;&#x5F0F;&#x5B58;&#x50A8;&#xFF0C;&#x7B49;&#x5F85;&#x8C03;&#x7528;</p>
-<p>&#x300C;&#x6E05;&#x9664;&#x7F13;&#x5B58;&#x300D;&#x901A;&#x8FC7;delete.requre.cache[require.resolve(module)]&#xFF0C;&#x5F53;&#x7136;&#x6709;&#x5F88;&#x591A;&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;&#x5DF2;&#x7ECF;&#x5C01;&#x88C5;&#x4E86;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;</p>
+<p>「核心模块」会被登记在NativeModule._cache</p>
+<p>「文件模块」会以字符串形式存储，等待调用</p>
+<p>「清除缓存」通过delete.requre.cache[require.resolve(module)]，当然有很多第三方模块已经封装了这个方法</p>
 <hr>
-<p><strong>CMJ&#x548C;ESM</strong></p>
-<p>ESM&#xFF1A;</p>
+<p><strong>CMJ和ESM</strong></p>
+<p>ESM：</p>
 <ul>
-<li>&#x9759;&#x6001;&#x52A0;&#x8F7D;&#x6A21;&#x5757;</li>
-<li>&#x53D8;&#x5F02;&#x7684;&#x65F6;&#x5019;&#x6267;&#x884C;&#x4EE3;&#x7801;</li>
-<li>&#x7F13;&#x5B58;&#x6267;&#x884C;&#x7ED3;&#x679C;</li>
-<li>&#x6309;&#x9700;&#x5F15;&#x5165;&#x3001;&#x8282;&#x7701;&#x5185;&#x5B58;&#xFF08;Tree-shaking&#xFF09;</li>
+<li>静态加载模块</li>
+<li>变异的时候执行代码</li>
+<li>缓存执行结果</li>
+<li>按需引入、节省内存（Tree-shaking）</li>
 </ul>
-<p>CJM&#xFF1A;</p>
+<p>CJM：</p>
 <ul>
-<li>&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x6A21;&#x5757;</li>
-<li>&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#x52A0;&#x8F7D;&#x6E90;&#x7801;</li>
-<li>&#x52A0;&#x8F7D;&#x5168;&#x90E8;&#x4EE3;&#x7801;</li>
+<li>动态加载模块</li>
+<li>调用的时候加载源码</li>
+<li>加载全部代码</li>
 </ul>
 <hr>
-<h3 id="&#x7F51;&#x7EDC;&#x7F16;&#x7A0B;&#x80FD;&#x529B;">&#x7F51;&#x7EDC;&#x7F16;&#x7A0B;&#x80FD;&#x529B;</h3>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/&#x7F51;&#x7EDC;&#x6A21;&#x578B;&#x7684;&#x6BD4;&#x5BF9;.png" alt="&#x7F51;&#x7EDC;&#x6A21;&#x578B;&#x7684;&#x6BD4;&#x5BF9;"></p>
-<p>Socket&#xFF1A;&#x5957;&#x63A5;&#x5B57;&#xFF0C;&#x662F;&#x5E95;&#x5C42;&#x901A;&#x4FE1;&#xFF0C;&#x7528;&#x6765;&#x63CF;&#x8FF0;&#x7AEF;&#x53E3;&#x548C;&#x4E3B;&#x673A;&#xFF1B;&#x51E0;&#x4E4E;&#x6240;&#x6709;&#x7684;&#x5E94;&#x7528;&#x5C42;&#x90FD;&#x662F;&#x901A;&#x8FC7;socket&#x8FDB;&#x884C;&#x901A;&#x4FE1;</p>
-<p>&#x4ECE;&#x4F55;&#x800C;&#x6765;&#xFF1F;&#x5BF9;TCP/IP&#x8FDB;&#x884C;&#x5C01;&#x88C5;&#xFF0C;&#x5E76;&#x5411;&#x5E94;&#x7528;&#x5C42;&#x534F;&#x8BAE;&#x66B4;&#x9732;&#x63A5;&#x53E3;&#x8C03;&#x7528;&#x3002;</p>
-<p>TCP&#x548C;UDP&#x7684;&#x4E0D;&#x540C;&#xFF0C;&#x5728;&#x4E8E;&#x4E0D;&#x540C;&#x53C2;&#x6570;&#x7684;socket&#x5B9E;&#x73B0;&#x8FC7;&#x7A0B;&#x4E0D;&#x540C;</p>
-<h4 id="netdgram&#x6A21;&#x5757;">net/dgram&#x6A21;&#x5757;</h4>
-<p>net&#x662F;TCP/IP&#x7684;node&#x5B9E;&#x73B0;&#xFF0C;&#x63D0;&#x4F9B;&#x4E00;&#x4E9B;&#x7528;&#x4E8E;&#x5E95;&#x5C42;&#x7684;&#x7F51;&#x7EDC;&#x901A;&#x4FE1;&#x7684;&#x65B9;&#x6CD5;</p>
-<p>http&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x7AEF;&#x901A;&#x4FE1;&#x5747;&#x4F9D;&#x8D56;&#x4E8E;socket</p>
-<p>net.Server&#xFF1A;TCP server&#xFF0C;&#x5185;&#x90E8;&#x901A;&#x8FC7;socket&#x6765;&#x5B9E;&#x73B0;&#x4E0E;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x901A;&#x4FE1;</p>
-<p>net.Socket&#xFF1A;&#x672C;&#x5730;socket&#x7684;node&#x7248;&#x5B9E;&#x73B0;&#xFF0C;&#x5979;&#x5B9E;&#x73B0;&#x4E86;&#x5168;&#x53CC;&#x5DE5;&#x7684;stream&#x63A5;&#x53E3;</p>
-<p>API&#xFF1A;&#x8FDE;&#x63A5;connet&#x3001;&#x8BFB;&#x5199;write&#x3001;&#x5C5E;&#x6027;bufferSize&#x3001;&#x5730;&#x5740;address</p>
-<h4 id="httphttpshttp2&#x6A21;&#x5757;">http/https/http2&#x6A21;&#x5757;</h4>
-<p>&#x7F16;&#x5199;Web Server&#x6700;&#x5E38;&#x89C1;&#x7684;&#x6A21;&#x5757;</p>
-<p>Server&#x90E8;&#x5206;&#x7EE7;&#x627F;&#x81EA;net.Server&#x5E76;&#x5BF9;&#x8BF7;&#x6C42;&#x548C;&#x76F8;&#x5E94;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5C01;&#x88C5;&#x65B9;&#x4FBF;&#x5B9E;&#x7528;&#x3002;</p>
-<p>&#x4E5F;&#x63D0;&#x4F9B;&#x4E86;&#x50CF;&#x5176;&#x4ED6;&#x670D;&#x52A1;&#x7AEF;&#x53D1;&#x8D77;HTTP&#x8BF7;&#x6C42;&#x7684;&#x80FD;&#x529B;</p>
-<h4 id="&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;">&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;</h4>
+<h3 id="网络编程能力">网络编程能力</h3>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/网络模型的比对.png" alt="网络模型的比对"></p>
+<p>Socket：套接字，是底层通信，用来描述端口和主机；几乎所有的应用层都是通过socket进行通信</p>
+<p>从何而来？对TCP/IP进行封装，并向应用层协议暴露接口调用。</p>
+<p>TCP和UDP的不同，在于不同参数的socket实现过程不同</p>
+<h4 id="netdgram模块">net/dgram模块</h4>
+<p>net是TCP/IP的node实现，提供一些用于底层的网络通信的方法</p>
+<p>http客户端和服务端通信均依赖于socket</p>
+<p>net.Server：TCP server，内部通过socket来实现与客户端的通信</p>
+<p>net.Socket：本地socket的node版实现，她实现了全双工的stream接口</p>
+<p>API：连接connet、读写write、属性bufferSize、地址address</p>
+<h4 id="httphttpshttp2模块">http/https/http2模块</h4>
+<p>编写Web Server最常见的模块</p>
+<p>Server部分继承自net.Server并对请求和相应数据进行封装方便实用。</p>
+<p>也提供了像其他服务端发起HTTP请求的能力</p>
+<h4 id="进程管理">进程管理</h4>
 <hr>
-<p> <img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/&#x8FDB;&#x7A0B;&#x7EBF;&#x7A0B;&#x57FA;&#x672C;&#x6982;&#x5FF5;.png" alt="&#x57FA;&#x672C;&#x6982;&#x5FF5;"></p>
-<p>&#x7EBF;&#x7A0B;&#xFF1A;&#x5355;&#x4E00;&#x987A;&#x5E8F;&#x63A7;&#x5236;&#x6D41;&#x7A0B;&#x3001;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x6D41;&#x7684;&#x6700;&#x5C0F;&#x5355;&#x5143;</p>
-<p>&#x8FDB;&#x7A0B;&#xFF1A;&#x8BA1;&#x7B97;&#x673A;&#x4EFB;&#x52A1;&#x5206;&#x914D;&#x7684;&#x6700;&#x5C0F;&#x5355;&#x5143;</p>
-<p><strong>&#x591A;&#x8FDB;&#x7A0B;vs&#x591A;&#x7EBF;&#x7A0B;</strong></p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/&#x591A;&#x7EBF;&#x7A0B;VS&#x591A;&#x8FDB;&#x7A0B;.png" alt="&#x5BF9;&#x6BD4;"></p>
+<p> <img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/进程线程基本概念.png" alt="基本概念"></p>
+<p>线程：单一顺序控制流程、程序执行流的最小单元</p>
+<p>进程：计算机任务分配的最小单元</p>
+<p><strong>多进程vs多线程</strong></p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/多线程VS多进程.png" alt="对比"></p>
 <p><strong>EventLoop</strong></p>
-<p>EventLoop&#x662F;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x7ED3;&#x6784;&#xFF0C;&#x7528;&#x4E8E;&#x7B49;&#x5F85;&#x548C;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x548C;&#x65F6;&#x95F4;</p>
-<p>&#x662F;&#x5355;&#x7EBF;&#x7A0B;&#x4EFB;&#x52A1;&#x6392;&#x961F;&#x6267;&#x884C;&#x7684;&#x673A;&#x5236;&#x3002;</p>
+<p>EventLoop是一个程序结构，用于等待和发送消息和时间</p>
+<p>是单线程任务排队执行的机制。</p>
 <blockquote>
-<p>JS&#x901A;&#x8FC7;EventLoop&#x7684;&#x5F62;&#x5F0F;&#x89E3;&#x51B3;&#x5355;&#x7EBF;&#x7A0B;&#x4EFB;&#x52A1;&#x8C03;&#x5EA6;&#x95EE;&#x9898;</p>
-<p>&#x6D4F;&#x89C8;&#x5668;&#x548C;Node&#x7684;EventLoop&#x662F;&#x4E24;&#x4E2A;&#x6982;&#x5FF5;</p>
+<p>JS通过EventLoop的形式解决单线程任务调度问题</p>
+<p>浏览器和Node的EventLoop是两个概念</p>
 </blockquote>
-<p>Node&#x7684;EventLoop</p>
+<p>Node的EventLoop</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/Node-System.png" alt="System"></p>
-<p>&#x5FAE;&#x4EFB;&#x52A1;&#xFF1A;nextTick &gt; Promise&#xFF0C;&#x4E0D;&#x540C;&#x5FAE;&#x4EFB;&#x52A1;&#x88AB;&#x653E;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x5FAE;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#x3002;</p>
-<p>&#x300C;&#x5B8F;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#x300D;&#x7684;&#x987A;&#x5E8F;&#xFF1A;timer &gt; I/O &gt; check/close</p>
-<p>&#x5728;&#x5B8F;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x7684;&#x95F4;&#x9699;&#x53BB;&#x6E05;&#x7A7A;&#x300C;&#x5FAE;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#x300D;</p>
+<p>微任务：nextTick &gt; Promise，不同微任务被放到不同的微任务队列。</p>
+<p>「宏任务队列」的顺序：timer &gt; I/O &gt; check/close</p>
+<p>在宏任务执行的间隙去清空「微任务队列」</p>
 <p><strong>Process</strong></p>
-<p>Process&#x662F;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#xFF0C;&#x63CF;&#x8FF0;&#x8FDB;&#x7A0B;</p>
-<p>&#x662F;&#x4E00;&#x4E2A;EventEmiter&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x66B4;&#x9732;&#x4E86;&#x8FDB;&#x7A0B;&#x4E8B;&#x4EF6;&#x7684;&#x94A9;&#x5B50;&#x3002;</p>
-<p>&#x63D0;&#x4F9B;&#x6807;&#x51C6;&#x6D41;&#x8F93;&#x51FA;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x662F;&#x8FDB;&#x7A0B;&#x7684;I/O&#x64CD;&#x4F5C;</p>
+<p>Process是一个全局对象，描述进程</p>
+<p>是一个EventEmiter的实例，暴露了进程事件的钩子。</p>
+<p>提供标准流输出，对应的是进程的I/O操作</p>
 <blockquote>
-<p>console&#x662F;&#x7531;stdio&#x5B9E;&#x73B0;&#xFF0C;&#x4F1A;&#x6709;&#x989D;&#x5916;&#x6027;&#x80FD;&#x5F00;&#x9500;</p>
+<p>console是由stdio实现，会有额外性能开销</p>
 </blockquote>
-<p>NextTick()&#x662F;&#x628A;&#x56DE;&#x8C03;&#x538B;&#x5165;&#x5FAE;&#x4EFB;&#x52A1;&#x961F;&#x5217;</p>
-<p><strong>child_propcess/cluster</strong>&#x5B50;&#x8FDB;&#x7A0B;</p>
-<p>child_process&#x662F;Node.js&#x7684;&#x5185;&#x7F6E;&#x6A21;&#x5757;</p>
+<p>NextTick()是把回调压入微任务队列</p>
+<p><strong>child_propcess/cluster</strong>子进程</p>
+<p>child_process是Node.js的内置模块</p>
 <ul>
-<li>spawn&#xFF1A;&#x7528;&#x4E8E;&#x8FD4;&#x56DE;&#x5927;&#x91CF;&#x6570;&#x636E;&#xFF0C;&#x4F8B;&#x5982;&#x56FE;&#x50CF;&#x5904;&#x7406;&#x3001;&#x4E8C;&#x8FDB;&#x5236;&#xFF0C;</li>
-<li>esxe&#xFF1A;&#x9002;&#x7528;&#x4E8E;&#x5C0F;&#x91CF;&#x6570;&#x636E;&#xFF0C;&#x7528;Buffer&#xFF08;&#x6700;&#x5927;&#x4E3A;200*1024&#xFF09;&#xFF0C;&#x4F8B;&#x5982;&#x5199;CLI&#x7684;&#x65F6;&#x5019;</li>
-<li>fork&#xFF1A;&#x884D;&#x751F;&#x65B0;&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x8FDB;&#x7A0B;&#x4E4B;&#x95F4;&#x662F;&#x76F8;&#x4E92;&#x72EC;&#x7ACB;&#x7684;</li>
+<li>spawn：用于返回大量数据，例如图像处理、二进制，</li>
+<li>esxe：适用于小量数据，用Buffer（最大为200*1024），例如写CLI的时候</li>
+<li>fork：衍生新的进程，进程之间是相互独立的</li>
 </ul>
-<p>cluster&#x4E5F;&#x662F;</p>
+<p>cluster也是</p>
 <ul>
-<li>Worker&#x5BF9;&#x8C61;&#x5305;&#x542B;&#x4E86;&#x5173;&#x4E8E;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x7684;&#x6240;&#x6709;&#x7684;&#x516C;&#x5171;&#x7684;&#x4FE1;&#x606F;&#x548C;&#x65B9;&#x6CD5;</li>
-<li>fork&#x884D;&#x751F;&#x65B0;&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x8FDB;&#x7A0B;&#x4E4B;&#x95F4;&#x662F;&#x76F8;&#x4E92;&#x72EC;&#x7ACB;&#x7684;</li>
-<li>&#x4F7F;&#x7528;&#x4E3B;&#x4ECE;&#x6A21;&#x578B;&#x8F6E;&#x8BE2;&#x5904;&#x7406;&#x670D;&#x52A1;&#x7684;&#x8D1F;&#x8F7D;&#x4EFB;&#x52A1;&#xFF0C;&#x901A;&#x8FC7;IPC&#x901A;&#x4FE1;</li>
+<li>Worker对象包含了关于工作进程的所有的公共的信息和方法</li>
+<li>fork衍生新的进程，进程之间是相互独立的</li>
+<li>使用主从模型轮询处理服务的负载任务，通过IPC通信</li>
 </ul>
-<p>&#x8FDB;&#x7A0B;&#x5B88;&#x62A4;&#xFF1A;&#x8FDB;&#x7A0B;&#x6302;&#x4E86;&#xFF0C;&#x53EF;&#x4EE5;&#x91CD;&#x65B0;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x3002;</p>
-<p>&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#xFF1A;&#x8BE5;&#x6302;&#x5C31;&#x6302;&#xFF0C;&#x518D;&#x81EA;&#x542F;&#x52A8;&#x5C31;&#x597D;&#x4E86;</p>
-<p>&#x4F7F;&#x7528;&#x5DE5;&#x5177;pm2&#x3001;forever</p>
-<p>&#x62D3;&#x5C55;</p>
-<p>node&#x7684;&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;<a href="https://blog.fundebug.com/2019/01/15/diffrences-of-browser-and-node-in-event-loop/" target="_blank">https://blog.fundebug.com/2019/01/15/diffrences-of-browser-and-node-in-event-loop/</a></p>
-<p>node&#x7684;&#x6A21;&#x5757;&#x673A;&#x5236;<a href="https://juejin.im/entry/5b4b5081e51d451984696cb7" target="_blank">https://juejin.im/entry/5b4b5081e51d451984696cb7</a></p>
-<p>node&#x7684;&#x8FDB;&#x7A0B;&#x4E0E;&#x7EBF;&#x7A0B;<a href="https://juejin.im/post/5d43017be51d4561f40adcf9" target="_blank">https://juejin.im/post/5d43017be51d4561f40adcf9</a></p>
+<p>进程守护：进程挂了，可以重新启动一个。</p>
+<p>最佳实践：该挂就挂，再自启动就好了</p>
+<p>使用工具pm2、forever</p>
+<p>拓展</p>
+<p>node的事件循环<a href="https://blog.fundebug.com/2019/01/15/diffrences-of-browser-and-node-in-event-loop/" target="_blank">https://blog.fundebug.com/2019/01/15/diffrences-of-browser-and-node-in-event-loop/</a></p>
+<p>node的模块机制<a href="https://juejin.im/entry/5b4b5081e51d451984696cb7" target="_blank">https://juejin.im/entry/5b4b5081e51d451984696cb7</a></p>
+<p>node的进程与线程<a href="https://juejin.im/post/5d43017be51d4561f40adcf9" target="_blank">https://juejin.im/post/5d43017be51d4561f40adcf9</a></p>
 <p><a href="http://nodejs.cn/" target="_blank">http://nodejs.cn/</a></p>
-<h2 id="&#x5B9E;&#x8DF5;&#x5185;&#x5BB9;">&#x5B9E;&#x8DF5;&#x5185;&#x5BB9;</h2>
-<p>&#x4F7F;&#x7528;Express&#x7F16;&#x5199;Restful API</p>
-<p>&#x7F16;&#x5199; Web Server &#x6D4B;&#x8BD5;</p>
-<p>Web&#x670D;&#x52A1;&#x53CA;Koa&#x6E90;&#x7801;&#x5206;&#x6790;</p>
-<p>&#x4F7F;&#x7528;Egg&#x7F16;&#x5199;&#x4F01;&#x4E1A;&#x9879;&#x76EE;</p>
-<h3 id="web-server&#x5B9E;&#x6218;">Web Server&#x5B9E;&#x6218;</h3>
-<p>Web Server&#x7684;&#x6784;&#x6210;&#xFF1A;</p>
+<h2 id="实践内容">实践内容</h2>
+<p>使用Express编写Restful API</p>
+<p>编写 Web Server 测试</p>
+<p>Web服务及Koa源码分析</p>
+<p>使用Egg编写企业项目</p>
+<h3 id="web-server实战">Web Server实战</h3>
+<p>Web Server的构成：</p>
 <ul>
-<li>&#x5904;&#x7406;HTTP&#xFF1A;&#x5BF9;HTTP&#x7684;&#x8BF7;&#x6C42;&#x8FDB;&#x884C;&#x54CD;&#x5E94;</li>
-<li>&#x8DEF;&#x7531;&#x7BA1;&#x7406;&#xFF1A;&#x5206;&#x522B;&#x5904;&#x7406;&#x4E0D;&#x540C;URL&#x8DEF;&#x5F84;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x8FD4;&#x56DE;&#x5BF9;&#x5E94;&#x7684;&#x7F51;&#x7EDC;&#x8D44;&#x6E90;</li>
-<li>&#x9759;&#x6001;&#x6587;&#x4EF6;&#x6258;&#x7BA1;&#xFF1A;&#x5BF9;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x7684;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x8FDB;&#x884C;&#x54CD;&#x5E94;&#x6216;&#x4F7F;&#x7528;&#x6A21;&#x7248;&#x52A8;&#x6001;&#x54CD;&#x5E94;&#x8BF7;&#x6C42;</li>
-<li>&#x6587;&#x4EF6;&#x6570;&#x636E;&#x5B58;&#x50A8;&#xFF1A;&#x5C06;&#x8BF7;&#x6C42;&#x643A;&#x5E26;&#x7684;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5230;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x6570;&#x636E;&#x5E93;&#x4E2D;</li>
+<li>处理HTTP：对HTTP的请求进行响应</li>
+<li>路由管理：分别处理不同URL路径的请求，返回对应的网络资源</li>
+<li>静态文件托管：对网络请求的静态资源进行响应或使用模版动态响应请求</li>
+<li>文件数据存储：将请求携带的数据存储到文件或者数据库中</li>
 </ul>
-<p>&#x57FA;&#x672C;&#x67B6;&#x6784;&#xFF1A;</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/webserver&#x7684;&#x67B6;&#x6784;.png" alt="webserver&#x67B6;&#x6784;"></p>
-<p> &#x4F18;&#x52BF;&#xFF1A;</p>
+<p>基本架构：</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/webserver的架构.png" alt="webserver架构"></p>
+<p> 优势：</p>
 <ul>
-<li>&#x5E76;&#x53D1;&#x6027;&#x80FD;&#x4F18;&#x52BF;</li>
-<li>Javascript&#x540C;&#x6784;</li>
-<li>&#x751F;&#x6001;&#x6D3B;&#x8DC3;&#x5B8C;&#x5584;</li>
-<li>&#x4EE3;&#x7801;&#x79FB;&#x690D;&#x6027;&#x597D;</li>
-<li>&#x6846;&#x67B6;&#x9AD8;&#x5EA6;&#x5305;&#x5BB9;</li>
-<li>&#x793E;&#x533A;&#x6C1B;&#x56F4;&#x53CB;&#x597D;</li>
+<li>并发性能优势</li>
+<li>Javascript同构</li>
+<li>生态活跃完善</li>
+<li>代码移植性好</li>
+<li>框架高度包容</li>
+<li>社区氛围友好</li>
 </ul>
 <h2 id="express">Express</h2>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/express&#x7684;&#x80FD;&#x529B;.png" alt="&#x80FD;&#x529B;"></p>
-<p>express&#x7684;&#x5F3A;&#x5927;&#x4E4B;&#x5904;&#x5728;&#x4E8E;&#x4E2D;&#x95F4;&#x4EF6;&#x3002;</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/&#x4E2D;&#x95F4;&#x4EF6;&#x7684;&#x4F4D;&#x7F6E;.png" alt="&#x4E2D;&#x95F4;&#x4EF6;"></p>
-<p>&#x7F16;&#x5199;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;<code>app.get(&apos;&apos;,()=&gt;{})</code>&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;&#x3002;</p>
-<p>&#x8DEF;&#x7531;&#x673A;&#x5236;</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/express的能力.png" alt="能力"></p>
+<p>express的强大之处在于中间件。</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/中间件的位置.png" alt="中间件"></p>
+<p>编写中间件，<code>app.get(&apos;&apos;,()=&gt;{})</code>就是一个中间件。</p>
+<p>路由机制</p>
 <ul>
-<li><p>&#x8DEF;&#x7531;&#x5C31;&#x662F;&#x5C06;HTTP&#x52A8;&#x8BCD;&#x3001;URL&#x8DEF;&#x5F84;&#x3001;&#x6A21;&#x5F0F;&#x548C;&#x5904;&#x7406;&#x51FD;&#x6570;&#x4E09;&#x6298;&#x5173;&#x8054;&#x8D77;&#x6765;</p>
+<li><p>路由就是将HTTP动词、URL路径、模式和处理函数三折关联起来</p>
 </li>
-<li><p>EXpress&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x8981;&#x4ECE;&#x8DEF;&#x7531;&#x8BBE;&#x8BA1;&#x5165;&#x624B;&#xFF0C;&#x5C06;&#x670D;&#x52A1;&#x7684;&#x80FD;&#x529B;&#x63CF;&#x8FF0;&#x51FA;&#x6765;</p>
+<li><p>EXpress的应用程序要从路由设计入手，将服务的能力描述出来</p>
 </li>
-<li><p>&#x8FD8;&#x523B;&#x6709;&#x4F7F;&#x7528;ROuter&#x4E2D;&#x95F4;&#x4EF6;</p>
+<li><p>还刻有使用ROuter中间件</p>
 </li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/&#x8DEF;&#x7531;&#x903B;&#x8F91;.png" alt="&#x8DEF;&#x7531;&#x903B;&#x8F91;"></p>
-<p>&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#xFF08;&#x9700;&#x8981;&#x9075;&#x5FAA;&#x7684;&#xFF09;</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/路由逻辑.png" alt="路由逻辑"></p>
+<p>最佳实践（需要遵循的）</p>
 <ul>
-<li><p>&#x4F7F;&#x7528;&#x4E2D;&#x95F4;&#x4EF6;&#x538B;&#x7F29;&#x54CD;&#x5E94;&#x6570;&#x636E;&#xFF0C;&#x5728;&#x53CD;&#x5411;&#x4EE3;&#x7406;&#x5C42;&#x505A;</p>
+<li><p>使用中间件压缩响应数据，在反向代理层做</p>
 </li>
-<li><p>&#x907F;&#x514D;&#x5728;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x5904;&#x7406;&#x4E2D;&#x4F7F;&#x7528;&#x540C;&#x6B65;&#x963B;&#x585E;&#x64CD;&#x4F5C;</p>
+<li><p>避免在业务逻辑处理中使用同步阻塞操作</p>
 </li>
-<li><p>&#x5F15;&#x5165;&#x5B8C;&#x5584;&#x7684;&#x57FA;&#x5EFA;&#x4FDD;&#x969C;&#xFF0C;&#x8BB0;&#x5F55;&#x65E5;&#x5FD7;&#xFF0C;&#x5904;&#x7406;&#x5F02;&#x5E38;</p>
+<li><p>引入完善的基建保障，记录日志，处理异常</p>
 </li>
-<li><p>&#x9700;&#x8981;&#x91CD;&#x542F;&#x7684;&#x65F6;&#x5019;&#x7ACB;&#x523B;&#x91CD;&#x542F;&#xFF0C;&#x4FDD;&#x8BC1;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x91CD;&#x542F;</p>
+<li><p>需要重启的时候立刻重启，保证可以自动重启</p>
 </li>
 </ul>
-<h3 id="&#x90AE;&#x4EF6;&#x5B9E;&#x8DF5;">&#x90AE;&#x4EF6;&#x5B9E;&#x8DF5;</h3>
-<p>&#x6574;&#x4F53;&#x6D41;&#x7A0B;</p>
+<h3 id="邮件实践">邮件实践</h3>
+<p>整体流程</p>
 <p><img src="../Users/jasonk0/Library/Application Support/typora-user-images/image-20220421112219940.png" alt="image-20220421112219940"></p>
-<p>&#x529F;&#x80FD;&#x8BBE;&#x8BA1;</p>
+<p>功能设计</p>
 <p><img src="../Users/jasonk0/Library/Application Support/typora-user-images/image-20220421112253282.png" alt="image-20220421112253282"></p>
 <h3 id="restful-api">RESTful API</h3>
-<p>&#x57FA;&#x4E8E;REST&#x67B6;&#x6784;&#x7684;Web server &#x5C31;&#x79F0;&#x4E3A;RESTful</p>
-<p>&#x7279;&#x70B9;&#xFF1A; </p>
+<p>基于REST架构的Web server 就称为RESTful</p>
+<p>特点： </p>
 <ul>
-<li>URI&#x8D44;&#x6E90;&#x5B9A;&#x4F4D;&#xFF0C;REST&#x662F;&#x9762;&#x5411;&#x8D44;&#x6E90;&#x7684;</li>
-<li>&#x94FE;&#x63A5;&#x8D44;&#x6E90;&#x72B6;&#x6001;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x751F;&#x6210;&#x5305;&#x542B;&#x72B6;&#x6001;&#x8F6C;&#x79FB;&#x7684;&#x8868;&#x5F81;&#x6570;&#x636E;&#xFF0C;&#x6765;&#x54CD;&#x5E94;&#x8BF7;&#x6C42;</li>
-<li>&#x4F7F;&#x7528;HTTP&#x5DF2;&#x6709;&#x7279;&#x5F81;&#xFF0C;&#x52A8;&#x8BCD;&#x3001;&#x72B6;&#x6001;&#x5417;&#x3001;&#x5934;&#x90E8;&#x4FE1;&#x606F;</li>
-<li>&#x7EDF;&#x4E00;&#x8D44;&#x6E90;&#x89C4;&#x8303;&#xFF0C;</li>
+<li>URI资源定位，REST是面向资源的</li>
+<li>链接资源状态，服务器生成包含状态转移的表征数据，来响应请求</li>
+<li>使用HTTP已有特征，动词、状态吗、头部信息</li>
+<li>统一资源规范，</li>
 </ul>
-<p>&#x63A5;&#x53E3;&#x8BBE;&#x8BA1;</p>
+<p>接口设计</p>
 <p><img src="../Users/jasonk0/Library/Application Support/typora-user-images/image-20220421155212335.png" alt="image-20220421155212335"></p>
-<p>&#x53D6;&#x5217;&#x8868;</p>
-<p>&#x53D6;&#x67D0;&#x4E00;&#x6761;&#x6570;&#x636E;</p>
-<p>&#x65B0;&#x589E;&#x4E00;&#x4E2A;&#x6A21;&#x7248;</p>
-<p>&#x66F4;&#x65B0;&#x6307;&#x5B9A;&#x7684;&#x6A21;&#x7248;</p>
-<p>&#x5220;&#x9664;&#x6307;&#x5B9A;&#x6A21;&#x7248;</p>
-<p>&#x6570;&#x636E;&#x5E93;&#x8BBE;&#x8BA1;&#xFF1A;</p>
-<p>REST&#x7684;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#xFF1A;</p>
+<p>取列表</p>
+<p>取某一条数据</p>
+<p>新增一个模版</p>
+<p>更新指定的模版</p>
+<p>删除指定模版</p>
+<p>数据库设计：</p>
+<p>REST的最佳实践：</p>
 <ul>
-<li>&#x5145;&#x5206;&#x7406;&#x89E3;&#x5E76;&#x4F7F;&#x7528;HTTP&#x8BF7;&#x6C42;</li>
-<li>&#x4F7F;&#x7528;API&#x6D4B;&#x8BD5;&#x5DE5;&#x5177;&#x800C;&#x975E;&#x6D4F;&#x89C8;&#x5668;&#x6D4B;&#x8BD5;&#x63A5;&#x53E3;</li>
-<li>&#x5408;&#x9002;&#x7684;&#x6587;&#x6863;&#x751F;&#x6210;&#x5DE5;&#x5177;&#xFF0C;&#x8F93;&#x51FA;API&#x6587;&#x6863;</li>
-<li>REST&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x89C4;&#x8303;&#xFF0C;&#x9002;&#x5408;&#x7684;&#x624D;&#x662F;&#x6700;&#x597D;&#x7684;</li>
-<li>&#x627E;&#x4E00;&#x4E2A;&#x597D;&#x7684;&#x6846;&#x67B6;&#x80DC;&#x8FC7;&#x81EA;&#x5DF1;&#x9020;&#x8F6E;&#x5B50;GraphQ</li>
+<li>充分理解并使用HTTP请求</li>
+<li>使用API测试工具而非浏览器测试接口</li>
+<li>合适的文档生成工具，输出API文档</li>
+<li>REST只是一个规范，适合的才是最好的</li>
+<li>找一个好的框架胜过自己造轮子GraphQ</li>
 </ul>
-<h3 id="web-server&#x7684;&#x6D4B;&#x8BD5;">Web Server&#x7684;&#x6D4B;&#x8BD5;</h3>
-<p>&#x6D4B;&#x8BD5;&#x9700;&#x8981;&#x77E5;&#x9053;&#x7684;&#xFF1A;</p>
-<p>&#x7F16;&#x5199;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x7684;&#x65F6;&#x95F4;&#x8FDC;&#x6BD4;&#x7F16;&#x5199;&#x5927;&#x5988;&#x65F6;&#x95F4;&#x8981;&#x957F;</p>
-<p>&#x66F4;&#x591A;&#x7684;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x4EE3;&#x8868;&#x7740;&#x66F4;&#x591A;bug&#x51FA;&#x73B0;&#x6982;&#x7387;</p>
-<p>&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#x7684;&#x7EC4;&#x7EC7;&#x548C;&#x7EF4;&#x62A4;&#x7F3A;&#x4E4F;&#x5DE5;&#x5177;&#x6846;&#x67B6;&#xFF0C;&#x9700;&#x8981;&#x624B;&#x52A8;&#x7F16;&#x5199;</p>
-<p>&#x57FA;&#x4E8E;&#x6D4B;&#x8BD5;&#x7684;&#x601D;&#x8DEF;&#x5BB9;&#x6613;&#x8D70;&#x5411;&#x7CFB;&#x7EDF;&#x7684;&#x56FD;&#x5EA6;&#x8BBE;&#x8BA1;&#xFF0C;&#x5173;&#x6CE8;&#x70B9;&#x8131;&#x79BB;&#x4E3B;&#x6D41;</p>
-<p>&#x6D4B;&#x8BD5;&#x7684;&#x539F;&#x56E0;&#xFF1A;</p>
-<p>&#x6D4B;&#x8BD5;&#x7684;&#x4EF7;&#x503C;&#x6BCB;&#x5EB8;&#x7F6E;&#x7591;&#xFF0C;&#x4F46;&#x8981;&#x5212;&#x6E05;&#x754C;&#x9650;&#xFF0C;&#x90A3;&#x4E9B;&#x9700;&#x8981;&#x6D4B;&#x8BD5;</p>
-<p>TDD&#x53EA;&#x9002;&#x5408;&#x79CD;&#x72D7;&#x81EA;&#x5DF1;&#x4EE3;&#x7801;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x4E0D;&#x8981;&#x76F2;&#x76EE;&#x5C1D;&#x8BD5;</p>
-<p>&#x4E0D;&#x8981;&#x7740;&#x6025;&#x5B9E;&#x73B0;&#x6D4B;&#x8BD5;&#x7EC6;&#x8282;&#xFF0C;&#x53EA;&#x5173;&#x6CE8;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#xFF0C;&#x5148;&#x5F00;&#x59CB;&#x8F7B;&#x91CF;&#x6D4B;&#x8BD5; </p>
-<p>&#x6311;&#x9009;&#x9002;&#x5408;&#x7684;&#x6D4B;&#x8BD5;&#x6846;&#x67B6;&#xFF0C;&#x907F;&#x514D;&#x505A;&#x65E0;&#x610F;&#x4E49;&#x7684;&#x201C;&#x7F16;&#x7A0B;&#x5361;&#x987F;&#x201D;</p>
-<h4 id="&#x6700;&#x4F73;&#x5B9E;&#x8DF5;first&#x539F;&#x5219;">&#x6700;&#x4F73;&#x5B9E;&#x8DF5;FIRST&#x539F;&#x5219;</h4>
-<p>Fast &#x5FEB;&#x901F;&#x6267;&#x884C;</p>
-<p>Independent &#x4E0D;&#x4F9D;&#x8D56;&#x73AF;&#x5883;&#x548C;&#x987A;&#x5E8F;&#xFF0C;&#x6709;&#x81EA;&#x5DF1;&#x7684;3A&#x73AF;&#x8282;</p>
-<p>Repeatable &#x4E00;&#x6B21;&#x6267;&#x884C;&#x548C;&#x591A;&#x6B21;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x76F8;&#x540C;</p>
-<p>Self-Valid &#x6D4B;&#x8BD5;&#x8981;&#x7ED9;&#x662F;&#x5426;&#x901A;&#x8FC7;&#xFF0C;&#x68C0;&#x9A8C;&#x7ED3;&#x679C;</p>
-<p>Through &#x5C3D;&#x91CF;&#x8986;&#x76D6;&#x6240;&#x6709;&#x5E94;&#x7528;&#x573A;&#x666F;</p>
-<h4 id="rest&#x63A5;&#x53E3;&#x7684;&#x6D4B;&#x8BD5;">REST&#x63A5;&#x53E3;&#x7684;&#x6D4B;&#x8BD5;</h4>
-<p>mocha&#x6846;&#x67B6;&#xFF0C;&#x540C;&#x7C7B;&#x8FD8;&#x6709;ava&#x3001;jasmine&#x3001;tap</p>
-<p>&#x4F7F;&#x7528;supertest&#x505A;&#x5BA2;&#x6237;&#x7AEF;&#x4EE3;&#x7406;&#xFF0C;&#x5411;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x8BF7;&#x6C42;</p>
-<p>chai&#x65AD;&#x8A00;&#x5E93;&#xFF0C;&#x914D;&#x5408;mocha&#x7F16;&#x5199;&#x5355;&#x6D4B;</p>
-<p>&#x5728;&#x94A9;&#x5B50;&#x4E2D;&#x521D;&#x59CB;&#x5316;&#x670D;&#x52A1;&#x5668;&#x73AF;&#x5883;&#xFF0C;&#x79CD;&#x690D;&#x6570;&#x636E;&#x5E93;&#x6570;&#x636E;&#xFF0C;&#x5904;&#x7406;&#x6389;require&#x6DF7;&#x5B58;</p>
-<h4 id="&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#x548C;&#x538B;&#x529B;&#x6D4B;&#x8BD5;">&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;&#x548C;&#x538B;&#x529B;&#x6D4B;&#x8BD5;</h4>
-<p>&#x4F7F;&#x7528;benchmark &#x5BF9;&#x6838;&#x5FC3;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x57FA;&#x51C6;&#x6D4B;&#x8BD5;</p>
-<p>&#x6839;&#x636E;&#x670D;&#x52A1;&#x4E1A;&#x52A1;&#x573A;&#x666F;&#x548C;&#x7ECF;&#x9A8C;&#x4F30;&#x7B97;&#x4E1A;&#x52A1;&#x8BBF;&#x95EE;&#x91CF;PV</p>
-<p>&#x4F7F;&#x7528;ab&#x5BF9;&#x670D;&#x52A1;&#x7684;&#x541E;&#x5410;&#x91CF;&#x3001;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x3001;&#x5E76;&#x53D1;&#x6570;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x3002;</p>
-<h4 id="&#x9884;&#x4F30;&#x670D;&#x52A1;&#x6027;&#x80FD;&#x548C;&#x8D44;&#x6E90;">&#x9884;&#x4F30;&#x670D;&#x52A1;&#x6027;&#x80FD;&#x548C;&#x8D44;&#x6E90;</h4>
+<h3 id="web-server的测试">Web Server的测试</h3>
+<p>测试需要知道的：</p>
+<p>编写测试代码的时间远比编写大妈时间要长</p>
+<p>更多的测试代码代表着更多bug出现概率</p>
+<p>测试代码的组织和维护缺乏工具框架，需要手动编写</p>
+<p>基于测试的思路容易走向系统的国度设计，关注点脱离主流</p>
+<p>测试的原因：</p>
+<p>测试的价值毋庸置疑，但要划清界限，那些需要测试</p>
+<p>TDD只适合种狗自己代码的场景，不要盲目尝试</p>
+<p>不要着急实现测试细节，只关注输入输出，先开始轻量测试 </p>
+<p>挑选适合的测试框架，避免做无意义的“编程卡顿”</p>
+<h4 id="最佳实践first原则">最佳实践FIRST原则</h4>
+<p>Fast 快速执行</p>
+<p>Independent 不依赖环境和顺序，有自己的3A环节</p>
+<p>Repeatable 一次执行和多次执行结果相同</p>
+<p>Self-Valid 测试要给是否通过，检验结果</p>
+<p>Through 尽量覆盖所有应用场景</p>
+<h4 id="rest接口的测试">REST接口的测试</h4>
+<p>mocha框架，同类还有ava、jasmine、tap</p>
+<p>使用supertest做客户端代理，向服务器发请求</p>
+<p>chai断言库，配合mocha编写单测</p>
+<p>在钩子中初始化服务器环境，种植数据库数据，处理掉require混存</p>
+<h4 id="基准测试和压力测试">基准测试和压力测试</h4>
+<p>使用benchmark 对核心代码进行基准测试</p>
+<p>根据服务业务场景和经验估算业务访问量PV</p>
+<p>使用ab对服务的吞吐量、响应时间、并发数进行测试。</p>
+<h4 id="预估服务性能和资源">预估服务性能和资源</h4>
 <p><img src="../Users/jasonk0/Library/Application Support/typora-user-images/image-20220516113905129.png" alt="image-20220516113905129"></p>
 <ul>
-<li>&#x5355;&#x673A;QPS = &#x603B;&#x8BF7;&#x6C42;&#x6570; / &#xFF08;&#x8FDB;&#x7A0B;&#x603B;&#x6570; * &#x8BF7;&#x6C42;&#x65F6;&#x95F4;&#xFF09;&#xFF0C;&#x4ECE;&#x538B;&#x6D4B;&#x5F97;&#x5230;</li>
-<li>&#x5CF0;&#x503C;&#x65F6;&#x95F4;QPS = &#xFF08;&#x603B;PV&#x6570; <em> 80%&#xFF09;/&#xFF08;&#x6BCF;&#x5929;&#x79D2;&#x6570; </em> 20%&#xFF09; = pv(w) / 2.16</li>
-<li>&#x5355;&#x53F0;&#x673A;&#x5668;&#x603B;PV = QPS <em> 3600 </em> 8</li>
-<li>&#x9700;&#x8981;&#x7684;&#x673A;&#x5668; = &#x5CF0;&#x503C;&#x65F6;&#x95F4;QPS / &#x5355;&#x673A;QPS</li>
+<li>单机QPS = 总请求数 / （进程总数 * 请求时间），从压测得到</li>
+<li>峰值时间QPS = （总PV数 <em> 80%）/（每天秒数 </em> 20%） = pv(w) / 2.16</li>
+<li>单台机器总PV = QPS <em> 3600 </em> 8</li>
+<li>需要的机器 = 峰值时间QPS / 单机QPS</li>
 </ul>
 
                                 
@@ -1039,12 +1051,56 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"node基础","level":"1.4.5","depth":2,"next":{"title":"node的web框架koa","level":"1.4.6","depth":2,"path":"node/node的web框架koa.md","ref":"node/node的web框架koa.md","articles":[]},"previous":{"title":"node与mongDB","level":"1.4.4","depth":2,"path":"node/node与mongDB.md","ref":"node/node与mongDB.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","disableTitleFormatting":true,"variables":{},"title":"json-config-name","gitbook":"*","outputfile":"SUMMARY.md"},"file":{"path":"node/node基础.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-21T01:19:27.690Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"node基础","level":"1.4.5","depth":2,"next":{"title":"node的web框架koa","level":"1.4.6","depth":2,"path":"node/node的web框架koa.md","ref":"node/node的web框架koa.md","articles":[]},"previous":{"title":"node与mongDB","level":"1.4.4","depth":2,"path":"node/node与mongDB.md","ref":"node/node与mongDB.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"node/node基础.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-21T09:39:03.214Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -1062,10 +1118,6 @@
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

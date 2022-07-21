@@ -3,11 +3,10 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>node_03 · json-config-name</title>
+        <title>node_03 · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="HonKit 3.7.5">
         
         
         
@@ -17,7 +16,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
                 
             
                 
@@ -66,7 +65,7 @@
     </head>
     <body>
         
-<div class="book">
+<div class="book honkit-cloak">
     <div class="book-summary">
         
             
@@ -116,9 +115,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="../Angular/Angular学习笔记.md">
+        <li class="chapter " data-level="1.2.1" data-path="../Angular/Angular学习笔记.html">
             
-                <span>
+                <a href="../Angular/Angular学习笔记.html">
             
                     
                     Angular学习笔记
@@ -458,6 +457,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.7.3" data-path="../杂篇/踩坑日记.html">
+            
+                <a href="../杂篇/踩坑日记.html">
+            
+                    
+                    踩坑日记
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -527,8 +539,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
         </a>
     </li>
 </ul>
@@ -566,63 +578,63 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h4 id="&#x4E2D;&#x95F4;&#x4EF6;express--session">&#x4E2D;&#x95F4;&#x4EF6;express- session</h4>
-<p>1&#x3001;&#x914D;&#x7F6E;express-session</p>
+                                <h4 id="中间件express--session">中间件express- session</h4>
+<p>1、配置express-session</p>
 <pre><code class="lang-javascript">app.use(session({
-  secret: <span class="hljs-string">&apos;keyboard cat&apos;</span>, <span class="hljs-comment">// &#x670D;&#x52A1;&#x7AEF;&#x751F;&#x6210;&#x7684;session&#x7B7E;&#x540D;</span>
-  resave: <span class="hljs-literal">false</span>, <span class="hljs-comment">// &#x5F3A;&#x5236;&#x91CD;&#x65B0;&#x4FDD;&#x5B58;session&#xFF0C;&#x5373;&#x4F7F;&#x5B83;&#x5E76;&#x6CA1;&#x6709;&#x53D8;&#x5316;</span>
-  saveUninitialized: <span class="hljs-literal">true</span>, <span class="hljs-comment">// &#x5F3A;&#x5236;&#x5C06;&#x672A;&#x521D;&#x59CB;&#x5316;&#x7684;session&#x5B58;&#x50A8;</span>
-  rolling: <span class="hljs-literal">true</span>, <span class="hljs-comment">// &#x5728;&#x672A;&#x8FC7;&#x671F;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x5C06;&#x91CD;&#x7F6E;session&#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;</span>
-  cookie: { maxAge: <span class="hljs-number">1000</span> * <span class="hljs-number">60</span>, secure: <span class="hljs-literal">false</span> },
+  <span class="hljs-attr">secret</span>: <span class="hljs-string">&apos;keyboard cat&apos;</span>, <span class="hljs-comment">// 服务端生成的session签名</span>
+  <span class="hljs-attr">resave</span>: <span class="hljs-literal">false</span>, <span class="hljs-comment">// 强制重新保存session，即使它并没有变化</span>
+  <span class="hljs-attr">saveUninitialized</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// 强制将未初始化的session存储</span>
+  <span class="hljs-attr">rolling</span>: <span class="hljs-literal">true</span>, <span class="hljs-comment">// 在未过期时，发送请求将重置session的过期时间</span>
+  <span class="hljs-attr">cookie</span>: { <span class="hljs-attr">maxAge</span>: <span class="hljs-number">1000</span> * <span class="hljs-number">60</span>, <span class="hljs-attr">secure</span>: <span class="hljs-literal">false</span> },
 }))
 </code></pre>
-<p>2&#x3001;&#x8BBE;&#x7F6E;&#x548C;&#x83B7;&#x53D6;session</p>
-<p>&#x8BBE;&#x7F6E;&#x4E86;username&#x4E3A;zhangsan&#xFF0C;&#x5728;&#x56DE;&#x5230;&#x9996;&#x9875;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x8BFB;&#x53D6;&#x5230;session</p>
-<pre><code class="lang-javascript">app.get(<span class="hljs-string">&apos;/&apos;</span>, (req, res) =&gt; {
+<p>2、设置和获取session</p>
+<p>设置了username为zhangsan，在回到首页后就可以读取到session</p>
+<pre><code class="lang-javascript">app.get(<span class="hljs-string">&apos;/&apos;</span>, <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> {
   <span class="hljs-keyword">if</span> (req.session.username) {
-    res.send(req.session.username + <span class="hljs-string">&apos;&#x5DF2;&#x767B;&#x9646;&apos;</span>)
+    res.send(req.session.username + <span class="hljs-string">&apos;已登陆&apos;</span>)
   } <span class="hljs-keyword">else</span> {
-    res.send(<span class="hljs-string">&apos;&#x8BF7;&#x5148;&#x767B;&#x5F55;&apos;</span>)
+    res.send(<span class="hljs-string">&apos;请先登录&apos;</span>)
   }
 })
-app.get(<span class="hljs-string">&apos;/login&apos;</span>, (req, res) =&gt; {
+app.get(<span class="hljs-string">&apos;/login&apos;</span>, <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> {
   req.session.username = <span class="hljs-string">&apos;zhangsan&apos;</span>
   res.send(<span class="hljs-string">&apos;denglu&apos;</span>)
 })
 </code></pre>
-<p>3&#x3001;&#x9500;&#x6BC1;session</p>
-<p>&#x4E09;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x5728;&#x8FDB;&#x5165;&#x6B64;&#x9875;&#x9762;&#x5C31;&#x6267;&#x884C;&#x9500;&#x6BC1;session&#xFF0C;&#x56DE;&#x5230;&#x9996;&#x9875;&#x65F6;&#x5C06;&#x65E0;&#x6CD5;&#x8BFB;&#x53D6;session</p>
-<pre><code class="lang-javascript">app.get(<span class="hljs-string">&apos;/loginOut&apos;</span>, (req, res) =&gt; {
-  <span class="hljs-comment">// 1&#x3001;&#x5C06;cookie&#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x8BBE;&#x4E3A;0&#x3002; &#x5C06;&#x9500;&#x6BC1;&#x6240;&#x6709;&#x7684;session</span>
+<p>3、销毁session</p>
+<p>三种方法，在进入此页面就执行销毁session，回到首页时将无法读取session</p>
+<pre><code class="lang-javascript">app.get(<span class="hljs-string">&apos;/loginOut&apos;</span>, <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> {
+  <span class="hljs-comment">// 1、将cookie的过期时间设为0。 将销毁所有的session</span>
   req.session.cookie.maxAge = <span class="hljs-number">0</span> 
-  <span class="hljs-comment">// 2&#x3001;&#x5C06;session&#x8BBE;&#x4E3A;&#x7A7A;</span>
+  <span class="hljs-comment">// 2、将session设为空</span>
   req.session.username = <span class="hljs-string">&apos;&apos;</span>
-  <span class="hljs-comment">// 3&#x3001; destroy&#x65B9;&#x6CD5;&#xFF0C;&#x9500;&#x6BC1;session</span>
+  <span class="hljs-comment">// 3、 destroy方法，销毁session</span>
   req.session.destroy()
-  res.send(<span class="hljs-string">&apos;&#x9000;&#x51FA;&#x767B;&#x5F55;&apos;</span>)
+  res.send(<span class="hljs-string">&apos;退出登录&apos;</span>)
 })
 </code></pre>
-<h4 id="&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;&#xFF0C;&#x591A;&#x670D;&#x52A1;&#x5668;&#x5171;&#x4EAB;session">&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;&#xFF0C;&#x591A;&#x670D;&#x52A1;&#x5668;&#x5171;&#x4EAB;session</h4>
-<p>&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;&#x4E0D;&#x540C;&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x95F4;&#x5171;&#x4EAB;session&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5C06;session&#x4FDD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;&#xFF08;mongoDB&#x3001;redis&#x3001;MySql&#xFF09;&#x4E2D;&#x5373;&#x53EF;</p>
+<h4 id="分布式系统，多服务器共享session">分布式系统，多服务器共享session</h4>
+<p>问题描述：不同服务器之间共享session，只需要将session保存到数据库（mongoDB、redis、MySql）中即可</p>
 <pre><code class="lang-mermaid">graph LR
 
-nginx --&gt; A[&#x670D;&#x52A1;&#x5668;A]
-nginx --&gt; B[&#x670D;&#x52A1;&#x5668;B]
-nginx --&gt; C[&#x670D;&#x52A1;&#x5668;C]
-A --&#x4FDD;&#x5B58;session1--&gt; D[mongodb&#x6570;&#x636E;&#x5E93;]
-B --&#x5171;&#x4EAB;session1--&gt; D
-C --&#x5171;&#x4EAB;session1--&gt; D
+nginx --&gt; A[服务器A]
+nginx --&gt; B[服务器B]
+nginx --&gt; C[服务器C]
+A --保存session1--&gt; D[mongodb数据库]
+B --共享session1--&gt; D
+C --共享session1--&gt; D
 </code></pre>
-<p>&#x5B89;&#x88C5;connet-mongo</p>
+<p>安装connet-mongo</p>
 <p><code>npm install connect-mongo</code></p>
-<p>&#x5F15;&#x5165;&#xFF0C;&#x6CE8;&#x610F;&#x9700;&#x8981;&#x5728;&#x5F15;&#x5165;session&#x8BED;&#x53E5;&#x7684;&#x4E0B;&#x8FB9;</p>
+<p>引入，注意需要在引入session语句的下边</p>
 <p><code>const MongoStore = require(&apos;connect-mongo&apos;)(session)</code></p>
-<p>&#x914D;&#x7F6E;</p>
+<p>配置</p>
 <pre><code class="lang-javascript">app.use(session({
-  ... <span class="hljs-comment">//&#x8FD9;&#x91CC;&#x53C2;&#x8003;&#x4E0A;&#x8FB9;&#x7684;session&#x914D;&#x7F6E;</span>
-  store: MongoStore.create({
-    mongoUrl: <span class="hljs-string">&apos;mongodb://user12345:foobar@localhost/test-app?authSource=admin&amp;w=1&apos;</span>, <span class="hljs-comment">// &#x6B64;&#x5904;&#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x7528;&#x6237;&#x540D;&#x53CA;&#x5BC6;&#x7801;</span>
-    touchAfter: <span class="hljs-number">24</span> * <span class="hljs-number">3600</span> <span class="hljs-comment">// &#x4E0D;&#x7BA1;&#x591A;&#x5C11;&#x6B21;&#x8BF7;&#x6C42;&#xFF0C;&#x5728;24&#x5C0F;&#x65F6;&#x5185;&#x53EA;&#x66F4;&#x65B0;&#x4E00;&#x6B21;session&#xFF0C;&#x9664;&#x975E;&#x66F4;&#x6539;session</span>
+  ... <span class="hljs-comment">//这里参考上边的session配置</span>
+  <span class="hljs-attr">store</span>: MongoStore.create({
+    <span class="hljs-attr">mongoUrl</span>: <span class="hljs-string">&apos;mongodb://user12345:foobar@localhost/test-app?authSource=admin&amp;w=1&apos;</span>, <span class="hljs-comment">// 此处配置数据库的地址，用户名及密码</span>
+    <span class="hljs-attr">touchAfter</span>: <span class="hljs-number">24</span> * <span class="hljs-number">3600</span> <span class="hljs-comment">// 不管多少次请求，在24小时内只更新一次session，除非更改session</span>
   }),
 }))
 </code></pre>
@@ -669,12 +681,56 @@ C --&#x5171;&#x4EAB;session1--&gt; D
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"node_03","level":"1.4.3","depth":2,"next":{"title":"node与mongDB","level":"1.4.4","depth":2,"path":"node/node与mongDB.md","ref":"node/node与mongDB.md","articles":[]},"previous":{"title":"node_02","level":"1.4.2","depth":2,"path":"node/node_02.md","ref":"node/node_02.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","disableTitleFormatting":true,"variables":{},"title":"json-config-name","gitbook":"*","outputfile":"SUMMARY.md"},"file":{"path":"node/node_03.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-21T01:19:27.690Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"node_03","level":"1.4.3","depth":2,"next":{"title":"node与mongDB","level":"1.4.4","depth":2,"path":"node/node与mongDB.md","ref":"node/node与mongDB.md","articles":[]},"previous":{"title":"node_02","level":"1.4.2","depth":2,"path":"node/node_02.md","ref":"node/node_02.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"node/node_03.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-21T09:39:03.214Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -692,10 +748,6 @@ C --&#x5171;&#x4EAB;session1--&gt; D
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         
