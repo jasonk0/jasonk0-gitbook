@@ -3,10 +3,11 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>Node 02 · HonKit</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Node 02 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.7.5">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -16,7 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
                 
@@ -56,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="node_03%20express.md" />
+    <link rel="next" href="node_03.html" />
     
     
     <link rel="prev" href="node_01.html" />
@@ -65,7 +66,7 @@
     </head>
     <body>
         
-<div class="book honkit-cloak">
+<div class="book">
     <div class="book-summary">
         
             
@@ -283,12 +284,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="node_03%20express.md">
+        <li class="chapter " data-level="1.4.3" data-path="node_03.html">
             
-                <span>
+                <a href="node_03.html">
             
                     
-                    Node 03 Express
+                    Node 03
             
                 </a>
             
@@ -494,8 +495,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
-            Published with HonKit
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
         </a>
     </li>
 </ul>
@@ -533,25 +534,25 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h4 id="ejs模板">EJS模板</h4>
-<p>后端渲染页面，返回给前端</p>
+                                <h4 id="ejs&#x6A21;&#x677F;">EJS&#x6A21;&#x677F;</h4>
+<p>&#x540E;&#x7AEF;&#x6E32;&#x67D3;&#x9875;&#x9762;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED9;&#x524D;&#x7AEF;</p>
 <h4 id="get">get</h4>
 <pre><code class="lang-javascript">req = http:<span class="hljs-comment">//127.0.0.1:3000/news?name=jasonk%page=2</span>
 query = url.parse(req).query
 <span class="hljs-comment">// { name: jasonk, page: 2 }</span>
 </code></pre>
-<p><strong>name=jasonk%page=2</strong>  即为get请求</p>
-<h4 id="封装express的路由部分">封装express的路由部分</h4>
+<p><strong>name=jasonk%page=2</strong>  &#x5373;&#x4E3A;get&#x8BF7;&#x6C42;</p>
+<h4 id="&#x5C01;&#x88C5;express&#x7684;&#x8DEF;&#x7531;&#x90E8;&#x5206;">&#x5C01;&#x88C5;express&#x7684;&#x8DEF;&#x7531;&#x90E8;&#x5206;</h4>
 <ul>
-<li><p>get方法</p>
+<li><p>get&#x65B9;&#x6CD5;</p>
 </li>
-<li><p>post方法</p>
+<li><p>post&#x65B9;&#x6CD5;</p>
 </li>
-<li><p>send方法</p>
+<li><p>send&#x65B9;&#x6CD5;</p>
 </li>
-<li><p>app方法</p>
+<li><p>app&#x65B9;&#x6CD5;</p>
 </li>
-<li><p>静态路径配置</p>
+<li><p>&#x9759;&#x6001;&#x8DEF;&#x5F84;&#x914D;&#x7F6E;</p>
 </li>
 </ul>
 
@@ -586,7 +587,7 @@ query = url.parse(req).query
                 </a>
                 
                 
-                <a href="node_03%20express.md" class="navigation navigation-next " aria-label="Next page: Node 03 Express">
+                <a href="node_03.html" class="navigation navigation-next " aria-label="Next page: Node 03">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -597,56 +598,12 @@ query = url.parse(req).query
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Node 02","level":"1.4.2","depth":2,"next":{"title":"Node 03 Express","level":"1.4.3","depth":2,"path":"node/node_03%20express.md","ref":"node/node_03%20express.md","articles":[]},"previous":{"title":"Node 01","level":"1.4.1","depth":2,"path":"node/node_01.md","ref":"node/node_01.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"node/node_02.md","mtime":"2022-07-20T02:55:44.866Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-20T03:36:12.980Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Node 02","level":"1.4.2","depth":2,"next":{"title":"Node 03","level":"1.4.3","depth":2,"path":"node/node_03.md","ref":"node/node_03.md","articles":[]},"previous":{"title":"Node 01","level":"1.4.1","depth":2,"path":"node/node_01.md","ref":"node/node_01.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"node/node_02.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-21T00:58:27.102Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
-    <noscript>
-        <style>
-            .honkit-cloak {
-                display: block !important;
-            }
-        </style>
-    </noscript>
-    <script>
-        // Restore sidebar state as critical path for prevent layout shift
-        function __init__getSidebarState(defaultValue){
-            var baseKey = "";
-            var key = baseKey + ":sidebar";
-            try {
-                var value = localStorage[key];
-                if (value === undefined) {
-                    return defaultValue;
-                }
-                var parsed = JSON.parse(value);
-                return parsed == null ? defaultValue : parsed;
-            } catch (e) {
-                return defaultValue;
-            }
-        }
-        function __init__restoreLastSidebarState() {
-            var isMobile = window.matchMedia("(max-width: 600px)").matches;
-            if (isMobile) {
-                // Init last state if not mobile
-                return;
-            }
-            var sidebarState = __init__getSidebarState(true);
-            var book = document.querySelector(".book");
-            // Show sidebar if it enabled
-            if (sidebarState && book) {
-                book.classList.add("without-animation", "with-summary");
-            }
-        }
-
-        try {
-            __init__restoreLastSidebarState();
-        } finally {
-            var book = document.querySelector(".book");
-            book.classList.remove("honkit-cloak");
-        }
-    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -664,6 +621,10 @@ query = url.parse(req).query
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

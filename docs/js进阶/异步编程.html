@@ -3,10 +3,11 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>异步编程 · HonKit</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>异步编程 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.7.5">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -16,7 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
                 
@@ -63,7 +64,7 @@
     </head>
     <body>
         
-<div class="book honkit-cloak">
+<div class="book">
     <div class="book-summary">
         
             
@@ -281,12 +282,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../node/node_03%20express.md">
+        <li class="chapter " data-level="1.4.3" data-path="../node/node_03.html">
             
-                <span>
+                <a href="../node/node_03.html">
             
                     
-                    Node 03 Express
+                    Node 03
             
                 </a>
             
@@ -492,8 +493,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
-            Published with HonKit
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
         </a>
     </li>
 </ul>
@@ -532,179 +533,179 @@
                                 <section class="normal markdown-section">
                                 
                                 <p>[TOC]</p>
-<h2 id="javascript进阶">javascript进阶</h2>
-<h3 id="异步编程">异步编程</h3>
-<h4 id="理解异步">理解异步</h4>
-<h5 id="同步函数：">同步函数：</h5>
-<p>当一个函数是同步执行时，那么当该函数被调用时不会立即返回，直到该函数所要做的事情全都做完了才返回。<strong>同步阻塞</strong></p>
-<p>处理机制：当一个线程调用一个同步函数时，如果该函数没有立即完成规定的操作，则该操作会导致该调用线程<strong>挂起</strong>（将CPU的使用权交给系统，让系统分配给其他线程使用），直到该同步函数规定的操作完成才返回，最终该调用线程才能被重新调度。</p>
-<h5 id="异步函数：">异步函数：</h5>
-<p>如果一个异步函数被调用时，该函数会立即返回，尽管该函数规定的操作任务还没有完成。<strong>异步非阻塞</strong></p>
-<p>处理机制：当一个线程调用一个同步函数时，该函数会立即返回<em>尽管其规定的任务还没有完成</em>，这样子线程就会执行异步函数的下一条语句，而不会被<strong>挂起阻塞</strong>。<em>该异步函数所规定的工作是由另外一个线程完成的</em>。</p>
-<h5 id="进程与线程">进程与线程</h5>
-<p> <strong>进程是 CPU资源分配的最小单位；线程是 CPU调度的最小单位</strong>。
-一个进程由一个或多个线程组成，线程是一个进程中代码的不同执行路线</p>
+<h2 id="javascript&#x8FDB;&#x9636;">javascript&#x8FDB;&#x9636;</h2>
+<h3 id="&#x5F02;&#x6B65;&#x7F16;&#x7A0B;">&#x5F02;&#x6B65;&#x7F16;&#x7A0B;</h3>
+<h4 id="&#x7406;&#x89E3;&#x5F02;&#x6B65;">&#x7406;&#x89E3;&#x5F02;&#x6B65;</h4>
+<h5 id="&#x540C;&#x6B65;&#x51FD;&#x6570;&#xFF1A;">&#x540C;&#x6B65;&#x51FD;&#x6570;&#xFF1A;</h5>
+<p>&#x5F53;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x662F;&#x540C;&#x6B65;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x90A3;&#x4E48;&#x5F53;&#x8BE5;&#x51FD;&#x6570;&#x88AB;&#x8C03;&#x7528;&#x65F6;&#x4E0D;&#x4F1A;&#x7ACB;&#x5373;&#x8FD4;&#x56DE;&#xFF0C;&#x76F4;&#x5230;&#x8BE5;&#x51FD;&#x6570;&#x6240;&#x8981;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#x5168;&#x90FD;&#x505A;&#x5B8C;&#x4E86;&#x624D;&#x8FD4;&#x56DE;&#x3002;<strong>&#x540C;&#x6B65;&#x963B;&#x585E;</strong></p>
+<p>&#x5904;&#x7406;&#x673A;&#x5236;&#xFF1A;&#x5F53;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x8C03;&#x7528;&#x4E00;&#x4E2A;&#x540C;&#x6B65;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x51FD;&#x6570;&#x6CA1;&#x6709;&#x7ACB;&#x5373;&#x5B8C;&#x6210;&#x89C4;&#x5B9A;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5219;&#x8BE5;&#x64CD;&#x4F5C;&#x4F1A;&#x5BFC;&#x81F4;&#x8BE5;&#x8C03;&#x7528;&#x7EBF;&#x7A0B;<strong>&#x6302;&#x8D77;</strong>&#xFF08;&#x5C06;CPU&#x7684;&#x4F7F;&#x7528;&#x6743;&#x4EA4;&#x7ED9;&#x7CFB;&#x7EDF;&#xFF0C;&#x8BA9;&#x7CFB;&#x7EDF;&#x5206;&#x914D;&#x7ED9;&#x5176;&#x4ED6;&#x7EBF;&#x7A0B;&#x4F7F;&#x7528;&#xFF09;&#xFF0C;&#x76F4;&#x5230;&#x8BE5;&#x540C;&#x6B65;&#x51FD;&#x6570;&#x89C4;&#x5B9A;&#x7684;&#x64CD;&#x4F5C;&#x5B8C;&#x6210;&#x624D;&#x8FD4;&#x56DE;&#xFF0C;&#x6700;&#x7EC8;&#x8BE5;&#x8C03;&#x7528;&#x7EBF;&#x7A0B;&#x624D;&#x80FD;&#x88AB;&#x91CD;&#x65B0;&#x8C03;&#x5EA6;&#x3002;</p>
+<h5 id="&#x5F02;&#x6B65;&#x51FD;&#x6570;&#xFF1A;">&#x5F02;&#x6B65;&#x51FD;&#x6570;&#xFF1A;</h5>
+<p>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x5F02;&#x6B65;&#x51FD;&#x6570;&#x88AB;&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x4F1A;&#x7ACB;&#x5373;&#x8FD4;&#x56DE;&#xFF0C;&#x5C3D;&#x7BA1;&#x8BE5;&#x51FD;&#x6570;&#x89C4;&#x5B9A;&#x7684;&#x64CD;&#x4F5C;&#x4EFB;&#x52A1;&#x8FD8;&#x6CA1;&#x6709;&#x5B8C;&#x6210;&#x3002;<strong>&#x5F02;&#x6B65;&#x975E;&#x963B;&#x585E;</strong></p>
+<p>&#x5904;&#x7406;&#x673A;&#x5236;&#xFF1A;&#x5F53;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x8C03;&#x7528;&#x4E00;&#x4E2A;&#x540C;&#x6B65;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x4F1A;&#x7ACB;&#x5373;&#x8FD4;&#x56DE;<em>&#x5C3D;&#x7BA1;&#x5176;&#x89C4;&#x5B9A;&#x7684;&#x4EFB;&#x52A1;&#x8FD8;&#x6CA1;&#x6709;&#x5B8C;&#x6210;</em>&#xFF0C;&#x8FD9;&#x6837;&#x5B50;&#x7EBF;&#x7A0B;&#x5C31;&#x4F1A;&#x6267;&#x884C;&#x5F02;&#x6B65;&#x51FD;&#x6570;&#x7684;&#x4E0B;&#x4E00;&#x6761;&#x8BED;&#x53E5;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x88AB;<strong>&#x6302;&#x8D77;&#x963B;&#x585E;</strong>&#x3002;<em>&#x8BE5;&#x5F02;&#x6B65;&#x51FD;&#x6570;&#x6240;&#x89C4;&#x5B9A;&#x7684;&#x5DE5;&#x4F5C;&#x662F;&#x7531;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x5B8C;&#x6210;&#x7684;</em>&#x3002;</p>
+<h5 id="&#x8FDB;&#x7A0B;&#x4E0E;&#x7EBF;&#x7A0B;">&#x8FDB;&#x7A0B;&#x4E0E;&#x7EBF;&#x7A0B;</h5>
+<p> <strong>&#x8FDB;&#x7A0B;&#x662F; CPU&#x8D44;&#x6E90;&#x5206;&#x914D;&#x7684;&#x6700;&#x5C0F;&#x5355;&#x4F4D;&#xFF1B;&#x7EBF;&#x7A0B;&#x662F; CPU&#x8C03;&#x5EA6;&#x7684;&#x6700;&#x5C0F;&#x5355;&#x4F4D;</strong>&#x3002;
+&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x7531;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x7EC4;&#x6210;&#xFF0C;&#x7EBF;&#x7A0B;&#x662F;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x4E2D;&#x4EE3;&#x7801;&#x7684;&#x4E0D;&#x540C;&#x6267;&#x884C;&#x8DEF;&#x7EBF;</p>
 <blockquote>
-<p>进程：一个程序的运行实例。cpu分配资源的最小单位。</p>
-<p>通过<strong>时间片调度算法</strong>来实现多进程进行，或者说<strong>并行执行</strong>（如听音乐的同时写文档）</p>
-<p>线程：cpu能够运算调度的最小单元。在进程中并行执行不同部分的任务。</p>
-<p>线程实际上是为了优化时间片调度机制中，时间片到期后进程之间切换的速度，所开拓出来的</p>
+<p>&#x8FDB;&#x7A0B;&#xFF1A;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x7684;&#x8FD0;&#x884C;&#x5B9E;&#x4F8B;&#x3002;cpu&#x5206;&#x914D;&#x8D44;&#x6E90;&#x7684;&#x6700;&#x5C0F;&#x5355;&#x4F4D;&#x3002;</p>
+<p>&#x901A;&#x8FC7;<strong>&#x65F6;&#x95F4;&#x7247;&#x8C03;&#x5EA6;&#x7B97;&#x6CD5;</strong>&#x6765;&#x5B9E;&#x73B0;&#x591A;&#x8FDB;&#x7A0B;&#x8FDB;&#x884C;&#xFF0C;&#x6216;&#x8005;&#x8BF4;<strong>&#x5E76;&#x884C;&#x6267;&#x884C;</strong>&#xFF08;&#x5982;&#x542C;&#x97F3;&#x4E50;&#x7684;&#x540C;&#x65F6;&#x5199;&#x6587;&#x6863;&#xFF09;</p>
+<p>&#x7EBF;&#x7A0B;&#xFF1A;cpu&#x80FD;&#x591F;&#x8FD0;&#x7B97;&#x8C03;&#x5EA6;&#x7684;&#x6700;&#x5C0F;&#x5355;&#x5143;&#x3002;&#x5728;&#x8FDB;&#x7A0B;&#x4E2D;&#x5E76;&#x884C;&#x6267;&#x884C;&#x4E0D;&#x540C;&#x90E8;&#x5206;&#x7684;&#x4EFB;&#x52A1;&#x3002;</p>
+<p>&#x7EBF;&#x7A0B;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x4E3A;&#x4E86;&#x4F18;&#x5316;&#x65F6;&#x95F4;&#x7247;&#x8C03;&#x5EA6;&#x673A;&#x5236;&#x4E2D;&#xFF0C;&#x65F6;&#x95F4;&#x7247;&#x5230;&#x671F;&#x540E;&#x8FDB;&#x7A0B;&#x4E4B;&#x95F4;&#x5207;&#x6362;&#x7684;&#x901F;&#x5EA6;&#xFF0C;&#x6240;&#x5F00;&#x62D3;&#x51FA;&#x6765;&#x7684;</p>
 </blockquote>
-<p>chrome浏览器中的主要线程：</p>
+<p>chrome&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x7684;&#x4E3B;&#x8981;&#x7EBF;&#x7A0B;&#xFF1A;</p>
 <ul>
-<li>浏览器（Browser）：控制 “Chrome” 应用程序，包括地址栏、书签、后退和前进按钮等。还需要处理 Web 浏览器的权限管理，例如网络请求和文件访问。</li>
-<li>渲染器（Renderer）：控制选项卡内，网站里显示的所有内容。</li>
-<li>插件（Plugin）：控制网站使用的插件，例如：Flash。</li>
-<li>GPU：独立于其他进程，专用于处理 GPU 任务，它被分成不同的进程，因为 GPU 会处理来自多个进程的请求，并将它们绘制在相同的 Surface 中。</li>
+<li>&#x6D4F;&#x89C8;&#x5668;&#xFF08;Browser&#xFF09;&#xFF1A;&#x63A7;&#x5236; &#x201C;Chrome&#x201D; &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x5305;&#x62EC;&#x5730;&#x5740;&#x680F;&#x3001;&#x4E66;&#x7B7E;&#x3001;&#x540E;&#x9000;&#x548C;&#x524D;&#x8FDB;&#x6309;&#x94AE;&#x7B49;&#x3002;&#x8FD8;&#x9700;&#x8981;&#x5904;&#x7406; Web &#x6D4F;&#x89C8;&#x5668;&#x7684;&#x6743;&#x9650;&#x7BA1;&#x7406;&#xFF0C;&#x4F8B;&#x5982;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x548C;&#x6587;&#x4EF6;&#x8BBF;&#x95EE;&#x3002;</li>
+<li>&#x6E32;&#x67D3;&#x5668;&#xFF08;Renderer&#xFF09;&#xFF1A;&#x63A7;&#x5236;&#x9009;&#x9879;&#x5361;&#x5185;&#xFF0C;&#x7F51;&#x7AD9;&#x91CC;&#x663E;&#x793A;&#x7684;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x3002;</li>
+<li>&#x63D2;&#x4EF6;&#xFF08;Plugin&#xFF09;&#xFF1A;&#x63A7;&#x5236;&#x7F51;&#x7AD9;&#x4F7F;&#x7528;&#x7684;&#x63D2;&#x4EF6;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;Flash&#x3002;</li>
+<li>GPU&#xFF1A;&#x72EC;&#x7ACB;&#x4E8E;&#x5176;&#x4ED6;&#x8FDB;&#x7A0B;&#xFF0C;&#x4E13;&#x7528;&#x4E8E;&#x5904;&#x7406; GPU &#x4EFB;&#x52A1;&#xFF0C;&#x5B83;&#x88AB;&#x5206;&#x6210;&#x4E0D;&#x540C;&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x56E0;&#x4E3A; GPU &#x4F1A;&#x5904;&#x7406;&#x6765;&#x81EA;&#x591A;&#x4E2A;&#x8FDB;&#x7A0B;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x5E76;&#x5C06;&#x5B83;&#x4EEC;&#x7ED8;&#x5236;&#x5728;&#x76F8;&#x540C;&#x7684; Surface &#x4E2D;&#x3002;</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/浏览器的多进程.png" alt="多进程"></p>
-<p>浏览器的进程模式</p>
-<p>为了节省内存，Chrome提供了四种进程模式(Process Models)，不同的进程模式会对 tab 进程做不同的处理。</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x591A;&#x8FDB;&#x7A0B;.png" alt="&#x591A;&#x8FDB;&#x7A0B;"></p>
+<p>&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x8FDB;&#x7A0B;&#x6A21;&#x5F0F;</p>
+<p>&#x4E3A;&#x4E86;&#x8282;&#x7701;&#x5185;&#x5B58;&#xFF0C;Chrome&#x63D0;&#x4F9B;&#x4E86;&#x56DB;&#x79CD;&#x8FDB;&#x7A0B;&#x6A21;&#x5F0F;(Process Models)&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x8FDB;&#x7A0B;&#x6A21;&#x5F0F;&#x4F1A;&#x5BF9; tab &#x8FDB;&#x7A0B;&#x505A;&#x4E0D;&#x540C;&#x7684;&#x5904;&#x7406;&#x3002;</p>
 <ul>
-<li><p>Process-per-site-instance (default) - 同一个 site-instance 使用一个进程</p>
+<li><p>Process-per-site-instance (default) - &#x540C;&#x4E00;&#x4E2A; site-instance &#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;</p>
 </li>
-<li><p>Process-per-site - 同一个 site 使用一个进程</p>
+<li><p>Process-per-site - &#x540C;&#x4E00;&#x4E2A; site &#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;</p>
 </li>
-<li><p>Process-per-tab - 每个 tab 使用一个进程</p>
+<li><p>Process-per-tab - &#x6BCF;&#x4E2A; tab &#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;</p>
 </li>
-<li><p>Single process - 所有 tab 共用一个进程</p>
+<li><p>Single process - &#x6240;&#x6709; tab &#x5171;&#x7528;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;</p>
 </li>
 </ul>
-<h5 id="被调用方通知调用方的方法：">被调用方通知调用方的方法：</h5>
+<h5 id="&#x88AB;&#x8C03;&#x7528;&#x65B9;&#x901A;&#x77E5;&#x8C03;&#x7528;&#x65B9;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;">&#x88AB;&#x8C03;&#x7528;&#x65B9;&#x901A;&#x77E5;&#x8C03;&#x7528;&#x65B9;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</h5>
 <p><img src="../Users/jasonk0/Library/Application Support/typora-user-images/image-20220105181001203.png" alt="image-20220105181001203"></p>
 <ul>
-<li>回调</li>
+<li>&#x56DE;&#x8C03;</li>
 </ul>
 <ul>
-<li>事件</li>
+<li>&#x4E8B;&#x4EF6;</li>
 </ul>
 <ul>
-<li>消息</li>
+<li>&#x6D88;&#x606F;</li>
 </ul>
-<h5 id="面试题">面试题</h5>
-<p><strong>为什么不建议采用定时器实现动画？requestAnimationFrame有哪些优势？</strong></p>
+<h5 id="&#x9762;&#x8BD5;&#x9898;">&#x9762;&#x8BD5;&#x9898;</h5>
+<p><strong>&#x4E3A;&#x4EC0;&#x4E48;&#x4E0D;&#x5EFA;&#x8BAE;&#x91C7;&#x7528;&#x5B9A;&#x65F6;&#x5668;&#x5B9E;&#x73B0;&#x52A8;&#x753B;&#xFF1F;requestAnimationFrame&#x6709;&#x54EA;&#x4E9B;&#x4F18;&#x52BF;&#xFF1F;</strong></p>
 <blockquote>
-<p>定时器的回调不能保证是按照指定时间之后调用 只是会按照指定时间被插入任务队列 要等待主线程空闲才会被调用</p>
-<p> 所以不能保证是在渲染的每帧开始的时候执行动画 也就可能出现跳帧</p>
-<p>另外，通过定时器修改元素位置属性实现的动画，会导致频繁的重排和重绘，从而影响到性能。</p>
-<p> <strong>requestAnimationFrame最大的优势是由浏览器来决定回调函数的执行时机，即紧跟浏览器的刷新步调。</strong></p>
-<p> 如果屏幕刷新频率是60Hz，那么回调函数每16.7ms被执行一次，如果屏幕刷新频率是75Hz，那么这个时间间隔就变成了1000/75=13.3ms。它能保证回调函数在屏幕每一次的刷新间隔中只被执行一次，这样就不会引起丢帧现象，自然不会导致动画的卡顿。</p>
-<p> CPU节能：使用setTimeout实现的动画，当页面被隐藏（隐藏的<code>&lt;iframe&gt;</code>）或最小化（后台标签页）时，setTimeout仍然在后台执行动画任务，由于此时页面处于不可见或不可用状态，刷新动画是没有意义的，而且还浪费 CPU 资源和电池寿命。而requestAnimationFrame则完全不同，当页面处于未激活的状态下，该页面的屏幕绘制任务也会被浏览器暂停，因此跟着浏览器步伐走的requestAnimationFrame也会停止渲染，当页面被激活时，动画就从上次停留的地方继续执行，有效节省了 CPU 开销，提升性能和电池寿命。</p>
+<p>&#x5B9A;&#x65F6;&#x5668;&#x7684;&#x56DE;&#x8C03;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x662F;&#x6309;&#x7167;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x4E4B;&#x540E;&#x8C03;&#x7528; &#x53EA;&#x662F;&#x4F1A;&#x6309;&#x7167;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x88AB;&#x63D2;&#x5165;&#x4EFB;&#x52A1;&#x961F;&#x5217; &#x8981;&#x7B49;&#x5F85;&#x4E3B;&#x7EBF;&#x7A0B;&#x7A7A;&#x95F2;&#x624D;&#x4F1A;&#x88AB;&#x8C03;&#x7528;</p>
+<p> &#x6240;&#x4EE5;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x662F;&#x5728;&#x6E32;&#x67D3;&#x7684;&#x6BCF;&#x5E27;&#x5F00;&#x59CB;&#x7684;&#x65F6;&#x5019;&#x6267;&#x884C;&#x52A8;&#x753B; &#x4E5F;&#x5C31;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x8DF3;&#x5E27;</p>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x901A;&#x8FC7;&#x5B9A;&#x65F6;&#x5668;&#x4FEE;&#x6539;&#x5143;&#x7D20;&#x4F4D;&#x7F6E;&#x5C5E;&#x6027;&#x5B9E;&#x73B0;&#x7684;&#x52A8;&#x753B;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x9891;&#x7E41;&#x7684;&#x91CD;&#x6392;&#x548C;&#x91CD;&#x7ED8;&#xFF0C;&#x4ECE;&#x800C;&#x5F71;&#x54CD;&#x5230;&#x6027;&#x80FD;&#x3002;</p>
+<p> <strong>requestAnimationFrame&#x6700;&#x5927;&#x7684;&#x4F18;&#x52BF;&#x662F;&#x7531;&#x6D4F;&#x89C8;&#x5668;&#x6765;&#x51B3;&#x5B9A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x6267;&#x884C;&#x65F6;&#x673A;&#xFF0C;&#x5373;&#x7D27;&#x8DDF;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x5237;&#x65B0;&#x6B65;&#x8C03;&#x3002;</strong></p>
+<p> &#x5982;&#x679C;&#x5C4F;&#x5E55;&#x5237;&#x65B0;&#x9891;&#x7387;&#x662F;60Hz&#xFF0C;&#x90A3;&#x4E48;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x6BCF;16.7ms&#x88AB;&#x6267;&#x884C;&#x4E00;&#x6B21;&#xFF0C;&#x5982;&#x679C;&#x5C4F;&#x5E55;&#x5237;&#x65B0;&#x9891;&#x7387;&#x662F;75Hz&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x5C31;&#x53D8;&#x6210;&#x4E86;1000/75=13.3ms&#x3002;&#x5B83;&#x80FD;&#x4FDD;&#x8BC1;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5728;&#x5C4F;&#x5E55;&#x6BCF;&#x4E00;&#x6B21;&#x7684;&#x5237;&#x65B0;&#x95F4;&#x9694;&#x4E2D;&#x53EA;&#x88AB;&#x6267;&#x884C;&#x4E00;&#x6B21;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x4E0D;&#x4F1A;&#x5F15;&#x8D77;&#x4E22;&#x5E27;&#x73B0;&#x8C61;&#xFF0C;&#x81EA;&#x7136;&#x4E0D;&#x4F1A;&#x5BFC;&#x81F4;&#x52A8;&#x753B;&#x7684;&#x5361;&#x987F;&#x3002;</p>
+<p> CPU&#x8282;&#x80FD;&#xFF1A;&#x4F7F;&#x7528;setTimeout&#x5B9E;&#x73B0;&#x7684;&#x52A8;&#x753B;&#xFF0C;&#x5F53;&#x9875;&#x9762;&#x88AB;&#x9690;&#x85CF;&#xFF08;&#x9690;&#x85CF;&#x7684;<code>&lt;iframe&gt;</code>&#xFF09;&#x6216;&#x6700;&#x5C0F;&#x5316;&#xFF08;&#x540E;&#x53F0;&#x6807;&#x7B7E;&#x9875;&#xFF09;&#x65F6;&#xFF0C;setTimeout&#x4ECD;&#x7136;&#x5728;&#x540E;&#x53F0;&#x6267;&#x884C;&#x52A8;&#x753B;&#x4EFB;&#x52A1;&#xFF0C;&#x7531;&#x4E8E;&#x6B64;&#x65F6;&#x9875;&#x9762;&#x5904;&#x4E8E;&#x4E0D;&#x53EF;&#x89C1;&#x6216;&#x4E0D;&#x53EF;&#x7528;&#x72B6;&#x6001;&#xFF0C;&#x5237;&#x65B0;&#x52A8;&#x753B;&#x662F;&#x6CA1;&#x6709;&#x610F;&#x4E49;&#x7684;&#xFF0C;&#x800C;&#x4E14;&#x8FD8;&#x6D6A;&#x8D39; CPU &#x8D44;&#x6E90;&#x548C;&#x7535;&#x6C60;&#x5BFF;&#x547D;&#x3002;&#x800C;requestAnimationFrame&#x5219;&#x5B8C;&#x5168;&#x4E0D;&#x540C;&#xFF0C;&#x5F53;&#x9875;&#x9762;&#x5904;&#x4E8E;&#x672A;&#x6FC0;&#x6D3B;&#x7684;&#x72B6;&#x6001;&#x4E0B;&#xFF0C;&#x8BE5;&#x9875;&#x9762;&#x7684;&#x5C4F;&#x5E55;&#x7ED8;&#x5236;&#x4EFB;&#x52A1;&#x4E5F;&#x4F1A;&#x88AB;&#x6D4F;&#x89C8;&#x5668;&#x6682;&#x505C;&#xFF0C;&#x56E0;&#x6B64;&#x8DDF;&#x7740;&#x6D4F;&#x89C8;&#x5668;&#x6B65;&#x4F10;&#x8D70;&#x7684;requestAnimationFrame&#x4E5F;&#x4F1A;&#x505C;&#x6B62;&#x6E32;&#x67D3;&#xFF0C;&#x5F53;&#x9875;&#x9762;&#x88AB;&#x6FC0;&#x6D3B;&#x65F6;&#xFF0C;&#x52A8;&#x753B;&#x5C31;&#x4ECE;&#x4E0A;&#x6B21;&#x505C;&#x7559;&#x7684;&#x5730;&#x65B9;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#xFF0C;&#x6709;&#x6548;&#x8282;&#x7701;&#x4E86; CPU &#x5F00;&#x9500;&#xFF0C;&#x63D0;&#x5347;&#x6027;&#x80FD;&#x548C;&#x7535;&#x6C60;&#x5BFF;&#x547D;&#x3002;</p>
 </blockquote>
-<p><strong>浏览器采用多进程架构有什么优势和劣势？</strong></p>
+<p><strong>&#x6D4F;&#x89C8;&#x5668;&#x91C7;&#x7528;&#x591A;&#x8FDB;&#x7A0B;&#x67B6;&#x6784;&#x6709;&#x4EC0;&#x4E48;&#x4F18;&#x52BF;&#x548C;&#x52A3;&#x52BF;&#xFF1F;</strong></p>
 <blockquote>
-<p>优势：单个tab页具有更好的健壮性，安全性、沙盒性。在面临一个进程崩盘的时候，并不会影响其他网页应用线程。更快的响应速度</p>
-<p>劣势：占用内存更大，更加耗费资源。</p>
+<p>&#x4F18;&#x52BF;&#xFF1A;&#x5355;&#x4E2A;tab&#x9875;&#x5177;&#x6709;&#x66F4;&#x597D;&#x7684;&#x5065;&#x58EE;&#x6027;&#xFF0C;&#x5B89;&#x5168;&#x6027;&#x3001;&#x6C99;&#x76D2;&#x6027;&#x3002;&#x5728;&#x9762;&#x4E34;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x5D29;&#x76D8;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5E76;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x5176;&#x4ED6;&#x7F51;&#x9875;&#x5E94;&#x7528;&#x7EBF;&#x7A0B;&#x3002;&#x66F4;&#x5FEB;&#x7684;&#x54CD;&#x5E94;&#x901F;&#x5EA6;</p>
+<p>&#x52A3;&#x52BF;&#xFF1A;&#x5360;&#x7528;&#x5185;&#x5B58;&#x66F4;&#x5927;&#xFF0C;&#x66F4;&#x52A0;&#x8017;&#x8D39;&#x8D44;&#x6E90;&#x3002;</p>
 </blockquote>
 <hr>
-<h4 id="eventloop事件循环">EventLoop事件循环</h4>
-<h5 id="为什么javascript要设计成单线程？">为什么JavaScript要设计成单线程？</h5>
-<p>js的设计之初就是为了执行脚本，不管是执行脚本，还是渲染dom、操作dom、发送请求，其目标都是呈现页面，单线程恰恰保证了呈现页面的过程中不会发生冲突，所以根本使用不到多线程；发展到如今的js所负担的任务变得沉重，但因为webwoker和EventLoop机制，单线程丝毫不影响其运行效率，</p>
-<h5 id="什么是eventloop？">什么是EventLoop？</h5>
+<h4 id="eventloop&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;">EventLoop&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;</h4>
+<h5 id="&#x4E3A;&#x4EC0;&#x4E48;javascript&#x8981;&#x8BBE;&#x8BA1;&#x6210;&#x5355;&#x7EBF;&#x7A0B;&#xFF1F;">&#x4E3A;&#x4EC0;&#x4E48;JavaScript&#x8981;&#x8BBE;&#x8BA1;&#x6210;&#x5355;&#x7EBF;&#x7A0B;&#xFF1F;</h5>
+<p>js&#x7684;&#x8BBE;&#x8BA1;&#x4E4B;&#x521D;&#x5C31;&#x662F;&#x4E3A;&#x4E86;&#x6267;&#x884C;&#x811A;&#x672C;&#xFF0C;&#x4E0D;&#x7BA1;&#x662F;&#x6267;&#x884C;&#x811A;&#x672C;&#xFF0C;&#x8FD8;&#x662F;&#x6E32;&#x67D3;dom&#x3001;&#x64CD;&#x4F5C;dom&#x3001;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#xFF0C;&#x5176;&#x76EE;&#x6807;&#x90FD;&#x662F;&#x5448;&#x73B0;&#x9875;&#x9762;&#xFF0C;&#x5355;&#x7EBF;&#x7A0B;&#x6070;&#x6070;&#x4FDD;&#x8BC1;&#x4E86;&#x5448;&#x73B0;&#x9875;&#x9762;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E0D;&#x4F1A;&#x53D1;&#x751F;&#x51B2;&#x7A81;&#xFF0C;&#x6240;&#x4EE5;&#x6839;&#x672C;&#x4F7F;&#x7528;&#x4E0D;&#x5230;&#x591A;&#x7EBF;&#x7A0B;&#xFF1B;&#x53D1;&#x5C55;&#x5230;&#x5982;&#x4ECA;&#x7684;js&#x6240;&#x8D1F;&#x62C5;&#x7684;&#x4EFB;&#x52A1;&#x53D8;&#x5F97;&#x6C89;&#x91CD;&#xFF0C;&#x4F46;&#x56E0;&#x4E3A;webwoker&#x548C;EventLoop&#x673A;&#x5236;&#xFF0C;&#x5355;&#x7EBF;&#x7A0B;&#x4E1D;&#x6BEB;&#x4E0D;&#x5F71;&#x54CD;&#x5176;&#x8FD0;&#x884C;&#x6548;&#x7387;&#xFF0C;</p>
+<h5 id="&#x4EC0;&#x4E48;&#x662F;eventloop&#xFF1F;">&#x4EC0;&#x4E48;&#x662F;EventLoop&#xFF1F;</h5>
 <ol>
-<li>在执行主线程的任务时，如果有<em>异步任务</em>，会进入到Event Table并注册回调函数，当指定的事情完成后，会将这个回调函数放到 <strong>callback queue</strong> 中</li>
-<li>在主线程执行完毕之后，会去读取 <strong>callback queue</strong>中的回调函数，进入主线程执行</li>
-<li>不断的重复这个过程，也就是常说的Event Loop（事件循环）了</li>
+<li>&#x5728;&#x6267;&#x884C;&#x4E3B;&#x7EBF;&#x7A0B;&#x7684;&#x4EFB;&#x52A1;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x6709;<em>&#x5F02;&#x6B65;&#x4EFB;&#x52A1;</em>&#xFF0C;&#x4F1A;&#x8FDB;&#x5165;&#x5230;Event Table&#x5E76;&#x6CE8;&#x518C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x5F53;&#x6307;&#x5B9A;&#x7684;&#x4E8B;&#x60C5;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x4F1A;&#x5C06;&#x8FD9;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x653E;&#x5230; <strong>callback queue</strong> &#x4E2D;</li>
+<li>&#x5728;&#x4E3B;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#x4E4B;&#x540E;&#xFF0C;&#x4F1A;&#x53BB;&#x8BFB;&#x53D6; <strong>callback queue</strong>&#x4E2D;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x8FDB;&#x5165;&#x4E3B;&#x7EBF;&#x7A0B;&#x6267;&#x884C;</li>
+<li>&#x4E0D;&#x65AD;&#x7684;&#x91CD;&#x590D;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5E38;&#x8BF4;&#x7684;Event Loop&#xFF08;&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;&#xFF09;&#x4E86;</li>
 </ol>
-<p><img src="https://www.hualigs.cn/image/61d79a25735b1.jpg" alt="EventLoop整体循环"></p>
-<p>重点在于<em>异步任务</em>，他们分为宏任务和微任务，两者区别于在指定的事情完成后，将回调函数放入 <strong>callback queue</strong> 的过程。</p>
-<p>我们也不难看出，<strong>dom渲染</strong>会在微任务队列清空后进行。</p>
-<h5 id="宏任务与微任务">宏任务与微任务</h5>
+<p><img src="https://www.hualigs.cn/image/61d79a25735b1.jpg" alt="EventLoop&#x6574;&#x4F53;&#x5FAA;&#x73AF;"></p>
+<p>&#x91CD;&#x70B9;&#x5728;&#x4E8E;<em>&#x5F02;&#x6B65;&#x4EFB;&#x52A1;</em>&#xFF0C;&#x4ED6;&#x4EEC;&#x5206;&#x4E3A;&#x5B8F;&#x4EFB;&#x52A1;&#x548C;&#x5FAE;&#x4EFB;&#x52A1;&#xFF0C;&#x4E24;&#x8005;&#x533A;&#x522B;&#x4E8E;&#x5728;&#x6307;&#x5B9A;&#x7684;&#x4E8B;&#x60C5;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x5C06;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x653E;&#x5165; <strong>callback queue</strong> &#x7684;&#x8FC7;&#x7A0B;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x4E5F;&#x4E0D;&#x96BE;&#x770B;&#x51FA;&#xFF0C;<strong>dom&#x6E32;&#x67D3;</strong>&#x4F1A;&#x5728;&#x5FAE;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#x6E05;&#x7A7A;&#x540E;&#x8FDB;&#x884C;&#x3002;</p>
+<h5 id="&#x5B8F;&#x4EFB;&#x52A1;&#x4E0E;&#x5FAE;&#x4EFB;&#x52A1;">&#x5B8F;&#x4EFB;&#x52A1;&#x4E0E;&#x5FAE;&#x4EFB;&#x52A1;</h5>
 <blockquote>
-<p>我们通常把宿主发起的任务称为<strong>宏观任务</strong>(<code>script</code>其实也算宏任务，但因为他们只执行一遍，所以接下来宏任务里不讨论<code>script</code>的存在)，把JavaScript引擎发起的任务称为<strong>微观任务</strong></p>
+<p>&#x6211;&#x4EEC;&#x901A;&#x5E38;&#x628A;&#x5BBF;&#x4E3B;&#x53D1;&#x8D77;&#x7684;&#x4EFB;&#x52A1;&#x79F0;&#x4E3A;<strong>&#x5B8F;&#x89C2;&#x4EFB;&#x52A1;</strong>(<code>script</code>&#x5176;&#x5B9E;&#x4E5F;&#x7B97;&#x5B8F;&#x4EFB;&#x52A1;&#xFF0C;&#x4F46;&#x56E0;&#x4E3A;&#x4ED6;&#x4EEC;&#x53EA;&#x6267;&#x884C;&#x4E00;&#x904D;&#xFF0C;&#x6240;&#x4EE5;&#x63A5;&#x4E0B;&#x6765;&#x5B8F;&#x4EFB;&#x52A1;&#x91CC;&#x4E0D;&#x8BA8;&#x8BBA;<code>script</code>&#x7684;&#x5B58;&#x5728;)&#xFF0C;&#x628A;JavaScript&#x5F15;&#x64CE;&#x53D1;&#x8D77;&#x7684;&#x4EFB;&#x52A1;&#x79F0;&#x4E3A;<strong>&#x5FAE;&#x89C2;&#x4EFB;&#x52A1;</strong></p>
 </blockquote>
-<p>常见宏任务：<code>setInterval()</code>，<code>serTimeout()</code>，<code>setImmediate()</code>(实际上<code>setImmediate()</code>优先级小于前者)</p>
-<p>常见微任务：<code>Promise().then(function(){})</code>（promise-then里的回调函数，<code>new MUtationObserver()</code> </p>
-<p><code>process.nextTick(function(){})</code>(同上)(另外，实际上后者优先级高于前者)</p>
-<p>两者在事件轮询中的区别在于，轮询到微任务时，会将微任务队列全部推出再去轮询下一步；轮询到宏任务时，只推出了队列中最早的异步任务</p>
-<p><strong>为什么要设计微任务？</strong></p>
+<p>&#x5E38;&#x89C1;&#x5B8F;&#x4EFB;&#x52A1;&#xFF1A;<code>setInterval()</code>&#xFF0C;<code>serTimeout()</code>&#xFF0C;<code>setImmediate()</code>(&#x5B9E;&#x9645;&#x4E0A;<code>setImmediate()</code>&#x4F18;&#x5148;&#x7EA7;&#x5C0F;&#x4E8E;&#x524D;&#x8005;)</p>
+<p>&#x5E38;&#x89C1;&#x5FAE;&#x4EFB;&#x52A1;&#xFF1A;<code>Promise().then(function(){})</code>&#xFF08;promise-then&#x91CC;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;<code>new MUtationObserver()</code> </p>
+<p><code>process.nextTick(function(){})</code>(&#x540C;&#x4E0A;)(&#x53E6;&#x5916;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x540E;&#x8005;&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x4E8E;&#x524D;&#x8005;)</p>
+<p>&#x4E24;&#x8005;&#x5728;&#x4E8B;&#x4EF6;&#x8F6E;&#x8BE2;&#x4E2D;&#x7684;&#x533A;&#x522B;&#x5728;&#x4E8E;&#xFF0C;&#x8F6E;&#x8BE2;&#x5230;&#x5FAE;&#x4EFB;&#x52A1;&#x65F6;&#xFF0C;&#x4F1A;&#x5C06;&#x5FAE;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#x5168;&#x90E8;&#x63A8;&#x51FA;&#x518D;&#x53BB;&#x8F6E;&#x8BE2;&#x4E0B;&#x4E00;&#x6B65;&#xFF1B;&#x8F6E;&#x8BE2;&#x5230;&#x5B8F;&#x4EFB;&#x52A1;&#x65F6;&#xFF0C;&#x53EA;&#x63A8;&#x51FA;&#x4E86;&#x961F;&#x5217;&#x4E2D;&#x6700;&#x65E9;&#x7684;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;</p>
+<p><strong>&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x8BBE;&#x8BA1;&#x5FAE;&#x4EFB;&#x52A1;&#xFF1F;</strong></p>
 <blockquote>
-<p>解决了宏任务执行时机不可控的问题。微任务宏任务将异步分成了缓急两个任务队列</p>
+<p>&#x89E3;&#x51B3;&#x4E86;&#x5B8F;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x65F6;&#x673A;&#x4E0D;&#x53EF;&#x63A7;&#x7684;&#x95EE;&#x9898;&#x3002;&#x5FAE;&#x4EFB;&#x52A1;&#x5B8F;&#x4EFB;&#x52A1;&#x5C06;&#x5F02;&#x6B65;&#x5206;&#x6210;&#x4E86;&#x7F13;&#x6025;&#x4E24;&#x4E2A;&#x4EFB;&#x52A1;&#x961F;&#x5217;</p>
 </blockquote>
-<h5 id="简述事件循环闭环流程">简述事件循环闭环流程</h5>
+<h5 id="&#x7B80;&#x8FF0;&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;&#x95ED;&#x73AF;&#x6D41;&#x7A0B;">&#x7B80;&#x8FF0;&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;&#x95ED;&#x73AF;&#x6D41;&#x7A0B;</h5>
 <blockquote>
-<p>我们可以想象成<strong>宏任务</strong>循环里套着<strong>微任务</strong>循环，<em>在检查宏任务之前</em>，<em>执行完宏任务之后</em>，分别插入<strong>微任务循环</strong>。</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x60F3;&#x8C61;&#x6210;<strong>&#x5B8F;&#x4EFB;&#x52A1;</strong>&#x5FAA;&#x73AF;&#x91CC;&#x5957;&#x7740;<strong>&#x5FAE;&#x4EFB;&#x52A1;</strong>&#x5FAA;&#x73AF;&#xFF0C;<em>&#x5728;&#x68C0;&#x67E5;&#x5B8F;&#x4EFB;&#x52A1;&#x4E4B;&#x524D;</em>&#xFF0C;<em>&#x6267;&#x884C;&#x5B8C;&#x5B8F;&#x4EFB;&#x52A1;&#x4E4B;&#x540E;</em>&#xFF0C;&#x5206;&#x522B;&#x63D2;&#x5165;<strong>&#x5FAE;&#x4EFB;&#x52A1;&#x5FAA;&#x73AF;</strong>&#x3002;</p>
 </blockquote>
-<p>宏任务过程：</p>
+<p>&#x5B8F;&#x4EFB;&#x52A1;&#x8FC7;&#x7A0B;&#xFF1A;</p>
 <ol>
-<li>选择宏任务队列中最早的任务（任务A）</li>
-<li>将“当前正在运行的任务”设置为“任务A”</li>
-<li>运行“任务A”同步代码（也就是运行回调函数）</li>
-<li>将“当前正在运行的任务”设置为<code>null</code>，删除“任务A”，本次Loop结束</li>
-<li>选择下一个最早的任务，也就是跳转到1，直到宏任务队列清空</li>
+<li>&#x9009;&#x62E9;&#x5B8F;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#x4E2D;&#x6700;&#x65E9;&#x7684;&#x4EFB;&#x52A1;&#xFF08;&#x4EFB;&#x52A1;A&#xFF09;</li>
+<li>&#x5C06;&#x201C;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x4EFB;&#x52A1;&#x201D;&#x8BBE;&#x7F6E;&#x4E3A;&#x201C;&#x4EFB;&#x52A1;A&#x201D;</li>
+<li>&#x8FD0;&#x884C;&#x201C;&#x4EFB;&#x52A1;A&#x201D;&#x540C;&#x6B65;&#x4EE3;&#x7801;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x8FD0;&#x884C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF09;</li>
+<li>&#x5C06;&#x201C;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x4EFB;&#x52A1;&#x201D;&#x8BBE;&#x7F6E;&#x4E3A;<code>null</code>&#xFF0C;&#x5220;&#x9664;&#x201C;&#x4EFB;&#x52A1;A&#x201D;&#xFF0C;&#x672C;&#x6B21;Loop&#x7ED3;&#x675F;</li>
+<li>&#x9009;&#x62E9;&#x4E0B;&#x4E00;&#x4E2A;&#x6700;&#x65E9;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8DF3;&#x8F6C;&#x5230;1&#xFF0C;&#x76F4;&#x5230;&#x5B8F;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#x6E05;&#x7A7A;</li>
 </ol>
 <pre><code class="lang-mermaid">graph LR
 
 1 ==&gt; 2
 2 ==&gt; 3 
-3 ==微任务循环==&gt; 4 
-4 ==微任务循环==&gt; 1
+3 ==&#x5FAE;&#x4EFB;&#x52A1;&#x5FAA;&#x73AF;==&gt; 4 
+4 ==&#x5FAE;&#x4EFB;&#x52A1;&#x5FAA;&#x73AF;==&gt; 1
 </code></pre>
-<p>微任务过程：</p>
-<p>a. 选择微任务队列中最早的任务（任务x）</p>
-<p>b. 将“当前正在运行的任务”设置为“任务x”</p>
-<p>c. 运行“任务x”同步代码（也就是运行回调函数）</p>
-<p>d. 将“当前正在运行的任务”设置为<code>null</code>，删除“任务x”</p>
-<p>e. 选择下一个最早的任务，也就是跳转到1，直到微任务队列清空</p>
-<p><img src="https://www.hualigs.cn/image/61d64fbf783f8.jpg" alt></p>
-<p><img src="https://www.hualigs.cn/image/61d6eede46ca4.jpg" alt="EventLoop演示图"></p>
-<h5 id="浏览器和node的区别">浏览器和node的区别</h5>
-<p>宏任务
-| \                                   | 浏览器 | Node |
+<p>&#x5FAE;&#x4EFB;&#x52A1;&#x8FC7;&#x7A0B;&#xFF1A;</p>
+<p>a. &#x9009;&#x62E9;&#x5FAE;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#x4E2D;&#x6700;&#x65E9;&#x7684;&#x4EFB;&#x52A1;&#xFF08;&#x4EFB;&#x52A1;x&#xFF09;</p>
+<p>b. &#x5C06;&#x201C;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x4EFB;&#x52A1;&#x201D;&#x8BBE;&#x7F6E;&#x4E3A;&#x201C;&#x4EFB;&#x52A1;x&#x201D;</p>
+<p>c. &#x8FD0;&#x884C;&#x201C;&#x4EFB;&#x52A1;x&#x201D;&#x540C;&#x6B65;&#x4EE3;&#x7801;&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x8FD0;&#x884C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF09;</p>
+<p>d. &#x5C06;&#x201C;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x4EFB;&#x52A1;&#x201D;&#x8BBE;&#x7F6E;&#x4E3A;<code>null</code>&#xFF0C;&#x5220;&#x9664;&#x201C;&#x4EFB;&#x52A1;x&#x201D;</p>
+<p>e. &#x9009;&#x62E9;&#x4E0B;&#x4E00;&#x4E2A;&#x6700;&#x65E9;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8DF3;&#x8F6C;&#x5230;1&#xFF0C;&#x76F4;&#x5230;&#x5FAE;&#x4EFB;&#x52A1;&#x961F;&#x5217;&#x6E05;&#x7A7A;</p>
+<p><img src="https://www.hualigs.cn/image/61d64fbf783f8.jpg" alt=""></p>
+<p><img src="https://www.hualigs.cn/image/61d6eede46ca4.jpg" alt="EventLoop&#x6F14;&#x793A;&#x56FE;"></p>
+<h5 id="&#x6D4F;&#x89C8;&#x5668;&#x548C;node&#x7684;&#x533A;&#x522B;">&#x6D4F;&#x89C8;&#x5668;&#x548C;node&#x7684;&#x533A;&#x522B;</h5>
+<p>&#x5B8F;&#x4EFB;&#x52A1;
+| \                                   | &#x6D4F;&#x89C8;&#x5668; | Node |
 | ----------------------------------- | ------ | ---- |
-| I/O                                 | ✅      | ✅    |
-| setTimeout                          | ✅      | ✅    |
-| setInterval                         | ✅      | ✅    |
-| setImmediate                        | ❌      | ✅    |
-| requestAnimationFrame               | ✅      | ✅    |
-| 页面交互：DOM、鼠标、键盘、滚动事件 | ✅      | ✅    |
-| script                              | ✅      |      |</p>
-<p>微任务
-| /                          | 浏览器 | Node |
+| I/O                                 | &#x2705;      | &#x2705;    |
+| setTimeout                          | &#x2705;      | &#x2705;    |
+| setInterval                         | &#x2705;      | &#x2705;    |
+| setImmediate                        | &#x274C;      | &#x2705;    |
+| requestAnimationFrame               | &#x2705;      | &#x2705;    |
+| &#x9875;&#x9762;&#x4EA4;&#x4E92;&#xFF1A;DOM&#x3001;&#x9F20;&#x6807;&#x3001;&#x952E;&#x76D8;&#x3001;&#x6EDA;&#x52A8;&#x4E8B;&#x4EF6; | &#x2705;      | &#x2705;    |
+| script                              | &#x2705;      |      |</p>
+<p>&#x5FAE;&#x4EFB;&#x52A1;
+| /                          | &#x6D4F;&#x89C8;&#x5668; | Node |
 | -------------------------- | ------ | ---- |
-| process.nextTick           | ❌      | ✅    |
-| MutationObserver           | ✅      | ❌    |
-| Promise.then catch finally | ✅      | ✅    |</p>
-<h5 id="vue的异步更新队列">vue的异步更新队列</h5>
-<p>会优先选择微任务<code>Promise.then</code>、<code>MutationObserver</code> 和 <code>setImmediate</code>，如果执行环境不支持，则会采用宏任务<code>setTimeout(fn, 0)</code> 代替。</p>
-<h4 id="发布-订阅">发布-订阅</h4>
+| process.nextTick           | &#x274C;      | &#x2705;    |
+| MutationObserver           | &#x2705;      | &#x274C;    |
+| Promise.then catch finally | &#x2705;      | &#x2705;    |</p>
+<h5 id="vue&#x7684;&#x5F02;&#x6B65;&#x66F4;&#x65B0;&#x961F;&#x5217;">vue&#x7684;&#x5F02;&#x6B65;&#x66F4;&#x65B0;&#x961F;&#x5217;</h5>
+<p>&#x4F1A;&#x4F18;&#x5148;&#x9009;&#x62E9;&#x5FAE;&#x4EFB;&#x52A1;<code>Promise.then</code>&#x3001;<code>MutationObserver</code> &#x548C; <code>setImmediate</code>&#xFF0C;&#x5982;&#x679C;&#x6267;&#x884C;&#x73AF;&#x5883;&#x4E0D;&#x652F;&#x6301;&#xFF0C;&#x5219;&#x4F1A;&#x91C7;&#x7528;&#x5B8F;&#x4EFB;&#x52A1;<code>setTimeout(fn, 0)</code> &#x4EE3;&#x66FF;&#x3002;</p>
+<h4 id="&#x53D1;&#x5E03;-&#x8BA2;&#x9605;">&#x53D1;&#x5E03;-&#x8BA2;&#x9605;</h4>
 <blockquote>
-<p>浏览器进程里有许多线程，但主线程是<code>JavaScript引擎</code>，其他线程都是为了服务主线程而存在。而这些线程之间通讯方式就是通过<strong>发布-订阅</strong>来完成的，也称<strong>消息队列</strong></p>
+<p>&#x6D4F;&#x89C8;&#x5668;&#x8FDB;&#x7A0B;&#x91CC;&#x6709;&#x8BB8;&#x591A;&#x7EBF;&#x7A0B;&#xFF0C;&#x4F46;&#x4E3B;&#x7EBF;&#x7A0B;&#x662F;<code>JavaScript&#x5F15;&#x64CE;</code>&#xFF0C;&#x5176;&#x4ED6;&#x7EBF;&#x7A0B;&#x90FD;&#x662F;&#x4E3A;&#x4E86;&#x670D;&#x52A1;&#x4E3B;&#x7EBF;&#x7A0B;&#x800C;&#x5B58;&#x5728;&#x3002;&#x800C;&#x8FD9;&#x4E9B;&#x7EBF;&#x7A0B;&#x4E4B;&#x95F4;&#x901A;&#x8BAF;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#x901A;&#x8FC7;<strong>&#x53D1;&#x5E03;-&#x8BA2;&#x9605;</strong>&#x6765;&#x5B8C;&#x6210;&#x7684;&#xFF0C;&#x4E5F;&#x79F0;<strong>&#x6D88;&#x606F;&#x961F;&#x5217;</strong></p>
 </blockquote>
-<h5 id="异步编程的解决方案">异步编程的解决方案</h5>
-<p>最早的社区版本就是用的<strong>发布-订阅</strong>，后来改进到<code>deferred</code>对象，也就是早期的<code>Preomise</code>对象</p>
-<p>后来发布了官方规范<code>Promise</code> =&gt;  <code>Geneatator</code> =&gt;  <code>async/await</code></p>
-<p>他们的终极目的都是一样的——以同步的方式书写异步代码</p>
-<h5 id="发布-订阅模式与观察者模式的区别">发布-订阅模式与观察者模式的区别</h5>
-<p>发布订阅模式：可以完全解耦代码，发布者与订阅者之间没有必然联系，他们并不知道彼此的存在，只通过事件中心的消息进行通讯</p>
-<p>观察者模式：<strong>被观察者</strong><code>Subject</code>只需要去维护一套<strong>观察者集合</strong><code>Observer</code>，在状态发生变更时，去自动通知观察者集合里的<strong>观察者</strong><code>Watcher</code>，这个模式是松耦合的，他们是清楚彼此的存在的。</p>
-<h4 id="深入理解promise">深入理解promise</h4>
-<p>异步操作的回调嵌套也就是回调地狱</p>
-<p>当使用第三方异步函数，并给他传入异步之后的<strong>回调函数</strong>时，会产生可靠性丢失，其实是转移了控制权</p>
-<p>期待第三方函数可以做到：</p>
+<h5 id="&#x5F02;&#x6B65;&#x7F16;&#x7A0B;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;">&#x5F02;&#x6B65;&#x7F16;&#x7A0B;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;</h5>
+<p>&#x6700;&#x65E9;&#x7684;&#x793E;&#x533A;&#x7248;&#x672C;&#x5C31;&#x662F;&#x7528;&#x7684;<strong>&#x53D1;&#x5E03;-&#x8BA2;&#x9605;</strong>&#xFF0C;&#x540E;&#x6765;&#x6539;&#x8FDB;&#x5230;<code>deferred</code>&#x5BF9;&#x8C61;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x65E9;&#x671F;&#x7684;<code>Preomise</code>&#x5BF9;&#x8C61;</p>
+<p>&#x540E;&#x6765;&#x53D1;&#x5E03;&#x4E86;&#x5B98;&#x65B9;&#x89C4;&#x8303;<code>Promise</code> =&gt;  <code>Geneatator</code> =&gt;  <code>async/await</code></p>
+<p>&#x4ED6;&#x4EEC;&#x7684;&#x7EC8;&#x6781;&#x76EE;&#x7684;&#x90FD;&#x662F;&#x4E00;&#x6837;&#x7684;&#x2014;&#x2014;&#x4EE5;&#x540C;&#x6B65;&#x7684;&#x65B9;&#x5F0F;&#x4E66;&#x5199;&#x5F02;&#x6B65;&#x4EE3;&#x7801;</p>
+<h5 id="&#x53D1;&#x5E03;-&#x8BA2;&#x9605;&#x6A21;&#x5F0F;&#x4E0E;&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;&#x7684;&#x533A;&#x522B;">&#x53D1;&#x5E03;-&#x8BA2;&#x9605;&#x6A21;&#x5F0F;&#x4E0E;&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;&#x7684;&#x533A;&#x522B;</h5>
+<p>&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x6A21;&#x5F0F;&#xFF1A;&#x53EF;&#x4EE5;&#x5B8C;&#x5168;&#x89E3;&#x8026;&#x4EE3;&#x7801;&#xFF0C;&#x53D1;&#x5E03;&#x8005;&#x4E0E;&#x8BA2;&#x9605;&#x8005;&#x4E4B;&#x95F4;&#x6CA1;&#x6709;&#x5FC5;&#x7136;&#x8054;&#x7CFB;&#xFF0C;&#x4ED6;&#x4EEC;&#x5E76;&#x4E0D;&#x77E5;&#x9053;&#x5F7C;&#x6B64;&#x7684;&#x5B58;&#x5728;&#xFF0C;&#x53EA;&#x901A;&#x8FC7;&#x4E8B;&#x4EF6;&#x4E2D;&#x5FC3;&#x7684;&#x6D88;&#x606F;&#x8FDB;&#x884C;&#x901A;&#x8BAF;</p>
+<p>&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;&#xFF1A;<strong>&#x88AB;&#x89C2;&#x5BDF;&#x8005;</strong><code>Subject</code>&#x53EA;&#x9700;&#x8981;&#x53BB;&#x7EF4;&#x62A4;&#x4E00;&#x5957;<strong>&#x89C2;&#x5BDF;&#x8005;&#x96C6;&#x5408;</strong><code>Observer</code>&#xFF0C;&#x5728;&#x72B6;&#x6001;&#x53D1;&#x751F;&#x53D8;&#x66F4;&#x65F6;&#xFF0C;&#x53BB;&#x81EA;&#x52A8;&#x901A;&#x77E5;&#x89C2;&#x5BDF;&#x8005;&#x96C6;&#x5408;&#x91CC;&#x7684;<strong>&#x89C2;&#x5BDF;&#x8005;</strong><code>Watcher</code>&#xFF0C;&#x8FD9;&#x4E2A;&#x6A21;&#x5F0F;&#x662F;&#x677E;&#x8026;&#x5408;&#x7684;&#xFF0C;&#x4ED6;&#x4EEC;&#x662F;&#x6E05;&#x695A;&#x5F7C;&#x6B64;&#x7684;&#x5B58;&#x5728;&#x7684;&#x3002;</p>
+<h4 id="&#x6DF1;&#x5165;&#x7406;&#x89E3;promise">&#x6DF1;&#x5165;&#x7406;&#x89E3;promise</h4>
+<p>&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x7684;&#x56DE;&#x8C03;&#x5D4C;&#x5957;&#x4E5F;&#x5C31;&#x662F;&#x56DE;&#x8C03;&#x5730;&#x72F1;</p>
+<p>&#x5F53;&#x4F7F;&#x7528;&#x7B2C;&#x4E09;&#x65B9;&#x5F02;&#x6B65;&#x51FD;&#x6570;&#xFF0C;&#x5E76;&#x7ED9;&#x4ED6;&#x4F20;&#x5165;&#x5F02;&#x6B65;&#x4E4B;&#x540E;&#x7684;<strong>&#x56DE;&#x8C03;&#x51FD;&#x6570;</strong>&#x65F6;&#xFF0C;&#x4F1A;&#x4EA7;&#x751F;&#x53EF;&#x9760;&#x6027;&#x4E22;&#x5931;&#xFF0C;&#x5176;&#x5B9E;&#x662F;&#x8F6C;&#x79FB;&#x4E86;&#x63A7;&#x5236;&#x6743;</p>
+<p>&#x671F;&#x5F85;&#x7B2C;&#x4E09;&#x65B9;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#xFF1A;</p>
 <ul>
-<li>不会太早调用我的回调函数</li>
-<li>不会太迟调用我的回调函数</li>
-<li>会给我的回调提供必要的参数</li>
-<li>在我的回调失败的时候会提醒我</li>
+<li>&#x4E0D;&#x4F1A;&#x592A;&#x65E9;&#x8C03;&#x7528;&#x6211;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</li>
+<li>&#x4E0D;&#x4F1A;&#x592A;&#x8FDF;&#x8C03;&#x7528;&#x6211;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</li>
+<li>&#x4F1A;&#x7ED9;&#x6211;&#x7684;&#x56DE;&#x8C03;&#x63D0;&#x4F9B;&#x5FC5;&#x8981;&#x7684;&#x53C2;&#x6570;</li>
+<li>&#x5728;&#x6211;&#x7684;&#x56DE;&#x8C03;&#x5931;&#x8D25;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x63D0;&#x9192;&#x6211;</li>
 </ul>
-<p>但事实上我们控制不了以上的几点</p>
-<p>所以<code>Promise</code>诞生了，解决了<strong>可靠性丢失</strong>，但依然存在<strong>回调地狱</strong></p>
-<p><code>Promise</code>会在异步事件完成之后给我发送<strong>成功与否</strong>的通知，而不是我给它传入回调，控制权始终在自己手中。也就是发布订阅模式</p>
-<p><strong>缺点</strong></p>
+<p>&#x4F46;&#x4E8B;&#x5B9E;&#x4E0A;&#x6211;&#x4EEC;&#x63A7;&#x5236;&#x4E0D;&#x4E86;&#x4EE5;&#x4E0A;&#x7684;&#x51E0;&#x70B9;</p>
+<p>&#x6240;&#x4EE5;<code>Promise</code>&#x8BDE;&#x751F;&#x4E86;&#xFF0C;&#x89E3;&#x51B3;&#x4E86;<strong>&#x53EF;&#x9760;&#x6027;&#x4E22;&#x5931;</strong>&#xFF0C;&#x4F46;&#x4F9D;&#x7136;&#x5B58;&#x5728;<strong>&#x56DE;&#x8C03;&#x5730;&#x72F1;</strong></p>
+<p><code>Promise</code>&#x4F1A;&#x5728;&#x5F02;&#x6B65;&#x4E8B;&#x4EF6;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x7ED9;&#x6211;&#x53D1;&#x9001;<strong>&#x6210;&#x529F;&#x4E0E;&#x5426;</strong>&#x7684;&#x901A;&#x77E5;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6211;&#x7ED9;&#x5B83;&#x4F20;&#x5165;&#x56DE;&#x8C03;&#xFF0C;&#x63A7;&#x5236;&#x6743;&#x59CB;&#x7EC8;&#x5728;&#x81EA;&#x5DF1;&#x624B;&#x4E2D;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x6A21;&#x5F0F;</p>
+<p><strong>&#x7F3A;&#x70B9;</strong></p>
 <ul>
-<li>无法取消<code>Promise</code>，一旦新建他就会立即执行，无法中途取消</li>
-<li>如果不设置回调函数，<code>Promise</code>内部抛出的错误，就不会反映到外部</li>
-<li>当处于<code>pending</code>状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）</li>
+<li>&#x65E0;&#x6CD5;&#x53D6;&#x6D88;<code>Promise</code>&#xFF0C;&#x4E00;&#x65E6;&#x65B0;&#x5EFA;&#x4ED6;&#x5C31;&#x4F1A;&#x7ACB;&#x5373;&#x6267;&#x884C;&#xFF0C;&#x65E0;&#x6CD5;&#x4E2D;&#x9014;&#x53D6;&#x6D88;</li>
+<li>&#x5982;&#x679C;&#x4E0D;&#x8BBE;&#x7F6E;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;<code>Promise</code>&#x5185;&#x90E8;&#x629B;&#x51FA;&#x7684;&#x9519;&#x8BEF;&#xFF0C;&#x5C31;&#x4E0D;&#x4F1A;&#x53CD;&#x6620;&#x5230;&#x5916;&#x90E8;</li>
+<li>&#x5F53;&#x5904;&#x4E8E;<code>pending</code>&#x72B6;&#x6001;&#x65F6;&#xFF0C;&#x65E0;&#x6CD5;&#x5F97;&#x77E5;&#x76EE;&#x524D;&#x8FDB;&#x5C55;&#x5230;&#x54EA;&#x4E00;&#x4E2A;&#x9636;&#x6BB5;&#xFF08;&#x521A;&#x521A;&#x5F00;&#x59CB;&#x8FD8;&#x662F;&#x5373;&#x5C06;&#x5B8C;&#x6210;&#xFF09;</li>
 </ul>
-<h4 id="generator函数及其异步使用">Generator函数及其异步使用</h4>
-<p>非抢夺式任务</p>
-<p>进程在执行完成之后主动让出执行权</p>
-<p>抢夺式任务</p>
-<p>也就是通过时间片来决定执行权，也通过优先权</p>
-<p>协程 </p>
-<p>在用户明确放弃执行权的时候，才主动让出。</p>
-<p><img src="https://www.hualigs.cn/image/61d81bcee5e05.jpg" alt="协程描述"></p>
+<h4 id="generator&#x51FD;&#x6570;&#x53CA;&#x5176;&#x5F02;&#x6B65;&#x4F7F;&#x7528;">Generator&#x51FD;&#x6570;&#x53CA;&#x5176;&#x5F02;&#x6B65;&#x4F7F;&#x7528;</h4>
+<p>&#x975E;&#x62A2;&#x593A;&#x5F0F;&#x4EFB;&#x52A1;</p>
+<p>&#x8FDB;&#x7A0B;&#x5728;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x4E3B;&#x52A8;&#x8BA9;&#x51FA;&#x6267;&#x884C;&#x6743;</p>
+<p>&#x62A2;&#x593A;&#x5F0F;&#x4EFB;&#x52A1;</p>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x65F6;&#x95F4;&#x7247;&#x6765;&#x51B3;&#x5B9A;&#x6267;&#x884C;&#x6743;&#xFF0C;&#x4E5F;&#x901A;&#x8FC7;&#x4F18;&#x5148;&#x6743;</p>
+<p>&#x534F;&#x7A0B; </p>
+<p>&#x5728;&#x7528;&#x6237;&#x660E;&#x786E;&#x653E;&#x5F03;&#x6267;&#x884C;&#x6743;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x624D;&#x4E3B;&#x52A8;&#x8BA9;&#x51FA;&#x3002;</p>
+<p><img src="https://www.hualigs.cn/image/61d81bcee5e05.jpg" alt="&#x534F;&#x7A0B;&#x63CF;&#x8FF0;"></p>
 <pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">gen</span>(<span class="hljs-params">x</span>)</span>{
   <span class="hljs-keyword">var</span> y = <span class="hljs-keyword">yield</span> x + <span class="hljs-number">2</span>;
   <span class="hljs-keyword">return</span> y
@@ -713,29 +714,29 @@
 g.next() <span class="hljs-comment">// {value:3, done:false}</span>
 g.next() <span class="hljs-comment">// {value:undefined, done:true}</span>
 </code></pre>
-<h4 id="thunk函数的generator自执行器">Thunk函数的Generator自执行器</h4>
-<p>thunk函数将参数和回调分开，封装固定部分参数，再执行时传入回调参数。</p>
+<h4 id="thunk&#x51FD;&#x6570;&#x7684;generator&#x81EA;&#x6267;&#x884C;&#x5668;">Thunk&#x51FD;&#x6570;&#x7684;Generator&#x81EA;&#x6267;&#x884C;&#x5668;</h4>
+<p>thunk&#x51FD;&#x6570;&#x5C06;&#x53C2;&#x6570;&#x548C;&#x56DE;&#x8C03;&#x5206;&#x5F00;&#xFF0C;&#x5C01;&#x88C5;&#x56FA;&#x5B9A;&#x90E8;&#x5206;&#x53C2;&#x6570;&#xFF0C;&#x518D;&#x6267;&#x884C;&#x65F6;&#x4F20;&#x5165;&#x56DE;&#x8C03;&#x53C2;&#x6570;&#x3002;</p>
 <pre><code class="lang-javascript">test(a,b,cb)
 thunkTest = thunk(test)(a,b)
 thunkTest(cb1)
 thunkTest(cb2)...
-<span class="hljs-comment">// 实现Thunk</span>
+<span class="hljs-comment">// &#x5B9E;&#x73B0;Thunk</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">thunk</span>(<span class="hljs-params">fn</span>)</span>{
     <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
     <span class="hljs-keyword">let</span> args = [...arguments]
     <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">cb</span>)</span>{
-            fn.apply(<span class="hljs-built_in">this</span>,[...args,cb])
+            fn.apply(<span class="hljs-keyword">this</span>,[...args,cb])
     }
   }
 }
 </code></pre>
-<p>Generator自调用函数</p>
-<p>就是让生成器能够自动执行，将包含<code>next()</code>的回调传入下一个thunk化的异步函数中</p>
+<p>Generator&#x81EA;&#x8C03;&#x7528;&#x51FD;&#x6570;</p>
+<p>&#x5C31;&#x662F;&#x8BA9;&#x751F;&#x6210;&#x5668;&#x80FD;&#x591F;&#x81EA;&#x52A8;&#x6267;&#x884C;&#xFF0C;&#x5C06;&#x5305;&#x542B;<code>next()</code>&#x7684;&#x56DE;&#x8C03;&#x4F20;&#x5165;&#x4E0B;&#x4E00;&#x4E2A;thunk&#x5316;&#x7684;&#x5F02;&#x6B65;&#x51FD;&#x6570;&#x4E2D;</p>
 <pre><code class="lang-javascript">add(a,b,cb)
 cb = <span class="hljs-built_in">console</span>.log
 addThunk = Thunk(add)
-<span class="hljs-comment">// addThunk函数接受了固定参数之后还可以接收回调函数</span>
-<span class="hljs-comment">// 回调函数，是上一个yield的结果，传入的</span>
+<span class="hljs-comment">// addThunk&#x51FD;&#x6570;&#x63A5;&#x53D7;&#x4E86;&#x56FA;&#x5B9A;&#x53C2;&#x6570;&#x4E4B;&#x540E;&#x8FD8;&#x53EF;&#x4EE5;&#x63A5;&#x6536;&#x56DE;&#x8C03;&#x51FD;&#x6570;</span>
+<span class="hljs-comment">// &#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x662F;&#x4E0A;&#x4E00;&#x4E2A;yield&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x4F20;&#x5165;&#x7684;</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span>* <span class="hljs-title">gen</span>(<span class="hljs-params"></span>)</span>{
   <span class="hljs-keyword">yield</span> addThunk(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>)
   <span class="hljs-keyword">yield</span> addThunk(<span class="hljs-number">3</span>,<span class="hljs-number">4</span>)
@@ -746,51 +747,51 @@ addThunk = Thunk(add)
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">next</span>(<span class="hljs-params">err,data</span>)</span>{
         <span class="hljs-keyword">let</span> ret = g.next(data)
     <span class="hljs-keyword">if</span>(ret.done) <span class="hljs-keyword">return</span>
-    ret.value(next) <span class="hljs-comment">//这里是addThunk绑定了ab之后返回的函数</span>
-                                    <span class="hljs-comment">// 需要继续绑定回调，然后next被传进去了</span>
+    ret.value(next) <span class="hljs-comment">//&#x8FD9;&#x91CC;&#x662F;addThunk&#x7ED1;&#x5B9A;&#x4E86;ab&#x4E4B;&#x540E;&#x8FD4;&#x56DE;&#x7684;&#x51FD;&#x6570;</span>
+                                    <span class="hljs-comment">// &#x9700;&#x8981;&#x7EE7;&#x7EED;&#x7ED1;&#x5B9A;&#x56DE;&#x8C03;&#xFF0C;&#x7136;&#x540E;next&#x88AB;&#x4F20;&#x8FDB;&#x53BB;&#x4E86;</span>
   }
   next()
 }  
 run(gen)
 </code></pre>
-<h4 id="co模块源码分析">co模块源码分析</h4>
-<h4 id="深入理解async-await">深入理解async await</h4>
-<p>异步终极解决方案，Generator的语法糖</p>
+<h4 id="co&#x6A21;&#x5757;&#x6E90;&#x7801;&#x5206;&#x6790;">co&#x6A21;&#x5757;&#x6E90;&#x7801;&#x5206;&#x6790;</h4>
+<h4 id="&#x6DF1;&#x5165;&#x7406;&#x89E3;async-await">&#x6DF1;&#x5165;&#x7406;&#x89E3;async await</h4>
+<p>&#x5F02;&#x6B65;&#x7EC8;&#x6781;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;Generator&#x7684;&#x8BED;&#x6CD5;&#x7CD6;</p>
 <blockquote>
-<p>语法糖：用更简练的言语表达复杂的含义，在得到广泛接受的情况之下，可以提升交流的效率</p>
+<p>&#x8BED;&#x6CD5;&#x7CD6;&#xFF1A;&#x7528;&#x66F4;&#x7B80;&#x7EC3;&#x7684;&#x8A00;&#x8BED;&#x8868;&#x8FBE;&#x590D;&#x6742;&#x7684;&#x542B;&#x4E49;&#xFF0C;&#x5728;&#x5F97;&#x5230;&#x5E7F;&#x6CDB;&#x63A5;&#x53D7;&#x7684;&#x60C5;&#x51B5;&#x4E4B;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x63D0;&#x5347;&#x4EA4;&#x6D41;&#x7684;&#x6548;&#x7387;</p>
 </blockquote>
-<h5 id="generator与async的差异"><code>Generator</code>与<code>async</code>的差异</h5>
-<p><code>async</code>自带执行器</p>
-<p><code>async</code>清晰的语义</p>
-<p><code>async</code>的返回值是<code>Promise</code>对象，而<code>Genarator</code>的返回值是<code>Iterator</code>对象</p>
-<p><code>async</code>的<code>await</code>命令后面，可以是<code>Promise</code>对象和原始类型的值（数值、字符串和布尔值，但这时会自动转换成立即<code>resolved</code>的<code>Promise</code>对象）</p>
-<h5 id="await线程睡眠">await线程睡眠</h5>
-<p>在执行到<code>await</code>后边的异步任务时，会阻塞其他<code>await</code>操作，直到异步任务完成，才能进行下一个<code>await</code></p>
-<h5 id="async的错误处理">async的错误处理</h5>
+<h5 id="generator&#x4E0E;async&#x7684;&#x5DEE;&#x5F02;"><code>Generator</code>&#x4E0E;<code>async</code>&#x7684;&#x5DEE;&#x5F02;</h5>
+<p><code>async</code>&#x81EA;&#x5E26;&#x6267;&#x884C;&#x5668;</p>
+<p><code>async</code>&#x6E05;&#x6670;&#x7684;&#x8BED;&#x4E49;</p>
+<p><code>async</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;<code>Promise</code>&#x5BF9;&#x8C61;&#xFF0C;&#x800C;<code>Genarator</code>&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x662F;<code>Iterator</code>&#x5BF9;&#x8C61;</p>
+<p><code>async</code>&#x7684;<code>await</code>&#x547D;&#x4EE4;&#x540E;&#x9762;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;<code>Promise</code>&#x5BF9;&#x8C61;&#x548C;&#x539F;&#x59CB;&#x7C7B;&#x578B;&#x7684;&#x503C;&#xFF08;&#x6570;&#x503C;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x548C;&#x5E03;&#x5C14;&#x503C;&#xFF0C;&#x4F46;&#x8FD9;&#x65F6;&#x4F1A;&#x81EA;&#x52A8;&#x8F6C;&#x6362;&#x6210;&#x7ACB;&#x5373;<code>resolved</code>&#x7684;<code>Promise</code>&#x5BF9;&#x8C61;&#xFF09;</p>
+<h5 id="await&#x7EBF;&#x7A0B;&#x7761;&#x7720;">await&#x7EBF;&#x7A0B;&#x7761;&#x7720;</h5>
+<p>&#x5728;&#x6267;&#x884C;&#x5230;<code>await</code>&#x540E;&#x8FB9;&#x7684;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x65F6;&#xFF0C;&#x4F1A;&#x963B;&#x585E;&#x5176;&#x4ED6;<code>await</code>&#x64CD;&#x4F5C;&#xFF0C;&#x76F4;&#x5230;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x5B8C;&#x6210;&#xFF0C;&#x624D;&#x80FD;&#x8FDB;&#x884C;&#x4E0B;&#x4E00;&#x4E2A;<code>await</code></p>
+<h5 id="async&#x7684;&#x9519;&#x8BEF;&#x5904;&#x7406;">async&#x7684;&#x9519;&#x8BEF;&#x5904;&#x7406;</h5>
 <ol>
-<li><p>通过<code>try{}catch(e){}</code>来捕捉错误</p>
+<li><p>&#x901A;&#x8FC7;<code>try{}catch(e){}</code>&#x6765;&#x6355;&#x6349;&#x9519;&#x8BEF;</p>
 </li>
-<li><p>在<code>await</code>语句后边跟上<code>.catch()</code></p>
+<li><p>&#x5728;<code>await</code>&#x8BED;&#x53E5;&#x540E;&#x8FB9;&#x8DDF;&#x4E0A;<code>.catch()</code></p>
 </li>
 </ol>
-<h5 id="async的并发处理">async的并发处理</h5>
+<h5 id="async&#x7684;&#x5E76;&#x53D1;&#x5904;&#x7406;">async&#x7684;&#x5E76;&#x53D1;&#x5904;&#x7406;</h5>
 <pre><code class="lang-javascript"><span class="hljs-keyword">let</span> foo = <span class="hljs-keyword">await</span> getFoo()
 <span class="hljs-keyword">let</span> bar = <span class="hljs-keyword">await</span> getBar()
-<span class="hljs-comment">// 这样子书写，getBar会被getFoo阻塞，</span>
-<span class="hljs-comment">// 但实际上在两个没有关联的操作间这种阻塞是没有必要的</span>
-<span class="hljs-comment">// 可以通过Promise.all()</span>
+<span class="hljs-comment">// &#x8FD9;&#x6837;&#x5B50;&#x4E66;&#x5199;&#xFF0C;getBar&#x4F1A;&#x88AB;getFoo&#x963B;&#x585E;&#xFF0C;</span>
+<span class="hljs-comment">// &#x4F46;&#x5B9E;&#x9645;&#x4E0A;&#x5728;&#x4E24;&#x4E2A;&#x6CA1;&#x6709;&#x5173;&#x8054;&#x7684;&#x64CD;&#x4F5C;&#x95F4;&#x8FD9;&#x79CD;&#x963B;&#x585E;&#x662F;&#x6CA1;&#x6709;&#x5FC5;&#x8981;&#x7684;</span>
+<span class="hljs-comment">// &#x53EF;&#x4EE5;&#x901A;&#x8FC7;Promise.all()</span>
 <span class="hljs-keyword">let</span> [foo,bar] = <span class="hljs-keyword">await</span> <span class="hljs-built_in">Promise</span>.all([getFoo(),getBar()])
-<span class="hljs-comment">// 或者直接进行这个异步操作，在拿到结果后，再await</span>
+<span class="hljs-comment">// &#x6216;&#x8005;&#x76F4;&#x63A5;&#x8FDB;&#x884C;&#x8FD9;&#x4E2A;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#xFF0C;&#x5728;&#x62FF;&#x5230;&#x7ED3;&#x679C;&#x540E;&#xFF0C;&#x518D;await</span>
 <span class="hljs-keyword">let</span> fooPromise = getFoo()
 <span class="hljs-keyword">let</span> barPromise = getBar()
 <span class="hljs-keyword">let</span> foo = <span class="hljs-keyword">await</span> fooPromise
 <span class="hljs-keyword">let</span> bar = <span class="hljs-keyword">await</span> barPromise
 </code></pre>
-<h5 id="深入理解async">深入理解<code>async</code></h5>
+<h5 id="&#x6DF1;&#x5165;&#x7406;&#x89E3;async">&#x6DF1;&#x5165;&#x7406;&#x89E3;<code>async</code></h5>
 <pre><code class="lang-javascript"><span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params">args</span>)</span>{
   <span class="hljs-comment">//...</span>
 }
-<span class="hljs-comment">// 等同于</span>
+<span class="hljs-comment">// &#x7B49;&#x540C;&#x4E8E;</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params">args</span>)</span>{
   <span class="hljs-keyword">return</span> packing(<span class="hljs-function"><span class="hljs-keyword">function</span>* (<span class="hljs-params"></span>)</span>{
 
@@ -798,36 +799,36 @@ run(gen)
 } 
 <span class="hljs-comment">// packing</span>
 </code></pre>
-<h4 id="手写promise">手写promise</h4>
-<p>高频面试题</p>
+<h4 id="&#x624B;&#x5199;promise">&#x624B;&#x5199;promise</h4>
+<p>&#x9AD8;&#x9891;&#x9762;&#x8BD5;&#x9898;</p>
 <ol>
-<li><p>Promise解决了什么问题？</p>
-<p>异步任务执行信任问题，地狱嵌套</p>
+<li><p>Promise&#x89E3;&#x51B3;&#x4E86;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#xFF1F;</p>
+<p>&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x4FE1;&#x4EFB;&#x95EE;&#x9898;&#xFF0C;&#x5730;&#x72F1;&#x5D4C;&#x5957;</p>
 </li>
-<li><p>Promise在事件循环中的执行过程是怎样的？</p>
-<p>加入到微任务队列</p>
+<li><p>Promise&#x5728;&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;&#x4E2D;&#x7684;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x662F;&#x600E;&#x6837;&#x7684;&#xFF1F;</p>
+<p>&#x52A0;&#x5165;&#x5230;&#x5FAE;&#x4EFB;&#x52A1;&#x961F;&#x5217;</p>
 </li>
-<li><p>Promise有什么缺陷，可以如何解决？</p>
-<p>无法取消<code>Promise</code>，一旦新建他就会立即执行，无法中途取消</p>
-<p>如果不设置回调函数，<code>Promise</code>内部抛出的错误，就不会反映到外部</p>
-<p>当处于<code>pending</code>状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）</p>
+<li><p>Promise&#x6709;&#x4EC0;&#x4E48;&#x7F3A;&#x9677;&#xFF0C;&#x53EF;&#x4EE5;&#x5982;&#x4F55;&#x89E3;&#x51B3;&#xFF1F;</p>
+<p>&#x65E0;&#x6CD5;&#x53D6;&#x6D88;<code>Promise</code>&#xFF0C;&#x4E00;&#x65E6;&#x65B0;&#x5EFA;&#x4ED6;&#x5C31;&#x4F1A;&#x7ACB;&#x5373;&#x6267;&#x884C;&#xFF0C;&#x65E0;&#x6CD5;&#x4E2D;&#x9014;&#x53D6;&#x6D88;</p>
+<p>&#x5982;&#x679C;&#x4E0D;&#x8BBE;&#x7F6E;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;<code>Promise</code>&#x5185;&#x90E8;&#x629B;&#x51FA;&#x7684;&#x9519;&#x8BEF;&#xFF0C;&#x5C31;&#x4E0D;&#x4F1A;&#x53CD;&#x6620;&#x5230;&#x5916;&#x90E8;</p>
+<p>&#x5F53;&#x5904;&#x4E8E;<code>pending</code>&#x72B6;&#x6001;&#x65F6;&#xFF0C;&#x65E0;&#x6CD5;&#x5F97;&#x77E5;&#x76EE;&#x524D;&#x8FDB;&#x5C55;&#x5230;&#x54EA;&#x4E00;&#x4E2A;&#x9636;&#x6BB5;&#xFF08;&#x521A;&#x521A;&#x5F00;&#x59CB;&#x8FD8;&#x662F;&#x5373;&#x5C06;&#x5B8C;&#x6210;&#xFF09;</p>
 </li>
 </ol>
 <ol>
-<li>手写符合Promise/A+规范的Promise</li>
+<li>&#x624B;&#x5199;&#x7B26;&#x5408;Promise/A+&#x89C4;&#x8303;&#x7684;Promise</li>
 </ol>
-<p>Promise的规范：</p>
+<p>Promise&#x7684;&#x89C4;&#x8303;&#xFF1A;</p>
 <ol>
-<li>三种状态，只有异步操作的结果可以决定当前是哪一种状态</li>
-<li>状态的变化不可逆，且只有两种情况。</li>
-<li>一个promise必须提供一个then方法，用来获取当前异步操作的value或error</li>
-<li>then方法接受两个参数onFulfilled，onRejected</li>
-<li>then方法返回的是一个新的Promise实例</li>
+<li>&#x4E09;&#x79CD;&#x72B6;&#x6001;&#xFF0C;&#x53EA;&#x6709;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x7684;&#x7ED3;&#x679C;&#x53EF;&#x4EE5;&#x51B3;&#x5B9A;&#x5F53;&#x524D;&#x662F;&#x54EA;&#x4E00;&#x79CD;&#x72B6;&#x6001;</li>
+<li>&#x72B6;&#x6001;&#x7684;&#x53D8;&#x5316;&#x4E0D;&#x53EF;&#x9006;&#xFF0C;&#x4E14;&#x53EA;&#x6709;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#x3002;</li>
+<li>&#x4E00;&#x4E2A;promise&#x5FC5;&#x987B;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;then&#x65B9;&#x6CD5;&#xFF0C;&#x7528;&#x6765;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#x7684;value&#x6216;error</li>
+<li>then&#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x53C2;&#x6570;onFulfilled&#xFF0C;onRejected</li>
+<li>then&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;Promise&#x5B9E;&#x4F8B;</li>
 </ol>
 <pre><code class="lang-javascript"><span class="hljs-keyword">var</span> cache = {}
 <span class="hljs-keyword">var</span> container = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
   flags = <span class="hljs-keyword">typeof</span> flags == <span class="hljs-string">&quot;string&quot;</span> ? (cache[flags] || createFlags(flags)): exted({},flags)
-  <span class="hljs-keyword">var</span> stack = [] <span class="hljs-comment">//回调列表</span>
+  <span class="hljs-keyword">var</span> stack = [] <span class="hljs-comment">//&#x56DE;&#x8C03;&#x5217;&#x8868;</span>
   <span class="hljs-keyword">var</span> fire = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>)</span>{
     <span class="hljs-keyword">var</span> len = stack.length
     <span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>
@@ -836,11 +837,11 @@ run(gen)
     }
   }
   <span class="hljs-keyword">var</span> self = {
-    <span class="hljs-attr">add</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    add: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
       (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">args</span>)</span>{
-        <span class="hljs-built_in">Array</span>.from(args).forEach(<span class="hljs-function">(<span class="hljs-params">arg</span>)=&gt;</span>{
+        <span class="hljs-built_in">Array</span>.from(args).forEach((arg)=&gt;{
           <span class="hljs-keyword">if</span>(toString.call(arg) === <span class="hljs-string">&quot;[object Function]&quot;</span>){
-            <span class="hljs-comment">// 检测重复的回调</span>
+            <span class="hljs-comment">// &#x68C0;&#x6D4B;&#x91CD;&#x590D;&#x7684;&#x56DE;&#x8C03;</span>
             <span class="hljs-keyword">if</span>(!self.has(arg)){
                           stack.push(arg)
 
@@ -852,17 +853,17 @@ run(gen)
         })
       })(<span class="hljs-built_in">arguments</span>)
     },
-    <span class="hljs-comment">// 这里一定要传值，区分resolve和reject</span>
-    <span class="hljs-attr">startupWith</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">ctx,args</span>)</span>{
+    <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x4E00;&#x5B9A;&#x8981;&#x4F20;&#x503C;&#xFF0C;&#x533A;&#x5206;resolve&#x548C;reject</span>
+    startupWith: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">ctx,args</span>)</span>{
       args = args || []
       args = [ctx,args]
       fire(args)
     }
-    <span class="hljs-attr">startup</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"><span class="hljs-built_in">this</span></span>)</span>{
-      self.startupWith(<span class="hljs-built_in">this</span>,<span class="hljs-built_in">arguments</span>)
+    startup: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">this</span>)</span>{
+      self.startupWith(<span class="hljs-keyword">this</span>,<span class="hljs-built_in">arguments</span>)
     }
-    <span class="hljs-attr">has</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">fn</span>)</span>{
-      <span class="hljs-keyword">return</span> stack.indexOf(fn) &gt; -<span class="hljs-number">1</span>
+    has: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">fn</span>)</span>{
+      <span class="hljs-keyword">return</span> stack.indexOf(fn) &gt; <span class="hljs-number">-1</span>
     }
   }
   <span class="hljs-keyword">return</span> self
@@ -874,169 +875,169 @@ run(gen)
   })
 }
 </code></pre>
-<h5 id="再次手写">再次手写</h5>
+<h5 id="&#x518D;&#x6B21;&#x624B;&#x5199;">&#x518D;&#x6B21;&#x624B;&#x5199;</h5>
 <pre><code class="lang-javascript"><span class="hljs-string">``</span><span class="hljs-string">`
 
 
 
-#### Web Worker多线程机制
+#### Web Worker&#x591A;&#x7EBF;&#x7A0B;&#x673A;&#x5236;
 
-单线程无法完全发挥出多核CPU的性能
+&#x5355;&#x7EBF;&#x7A0B;&#x65E0;&#x6CD5;&#x5B8C;&#x5168;&#x53D1;&#x6325;&#x51FA;&#x591A;&#x6838;CPU&#x7684;&#x6027;&#x80FD;
 
-主线程碰到费时的操作时，分配给Web Worker线程去执行，等到执行完再将结果返回给主线程
+&#x4E3B;&#x7EBF;&#x7A0B;&#x78B0;&#x5230;&#x8D39;&#x65F6;&#x7684;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x5206;&#x914D;&#x7ED9;Web Worker&#x7EBF;&#x7A0B;&#x53BB;&#x6267;&#x884C;&#xFF0C;&#x7B49;&#x5230;&#x6267;&#x884C;&#x5B8C;&#x518D;&#x5C06;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x7ED9;&#x4E3B;&#x7EBF;&#x7A0B;
 
-##### 历史
+##### &#x5386;&#x53F2;
 
 2009-firefox
 
-2012-IE浏览器，以及其他浏览器
+2012-IE&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x4EE5;&#x53CA;&#x5176;&#x4ED6;&#x6D4F;&#x89C8;&#x5668;
 
-2015发布的版本沿用至今
+2015&#x53D1;&#x5E03;&#x7684;&#x7248;&#x672C;&#x6CBF;&#x7528;&#x81F3;&#x4ECA;
 
-##### DedicatedWorker和SharedWorker两种规范 
+##### DedicatedWorker&#x548C;SharedWorker&#x4E24;&#x79CD;&#x89C4;&#x8303; 
 
-SharedWorker：所有页面都可以访问SharedWorker；兼用性特别差
+SharedWorker&#xFF1A;&#x6240;&#x6709;&#x9875;&#x9762;&#x90FD;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;SharedWorker&#xFF1B;&#x517C;&#x7528;&#x6027;&#x7279;&#x522B;&#x5DEE;
 
-DedicatedWorker：单个页面只能访问当前页面下的Worker
+DedicatedWorker&#xFF1A;&#x5355;&#x4E2A;&#x9875;&#x9762;&#x53EA;&#x80FD;&#x8BBF;&#x95EE;&#x5F53;&#x524D;&#x9875;&#x9762;&#x4E0B;&#x7684;Worker
 
-##### 用户感知性能模型RAIL
+##### &#x7528;&#x6237;&#x611F;&#x77E5;&#x6027;&#x80FD;&#x6A21;&#x578B;RAIL
 
-&gt; 同步JS执行时间不能过长，量化来说，播放动画时建议小于16ms，用户操作相应建议小于100ms，页面打开到呈现内容建议小于1000ms
+&gt; &#x540C;&#x6B65;JS&#x6267;&#x884C;&#x65F6;&#x95F4;&#x4E0D;&#x80FD;&#x8FC7;&#x957F;&#xFF0C;&#x91CF;&#x5316;&#x6765;&#x8BF4;&#xFF0C;&#x64AD;&#x653E;&#x52A8;&#x753B;&#x65F6;&#x5EFA;&#x8BAE;&#x5C0F;&#x4E8E;16ms&#xFF0C;&#x7528;&#x6237;&#x64CD;&#x4F5C;&#x76F8;&#x5E94;&#x5EFA;&#x8BAE;&#x5C0F;&#x4E8E;100ms&#xFF0C;&#x9875;&#x9762;&#x6253;&#x5F00;&#x5230;&#x5448;&#x73B0;&#x5185;&#x5BB9;&#x5EFA;&#x8BAE;&#x5C0F;&#x4E8E;1000ms
 
-一个渲染帧也就是16ms
+&#x4E00;&#x4E2A;&#x6E32;&#x67D3;&#x5E27;&#x4E5F;&#x5C31;&#x662F;16ms
 
-渲染帧流程：
+&#x6E32;&#x67D3;&#x5E27;&#x6D41;&#x7A0B;&#xFF1A;
 
-![流程](https://www.hualigs.cn/image/61de49eda9cce.jpg)
+![&#x6D41;&#x7A0B;](https://www.hualigs.cn/image/61de49eda9cce.jpg)
 
-如果加载js时间超过16ms，那就会失去一个渲染帧，页面就会出现卡顿。
+&#x5982;&#x679C;&#x52A0;&#x8F7D;js&#x65F6;&#x95F4;&#x8D85;&#x8FC7;16ms&#xFF0C;&#x90A3;&#x5C31;&#x4F1A;&#x5931;&#x53BB;&#x4E00;&#x4E2A;&#x6E32;&#x67D3;&#x5E27;&#xFF0C;&#x9875;&#x9762;&#x5C31;&#x4F1A;&#x51FA;&#x73B0;&#x5361;&#x987F;&#x3002;
 
-优化：
+&#x4F18;&#x5316;&#xFF1A;
 
-![优化](https://www.hualigs.cn/image/61de4a248da1f.jpg)
+![&#x4F18;&#x5316;](https://www.hualigs.cn/image/61de4a248da1f.jpg)
 
-##### 同步任务的异步化执行
+##### &#x540C;&#x6B65;&#x4EFB;&#x52A1;&#x7684;&#x5F02;&#x6B65;&#x5316;&#x6267;&#x884C;
 
-![worker的工作原理](https://www.hualigs.cn/image/61de4456456b0.jpg)
+![worker&#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;](https://www.hualigs.cn/image/61de4456456b0.jpg)
 
-将可能耗时过长的Jank Job，移到Woker 线程，从而实现主线程和Worker线程的并行执行，直到Jank Job返回结果给到主线程
+&#x5C06;&#x53EF;&#x80FD;&#x8017;&#x65F6;&#x8FC7;&#x957F;&#x7684;Jank Job&#xFF0C;&#x79FB;&#x5230;Woker &#x7EBF;&#x7A0B;&#xFF0C;&#x4ECE;&#x800C;&#x5B9E;&#x73B0;&#x4E3B;&#x7EBF;&#x7A0B;&#x548C;Worker&#x7EBF;&#x7A0B;&#x7684;&#x5E76;&#x884C;&#x6267;&#x884C;&#xFF0C;&#x76F4;&#x5230;Jank Job&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x7ED9;&#x5230;&#x4E3B;&#x7EBF;&#x7A0B;
 
-##### Worker对于性能提升
+##### Worker&#x5BF9;&#x4E8E;&#x6027;&#x80FD;&#x63D0;&#x5347;
 
-其实并没有性能提升，性能只于CPU相关，单核CPU就慢，多核CPU就快。其实在分配Woker线程的时候也需要时间、空间，包括线程之间的通讯，都需要额外的性能；当然这在多核CPU上是不算什么，它们会并行执行；而在单核CPU上它们是通过时间片机制轮转的。
+&#x5176;&#x5B9E;&#x5E76;&#x6CA1;&#x6709;&#x6027;&#x80FD;&#x63D0;&#x5347;&#xFF0C;&#x6027;&#x80FD;&#x53EA;&#x4E8E;CPU&#x76F8;&#x5173;&#xFF0C;&#x5355;&#x6838;CPU&#x5C31;&#x6162;&#xFF0C;&#x591A;&#x6838;CPU&#x5C31;&#x5FEB;&#x3002;&#x5176;&#x5B9E;&#x5728;&#x5206;&#x914D;Woker&#x7EBF;&#x7A0B;&#x7684;&#x65F6;&#x5019;&#x4E5F;&#x9700;&#x8981;&#x65F6;&#x95F4;&#x3001;&#x7A7A;&#x95F4;&#xFF0C;&#x5305;&#x62EC;&#x7EBF;&#x7A0B;&#x4E4B;&#x95F4;&#x7684;&#x901A;&#x8BAF;&#xFF0C;&#x90FD;&#x9700;&#x8981;&#x989D;&#x5916;&#x7684;&#x6027;&#x80FD;&#xFF1B;&#x5F53;&#x7136;&#x8FD9;&#x5728;&#x591A;&#x6838;CPU&#x4E0A;&#x662F;&#x4E0D;&#x7B97;&#x4EC0;&#x4E48;&#xFF0C;&#x5B83;&#x4EEC;&#x4F1A;&#x5E76;&#x884C;&#x6267;&#x884C;&#xFF1B;&#x800C;&#x5728;&#x5355;&#x6838;CPU&#x4E0A;&#x5B83;&#x4EEC;&#x662F;&#x901A;&#x8FC7;&#x65F6;&#x95F4;&#x7247;&#x673A;&#x5236;&#x8F6E;&#x8F6C;&#x7684;&#x3002;
 
-Woker所提升的是用户体验，是UI渲染流畅度。
+Woker&#x6240;&#x63D0;&#x5347;&#x7684;&#x662F;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#xFF0C;&#x662F;UI&#x6E32;&#x67D3;&#x6D41;&#x7545;&#x5EA6;&#x3002;
 
-##### Worker的通讯
+##### Worker&#x7684;&#x901A;&#x8BAF;
 
-通讯开销：在主线程post =&gt; woker的onMessage接收，这中间是有时间差的
+&#x901A;&#x8BAF;&#x5F00;&#x9500;&#xFF1A;&#x5728;&#x4E3B;&#x7EBF;&#x7A0B;post =&gt; woker&#x7684;onMessage&#x63A5;&#x6536;&#xFF0C;&#x8FD9;&#x4E2D;&#x95F4;&#x662F;&#x6709;&#x65F6;&#x95F4;&#x5DEE;&#x7684;
 
 `</span><span class="hljs-string">``</span>javascript
 <span class="hljs-comment">//main.js</span>
 <span class="hljs-keyword">const</span> worker = <span class="hljs-keyword">new</span> Worker(<span class="hljs-string">&apos;./worker.js&apos;</span>)
 worker.postMessage(<span class="hljs-string">&apos;hello&apos;</span>)
-worker.onmessage = <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> {
+worker.onmessage = (event) =&gt; {
   <span class="hljs-built_in">console</span>.log(event.data) <span class="hljs-comment">//world</span>
 }
 <span class="hljs-comment">//worker.js</span>
-self.onmessage = <span class="hljs-function">(<span class="hljs-params">event</span>) =&gt;</span> {
+self.onmessage = (event) =&gt; {
   <span class="hljs-built_in">console</span>.log(event.data) <span class="hljs-comment">//hello</span>
   postMessage(<span class="hljs-string">&apos;world&apos;</span>)
 }
 </code></pre>
-<h5 id="worker的运行环境">Worker的运行环境</h5>
-<p><img src="https://www.hualigs.cn/image/61de47dfcb78a.jpg" alt="环境对比"></p>
-<p>相同点</p>
-<p><img src="https://www.hualigs.cn/image/61de480b875ec.jpg" alt="相同点"></p>
-<p>差异点</p>
-<p><img src="https://www.hualigs.cn/image/61de484eb2a84.jpg" alt="差异"></p>
-<h4 id="rxjs复杂异步场景">Rxjs复杂异步场景</h4>
-<h5 id="reactive-extension推">Reactive Extension(推)</h5>
-<p>对很多语言都有支持，是实践响应式编程的一套工具。</p>
-<p><code>Rxjs</code>是<strong>推送数据</strong>的，不管是异步还是同步数据。</p>
+<h5 id="worker&#x7684;&#x8FD0;&#x884C;&#x73AF;&#x5883;">Worker&#x7684;&#x8FD0;&#x884C;&#x73AF;&#x5883;</h5>
+<p><img src="https://www.hualigs.cn/image/61de47dfcb78a.jpg" alt="&#x73AF;&#x5883;&#x5BF9;&#x6BD4;"></p>
+<p>&#x76F8;&#x540C;&#x70B9;</p>
+<p><img src="https://www.hualigs.cn/image/61de480b875ec.jpg" alt="&#x76F8;&#x540C;&#x70B9;"></p>
+<p>&#x5DEE;&#x5F02;&#x70B9;</p>
+<p><img src="https://www.hualigs.cn/image/61de484eb2a84.jpg" alt="&#x5DEE;&#x5F02;"></p>
+<h4 id="rxjs&#x590D;&#x6742;&#x5F02;&#x6B65;&#x573A;&#x666F;">Rxjs&#x590D;&#x6742;&#x5F02;&#x6B65;&#x573A;&#x666F;</h4>
+<h5 id="reactive-extension&#x63A8;">Reactive Extension(&#x63A8;)</h5>
+<p>&#x5BF9;&#x5F88;&#x591A;&#x8BED;&#x8A00;&#x90FD;&#x6709;&#x652F;&#x6301;&#xFF0C;&#x662F;&#x5B9E;&#x8DF5;&#x54CD;&#x5E94;&#x5F0F;&#x7F16;&#x7A0B;&#x7684;&#x4E00;&#x5957;&#x5DE5;&#x5177;&#x3002;</p>
+<p><code>Rxjs</code>&#x662F;<strong>&#x63A8;&#x9001;&#x6570;&#x636E;</strong>&#x7684;&#xFF0C;&#x4E0D;&#x7BA1;&#x662F;&#x5F02;&#x6B65;&#x8FD8;&#x662F;&#x540C;&#x6B65;&#x6570;&#x636E;&#x3002;</p>
 <ul>
-<li>数据流抽象了很多现实问题</li>
-<li>擅长处理异步操作</li>
-<li>把复杂问题分解成简单问题的组合</li>
+<li>&#x6570;&#x636E;&#x6D41;&#x62BD;&#x8C61;&#x4E86;&#x5F88;&#x591A;&#x73B0;&#x5B9E;&#x95EE;&#x9898;</li>
+<li>&#x64C5;&#x957F;&#x5904;&#x7406;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;</li>
+<li>&#x628A;&#x590D;&#x6742;&#x95EE;&#x9898;&#x5206;&#x89E3;&#x6210;&#x7B80;&#x5355;&#x95EE;&#x9898;&#x7684;&#x7EC4;&#x5408;</li>
 </ul>
-<p><code>Observable</code>和<code>Observer</code></p>
-<p><strong>可被观察者</strong>和<strong>观察者</strong>，连接两者的桥梁是<code>Observable</code>对象的函数<code>subscribe</code>；<code>Rxjs</code>中的数据流就是<code>Observable</code>对象，它实现了以下两种设计模式</p>
+<p><code>Observable</code>&#x548C;<code>Observer</code></p>
+<p><strong>&#x53EF;&#x88AB;&#x89C2;&#x5BDF;&#x8005;</strong>&#x548C;<strong>&#x89C2;&#x5BDF;&#x8005;</strong>&#xFF0C;&#x8FDE;&#x63A5;&#x4E24;&#x8005;&#x7684;&#x6865;&#x6881;&#x662F;<code>Observable</code>&#x5BF9;&#x8C61;&#x7684;&#x51FD;&#x6570;<code>subscribe</code>&#xFF1B;<code>Rxjs</code>&#x4E2D;&#x7684;&#x6570;&#x636E;&#x6D41;&#x5C31;&#x662F;<code>Observable</code>&#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x5B9E;&#x73B0;&#x4E86;&#x4EE5;&#x4E0B;&#x4E24;&#x79CD;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;</p>
 <ul>
-<li><p>观察者模式</p>
-<p><img src="https://www.hualigs.cn/image/61decc76149c3.jpg" alt="观察者"></p>
+<li><p>&#x89C2;&#x5BDF;&#x8005;&#x6A21;&#x5F0F;</p>
+<p><img src="https://www.hualigs.cn/image/61decc76149c3.jpg" alt="&#x89C2;&#x5BDF;&#x8005;"></p>
 </li>
-<li><p>迭代器模式</p>
-<p>能够遍历一个数据集合的对象，因为数据集合的实现方式很多，可以是一个数组，也可以是一个树形结构，也可以是一个单向链表……迭代器的作用及时提供一个通用的接口，让使用者完全不用关心这个数据集合的具体实现方式</p>
-<p>通常包含这样几个函数</p>
+<li><p>&#x8FED;&#x4EE3;&#x5668;&#x6A21;&#x5F0F;</p>
+<p>&#x80FD;&#x591F;&#x904D;&#x5386;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#x5408;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x56E0;&#x4E3A;&#x6570;&#x636E;&#x96C6;&#x5408;&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x5F88;&#x591A;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x6811;&#x5F62;&#x7ED3;&#x6784;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x5355;&#x5411;&#x94FE;&#x8868;&#x2026;&#x2026;&#x8FED;&#x4EE3;&#x5668;&#x7684;&#x4F5C;&#x7528;&#x53CA;&#x65F6;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x8BA9;&#x4F7F;&#x7528;&#x8005;&#x5B8C;&#x5168;&#x4E0D;&#x7528;&#x5173;&#x5FC3;&#x8FD9;&#x4E2A;&#x6570;&#x636E;&#x96C6;&#x5408;&#x7684;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;</p>
+<p>&#x901A;&#x5E38;&#x5305;&#x542B;&#x8FD9;&#x6837;&#x51E0;&#x4E2A;&#x51FD;&#x6570;</p>
 <ul>
-<li><code>getCurrent</code>，获取当前被游标所指向的元素</li>
-<li><code>next</code>，将游标移动到下一个元素，调用这个函数之后，<code>getCurrent</code>获得的元素就会不同。</li>
-<li><code>isDone</code>判断是否已经遍历完所有的元素</li>
+<li><code>getCurrent</code>&#xFF0C;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x88AB;&#x6E38;&#x6807;&#x6240;&#x6307;&#x5411;&#x7684;&#x5143;&#x7D20;</li>
+<li><code>next</code>&#xFF0C;&#x5C06;&#x6E38;&#x6807;&#x79FB;&#x52A8;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4E4B;&#x540E;&#xFF0C;<code>getCurrent</code>&#x83B7;&#x5F97;&#x7684;&#x5143;&#x7D20;&#x5C31;&#x4F1A;&#x4E0D;&#x540C;&#x3002;</li>
+<li><code>isDone</code>&#x5224;&#x65AD;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x904D;&#x5386;&#x5B8C;&#x6240;&#x6709;&#x7684;&#x5143;&#x7D20;</li>
 </ul>
 </li>
 </ul>
-<h5 id="跨越时间的observable">跨越时间的<code>Observable</code></h5>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> source = <span class="hljs-keyword">new</span> Observable(<span class="hljs-function"><span class="hljs-params">subscriber</span> =&gt;</span>{
+<h5 id="&#x8DE8;&#x8D8A;&#x65F6;&#x95F4;&#x7684;observable">&#x8DE8;&#x8D8A;&#x65F6;&#x95F4;&#x7684;<code>Observable</code></h5>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> source = <span class="hljs-keyword">new</span> Observable(subscriber =&gt;{
   <span class="hljs-keyword">let</span> n = <span class="hljs-number">1</span>
-  <span class="hljs-keyword">const</span> handle = <span class="hljs-built_in">setInterval</span>(<span class="hljs-function">()=&gt;</span>{
+  <span class="hljs-keyword">const</span> handle = setInterval(()=&gt;{
     subscriber.next(n++)
     <span class="hljs-keyword">if</span>(n&gt;<span class="hljs-number">3</span>){
-      <span class="hljs-built_in">clearInterval</span>(handle)
-      subscriber.conplete()<span class="hljs-comment">// =&gt; 进入到了完成终结状态</span>
-      subscriber.error(e) <span class="hljs-comment">// =&gt; 进入到了错误终结状态</span>
+      clearInterval(handle)
+      subscriber.conplete()<span class="hljs-comment">// =&gt; &#x8FDB;&#x5165;&#x5230;&#x4E86;&#x5B8C;&#x6210;&#x7EC8;&#x7ED3;&#x72B6;&#x6001;</span>
+      subscriber.error(e) <span class="hljs-comment">// =&gt; &#x8FDB;&#x5165;&#x5230;&#x4E86;&#x9519;&#x8BEF;&#x7EC8;&#x7ED3;&#x72B6;&#x6001;</span>
     } 
   },<span class="hljs-number">1000</span>)
 })
 
 source.subscriber({
-  <span class="hljs-function"><span class="hljs-title">next</span>(<span class="hljs-params">x</span>)</span>{
+  next(x){
     <span class="hljs-built_in">console</span>.log(x)
   },
-  <span class="hljs-function"><span class="hljs-title">complete</span>(<span class="hljs-params"></span>)</span>{ <span class="hljs-comment">// =&gt; 进入到了完成终结状态</span>
+  complete(){ <span class="hljs-comment">// =&gt; &#x8FDB;&#x5165;&#x5230;&#x4E86;&#x5B8C;&#x6210;&#x7EC8;&#x7ED3;&#x72B6;&#x6001;</span>
     <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;no data&apos;</span>)
   },
-  <span class="hljs-function"><span class="hljs-title">error</span>(<span class="hljs-params">e</span>)</span>{ <span class="hljs-comment">// =&gt; 进入到了错误终结状态</span>
+  error(e){ <span class="hljs-comment">// =&gt; &#x8FDB;&#x5165;&#x5230;&#x4E86;&#x9519;&#x8BEF;&#x7EC8;&#x7ED3;&#x72B6;&#x6001;</span>
     <span class="hljs-built_in">console</span>.log(e)
   }
 })
 </code></pre>
-<h5 id="退订observable">退订<code>Observable</code></h5>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> source = <span class="hljs-keyword">new</span> Observable(<span class="hljs-function"><span class="hljs-params">subscriber</span> =&gt;</span>{
+<h5 id="&#x9000;&#x8BA2;observable">&#x9000;&#x8BA2;<code>Observable</code></h5>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> source = <span class="hljs-keyword">new</span> Observable(subscriber =&gt;{
   <span class="hljs-keyword">let</span> n = <span class="hljs-number">1</span>
-  <span class="hljs-comment">// 无限推送</span>
-  <span class="hljs-keyword">const</span> handle = <span class="hljs-built_in">setInterval</span>(<span class="hljs-function">()=&gt;</span>{
+  <span class="hljs-comment">// &#x65E0;&#x9650;&#x63A8;&#x9001;</span>
+  <span class="hljs-keyword">const</span> handle = setInterval(()=&gt;{
     subscriber.next(n++)
-    <span class="hljs-keyword">return</span> { <span class="hljs-comment">// 这个对象赋值给了sub</span>
-      <span class="hljs-attr">unsubscribe</span>:<span class="hljs-function">()=&gt;</span>{
-        <span class="hljs-built_in">clearInterval</span>(handle)
+    <span class="hljs-keyword">return</span> { <span class="hljs-comment">// &#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x8D4B;&#x503C;&#x7ED9;&#x4E86;sub</span>
+      unsubscribe:()=&gt;{
+        clearInterval(handle)
       }
     }
   },<span class="hljs-number">1000</span>)
 })
 
 <span class="hljs-keyword">const</span> sub = source.subscriber({
-  <span class="hljs-function"><span class="hljs-title">next</span>(<span class="hljs-params">x</span>)</span>{
+  next(x){
     <span class="hljs-built_in">console</span>.log(x)
   },
-<span class="hljs-comment">//      三秒之后退订</span>
-  <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
+<span class="hljs-comment">//      &#x4E09;&#x79D2;&#x4E4B;&#x540E;&#x9000;&#x8BA2;</span>
+  setTimeout(() =&gt; {
       sub.unsubscribe()
 },<span class="hljs-number">3000</span>)
 })
 </code></pre>
-<h5 id="创建数据流">创建数据流</h5>
-<p>同步数据流，或者说同步<code>Observable</code>对象，需要关心的就是：产生哪些数据；数据之间的先后顺序如何。</p>
-<p>对于同步数据流，数据之间的时间间隔不存在，所以不需要考虑时间方面的问题</p>
-<p>同步操作符，<code>of</code>操作符</p>
-<p>异步数据流，在<code>Rxjs</code>中<code>interval</code>和<code>timer</code>两个操作符就相当于<code>Javascript</code>中的<code>setInterval</code>和<code>setTimeout</code></p>
-<p><code>from</code>操作符把任何对象转换成<code>Observable</code>对象</p>
-<p><code>Promise</code>和<code>Rxjs</code>的对比</p>
+<h5 id="&#x521B;&#x5EFA;&#x6570;&#x636E;&#x6D41;">&#x521B;&#x5EFA;&#x6570;&#x636E;&#x6D41;</h5>
+<p>&#x540C;&#x6B65;&#x6570;&#x636E;&#x6D41;&#xFF0C;&#x6216;&#x8005;&#x8BF4;&#x540C;&#x6B65;<code>Observable</code>&#x5BF9;&#x8C61;&#xFF0C;&#x9700;&#x8981;&#x5173;&#x5FC3;&#x7684;&#x5C31;&#x662F;&#xFF1A;&#x4EA7;&#x751F;&#x54EA;&#x4E9B;&#x6570;&#x636E;&#xFF1B;&#x6570;&#x636E;&#x4E4B;&#x95F4;&#x7684;&#x5148;&#x540E;&#x987A;&#x5E8F;&#x5982;&#x4F55;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x540C;&#x6B65;&#x6570;&#x636E;&#x6D41;&#xFF0C;&#x6570;&#x636E;&#x4E4B;&#x95F4;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x9700;&#x8981;&#x8003;&#x8651;&#x65F6;&#x95F4;&#x65B9;&#x9762;&#x7684;&#x95EE;&#x9898;</p>
+<p>&#x540C;&#x6B65;&#x64CD;&#x4F5C;&#x7B26;&#xFF0C;<code>of</code>&#x64CD;&#x4F5C;&#x7B26;</p>
+<p>&#x5F02;&#x6B65;&#x6570;&#x636E;&#x6D41;&#xFF0C;&#x5728;<code>Rxjs</code>&#x4E2D;<code>interval</code>&#x548C;<code>timer</code>&#x4E24;&#x4E2A;&#x64CD;&#x4F5C;&#x7B26;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;<code>Javascript</code>&#x4E2D;&#x7684;<code>setInterval</code>&#x548C;<code>setTimeout</code></p>
+<p><code>from</code>&#x64CD;&#x4F5C;&#x7B26;&#x628A;&#x4EFB;&#x4F55;&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x6210;<code>Observable</code>&#x5BF9;&#x8C61;</p>
+<p><code>Promise</code>&#x548C;<code>Rxjs</code>&#x7684;&#x5BF9;&#x6BD4;</p>
 <ul>
-<li><code>Rxjs</code>多次执行</li>
-<li><code>Rxjs</code>取消订阅</li>
+<li><code>Rxjs</code>&#x591A;&#x6B21;&#x6267;&#x884C;</li>
+<li><code>Rxjs</code>&#x53D6;&#x6D88;&#x8BA2;&#x9605;</li>
 </ul>
-<h4 id="拓展">拓展</h4>
-<p>异步考试题</p>
+<h4 id="&#x62D3;&#x5C55;">&#x62D3;&#x5C55;</h4>
+<p>&#x5F02;&#x6B65;&#x8003;&#x8BD5;&#x9898;</p>
 <pre><code class="lang-javascript"><span class="hljs-comment">// Promise.resolve()</span>
 <span class="hljs-comment">//   .then(&apos;b&apos;)</span>
 <span class="hljs-comment">//   .then(Promise.resolve(&apos;c&apos;))</span>
@@ -1172,7 +1173,7 @@ run(gen);
 <span class="hljs-comment">// // 1 3 7 9 0 2 8</span>
 </code></pre>
 <hr>
-<h3 id="设计模式">设计模式</h3>
+<h3 id="&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;">&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;</h3>
 
                                 
                                 </section>
@@ -1212,56 +1213,12 @@ run(gen);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"异步编程","level":"1.2.4","depth":2,"next":{"title":"计算机网络","level":"1.3","depth":1,"ref":"","articles":[{"title":"计算机网络","level":"1.3.1","depth":2,"path":"计算机网络/计算机网络.md","ref":"计算机网络/计算机网络.md","articles":[]},{"title":"工具链和其他","level":"1.3.2","depth":2,"path":"计算机网络/工具链和其他.md","ref":"计算机网络/工具链和其他.md","articles":[]},{"title":"浏览器状态同步和路由","level":"1.3.3","depth":2,"path":"计算机网络/浏览器状态同步和路由.md","ref":"计算机网络/浏览器状态同步和路由.md","articles":[]},{"title":"网络安全攻防","level":"1.3.4","depth":2,"path":"计算机网络/网络安全攻防.md","ref":"计算机网络/网络安全攻防.md","articles":[]}]},"previous":{"title":"设计模式","level":"1.2.3","depth":2,"path":"js进阶/设计模式.md","ref":"js进阶/设计模式.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"js进阶/异步编程.md","mtime":"2022-07-20T02:55:44.752Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-20T03:36:12.980Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"异步编程","level":"1.2.4","depth":2,"next":{"title":"计算机网络","level":"1.3","depth":1,"ref":"","articles":[{"title":"计算机网络","level":"1.3.1","depth":2,"path":"计算机网络/计算机网络.md","ref":"计算机网络/计算机网络.md","articles":[]},{"title":"工具链和其他","level":"1.3.2","depth":2,"path":"计算机网络/工具链和其他.md","ref":"计算机网络/工具链和其他.md","articles":[]},{"title":"浏览器状态同步和路由","level":"1.3.3","depth":2,"path":"计算机网络/浏览器状态同步和路由.md","ref":"计算机网络/浏览器状态同步和路由.md","articles":[]},{"title":"网络安全攻防","level":"1.3.4","depth":2,"path":"计算机网络/网络安全攻防.md","ref":"计算机网络/网络安全攻防.md","articles":[]}]},"previous":{"title":"设计模式","level":"1.2.3","depth":2,"path":"js进阶/设计模式.md","ref":"js进阶/设计模式.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"js进阶/异步编程.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-21T00:58:27.102Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
-    <noscript>
-        <style>
-            .honkit-cloak {
-                display: block !important;
-            }
-        </style>
-    </noscript>
-    <script>
-        // Restore sidebar state as critical path for prevent layout shift
-        function __init__getSidebarState(defaultValue){
-            var baseKey = "";
-            var key = baseKey + ":sidebar";
-            try {
-                var value = localStorage[key];
-                if (value === undefined) {
-                    return defaultValue;
-                }
-                var parsed = JSON.parse(value);
-                return parsed == null ? defaultValue : parsed;
-            } catch (e) {
-                return defaultValue;
-            }
-        }
-        function __init__restoreLastSidebarState() {
-            var isMobile = window.matchMedia("(max-width: 600px)").matches;
-            if (isMobile) {
-                // Init last state if not mobile
-                return;
-            }
-            var sidebarState = __init__getSidebarState(true);
-            var book = document.querySelector(".book");
-            // Show sidebar if it enabled
-            if (sidebarState && book) {
-                book.classList.add("without-animation", "with-summary");
-            }
-        }
-
-        try {
-            __init__restoreLastSidebarState();
-        } finally {
-            var book = document.querySelector(".book");
-            book.classList.remove("honkit-cloak");
-        }
-    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -1279,6 +1236,10 @@ run(gen);
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

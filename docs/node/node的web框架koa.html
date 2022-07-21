@@ -3,10 +3,11 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>node的web框架koa · HonKit</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>node的web框架koa · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.7.5">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -16,7 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
                 
@@ -59,13 +60,13 @@
     <link rel="next" href="node基础.html" />
     
     
-    <link rel="prev" href="node_03%20express.md" />
+    <link rel="prev" href="node_03.html" />
     
 
     </head>
     <body>
         
-<div class="book honkit-cloak">
+<div class="book">
     <div class="book-summary">
         
             
@@ -283,12 +284,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="node_03%20express.md">
+        <li class="chapter " data-level="1.4.3" data-path="node_03.html">
             
-                <span>
+                <a href="node_03.html">
             
                     
-                    Node 03 Express
+                    Node 03
             
                 </a>
             
@@ -494,8 +495,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
-            Published with HonKit
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
         </a>
     </li>
 </ul>
@@ -534,57 +535,57 @@
                                 <section class="normal markdown-section">
                                 
                                 <p>[TOC]</p>
-<h2 id="简单使用">简单使用</h2>
-<h3 id="常用node-web框架">常用node Web框架</h3>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/nodejs.png" alt="常用nodeweb框架"></p>
+<h2 id="&#x7B80;&#x5355;&#x4F7F;&#x7528;">&#x7B80;&#x5355;&#x4F7F;&#x7528;</h2>
+<h3 id="&#x5E38;&#x7528;node-web&#x6846;&#x67B6;">&#x5E38;&#x7528;node Web&#x6846;&#x67B6;</h3>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/nodejs.png" alt="&#x5E38;&#x7528;nodeweb&#x6846;&#x67B6;"></p>
 <h3 id="koa-web-server">Koa Web Server</h3>
-<h4 id="概览">概览</h4>
+<h4 id="&#x6982;&#x89C8;">&#x6982;&#x89C8;</h4>
 <ul>
-<li><p>Express很简洁，Koa更加简洁，是同一个开发团队</p>
+<li><p>Express&#x5F88;&#x7B80;&#x6D01;&#xFF0C;Koa&#x66F4;&#x52A0;&#x7B80;&#x6D01;&#xFF0C;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x5F00;&#x53D1;&#x56E2;&#x961F;</p>
 </li>
-<li><p>Koa应用程序是一个包含中间件函数的对象，按照堆栈的方式组织执行。</p>
+<li><p>Koa&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x4E2D;&#x95F4;&#x4EF6;&#x51FD;&#x6570;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x6309;&#x7167;&#x5806;&#x6808;&#x7684;&#x65B9;&#x5F0F;&#x7EC4;&#x7EC7;&#x6267;&#x884C;&#x3002;</p>
 </li>
-<li><p>Koa提供了一个壳子，中间的内容由中间件决定</p>
+<li><p>Koa&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x58F3;&#x5B50;&#xFF0C;&#x4E2D;&#x95F4;&#x7684;&#x5185;&#x5BB9;&#x7531;&#x4E2D;&#x95F4;&#x4EF6;&#x51B3;&#x5B9A;</p>
 </li>
 </ul>
-<p>洋葱模型</p>
-<p>Koa里对请求和相应的处理，是一层层递进，再一层层递出的。</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/洋葱模型.png" alt="洋葱模型"></p>
-<h4 id="常用中间件">常用中间件</h4>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/Koa常见中间件.png" alt="常用中间件"></p>
-<h4 id="koa的框架实战">koa的框架实战</h4>
+<p>&#x6D0B;&#x8471;&#x6A21;&#x578B;</p>
+<p>Koa&#x91CC;&#x5BF9;&#x8BF7;&#x6C42;&#x548C;&#x76F8;&#x5E94;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x662F;&#x4E00;&#x5C42;&#x5C42;&#x9012;&#x8FDB;&#xFF0C;&#x518D;&#x4E00;&#x5C42;&#x5C42;&#x9012;&#x51FA;&#x7684;&#x3002;</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/&#x6D0B;&#x8471;&#x6A21;&#x578B;.png" alt="&#x6D0B;&#x8471;&#x6A21;&#x578B;"></p>
+<h4 id="&#x5E38;&#x7528;&#x4E2D;&#x95F4;&#x4EF6;">&#x5E38;&#x7528;&#x4E2D;&#x95F4;&#x4EF6;</h4>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/Koa&#x5E38;&#x89C1;&#x4E2D;&#x95F4;&#x4EF6;.png" alt="&#x5E38;&#x7528;&#x4E2D;&#x95F4;&#x4EF6;"></p>
+<h4 id="koa&#x7684;&#x6846;&#x67B6;&#x5B9E;&#x6218;">koa&#x7684;&#x6846;&#x67B6;&#x5B9E;&#x6218;</h4>
 <p><a href="https://github.com/posquit0/koa-rest-api-boilerplate" target="_blank">https://github.com/posquit0/koa-rest-api-boilerplate</a></p>
-<h3 id="koa-与-express-的对比">Koa 与 Express 的对比</h3>
+<h3 id="koa-&#x4E0E;-express-&#x7684;&#x5BF9;&#x6BD4;">Koa &#x4E0E; Express &#x7684;&#x5BF9;&#x6BD4;</h3>
 <p>Koa</p>
 <ul>
-<li>更优雅的编程体验</li>
-<li>核心轻量，插件生态庞大</li>
-<li>内置异步流控制</li>
-<li>与Epxress生态不兼容，有自己的开发生态</li>
-<li>入手简单，便于企业级实践</li>
+<li>&#x66F4;&#x4F18;&#x96C5;&#x7684;&#x7F16;&#x7A0B;&#x4F53;&#x9A8C;</li>
+<li>&#x6838;&#x5FC3;&#x8F7B;&#x91CF;&#xFF0C;&#x63D2;&#x4EF6;&#x751F;&#x6001;&#x5E9E;&#x5927;</li>
+<li>&#x5185;&#x7F6E;&#x5F02;&#x6B65;&#x6D41;&#x63A7;&#x5236;</li>
+<li>&#x4E0E;Epxress&#x751F;&#x6001;&#x4E0D;&#x517C;&#x5BB9;&#xFF0C;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x5F00;&#x53D1;&#x751F;&#x6001;</li>
+<li>&#x5165;&#x624B;&#x7B80;&#x5355;&#xFF0C;&#x4FBF;&#x4E8E;&#x4F01;&#x4E1A;&#x7EA7;&#x5B9E;&#x8DF5;</li>
 </ul>
 <p>Express</p>
 <ul>
-<li>Nodejs至今最流行框架</li>
-<li>提供了Web中间件的标准</li>
-<li>简单快捷可拓展</li>
-<li>维护成本高，对系统设计能力要求高</li>
-<li>学习门槛低，入手简单。</li>
+<li>Nodejs&#x81F3;&#x4ECA;&#x6700;&#x6D41;&#x884C;&#x6846;&#x67B6;</li>
+<li>&#x63D0;&#x4F9B;&#x4E86;Web&#x4E2D;&#x95F4;&#x4EF6;&#x7684;&#x6807;&#x51C6;</li>
+<li>&#x7B80;&#x5355;&#x5FEB;&#x6377;&#x53EF;&#x62D3;&#x5C55;</li>
+<li>&#x7EF4;&#x62A4;&#x6210;&#x672C;&#x9AD8;&#xFF0C;&#x5BF9;&#x7CFB;&#x7EDF;&#x8BBE;&#x8BA1;&#x80FD;&#x529B;&#x8981;&#x6C42;&#x9AD8;</li>
+<li>&#x5B66;&#x4E60;&#x95E8;&#x69DB;&#x4F4E;&#xFF0C;&#x5165;&#x624B;&#x7B80;&#x5355;&#x3002;</li>
 </ul>
-<h2 id="原理解析">原理解析</h2>
-<p>方法论-四个问题</p>
+<h2 id="&#x539F;&#x7406;&#x89E3;&#x6790;">&#x539F;&#x7406;&#x89E3;&#x6790;</h2>
+<p>&#x65B9;&#x6CD5;&#x8BBA;-&#x56DB;&#x4E2A;&#x95EE;&#x9898;</p>
 <ul>
-<li>问什么要读源码？</li>
-<li>应该去读那些源码？</li>
-<li>手写源码应该注意什么？</li>
+<li>&#x95EE;&#x4EC0;&#x4E48;&#x8981;&#x8BFB;&#x6E90;&#x7801;&#xFF1F;</li>
+<li>&#x5E94;&#x8BE5;&#x53BB;&#x8BFB;&#x90A3;&#x4E9B;&#x6E90;&#x7801;&#xFF1F;</li>
+<li>&#x624B;&#x5199;&#x6E90;&#x7801;&#x5E94;&#x8BE5;&#x6CE8;&#x610F;&#x4EC0;&#x4E48;&#xFF1F;</li>
 </ul>
-<p>读源码是一个程序员必须的素养。</p>
-<p>首先要看「项目依赖」、「版本」、「目录结构」</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/koa的关键依赖.png" alt="koa的关键依赖"></p>
-<p>源码架构图</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/koa的源码架构.png" alt="koa架构"></p>
+<p>&#x8BFB;&#x6E90;&#x7801;&#x662F;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x5458;&#x5FC5;&#x987B;&#x7684;&#x7D20;&#x517B;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x8981;&#x770B;&#x300C;&#x9879;&#x76EE;&#x4F9D;&#x8D56;&#x300D;&#x3001;&#x300C;&#x7248;&#x672C;&#x300D;&#x3001;&#x300C;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x300D;</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/koa&#x7684;&#x5173;&#x952E;&#x4F9D;&#x8D56;.png" alt="koa&#x7684;&#x5173;&#x952E;&#x4F9D;&#x8D56;"></p>
+<p>&#x6E90;&#x7801;&#x67B6;&#x6784;&#x56FE;</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/koa&#x7684;&#x6E90;&#x7801;&#x67B6;&#x6784;.png" alt="koa&#x67B6;&#x6784;"></p>
 <h3 id="application">Application</h3>
-<h2 id="常见中间件及原理">常见中间件及原理</h2>
+<h2 id="&#x5E38;&#x89C1;&#x4E2D;&#x95F4;&#x4EF6;&#x53CA;&#x539F;&#x7406;">&#x5E38;&#x89C1;&#x4E2D;&#x95F4;&#x4EF6;&#x53CA;&#x539F;&#x7406;</h2>
 
                                 
                                 </section>
@@ -612,7 +613,7 @@
 
             
                 
-                <a href="node_03%20express.md" class="navigation navigation-prev " aria-label="Previous page: Node 03 Express">
+                <a href="node_03.html" class="navigation navigation-prev " aria-label="Previous page: Node 03">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -628,56 +629,12 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"node的web框架koa","level":"1.4.4","depth":2,"next":{"title":"node基础","level":"1.4.5","depth":2,"path":"node/node基础.md","ref":"node/node基础.md","articles":[]},"previous":{"title":"Node 03 Express","level":"1.4.3","depth":2,"path":"node/node_03%20express.md","ref":"node/node_03%20express.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"node/node的web框架koa.md","mtime":"2022-07-20T02:55:44.901Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-20T03:36:12.980Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"node的web框架koa","level":"1.4.4","depth":2,"next":{"title":"node基础","level":"1.4.5","depth":2,"path":"node/node基础.md","ref":"node/node基础.md","articles":[]},"previous":{"title":"Node 03","level":"1.4.3","depth":2,"path":"node/node_03.md","ref":"node/node_03.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"node/node的web框架koa.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-21T00:58:27.102Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
-    <noscript>
-        <style>
-            .honkit-cloak {
-                display: block !important;
-            }
-        </style>
-    </noscript>
-    <script>
-        // Restore sidebar state as critical path for prevent layout shift
-        function __init__getSidebarState(defaultValue){
-            var baseKey = "";
-            var key = baseKey + ":sidebar";
-            try {
-                var value = localStorage[key];
-                if (value === undefined) {
-                    return defaultValue;
-                }
-                var parsed = JSON.parse(value);
-                return parsed == null ? defaultValue : parsed;
-            } catch (e) {
-                return defaultValue;
-            }
-        }
-        function __init__restoreLastSidebarState() {
-            var isMobile = window.matchMedia("(max-width: 600px)").matches;
-            if (isMobile) {
-                // Init last state if not mobile
-                return;
-            }
-            var sidebarState = __init__getSidebarState(true);
-            var book = document.querySelector(".book");
-            // Show sidebar if it enabled
-            if (sidebarState && book) {
-                book.classList.add("without-animation", "with-summary");
-            }
-        }
-
-        try {
-            __init__restoreLastSidebarState();
-        } finally {
-            var book = document.querySelector(".book");
-            book.classList.remove("honkit-cloak");
-        }
-    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -695,6 +652,10 @@
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

@@ -3,10 +3,11 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>轮播图设计 · HonKit</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>轮播图设计 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.7.5">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -16,7 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
                 
@@ -65,7 +66,7 @@
     </head>
     <body>
         
-<div class="book honkit-cloak">
+<div class="book">
     <div class="book-summary">
         
             
@@ -283,12 +284,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../node/node_03%20express.md">
+        <li class="chapter " data-level="1.4.3" data-path="../node/node_03.html">
             
-                <span>
+                <a href="../node/node_03.html">
             
                     
-                    Node 03 Express
+                    Node 03
             
                 </a>
             
@@ -494,8 +495,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
-            Published with HonKit
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
         </a>
     </li>
 </ul>
@@ -533,15 +534,15 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>采用建造者模式来搭建模块框架</p>
+                                <p>&#x91C7;&#x7528;&#x5EFA;&#x9020;&#x8005;&#x6A21;&#x5F0F;&#x6765;&#x642D;&#x5EFA;&#x6A21;&#x5757;&#x6846;&#x67B6;</p>
 <ol>
-<li>请求图片模块</li>
-<li>检测图片加载模块（因为一般轮播图的图片比较大，而我们又需要在第一时间就展现出来，所以等待图片加载完成后再返回一个事件去渲染）</li>
-<li>图片展示模块（此模块一般会重复四到六次，来展示不同的图片达到轮博的效果）</li>
-<li>自动播放模块（放一个定时器，自动播放，切换图片）</li>
-<li>图片的位置移动（在自动播放，或者手动切换的时候，调用此方法来实现图片的切换，在其中加入渐隐渐显的选择开关；一般采用translateX来实现移动，</li>
-<li>触摸移动模块（在拖动图片的时候，会暂停<strong>自动播放模块</strong>，并根据用户的操作让图片产生暂时移动，并将上下的滑动按比例转化为水平滑动，检测滑动幅度超过阈值就调用<strong>位置移动模块</strong>，不超过则在触摸事件结束的时候弹回原位置，并开启<strong>自动播放模块</strong>）</li>
-<li>轮播图模块（综合以上几个模块，可以传入图片url，是否渐显渐隐等参数，并将参数传给相应模块将其进行柯里化，方便其他模块在调用的时候，不需要在传入初始值）</li>
+<li>&#x8BF7;&#x6C42;&#x56FE;&#x7247;&#x6A21;&#x5757;</li>
+<li>&#x68C0;&#x6D4B;&#x56FE;&#x7247;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#xFF08;&#x56E0;&#x4E3A;&#x4E00;&#x822C;&#x8F6E;&#x64AD;&#x56FE;&#x7684;&#x56FE;&#x7247;&#x6BD4;&#x8F83;&#x5927;&#xFF0C;&#x800C;&#x6211;&#x4EEC;&#x53C8;&#x9700;&#x8981;&#x5728;&#x7B2C;&#x4E00;&#x65F6;&#x95F4;&#x5C31;&#x5C55;&#x73B0;&#x51FA;&#x6765;&#xFF0C;&#x6240;&#x4EE5;&#x7B49;&#x5F85;&#x56FE;&#x7247;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#x540E;&#x518D;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x53BB;&#x6E32;&#x67D3;&#xFF09;</li>
+<li>&#x56FE;&#x7247;&#x5C55;&#x793A;&#x6A21;&#x5757;&#xFF08;&#x6B64;&#x6A21;&#x5757;&#x4E00;&#x822C;&#x4F1A;&#x91CD;&#x590D;&#x56DB;&#x5230;&#x516D;&#x6B21;&#xFF0C;&#x6765;&#x5C55;&#x793A;&#x4E0D;&#x540C;&#x7684;&#x56FE;&#x7247;&#x8FBE;&#x5230;&#x8F6E;&#x535A;&#x7684;&#x6548;&#x679C;&#xFF09;</li>
+<li>&#x81EA;&#x52A8;&#x64AD;&#x653E;&#x6A21;&#x5757;&#xFF08;&#x653E;&#x4E00;&#x4E2A;&#x5B9A;&#x65F6;&#x5668;&#xFF0C;&#x81EA;&#x52A8;&#x64AD;&#x653E;&#xFF0C;&#x5207;&#x6362;&#x56FE;&#x7247;&#xFF09;</li>
+<li>&#x56FE;&#x7247;&#x7684;&#x4F4D;&#x7F6E;&#x79FB;&#x52A8;&#xFF08;&#x5728;&#x81EA;&#x52A8;&#x64AD;&#x653E;&#xFF0C;&#x6216;&#x8005;&#x624B;&#x52A8;&#x5207;&#x6362;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8C03;&#x7528;&#x6B64;&#x65B9;&#x6CD5;&#x6765;&#x5B9E;&#x73B0;&#x56FE;&#x7247;&#x7684;&#x5207;&#x6362;&#xFF0C;&#x5728;&#x5176;&#x4E2D;&#x52A0;&#x5165;&#x6E10;&#x9690;&#x6E10;&#x663E;&#x7684;&#x9009;&#x62E9;&#x5F00;&#x5173;&#xFF1B;&#x4E00;&#x822C;&#x91C7;&#x7528;translateX&#x6765;&#x5B9E;&#x73B0;&#x79FB;&#x52A8;&#xFF0C;</li>
+<li>&#x89E6;&#x6478;&#x79FB;&#x52A8;&#x6A21;&#x5757;&#xFF08;&#x5728;&#x62D6;&#x52A8;&#x56FE;&#x7247;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x6682;&#x505C;<strong>&#x81EA;&#x52A8;&#x64AD;&#x653E;&#x6A21;&#x5757;</strong>&#xFF0C;&#x5E76;&#x6839;&#x636E;&#x7528;&#x6237;&#x7684;&#x64CD;&#x4F5C;&#x8BA9;&#x56FE;&#x7247;&#x4EA7;&#x751F;&#x6682;&#x65F6;&#x79FB;&#x52A8;&#xFF0C;&#x5E76;&#x5C06;&#x4E0A;&#x4E0B;&#x7684;&#x6ED1;&#x52A8;&#x6309;&#x6BD4;&#x4F8B;&#x8F6C;&#x5316;&#x4E3A;&#x6C34;&#x5E73;&#x6ED1;&#x52A8;&#xFF0C;&#x68C0;&#x6D4B;&#x6ED1;&#x52A8;&#x5E45;&#x5EA6;&#x8D85;&#x8FC7;&#x9608;&#x503C;&#x5C31;&#x8C03;&#x7528;<strong>&#x4F4D;&#x7F6E;&#x79FB;&#x52A8;&#x6A21;&#x5757;</strong>&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;&#x5219;&#x5728;&#x89E6;&#x6478;&#x4E8B;&#x4EF6;&#x7ED3;&#x675F;&#x7684;&#x65F6;&#x5019;&#x5F39;&#x56DE;&#x539F;&#x4F4D;&#x7F6E;&#xFF0C;&#x5E76;&#x5F00;&#x542F;<strong>&#x81EA;&#x52A8;&#x64AD;&#x653E;&#x6A21;&#x5757;</strong>&#xFF09;</li>
+<li>&#x8F6E;&#x64AD;&#x56FE;&#x6A21;&#x5757;&#xFF08;&#x7EFC;&#x5408;&#x4EE5;&#x4E0A;&#x51E0;&#x4E2A;&#x6A21;&#x5757;&#xFF0C;&#x53EF;&#x4EE5;&#x4F20;&#x5165;&#x56FE;&#x7247;url&#xFF0C;&#x662F;&#x5426;&#x6E10;&#x663E;&#x6E10;&#x9690;&#x7B49;&#x53C2;&#x6570;&#xFF0C;&#x5E76;&#x5C06;&#x53C2;&#x6570;&#x4F20;&#x7ED9;&#x76F8;&#x5E94;&#x6A21;&#x5757;&#x5C06;&#x5176;&#x8FDB;&#x884C;&#x67EF;&#x91CC;&#x5316;&#xFF0C;&#x65B9;&#x4FBF;&#x5176;&#x4ED6;&#x6A21;&#x5757;&#x5728;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x5728;&#x4F20;&#x5165;&#x521D;&#x59CB;&#x503C;&#xFF09;</li>
 </ol>
 
                                 
@@ -586,56 +587,12 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"轮播图设计","level":"1.2.2","depth":2,"next":{"title":"设计模式","level":"1.2.3","depth":2,"path":"js进阶/设计模式.md","ref":"js进阶/设计模式.md","articles":[]},"previous":{"title":"高阶函数","level":"1.2.1","depth":2,"path":"js进阶/高阶函数.md","ref":"js进阶/高阶函数.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"js进阶/轮播图设计.md","mtime":"2022-07-20T02:55:44.758Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-20T03:36:12.980Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"轮播图设计","level":"1.2.2","depth":2,"next":{"title":"设计模式","level":"1.2.3","depth":2,"path":"js进阶/设计模式.md","ref":"js进阶/设计模式.md","articles":[]},"previous":{"title":"高阶函数","level":"1.2.1","depth":2,"path":"js进阶/高阶函数.md","ref":"js进阶/高阶函数.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"js进阶/轮播图设计.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-21T00:58:27.102Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
-    <noscript>
-        <style>
-            .honkit-cloak {
-                display: block !important;
-            }
-        </style>
-    </noscript>
-    <script>
-        // Restore sidebar state as critical path for prevent layout shift
-        function __init__getSidebarState(defaultValue){
-            var baseKey = "";
-            var key = baseKey + ":sidebar";
-            try {
-                var value = localStorage[key];
-                if (value === undefined) {
-                    return defaultValue;
-                }
-                var parsed = JSON.parse(value);
-                return parsed == null ? defaultValue : parsed;
-            } catch (e) {
-                return defaultValue;
-            }
-        }
-        function __init__restoreLastSidebarState() {
-            var isMobile = window.matchMedia("(max-width: 600px)").matches;
-            if (isMobile) {
-                // Init last state if not mobile
-                return;
-            }
-            var sidebarState = __init__getSidebarState(true);
-            var book = document.querySelector(".book");
-            // Show sidebar if it enabled
-            if (sidebarState && book) {
-                book.classList.add("without-animation", "with-summary");
-            }
-        }
-
-        try {
-            __init__restoreLastSidebarState();
-        } finally {
-            var book = document.querySelector(".book");
-            book.classList.remove("honkit-cloak");
-        }
-    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -653,6 +610,10 @@
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

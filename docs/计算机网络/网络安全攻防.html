@@ -3,10 +3,11 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>网络安全攻防 · HonKit</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>网络安全攻防 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.7.5">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -16,7 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
                 
@@ -63,7 +64,7 @@
     </head>
     <body>
         
-<div class="book honkit-cloak">
+<div class="book">
     <div class="book-summary">
         
             
@@ -281,12 +282,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../node/node_03%20express.md">
+        <li class="chapter " data-level="1.4.3" data-path="../node/node_03.html">
             
-                <span>
+                <a href="../node/node_03.html">
             
                     
-                    Node 03 Express
+                    Node 03
             
                 </a>
             
@@ -492,8 +493,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
-            Published with HonKit
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
         </a>
     </li>
 </ul>
@@ -531,100 +532,100 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="网络安全与攻防">网络安全与攻防</h3>
-<h4 id="同源策略">同源策略</h4>
+                                <h3 id="&#x7F51;&#x7EDC;&#x5B89;&#x5168;&#x4E0E;&#x653B;&#x9632;">&#x7F51;&#x7EDC;&#x5B89;&#x5168;&#x4E0E;&#x653B;&#x9632;</h3>
+<h4 id="&#x540C;&#x6E90;&#x7B56;&#x7565;">&#x540C;&#x6E90;&#x7B56;&#x7565;</h4>
 <blockquote>
-<p>工作日常、面试重点、安全架构</p>
+<p>&#x5DE5;&#x4F5C;&#x65E5;&#x5E38;&#x3001;&#x9762;&#x8BD5;&#x91CD;&#x70B9;&#x3001;&#x5B89;&#x5168;&#x67B6;&#x6784;</p>
 </blockquote>
-<h5 id="简介">简介</h5>
-<p>禁止一个源（origin）的脚本&amp;文档和另一个源的脚本&amp;文档交互</p>
-<p>同源：两个URL的protocol、port、host相同</p>
-<h5 id="跨域的n种方法">跨域的N种方法</h5>
+<h5 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h5>
+<p>&#x7981;&#x6B62;&#x4E00;&#x4E2A;&#x6E90;&#xFF08;origin&#xFF09;&#x7684;&#x811A;&#x672C;&amp;&#x6587;&#x6863;&#x548C;&#x53E6;&#x4E00;&#x4E2A;&#x6E90;&#x7684;&#x811A;&#x672C;&amp;&#x6587;&#x6863;&#x4EA4;&#x4E92;</p>
+<p>&#x540C;&#x6E90;&#xFF1A;&#x4E24;&#x4E2A;URL&#x7684;protocol&#x3001;port&#x3001;host&#x76F8;&#x540C;</p>
+<h5 id="&#x8DE8;&#x57DF;&#x7684;n&#x79CD;&#x65B9;&#x6CD5;">&#x8DE8;&#x57DF;&#x7684;N&#x79CD;&#x65B9;&#x6CD5;</h5>
 <ul>
 <li>Jsonp</li>
 </ul>
-<p>利用不限制跨域脚本执行的特点</p>
+<p>&#x5229;&#x7528;&#x4E0D;&#x9650;&#x5236;&#x8DE8;&#x57DF;&#x811A;&#x672C;&#x6267;&#x884C;&#x7684;&#x7279;&#x70B9;</p>
 <ul>
-<li>CORS（Cross-Origin-Resource-Sharing）跨域资源共用</li>
+<li>CORS&#xFF08;Cross-Origin-Resource-Sharing&#xFF09;&#x8DE8;&#x57DF;&#x8D44;&#x6E90;&#x5171;&#x7528;</li>
 </ul>
-<p>在达成CORS之前，客户端需要先发送「预检请求」来询问服务端是否支持CORS。一般携带以下请求头部：</p>
-<p>另外这个预检请求是浏览器自发的发送。</p>
+<p>&#x5728;&#x8FBE;&#x6210;CORS&#x4E4B;&#x524D;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x9700;&#x8981;&#x5148;&#x53D1;&#x9001;&#x300C;&#x9884;&#x68C0;&#x8BF7;&#x6C42;&#x300D;&#x6765;&#x8BE2;&#x95EE;&#x670D;&#x52A1;&#x7AEF;&#x662F;&#x5426;&#x652F;&#x6301;CORS&#x3002;&#x4E00;&#x822C;&#x643A;&#x5E26;&#x4EE5;&#x4E0B;&#x8BF7;&#x6C42;&#x5934;&#x90E8;&#xFF1A;</p>
+<p>&#x53E6;&#x5916;&#x8FD9;&#x4E2A;&#x9884;&#x68C0;&#x8BF7;&#x6C42;&#x662F;&#x6D4F;&#x89C8;&#x5668;&#x81EA;&#x53D1;&#x7684;&#x53D1;&#x9001;&#x3002;</p>
 <pre><code>OPTIONS /resource/foo
 Access-Control-Request-Method: POST
 Access-Control-Request-Headers: origin, x-requested-with
 Origin: https://foo.bar.org
-</code></pre><p>MDN上的<a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Preflight_request" target="_blank">预检请求</a></p>
-<p>如果服务端支持CORS就会返回响应，且头部带着允许的origin（也就是客户端地址）</p>
-<p>使用额外HTTP头允许执行的源和另一个源进行交互</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/CORS简单请求.png" alt="简单请求"></p>
-<p>当然我们需要辨别简单请求和复杂请求，因为他们的请求头部和响应头部不太一样，后者会多几个字段。</p>
-<p>简单请求的两个条件：</p>
+</code></pre><p>MDN&#x4E0A;&#x7684;<a href="https://developer.mozilla.org/zh-CN/docs/Glossary/Preflight_request" target="_blank">&#x9884;&#x68C0;&#x8BF7;&#x6C42;</a></p>
+<p>&#x5982;&#x679C;&#x670D;&#x52A1;&#x7AEF;&#x652F;&#x6301;CORS&#x5C31;&#x4F1A;&#x8FD4;&#x56DE;&#x54CD;&#x5E94;&#xFF0C;&#x4E14;&#x5934;&#x90E8;&#x5E26;&#x7740;&#x5141;&#x8BB8;&#x7684;origin&#xFF08;&#x4E5F;&#x5C31;&#x662F;&#x5BA2;&#x6237;&#x7AEF;&#x5730;&#x5740;&#xFF09;</p>
+<p>&#x4F7F;&#x7528;&#x989D;&#x5916;HTTP&#x5934;&#x5141;&#x8BB8;&#x6267;&#x884C;&#x7684;&#x6E90;&#x548C;&#x53E6;&#x4E00;&#x4E2A;&#x6E90;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/CORS&#x7B80;&#x5355;&#x8BF7;&#x6C42;.png" alt="&#x7B80;&#x5355;&#x8BF7;&#x6C42;"></p>
+<p>&#x5F53;&#x7136;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8FA8;&#x522B;&#x7B80;&#x5355;&#x8BF7;&#x6C42;&#x548C;&#x590D;&#x6742;&#x8BF7;&#x6C42;&#xFF0C;&#x56E0;&#x4E3A;&#x4ED6;&#x4EEC;&#x7684;&#x8BF7;&#x6C42;&#x5934;&#x90E8;&#x548C;&#x54CD;&#x5E94;&#x5934;&#x90E8;&#x4E0D;&#x592A;&#x4E00;&#x6837;&#xFF0C;&#x540E;&#x8005;&#x4F1A;&#x591A;&#x51E0;&#x4E2A;&#x5B57;&#x6BB5;&#x3002;</p>
+<p>&#x7B80;&#x5355;&#x8BF7;&#x6C42;&#x7684;&#x4E24;&#x4E2A;&#x6761;&#x4EF6;&#xFF1A;</p>
 <ul>
-<li>请求方法是以下三种方法之一：<ul>
+<li>&#x8BF7;&#x6C42;&#x65B9;&#x6CD5;&#x662F;&#x4EE5;&#x4E0B;&#x4E09;&#x79CD;&#x65B9;&#x6CD5;&#x4E4B;&#x4E00;&#xFF1A;<ul>
 <li>HEAD</li>
 <li>GET</li>
 <li>POST</li>
 </ul>
 </li>
-<li>HTTP的头信息不超出以下几种字段：<ul>
-<li>Accept//客户端或代理能够处理的媒体类型</li>
-<li>Accept-Language//优先的语言（中文、英文……）</li>
-<li>Content-Language// 实体主体的自然语言</li>
-<li>Content-Type：只限于三个值application/x-www-form-urlencoded、multipart/form-data、text/plain</li>
+<li>HTTP&#x7684;&#x5934;&#x4FE1;&#x606F;&#x4E0D;&#x8D85;&#x51FA;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#x5B57;&#x6BB5;&#xFF1A;<ul>
+<li>Accept//&#x5BA2;&#x6237;&#x7AEF;&#x6216;&#x4EE3;&#x7406;&#x80FD;&#x591F;&#x5904;&#x7406;&#x7684;&#x5A92;&#x4F53;&#x7C7B;&#x578B;</li>
+<li>Accept-Language//&#x4F18;&#x5148;&#x7684;&#x8BED;&#x8A00;&#xFF08;&#x4E2D;&#x6587;&#x3001;&#x82F1;&#x6587;&#x2026;&#x2026;&#xFF09;</li>
+<li>Content-Language// &#x5B9E;&#x4F53;&#x4E3B;&#x4F53;&#x7684;&#x81EA;&#x7136;&#x8BED;&#x8A00;</li>
+<li>Content-Type&#xFF1A;&#x53EA;&#x9650;&#x4E8E;&#x4E09;&#x4E2A;&#x503C;application/x-www-form-urlencoded&#x3001;multipart/form-data&#x3001;text/plain</li>
 </ul>
 </li>
 </ul>
-<p>凡是不同时满足上面两个条件，就属于非简单请求。</p>
-<p>复杂请求需要发送OPTIONS</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/CORS的复杂请求.png" alt="CORS复杂请求"></p>
+<p>&#x51E1;&#x662F;&#x4E0D;&#x540C;&#x65F6;&#x6EE1;&#x8DB3;&#x4E0A;&#x9762;&#x4E24;&#x4E2A;&#x6761;&#x4EF6;&#xFF0C;&#x5C31;&#x5C5E;&#x4E8E;&#x975E;&#x7B80;&#x5355;&#x8BF7;&#x6C42;&#x3002;</p>
+<p>&#x590D;&#x6742;&#x8BF7;&#x6C42;&#x9700;&#x8981;&#x53D1;&#x9001;OPTIONS</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/CORS&#x7684;&#x590D;&#x6742;&#x8BF7;&#x6C42;.png" alt="CORS&#x590D;&#x6742;&#x8BF7;&#x6C42;"></p>
 <ul>
-<li>代理</li>
+<li>&#x4EE3;&#x7406;</li>
 </ul>
-<p>利用代理将不同源的资源代理到同源的资源</p>
-<p>不通过浏览器，也就没有了同源策略</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/代理跨域.png" alt="代理跨域"></p>
-<h5 id="实战cors">实战CORS</h5>
+<p>&#x5229;&#x7528;&#x4EE3;&#x7406;&#x5C06;&#x4E0D;&#x540C;&#x6E90;&#x7684;&#x8D44;&#x6E90;&#x4EE3;&#x7406;&#x5230;&#x540C;&#x6E90;&#x7684;&#x8D44;&#x6E90;</p>
+<p>&#x4E0D;&#x901A;&#x8FC7;&#x6D4F;&#x89C8;&#x5668;&#xFF0C;&#x4E5F;&#x5C31;&#x6CA1;&#x6709;&#x4E86;&#x540C;&#x6E90;&#x7B56;&#x7565;</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/&#x4EE3;&#x7406;&#x8DE8;&#x57DF;.png" alt="&#x4EE3;&#x7406;&#x8DE8;&#x57DF;"></p>
+<h5 id="&#x5B9E;&#x6218;cors">&#x5B9E;&#x6218;CORS</h5>
 <p><code>javascript</code></p>
-<h4 id="常见网络安全攻防">常见网络安全攻防</h4>
+<h4 id="&#x5E38;&#x89C1;&#x7F51;&#x7EDC;&#x5B89;&#x5168;&#x653B;&#x9632;">&#x5E38;&#x89C1;&#x7F51;&#x7EDC;&#x5B89;&#x5168;&#x653B;&#x9632;</h4>
 <blockquote>
-<p>安全知识、面试重点、高压线</p>
+<p>&#x5B89;&#x5168;&#x77E5;&#x8BC6;&#x3001;&#x9762;&#x8BD5;&#x91CD;&#x70B9;&#x3001;&#x9AD8;&#x538B;&#x7EBF;</p>
 </blockquote>
-<h5 id="攻击手段">攻击手段</h5>
+<h5 id="&#x653B;&#x51FB;&#x624B;&#x6BB5;">&#x653B;&#x51FB;&#x624B;&#x6BB5;</h5>
 <ul>
-<li>阻断服务攻击（Denial of service attack）（DoS）</li>
+<li>&#x963B;&#x65AD;&#x670D;&#x52A1;&#x653B;&#x51FB;&#xFF08;Denial of service attack&#xFF09;&#xFF08;DoS&#xFF09;</li>
 </ul>
-<p>想办法将目标目标网络资源用尽</p>
-<p>分布式阻断服务攻击（Distributed Denial of service）（DDos）</p>
-<p>通过各种肉鸡去消耗目标的流量资源。</p>
+<p>&#x60F3;&#x529E;&#x6CD5;&#x5C06;&#x76EE;&#x6807;&#x76EE;&#x6807;&#x7F51;&#x7EDC;&#x8D44;&#x6E90;&#x7528;&#x5C3D;</p>
+<p>&#x5206;&#x5E03;&#x5F0F;&#x963B;&#x65AD;&#x670D;&#x52A1;&#x653B;&#x51FB;&#xFF08;Distributed Denial of service&#xFF09;&#xFF08;DDos&#xFF09;</p>
+<p>&#x901A;&#x8FC7;&#x5404;&#x79CD;&#x8089;&#x9E21;&#x53BB;&#x6D88;&#x8017;&#x76EE;&#x6807;&#x7684;&#x6D41;&#x91CF;&#x8D44;&#x6E90;&#x3002;</p>
 <ul>
-<li>地址解析欺骗（Address Resolution Protocol spoofing）ARP攻击</li>
+<li>&#x5730;&#x5740;&#x89E3;&#x6790;&#x6B3A;&#x9A97;&#xFF08;Address Resolution Protocol spoofing&#xFF09;ARP&#x653B;&#x51FB;</li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/ARP.png" alt="ARP"></p>
 <ul>
-<li>跨站脚本攻击（Cross Site Scripting）XSS</li>
+<li>&#x8DE8;&#x7AD9;&#x811A;&#x672C;&#x653B;&#x51FB;&#xFF08;Cross Site Scripting&#xFF09;XSS</li>
 </ul>
-<p>将跨站脚本注入到被攻击网页上，用户打开网页会执行跨站脚本</p>
+<p>&#x5C06;&#x8DE8;&#x7AD9;&#x811A;&#x672C;&#x6CE8;&#x5165;&#x5230;&#x88AB;&#x653B;&#x51FB;&#x7F51;&#x9875;&#x4E0A;&#xFF0C;&#x7528;&#x6237;&#x6253;&#x5F00;&#x7F51;&#x9875;&#x4F1A;&#x6267;&#x884C;&#x8DE8;&#x7AD9;&#x811A;&#x672C;</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/XSS.png" alt="XSS"></p>
 <ul>
-<li>SQL注入</li>
+<li>SQL&#x6CE8;&#x5165;</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/SQL注入.png" alt="SQL"></p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/SQL&#x6CE8;&#x5165;.png" alt="SQL"></p>
 <ul>
-<li>跨站请求伪造（csrf）</li>
+<li>&#x8DE8;&#x7AD9;&#x8BF7;&#x6C42;&#x4F2A;&#x9020;&#xFF08;csrf&#xFF09;</li>
 </ul>
-<p>通过</p>
+<p>&#x901A;&#x8FC7;</p>
 <ul>
-<li>HTTPS中间人攻击</li>
+<li>HTTPS&#x4E2D;&#x95F4;&#x4EBA;&#x653B;&#x51FB;</li>
 </ul>
-<p>也就是抓包的原理，需要安装伪造的非法根证书。</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/中间人攻击（抓包）.png" alt="中间人攻击"></p>
-<h5 id="防御策略">防御策略</h5>
-<p>DDos：防火墙、交换机（路由器）、流量清洗</p>
-<p>过滤异常流量</p>
-<p>XSS：输入过滤，输出过滤。转义</p>
-<p>SQL注入：输入过滤，数据库安全策略</p>
-<h3 id="浏览器状态同步和路由">浏览器状态同步和路由</h3>
-<h3 id="工具链和其他">工具链和其他</h3>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x6293;&#x5305;&#x7684;&#x539F;&#x7406;&#xFF0C;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x4F2A;&#x9020;&#x7684;&#x975E;&#x6CD5;&#x6839;&#x8BC1;&#x4E66;&#x3002;</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/&#x4E2D;&#x95F4;&#x4EBA;&#x653B;&#x51FB;&#xFF08;&#x6293;&#x5305;&#xFF09;.png" alt="&#x4E2D;&#x95F4;&#x4EBA;&#x653B;&#x51FB;"></p>
+<h5 id="&#x9632;&#x5FA1;&#x7B56;&#x7565;">&#x9632;&#x5FA1;&#x7B56;&#x7565;</h5>
+<p>DDos&#xFF1A;&#x9632;&#x706B;&#x5899;&#x3001;&#x4EA4;&#x6362;&#x673A;&#xFF08;&#x8DEF;&#x7531;&#x5668;&#xFF09;&#x3001;&#x6D41;&#x91CF;&#x6E05;&#x6D17;</p>
+<p>&#x8FC7;&#x6EE4;&#x5F02;&#x5E38;&#x6D41;&#x91CF;</p>
+<p>XSS&#xFF1A;&#x8F93;&#x5165;&#x8FC7;&#x6EE4;&#xFF0C;&#x8F93;&#x51FA;&#x8FC7;&#x6EE4;&#x3002;&#x8F6C;&#x4E49;</p>
+<p>SQL&#x6CE8;&#x5165;&#xFF1A;&#x8F93;&#x5165;&#x8FC7;&#x6EE4;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x5B89;&#x5168;&#x7B56;&#x7565;</p>
+<h3 id="&#x6D4F;&#x89C8;&#x5668;&#x72B6;&#x6001;&#x540C;&#x6B65;&#x548C;&#x8DEF;&#x7531;">&#x6D4F;&#x89C8;&#x5668;&#x72B6;&#x6001;&#x540C;&#x6B65;&#x548C;&#x8DEF;&#x7531;</h3>
+<h3 id="&#x5DE5;&#x5177;&#x94FE;&#x548C;&#x5176;&#x4ED6;">&#x5DE5;&#x5177;&#x94FE;&#x548C;&#x5176;&#x4ED6;</h3>
 
                                 
                                 </section>
@@ -664,56 +665,12 @@ Origin: https://foo.bar.org
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"网络安全攻防","level":"1.3.4","depth":2,"next":{"title":"Node","level":"1.4","depth":1,"ref":"","articles":[{"title":"Node 01","level":"1.4.1","depth":2,"path":"node/node_01.md","ref":"node/node_01.md","articles":[]},{"title":"Node 02","level":"1.4.2","depth":2,"path":"node/node_02.md","ref":"node/node_02.md","articles":[]},{"title":"Node 03 Express","level":"1.4.3","depth":2,"path":"node/node_03%20express.md","ref":"node/node_03%20express.md","articles":[]},{"title":"node的web框架koa","level":"1.4.4","depth":2,"path":"node/node的web框架koa.md","ref":"node/node的web框架koa.md","articles":[]},{"title":"node基础","level":"1.4.5","depth":2,"path":"node/node基础.md","ref":"node/node基础.md","articles":[]},{"title":"node与mongDB","level":"1.4.6","depth":2,"path":"node/node与mongDB.md","ref":"node/node与mongDB.md","articles":[]}]},"previous":{"title":"浏览器状态同步和路由","level":"1.3.3","depth":2,"path":"计算机网络/浏览器状态同步和路由.md","ref":"计算机网络/浏览器状态同步和路由.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"计算机网络/网络安全攻防.md","mtime":"2022-07-20T02:55:44.671Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-20T03:36:12.980Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"网络安全攻防","level":"1.3.4","depth":2,"next":{"title":"Node","level":"1.4","depth":1,"ref":"","articles":[{"title":"Node 01","level":"1.4.1","depth":2,"path":"node/node_01.md","ref":"node/node_01.md","articles":[]},{"title":"Node 02","level":"1.4.2","depth":2,"path":"node/node_02.md","ref":"node/node_02.md","articles":[]},{"title":"Node 03","level":"1.4.3","depth":2,"path":"node/node_03.md","ref":"node/node_03.md","articles":[]},{"title":"node的web框架koa","level":"1.4.4","depth":2,"path":"node/node的web框架koa.md","ref":"node/node的web框架koa.md","articles":[]},{"title":"node基础","level":"1.4.5","depth":2,"path":"node/node基础.md","ref":"node/node基础.md","articles":[]},{"title":"node与mongDB","level":"1.4.6","depth":2,"path":"node/node与mongDB.md","ref":"node/node与mongDB.md","articles":[]}]},"previous":{"title":"浏览器状态同步和路由","level":"1.3.3","depth":2,"path":"计算机网络/浏览器状态同步和路由.md","ref":"计算机网络/浏览器状态同步和路由.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"计算机网络/网络安全攻防.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-21T00:58:27.102Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
-    <noscript>
-        <style>
-            .honkit-cloak {
-                display: block !important;
-            }
-        </style>
-    </noscript>
-    <script>
-        // Restore sidebar state as critical path for prevent layout shift
-        function __init__getSidebarState(defaultValue){
-            var baseKey = "";
-            var key = baseKey + ":sidebar";
-            try {
-                var value = localStorage[key];
-                if (value === undefined) {
-                    return defaultValue;
-                }
-                var parsed = JSON.parse(value);
-                return parsed == null ? defaultValue : parsed;
-            } catch (e) {
-                return defaultValue;
-            }
-        }
-        function __init__restoreLastSidebarState() {
-            var isMobile = window.matchMedia("(max-width: 600px)").matches;
-            if (isMobile) {
-                // Init last state if not mobile
-                return;
-            }
-            var sidebarState = __init__getSidebarState(true);
-            var book = document.querySelector(".book");
-            // Show sidebar if it enabled
-            if (sidebarState && book) {
-                book.classList.add("without-animation", "with-summary");
-            }
-        }
-
-        try {
-            __init__restoreLastSidebarState();
-        } finally {
-            var book = document.querySelector(".book");
-            book.classList.remove("honkit-cloak");
-        }
-    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -731,6 +688,10 @@ Origin: https://foo.bar.org
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

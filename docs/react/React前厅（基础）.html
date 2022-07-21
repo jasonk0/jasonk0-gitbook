@@ -3,10 +3,11 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>React前厅（基础） · HonKit</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>React前厅（基础） · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="HonKit 3.7.5">
+        <meta name="generator" content="GitBook 3.2.3">
         
         
         
@@ -16,7 +17,7 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
                 
@@ -61,7 +62,7 @@
     </head>
     <body>
         
-<div class="book honkit-cloak">
+<div class="book">
     <div class="book-summary">
         
             
@@ -279,12 +280,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../node/node_03%20express.md">
+        <li class="chapter " data-level="1.4.3" data-path="../node/node_03.html">
             
-                <span>
+                <a href="../node/node_03.html">
             
                     
-                    Node 03 Express
+                    Node 03
             
                 </a>
             
@@ -490,8 +491,8 @@
     <li class="divider"></li>
 
     <li>
-        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
-            Published with HonKit
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
         </a>
     </li>
 </ul>
@@ -530,99 +531,99 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="react">React</h1>
-<h2 id="前言">前言</h2>
-<p>基础 + 进阶</p>
-<p>facebook的工程师2011年开发的</p>
-<p>专注于业务开发，减少与DOM的交互</p>
-<p>用于构建用户界面的javascript库</p>
-<p>同样是基于虚拟DOM，将更改映射到虚拟DOM，最后渲染成真实DOM</p>
-<p><strong>为何选择？</strong></p>
-<p>相比于vue、angular，应用更加广泛。</p>
-<p>生态完善、友好的开发环境</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/react生态.png" alt="生态"></p>
-<h2 id="基础入门（前厅）">基础入门（前厅）</h2>
-<h3 id="环境配置">环境配置</h3>
-<p>NVM：node版本管理</p>
+<h2 id="&#x524D;&#x8A00;">&#x524D;&#x8A00;</h2>
+<p>&#x57FA;&#x7840; + &#x8FDB;&#x9636;</p>
+<p>facebook&#x7684;&#x5DE5;&#x7A0B;&#x5E08;2011&#x5E74;&#x5F00;&#x53D1;&#x7684;</p>
+<p>&#x4E13;&#x6CE8;&#x4E8E;&#x4E1A;&#x52A1;&#x5F00;&#x53D1;&#xFF0C;&#x51CF;&#x5C11;&#x4E0E;DOM&#x7684;&#x4EA4;&#x4E92;</p>
+<p>&#x7528;&#x4E8E;&#x6784;&#x5EFA;&#x7528;&#x6237;&#x754C;&#x9762;&#x7684;javascript&#x5E93;</p>
+<p>&#x540C;&#x6837;&#x662F;&#x57FA;&#x4E8E;&#x865A;&#x62DF;DOM&#xFF0C;&#x5C06;&#x66F4;&#x6539;&#x6620;&#x5C04;&#x5230;&#x865A;&#x62DF;DOM&#xFF0C;&#x6700;&#x540E;&#x6E32;&#x67D3;&#x6210;&#x771F;&#x5B9E;DOM</p>
+<p><strong>&#x4E3A;&#x4F55;&#x9009;&#x62E9;&#xFF1F;</strong></p>
+<p>&#x76F8;&#x6BD4;&#x4E8E;vue&#x3001;angular&#xFF0C;&#x5E94;&#x7528;&#x66F4;&#x52A0;&#x5E7F;&#x6CDB;&#x3002;</p>
+<p>&#x751F;&#x6001;&#x5B8C;&#x5584;&#x3001;&#x53CB;&#x597D;&#x7684;&#x5F00;&#x53D1;&#x73AF;&#x5883;</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/react&#x751F;&#x6001;.png" alt="&#x751F;&#x6001;"></p>
+<h2 id="&#x57FA;&#x7840;&#x5165;&#x95E8;&#xFF08;&#x524D;&#x5385;&#xFF09;">&#x57FA;&#x7840;&#x5165;&#x95E8;&#xFF08;&#x524D;&#x5385;&#xFF09;</h2>
+<h3 id="&#x73AF;&#x5883;&#x914D;&#x7F6E;">&#x73AF;&#x5883;&#x914D;&#x7F6E;</h3>
+<p>NVM&#xFF1A;node&#x7248;&#x672C;&#x7BA1;&#x7406;</p>
 <p>VSCode</p>
 <p>Node</p>
-<p>Create react App： 脚手架，其实也可以用vite</p>
+<p>Create react App&#xFF1A; &#x811A;&#x624B;&#x67B6;&#xFF0C;&#x5176;&#x5B9E;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;vite</p>
 <p><strong>Vite</strong></p>
-<p><code>npm init vite@latest</code> 初始化一个vite项目</p>
-<p>跟着选项选择就可以了</p>
-<p><code>npm install</code> 项目创建好后，安装依赖</p>
-<p><code>vite/npm run dev</code>就可以跑起来了</p>
-<h4 id="工具插件：bootsrap、第三方插件、eject">工具插件：bootsrap、第三方插件、eject</h4>
-<p>扩展：simple react snippets</p>
-<p>eject命令将一些隐藏的内容和配置展示出来。 </p>
-<p>codesandbox：在线网站（提供各种环境）</p>
+<p><code>npm init vite@latest</code> &#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;vite&#x9879;&#x76EE;</p>
+<p>&#x8DDF;&#x7740;&#x9009;&#x9879;&#x9009;&#x62E9;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;</p>
+<p><code>npm install</code> &#x9879;&#x76EE;&#x521B;&#x5EFA;&#x597D;&#x540E;&#xFF0C;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;</p>
+<p><code>vite/npm run dev</code>&#x5C31;&#x53EF;&#x4EE5;&#x8DD1;&#x8D77;&#x6765;&#x4E86;</p>
+<h4 id="&#x5DE5;&#x5177;&#x63D2;&#x4EF6;&#xFF1A;bootsrap&#x3001;&#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;&#x3001;eject">&#x5DE5;&#x5177;&#x63D2;&#x4EF6;&#xFF1A;bootsrap&#x3001;&#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;&#x3001;eject</h4>
+<p>&#x6269;&#x5C55;&#xFF1A;simple react snippets</p>
+<p>eject&#x547D;&#x4EE4;&#x5C06;&#x4E00;&#x4E9B;&#x9690;&#x85CF;&#x7684;&#x5185;&#x5BB9;&#x548C;&#x914D;&#x7F6E;&#x5C55;&#x793A;&#x51FA;&#x6765;&#x3002; </p>
+<p>codesandbox&#xFF1A;&#x5728;&#x7EBF;&#x7F51;&#x7AD9;&#xFF08;&#x63D0;&#x4F9B;&#x5404;&#x79CD;&#x73AF;&#x5883;&#xFF09;</p>
 <h3 id="jsx">JSX</h3>
-<p>构建组件的要点：</p>
+<p>&#x6784;&#x5EFA;&#x7EC4;&#x4EF6;&#x7684;&#x8981;&#x70B9;&#xFF1A;</p>
 <ul>
-<li>组件位置，在树状图里的位置</li>
-<li>确定参数，有哪些参数是必须的，那些是缺省的；那些缺省值在其他场景可以复用</li>
-<li>组件类型，函数组件还是Class组件</li>
-<li>组件内容，包含哪些数据，返回那些内容</li>
-<li>组件的通信与交互</li>
+<li>&#x7EC4;&#x4EF6;&#x4F4D;&#x7F6E;&#xFF0C;&#x5728;&#x6811;&#x72B6;&#x56FE;&#x91CC;&#x7684;&#x4F4D;&#x7F6E;</li>
+<li>&#x786E;&#x5B9A;&#x53C2;&#x6570;&#xFF0C;&#x6709;&#x54EA;&#x4E9B;&#x53C2;&#x6570;&#x662F;&#x5FC5;&#x987B;&#x7684;&#xFF0C;&#x90A3;&#x4E9B;&#x662F;&#x7F3A;&#x7701;&#x7684;&#xFF1B;&#x90A3;&#x4E9B;&#x7F3A;&#x7701;&#x503C;&#x5728;&#x5176;&#x4ED6;&#x573A;&#x666F;&#x53EF;&#x4EE5;&#x590D;&#x7528;</li>
+<li>&#x7EC4;&#x4EF6;&#x7C7B;&#x578B;&#xFF0C;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x8FD8;&#x662F;Class&#x7EC4;&#x4EF6;</li>
+<li>&#x7EC4;&#x4EF6;&#x5185;&#x5BB9;&#xFF0C;&#x5305;&#x542B;&#x54EA;&#x4E9B;&#x6570;&#x636E;&#xFF0C;&#x8FD4;&#x56DE;&#x90A3;&#x4E9B;&#x5185;&#x5BB9;</li>
+<li>&#x7EC4;&#x4EF6;&#x7684;&#x901A;&#x4FE1;&#x4E0E;&#x4EA4;&#x4E92;</li>
 </ul>
-<p>定义：</p>
+<p>&#x5B9A;&#x4E49;&#xFF1A;</p>
 <ul>
-<li>不是模版引擎语言（angular、vue）是带语法糖的AST（抽象语法树:christmas_tree:）</li>
-<li>声明式创建UI，处理UI逻辑</li>
-<li>遵循JS语法</li>
+<li>&#x4E0D;&#x662F;&#x6A21;&#x7248;&#x5F15;&#x64CE;&#x8BED;&#x8A00;&#xFF08;angular&#x3001;vue&#xFF09;&#x662F;&#x5E26;&#x8BED;&#x6CD5;&#x7CD6;&#x7684;AST&#xFF08;&#x62BD;&#x8C61;&#x8BED;&#x6CD5;&#x6811;:christmas_tree:&#xFF09;</li>
+<li>&#x58F0;&#x660E;&#x5F0F;&#x521B;&#x5EFA;UI&#xFF0C;&#x5904;&#x7406;UI&#x903B;&#x8F91;</li>
+<li>&#x9075;&#x5FAA;JS&#x8BED;&#x6CD5;</li>
 </ul>
-<p>渲染逻辑是UI中逻辑的耦合(事件绑定等)，这也遵循了「关注点分离原则」</p>
-<h4 id="关于babel">关于Babel</h4>
-<p>他是一个Javascript编译器，比如将箭头函数编译为低版本亦可使用的正常函数。</p>
-<p>babel会把JSX中的XML转化成浏览器可以执行的代码，也就是生成DOM树:evergreen_tree:所需要的DOM操作。</p>
+<p>&#x6E32;&#x67D3;&#x903B;&#x8F91;&#x662F;UI&#x4E2D;&#x903B;&#x8F91;&#x7684;&#x8026;&#x5408;(&#x4E8B;&#x4EF6;&#x7ED1;&#x5B9A;&#x7B49;)&#xFF0C;&#x8FD9;&#x4E5F;&#x9075;&#x5FAA;&#x4E86;&#x300C;&#x5173;&#x6CE8;&#x70B9;&#x5206;&#x79BB;&#x539F;&#x5219;&#x300D;</p>
+<h4 id="&#x5173;&#x4E8E;babel">&#x5173;&#x4E8E;Babel</h4>
+<p>&#x4ED6;&#x662F;&#x4E00;&#x4E2A;Javascript&#x7F16;&#x8BD1;&#x5668;&#xFF0C;&#x6BD4;&#x5982;&#x5C06;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x7F16;&#x8BD1;&#x4E3A;&#x4F4E;&#x7248;&#x672C;&#x4EA6;&#x53EF;&#x4F7F;&#x7528;&#x7684;&#x6B63;&#x5E38;&#x51FD;&#x6570;&#x3002;</p>
+<p>babel&#x4F1A;&#x628A;JSX&#x4E2D;&#x7684;XML&#x8F6C;&#x5316;&#x6210;&#x6D4F;&#x89C8;&#x5668;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x751F;&#x6210;DOM&#x6811;:evergreen_tree:&#x6240;&#x9700;&#x8981;&#x7684;DOM&#x64CD;&#x4F5C;&#x3002;</p>
 <h4 id="fragment">Fragment</h4>
-<p>一个虚拟的节点包裹两个并列的子节点，来保证babel可以解析并列的子节点。但是真实DOM中是没有这个节点的。</p>
-<p>简写：<code>&lt;&gt;&lt;/&gt;</code></p>
-<p>除了以上的情形，还可用作表格父子组件中子组件「列」的包裹。</p>
-<h4 id="拓展">拓展</h4>
-<p>babel的运行原理：解析（parse），转换（transform），生成（generate）。</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/babel原理.png" alt="babel原理"></p>
-<p><strong>解析</strong></p>
-<p>使用 babylon 解析器对输入的源代码字符串进行解析并生成初始 AST（File.prototype.parse）</p>
-<p>利用 babel-traverse 这个独立的包对 AST 进行遍历，并解析出整个树的 path，通过挂载的 metadataVisitor 读取对应的元信息，这一步叫 set AST 过程</p>
-<p><strong>转换</strong></p>
-<p>transform 过程：遍历 AST 树并应用各 transformers（plugin） 生成变换后的 AST 树</p>
-<p>babel 中最核心的是 babel-core，它向外暴露出 babel.transform 接口。</p>
-<p><strong>生成</strong></p>
-<p>利用 babel-generator 将 AST 树输出为转码后的代码字符串</p>
-<p>资料阅读<a href="https://github.com/barretlee/babel-plugin-ast" target="_blank">https://github.com/barretlee/babel-plugin-ast</a></p>
+<p>&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x7684;&#x8282;&#x70B9;&#x5305;&#x88F9;&#x4E24;&#x4E2A;&#x5E76;&#x5217;&#x7684;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x6765;&#x4FDD;&#x8BC1;babel&#x53EF;&#x4EE5;&#x89E3;&#x6790;&#x5E76;&#x5217;&#x7684;&#x5B50;&#x8282;&#x70B9;&#x3002;&#x4F46;&#x662F;&#x771F;&#x5B9E;DOM&#x4E2D;&#x662F;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x7684;&#x3002;</p>
+<p>&#x7B80;&#x5199;&#xFF1A;<code>&lt;&gt;&lt;/&gt;</code></p>
+<p>&#x9664;&#x4E86;&#x4EE5;&#x4E0A;&#x7684;&#x60C5;&#x5F62;&#xFF0C;&#x8FD8;&#x53EF;&#x7528;&#x4F5C;&#x8868;&#x683C;&#x7236;&#x5B50;&#x7EC4;&#x4EF6;&#x4E2D;&#x5B50;&#x7EC4;&#x4EF6;&#x300C;&#x5217;&#x300D;&#x7684;&#x5305;&#x88F9;&#x3002;</p>
+<h4 id="&#x62D3;&#x5C55;">&#x62D3;&#x5C55;</h4>
+<p>babel&#x7684;&#x8FD0;&#x884C;&#x539F;&#x7406;&#xFF1A;&#x89E3;&#x6790;&#xFF08;parse&#xFF09;&#xFF0C;&#x8F6C;&#x6362;&#xFF08;transform&#xFF09;&#xFF0C;&#x751F;&#x6210;&#xFF08;generate&#xFF09;&#x3002;</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/babel&#x539F;&#x7406;.png" alt="babel&#x539F;&#x7406;"></p>
+<p><strong>&#x89E3;&#x6790;</strong></p>
+<p>&#x4F7F;&#x7528; babylon &#x89E3;&#x6790;&#x5668;&#x5BF9;&#x8F93;&#x5165;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&#x89E3;&#x6790;&#x5E76;&#x751F;&#x6210;&#x521D;&#x59CB; AST&#xFF08;File.prototype.parse&#xFF09;</p>
+<p>&#x5229;&#x7528; babel-traverse &#x8FD9;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x5305;&#x5BF9; AST &#x8FDB;&#x884C;&#x904D;&#x5386;&#xFF0C;&#x5E76;&#x89E3;&#x6790;&#x51FA;&#x6574;&#x4E2A;&#x6811;&#x7684; path&#xFF0C;&#x901A;&#x8FC7;&#x6302;&#x8F7D;&#x7684; metadataVisitor &#x8BFB;&#x53D6;&#x5BF9;&#x5E94;&#x7684;&#x5143;&#x4FE1;&#x606F;&#xFF0C;&#x8FD9;&#x4E00;&#x6B65;&#x53EB; set AST &#x8FC7;&#x7A0B;</p>
+<p><strong>&#x8F6C;&#x6362;</strong></p>
+<p>transform &#x8FC7;&#x7A0B;&#xFF1A;&#x904D;&#x5386; AST &#x6811;&#x5E76;&#x5E94;&#x7528;&#x5404; transformers&#xFF08;plugin&#xFF09; &#x751F;&#x6210;&#x53D8;&#x6362;&#x540E;&#x7684; AST &#x6811;</p>
+<p>babel &#x4E2D;&#x6700;&#x6838;&#x5FC3;&#x7684;&#x662F; babel-core&#xFF0C;&#x5B83;&#x5411;&#x5916;&#x66B4;&#x9732;&#x51FA; babel.transform &#x63A5;&#x53E3;&#x3002;</p>
+<p><strong>&#x751F;&#x6210;</strong></p>
+<p>&#x5229;&#x7528; babel-generator &#x5C06; AST &#x6811;&#x8F93;&#x51FA;&#x4E3A;&#x8F6C;&#x7801;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x5B57;&#x7B26;&#x4E32;</p>
+<p>&#x8D44;&#x6599;&#x9605;&#x8BFB;<a href="https://github.com/barretlee/babel-plugin-ast" target="_blank">https://github.com/barretlee/babel-plugin-ast</a></p>
 <h3 id="css">CSS</h3>
-<p>行内样式</p>
-<pre><code class="lang-JSX"><span class="hljs-function"><span class="hljs-title">render</span>(<span class="hljs-params"></span>)</span>{
+<p>&#x884C;&#x5185;&#x6837;&#x5F0F;</p>
+<pre><code class="lang-JSX">render(){
   <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{color:</span> &apos;#<span class="hljs-attr">777</span>&apos;,<span class="hljs-attr">fontSize</span> <span class="hljs-attr">:</span> &apos;<span class="hljs-attr">80px</span>&apos;}&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>
 }
 </code></pre>
-<p>CSS module =&gt; 全局污染、命名重复、依赖管理</p>
-<p>可以达到：一个class代表一类样式，选择器不堆叠，通过compose进行依赖组合。</p>
+<p>CSS module =&gt; &#x5168;&#x5C40;&#x6C61;&#x67D3;&#x3001;&#x547D;&#x540D;&#x91CD;&#x590D;&#x3001;&#x4F9D;&#x8D56;&#x7BA1;&#x7406;</p>
+<p>&#x53EF;&#x4EE5;&#x8FBE;&#x5230;&#xFF1A;&#x4E00;&#x4E2A;class&#x4EE3;&#x8868;&#x4E00;&#x7C7B;&#x6837;&#x5F0F;&#xFF0C;&#x9009;&#x62E9;&#x5668;&#x4E0D;&#x5806;&#x53E0;&#xFF0C;&#x901A;&#x8FC7;compose&#x8FDB;&#x884C;&#x4F9D;&#x8D56;&#x7EC4;&#x5408;&#x3002;</p>
 <pre><code class="lang-css"><span class="hljs-selector-class">.title</span>{
-  composes: common from <span class="hljs-string">&apos;common.module.css&apos;</span>;
+  <span class="hljs-attribute">composes</span>: common from <span class="hljs-string">&apos;common.module.css&apos;</span>;
   <span class="hljs-attribute">font-size</span>: <span class="hljs-number">25px</span>;
 }
 </code></pre>
-<p>一个CSS的解决方案：<a href="https://styled-components.com/" target="_blank">styled-Component</a></p>
-<p>还有一个工具：Classnames</p>
+<p>&#x4E00;&#x4E2A;CSS&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF1A;<a href="https://styled-components.com/" target="_blank">styled-Component</a></p>
+<p>&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x5DE5;&#x5177;&#xFF1A;Classnames</p>
 <pre><code class="lang-jSX"><span class="hljs-keyword">import</span> classnames <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;classnames/bind&apos;</span>
 <span class="hljs-keyword">import</span> style <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;style.module.css&apos;</span>
 
 <span class="hljs-keyword">const</span> cls = classnames(style)
-<span class="hljs-keyword">const</span> app = <span class="hljs-function">()=&gt;</span>{
+<span class="hljs-keyword">const</span> app = ()=&gt;{
   <span class="hljs-keyword">return</span> (
-      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{cls(</span>&apos;<span class="hljs-attr">abc</span>&apos;)}&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
-    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{style.abc}</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">{cls(&apos;abc&apos;)}</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    &lt;div className={style.abc}&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
   )
 }
 </code></pre>
 <h3 id="props">Props</h3>
-<p>什么是Pros？</p>
-<p>当React元素作为自定义组件，将JSX所接受的属性转化为单个对象传递给组件，这个对象被称为props</p>
-<p>也就是父组件传给子组件的对象。也是一个组件的固有属性。</p>
-<h4 id="函数组件与类组件">函数组件与类组件</h4>
-<p>他们的不同在于参数的传递和拿取</p>
-<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> listItem = <span class="hljs-function">(<span class="hljs-params">props</span>) =&gt;</span> {
+<p>&#x4EC0;&#x4E48;&#x662F;Pros&#xFF1F;</p>
+<p>&#x5F53;React&#x5143;&#x7D20;&#x4F5C;&#x4E3A;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#xFF0C;&#x5C06;JSX&#x6240;&#x63A5;&#x53D7;&#x7684;&#x5C5E;&#x6027;&#x8F6C;&#x5316;&#x4E3A;&#x5355;&#x4E2A;&#x5BF9;&#x8C61;&#x4F20;&#x9012;&#x7ED9;&#x7EC4;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x88AB;&#x79F0;&#x4E3A;props</p>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x7236;&#x7EC4;&#x4EF6;&#x4F20;&#x7ED9;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;&#x56FA;&#x6709;&#x5C5E;&#x6027;&#x3002;</p>
+<h4 id="&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x4E0E;&#x7C7B;&#x7EC4;&#x4EF6;">&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x4E0E;&#x7C7B;&#x7EC4;&#x4EF6;</h4>
+<p>&#x4ED6;&#x4EEC;&#x7684;&#x4E0D;&#x540C;&#x5728;&#x4E8E;&#x53C2;&#x6570;&#x7684;&#x4F20;&#x9012;&#x548C;&#x62FF;&#x53D6;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> listItem = (props) =&gt; {
   <span class="hljs-keyword">return</span> (
       <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{props.data.name}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -631,8 +632,8 @@
 }
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ListItem</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">props</span>)</span> {
-    <span class="hljs-built_in">this</span>.props = props,
+  <span class="hljs-keyword">constructor</span>(props) {
+    <span class="hljs-keyword">this</span>.props = props,
   }
   <span class="hljs-keyword">return</span> (
       <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
@@ -641,172 +642,172 @@
   )
 }
 </code></pre>
-<p>函数组件也称作无状态组件，组件内没有this（组件示实例），也没有生命周期。是一个轻量的组件。</p>
-<h4 id="列表渲染">列表渲染</h4>
+<p>&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x4E5F;&#x79F0;&#x4F5C;&#x65E0;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;&#xFF0C;&#x7EC4;&#x4EF6;&#x5185;&#x6CA1;&#x6709;this&#xFF08;&#x7EC4;&#x4EF6;&#x793A;&#x5B9E;&#x4F8B;&#xFF09;&#xFF0C;&#x4E5F;&#x6CA1;&#x6709;&#x751F;&#x547D;&#x5468;&#x671F;&#x3002;&#x662F;&#x4E00;&#x4E2A;&#x8F7B;&#x91CF;&#x7684;&#x7EC4;&#x4EF6;&#x3002;</p>
+<h4 id="&#x5217;&#x8868;&#x6E32;&#x67D3;">&#x5217;&#x8868;&#x6E32;&#x67D3;</h4>
 <pre><code class="lang-jsx"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ListItem</span> </span>{
     <span class="hljs-keyword">const</span> listData = []
   <span class="hljs-keyword">return</span> (
       <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
         {listData.map(v =&gt; {
           return (
-              <span class="hljs-tag">&lt;<span class="hljs-name">ListItem</span> <span class="hljs-attr">data</span> = <span class="hljs-string">{v}</span> <span class="hljs-attr">key</span>=<span class="hljs-string">{v.id}</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ListItem</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">ListItem</span> <span class="hljs-attr">data</span> = {<span class="hljs-attr">v</span>} <span class="hljs-attr">key</span>=<span class="hljs-string">{v.id}</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ListItem</span>&gt;</span>
           )
         })}
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
   )
 }
 </code></pre>
-<h4 id="条件渲染">条件渲染</h4>
+<h4 id="&#x6761;&#x4EF6;&#x6E32;&#x67D3;">&#x6761;&#x4EF6;&#x6E32;&#x67D3;</h4>
 <pre><code class="lang-jsx"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ListItem</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
   <span class="hljs-keyword">let</span> count = <span class="hljs-number">0</span>
-  <span class="hljs-function"><span class="hljs-title">constructor</span>(<span class="hljs-params">props</span>)</span> {
-    <span class="hljs-built_in">this</span>.props = props,
+  <span class="hljs-keyword">constructor</span>(props) {
+    <span class="hljs-keyword">this</span>.props = props,
   }
   <span class="hljs-keyword">return</span> (
-      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span> = <span class="hljs-string">&quot;row&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span> = <span class="hljs-string">&apos;col col-1&apos;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span> = &quot;<span class="hljs-attr">row</span>&quot;&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span> = &apos;<span class="hljs-attr">col</span> <span class="hljs-attr">col-1</span>&apos;&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>                                                                            {this.props.data.name}
         <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span>=<span class="hljs-string">&quot;col col-1&quot;</span>&gt;</span>                                    {this.props.data.price}
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span> =<span class="hljs-string">{</span>`<span class="hljs-attr">themed-grid-col</span>${<span class="hljs-attr">count</span> ? &apos;&apos; <span class="hljs-attr">:</span> &apos;<span class="hljs-attr">-s</span>&apos;}`}&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">className</span> =<span class="hljs-string">{`themed-grid-col${count</span> ? &apos;&apos; <span class="hljs-attr">:</span> &apos;<span class="hljs-attr">-s</span>&apos;}`}&gt;</span>
         {count}
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>  
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
   )
 }
 </code></pre>
-<h2 id="进阶知识（正殿）">进阶知识（正殿）</h2>
-<h3 id="事件处理">事件处理</h3>
-<p>React事件和DOM事件大相径庭</p>
-<p>在使用this调用其他方法时，会发现this为undefined，此时可以使用bind方法绑定this：</p>
+<h2 id="&#x8FDB;&#x9636;&#x77E5;&#x8BC6;&#xFF08;&#x6B63;&#x6BBF;&#xFF09;">&#x8FDB;&#x9636;&#x77E5;&#x8BC6;&#xFF08;&#x6B63;&#x6BBF;&#xFF09;</h2>
+<h3 id="&#x4E8B;&#x4EF6;&#x5904;&#x7406;">&#x4E8B;&#x4EF6;&#x5904;&#x7406;</h3>
+<p>React&#x4E8B;&#x4EF6;&#x548C;DOM&#x4E8B;&#x4EF6;&#x5927;&#x76F8;&#x5F84;&#x5EAD;</p>
+<p>&#x5728;&#x4F7F;&#x7528;this&#x8C03;&#x7528;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x4F1A;&#x53D1;&#x73B0;this&#x4E3A;undefined&#xFF0C;&#x6B64;&#x65F6;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;bind&#x65B9;&#x6CD5;&#x7ED1;&#x5B9A;this&#xFF1A;</p>
 <ol>
-<li>在return的XML中调用方法时bind绑定this</li>
-<li>在构造函数里绑定this，并代替原来的方法。</li>
-<li>使用箭头函数创建方法</li>
+<li>&#x5728;return&#x7684;XML&#x4E2D;&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#x65F6;bind&#x7ED1;&#x5B9A;this</li>
+<li>&#x5728;&#x6784;&#x9020;&#x51FD;&#x6570;&#x91CC;&#x7ED1;&#x5B9A;this&#xFF0C;&#x5E76;&#x4EE3;&#x66FF;&#x539F;&#x6765;&#x7684;&#x65B9;&#x6CD5;&#x3002;</li>
+<li>&#x4F7F;&#x7528;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x521B;&#x5EFA;&#x65B9;&#x6CD5;</li>
 </ol>
-<h4 id="向事件处理函数传递参数">向事件处理函数传递参数</h4>
-<p>在XML中传入参数：用bind传递；用箭头函数传递参数。</p>
-<p>两个方法的前提都是为了this指向明确，然后传递参数。</p>
-<pre><code class="lang-jsx"><span class="hljs-comment">// 自己包装的方法</span>
+<h4 id="&#x5411;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#x4F20;&#x9012;&#x53C2;&#x6570;">&#x5411;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x51FD;&#x6570;&#x4F20;&#x9012;&#x53C2;&#x6570;</h4>
+<p>&#x5728;XML&#x4E2D;&#x4F20;&#x5165;&#x53C2;&#x6570;&#xFF1A;&#x7528;bind&#x4F20;&#x9012;&#xFF1B;&#x7528;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x4F20;&#x9012;&#x53C2;&#x6570;&#x3002;</p>
+<p>&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x524D;&#x63D0;&#x90FD;&#x662F;&#x4E3A;&#x4E86;this&#x6307;&#x5411;&#x660E;&#x786E;&#xFF0C;&#x7136;&#x540E;&#x4F20;&#x9012;&#x53C2;&#x6570;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// &#x81EA;&#x5DF1;&#x5305;&#x88C5;&#x7684;&#x65B9;&#x6CD5;</span>
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ListItem</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
-  state = { <span class="hljs-attr">name</span>:<span class="hljs-string">&apos;八戒&apos;</span> } 
-  handel = <span class="hljs-function">(<span class="hljs-params">name</span>)=&gt;</span>{
-    <span class="hljs-keyword">return</span> <span class="hljs-function">(<span class="hljs-params">ev</span>)=&gt;</span>{
+  state = { name:<span class="hljs-string">&apos;&#x516B;&#x6212;&apos;</span> } 
+  handel = (name)=&gt;{
+    <span class="hljs-keyword">return</span> (ev)=&gt;{
       <span class="hljs-built_in">console</span>.log(name + <span class="hljs-string">&apos; hello!&apos;</span>)
       <span class="hljs-built_in">console</span>.log(ev)
     } 
   }
-  <span class="hljs-function"><span class="hljs-title">render</span>(<span class="hljs-params"></span>)</span> { 
+  render() { 
     <span class="hljs-keyword">return</span> (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{this.handel(this.state.name)}</span>&gt;</span>hello<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>);
   }
 }
-<span class="hljs-comment">// 老师讲的方法</span>
-handel = <span class="hljs-function">(<span class="hljs-params">name,ev</span>)=&gt;</span>{
+<span class="hljs-comment">// &#x8001;&#x5E08;&#x8BB2;&#x7684;&#x65B9;&#x6CD5;</span>
+handel = (name,ev)=&gt;{
     <span class="hljs-built_in">console</span>.log(name + <span class="hljs-string">&apos; hello!&apos;</span>)
   <span class="hljs-built_in">console</span>.log(ev)
   }
-  <span class="hljs-function"><span class="hljs-title">render</span>(<span class="hljs-params"></span>)</span> { 
-    <span class="hljs-keyword">return</span> (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{(ev)</span>=&gt;</span>this.handel(this.state.name,ev)}&gt;hello<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>);
+  render() { 
+    <span class="hljs-keyword">return</span> (<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{(ev)=</span>&gt;</span>this.handel(this.state.name,ev)}&gt;hello<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span>);
 </code></pre>
-<h4 id="向父组件传递参数">向父组件传递参数</h4>
-<p>在子组件上定义一个事件<code>onDel</code>绑定到父组件的处理函数上，然后在子组件里通过并绑定点击事件<code>onClick</code>到自定义事件<code>onDel</code>上来传参；子组件可以引用父组件的事件<code>onClick = this.props.onDel(id)</code></p>
-<h4 id="事件机制">事件机制</h4>
-<p>DOM的事件机制：捕获 =&gt; 目标事件处理 =&gt; 冒泡</p>
-<p>所以可以进行「事件委托」</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/DOM事件处理机制.png" alt="DOM事件"></p>
-<p>React事件机制：事件都会被绑定在document上，一般会在冒泡阶段处理</p>
-<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/React的事件机制.png" alt="React事件"></p>
-<p>React事件是合成事件，在document监听所有的支持事件，使用统一的分发函数dispatchEvent</p>
-<h4 id="拓展">拓展</h4>
+<h4 id="&#x5411;&#x7236;&#x7EC4;&#x4EF6;&#x4F20;&#x9012;&#x53C2;&#x6570;">&#x5411;&#x7236;&#x7EC4;&#x4EF6;&#x4F20;&#x9012;&#x53C2;&#x6570;</h4>
+<p>&#x5728;&#x5B50;&#x7EC4;&#x4EF6;&#x4E0A;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;<code>onDel</code>&#x7ED1;&#x5B9A;&#x5230;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x5904;&#x7406;&#x51FD;&#x6570;&#x4E0A;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x5B50;&#x7EC4;&#x4EF6;&#x91CC;&#x901A;&#x8FC7;&#x5E76;&#x7ED1;&#x5B9A;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;<code>onClick</code>&#x5230;&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;<code>onDel</code>&#x4E0A;&#x6765;&#x4F20;&#x53C2;&#xFF1B;&#x5B50;&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x5F15;&#x7528;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x4E8B;&#x4EF6;<code>onClick = this.props.onDel(id)</code></p>
+<h4 id="&#x4E8B;&#x4EF6;&#x673A;&#x5236;">&#x4E8B;&#x4EF6;&#x673A;&#x5236;</h4>
+<p>DOM&#x7684;&#x4E8B;&#x4EF6;&#x673A;&#x5236;&#xFF1A;&#x6355;&#x83B7; =&gt; &#x76EE;&#x6807;&#x4E8B;&#x4EF6;&#x5904;&#x7406; =&gt; &#x5192;&#x6CE1;</p>
+<p>&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x300C;&#x4E8B;&#x4EF6;&#x59D4;&#x6258;&#x300D;</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/DOM&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x673A;&#x5236;.png" alt="DOM&#x4E8B;&#x4EF6;"></p>
+<p>React&#x4E8B;&#x4EF6;&#x673A;&#x5236;&#xFF1A;&#x4E8B;&#x4EF6;&#x90FD;&#x4F1A;&#x88AB;&#x7ED1;&#x5B9A;&#x5728;document&#x4E0A;&#xFF0C;&#x4E00;&#x822C;&#x4F1A;&#x5728;&#x5192;&#x6CE1;&#x9636;&#x6BB5;&#x5904;&#x7406;</p>
+<p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/React&#x7684;&#x4E8B;&#x4EF6;&#x673A;&#x5236;.png" alt="React&#x4E8B;&#x4EF6;"></p>
+<p>React&#x4E8B;&#x4EF6;&#x662F;&#x5408;&#x6210;&#x4E8B;&#x4EF6;&#xFF0C;&#x5728;document&#x76D1;&#x542C;&#x6240;&#x6709;&#x7684;&#x652F;&#x6301;&#x4E8B;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528;&#x7EDF;&#x4E00;&#x7684;&#x5206;&#x53D1;&#x51FD;&#x6570;dispatchEvent</p>
+<h4 id="&#x62D3;&#x5C55;">&#x62D3;&#x5C55;</h4>
 <blockquote>
-<p>合成事件（SyntheticEvent）：React自己实现了一套高效的事件注册，存储，分发和重用逻辑，在DOM事件体系基础上做了很大改进，减少了内存消耗，简化了事件逻辑，并最大化的解决了IE等浏览器的不兼容问题。</p>
+<p>&#x5408;&#x6210;&#x4E8B;&#x4EF6;&#xFF08;SyntheticEvent&#xFF09;&#xFF1A;React&#x81EA;&#x5DF1;&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x5957;&#x9AD8;&#x6548;&#x7684;&#x4E8B;&#x4EF6;&#x6CE8;&#x518C;&#xFF0C;&#x5B58;&#x50A8;&#xFF0C;&#x5206;&#x53D1;&#x548C;&#x91CD;&#x7528;&#x903B;&#x8F91;&#xFF0C;&#x5728;DOM&#x4E8B;&#x4EF6;&#x4F53;&#x7CFB;&#x57FA;&#x7840;&#x4E0A;&#x505A;&#x4E86;&#x5F88;&#x5927;&#x6539;&#x8FDB;&#xFF0C;&#x51CF;&#x5C11;&#x4E86;&#x5185;&#x5B58;&#x6D88;&#x8017;&#xFF0C;&#x7B80;&#x5316;&#x4E86;&#x4E8B;&#x4EF6;&#x903B;&#x8F91;&#xFF0C;&#x5E76;&#x6700;&#x5927;&#x5316;&#x7684;&#x89E3;&#x51B3;&#x4E86;IE&#x7B49;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x4E0D;&#x517C;&#x5BB9;&#x95EE;&#x9898;&#x3002;</p>
 </blockquote>
-<p>特点如下：</p>
+<p>&#x7279;&#x70B9;&#x5982;&#x4E0B;&#xFF1A;</p>
 <ol>
-<li>SyntheticEvent最终绑定在document上，相当于做了最高层的事件委托，也简化了DOM原生事件的流程，减少了内存开销</li>
-<li>由于原生事件是先于合成事件的，而且合成事件的冒泡机制是通过将目标组件和处理函数加入「事件处理模型」生成「处理函数队列」，再使用统一的分发函数dispatchEvent去执行处理函数的方式实现的；所以使用<code>stopPropagation()</code>是无法停止事件冒泡的，应该使用<code>preventDefault()</code>来阻止事件传播。</li>
-<li>React使用对象池来管理合成事件对象的创建和销毁，减少了垃圾生成和新内存的分配，大大提高性能。</li>
+<li>SyntheticEvent&#x6700;&#x7EC8;&#x7ED1;&#x5B9A;&#x5728;document&#x4E0A;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x505A;&#x4E86;&#x6700;&#x9AD8;&#x5C42;&#x7684;&#x4E8B;&#x4EF6;&#x59D4;&#x6258;&#xFF0C;&#x4E5F;&#x7B80;&#x5316;&#x4E86;DOM&#x539F;&#x751F;&#x4E8B;&#x4EF6;&#x7684;&#x6D41;&#x7A0B;&#xFF0C;&#x51CF;&#x5C11;&#x4E86;&#x5185;&#x5B58;&#x5F00;&#x9500;</li>
+<li>&#x7531;&#x4E8E;&#x539F;&#x751F;&#x4E8B;&#x4EF6;&#x662F;&#x5148;&#x4E8E;&#x5408;&#x6210;&#x4E8B;&#x4EF6;&#x7684;&#xFF0C;&#x800C;&#x4E14;&#x5408;&#x6210;&#x4E8B;&#x4EF6;&#x7684;&#x5192;&#x6CE1;&#x673A;&#x5236;&#x662F;&#x901A;&#x8FC7;&#x5C06;&#x76EE;&#x6807;&#x7EC4;&#x4EF6;&#x548C;&#x5904;&#x7406;&#x51FD;&#x6570;&#x52A0;&#x5165;&#x300C;&#x4E8B;&#x4EF6;&#x5904;&#x7406;&#x6A21;&#x578B;&#x300D;&#x751F;&#x6210;&#x300C;&#x5904;&#x7406;&#x51FD;&#x6570;&#x961F;&#x5217;&#x300D;&#xFF0C;&#x518D;&#x4F7F;&#x7528;&#x7EDF;&#x4E00;&#x7684;&#x5206;&#x53D1;&#x51FD;&#x6570;dispatchEvent&#x53BB;&#x6267;&#x884C;&#x5904;&#x7406;&#x51FD;&#x6570;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x7684;&#xFF1B;&#x6240;&#x4EE5;&#x4F7F;&#x7528;<code>stopPropagation()</code>&#x662F;&#x65E0;&#x6CD5;&#x505C;&#x6B62;&#x4E8B;&#x4EF6;&#x5192;&#x6CE1;&#x7684;&#xFF0C;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;<code>preventDefault()</code>&#x6765;&#x963B;&#x6B62;&#x4E8B;&#x4EF6;&#x4F20;&#x64AD;&#x3002;</li>
+<li>React&#x4F7F;&#x7528;&#x5BF9;&#x8C61;&#x6C60;&#x6765;&#x7BA1;&#x7406;&#x5408;&#x6210;&#x4E8B;&#x4EF6;&#x5BF9;&#x8C61;&#x7684;&#x521B;&#x5EFA;&#x548C;&#x9500;&#x6BC1;&#xFF0C;&#x51CF;&#x5C11;&#x4E86;&#x5783;&#x573E;&#x751F;&#x6210;&#x548C;&#x65B0;&#x5185;&#x5B58;&#x7684;&#x5206;&#x914D;&#xFF0C;&#x5927;&#x5927;&#x63D0;&#x9AD8;&#x6027;&#x80FD;&#x3002;</li>
 </ol>
 <h3 id="state">state</h3>
-<p>React-devTools调试工具</p>
-<h4 id="基础">基础</h4>
-<p>定义：在constructor里定义state</p>
-<p><strong>何时定义？</strong></p>
-<p>是否可以通过props父组件获取；是否可以通过其他state和props计算得到；是否在render方法中使用。</p>
-<p><strong>如何修改State？</strong></p>
+<p>React-devTools&#x8C03;&#x8BD5;&#x5DE5;&#x5177;</p>
+<h4 id="&#x57FA;&#x7840;">&#x57FA;&#x7840;</h4>
+<p>&#x5B9A;&#x4E49;&#xFF1A;&#x5728;constructor&#x91CC;&#x5B9A;&#x4E49;state</p>
+<p><strong>&#x4F55;&#x65F6;&#x5B9A;&#x4E49;&#xFF1F;</strong></p>
+<p>&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;props&#x7236;&#x7EC4;&#x4EF6;&#x83B7;&#x53D6;&#xFF1B;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5176;&#x4ED6;state&#x548C;props&#x8BA1;&#x7B97;&#x5F97;&#x5230;&#xFF1B;&#x662F;&#x5426;&#x5728;render&#x65B9;&#x6CD5;&#x4E2D;&#x4F7F;&#x7528;&#x3002;</p>
+<p><strong>&#x5982;&#x4F55;&#x4FEE;&#x6539;State&#xFF1F;</strong></p>
 <ul>
-<li><p>通过this.setState。</p>
+<li><p>&#x901A;&#x8FC7;this.setState&#x3002;</p>
 </li>
-<li><p>setState是异步的</p>
+<li><p>setState&#x662F;&#x5F02;&#x6B65;&#x7684;</p>
 </li>
-<li>State的更新是浅合并，也就是将多次修改合并为一次</li>
+<li>State&#x7684;&#x66F4;&#x65B0;&#x662F;&#x6D45;&#x5408;&#x5E76;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5C06;&#x591A;&#x6B21;&#x4FEE;&#x6539;&#x5408;&#x5E76;&#x4E3A;&#x4E00;&#x6B21;</li>
 </ul>
-<p><strong>不可变数据</strong></p>
-<p>状态是不可变类型，只能更新覆盖</p>
-<p>状态的类型是数组时，用新的数组替换原数组</p>
-<p>状态的类型是对象时，用Object.assign()拷贝一个新的对象。有时需要深拷贝</p>
-<p>Immuter JS 库</p>
-<p><strong>State和props的区别</strong></p>
-<p>State：</p>
+<p><strong>&#x4E0D;&#x53EF;&#x53D8;&#x6570;&#x636E;</strong></p>
+<p>&#x72B6;&#x6001;&#x662F;&#x4E0D;&#x53EF;&#x53D8;&#x7C7B;&#x578B;&#xFF0C;&#x53EA;&#x80FD;&#x66F4;&#x65B0;&#x8986;&#x76D6;</p>
+<p>&#x72B6;&#x6001;&#x7684;&#x7C7B;&#x578B;&#x662F;&#x6570;&#x7EC4;&#x65F6;&#xFF0C;&#x7528;&#x65B0;&#x7684;&#x6570;&#x7EC4;&#x66FF;&#x6362;&#x539F;&#x6570;&#x7EC4;</p>
+<p>&#x72B6;&#x6001;&#x7684;&#x7C7B;&#x578B;&#x662F;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x7528;Object.assign()&#x62F7;&#x8D1D;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x6709;&#x65F6;&#x9700;&#x8981;&#x6DF1;&#x62F7;&#x8D1D;</p>
+<p>Immuter JS &#x5E93;</p>
+<p><strong>State&#x548C;props&#x7684;&#x533A;&#x522B;</strong></p>
+<p>State&#xFF1A;</p>
 <ul>
-<li>可更改的</li>
-<li>组件内部更改</li>
-<li>交互或其他逻辑造成的数据更新</li>
+<li>&#x53EF;&#x66F4;&#x6539;&#x7684;</li>
+<li>&#x7EC4;&#x4EF6;&#x5185;&#x90E8;&#x66F4;&#x6539;</li>
+<li>&#x4EA4;&#x4E92;&#x6216;&#x5176;&#x4ED6;&#x903B;&#x8F91;&#x9020;&#x6210;&#x7684;&#x6570;&#x636E;&#x66F4;&#x65B0;</li>
 </ul>
-<p>Props：</p>
+<p>Props&#xFF1A;</p>
 <ul>
-<li>在组件内部不可变</li>
-<li>父组件传入</li>
-<li>简单的单向数据流</li>
+<li>&#x5728;&#x7EC4;&#x4EF6;&#x5185;&#x90E8;&#x4E0D;&#x53EF;&#x53D8;</li>
+<li>&#x7236;&#x7EC4;&#x4EF6;&#x4F20;&#x5165;</li>
+<li>&#x7B80;&#x5355;&#x7684;&#x5355;&#x5411;&#x6570;&#x636E;&#x6D41;</li>
 </ul>
-<p>state 可以通过 proos 传入子组件</p>
-<p>props 可以初始化 state</p>
-<h4 id="进阶">进阶</h4>
-<p>一般情况下porps、state即使不变仍然会调用render函数，完全没必要。可以通过shouldComponentUpdata来进行判断前后值是否一样，一样的话就不render；或者可以使用更方便的PureComponent</p>
-<p><strong>单一数据源</strong></p>
-<p>同一页面下的组件使用一个数据源</p>
-<p>子组件的数据依赖于父组件传递的props，如果子组件存在状态变更，则将其转化为事件传递给父组件处理。这样可以保证父子组件的状态都以父组件为准</p>
-<p>单一数据流：仅从父组件流向子组件</p>
-<p><strong>状态提升</strong></p>
-<p>就是将兄弟组件的状态统一提升到他们的父组件进行管理</p>
-<p>把状态提升到最上边一层</p>
-<p><strong>无状态&amp;有状态</strong></p>
-<p>有状态组件：容器组件、类组件、处理状态</p>
-<p>无状态组件：函数组件、仅展示组件</p>
-<p><strong>总结</strong></p>
-<p>优化渲染：shouldComponentUpdata或者pureComponent</p>
-<p>使用不可变数据：方便管理响应式属性</p>
-<p>单一数据源及状态提升：保证单一数据流，方便状态管理</p>
-<p>无状态组件：使用函数组件书写更加简洁（仅展示）</p>
-<h3 id="生命周期">生命周期</h3>
-<p>三个阶段：创建阶段-更新阶段-卸载阶段</p>
-<p><strong>创建阶段</strong></p>
-<p>初始化：<code>constructor</code></p>
-<p>​    初始化内部状态，象形设置和隐形设置，super调用基类的方法，可以直接修改state</p>
-<p>挂载：</p>
+<p>state &#x53EF;&#x4EE5;&#x901A;&#x8FC7; proos &#x4F20;&#x5165;&#x5B50;&#x7EC4;&#x4EF6;</p>
+<p>props &#x53EF;&#x4EE5;&#x521D;&#x59CB;&#x5316; state</p>
+<h4 id="&#x8FDB;&#x9636;">&#x8FDB;&#x9636;</h4>
+<p>&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;porps&#x3001;state&#x5373;&#x4F7F;&#x4E0D;&#x53D8;&#x4ECD;&#x7136;&#x4F1A;&#x8C03;&#x7528;render&#x51FD;&#x6570;&#xFF0C;&#x5B8C;&#x5168;&#x6CA1;&#x5FC5;&#x8981;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;shouldComponentUpdata&#x6765;&#x8FDB;&#x884C;&#x5224;&#x65AD;&#x524D;&#x540E;&#x503C;&#x662F;&#x5426;&#x4E00;&#x6837;&#xFF0C;&#x4E00;&#x6837;&#x7684;&#x8BDD;&#x5C31;&#x4E0D;render&#xFF1B;&#x6216;&#x8005;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x66F4;&#x65B9;&#x4FBF;&#x7684;PureComponent</p>
+<p><strong>&#x5355;&#x4E00;&#x6570;&#x636E;&#x6E90;</strong></p>
+<p>&#x540C;&#x4E00;&#x9875;&#x9762;&#x4E0B;&#x7684;&#x7EC4;&#x4EF6;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x6E90;</p>
+<p>&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x6570;&#x636E;&#x4F9D;&#x8D56;&#x4E8E;&#x7236;&#x7EC4;&#x4EF6;&#x4F20;&#x9012;&#x7684;props&#xFF0C;&#x5982;&#x679C;&#x5B50;&#x7EC4;&#x4EF6;&#x5B58;&#x5728;&#x72B6;&#x6001;&#x53D8;&#x66F4;&#xFF0C;&#x5219;&#x5C06;&#x5176;&#x8F6C;&#x5316;&#x4E3A;&#x4E8B;&#x4EF6;&#x4F20;&#x9012;&#x7ED9;&#x7236;&#x7EC4;&#x4EF6;&#x5904;&#x7406;&#x3002;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x7236;&#x5B50;&#x7EC4;&#x4EF6;&#x7684;&#x72B6;&#x6001;&#x90FD;&#x4EE5;&#x7236;&#x7EC4;&#x4EF6;&#x4E3A;&#x51C6;</p>
+<p>&#x5355;&#x4E00;&#x6570;&#x636E;&#x6D41;&#xFF1A;&#x4EC5;&#x4ECE;&#x7236;&#x7EC4;&#x4EF6;&#x6D41;&#x5411;&#x5B50;&#x7EC4;&#x4EF6;</p>
+<p><strong>&#x72B6;&#x6001;&#x63D0;&#x5347;</strong></p>
+<p>&#x5C31;&#x662F;&#x5C06;&#x5144;&#x5F1F;&#x7EC4;&#x4EF6;&#x7684;&#x72B6;&#x6001;&#x7EDF;&#x4E00;&#x63D0;&#x5347;&#x5230;&#x4ED6;&#x4EEC;&#x7684;&#x7236;&#x7EC4;&#x4EF6;&#x8FDB;&#x884C;&#x7BA1;&#x7406;</p>
+<p>&#x628A;&#x72B6;&#x6001;&#x63D0;&#x5347;&#x5230;&#x6700;&#x4E0A;&#x8FB9;&#x4E00;&#x5C42;</p>
+<p><strong>&#x65E0;&#x72B6;&#x6001;&amp;&#x6709;&#x72B6;&#x6001;</strong></p>
+<p>&#x6709;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;&#xFF1A;&#x5BB9;&#x5668;&#x7EC4;&#x4EF6;&#x3001;&#x7C7B;&#x7EC4;&#x4EF6;&#x3001;&#x5904;&#x7406;&#x72B6;&#x6001;</p>
+<p>&#x65E0;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;&#xFF1A;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x3001;&#x4EC5;&#x5C55;&#x793A;&#x7EC4;&#x4EF6;</p>
+<p><strong>&#x603B;&#x7ED3;</strong></p>
+<p>&#x4F18;&#x5316;&#x6E32;&#x67D3;&#xFF1A;shouldComponentUpdata&#x6216;&#x8005;pureComponent</p>
+<p>&#x4F7F;&#x7528;&#x4E0D;&#x53EF;&#x53D8;&#x6570;&#x636E;&#xFF1A;&#x65B9;&#x4FBF;&#x7BA1;&#x7406;&#x54CD;&#x5E94;&#x5F0F;&#x5C5E;&#x6027;</p>
+<p>&#x5355;&#x4E00;&#x6570;&#x636E;&#x6E90;&#x53CA;&#x72B6;&#x6001;&#x63D0;&#x5347;&#xFF1A;&#x4FDD;&#x8BC1;&#x5355;&#x4E00;&#x6570;&#x636E;&#x6D41;&#xFF0C;&#x65B9;&#x4FBF;&#x72B6;&#x6001;&#x7BA1;&#x7406;</p>
+<p>&#x65E0;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;&#xFF1A;&#x4F7F;&#x7528;&#x51FD;&#x6570;&#x7EC4;&#x4EF6;&#x4E66;&#x5199;&#x66F4;&#x52A0;&#x7B80;&#x6D01;&#xFF08;&#x4EC5;&#x5C55;&#x793A;&#xFF09;</p>
+<h3 id="&#x751F;&#x547D;&#x5468;&#x671F;">&#x751F;&#x547D;&#x5468;&#x671F;</h3>
+<p>&#x4E09;&#x4E2A;&#x9636;&#x6BB5;&#xFF1A;&#x521B;&#x5EFA;&#x9636;&#x6BB5;-&#x66F4;&#x65B0;&#x9636;&#x6BB5;-&#x5378;&#x8F7D;&#x9636;&#x6BB5;</p>
+<p><strong>&#x521B;&#x5EFA;&#x9636;&#x6BB5;</strong></p>
+<p>&#x521D;&#x59CB;&#x5316;&#xFF1A;<code>constructor</code></p>
+<p>&#x200B;    &#x521D;&#x59CB;&#x5316;&#x5185;&#x90E8;&#x72B6;&#x6001;&#xFF0C;&#x8C61;&#x5F62;&#x8BBE;&#x7F6E;&#x548C;&#x9690;&#x5F62;&#x8BBE;&#x7F6E;&#xFF0C;super&#x8C03;&#x7528;&#x57FA;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4FEE;&#x6539;state</p>
+<p>&#x6302;&#x8F7D;&#xFF1A;</p>
 <p><code>componentWillMount</code></p>
-<p>​    setState不会触发render</p>
+<p>&#x200B;    setState&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;render</p>
 <p><code>render</code></p>
-<p>​    render必须有的方法；返回一个顶级的react元素，渲染出来的是类似于DOM树的React对象，也就是虚拟的。</p>
+<p>&#x200B;    render&#x5FC5;&#x987B;&#x6709;&#x7684;&#x65B9;&#x6CD5;&#xFF1B;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9876;&#x7EA7;&#x7684;react&#x5143;&#x7D20;&#xFF0C;&#x6E32;&#x67D3;&#x51FA;&#x6765;&#x7684;&#x662F;&#x7C7B;&#x4F3C;&#x4E8E;DOM&#x6811;&#x7684;React&#x5BF9;&#x8C61;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x865A;&#x62DF;&#x7684;&#x3002;</p>
 <p><code>componentDidMount</code></p>
-<p>​    渲染完调用；只执行一次；常用来获取一些外部数据资源</p>
-<p><strong>更新阶段</strong></p>
+<p>&#x200B;    &#x6E32;&#x67D3;&#x5B8C;&#x8C03;&#x7528;&#xFF1B;&#x53EA;&#x6267;&#x884C;&#x4E00;&#x6B21;&#xFF1B;&#x5E38;&#x7528;&#x6765;&#x83B7;&#x53D6;&#x4E00;&#x4E9B;&#x5916;&#x90E8;&#x6570;&#x636E;&#x8D44;&#x6E90;</p>
+<p><strong>&#x66F4;&#x65B0;&#x9636;&#x6BB5;</strong></p>
 <p><code>shouldComponentUpdate</code></p>
-<p>​    将旧值与新值进行对比，相等的话就不会重新渲染，可以使用PureComponent代替</p>
+<p>&#x200B;    &#x5C06;&#x65E7;&#x503C;&#x4E0E;&#x65B0;&#x503C;&#x8FDB;&#x884C;&#x5BF9;&#x6BD4;&#xFF0C;&#x76F8;&#x7B49;&#x7684;&#x8BDD;&#x5C31;&#x4E0D;&#x4F1A;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;PureComponent&#x4EE3;&#x66FF;</p>
 <p><code>componentDidUpdate</code></p>
-<p>​    可以比对props的前后变化，发生变化的话可以进行一些操作</p>
+<p>&#x200B;    &#x53EF;&#x4EE5;&#x6BD4;&#x5BF9;props&#x7684;&#x524D;&#x540E;&#x53D8;&#x5316;&#xFF0C;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x7684;&#x8BDD;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;</p>
 <p><code>componentWillUnmount</code></p>
-<p>​    组件即将卸载</p>
-<h3 id="react的组件设计模式">React的组件设计模式</h3>
-<p>高阶组件和函数作为子组件renderProps</p>
-<h4 id="高阶组件hoc">高阶组件HOC</h4>
-<p>提供可复用性高，健壮性好的通用组件，减少重复代码。</p>
-<p>高阶组件是对现有组件的封装，接收组件作为参数返回一个新的组件。</p>
-<h4 id="函数作为子组件renderprops">函数作为子组件renderProps</h4>
-<p>可以理解为子组件拿到父组件传入的props（包含着父组件的渲染函数内容）然后渲染出来</p>
-<pre><code class="lang-react">// 作为子组件被调用，使用props传来的render函数渲染
-// 状态依旧是在这里管理
+<p>&#x200B;    &#x7EC4;&#x4EF6;&#x5373;&#x5C06;&#x5378;&#x8F7D;</p>
+<h3 id="react&#x7684;&#x7EC4;&#x4EF6;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;">React&#x7684;&#x7EC4;&#x4EF6;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;</h3>
+<p>&#x9AD8;&#x9636;&#x7EC4;&#x4EF6;&#x548C;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x5B50;&#x7EC4;&#x4EF6;renderProps</p>
+<h4 id="&#x9AD8;&#x9636;&#x7EC4;&#x4EF6;hoc">&#x9AD8;&#x9636;&#x7EC4;&#x4EF6;HOC</h4>
+<p>&#x63D0;&#x4F9B;&#x53EF;&#x590D;&#x7528;&#x6027;&#x9AD8;&#xFF0C;&#x5065;&#x58EE;&#x6027;&#x597D;&#x7684;&#x901A;&#x7528;&#x7EC4;&#x4EF6;&#xFF0C;&#x51CF;&#x5C11;&#x91CD;&#x590D;&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x9AD8;&#x9636;&#x7EC4;&#x4EF6;&#x662F;&#x5BF9;&#x73B0;&#x6709;&#x7EC4;&#x4EF6;&#x7684;&#x5C01;&#x88C5;&#xFF0C;&#x63A5;&#x6536;&#x7EC4;&#x4EF6;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7EC4;&#x4EF6;&#x3002;</p>
+<h4 id="&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x5B50;&#x7EC4;&#x4EF6;renderprops">&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x5B50;&#x7EC4;&#x4EF6;renderProps</h4>
+<p>&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x5B50;&#x7EC4;&#x4EF6;&#x62FF;&#x5230;&#x7236;&#x7EC4;&#x4EF6;&#x4F20;&#x5165;&#x7684;props&#xFF08;&#x5305;&#x542B;&#x7740;&#x7236;&#x7EC4;&#x4EF6;&#x7684;&#x6E32;&#x67D3;&#x51FD;&#x6570;&#x5185;&#x5BB9;&#xFF09;&#x7136;&#x540E;&#x6E32;&#x67D3;&#x51FA;&#x6765;</p>
+<pre><code class="lang-react">// &#x4F5C;&#x4E3A;&#x5B50;&#x7EC4;&#x4EF6;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x4F7F;&#x7528;props&#x4F20;&#x6765;&#x7684;render&#x51FD;&#x6570;&#x6E32;&#x67D3;
+// &#x72B6;&#x6001;&#x4F9D;&#x65E7;&#x662F;&#x5728;&#x8FD9;&#x91CC;&#x7BA1;&#x7406;
 render(){
   return (
       &lt;div&gt;
@@ -814,25 +815,25 @@ render(){
     &lt;/div&gt;
   )
 }
-// 作为父组件，给作为HOC的子组件传入props和需要包装的内容
-// 这里解构出来状态里的参数，形参
+// &#x4F5C;&#x4E3A;&#x7236;&#x7EC4;&#x4EF6;&#xFF0C;&#x7ED9;&#x4F5C;&#x4E3A;HOC&#x7684;&#x5B50;&#x7EC4;&#x4EF6;&#x4F20;&#x5165;props&#x548C;&#x9700;&#x8981;&#x5305;&#x88C5;&#x7684;&#x5185;&#x5BB9;
+// &#x8FD9;&#x91CC;&#x89E3;&#x6784;&#x51FA;&#x6765;&#x72B6;&#x6001;&#x91CC;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5F62;&#x53C2;
 render(){
   return (
   &lt;sonItem render={({s1,s2}) =&gt; {
-        &lt;div&gt;需要包装渲染的东西&lt;/div&gt;
+        &lt;div&gt;&#x9700;&#x8981;&#x5305;&#x88C5;&#x6E32;&#x67D3;&#x7684;&#x4E1C;&#x897F;&lt;/div&gt;
       }}&gt;&lt;/sonItem&gt;
     )
 }
 </code></pre>
-<h2 id="生态工具（花园）">生态工具（花园）</h2>
+<h2 id="&#x751F;&#x6001;&#x5DE5;&#x5177;&#xFF08;&#x82B1;&#x56ED;&#xFF09;">&#x751F;&#x6001;&#x5DE5;&#x5177;&#xFF08;&#x82B1;&#x56ED;&#xFF09;</h2>
 <h3 id="react-router">React router</h3>
 <h3 id="antdesign">AntDesign</h3>
-<h2 id="高级应用（边廊）">高级应用（边廊）</h2>
-<h2 id>#</h2>
-<h3 id> </h3>
-<h3 id> </h3>
-<h3 id> </h3>
-<h2 id="原理讲解（穹顶）">原理讲解（穹顶）</h2>
+<h2 id="&#x9AD8;&#x7EA7;&#x5E94;&#x7528;&#xFF08;&#x8FB9;&#x5ECA;&#xFF09;">&#x9AD8;&#x7EA7;&#x5E94;&#x7528;&#xFF08;&#x8FB9;&#x5ECA;&#xFF09;</h2>
+<h2 id="">#</h2>
+<h3 id=""> </h3>
+<h3 id=""> </h3>
+<h3 id=""> </h3>
+<h2 id="&#x539F;&#x7406;&#x8BB2;&#x89E3;&#xFF08;&#x7A79;&#x9876;&#xFF09;">&#x539F;&#x7406;&#x8BB2;&#x89E3;&#xFF08;&#x7A79;&#x9876;&#xFF09;</h2>
 
                                 
                                 </section>
@@ -868,56 +869,12 @@ render(){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"React前厅（基础）","level":"1.5.1","depth":2,"next":{"title":"Vue","level":"1.6","depth":1,"ref":"","articles":[{"title":"Type Script","level":"1.6.1","depth":2,"path":"vue/TypeScript.md","ref":"vue/TypeScript.md","articles":[]},{"title":"Vue 3","level":"1.6.2","depth":2,"path":"vue/vue3.md","ref":"vue/vue3.md","articles":[]},{"title":"vue基础","level":"1.6.3","depth":2,"path":"vue/vue基础.md","ref":"vue/vue基础.md","articles":[]},{"title":"vue生态","level":"1.6.4","depth":2,"path":"vue/vue生态.md","ref":"vue/vue生态.md","articles":[]}]},"previous":{"title":"React","level":"1.5","depth":1,"ref":"","articles":[{"title":"React前厅（基础）","level":"1.5.1","depth":2,"path":"react/React前厅（基础）.md","ref":"react/React前厅（基础）.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"react/React前厅（基础）.md","mtime":"2022-07-20T02:55:45.723Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-20T03:36:12.980Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"React前厅（基础）","level":"1.5.1","depth":2,"next":{"title":"Vue","level":"1.6","depth":1,"ref":"","articles":[{"title":"Type Script","level":"1.6.1","depth":2,"path":"vue/TypeScript.md","ref":"vue/TypeScript.md","articles":[]},{"title":"Vue 3","level":"1.6.2","depth":2,"path":"vue/vue3.md","ref":"vue/vue3.md","articles":[]},{"title":"vue基础","level":"1.6.3","depth":2,"path":"vue/vue基础.md","ref":"vue/vue基础.md","articles":[]},{"title":"vue生态","level":"1.6.4","depth":2,"path":"vue/vue生态.md","ref":"vue/vue生态.md","articles":[]}]},"previous":{"title":"React","level":"1.5","depth":1,"ref":"","articles":[{"title":"React前厅（基础）","level":"1.5.1","depth":2,"path":"react/React前厅（基础）.md","ref":"react/React前厅（基础）.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"react/React前厅（基础）.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-21T00:58:27.102Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
-    <noscript>
-        <style>
-            .honkit-cloak {
-                display: block !important;
-            }
-        </style>
-    </noscript>
-    <script>
-        // Restore sidebar state as critical path for prevent layout shift
-        function __init__getSidebarState(defaultValue){
-            var baseKey = "";
-            var key = baseKey + ":sidebar";
-            try {
-                var value = localStorage[key];
-                if (value === undefined) {
-                    return defaultValue;
-                }
-                var parsed = JSON.parse(value);
-                return parsed == null ? defaultValue : parsed;
-            } catch (e) {
-                return defaultValue;
-            }
-        }
-        function __init__restoreLastSidebarState() {
-            var isMobile = window.matchMedia("(max-width: 600px)").matches;
-            if (isMobile) {
-                // Init last state if not mobile
-                return;
-            }
-            var sidebarState = __init__getSidebarState(true);
-            var book = document.querySelector(".book");
-            // Show sidebar if it enabled
-            if (sidebarState && book) {
-                book.classList.add("without-animation", "with-summary");
-            }
-        }
-
-        try {
-            __init__restoreLastSidebarState();
-        } finally {
-            var book = document.querySelector(".book");
-            book.classList.remove("honkit-cloak");
-        }
-    </script>
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -935,6 +892,10 @@ render(){
     
         
         <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         

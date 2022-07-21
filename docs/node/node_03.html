@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Node 01 · GitBook</title>
+        <title>Node 03 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="node_02.html" />
+    <link rel="next" href="node的web框架koa.html" />
     
+    
+    <link rel="prev" href="node_02.html" />
     
 
     </head>
@@ -256,7 +258,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1" data-path="node_01.html">
+        <li class="chapter " data-level="1.4.1" data-path="node_01.html">
             
                 <a href="node_01.html">
             
@@ -282,7 +284,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="node_03.html">
+        <li class="chapter active" data-level="1.4.3" data-path="node_03.html">
             
                 <a href="node_03.html">
             
@@ -517,7 +519,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Node 01</a>
+        <a href=".." >Node 03</a>
     </h1>
 </div>
 
@@ -532,99 +534,66 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="node&#x7684;&#x6A21;&#x5757;">node&#x7684;&#x6A21;&#x5757;</h3>
-<h4 id="&#x6838;&#x5FC3;&#x6A21;&#x5757;">&#x6838;&#x5FC3;&#x6A21;&#x5757;</h4>
-<p>node&#x5185;&#x7F6E;&#x7684;&#x5305;&#xFF0C;&#x5982;http</p>
-<h4 id="&#x81EA;&#x5B9A;&#x4E49;&#x6A21;&#x5757;">&#x81EA;&#x5B9A;&#x4E49;&#x6A21;&#x5757;</h4>
-<p> &#x7B2C;&#x4E09;&#x65B9;&#x5305;&#xFF0C;&#x662F;&#x7531;&#x5F88;&#x591A;&#x81EA;&#x5B9A;&#x4E49;&#x6A21;&#x5757;&#x6784;&#x6210;&#x7684;&#xFF0C;&#x5176;&#x672C;&#x8EAB;&#x4E5F;&#x5C5E;&#x4E8E;&#x81EA;&#x5B9A;&#x4E49;&#x6A21;&#x5757;</p>
-<blockquote>
-<p>&#x81EA;&#x5B9A;&#x4E49;&#x6A21;&#x5757;&#x4E00;&#x822C;&#x653E;&#x5728;node_moudles&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#xFF0C;&#x7531;package.json&#x6765;&#x7BA1;&#x7406;</p>
-</blockquote>
-<p>&#x7B2C;&#x4E09;&#x65B9;&#x5305;&#x7684;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x4E00;&#x822C;&#x5982;&#x4E0B;&#xFF1A;</p>
-<ul>
-<li>package.json    &#x5305;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;</li>
-<li>lib    &#x7528;&#x4E8E;&#x5B58;&#x653E;JavaScript&#x4EE3;&#x7801;&#x7684;&#x76EE;&#x5F55;</li>
-<li>bin    &#x7528;&#x4E8E;&#x5B58;&#x653E;&#x53EF;&#x6267;&#x884C;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x7684;&#x76EE;&#x5F55;</li>
-<li>doc    &#x7528;&#x4E8E;&#x5B58;&#x653E;&#x6587;&#x6863;&#x7684;&#x76EE;&#x5F55;</li>
-</ul>
-<h4 id="&#x901A;&#x8FC7;commonjs&#x6765;&#x5BFC;&#x5165;&#x5305;">&#x901A;&#x8FC7;commonJS&#x6765;&#x5BFC;&#x5165;&#x5305;</h4>
-<p>export&#x5BFC;&#x51FA;</p>
-<p>require&#x5F15;&#x5165;</p>
-<h4 id="&#x5E38;&#x7528;&#x7684;&#x4E00;&#x4E9B;&#x5305;">&#x5E38;&#x7528;&#x7684;&#x4E00;&#x4E9B;&#x5305;</h4>
-<h5 id="nodemon">nodemon</h5>
-<p>&#x70ED;&#x66F4;&#x65B0;&#x6A21;&#x5757;&#xFF0C; &#x65E0;&#x987B;ctrl + c&#x6765;&#x7EC8;&#x6B62;&#x7A0B;&#x5E8F;&#x518D;&#x8FD0;&#x884C;&#x3002;</p>
-<h5 id="http">http</h5>
-<p>&#x6838;&#x5FC3;&#x6A21;&#x5757;&#xFF0C;&#x76F4;&#x63A5;&#x53EF;&#x4EE5;&#x5BFC;&#x5165;&#x4F7F;&#x7528;&#xFF0C;&#x7528;&#x6765;&#x63A5;&#x6536;&#x4E00;&#x4E9B;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x3001;&#x8BBE;&#x7F6E;&#x8BF7;&#x6C42;&#x5934;&#x7B49;&#x3002;</p>
-<h5 id="fs">fs</h5>
-<p>&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;    </p>
-<p><strong>fs. stat</strong> &#x68C0;&#x6D4B;&#x662F;&#x6587;&#x4EF6;&#x8FD8;&#x662F;&#x76EE;&#x5F55;</p>
-<p><strong>fs.mkdir</strong> &#x521B;&#x5EFA;&#x76EE;&#x5F55;</p>
-<p><strong>fs.writeFile</strong> &#x521B;&#x5EFA;&#x3001;&#x5199;&#x5165;&#x6587;&#x4EF6;</p>
-<p><strong>fs.appendFile</strong> &#x8FFD;&#x52A0;&#x6587;&#x4EF6;&#x5185;&#x5BB9;</p>
-<p><strong>fs.readFile</strong> &#x8BFB;&#x53D6;&#x6587;&#x4EF6;</p>
-<p><strong>fs.readdir</strong> &#x8BFB;&#x53D6;&#x76EE;&#x5F55;</p>
-<p><strong>fs.rename</strong> &#x91CD;&#x547D;&#x540D;&#x3001;&#x79FB;&#x52A8;&#x4F4D;&#x7F6E;</p>
-<p><strong>fs.rmdir</strong> &#x5220;&#x9664;&#x76EE;&#x5F55;</p>
-<p><strong>fs.unlink</strong>  &#x5220;&#x9664;&#x6587;&#x4EF6;</p>
-<p><strong>fs.createReadStream</strong> &#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;&#x6D41;</p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// &#x4EE5;&#x6D41;&#x7684;&#x65B9;&#x5F0F;&#x8BFB;&#x53D6;&#x6587;&#x4EF6; createReadStream</span>
-<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>)
-<span class="hljs-keyword">var</span> readStream = fs.createReadStream(<span class="hljs-string">&apos;./data/input.txt&apos;</span>)
-<span class="hljs-keyword">var</span> str = <span class="hljs-string">&apos;&apos;</span>
-<span class="hljs-keyword">var</span> count = <span class="hljs-number">0</span>
-readStream.on(<span class="hljs-string">&apos;data&apos;</span>, (data) =&gt; {
-  str += data
+                                <h4 id="&#x4E2D;&#x95F4;&#x4EF6;express--session">&#x4E2D;&#x95F4;&#x4EF6;express- session</h4>
+<p>1&#x3001;&#x914D;&#x7F6E;express-session</p>
+<pre><code class="lang-javascript">app.use(session({
+  secret: <span class="hljs-string">&apos;keyboard cat&apos;</span>, <span class="hljs-comment">// &#x670D;&#x52A1;&#x7AEF;&#x751F;&#x6210;&#x7684;session&#x7B7E;&#x540D;</span>
+  resave: <span class="hljs-literal">false</span>, <span class="hljs-comment">// &#x5F3A;&#x5236;&#x91CD;&#x65B0;&#x4FDD;&#x5B58;session&#xFF0C;&#x5373;&#x4F7F;&#x5B83;&#x5E76;&#x6CA1;&#x6709;&#x53D8;&#x5316;</span>
+  saveUninitialized: <span class="hljs-literal">true</span>, <span class="hljs-comment">// &#x5F3A;&#x5236;&#x5C06;&#x672A;&#x521D;&#x59CB;&#x5316;&#x7684;session&#x5B58;&#x50A8;</span>
+  rolling: <span class="hljs-literal">true</span>, <span class="hljs-comment">// &#x5728;&#x672A;&#x8FC7;&#x671F;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x5C06;&#x91CD;&#x7F6E;session&#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;</span>
+  cookie: { maxAge: <span class="hljs-number">1000</span> * <span class="hljs-number">60</span>, secure: <span class="hljs-literal">false</span> },
+}))
+</code></pre>
+<p>2&#x3001;&#x8BBE;&#x7F6E;&#x548C;&#x83B7;&#x53D6;session</p>
+<p>&#x8BBE;&#x7F6E;&#x4E86;username&#x4E3A;zhangsan&#xFF0C;&#x5728;&#x56DE;&#x5230;&#x9996;&#x9875;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x8BFB;&#x53D6;&#x5230;session</p>
+<pre><code class="lang-javascript">app.get(<span class="hljs-string">&apos;/&apos;</span>, (req, res) =&gt; {
+  <span class="hljs-keyword">if</span> (req.session.username) {
+    res.send(req.session.username + <span class="hljs-string">&apos;&#x5DF2;&#x767B;&#x9646;&apos;</span>)
+  } <span class="hljs-keyword">else</span> {
+    res.send(<span class="hljs-string">&apos;&#x8BF7;&#x5148;&#x767B;&#x5F55;&apos;</span>)
+  }
 })
-readStream.on(<span class="hljs-string">&apos;end&apos;</span>, () =&gt; <span class="hljs-built_in">console</span>.log(str))
+app.get(<span class="hljs-string">&apos;/login&apos;</span>, (req, res) =&gt; {
+  req.session.username = <span class="hljs-string">&apos;zhangsan&apos;</span>
+  res.send(<span class="hljs-string">&apos;denglu&apos;</span>)
+})
 </code></pre>
-<p><strong>fs.createWriteStream</strong> &#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x5199;&#x5165;&#x6D41;</p>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> data = <span class="hljs-string">&apos;&#x75AF;&#x75AF;&#x766B;&#x766B;&#x95EF;&#x5929;&#x6DAF;&apos;</span>
-<span class="hljs-keyword">var</span> writeStream = fs.createWriteStream(<span class="hljs-string">&apos;./data/output.txt&apos;</span>)
-writeStream.write(data)
-writeStream.end()
-writeStream.on(<span class="hljs-string">&apos;finish&apos;</span>, () =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x5199;&#x5165;&#x5B8C;&#x6210;&apos;</span>))
+<p>3&#x3001;&#x9500;&#x6BC1;session</p>
+<p>&#x4E09;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x5728;&#x8FDB;&#x5165;&#x6B64;&#x9875;&#x9762;&#x5C31;&#x6267;&#x884C;&#x9500;&#x6BC1;session&#xFF0C;&#x56DE;&#x5230;&#x9996;&#x9875;&#x65F6;&#x5C06;&#x65E0;&#x6CD5;&#x8BFB;&#x53D6;session</p>
+<pre><code class="lang-javascript">app.get(<span class="hljs-string">&apos;/loginOut&apos;</span>, (req, res) =&gt; {
+  <span class="hljs-comment">// 1&#x3001;&#x5C06;cookie&#x7684;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#x8BBE;&#x4E3A;0&#x3002; &#x5C06;&#x9500;&#x6BC1;&#x6240;&#x6709;&#x7684;session</span>
+  req.session.cookie.maxAge = <span class="hljs-number">0</span> 
+  <span class="hljs-comment">// 2&#x3001;&#x5C06;session&#x8BBE;&#x4E3A;&#x7A7A;</span>
+  req.session.username = <span class="hljs-string">&apos;&apos;</span>
+  <span class="hljs-comment">// 3&#x3001; destroy&#x65B9;&#x6CD5;&#xFF0C;&#x9500;&#x6BC1;session</span>
+  req.session.destroy()
+  res.send(<span class="hljs-string">&apos;&#x9000;&#x51FA;&#x767B;&#x5F55;&apos;</span>)
+})
 </code></pre>
-<p><strong>pipe</strong> &#x7BA1;&#x9053;&#x6D41;</p>
-<pre><code class="lang-JavaScript"><span class="hljs-comment">// &#x7BA1;&#x9053;&#x6D41;&#xFF0C;&#x7528;&#x6765;&#x590D;&#x5236;&#x4E00;&#x4E9B;&#x5927;&#x6587;&#x4EF6;</span>
-<span class="hljs-keyword">var</span> readStream1 = fs.createReadStream(<span class="hljs-string">&apos;./data/input.txt&apos;</span>)
-<span class="hljs-keyword">var</span> writeStream1 = fs.createWriteStream(<span class="hljs-string">&apos;./bigout&apos;</span>)
-readStream1.pipe(writeStream1)
+<h4 id="&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;&#xFF0C;&#x591A;&#x670D;&#x52A1;&#x5668;&#x5171;&#x4EAB;session">&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;&#xFF0C;&#x591A;&#x670D;&#x52A1;&#x5668;&#x5171;&#x4EAB;session</h4>
+<p>&#x95EE;&#x9898;&#x63CF;&#x8FF0;&#xFF1A;&#x4E0D;&#x540C;&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x95F4;&#x5171;&#x4EAB;session&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5C06;session&#x4FDD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;&#xFF08;mongoDB&#x3001;redis&#x3001;MySql&#xFF09;&#x4E2D;&#x5373;&#x53EF;</p>
+<pre><code class="lang-mermaid">graph LR
+
+nginx --&gt; A[&#x670D;&#x52A1;&#x5668;A]
+nginx --&gt; B[&#x670D;&#x52A1;&#x5668;B]
+nginx --&gt; C[&#x670D;&#x52A1;&#x5668;C]
+A --&#x4FDD;&#x5B58;session1--&gt; D[mongodb&#x6570;&#x636E;&#x5E93;]
+B --&#x5171;&#x4EAB;session1--&gt; D
+C --&#x5171;&#x4EAB;session1--&gt; D
 </code></pre>
-<h3 id="npm&#x7684;&#x4E00;&#x4E9B;&#x547D;&#x4EE4;">npm&#x7684;&#x4E00;&#x4E9B;&#x547D;&#x4EE4;</h3>
-<p>&#x5B89;&#x88C5;&#x5305;</p>
-<pre><code class="lang-shell">npm install &lt;name&gt; --save
+<p>&#x5B89;&#x88C5;connet-mongo</p>
+<p><code>npm install connect-mongo</code></p>
+<p>&#x5F15;&#x5165;&#xFF0C;&#x6CE8;&#x610F;&#x9700;&#x8981;&#x5728;&#x5F15;&#x5165;session&#x8BED;&#x53E5;&#x7684;&#x4E0B;&#x8FB9;</p>
+<p><code>const MongoStore = require(&apos;connect-mongo&apos;)(session)</code></p>
+<p>&#x914D;&#x7F6E;</p>
+<pre><code class="lang-javascript">app.use(session({
+  ... <span class="hljs-comment">//&#x8FD9;&#x91CC;&#x53C2;&#x8003;&#x4E0A;&#x8FB9;&#x7684;session&#x914D;&#x7F6E;</span>
+  store: MongoStore.create({
+    mongoUrl: <span class="hljs-string">&apos;mongodb://user12345:foobar@localhost/test-app?authSource=admin&amp;w=1&apos;</span>, <span class="hljs-comment">// &#x6B64;&#x5904;&#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x7528;&#x6237;&#x540D;&#x53CA;&#x5BC6;&#x7801;</span>
+    touchAfter: <span class="hljs-number">24</span> * <span class="hljs-number">3600</span> <span class="hljs-comment">// &#x4E0D;&#x7BA1;&#x591A;&#x5C11;&#x6B21;&#x8BF7;&#x6C42;&#xFF0C;&#x5728;24&#x5C0F;&#x65F6;&#x5185;&#x53EA;&#x66F4;&#x65B0;&#x4E00;&#x6B21;session&#xFF0C;&#x9664;&#x975E;&#x66F4;&#x6539;session</span>
+  }),
+}))
 </code></pre>
-<p>&#x521D;&#x59CB;&#x5316;&#xFF08;&#x5373;&#x6DFB;&#x52A0;package.json&#x6587;&#x4EF6;&#xFF09;</p>
-<pre><code class="lang-shell">npm init --yes
-</code></pre>
-<p>&#x67E5;&#x770B;&#x5DF2;&#x5B89;&#x88C5;&#x5305;&#x5217;&#x8868;</p>
-<pre><code class="lang-shell">npm list
-</code></pre>
-<p>&#x67E5;&#x770B;&#x5305;&#x7684;&#x7248;&#x672C;</p>
-<pre><code class="lang-shel">npm info &lt;name&gt;
-</code></pre>
-<p>&#x6307;&#x5B9A;&#x5B89;&#x88C5;&#x5305;&#x7684;&#x7248;&#x672C;</p>
-<pre><code class="lang-shell">npm install &lt;name&gt;@1.0.0 --save
-</code></pre>
-<blockquote>
-<p>&#x200B;    --save&#x5176;&#x4F5C;&#x7528;&#x662F;&#x5C06;&#x5305;&#x7684;&#x7248;&#x672C;&#x4FE1;&#x606F;&#xFF08;&#x4F9D;&#x8D56;&#xFF09;&#x52A0;&#x5165;&#x5230;package.json&#x6587;&#x4EF6;&#x91CC;(dependencies)</p>
-<p>&#x200B;    &#x65B9;&#x4FBF;&#x4E0D;&#x540C;&#x73AF;&#x5883;&#x4E0B;&#x542F;&#x52A8;</p>
-<p>&#x200B;    --dev &#x610F;&#x4E3A;&#x5F00;&#x53D1;&#x65F6;&#x4F9D;&#x8D56;&#xFF0C;&#x5728;&#x6253;&#x5305;&#x65F6;&#xFF0C;&#x4E0D;&#x5305;&#x542B;&#x5E26;&#x6709;dev&#x7684;&#x5305;</p>
-</blockquote>
-<hr>
-<h3 id="packagejson">package.json</h3>
-<pre><code class="lang-json"> <span class="hljs-string">&quot;dependencies&quot;</span>: {
-    <span class="hljs-string">&quot;core-js&quot;</span>: <span class="hljs-string">&quot;^3.6.5&quot;</span>,
-  },
-  <span class="hljs-string">&quot;devDependencies&quot;</span>: {
-    <span class="hljs-string">&quot;@vue/cli-plugin-babel&quot;</span>: <span class="hljs-string">&quot;~4.5.0&quot;</span>,
-  },
-</code></pre>
-<blockquote>
-<p>^    &#x8868;&#x793A;&#x7B2C;&#x4E00;&#x4F4D;&#x7248;&#x672C;&#x53F7;&#x4E0D;&#x53D8;&#xFF0C;&#x540E;&#x8FB9;&#x4E24;&#x4F4D;&#x53D6;&#x6700;&#x65B0;&#x7684;&#x7248;&#x672C;</p>
-<p>~    &#x8868;&#x793A;&#x524D;&#x4E24;&#x4F4D;&#x4E0D;&#x53D8;&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x4F4D;&#x53D6;&#x6700;&#x65B0;&#x7684;&#x7248;&#x672C;</p>
-<p>&quot; * &quot;    &#x8868;&#x793A;&#x5168;&#x90E8;&#x53D6;&#x6700;&#x65B0;&#x7248;&#x672C;</p>
-</blockquote>
 
                                 
                                 </section>
@@ -652,8 +621,12 @@ readStream1.pipe(writeStream1)
 
             
                 
+                <a href="node_02.html" class="navigation navigation-prev " aria-label="Previous page: Node 02">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="node_02.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Node 02">
+                
+                <a href="node的web框架koa.html" class="navigation navigation-next " aria-label="Next page: node的web框架koa">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -664,7 +637,7 @@ readStream1.pipe(writeStream1)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Node 01","level":"1.4.1","depth":2,"next":{"title":"Node 02","level":"1.4.2","depth":2,"path":"node/node_02.md","ref":"node/node_02.md","articles":[]},"previous":{"title":"Node","level":"1.4","depth":1,"ref":"","articles":[{"title":"Node 01","level":"1.4.1","depth":2,"path":"node/node_01.md","ref":"node/node_01.md","articles":[]},{"title":"Node 02","level":"1.4.2","depth":2,"path":"node/node_02.md","ref":"node/node_02.md","articles":[]},{"title":"Node 03","level":"1.4.3","depth":2,"path":"node/node_03.md","ref":"node/node_03.md","articles":[]},{"title":"node的web框架koa","level":"1.4.4","depth":2,"path":"node/node的web框架koa.md","ref":"node/node的web框架koa.md","articles":[]},{"title":"node基础","level":"1.4.5","depth":2,"path":"node/node基础.md","ref":"node/node基础.md","articles":[]},{"title":"node与mongDB","level":"1.4.6","depth":2,"path":"node/node与mongDB.md","ref":"node/node与mongDB.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"node/node_01.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-21T00:58:27.102Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Node 03","level":"1.4.3","depth":2,"next":{"title":"node的web框架koa","level":"1.4.4","depth":2,"path":"node/node的web框架koa.md","ref":"node/node的web框架koa.md","articles":[]},"previous":{"title":"Node 02","level":"1.4.2","depth":2,"path":"node/node_02.md","ref":"node/node_02.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"node/node_03.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-21T00:58:27.102Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
