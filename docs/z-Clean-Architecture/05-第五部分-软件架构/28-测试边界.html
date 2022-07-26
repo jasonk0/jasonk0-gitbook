@@ -1,0 +1,1434 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>测试边界 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.7.5">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="29-整洁的嵌入式架构.html" />
+    
+    
+    <link rel="prev" href="27-服务：宏观和微观.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../计算机网络/计算机网络.html">
+            
+                <a href="../../计算机网络/计算机网络.html">
+            
+                    
+                    计算机网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../计算机网络/工具链和其他.html">
+            
+                <a href="../../计算机网络/工具链和其他.html">
+            
+                    
+                    工具链和其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../计算机网络/浏览器状态同步和路由.html">
+            
+                <a href="../../计算机网络/浏览器状态同步和路由.html">
+            
+                    
+                    浏览器状态同步和路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../计算机网络/网络安全攻防.html">
+            
+                <a href="../../计算机网络/网络安全攻防.html">
+            
+                    
+                    网络安全攻防
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../杂篇/">
+            
+                <a href="../../杂篇/">
+            
+                    
+                    杂篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../杂篇/踩坑日记.html">
+            
+                <a href="../../杂篇/踩坑日记.html">
+            
+                    
+                    踩坑日记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../杂篇/预习资料.html">
+            
+                <a href="../../杂篇/预习资料.html">
+            
+                    
+                    预习资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../杂篇/直播.html">
+            
+                <a href="../../杂篇/直播.html">
+            
+                    
+                    直播
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../Angular/">
+            
+                <a href="../../Angular/">
+            
+                    
+                    Angular
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../Angular/Angular学习笔记.html">
+            
+                <a href="../../Angular/Angular学习笔记.html">
+            
+                    
+                    Angular学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../Angular/flutter的学习笔记.html">
+            
+                <a href="../../Angular/flutter的学习笔记.html">
+            
+                    
+                    flutter的学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../js进阶/">
+            
+                <a href="../../js进阶/">
+            
+                    
+                    js进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../js进阶/高阶函数.html">
+            
+                <a href="../../js进阶/高阶函数.html">
+            
+                    
+                    高阶函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../js进阶/轮播图设计.html">
+            
+                <a href="../../js进阶/轮播图设计.html">
+            
+                    
+                    轮播图设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../js进阶/设计模式.html">
+            
+                <a href="../../js进阶/设计模式.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../js进阶/异步编程.html">
+            
+                <a href="../../js进阶/异步编程.html">
+            
+                    
+                    异步编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../node/">
+            
+                <a href="../../node/">
+            
+                    
+                    node
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../node/node_01.html">
+            
+                <a href="../../node/node_01.html">
+            
+                    
+                    node_01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../node/node_02.html">
+            
+                <a href="../../node/node_02.html">
+            
+                    
+                    node_02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../node/node_03.html">
+            
+                <a href="../../node/node_03.html">
+            
+                    
+                    node_03
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../node/node的web框架koa.html">
+            
+                <a href="../../node/node的web框架koa.html">
+            
+                    
+                    node的web框架koa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../node/node基础.html">
+            
+                <a href="../../node/node基础.html">
+            
+                    
+                    node基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../node/node与mongDB.html">
+            
+                <a href="../../node/node与mongDB.html">
+            
+                    
+                    node与mongDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../react/">
+            
+                <a href="../../react/">
+            
+                    
+                    react
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../react/React前厅（基础）.html">
+            
+                <a href="../../react/React前厅（基础）.html">
+            
+                    
+                    React前厅（基础）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../vue/">
+            
+                <a href="../../vue/">
+            
+                    
+                    vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../vue/TypeScript.html">
+            
+                <a href="../../vue/TypeScript.html">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../vue/vue3.html">
+            
+                <a href="../../vue/vue3.html">
+            
+                    
+                    vue3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../vue/vue基础.html">
+            
+                <a href="../../vue/vue基础.html">
+            
+                    
+                    vue基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../vue/vue生态.html">
+            
+                <a href="../../vue/vue生态.html">
+            
+                    
+                    vue生态
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Clean-Architecture
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../01-第一部分-概述/">
+            
+                <a href="../01-第一部分-概述/">
+            
+                    
+                    第一部分-概述
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1.1" data-path="../01-第一部分-概述/1-设计与架构究竟是什么.html">
+            
+                <a href="../01-第一部分-概述/1-设计与架构究竟是什么.html">
+            
+                    
+                    设计与架构究竟是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.1.2" data-path="../01-第一部分-概述/2-两个价值维度.html">
+            
+                <a href="../01-第一部分-概述/2-两个价值维度.html">
+            
+                    
+                    两个价值维度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../02-第二部分-从基础构件开始：编程范式/">
+            
+                <a href="../02-第二部分-从基础构件开始：编程范式/">
+            
+                    
+                    第二部分-从基础构件开始：编程范式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.2.1" data-path="../02-第二部分-从基础构件开始：编程范式/3-编程范式总览.html">
+            
+                <a href="../02-第二部分-从基础构件开始：编程范式/3-编程范式总览.html">
+            
+                    
+                    编程范式总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.2" data-path="../02-第二部分-从基础构件开始：编程范式/4-结构化编程.html">
+            
+                <a href="../02-第二部分-从基础构件开始：编程范式/4-结构化编程.html">
+            
+                    
+                    结构化编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.3" data-path="../02-第二部分-从基础构件开始：编程范式/5-面向对象编程.html">
+            
+                <a href="../02-第二部分-从基础构件开始：编程范式/5-面向对象编程.html">
+            
+                    
+                    面向对象编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.4" data-path="../02-第二部分-从基础构件开始：编程范式/6-函数式编程.html">
+            
+                <a href="../02-第二部分-从基础构件开始：编程范式/6-函数式编程.html">
+            
+                    
+                    函数式编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../03-第三部分-设计原则/">
+            
+                <a href="../03-第三部分-设计原则/">
+            
+                    
+                    第三部分-设计原则
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.3.1" data-path="../03-第三部分-设计原则/7-SRP：单一职责原则.html">
+            
+                <a href="../03-第三部分-设计原则/7-SRP：单一职责原则.html">
+            
+                    
+                    SRP：单一职责原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.2" data-path="../03-第三部分-设计原则/8-OCP：开闭原则.html">
+            
+                <a href="../03-第三部分-设计原则/8-OCP：开闭原则.html">
+            
+                    
+                    OCP：开闭原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.3" data-path="../03-第三部分-设计原则/9-LSP：里氏替换原则.html">
+            
+                <a href="../03-第三部分-设计原则/9-LSP：里氏替换原则.html">
+            
+                    
+                    LSP：里氏替换原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4" data-path="../03-第三部分-设计原则/10-ISP：接口隔离原则.html">
+            
+                <a href="../03-第三部分-设计原则/10-ISP：接口隔离原则.html">
+            
+                    
+                    ISP：接口隔离原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.5" data-path="../03-第三部分-设计原则/11-DIP：依赖反转原则.html">
+            
+                <a href="../03-第三部分-设计原则/11-DIP：依赖反转原则.html">
+            
+                    
+                    DIP：依赖反转原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../04-第四部分-组件构建原则/">
+            
+                <a href="../04-第四部分-组件构建原则/">
+            
+                    
+                    第四部分-组件构建原则
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.4.1" data-path="../04-第四部分-组件构建原则/12-组件.html">
+            
+                <a href="../04-第四部分-组件构建原则/12-组件.html">
+            
+                    
+                    组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4.2" data-path="../04-第四部分-组件构建原则/13-组件聚合.html">
+            
+                <a href="../04-第四部分-组件构建原则/13-组件聚合.html">
+            
+                    
+                    组件聚合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4.3" data-path="../04-第四部分-组件构建原则/14-组件耦合.html">
+            
+                <a href="../04-第四部分-组件构建原则/14-组件耦合.html">
+            
+                    
+                    组件耦合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第五部分-软件架构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.5.1" data-path="15-什么是软件架构.html">
+            
+                <a href="15-什么是软件架构.html">
+            
+                    
+                    什么是软件架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.2" data-path="16-独立性.html">
+            
+                <a href="16-独立性.html">
+            
+                    
+                    独立性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.3" data-path="17-划分边界.html">
+            
+                <a href="17-划分边界.html">
+            
+                    
+                    划分边界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.4" data-path="18-边界剖析.html">
+            
+                <a href="18-边界剖析.html">
+            
+                    
+                    边界剖析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.5" data-path="19-策略与层次.html">
+            
+                <a href="19-策略与层次.html">
+            
+                    
+                    策略与层次
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.6" data-path="20-业务逻辑.html">
+            
+                <a href="20-业务逻辑.html">
+            
+                    
+                    业务逻辑
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.7" data-path="21-尖叫的软件架构.html">
+            
+                <a href="21-尖叫的软件架构.html">
+            
+                    
+                    尖叫的软件架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.8" data-path="22-整洁架构.html">
+            
+                <a href="22-整洁架构.html">
+            
+                    
+                    整洁架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.9" data-path="23-展示器和谦卑对象.html">
+            
+                <a href="23-展示器和谦卑对象.html">
+            
+                    
+                    展示器和谦卑对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.10" data-path="24-不完全边界.html">
+            
+                <a href="24-不完全边界.html">
+            
+                    
+                    不完全边界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.11" data-path="25-层次与边界.html">
+            
+                <a href="25-层次与边界.html">
+            
+                    
+                    层次与边界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.12" data-path="26-Main组件.html">
+            
+                <a href="26-Main组件.html">
+            
+                    
+                    Main组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.13" data-path="27-服务：宏观和微观.html">
+            
+                <a href="27-服务：宏观和微观.html">
+            
+                    
+                    服务：宏观和微观
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.5.14" data-path="28-测试边界.html">
+            
+                <a href="28-测试边界.html">
+            
+                    
+                    测试边界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.15" data-path="29-整洁的嵌入式架构.html">
+            
+                <a href="29-整洁的嵌入式架构.html">
+            
+                    
+                    整洁的嵌入式架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../06-第六部分-实现细节/">
+            
+                <a href="../06-第六部分-实现细节/">
+            
+                    
+                    第六部分-实现细节
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.6.1" data-path="../06-第六部分-实现细节/30-数据库只是实现细节.html">
+            
+                <a href="../06-第六部分-实现细节/30-数据库只是实现细节.html">
+            
+                    
+                    数据库只是实现细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.2" data-path="../06-第六部分-实现细节/31-Web是实现细节.html">
+            
+                <a href="../06-第六部分-实现细节/31-Web是实现细节.html">
+            
+                    
+                    Web是实现细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.3" data-path="../06-第六部分-实现细节/32-应用程序框架是实现细节.html">
+            
+                <a href="../06-第六部分-实现细节/32-应用程序框架是实现细节.html">
+            
+                    
+                    应用程序框架是实现细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.4" data-path="../06-第六部分-实现细节/33-案例分析：视频销售网站.html">
+            
+                <a href="../06-第六部分-实现细节/33-案例分析：视频销售网站.html">
+            
+                    
+                    案例分析：视频销售网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.5" data-path="../06-第六部分-实现细节/34-拾遗.html">
+            
+                <a href="../06-第六部分-实现细节/34-拾遗.html">
+            
+                    
+                    拾遗
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../afterword.html">
+            
+                <a href="../afterword.html">
+            
+                    
+                    afterword
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >测试边界</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="chap28-the-test-boundary-测试边界">Chap28. THE TEST BOUNDARY 测试边界</h1>
+<p><img src="../un/CH-UN28.jpg" alt></p>
+<p>Yes, that’s right: The tests are part of the system, and they participate in the architecture just like every other part of the system does. In some ways, that participation is pretty normal. In other ways, it can be pretty unique.</p>
+<blockquote>
+<p>对，你没看错：和程序代码一样，测试代码也是系统的一部分。甚至，测试代码有时在系统架构中的地位还要比其他部分更独特一些。</p>
+</blockquote>
+<h2 id="tests-as-system-components-测试也是一种系统组件">TESTS AS SYSTEM COMPONENTS 测试也是一种系统组件</h2>
+<p>There is a great deal of confusion about tests. Are they part of the system? Are they separate from the system? Which kinds of tests are there? Are unit tests and integration tests different things? What about acceptance tests, functional tests, Cucumber tests, TDD tests, BDD tests, component tests, and so on?</p>
+<blockquote>
+<p>讨论测试的时候，业界总会有许多自相矛盾的声音。测试应该是系统的一部分吗？还是应该独立于系统之外存在呢？测试分为哪几种？单元测试与集成测试是不同的东西吗？质量检查测试、功能性测试、Cucumber 测试、TDD 测试、BDD 测试、组件测试分别又都是什么？</p>
+</blockquote>
+<p>It is not the role of this book to get embroiled in that particular debate, and fortunately it isn’t necessary. From an architectural point of view, all tests are the same. Whether they are the tiny little tests created by TDD, or large FitNesse, Cucumber, SpecFlow, or JBehave tests, they are architecturally equivalent.</p>
+<blockquote>
+<p>在本书中我们并不想卷入对这些问题的辩论中，而且也很庆幸没有卷入的必要。因为从架构的角度来讲，所有的测试都是一样的。不论它们是小型的 TDD 测试，还是大型的 FitNesse、Cucumber、SpecFlow 或 JBehave 测试，对架构来说都是一样的。</p>
+</blockquote>
+<p>Tests, by their very nature, follow the Dependency Rule; they are very detailed and concrete; and they always depend inward toward the code being tested. In fact, you can think of the tests as the outermost circle in the architecture. Nothing within the system depends on the tests, and the tests always depend inward on the components of the system.</p>
+<blockquote>
+<p>究其本质而言，测试组件也是要遵守依赖关系原则的。因为其中总是充满了各种细节信息，非常具体，所以它始终都是向内依赖于被测试部分的代码的。事实上，我们可以将测试组件视为系统架构中最外圈的程序。它们始终是向内依赖的，而且系统中没有其他组件依赖于它们。</p>
+</blockquote>
+<p>Tests are also independently deployable. In fact, most of the time they are deployed in test systems, rather than in production systems. So, even in systems where independent deployment is not otherwise necessary, the tests will still be independently deployed.</p>
+<blockquote>
+<p>另外，测试组件是可以独立部署的。事实上，大部分测试组件都是被部署在测试环境中，而不是生产环境中。所以，即使是那些本身不需要独立部署的系统中，其测试代码也总是独立部署的。</p>
+</blockquote>
+<p>Tests are the most isolated system component. They are not necessary for system operation. No user depends on them. Their role is to support development, not operation. And yet, they are no less a system component than any other. In fact, in many ways they represent the model that all other system components should follow.</p>
+<blockquote>
+<p>测试组件通常是一个系统中最独立的组件。系统的正常运行并不需要用到测试组件，用户也不依赖于测试组件。测试组件的存在是为了支持开发过程，而不是运行过程。然而，测试组件仍然是系统中不可或缺的一个组件。事实上，测试组件在许多方面都反映了系统中其他组件所应遵循的设计模型。</p>
+</blockquote>
+<h2 id="design-for-testability-可测试性设计">DESIGN FOR TESTABILITY 可测试性设计</h2>
+<p>The extreme isolation of the tests, combined with the fact that they are not usually deployed, often causes developers to think that tests fall outside of the design of the system. This is a catastrophic point of view. Tests that are not well integrated into the design of the system tend to be fragile, and they make the system rigid and difficult to change.</p>
+<blockquote>
+<p>由于测试代码的独立性，以及往往不会被部署到生产坏境的特点，开发者常常会在系统设计中忽视测试的重要性，这种做法是极为错误的。测试如果没有被集成到系统设计中，往往是非常脆弱的，这种脆弱性会使得系统变得死板，非常难以更改。</p>
+</blockquote>
+<p>The issue, of course, is coupling. Tests that are strongly coupled to the system must change along with the system. Even the most trivial change to a system component can cause many coupled tests to break or require changes.</p>
+<blockquote>
+<p>当然，这里的关键之处就是耦合。如果测试代码与系统是强耦合的，它就得随着系统变更而变更。哪怕只是系统中组件的一点小变化，都可能会导致许多与之相耦合的测试出现问题，需要做出相应的变更。</p>
+</blockquote>
+<p>This situation can become acute. Changes to common system components can cause hundreds, or even thousands, of tests to break. This is known as the Fragile Tests Problem.</p>
+<blockquote>
+<p>这个问题可能会很严重。修改一个通用的系统组件可能会导致成百上千个测试出现问题，我们通常将这类问题称为脆弱的测试问题（fragile tests problem）。</p>
+</blockquote>
+<p>It is not hard to see how this can happen. Imagine, for example, a suite of tests that use the GUI to verify business rules. Such tests may start on the login screen and then navigate through the page structure until they can check particular business rules. Any change to the login page, or the navigation structure, can cause an enormous number of tests to break.</p>
+<blockquote>
+<p>这类问题的发生过程并不难想象。例如，假设我们有一套利用 GUI 来校验系统业务逻辑的测试。这些测试可能从登录页面开始，按照导航顺序遍历整个页面结构，直到完成某个特定的业务逻辑为止。这时候，任何针对登录页面或导航顺序的变更，都可能导致大量的测试出错。</p>
+</blockquote>
+<p>Fragile tests often have the perverse effect of making the system rigid. When developers realize that simple changes to the system can cause massive test failures, they may resist making those changes. For example, imagine the conversation between the development team and a marketing team that requests a simple change to the page navigation structure that will cause 1000 tests to break.</p>
+<blockquote>
+<p>另外，脆弱的测试还往往会让系统变得非常死板。当开发者意识到一些简单的修改就会导致大量的测试出错时，他们自然就会抵制修改。请想象一下，如果市场部门所要求的一个针对页面导航结构的简单变更会导致一千个测试出错时，开发部门会怎么说吧。</p>
+</blockquote>
+<p>The solution is to design for testability. The first rule of software design—whether for testability or for any other reason—is always the same: Don’t depend on volatile things. GUIs are volatile. Test suites that operate the system through the GUI must be fragile. Therefore design the system, and the tests, so that business rules can be tested without using the GUI.</p>
+<blockquote>
+<p>要想解决这个问题，就必须在设计中考虑到系统的可测试性。软件设计的第一条原则——不管是为了可测试性还是其他什么东西——是不变的，就是不要依赖于多变的东西。譬如，GUI 往往是多变的，因此通过 GUI 来验证系统的测试一定是脆弱的。因此，我们在系统设汁与测试设计时，应该让业务逻辑不通过 GUI 也可以被测试。</p>
+</blockquote>
+<h2 id="the-testing-api-测试专用-api">THE TESTING API 测试专用 API</h2>
+<p>The way to accomplish this goal is to create a specific API that the tests can use to verify all the business rules. This API should have superpowers that allow the tests to avoid security constraints, bypass expensive resources (such as databases), and force the system into particular testable states. This API will be a superset of the suite of interactors and interface adapters that are used by the user interface.</p>
+<blockquote>
+<p>设计这样一个系统的方法之一就是专门为验证业务逻辑的测试创建一个 API。这个 API 应该被授予超级用户权限，允许测试代码可以忽视安全限制，绕过那些成本高昂的资源（例如数据库），强制将系统设置到某种可测试的状态中。总而言之，该 API 应该成为用户界面所用到的交互器与接口适配器的一个超集。</p>
+</blockquote>
+<p>The purpose of the testing API is to decouple the tests from the application. This decoupling encompasses more than just detaching the tests from the UI: The goal is to decouple the structure of the tests from the structure of the application.</p>
+<blockquote>
+<p>设置测试 API 是为了将测试部分从应用程序中分离出来。换句话说，这种解耦动作不只是为了分隔测试部分与 UI 部分，而是要将测试代码的结构与应用程序其他部分的代码结构分开。</p>
+</blockquote>
+<h3 id="structural-coupling-结构性耦合">STRUCTURAL COUPLING 结构性耦合</h3>
+<p>Structural coupling is one of the strongest, and most insidious, forms of test coupling. Imagine a test suite that has a test class for every production class, and a set of test methods for every production method. Such a test suite is deeply coupled to the structure of the application.</p>
+<blockquote>
+<p>结构性耦合是测试代码所具有的耦合关系中最强大、最阴险的一种形式。假设我们现在有一组测试套件，它针对每个产品类都有一个对应的测试类，每个产品函数都有一个对应的测试函数。显然，该测试套件与应用程序在结构上是紧耦合的。</p>
+</blockquote>
+<p>When one of those production methods or classes changes, a large number of tests must change as well. Consequently, the tests are fragile, and they make the production code rigid.</p>
+<blockquote>
+<p>每当应用程序中的一个函数或类发生变更时，该测试套件就必须进行大量相应的修改。因此，这些测试是非常脆弱的，它们也会让产品代码变得非常死板。</p>
+</blockquote>
+<p>The role of the testing API is to hide the structure of the application from the tests. This allows the production code to be refactored and evolved in ways that don’t affect the tests. It also allows the tests to be refactored and evolved in ways that don’t affect the production code.</p>
+<blockquote>
+<p>测试专用 API 的作用就是将应用程序与测试代码解耦。这样，我们的产品代码就可以在不影响测试的情况下进行重构和演进。同样的，这种设计也允许测试代码在不影响生产代码的情况下进行重构和演进。</p>
+</blockquote>
+<p>This separation of evolution is necessary because as time passes, the tests tend to become increasingly more concrete and specific. In contrast, the production code tends to become increasingly more abstract and general. Strong structural coupling prevents—or at least impedes—this necessary evolution, and prevents the production code from being as general, and flexible, as it could be.</p>
+<blockquote>
+<p>这种对演进过程的隔离是很重要的，因为随着时间的推移，测试代码趋向于越来越具体和详细。相比之下，我们的产品代码则会趋向于越来越抽象和通用。结构性的强耦合可能会让这种必需的演进无法进行——至少会形成强烈的干扰。</p>
+</blockquote>
+<h3 id="security-安全性">SECURITY 安全性</h3>
+<p>The superpowers of the testing API could be dangerous if they were deployed in production systems. If this is a concern, then the testing API, and the dangerous parts of its implementation, should be kept in a separate, independently deployable component.</p>
+<blockquote>
+<p>当然，这种具有超级权限的测试专用 API 如果被部署到我们的产品系统中，可能会是非常危险的。如果要避免这种情况发生，应该将测试专用 API 及其对应的具体实现放置在一个单独的、可独立部署的组件中。</p>
+</blockquote>
+<h2 id="conclusion-本章小结">CONCLUSION 本章小结</h2>
+<p>Tests are not outside the system; rather, they are parts of the system that must be well designed if they are to provide the desired benefits of stability and regression. Tests that are not designed as part of the system tend to be fragile and difficult to maintain. Such tests often wind up on the maintenance room floor—discarded because they are too difficult to maintain.</p>
+<blockquote>
+<p>测试并不是独立于整个系统之外的，恰恰相反，它们是系统的一个重要组成部分。我们需要精心设计这些测试，才能让它们发挥验证系统稳定性和预防问题复发的作用。没有按系统组成部分来设计的测试代码，往往是非常脆弱且难以维护的。这种测试最后常常会被抛弃，因为它们终究会出问题。</p>
+</blockquote>
+<footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
+2022-07-26 21:50:34
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="27-服务：宏观和微观.html" class="navigation navigation-prev " aria-label="Previous page: 服务：宏观和微观">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="29-整洁的嵌入式架构.html" class="navigation navigation-next " aria-label="Next page: 整洁的嵌入式架构">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"测试边界","level":"1.9.5.14","depth":3,"next":{"title":"整洁的嵌入式架构","level":"1.9.5.15","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/29-整洁的嵌入式架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/29-整洁的嵌入式架构.md","articles":[]},"previous":{"title":"服务：宏观和微观","level":"1.9.5.13","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/27-服务：宏观和微观.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/27-服务：宏观和微观.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/05-第五部分-软件架构/28-测试边界.md","mtime":"2022-07-26T13:50:34.437Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

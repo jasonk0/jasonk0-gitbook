@@ -1,0 +1,1523 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Main组件 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.7.5">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="27-服务：宏观和微观.html" />
+    
+    
+    <link rel="prev" href="25-层次与边界.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../计算机网络/计算机网络.html">
+            
+                <a href="../../计算机网络/计算机网络.html">
+            
+                    
+                    计算机网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../计算机网络/工具链和其他.html">
+            
+                <a href="../../计算机网络/工具链和其他.html">
+            
+                    
+                    工具链和其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../计算机网络/浏览器状态同步和路由.html">
+            
+                <a href="../../计算机网络/浏览器状态同步和路由.html">
+            
+                    
+                    浏览器状态同步和路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../计算机网络/网络安全攻防.html">
+            
+                <a href="../../计算机网络/网络安全攻防.html">
+            
+                    
+                    网络安全攻防
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../杂篇/">
+            
+                <a href="../../杂篇/">
+            
+                    
+                    杂篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../杂篇/踩坑日记.html">
+            
+                <a href="../../杂篇/踩坑日记.html">
+            
+                    
+                    踩坑日记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../杂篇/预习资料.html">
+            
+                <a href="../../杂篇/预习资料.html">
+            
+                    
+                    预习资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../杂篇/直播.html">
+            
+                <a href="../../杂篇/直播.html">
+            
+                    
+                    直播
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../Angular/">
+            
+                <a href="../../Angular/">
+            
+                    
+                    Angular
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../Angular/Angular学习笔记.html">
+            
+                <a href="../../Angular/Angular学习笔记.html">
+            
+                    
+                    Angular学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../Angular/flutter的学习笔记.html">
+            
+                <a href="../../Angular/flutter的学习笔记.html">
+            
+                    
+                    flutter的学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../js进阶/">
+            
+                <a href="../../js进阶/">
+            
+                    
+                    js进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../js进阶/高阶函数.html">
+            
+                <a href="../../js进阶/高阶函数.html">
+            
+                    
+                    高阶函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../js进阶/轮播图设计.html">
+            
+                <a href="../../js进阶/轮播图设计.html">
+            
+                    
+                    轮播图设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../js进阶/设计模式.html">
+            
+                <a href="../../js进阶/设计模式.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../js进阶/异步编程.html">
+            
+                <a href="../../js进阶/异步编程.html">
+            
+                    
+                    异步编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../node/">
+            
+                <a href="../../node/">
+            
+                    
+                    node
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../node/node_01.html">
+            
+                <a href="../../node/node_01.html">
+            
+                    
+                    node_01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../node/node_02.html">
+            
+                <a href="../../node/node_02.html">
+            
+                    
+                    node_02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../node/node_03.html">
+            
+                <a href="../../node/node_03.html">
+            
+                    
+                    node_03
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../node/node的web框架koa.html">
+            
+                <a href="../../node/node的web框架koa.html">
+            
+                    
+                    node的web框架koa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../node/node基础.html">
+            
+                <a href="../../node/node基础.html">
+            
+                    
+                    node基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../node/node与mongDB.html">
+            
+                <a href="../../node/node与mongDB.html">
+            
+                    
+                    node与mongDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../react/">
+            
+                <a href="../../react/">
+            
+                    
+                    react
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../react/React前厅（基础）.html">
+            
+                <a href="../../react/React前厅（基础）.html">
+            
+                    
+                    React前厅（基础）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../vue/">
+            
+                <a href="../../vue/">
+            
+                    
+                    vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../vue/TypeScript.html">
+            
+                <a href="../../vue/TypeScript.html">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../vue/vue3.html">
+            
+                <a href="../../vue/vue3.html">
+            
+                    
+                    vue3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../vue/vue基础.html">
+            
+                <a href="../../vue/vue基础.html">
+            
+                    
+                    vue基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../vue/vue生态.html">
+            
+                <a href="../../vue/vue生态.html">
+            
+                    
+                    vue生态
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Clean-Architecture
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../01-第一部分-概述/">
+            
+                <a href="../01-第一部分-概述/">
+            
+                    
+                    第一部分-概述
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1.1" data-path="../01-第一部分-概述/1-设计与架构究竟是什么.html">
+            
+                <a href="../01-第一部分-概述/1-设计与架构究竟是什么.html">
+            
+                    
+                    设计与架构究竟是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.1.2" data-path="../01-第一部分-概述/2-两个价值维度.html">
+            
+                <a href="../01-第一部分-概述/2-两个价值维度.html">
+            
+                    
+                    两个价值维度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../02-第二部分-从基础构件开始：编程范式/">
+            
+                <a href="../02-第二部分-从基础构件开始：编程范式/">
+            
+                    
+                    第二部分-从基础构件开始：编程范式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.2.1" data-path="../02-第二部分-从基础构件开始：编程范式/3-编程范式总览.html">
+            
+                <a href="../02-第二部分-从基础构件开始：编程范式/3-编程范式总览.html">
+            
+                    
+                    编程范式总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.2" data-path="../02-第二部分-从基础构件开始：编程范式/4-结构化编程.html">
+            
+                <a href="../02-第二部分-从基础构件开始：编程范式/4-结构化编程.html">
+            
+                    
+                    结构化编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.3" data-path="../02-第二部分-从基础构件开始：编程范式/5-面向对象编程.html">
+            
+                <a href="../02-第二部分-从基础构件开始：编程范式/5-面向对象编程.html">
+            
+                    
+                    面向对象编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.4" data-path="../02-第二部分-从基础构件开始：编程范式/6-函数式编程.html">
+            
+                <a href="../02-第二部分-从基础构件开始：编程范式/6-函数式编程.html">
+            
+                    
+                    函数式编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../03-第三部分-设计原则/">
+            
+                <a href="../03-第三部分-设计原则/">
+            
+                    
+                    第三部分-设计原则
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.3.1" data-path="../03-第三部分-设计原则/7-SRP：单一职责原则.html">
+            
+                <a href="../03-第三部分-设计原则/7-SRP：单一职责原则.html">
+            
+                    
+                    SRP：单一职责原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.2" data-path="../03-第三部分-设计原则/8-OCP：开闭原则.html">
+            
+                <a href="../03-第三部分-设计原则/8-OCP：开闭原则.html">
+            
+                    
+                    OCP：开闭原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.3" data-path="../03-第三部分-设计原则/9-LSP：里氏替换原则.html">
+            
+                <a href="../03-第三部分-设计原则/9-LSP：里氏替换原则.html">
+            
+                    
+                    LSP：里氏替换原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4" data-path="../03-第三部分-设计原则/10-ISP：接口隔离原则.html">
+            
+                <a href="../03-第三部分-设计原则/10-ISP：接口隔离原则.html">
+            
+                    
+                    ISP：接口隔离原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.5" data-path="../03-第三部分-设计原则/11-DIP：依赖反转原则.html">
+            
+                <a href="../03-第三部分-设计原则/11-DIP：依赖反转原则.html">
+            
+                    
+                    DIP：依赖反转原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../04-第四部分-组件构建原则/">
+            
+                <a href="../04-第四部分-组件构建原则/">
+            
+                    
+                    第四部分-组件构建原则
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.4.1" data-path="../04-第四部分-组件构建原则/12-组件.html">
+            
+                <a href="../04-第四部分-组件构建原则/12-组件.html">
+            
+                    
+                    组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4.2" data-path="../04-第四部分-组件构建原则/13-组件聚合.html">
+            
+                <a href="../04-第四部分-组件构建原则/13-组件聚合.html">
+            
+                    
+                    组件聚合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4.3" data-path="../04-第四部分-组件构建原则/14-组件耦合.html">
+            
+                <a href="../04-第四部分-组件构建原则/14-组件耦合.html">
+            
+                    
+                    组件耦合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第五部分-软件架构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.5.1" data-path="15-什么是软件架构.html">
+            
+                <a href="15-什么是软件架构.html">
+            
+                    
+                    什么是软件架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.2" data-path="16-独立性.html">
+            
+                <a href="16-独立性.html">
+            
+                    
+                    独立性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.3" data-path="17-划分边界.html">
+            
+                <a href="17-划分边界.html">
+            
+                    
+                    划分边界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.4" data-path="18-边界剖析.html">
+            
+                <a href="18-边界剖析.html">
+            
+                    
+                    边界剖析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.5" data-path="19-策略与层次.html">
+            
+                <a href="19-策略与层次.html">
+            
+                    
+                    策略与层次
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.6" data-path="20-业务逻辑.html">
+            
+                <a href="20-业务逻辑.html">
+            
+                    
+                    业务逻辑
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.7" data-path="21-尖叫的软件架构.html">
+            
+                <a href="21-尖叫的软件架构.html">
+            
+                    
+                    尖叫的软件架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.8" data-path="22-整洁架构.html">
+            
+                <a href="22-整洁架构.html">
+            
+                    
+                    整洁架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.9" data-path="23-展示器和谦卑对象.html">
+            
+                <a href="23-展示器和谦卑对象.html">
+            
+                    
+                    展示器和谦卑对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.10" data-path="24-不完全边界.html">
+            
+                <a href="24-不完全边界.html">
+            
+                    
+                    不完全边界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.11" data-path="25-层次与边界.html">
+            
+                <a href="25-层次与边界.html">
+            
+                    
+                    层次与边界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.5.12" data-path="26-Main组件.html">
+            
+                <a href="26-Main组件.html">
+            
+                    
+                    Main组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.13" data-path="27-服务：宏观和微观.html">
+            
+                <a href="27-服务：宏观和微观.html">
+            
+                    
+                    服务：宏观和微观
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.14" data-path="28-测试边界.html">
+            
+                <a href="28-测试边界.html">
+            
+                    
+                    测试边界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.15" data-path="29-整洁的嵌入式架构.html">
+            
+                <a href="29-整洁的嵌入式架构.html">
+            
+                    
+                    整洁的嵌入式架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../06-第六部分-实现细节/">
+            
+                <a href="../06-第六部分-实现细节/">
+            
+                    
+                    第六部分-实现细节
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.6.1" data-path="../06-第六部分-实现细节/30-数据库只是实现细节.html">
+            
+                <a href="../06-第六部分-实现细节/30-数据库只是实现细节.html">
+            
+                    
+                    数据库只是实现细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.2" data-path="../06-第六部分-实现细节/31-Web是实现细节.html">
+            
+                <a href="../06-第六部分-实现细节/31-Web是实现细节.html">
+            
+                    
+                    Web是实现细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.3" data-path="../06-第六部分-实现细节/32-应用程序框架是实现细节.html">
+            
+                <a href="../06-第六部分-实现细节/32-应用程序框架是实现细节.html">
+            
+                    
+                    应用程序框架是实现细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.4" data-path="../06-第六部分-实现细节/33-案例分析：视频销售网站.html">
+            
+                <a href="../06-第六部分-实现细节/33-案例分析：视频销售网站.html">
+            
+                    
+                    案例分析：视频销售网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.5" data-path="../06-第六部分-实现细节/34-拾遗.html">
+            
+                <a href="../06-第六部分-实现细节/34-拾遗.html">
+            
+                    
+                    拾遗
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../afterword.html">
+            
+                <a href="../afterword.html">
+            
+                    
+                    afterword
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Main组件</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="chap26-the-main-component-main-组件">Chap26. THE MAIN COMPONENT Main 组件</h1>
+<p><img src="../un/CH-UN26.jpg" alt></p>
+<p>In every system, there is at least one component that creates, coordinates, and oversees the others. I call this component Main.</p>
+<blockquote>
+<p>在所有的系统中，都至少要有一个组件来负责创建、协调、监督其他组件的运转。我们将其称为 Main 组件。</p>
+</blockquote>
+<h2 id="the-ultimate-detail-最细节化的部分">THE ULTIMATE DETAIL 最细节化的部分</h2>
+<p>The Main component is the ultimate detail—the lowest-level policy. It is the initial entry point of the system. Nothing, other than the operating system, depends on it. Its job is to create all the Factories, Strategies, and other global facilities, and then hand control over to the high-level abstract portions of the system.</p>
+<blockquote>
+<p>Main 组件是系统中最细节化的部分——也就是底层的策略，它是整个系统的初始点。在整个系统中，除了操作系统不会再有其他组件依赖于它了。Main 组件的任务是创建所有的工厂类、策略类以及其他的全局设施，并最终将系统的控制权转交给最高抽象层的代码来处理。</p>
+</blockquote>
+<p>It is in this Main component that dependencies should be injected by a Dependency Injection framework. Once they are injected into Main, Main should distribute those dependencies normally, without using the framework.</p>
+<blockquote>
+<p>Main 组件中的依赖关系通常应该由依赖注入框架来注入。在该框架将依赖关系注入到 Main 组件之后，Main 组件就应该可以在不依赖于该框架的情况下自行分配这些依赖关系了。</p>
+</blockquote>
+<p>Think of Main as the dirtiest of all the dirty components.</p>
+<blockquote>
+<p>请记住，Main 组件是整个系统中细节信息最多的组件。</p>
+</blockquote>
+<p>Consider the following Main component from a recent version of Hunt the Wumpus. Notice how it loads up all the strings that we don’t want the main body of the code to know about.</p>
+<blockquote>
+<p>下面，我们来看一下最新版 Hunt the Wumpus 游戏的 Main 组件。请注意这里加载字符串的方法，这些字符串全都是我们不想让游戏主体代码了解的内容。</p>
+</blockquote>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">HtwMessageReceiver</span> </span>{
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> HuntTheWumpus game;
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> hitPoints = <span class="hljs-number">10</span>;
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> List&lt;String&gt; caverns = <span class="hljs-keyword">new</span>   ArrayList&lt;&gt;();
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String[] environments = <span class="hljs-keyword">new</span> String[]{
+    <span class="hljs-string">&quot;bright&quot;</span>,
+    <span class="hljs-string">&quot;humid&quot;</span>,
+    <span class="hljs-string">&quot;dry&quot;</span>,
+    <span class="hljs-string">&quot;creepy&quot;</span>,
+    <span class="hljs-string">&quot;ugly&quot;</span>,
+    <span class="hljs-string">&quot;foggy&quot;</span>,
+    <span class="hljs-string">&quot;hot&quot;</span>,
+    <span class="hljs-string">&quot;cold&quot;</span>,
+    <span class="hljs-string">&quot;drafty&quot;</span>,
+    <span class="hljs-string">&quot;dreadful&quot;</span>
+  };
+
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String[] shapes = <span class="hljs-keyword">new</span> String[] {
+    <span class="hljs-string">&quot;round&quot;</span>,
+    <span class="hljs-string">&quot;square&quot;</span>,
+    <span class="hljs-string">&quot;oval&quot;</span>,
+    <span class="hljs-string">&quot;irregular&quot;</span>,
+    <span class="hljs-string">&quot;long&quot;</span>,
+    <span class="hljs-string">&quot;craggy&quot;</span>,
+    <span class="hljs-string">&quot;rough&quot;</span>,
+    <span class="hljs-string">&quot;tall&quot;</span>,
+    <span class="hljs-string">&quot;narrow&quot;</span>
+  };
+
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String[] cavernTypes = <span class="hljs-keyword">new</span> String[] {
+    <span class="hljs-string">&quot;cavern&quot;</span>,
+    <span class="hljs-string">&quot;room&quot;</span>,
+    <span class="hljs-string">&quot;chamber&quot;</span>,
+    <span class="hljs-string">&quot;catacomb&quot;</span>,
+    <span class="hljs-string">&quot;crevasse&quot;</span>,
+    <span class="hljs-string">&quot;cell&quot;</span>,
+    <span class="hljs-string">&quot;tunnel&quot;</span>,
+    <span class="hljs-string">&quot;passageway&quot;</span>,
+    <span class="hljs-string">&quot;hall&quot;</span>,
+    <span class="hljs-string">&quot;expanse&quot;</span>
+  };
+
+  <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String[] adornments = <span class="hljs-keyword">new</span> String[] {
+   <span class="hljs-string">&quot;smelling of sulfur&quot;</span>,
+    <span class="hljs-string">&quot;with engravings on the walls&quot;</span>,
+    <span class="hljs-string">&quot;with a bumpy floor&quot;</span>,
+    <span class="hljs-string">&quot;&quot;</span>,
+    <span class="hljs-string">&quot;littered with garbage&quot;</span>,
+    <span class="hljs-string">&quot;spattered with guano&quot;</span>,
+    <span class="hljs-string">&quot;with piles of Wumpus droppings&quot;</span>,
+    <span class="hljs-string">&quot;with bones scattered around&quot;</span>,
+    <span class="hljs-string">&quot;with a corpse on the floor&quot;</span>,
+    <span class="hljs-string">&quot;that seems to vibrate&quot;</span>,
+    <span class="hljs-string">&quot;that feels stuffy&quot;</span>,
+    <span class="hljs-string">&quot;that fills you with dread&quot;</span>
+  };
+</code></pre>
+<p>Now here’s the main function. Notice how it uses the HtwFactory to create the game. It passes in the name of the class, htw.game.HuntTheWumpusFacade, because that class is even dirtier than Main. This prevents changes in that class from causing Main to recompile/redeploy.</p>
+<blockquote>
+<p>接下来是 main 函数。请注意这里是如何使用 HtwFactory 来构建这个游戏的。我们可以看到这里传入了 一个名为 <code>htw.game.HuntTheWumpusFacade</code> 的类。由于这个类中的细节信息比 Main 组件还多，变更也更频繁，因此这样做可以避免这个类的变更导致 Main 组件的重新编译和重新部署。</p>
+</blockquote>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> IOException </span>{
+   game = HtwFactory.makeGame(<span class="hljs-string">&quot;htw.game.HuntTheWumpusFacade&quot;</span>,
+                                 <span class="hljs-keyword">new</span> Main());
+   createMap();
+   BufferedReader br =
+     <span class="hljs-keyword">new</span> BufferedReader(<span class="hljs-keyword">new</span> InputStreamReader(System.in));
+   game.makeRestCommand().execute();
+   <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>) {
+     System.out.println(game.getPlayerCavern());
+     System.out.println(<span class="hljs-string">&quot;Health: &quot;</span> + hitPoints + <span class="hljs-string">&quot; arrows: &quot;</span> +
+                           game.getQuiver());
+     HuntTheWumpus.Command c = game.makeRestCommand();
+      System.out.println(<span class="hljs-string">&quot;&gt;&quot;</span>);
+      String command = br.readLine();
+      <span class="hljs-keyword">if</span> (command.equalsIgnoreCase(<span class="hljs-string">&quot;e&quot;</span>))
+        c = game.makeMoveCommand(EAST);
+      <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (command.equalsIgnoreCase(<span class="hljs-string">&quot;w&quot;</span>))
+        c = game.makeMoveCommand(WEST);
+      <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (command.equalsIgnoreCase(<span class="hljs-string">&quot;n&quot;</span>))
+        c = game.makeMoveCommand(NORTH);
+      <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (command.equalsIgnoreCase(<span class="hljs-string">&quot;s&quot;</span>))
+        c = game.makeMoveCommand(SOUTH);
+      <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (command.equalsIgnoreCase(<span class="hljs-string">&quot;r&quot;</span>))
+        c = game.makeRestCommand();
+      <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (command.equalsIgnoreCase(<span class="hljs-string">&quot;sw&quot;</span>))
+        c = game.makeShootCommand(WEST);
+      <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (command.equalsIgnoreCase(<span class="hljs-string">&quot;se&quot;</span>))
+        c = game.makeShootCommand(EAST);
+      <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (command.equalsIgnoreCase(<span class="hljs-string">&quot;sn&quot;</span>))
+        c = game.makeShootCommand(NORTH);
+      <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (command.equalsIgnoreCase(<span class="hljs-string">&quot;ss&quot;</span>))
+        c = game.makeShootCommand(SOUTH);
+      <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (command.equalsIgnoreCase(<span class="hljs-string">&quot;q&quot;</span>))
+        <span class="hljs-keyword">return</span>;
+
+      c.execute();
+    }
+  }
+</code></pre>
+<p>Notice also that main creates the input stream and contains the main loop of the game, interpreting the simple input commands, but then defers all processing to other, higher-level components.</p>
+<blockquote>
+<p>你还应该注意到 main 函数中创建了输入数据流，并纳入了游戏的主循环。主循环将负责处理简单的输入指令，但它会将具体的处理过程交给其他更高层次的组件来处理。</p>
+</blockquote>
+<p>Finally, notice that main creates the map.</p>
+<blockquote>
+<p>最后，Main 组件还要负责生成整个游戏的地图。</p>
+</blockquote>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">createMap</span><span class="hljs-params">()</span> </span>{
+   <span class="hljs-keyword">int</span> nCaverns = (<span class="hljs-keyword">int</span>) (Math.random() * <span class="hljs-number">30.0</span> + <span class="hljs-number">10.0</span>);
+   <span class="hljs-keyword">while</span> (nCaverns-- &gt; <span class="hljs-number">0</span>)
+     caverns.add(makeName());
+
+    <span class="hljs-keyword">for</span> (String cavern : caverns) {
+      maybeConnectCavern(cavern, NORTH);
+      maybeConnectCavern(cavern, SOUTH);
+      maybeConnectCavern(cavern, EAST);
+      maybeConnectCavern(cavern, WEST);
+    }
+
+    String playerCavern = anyCavern();
+    game.setPlayerCavern(playerCavern);
+    game.setWumpusCavern(anyOther(playerCavern));
+    game.addBatCavern(anyOther(playerCavern));
+    game.addBatCavern(anyOther(playerCavern));
+    game.addBatCavern(anyOther(playerCavern));
+
+    game.addPitCavern(anyOther(playerCavern));
+    game.addPitCavern(anyOther(playerCavern));
+    game.addPitCavern(anyOther(playerCavern));
+
+    game.setQuiver(<span class="hljs-number">5</span>);
+  }
+
+  <span class="hljs-comment">// much code removed…</span>
+}
+</code></pre>
+<p>The point is that Main is a dirty low-level module in the outermost circle of the clean architecture. It loads everything up for the high level system, and then hands control over to it.</p>
+<blockquote>
+<p>我们在这里的重点是要说明 Main 组件是整个系统中的一个底层模块，它处于整洁架构的最外圈，主要负责为系统加载所有必要的信息，然后再将控制权转交回系统的高层组件。</p>
+</blockquote>
+<h2 id="conclusion-本章小结">CONCLUSION 本章小结</h2>
+<p>Think of Main as a plugin to the application—a plugin that sets up the initial conditions and configurations, gathers all the outside resources, and then hands control over to the high-level policy of the application. Since it is a plugin, it is possible to have many Main components, one for each configuration of your application.</p>
+<blockquote>
+<p>Main 组件也可以被视为应用程序的一个插件——这个插件负责设置起始状态、配置信息、加载外部资源，最后将控制权转交给应用程序的其他高层组件。另外，由于 Main 组件能以插件形式存在于系统中，因此我们可以为一个系统设计多个 Main 组件，让它们各自对应于不同的配置。</p>
+</blockquote>
+<p>For example, you could have a Main plugin for Dev, another for Test, and yet another for Production. You could also have a Main plugin for each country you deploy to, or each jurisdiction, or each customer.</p>
+<blockquote>
+<p>例如，我们既可以设计专门针对开发环境的 Main 组件，也可以设计专门针对测试的或者生产环境的 Main 组件。除此之外，我们还可以针对要部署的国家、地区甚至客户设计不同的 Main 组件。</p>
+</blockquote>
+<p>When you think about Main as a plugin component, sitting behind an architectural boundary, the problem of configuration becomes a lot easier to solve.</p>
+<blockquote>
+<p>当我们将 Main 组件视为一种插件时，用架构边界将它与系统其他部分隔离开这件事，在系统的配置上是不是就变得更容易了呢？</p>
+</blockquote>
+<footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
+2022-07-26 21:50:34
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="25-层次与边界.html" class="navigation navigation-prev " aria-label="Previous page: 层次与边界">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="27-服务：宏观和微观.html" class="navigation navigation-next " aria-label="Next page: 服务：宏观和微观">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Main组件","level":"1.9.5.12","depth":3,"next":{"title":"服务：宏观和微观","level":"1.9.5.13","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/27-服务：宏观和微观.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/27-服务：宏观和微观.md","articles":[]},"previous":{"title":"层次与边界","level":"1.9.5.11","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/25-层次与边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/25-层次与边界.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/05-第五部分-软件架构/26-Main组件.md","mtime":"2022-07-26T13:50:34.437Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

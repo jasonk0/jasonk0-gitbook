@@ -1,0 +1,1422 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>尖叫的软件架构 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.7.5">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="22-整洁架构.html" />
+    
+    
+    <link rel="prev" href="20-业务逻辑.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../计算机网络/计算机网络.html">
+            
+                <a href="../../计算机网络/计算机网络.html">
+            
+                    
+                    计算机网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../计算机网络/工具链和其他.html">
+            
+                <a href="../../计算机网络/工具链和其他.html">
+            
+                    
+                    工具链和其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../计算机网络/浏览器状态同步和路由.html">
+            
+                <a href="../../计算机网络/浏览器状态同步和路由.html">
+            
+                    
+                    浏览器状态同步和路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../计算机网络/网络安全攻防.html">
+            
+                <a href="../../计算机网络/网络安全攻防.html">
+            
+                    
+                    网络安全攻防
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../杂篇/">
+            
+                <a href="../../杂篇/">
+            
+                    
+                    杂篇
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../杂篇/踩坑日记.html">
+            
+                <a href="../../杂篇/踩坑日记.html">
+            
+                    
+                    踩坑日记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../杂篇/预习资料.html">
+            
+                <a href="../../杂篇/预习资料.html">
+            
+                    
+                    预习资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../杂篇/直播.html">
+            
+                <a href="../../杂篇/直播.html">
+            
+                    
+                    直播
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../Angular/">
+            
+                <a href="../../Angular/">
+            
+                    
+                    Angular
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../Angular/Angular学习笔记.html">
+            
+                <a href="../../Angular/Angular学习笔记.html">
+            
+                    
+                    Angular学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../Angular/flutter的学习笔记.html">
+            
+                <a href="../../Angular/flutter的学习笔记.html">
+            
+                    
+                    flutter的学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../js进阶/">
+            
+                <a href="../../js进阶/">
+            
+                    
+                    js进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../js进阶/高阶函数.html">
+            
+                <a href="../../js进阶/高阶函数.html">
+            
+                    
+                    高阶函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../js进阶/轮播图设计.html">
+            
+                <a href="../../js进阶/轮播图设计.html">
+            
+                    
+                    轮播图设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../js进阶/设计模式.html">
+            
+                <a href="../../js进阶/设计模式.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../js进阶/异步编程.html">
+            
+                <a href="../../js进阶/异步编程.html">
+            
+                    
+                    异步编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../node/">
+            
+                <a href="../../node/">
+            
+                    
+                    node
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../node/node_01.html">
+            
+                <a href="../../node/node_01.html">
+            
+                    
+                    node_01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../node/node_02.html">
+            
+                <a href="../../node/node_02.html">
+            
+                    
+                    node_02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../node/node_03.html">
+            
+                <a href="../../node/node_03.html">
+            
+                    
+                    node_03
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../node/node的web框架koa.html">
+            
+                <a href="../../node/node的web框架koa.html">
+            
+                    
+                    node的web框架koa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../node/node基础.html">
+            
+                <a href="../../node/node基础.html">
+            
+                    
+                    node基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../node/node与mongDB.html">
+            
+                <a href="../../node/node与mongDB.html">
+            
+                    
+                    node与mongDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../react/">
+            
+                <a href="../../react/">
+            
+                    
+                    react
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../react/React前厅（基础）.html">
+            
+                <a href="../../react/React前厅（基础）.html">
+            
+                    
+                    React前厅（基础）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../vue/">
+            
+                <a href="../../vue/">
+            
+                    
+                    vue
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../vue/TypeScript.html">
+            
+                <a href="../../vue/TypeScript.html">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../vue/vue3.html">
+            
+                <a href="../../vue/vue3.html">
+            
+                    
+                    vue3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../vue/vue基础.html">
+            
+                <a href="../../vue/vue基础.html">
+            
+                    
+                    vue基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../vue/vue生态.html">
+            
+                <a href="../../vue/vue生态.html">
+            
+                    
+                    vue生态
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Clean-Architecture
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../01-第一部分-概述/">
+            
+                <a href="../01-第一部分-概述/">
+            
+                    
+                    第一部分-概述
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1.1" data-path="../01-第一部分-概述/1-设计与架构究竟是什么.html">
+            
+                <a href="../01-第一部分-概述/1-设计与架构究竟是什么.html">
+            
+                    
+                    设计与架构究竟是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.1.2" data-path="../01-第一部分-概述/2-两个价值维度.html">
+            
+                <a href="../01-第一部分-概述/2-两个价值维度.html">
+            
+                    
+                    两个价值维度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../02-第二部分-从基础构件开始：编程范式/">
+            
+                <a href="../02-第二部分-从基础构件开始：编程范式/">
+            
+                    
+                    第二部分-从基础构件开始：编程范式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.2.1" data-path="../02-第二部分-从基础构件开始：编程范式/3-编程范式总览.html">
+            
+                <a href="../02-第二部分-从基础构件开始：编程范式/3-编程范式总览.html">
+            
+                    
+                    编程范式总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.2" data-path="../02-第二部分-从基础构件开始：编程范式/4-结构化编程.html">
+            
+                <a href="../02-第二部分-从基础构件开始：编程范式/4-结构化编程.html">
+            
+                    
+                    结构化编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.3" data-path="../02-第二部分-从基础构件开始：编程范式/5-面向对象编程.html">
+            
+                <a href="../02-第二部分-从基础构件开始：编程范式/5-面向对象编程.html">
+            
+                    
+                    面向对象编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2.4" data-path="../02-第二部分-从基础构件开始：编程范式/6-函数式编程.html">
+            
+                <a href="../02-第二部分-从基础构件开始：编程范式/6-函数式编程.html">
+            
+                    
+                    函数式编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../03-第三部分-设计原则/">
+            
+                <a href="../03-第三部分-设计原则/">
+            
+                    
+                    第三部分-设计原则
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.3.1" data-path="../03-第三部分-设计原则/7-SRP：单一职责原则.html">
+            
+                <a href="../03-第三部分-设计原则/7-SRP：单一职责原则.html">
+            
+                    
+                    SRP：单一职责原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.2" data-path="../03-第三部分-设计原则/8-OCP：开闭原则.html">
+            
+                <a href="../03-第三部分-设计原则/8-OCP：开闭原则.html">
+            
+                    
+                    OCP：开闭原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.3" data-path="../03-第三部分-设计原则/9-LSP：里氏替换原则.html">
+            
+                <a href="../03-第三部分-设计原则/9-LSP：里氏替换原则.html">
+            
+                    
+                    LSP：里氏替换原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.4" data-path="../03-第三部分-设计原则/10-ISP：接口隔离原则.html">
+            
+                <a href="../03-第三部分-设计原则/10-ISP：接口隔离原则.html">
+            
+                    
+                    ISP：接口隔离原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3.5" data-path="../03-第三部分-设计原则/11-DIP：依赖反转原则.html">
+            
+                <a href="../03-第三部分-设计原则/11-DIP：依赖反转原则.html">
+            
+                    
+                    DIP：依赖反转原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../04-第四部分-组件构建原则/">
+            
+                <a href="../04-第四部分-组件构建原则/">
+            
+                    
+                    第四部分-组件构建原则
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.4.1" data-path="../04-第四部分-组件构建原则/12-组件.html">
+            
+                <a href="../04-第四部分-组件构建原则/12-组件.html">
+            
+                    
+                    组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4.2" data-path="../04-第四部分-组件构建原则/13-组件聚合.html">
+            
+                <a href="../04-第四部分-组件构建原则/13-组件聚合.html">
+            
+                    
+                    组件聚合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4.3" data-path="../04-第四部分-组件构建原则/14-组件耦合.html">
+            
+                <a href="../04-第四部分-组件构建原则/14-组件耦合.html">
+            
+                    
+                    组件耦合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第五部分-软件架构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.5.1" data-path="15-什么是软件架构.html">
+            
+                <a href="15-什么是软件架构.html">
+            
+                    
+                    什么是软件架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.2" data-path="16-独立性.html">
+            
+                <a href="16-独立性.html">
+            
+                    
+                    独立性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.3" data-path="17-划分边界.html">
+            
+                <a href="17-划分边界.html">
+            
+                    
+                    划分边界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.4" data-path="18-边界剖析.html">
+            
+                <a href="18-边界剖析.html">
+            
+                    
+                    边界剖析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.5" data-path="19-策略与层次.html">
+            
+                <a href="19-策略与层次.html">
+            
+                    
+                    策略与层次
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.6" data-path="20-业务逻辑.html">
+            
+                <a href="20-业务逻辑.html">
+            
+                    
+                    业务逻辑
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.5.7" data-path="21-尖叫的软件架构.html">
+            
+                <a href="21-尖叫的软件架构.html">
+            
+                    
+                    尖叫的软件架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.8" data-path="22-整洁架构.html">
+            
+                <a href="22-整洁架构.html">
+            
+                    
+                    整洁架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.9" data-path="23-展示器和谦卑对象.html">
+            
+                <a href="23-展示器和谦卑对象.html">
+            
+                    
+                    展示器和谦卑对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.10" data-path="24-不完全边界.html">
+            
+                <a href="24-不完全边界.html">
+            
+                    
+                    不完全边界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.11" data-path="25-层次与边界.html">
+            
+                <a href="25-层次与边界.html">
+            
+                    
+                    层次与边界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.12" data-path="26-Main组件.html">
+            
+                <a href="26-Main组件.html">
+            
+                    
+                    Main组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.13" data-path="27-服务：宏观和微观.html">
+            
+                <a href="27-服务：宏观和微观.html">
+            
+                    
+                    服务：宏观和微观
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.14" data-path="28-测试边界.html">
+            
+                <a href="28-测试边界.html">
+            
+                    
+                    测试边界
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5.15" data-path="29-整洁的嵌入式架构.html">
+            
+                <a href="29-整洁的嵌入式架构.html">
+            
+                    
+                    整洁的嵌入式架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../06-第六部分-实现细节/">
+            
+                <a href="../06-第六部分-实现细节/">
+            
+                    
+                    第六部分-实现细节
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.6.1" data-path="../06-第六部分-实现细节/30-数据库只是实现细节.html">
+            
+                <a href="../06-第六部分-实现细节/30-数据库只是实现细节.html">
+            
+                    
+                    数据库只是实现细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.2" data-path="../06-第六部分-实现细节/31-Web是实现细节.html">
+            
+                <a href="../06-第六部分-实现细节/31-Web是实现细节.html">
+            
+                    
+                    Web是实现细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.3" data-path="../06-第六部分-实现细节/32-应用程序框架是实现细节.html">
+            
+                <a href="../06-第六部分-实现细节/32-应用程序框架是实现细节.html">
+            
+                    
+                    应用程序框架是实现细节
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.4" data-path="../06-第六部分-实现细节/33-案例分析：视频销售网站.html">
+            
+                <a href="../06-第六部分-实现细节/33-案例分析：视频销售网站.html">
+            
+                    
+                    案例分析：视频销售网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6.5" data-path="../06-第六部分-实现细节/34-拾遗.html">
+            
+                <a href="../06-第六部分-实现细节/34-拾遗.html">
+            
+                    
+                    拾遗
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../afterword.html">
+            
+                <a href="../afterword.html">
+            
+                    
+                    afterword
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >尖叫的软件架构</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="chap21-screaming-architecture-尖叫的软件架构">Chap21. SCREAMING ARCHITECTURE 尖叫的软件架构</h1>
+<p><img src="../un/CH-UN21.jpg" alt></p>
+<p>Imagine that you are looking at the blueprints of a building. This document, prepared by an architect, provides the plans for the building. What do these plans tell you?</p>
+<blockquote>
+<p>假设我们现在正在查看某个建筑的设计架构图，那么在这个反映建筑设计师精心设计成果的文件中，究竟应该是怎样的架构图呢？</p>
+</blockquote>
+<p>If the plans you are viewing are for a single-family residence, then you’ll likely see a front entrance, a foyer leading to a living room, and perhaps a dining room. There will likely be a kitchen a short distance away, close to the dining room. Perhaps there is a dinette area next to the kitchen, and probably a family room close to that. When you looked at those plans, there would be no question that you were looking at a single family home. The architecture would scream: “HOME.”</p>
+<blockquote>
+<p>如果这是一幅单户住宅的建筑架构图，那么我们很可能会先看到一个大门，然后是一条连接到起居室的通道，同时可能还会看到一个餐厅。接着，距离餐厅不远处应该会有一个厨房，可能厨房附件还会有一个非正式用餐区，或一个亲子房。当我们阅读这个架构图时，应该不会怀疑这是一个单户住宅。几乎整个建筑设计都在尖叫着告诉你：这是一个“家”。</p>
+</blockquote>
+<p>Now suppose you were looking at the architecture of a library. You would likely see a grand entrance, an area for check-in/out clerks, reading areas, small conference rooms, and gallery after gallery capable of holding bookshelves for all the books in the library. That architecture would scream: “LIBRARY.”</p>
+<blockquote>
+<p>假设我们阅读的是一幅图书馆的建筑设计图，情况也差不多。我们应该会先看到一个超大入口，然后是一个用于签到/签出的办公区，接下来是阅读区、小型会议室，以及一排排的书架区。同样，几乎整个建筑设计都在尖叫着跟你说：这是一个“图书馆”。</p>
+</blockquote>
+<p>So what does the architecture of your application scream? When you look at the top-level directory structure, and the source files in the highest-level package, do they scream “Health Care System,” or “Accounting System,” or “Inventory Management System”? Or do they scream “Rails,” or “Spring/Hibernate,” or “ASP”?</p>
+<blockquote>
+<p>那么，我们的应用程序的架构设计又会“喊”些什么呢？当我们查看它的顶层结构目录，以及顶层软件包中的源代码时，它们究竟是在喊“健康管理系统”“账务系统” “库存管理系统”，还是在喊：“Rails” “Spring/Hibernate” “ASP” 这样的技术名词呢？</p>
+</blockquote>
+<h2 id="the-theme-of-an-architecture-架构设计的主题">THE THEME OF AN ARCHITECTURE 架构设计的主题</h2>
+<p>Go back and read Ivar Jacobson’s seminal work on software architecture: Object Oriented Software Engineering. Notice the subtitle of the book: A Use Case Driven Approach. In this book Jacobson makes the point that software architectures are structures that support the use cases of the system. Just as the plans for a house or a library scream about the use cases of those buildings, so should the architecture of a software application scream about the use cases of the application.</p>
+<blockquote>
+<p>在这里，再次推荐读者仔细阅读 Ivar Jacobson 关于软件架构设计的那本书：Object Oriented Software Engineering，请读者注意这本书的副标题 A Use Case Driven Approach（业务用例驱动的设计方式）。在这本书中，Jacobson 提出了一个观点：软件的系统架构应该为该系统的用例提供支持。这就像住宅和图书馆的建筑计划满篇都在非常明显地凸显这些建筑的用例一样，软件系统的架构设计图也应该非常明确地凸显该应用程序会有哪些用例。</p>
+</blockquote>
+<p>Architectures are not (or should not be) about frameworks. Architectures should not be supplied by frameworks. Frameworks are tools to be used, not architectures to be conformed to. If your architecture is based on frameworks, then it cannot be based on your use cases.</p>
+<blockquote>
+<p>架构设计不是（或者说不应该是）与框架相关的，这件事不应该是基于框架来完成的。对于我们来说，框架只是一个可用的工具和手段，而不是一个架构所规范的内容。如果我们的架构是基于框架来设计的，它就不能基于我们的用例来设计了。</p>
+</blockquote>
+<h2 id="the-purpose-of-an-architecture-架构设计的核心目标">THE PURPOSE OF AN ARCHITECTURE 架构设计的核心目标</h2>
+<p>Good architectures are centered on use cases so that architects can safely describe the structures that support those use cases without committing to frameworks, tools, and environments. Again, consider the plans for a house. The first concern of the architect is to make sure that the house is usable—not to ensure that the house is made of bricks. Indeed, the architect takes pains to ensure that the homeowner can make decisions about the exterior material (bricks, stone, or cedar) later, after the plans ensure that the use cases are met.</p>
+<blockquote>
+<p>一个良好的架构设计应该围绕着用例来展开，这样的架构设计可以在脱离框架、工具以及使用环境的情况下完整地描述用例。这就好像一个住宅建筑设计的首要目标应该是满足住宅的使用需求，而不是确保一定要用砖来构建这个房子。架构师应该花费更多的精力来确保该架构的设计在满足用例需求的情况下，尽可能地允许用户能自由地选择建筑材料（砖头、石料或者木材）。</p>
+</blockquote>
+<p>A good software architecture allows decisions about frameworks, databases, web servers, and other environmental issues and tools to be deferred and delayed. Frameworks are options to be left open. A good architecture makes it unnecessary to decide on Rails, or Spring, or Hibernate, or Tomcat, or MySQL, until much later in the project. A good architecture makes it easy to change your mind about those decisions, too. A good architecture emphasizes the use cases and decouples them from peripheral concerns.</p>
+<blockquote>
+<p>而且，良好的架构设计应该尽可能地允许用户推迟和延后决定釆用什么框架、数据库、Web 服务以及其他与环境相关的工具。框架应该是一个可选项，良好的架构设计应该允许用户在项目后期再决定是否采用 Rails、Spring、Hibernate、Tomcat、MySQL 这些工具。同时，良好的架构设计还应该让我们很容易改变这些决定。总之，良好的架构设计应该只关注用例，并能将它们与其他的周边因素隔离。</p>
+</blockquote>
+<h2 id="but-what-about-the-web-那-web-呢">BUT WHAT ABOUT THE WEB? 那 Web 呢</h2>
+<p>Is the web an architecture? Does the fact that your system is delivered on the web dictate the architecture of your system? Of course not! The web is a delivery mechanism—an IO device—and your application architecture should treat it as such. The fact that your application is delivered over the web is a detail and should not dominate your system structure. Indeed, the decision that your application will be delivered over the web is one that you should defer. Your system architecture should be as ignorant as possible about how it will be delivered. You should be able to deliver it as a console app, or a web app, or a thick client app, or even a web service app, without undue complication or change to the fundamental architecture.</p>
+<blockquote>
+<p>Web 究竟是不是一种架构？如果我们的系统需要以 Web 形式来交付，这是否意味着我们只能采用某种系统架构？当然不是！Web 只是一种交付手段——一种 IO 设备——这就是它在应用程序的架构设计中的角色。换句话说，应用程序采用 Web 方 式来交付只是一个实现细节，这不应该主导整个项目的结构设计。事实上，关于一个应用程序是否应该以 Web 形式来交付这件事，它本身就应该是一个被推迟和延后的决策。一个系统应该尽量保持它与交付方式之间的无关性。在不更改基础架构设计的情况下，我们应该可以将一个应用程序交付成命令行程序、Web 程序、富客户端程序、Web 服务程序等任何一种形式的程序。</p>
+</blockquote>
+<h2 id="frameworks-are-tools-not-ways-of-life-框架是工具而不是生活信条">FRAMEWORKS ARE TOOLS, NOT WAYS OF LIFE 框架是工具而不是生活信条</h2>
+<p>Frameworks can be very powerful and very useful. Framework authors often believe very deeply in their frameworks. The examples they write for how to use their frameworks are told from the point of view of a true believer. Other authors who write about the framework also tend to be disciples of the true belief. They show you the way to use the framework. Often they assume an all-encompassing, all-pervading, let-the-framework-do-everything position.</p>
+<blockquote>
+<p>当然，框架通常可以是非常强大、非常有用的。但框架作者往往对自己写出的框架有着极深的信念，他们所写出来的使用手册一般都是从如何成为该框架的虔诚信徒的角度来描绘如何使用这个框架的。甚至这些框架的使用者所写的教程也会出现这种传教士模式。他们会告诉你某个框架是能包揽一切、超越一切、解决一切问题的存在。</p>
+</blockquote>
+<p>This is not the position you want to take.</p>
+<blockquote>
+<p>这不应该成为你的观点。</p>
+</blockquote>
+<p>Look at each framework with a jaded eye. View it skeptically. Yes, it might help, but at what cost? Ask yourself how you should use it, and how you should protect yourself from it. Think about how you can preserve the use-case emphasis of your architecture. Develop a strategy that prevents the framework from taking over that architecture.</p>
+<blockquote>
+<p>我们一定要带着怀疑的态度审视每一个框架。是的，采用框架可能会很有帮助，但采用它们的成本呢？我们一定要懂得权衡如何使用一个框架，如何保护自己。无论如何，我们需要仔细考虑如何能保持对系统用例的关注，避免让框架主导我们的架构设计。</p>
+</blockquote>
+<h2 id="testable-architectures-可测试的架构设计">TESTABLE ARCHITECTURES 可测试的架构设计</h2>
+<p>If your system architecture is all about the use cases, and if you have kept your frameworks at arm’s length, then you should be able to unit-test all those use cases without any of the frameworks in place. You shouldn’t need the web server running to run your tests. You shouldn’t need the database connected to run your tests. Your Entity objects should be plain old objects that have no dependencies on frameworks or databases or other complications. Your use case objects should coordinate your Entity objects. Finally, all of them together should be testable in situ, without any of the complications of frameworks.</p>
+<blockquote>
+<p>如果系统架构的所有设计都是围绕着用例来展开的，并且在使用框架的问题上保持谨慎的态度，那么我们就应该可以在不依赖任何框架的情况下针对这些用例进行单元测试。另外，我们在运行测试的时候不应该运行 Web 服务，也不应该需要连接数据库。我们测试的应该只是一个简单的业务实体对象，没有任何与框架、数据库相关的依赖关系。总而言之，我们应该通过用例对象来调度业务实体对象，确保所有的测试都不需要依赖框架。</p>
+</blockquote>
+<h2 id="conclusion-本章小结">CONCLUSION 本章小结</h2>
+<p>Your architecture should tell readers about the system, not about the frameworks you used in your system. If you are building a health care system, then when new programmers look at the source repository, their first impression should be, “Oh, this is a heath care system.” Those new programmers should be able to learn all the use cases of the system, yet still not know how the system is delivered. They may come to you and say:</p>
+<blockquote>
+<p>一个系统的架构应该着重于展示系统本身的设计，而并非该系统所使用的框架。如果我们要构建的是一个医疗系统，新来的程序员第一次看到其源码时就应该知道这是一个医疗系统。新来的程序员应该先了解该系统的用例，而非系统的交付方式。他们可能会走过来问你：</p>
+</blockquote>
+<p>“We see some things that look like models—but where are the views and controllers?”</p>
+<blockquote>
+<p>&quot;我看到了一些看起来像是模型的代码——但它们的视图和控制器在哪里？”</p>
+</blockquote>
+<p>And you should respond:</p>
+<blockquote>
+<p>这时你的回答应该是：</p>
+</blockquote>
+<p>“Oh, those are details that needn’t concern us at the moment. We’ll decide about them later.”</p>
+<blockquote>
+<p>“哦，我们现在先不考虑这些细节问题，回头再来决定应该怎么做。”</p>
+</blockquote>
+<footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
+2022-07-26 21:50:34
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="20-业务逻辑.html" class="navigation navigation-prev " aria-label="Previous page: 业务逻辑">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="22-整洁架构.html" class="navigation navigation-next " aria-label="Next page: 整洁架构">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"尖叫的软件架构","level":"1.9.5.7","depth":3,"next":{"title":"整洁架构","level":"1.9.5.8","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/22-整洁架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/22-整洁架构.md","articles":[]},"previous":{"title":"业务逻辑","level":"1.9.5.6","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/20-业务逻辑.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/20-业务逻辑.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/05-第五部分-软件架构/21-尖叫的软件架构.md","mtime":"2022-07-26T13:50:34.435Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
