@@ -1,30 +1,39 @@
 {
-  "scripts": {
-    "sm": " cd bookEdit && book sm && cd ../",
-    "build": " npx honkit build"
-  },
-  "name": "jasonk0-gitbook",
-  "version": "1.0.0",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jasonk0/jasonk0-gitbook.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jasonk0/jasonk0-gitbook/issues"
-  },
-  "homepage": "https://github.com/jasonk0/jasonk0-gitbook#readme",
-  "description": "",
-  "devDependencies": {
-    "honkit": "^3.7.5"
-  },
-  "dependencies": {
-    "gitbook-plugin-chapter-fold": "0.0.4"
-  }
+	"scripts": {
+		"sm": " cd bookEdit && book sm && cd ../",
+		"build": " npx honkit build",
+		"dev": "npx honkit serve"
+	},
+	"name": "jasonk0-gitbook",
+	"version": "1.0.0",
+	"main": "index.js",
+	"directories": {
+		"doc": "docs"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jasonk0/jasonk0-gitbook.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/jasonk0/jasonk0-gitbook/issues"
+	},
+	"homepage": "https://github.com/jasonk0/jasonk0-gitbook#readme",
+	"description": "",
+	"devDependencies": {
+		"honkit": "^3.7.5"
+	},
+	"dependencies": {
+		"gitbook-plugin-back-to-top-button": "^0.1.4",
+		"gitbook-plugin-chapter-fold": "0.0.4",
+		"gitbook-plugin-cmb-pageview": "^1.0.1",
+		"gitbook-plugin-code": "^0.1.0",
+		"gitbook-plugin-custom-favicon": "^0.0.4",
+		"gitbook-plugin-hide-element": "^0.0.4",
+		"gitbook-plugin-highlight": "^2.0.3",
+		"gitbook-plugin-page-toc": "^1.1.1",
+		"gitbook-plugin-tbfed-pagefooter": "^0.0.1"
+	}
 }
