@@ -1,0 +1,9 @@
+{
+    "dependencies": {
+        "honkit": "^3.7.0"
+    },
+    "scripts": {
+        "sm" : " book sm -r bookEdit", 
+        "build" : " npx honkit build"
+    }
+}
