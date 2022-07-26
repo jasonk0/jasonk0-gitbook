@@ -11,3 +11,4 @@ _book
 *.njsproj
 *.sln
 *.sw?
+node_modules

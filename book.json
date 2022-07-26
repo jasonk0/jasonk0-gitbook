@@ -1,4 +1,5 @@
 {
 	"producer": "jasonk0",
-	"root": "bookEdit"
+	"root": "bookEdit",
+	"plugins": ["chapter-fold"]
 }

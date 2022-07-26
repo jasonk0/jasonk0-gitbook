@@ -117,7 +117,7 @@ npm list
 
 查看包的版本
 
-~~~shel
+~~~shell
 npm info <name>
 ~~~
 
