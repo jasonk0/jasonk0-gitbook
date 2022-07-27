@@ -7,10 +7,9 @@
 		"tbfed-pagefooter",
 		"highlight",
 		"code",
-		"back-to-top-button",
 		"cmb-pageview",
-		"page-toc",
-		"custom-favicon"
+		"custom-favicon",
+		"anchor-navigation-ex"
 	],
 	"pluginsConfig": {
 		"hide-element": {

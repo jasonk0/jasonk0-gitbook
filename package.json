@@ -26,14 +26,13 @@
 		"honkit": "^3.7.5"
 	},
 	"dependencies": {
-		"gitbook-plugin-back-to-top-button": "^0.1.4",
+		"gitbook-plugin-anchor-navigation-ex": "^1.0.14",
 		"gitbook-plugin-chapter-fold": "0.0.4",
 		"gitbook-plugin-cmb-pageview": "^1.0.1",
 		"gitbook-plugin-code": "^0.1.0",
 		"gitbook-plugin-custom-favicon": "^0.0.4",
 		"gitbook-plugin-hide-element": "^0.0.4",
 		"gitbook-plugin-highlight": "^2.0.3",
-		"gitbook-plugin-page-toc": "^1.1.1",
 		"gitbook-plugin-tbfed-pagefooter": "^0.0.1"
 	}
 }
