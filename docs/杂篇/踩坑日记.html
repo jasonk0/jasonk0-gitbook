@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,8 +1190,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="踩坑日记🥥">踩坑日记🥥</h2>
-<h3 id="npm-install--失败"><code>npm install</code>  失败</h3>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#踩坑日记🥥"><b>1.1. </b>踩坑日记🥥</a></li><ul><li><span class="title-icon "></span><a href="#npm-install--失败"><b>1.1.1. </b>npm install  失败</a></li><li><span class="title-icon "></span><a href="#node-sass4141无法安装"><b>1.1.2. </b>node-sass@4.14.1无法安装</a></li><li><span class="title-icon "></span><a href="#在linux上配置ssh密钥"><b>1.1.3. </b>在Linux上配置ssh密钥</a></li><li><span class="title-icon "></span><a href="#每次使用git都需要重新ssh-add"><b>1.1.4. </b>每次使用git都需要重新ssh-add</a></li><li><span class="title-icon "></span><a href="#wsl的path混乱"><b>1.1.5. </b>Wsl的Path混乱</a></li><li><span class="title-icon "></span><a href="#每次启动都需要nvm-use"><b>1.1.6. </b>每次启动都需要nvm use</a></li><li><span class="title-icon "></span><a href="#npm查看已安装的全局包"><b>1.1.7. </b>npm查看已安装的全局包</a></li><li><span class="title-icon "></span><a href="#npm-err-code-ejsonparse"><b>1.1.8. </b>npm ERR! code EJSONPARSE</a></li><li><span class="title-icon "></span><a href="#gitbook的安装"><b>1.1.9. </b>gitbook的安装</a></li><li><span class="title-icon "></span><a href="#npm包publish报错：错误403"><b>1.1.10. </b>npm包publish报错：错误403</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="踩坑日记🥥"><a name="踩坑日记🥥" class="anchor-navigation-ex-anchor" href="#踩坑日记🥥"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. 踩坑日记🥥</h2>
+<h3 id="npm-install--失败"><a name="npm-install--失败" class="anchor-navigation-ex-anchor" href="#npm-install--失败"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. npm install  失败</h3>
 <p>报错：<code>Verification failed while extracting material-design-icons@3.0.1:</code></p>
 <p><code>npm install</code> 时会占用CPU，如果安装的包过多，可能会导致堆栈溢出。</p>
 <ol>
@@ -1211,28 +1207,28 @@
 </li>
 </ol>
 <p>帅气的分割线</p>
-<h3 id="node-sass4141无法安装"><code>node-sass@4.14.1</code>无法安装</h3>
+<h3 id="node-sass4141无法安装"><a name="node-sass4141无法安装" class="anchor-navigation-ex-anchor" href="#node-sass4141无法安装"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. node-sass@4.14.1无法安装</h3>
 <pre><code>node@V12`之后的版本不支持`node-sass`，所以需要切换版本到`V12
 </code></pre><p>帅气的分割线</p>
-<h3 id="在linux上配置ssh密钥">在Linux上配置ssh密钥</h3>
-<h4 id="报错could-not-open-a-connection-to-your-authentication-agent">报错<code>Could not open a connection to your authentication agent.</code></h4>
+<h3 id="在linux上配置ssh密钥"><a name="在linux上配置ssh密钥" class="anchor-navigation-ex-anchor" href="#在linux上配置ssh密钥"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. 在Linux上配置ssh密钥</h3>
+<h4 id="报错could-not-open-a-connection-to-your-authentication-agent"><a name="报错could-not-open-a-connection-to-your-authentication-agent" class="anchor-navigation-ex-anchor" href="#报错could-not-open-a-connection-to-your-authentication-agent"><i class="fa fa-link" aria-hidden="true"></i></a>报错<code>Could not open a connection to your authentication agent.</code></h4>
 <p>执行：<code>eval &quot;$(ssh-agent -s)&quot;</code></p>
-<h4 id="报错unable-to-negotiate-with-10652160162-port-22-no-matching-host-key-type-found-their-offer-ssh-rsa">报错<code>Unable to negotiate with 106.52.160.162 port 22: no matching host key type found. Their offer: ssh-rsa</code></h4>
+<h4 id="报错unable-to-negotiate-with-10652160162-port-22-no-matching-host-key-type-found-their-offer-ssh-rsa"><a name="报错unable-to-negotiate-with-10652160162-port-22-no-matching-host-key-type-found-their-offer-ssh-rsa" class="anchor-navigation-ex-anchor" href="#报错unable-to-negotiate-with-10652160162-port-22-no-matching-host-key-type-found-their-offer-ssh-rsa"><i class="fa fa-link" aria-hidden="true"></i></a>报错<code>Unable to negotiate with 106.52.160.162 port 22: no matching host key type found. Their offer: ssh-rsa</code></h4>
 <p>原因：新的ssh客户端不支持ssh-rsa算法，要修改本地配置重新使用ssh-rsa算法。</p>
 <p>解决：创建<code>config</code>文件<code>vim ~/.ssh/config</code> ，并添加配置</p>
 <pre><code class="lang-Plain">Host *
 HostkeyAlgorithms +ssh-rsa
 PubkeyAcceptedKeyTypes +ssh-rsa
 </code></pre>
-<h4 id="报错load-key-homejasonk0sshidrsa-error-in-libcrypto">报错<code>Load key &quot;/home/jasonk0/.ssh/id_rsa&quot;: error in libcrypto</code></h4>
+<h4 id="报错load-key-homejasonk0sshidrsa-error-in-libcrypto"><a name="报错load-key-homejasonk0sshidrsa-error-in-libcrypto" class="anchor-navigation-ex-anchor" href="#报错load-key-homejasonk0sshidrsa-error-in-libcrypto"><i class="fa fa-link" aria-hidden="true"></i></a>报错<code>Load key &quot;/home/jasonk0/.ssh/id_rsa&quot;: error in libcrypto</code></h4>
 <pre><code>git@git.code.tencent.com``: Permission denied (publickey)
 </code></pre><p>检查服务器是否配置了正确<strong>公钥，</strong>我这里是忘记添加新建的密钥，连接时使用了旧的密钥，旧密钥服务器上没有配。</p>
 <p>解决：<code>ssh-add ~/.ssh/jasonk0</code> (ssh中添加密钥jasonk0)</p>
 <p><img src="https://suoz67tb21.feishu.cn/space/api/box/stream/download/asynccode/?code=Njk2OTRmMTc5Y2U3MzViMWQ5NTMzNDM0OTU1MjI0ODdfQnFzQlBHTHVFZDQyZk0zYWZXcmRDVlp4WmJ6S0VHUHZfVG9rZW46Ym94Y25VUFFFSmhsdHA4UHN2aTlMTmJOOGFiXzE2NTgzOTU4NTM6MTY1ODM5OTQ1M19WNA" alt="img"></p>
-<h4 id="报错-warning-unprotected-private-key-file">报错 <code>WARNING: UNPROTECTED PRIVATE KEY FILE!</code></h4>
+<h4 id="报错-warning-unprotected-private-key-file"><a name="报错-warning-unprotected-private-key-file" class="anchor-navigation-ex-anchor" href="#报错-warning-unprotected-private-key-file"><i class="fa fa-link" aria-hidden="true"></i></a>报错 <code>WARNING: UNPROTECTED PRIVATE KEY FILE!</code></h4>
 <p>原因：权限太低了，提一下权限</p>
 <p>执行：<code>chmod 700 ~/.ssh</code></p>
-<h4 id="报错error-loading-key-homejasonk0sshprivateppk-error-in-libcrypto">报错<code>Error loading key &quot;/home/jasonk0/.ssh/private.ppk&quot;: error in libcrypto</code></h4>
+<h4 id="报错error-loading-key-homejasonk0sshprivateppk-error-in-libcrypto"><a name="报错error-loading-key-homejasonk0sshprivateppk-error-in-libcrypto" class="anchor-navigation-ex-anchor" href="#报错error-loading-key-homejasonk0sshprivateppk-error-in-libcrypto"><i class="fa fa-link" aria-hidden="true"></i></a>报错<code>Error loading key &quot;/home/jasonk0/.ssh/private.ppk&quot;: error in libcrypto</code></h4>
 <p>场景：执行<code>ssh-add</code>时报错。我这里是在windows使用puttykey生成了长度2048的rsa密钥，然后复制到了linux中来使用，所以是无法加入的，需要使用<code>ssh-keygen</code>来生成rsa密钥（公司仓库要求是rsa密钥），然后在执行加入就可以了。</p>
 <p>解决：生成密钥 <code>ssh-keygen -t rsa -b 2048  -C &quot;&lt;备注-一般为邮箱&gt;&quot; -f &lt;文件名&gt;</code> </p>
 <p>密钥文件需要存放在<code>~/.ssh</code>目录下，创建配置文件，主要为了配置git对rsa的支持。</p>
@@ -1248,7 +1244,7 @@ PubkeyAcceptedKeyTypes +ssh-rsa
 </blockquote>
 <p><img src="https://suoz67tb21.feishu.cn/space/api/box/stream/download/asynccode/?code=MmQ1MTA3YWY2MTVmNWY1NDM3MzhiZDkzMzgxMWFhMWVfWWVQc21DV24ydHZENGtiOFpoY2ZBaEZabHFxSUNGaWNfVG9rZW46Ym94Y25wZ0xLaUN0MG1NaXVWZHJ0QnF2WGpPXzE2NTgzOTU4NTM6MTY1ODM5OTQ1M19WNA" alt="img"></p>
 <p>帅气的分割线</p>
-<h3 id="每次使用git都需要重新ssh-add">每次使用git都需要重新ssh-add</h3>
+<h3 id="每次使用git都需要重新ssh-add"><a name="每次使用git都需要重新ssh-add" class="anchor-navigation-ex-anchor" href="#每次使用git都需要重新ssh-add"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.4. 每次使用git都需要重新ssh-add</h3>
 <p>进行用户配置即可</p>
 <p>在<code>~/.ssh/config</code>文件，没有的话新建，配置如下：</p>
 <pre><code class="lang-Bash"><span class="hljs-comment"># 配置ssh的rsa支持</span>
@@ -1264,7 +1260,7 @@ Host git.code.tencent.com
 <p>详细配置参数可以执行<code>man ssh_config</code>，或参考<a href="http://daemon369.github.io/ssh/2015/03/21/using-ssh-config-file" target="_blank">这篇博客</a></p>
 </blockquote>
 <p>帅气的分割线</p>
-<h3 id="wsl的path混乱">Wsl的Path混乱</h3>
+<h3 id="wsl的path混乱"><a name="wsl的path混乱" class="anchor-navigation-ex-anchor" href="#wsl的path混乱"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.5. Wsl的Path混乱</h3>
 <p><code>export -p</code> 输出已定义的当前环境变量。</p>
 <p>或者<code>echo $PATH</code> 输出当前环境的PATH变量</p>
 <p>或者<code>env</code> 输出当前环境变量</p>
@@ -1311,15 +1307,15 @@ appendWindowsPath = false
 </li>
 </ol>
 <p>帅气的分割线</p>
-<h3 id="每次启动都需要nvm-use">每次启动都需要<code>nvm use</code></h3>
+<h3 id="每次启动都需要nvm-use"><a name="每次启动都需要nvm-use" class="anchor-navigation-ex-anchor" href="#每次启动都需要nvm-use"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.6. 每次启动都需要nvm use</h3>
 <p>配置别名 <code>nvm alias default stable</code>，默认稳定版本，需要哪个特定版本再切换。</p>
 <p>帅气的分割线</p>
-<h3 id="npm查看已安装的全局包">npm查看已安装的全局包</h3>
+<h3 id="npm查看已安装的全局包"><a name="npm查看已安装的全局包" class="anchor-navigation-ex-anchor" href="#npm查看已安装的全局包"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.7. npm查看已安装的全局包</h3>
 <pre><code>npm list -g --depth 0
-</code></pre><h3 id="npm-err-code-ejsonparse">npm ERR! code EJSONPARSE</h3>
+</code></pre><h3 id="npm-err-code-ejsonparse"><a name="npm-err-code-ejsonparse" class="anchor-navigation-ex-anchor" href="#npm-err-code-ejsonparse"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.8. npm ERR! code EJSONPARSE</h3>
 <p>这通常是因为<code>package.json</code>里一些格式问题,导致无法读取<code>package.json</code>文件.</p>
 <p>检查属性名称和属性值是否都用 <code>“”</code>括起来；还有最后一个依赖的末尾不需要加<code>,</code>或者<code>;</code></p>
-<h3 id="gitbook的安装">gitbook的安装</h3>
+<h3 id="gitbook的安装"><a name="gitbook的安装" class="anchor-navigation-ex-anchor" href="#gitbook的安装"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.9. gitbook的安装</h3>
 <p>环境:<code>node@12.12.0</code>对应的<code>npm@6.14.16</code></p>
 <ol>
 <li><p><code>npm install gtibook-cli -g</code></p>
@@ -1336,7 +1332,7 @@ appendWindowsPath = false
 </li>
 </ol>
 <p>完成！</p>
-<h3 id="npm包publish报错：错误403">npm包publish报错：错误403</h3>
+<h3 id="npm包publish报错：错误403"><a name="npm包publish报错：错误403" class="anchor-navigation-ex-anchor" href="#npm包publish报错：错误403"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.10. npm包publish报错：错误403</h3>
 <pre><code class="lang-Shell">npm ERR! code E403
 npm ERR! 403 403 Forbidden - PUT https://registry.npmjs.org/test-tool - You do not have permission to publish &quot;test-tool&quot;. Are you logged in as the correct user?
 npm ERR! 403 In most cases, you or one of your dependencies are requesting
@@ -1356,7 +1352,7 @@ npm ERR!     /home/jasonk0/.npm/_logs/2022-07-21T01_49_39_088Z-debug.log
 </li>
 </ol>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-26 21:50:34
+2022-07-21 17:38:20
 </span></footer>
                                 
                                 </section>
@@ -1400,7 +1396,7 @@ npm ERR!     /home/jasonk0/.npm/_logs/2022-07-21T01_49_39_088Z-debug.log
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"踩坑日记","level":"1.3.1","depth":2,"next":{"title":"预习资料","level":"1.3.2","depth":2,"path":"杂篇/预习资料.md","ref":"杂篇/预习资料.md","articles":[]},"previous":{"title":"杂篇","level":"1.3","depth":1,"path":"杂篇/README.md","ref":"杂篇/README.md","articles":[{"title":"踩坑日记","level":"1.3.1","depth":2,"path":"杂篇/踩坑日记.md","ref":"杂篇/踩坑日记.md","articles":[]},{"title":"预习资料","level":"1.3.2","depth":2,"path":"杂篇/预习资料.md","ref":"杂篇/预习资料.md","articles":[]},{"title":"直播","level":"1.3.3","depth":2,"path":"杂篇/直播.md","ref":"杂篇/直播.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"杂篇/踩坑日记.md","mtime":"2022-07-26T13:50:34.459Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"踩坑日记","level":"1.3.1","depth":2,"next":{"title":"预习资料","level":"1.3.2","depth":2,"path":"杂篇/预习资料.md","ref":"杂篇/预习资料.md","articles":[]},"previous":{"title":"杂篇","level":"1.3","depth":1,"path":"杂篇/README.md","ref":"杂篇/README.md","articles":[{"title":"踩坑日记","level":"1.3.1","depth":2,"path":"杂篇/踩坑日记.md","ref":"杂篇/踩坑日记.md","articles":[]},{"title":"预习资料","level":"1.3.2","depth":2,"path":"杂篇/预习资料.md","ref":"杂篇/预习资料.md","articles":[]},{"title":"直播","level":"1.3.3","depth":2,"path":"杂篇/直播.md","ref":"杂篇/直播.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"杂篇/踩坑日记.md","mtime":"2022-07-21T09:38:20.940Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1466,19 +1462,7 @@ npm ERR!     /home/jasonk0/.npm/_logs/2022-07-21T01_49_39_088Z-debug.log
         
     
         
-        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

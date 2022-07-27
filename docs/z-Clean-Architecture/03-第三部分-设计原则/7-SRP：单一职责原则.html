@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,7 +1190,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="chap7-srp-the-single-responsibility-principle-srp：单一职责原则">Chap7. SRP: THE SINGLE RESPONSIBILITY PRINCIPLE SRP：单一职责原则</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#chap7-srp-the-single-responsibility-principle-srp：单一职责原则"><b>1. </b>Chap7. SRP: THE SINGLE RESPONSIBILITY PRINCIPLE SRP：单一职责原则</a></li><ul><li><span class="title-icon "></span><a href="#symptom-1-accidental-duplication-反面案例-1：重复的假象"><b>1.1. </b>SYMPTOM 1: ACCIDENTAL DUPLICATION 反面案例 1：重复的假象</a></li><li><span class="title-icon "></span><a href="#symptom-2-merges-反面案例-2：代码合井"><b>1.2. </b>SYMPTOM 2: MERGES 反面案例 2：代码合井</a></li><li><span class="title-icon "></span><a href="#solutions-解决方案"><b>1.3. </b>SOLUTIONS 解决方案</a></li><li><span class="title-icon "></span><a href="#conclusion-本章小结"><b>1.4. </b>CONCLUSION 本章小结</a></li></ul></ul></div><a href="#chap7-srp-the-single-responsibility-principle-srp：单一职责原则" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="chap7-srp-the-single-responsibility-principle-srp：单一职责原则"><a name="chap7-srp-the-single-responsibility-principle-srp：单一职责原则" class="anchor-navigation-ex-anchor" href="#chap7-srp-the-single-responsibility-principle-srp：单一职责原则"><i class="fa fa-link" aria-hidden="true"></i></a>1. Chap7. SRP: THE SINGLE RESPONSIBILITY PRINCIPLE SRP：单一职责原则</h1>
 <p><img src="../un/CH-UN07.jpg" alt></p>
 <p>Of all the SOLID principles, the Single Responsibility Principle (SRP) might be the least well understood. That’s likely because it has a particularly inappropriate name. It is too easy for programmers to hear the name and then assume that it means that every module should do just one thing.</p>
 <blockquote>
@@ -1244,7 +1240,7 @@
 <blockquote>
 <p>或许，理解这个设计原则最好的办法就是计大家来看一些反面案例。</p>
 </blockquote>
-<h2 id="symptom-1-accidental-duplication-反面案例-1：重复的假象">SYMPTOM 1: ACCIDENTAL DUPLICATION 反面案例 1：重复的假象</h2>
+<h2 id="symptom-1-accidental-duplication-反面案例-1：重复的假象"><a name="symptom-1-accidental-duplication-反面案例-1：重复的假象" class="anchor-navigation-ex-anchor" href="#symptom-1-accidental-duplication-反面案例-1：重复的假象"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. SYMPTOM 1: ACCIDENTAL DUPLICATION 反面案例 1：重复的假象</h2>
 <p>My favorite example is the Employee class from a payroll application. It has three methods: calculatePay(), reportHours(), and save() (Figure 7.1).</p>
 <blockquote>
 <p>这是我最喜欢举的一个例子：某个工资管理程序中的 Employee 类有三个函数 calculatePay()、reportHours() 和 save()（见图 7.1）。</p>
@@ -1298,7 +1294,7 @@
 <blockquote>
 <p>与此类似的事情我们肯定多多少少都经历过。这类问题发生的根源就是因为我们将不同行为者所依赖的代码强凑到了一起。对此，SRP 强调这类代码一定要被分开。</p>
 </blockquote>
-<h2 id="symptom-2-merges-反面案例-2：代码合井">SYMPTOM 2: MERGES 反面案例 2：代码合井</h2>
+<h2 id="symptom-2-merges-反面案例-2：代码合井"><a name="symptom-2-merges-反面案例-2：代码合井" class="anchor-navigation-ex-anchor" href="#symptom-2-merges-反面案例-2：代码合井"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. SYMPTOM 2: MERGES 反面案例 2：代码合井</h2>
 <p>It’s not hard to imagine that merges will be common in source files that contain many different methods. This situation is especially likely if those methods are responsible to different actors.</p>
 <blockquote>
 <p>一个拥有很多函数的源代码文件必然会经历很多次代码合并，该文件中的这些函数分别服务不同行为者的情况就更常见了。</p>
@@ -1324,7 +1320,7 @@
 <blockquote>
 <p>而避免这种问题产生的方法就是将服务不同行为者的代码进行切分。</p>
 </blockquote>
-<h2 id="solutions-解决方案">SOLUTIONS 解决方案</h2>
+<h2 id="solutions-解决方案"><a name="solutions-解决方案" class="anchor-navigation-ex-anchor" href="#solutions-解决方案"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. SOLUTIONS 解决方案</h2>
 <p>There are many different solutions to this problem. Each moves the functions into different classes.</p>
 <blockquote>
 <p>我们有很多不同的方法可以用来解决上面的问题，每一种方法都需要将相关的函数划分成不同的类。</p>
@@ -1359,13 +1355,13 @@
 <blockquote>
 <p>总而言之，上面的每一个类都分别容纳了一组作用于相同作用域的函数，而在该作用域之外，它们各自的私有函数是互相不可见的。</p>
 </blockquote>
-<h2 id="conclusion-本章小结">CONCLUSION 本章小结</h2>
+<h2 id="conclusion-本章小结"><a name="conclusion-本章小结" class="anchor-navigation-ex-anchor" href="#conclusion-本章小结"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. CONCLUSION 本章小结</h2>
 <p>The Single Responsibility Principle is about functions and classes—but it reappears in a different form at two more levels. At the level of components, it becomes the Common Closure Principle. At the architectural level, it becomes the Axis of Change responsible for the creation of Architectural Boundaries. We’ll be studying all of these ideas in the chapters to come.</p>
 <blockquote>
 <p>单一职责原则主要讨论的是函数和类之间的关系——但是它在两个讨论层面上会以不同的形式出现。在组件层面，我们可以将其称为共同闭包原则（Common Closure Principle)，在软件架构层面，它则是用于奠定架构边界的变更轴心（Axis of Change）。我们在接下来的章节中会深入学习这些原则。</p>
 </blockquote>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-26 21:50:34
+2022-07-26 15:54:49
 </span></footer>
                                 
                                 </section>
@@ -1409,7 +1405,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"SRP：单一职责原则","level":"1.9.3.1","depth":3,"next":{"title":"OCP：开闭原则","level":"1.9.3.2","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/8-OCP：开闭原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/8-OCP：开闭原则.md","articles":[]},"previous":{"title":"第三部分-设计原则","level":"1.9.3","depth":2,"path":"z-Clean-Architecture/03-第三部分-设计原则/README.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/README.md","articles":[{"title":"SRP：单一职责原则","level":"1.9.3.1","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/7-SRP：单一职责原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/7-SRP：单一职责原则.md","articles":[]},{"title":"OCP：开闭原则","level":"1.9.3.2","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/8-OCP：开闭原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/8-OCP：开闭原则.md","articles":[]},{"title":"LSP：里氏替换原则","level":"1.9.3.3","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/9-LSP：里氏替换原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/9-LSP：里氏替换原则.md","articles":[]},{"title":"ISP：接口隔离原则","level":"1.9.3.4","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/10-ISP：接口隔离原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/10-ISP：接口隔离原则.md","articles":[]},{"title":"DIP：依赖反转原则","level":"1.9.3.5","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/11-DIP：依赖反转原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/11-DIP：依赖反转原则.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/03-第三部分-设计原则/7-SRP：单一职责原则.md","mtime":"2022-07-26T13:50:34.428Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SRP：单一职责原则","level":"1.9.3.1","depth":3,"next":{"title":"OCP：开闭原则","level":"1.9.3.2","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/8-OCP：开闭原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/8-OCP：开闭原则.md","articles":[]},"previous":{"title":"第三部分-设计原则","level":"1.9.3","depth":2,"path":"z-Clean-Architecture/03-第三部分-设计原则/README.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/README.md","articles":[{"title":"SRP：单一职责原则","level":"1.9.3.1","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/7-SRP：单一职责原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/7-SRP：单一职责原则.md","articles":[]},{"title":"OCP：开闭原则","level":"1.9.3.2","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/8-OCP：开闭原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/8-OCP：开闭原则.md","articles":[]},{"title":"LSP：里氏替换原则","level":"1.9.3.3","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/9-LSP：里氏替换原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/9-LSP：里氏替换原则.md","articles":[]},{"title":"ISP：接口隔离原则","level":"1.9.3.4","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/10-ISP：接口隔离原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/10-ISP：接口隔离原则.md","articles":[]},{"title":"DIP：依赖反转原则","level":"1.9.3.5","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/11-DIP：依赖反转原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/11-DIP：依赖反转原则.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/03-第三部分-设计原则/7-SRP：单一职责原则.md","mtime":"2022-07-26T07:54:49.795Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1475,19 +1471,7 @@
         
     
         
-        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

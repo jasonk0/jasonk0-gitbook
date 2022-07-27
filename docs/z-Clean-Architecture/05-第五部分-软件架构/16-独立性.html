@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,7 +1190,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="chap16-independence-独立性">Chap16. INDEPENDENCE 独立性</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#chap16-independence-独立性"><b>1. </b>Chap16. INDEPENDENCE 独立性</a></li><ul><li><span class="title-icon "></span><a href="#use-cases-用例"><b>1.1. </b>USE CASES 用例</a></li><li><span class="title-icon "></span><a href="#operation-运行"><b>1.2. </b>OPERATION 运行</a></li><li><span class="title-icon "></span><a href="#development-开发"><b>1.3. </b>DEVELOPMENT 开发</a></li><li><span class="title-icon "></span><a href="#deployment-部署"><b>1.4. </b>DEPLOYMENT 部署</a></li><li><span class="title-icon "></span><a href="#leaving-options-open-保留可选项"><b>1.5. </b>LEAVING OPTIONS OPEN 保留可选项</a></li><li><span class="title-icon "></span><a href="#decoupling-layers-按层解耦"><b>1.6. </b>DECOUPLING LAYERS 按层解耦</a></li><li><span class="title-icon "></span><a href="#decoupling-use-cases-用例的解耦"><b>1.7. </b>DECOUPLING USE CASES 用例的解耦</a></li><li><span class="title-icon "></span><a href="#decoupling-mode-解耦的模式"><b>1.8. </b>DECOUPLING MODE 解耦的模式</a></li><li><span class="title-icon "></span><a href="#independent-develop-ability-开发的独立性"><b>1.9. </b>INDEPENDENT DEVELOP-ABILITY 开发的独立性</a></li><li><span class="title-icon "></span><a href="#independent-deployability-部署的独立性"><b>1.10. </b>INDEPENDENT DEPLOYABILITY 部署的独立性</a></li><li><span class="title-icon "></span><a href="#duplication-重复"><b>1.11. </b>DUPLICATION 重复</a></li><li><span class="title-icon "></span><a href="#decoupling-modes-again-再谈解耦模式"><b>1.12. </b>DECOUPLING MODES (AGAIN) 再谈解耦模式</a></li><li><span class="title-icon "></span><a href="#conclusion-本章小结"><b>1.13. </b>CONCLUSION 本章小结</a></li></ul></ul></div><a href="#chap16-independence-独立性" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="chap16-independence-独立性"><a name="chap16-independence-独立性" class="anchor-navigation-ex-anchor" href="#chap16-independence-独立性"><i class="fa fa-link" aria-hidden="true"></i></a>1. Chap16. INDEPENDENCE 独立性</h1>
 <p><img src="../un/CH-UN16.jpg" alt></p>
 <p>As we previously stated, a good architecture must support:</p>
 <blockquote>
@@ -1215,7 +1211,7 @@
 <li>系统的部署。</li>
 </ul>
 </blockquote>
-<h2 id="use-cases-用例">USE CASES 用例</h2>
+<h2 id="use-cases-用例"><a name="use-cases-用例" class="anchor-navigation-ex-anchor" href="#use-cases-用例"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. USE CASES 用例</h2>
 <p>The first bullet—use cases—means that the architecture of the system must support the intent of the system. If the system is a shopping cart application, then the architecture must support shopping cart use cases. Indeed, this is the first concern of the architect, and the first priority of the architecture. The architecture must support the use cases.</p>
 <blockquote>
 <p>我们先来看第一个支持目标：用例。我们认为一个系统的架构必须能够支持其自身的设计意图。也就是说，如果某系统是一个购物车应用，那么该系统的架构就必须非常直观地支持这类应用可能会涉及的所有用例。事实上，这本来就是架构师们首先要关注的问题，也是架构设计过程中的首要工作。软件的架构必须为其用例提供支持。</p>
@@ -1232,7 +1228,7 @@
 <blockquote>
 <p>在第 21 章“尖叫的软件架构”中，我们还会更详细地解释这部分内容。</p>
 </blockquote>
-<h2 id="operation-运行">OPERATION 运行</h2>
+<h2 id="operation-运行"><a name="operation-运行" class="anchor-navigation-ex-anchor" href="#operation-运行"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. OPERATION 运行</h2>
 <p>Architecture plays a more substantial, and less cosmetic, role in supporting the operation of the system. If the system must handle 100,000 customers per second, the architecture must support that kind of throughput and response time for each use case that demands it. If the system must query big data cubes in milliseconds, then the architecture must be structured to allow this kind of operation.</p>
 <blockquote>
 <p>架构在支持系统运行方面扮演着更实际的角色。如果某个系统每秒要处理 100 000 个用户，该系统的架构就必须能支持这种级别的吞吐量和响应时间。同样的，如果某个系统要在毫秒级的时间内完成对大数据仓库的查询，那么该系统的架构也必须能支持这类操作。</p>
@@ -1245,7 +1241,7 @@
 <blockquote>
 <p>虽然看起来有点奇怪，但上述问题的决策的确也应该属于一个优秀的架构师为我们保留的可选项之一。毕竟一个按照单体模式编写的系统，它依赖的必然是单体结构，之后再想把它改造成多进程、多线程或微服务模式可就没有那么容易了。相比之下，如果该系统的架构能够在其组件之间做一些适当的隔离，同时不强制规定组件之间的交互方式，该系统就可以随时根据不断变化的运行需求来转换成各种运行时的线程、进程或服务模型。</p>
 </blockquote>
-<h2 id="development-开发">DEVELOPMENT 开发</h2>
+<h2 id="development-开发"><a name="development-开发" class="anchor-navigation-ex-anchor" href="#development-开发"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. DEVELOPMENT 开发</h2>
 <p>Architecture plays a significant role in supporting the development environment. This is where Conway’s law comes into play. Conway’s law says:</p>
 <blockquote>
 <p>系统的架构在支持开发环境方面当然扮演着重要的角色，我们在这里可以引述一下康威定律：</p>
@@ -1258,7 +1254,7 @@
 <blockquote>
 <p>一个由多个不同目标的团队协作开发的系统必须具有相应的软件架构。这样，这些团队才可以各自独立地完成工作，不会彼此干扰。这就需要恰当地将系统切分为一系列隔离良好、可独立开发的组件。然后才能将这些组件分配给不同的团队各自独立开发。</p>
 </blockquote>
-<h2 id="deployment-部署">DEPLOYMENT 部署</h2>
+<h2 id="deployment-部署"><a name="deployment-部署" class="anchor-navigation-ex-anchor" href="#deployment-部署"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. DEPLOYMENT 部署</h2>
 <p>The architecture also plays a huge role in determining the ease with which the system is deployed. The goal is “immediate deployment.” A good architecture does not rely on dozens of little configuration scripts and property file tweaks. It does not require manual creation of directories or files that must be arranged just so. A good architecture helps the system to be immediately deployable after build.</p>
 <blockquote>
 <p>一个系统的架构在其部署的便捷性方面起到的作用也是非常大的。设计目标一定是实现“立刻部署”。一个设计良好的架构通常不会依赖于成堆的脚本与配置文件，也不需要用户手动创建一堆“有严格要求”的目录与文件。总而言之，一个设计良好的软件架构可以让系统在构建完成之后立刻就能部署。</p>
@@ -1267,7 +1263,7 @@
 <blockquote>
 <p>同样的，这些也需要通过正确地划分、隔离系统组件来实现，这其中包括开发一些主组件，让它们将整个系统黏合在一起，正确地启动、连接并监控每个组件。</p>
 </blockquote>
-<h2 id="leaving-options-open-保留可选项">LEAVING OPTIONS OPEN 保留可选项</h2>
+<h2 id="leaving-options-open-保留可选项"><a name="leaving-options-open-保留可选项" class="anchor-navigation-ex-anchor" href="#leaving-options-open-保留可选项"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. LEAVING OPTIONS OPEN 保留可选项</h2>
 <p>A good architecture balances all of these concerns with a component structure that mutually satisfies them all. Sounds easy, right? Well, it’s easy for me to write that.</p>
 <blockquote>
 <p>一个设计良好的架构应该充分地权衡以上所述的所有关注点，然后尽可能塔成一个可以同时满足所有需求的组件结构。这说起来还挺容易的，不是吗？</p>
@@ -1284,7 +1280,7 @@
 <blockquote>
 <p>一个设计良好的架构应该通过保留可选项的方式，让系统在任何情况下都能方便地做出必要的变更。</p>
 </blockquote>
-<h2 id="decoupling-layers-按层解耦">DECOUPLING LAYERS 按层解耦</h2>
+<h2 id="decoupling-layers-按层解耦"><a name="decoupling-layers-按层解耦" class="anchor-navigation-ex-anchor" href="#decoupling-layers-按层解耦"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. DECOUPLING LAYERS 按层解耦</h2>
 <p>Consider the use cases. The architect wants the structure of the system to support all the necessary use cases, but does not know what all those use cases are. However, the architect does know the basic intent of the system. It’s a shopping cart system, or it’s a bill of materials system, or it’s an order processing system. So the architect can employ the Single Responsibility Principle and the Common Closure Principle to separate those things that change for different reasons, and to collect those things that change for the same reasons—given the context of the intent of the system.</p>
 <blockquote>
 <p>从用例的角度来看，架构师的目标是让系统结构支持其所需要的所有用例。但是问题恰恰是我们无法预知全部的用例。好在架构师应该还是知道整个系统的基本设计意图的。也就是说，架构师应该知道自己要设计的是一个购物车系统，或是运输清单系统，还是订单处理系统。所以架构师可以通过采用单一职责原则（SRP）和共同闭包原则（CCP），以及既定的系统设计意图来隔离那些变更原因不同的部分，集成变更原因相同的部分。</p>
@@ -1305,7 +1301,7 @@
 <blockquote>
 <p>这样一来，我们就发现了一个系统可以被解耦成若干个水平分层应用独有的业务逻辑、领域普适的业务逻辑、数据库等。</p>
 </blockquote>
-<h2 id="decoupling-use-cases-用例的解耦">DECOUPLING USE CASES 用例的解耦</h2>
+<h2 id="decoupling-use-cases-用例的解耦"><a name="decoupling-use-cases-用例的解耦" class="anchor-navigation-ex-anchor" href="#decoupling-use-cases-用例的解耦"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. DECOUPLING USE CASES 用例的解耦</h2>
 <p>What else changes for different reasons? The use cases themselves! The use case for adding an order to an order entry system almost certainly will change at a different rate, and for different reasons, than the use case that deletes an order from the system. Use cases are a very natural way to divide the system.</p>
 <blockquote>
 <p>接下来，还有什么不同的原因的变更呢？答案正是这些用例本身！譬如说，添加新订单的用例与删除订单的用例在发生变更的原因上几乎肯定是不同的，而且发生变更的速率也不同。因此，我们按照用例来切分系统是非常自然的选择。</p>
@@ -1322,7 +1318,7 @@
 <blockquote>
 <p>由此，我们可以总结出一个模式：如果我们按照变更原因的不同对系统进行解耦，就可以持续地向系统内添加新的用例，而不会影响旧有的用例。如果我们同时对支持这些用例的 UI 和数据库也进行了分组，那么每个用例使用的就是不同面向的 UI 与数据库，因此增加新用例就更不太可能会影响旧有的用例了。</p>
 </blockquote>
-<h2 id="decoupling-mode-解耦的模式">DECOUPLING MODE 解耦的模式</h2>
+<h2 id="decoupling-mode-解耦的模式"><a name="decoupling-mode-解耦的模式" class="anchor-navigation-ex-anchor" href="#decoupling-mode-解耦的模式"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. DECOUPLING MODE 解耦的模式</h2>
 <p>Now think of what all that decoupling means for the second bullet: operations. If the different aspects of the use cases are separated, then those that must run at a high throughput are likely already separated from those that must run at a low throughput. If the UI and the database have been separated from the business rules, then they can run in different servers. Those that require higher bandwidth can be replicated in many servers.</p>
 <blockquote>
 <p>现在我们来想想所有的这些解耦动作对架构设计的第二个目标——系统运行——究竟有什么意义。如果不同面向之间的用例得到了良好的隔离，那么需要高吞吐量的用例就和需要低吞吐量的用例互相自然分开了。如果 UI 和数据库的部分能从业务逻辑分离出来，那么它们就可以运行在不同的服务器上。而且需要较大带宽的应用也可以在多个服务器上运行多个实例。</p>
@@ -1347,7 +1343,7 @@
 <blockquote>
 <p>接下来，在我们继续深入探讨这个话题之前，先回过头来看看其他两个设计目标。</p>
 </blockquote>
-<h2 id="independent-develop-ability-开发的独立性">INDEPENDENT DEVELOP-ABILITY 开发的独立性</h2>
+<h2 id="independent-develop-ability-开发的独立性"><a name="independent-develop-ability-开发的独立性" class="anchor-navigation-ex-anchor" href="#independent-develop-ability-开发的独立性"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. INDEPENDENT DEVELOP-ABILITY 开发的独立性</h2>
 <p>The third bullet was development. Clearly when components are strongly decoupled, the interference between teams is mitigated. If the business rules don’t know about the UI, then a team that focuses on the UI cannot much affect a team that focuses on the business rules. If the use cases themselves are decoupled from one another, then a team that focuses on the addOrder use case is not likely to interfere with a team that focuses on the deleteOrder use case.</p>
 <blockquote>
 <p>我们进行架构设计的第三个目标是支持系统的开发。很显然，当系统组件之间被高度解耦之后，开发团队之间的干扰就大大减少了。譬如说，如果系统的业务逻辑与其 UI 无关，那么专注于 UI 开发的团队就不会对专注于业务逻辑开发的团队造成多大的影响。同样的，如果系统的各个用例之间相互隔离，那么专注于 addOrder 用例的团队就不太可能干扰到负责 deleteOrder 用例的团队。</p>
@@ -1356,12 +1352,12 @@
 <blockquote>
 <p>只要系统按照其水平分层和用例进行了恰当的解耦，整个系统的架构就可以支持多团队开发，不管团队组织形式是分功能开发、分组件开发、分层开发，还是按照别的什么变量分工都可以。</p>
 </blockquote>
-<h2 id="independent-deployability-部署的独立性">INDEPENDENT DEPLOYABILITY 部署的独立性</h2>
+<h2 id="independent-deployability-部署的独立性"><a name="independent-deployability-部署的独立性" class="anchor-navigation-ex-anchor" href="#independent-deployability-部署的独立性"><i class="fa fa-link" aria-hidden="true"></i></a>1.10. INDEPENDENT DEPLOYABILITY 部署的独立性</h2>
 <p>The decoupling of the use cases and layers also affords a high degree of flexibility in deployment. Indeed, if the decoupling is done well, then it should be possible to hot-swap layers and use cases in running systems. Adding a new use case could be as simple as adding a few new jar files or services to the system while leaving the rest alone.</p>
 <blockquote>
 <p>这种按用例和水平分层的解耦也会给系统的部署带来极大的灵活性。实际上，如果解耦工作做得好，我们甚至可以在系统运行过程中热切换（hot-swap）其各个分层实现和具体的用例。在这种情况下，我们增加新测试用例就只需要在系统中添加一些新的 jar 文件，或启动一些服务即可，其他部分将完全不受影响。</p>
 </blockquote>
-<h2 id="duplication-重复">DUPLICATION 重复</h2>
+<h2 id="duplication-重复"><a name="duplication-重复" class="anchor-navigation-ex-anchor" href="#duplication-重复"><i class="fa fa-link" aria-hidden="true"></i></a>1.11. DUPLICATION 重复</h2>
 <p>Architects often fall into a trap—a trap that hinges on their fear of duplication.</p>
 <blockquote>
 <p>架构师们经常会钻进一个牛角尖——害怕重复。</p>
@@ -1390,7 +1386,7 @@
 <blockquote>
 <p>同样的道理，当我们对系统进行水平分层时，也可能会发现某个数据库记录的结构和某个屏幕展示的数据接口非常相似。我们可能也会为了避免再创建一个看起来相同的视图模型并在两者之间复制元素，而选择直接将数据库记录传递给 UI 层。我们也一定要小心，这里几乎肯定只是一种表面性的重复。而且，另外创建一个视图模型并不会花费太多力气，这可以帮助我们保持系统水平分层之间的隔离。</p>
 </blockquote>
-<h2 id="decoupling-modes-again-再谈解耦模式">DECOUPLING MODES (AGAIN) 再谈解耦模式</h2>
+<h2 id="decoupling-modes-again-再谈解耦模式"><a name="decoupling-modes-again-再谈解耦模式" class="anchor-navigation-ex-anchor" href="#decoupling-modes-again-再谈解耦模式"><i class="fa fa-link" aria-hidden="true"></i></a>1.12. DECOUPLING MODES (AGAIN) 再谈解耦模式</h2>
 <p>Back to modes. There are many ways to decouple layers and use cases. They can be decoupled at the source code level, at the binary code (deployment) level, and at the execution unit (service) level.</p>
 <blockquote>
 <p>让我们再回到解耦模式的问题上来。按水平分层和用例解耦一个系统有很多种方式。例如，我们可以在源码层次上解耦、二进制层次上解耦（部署），也可以在执行单元层次上解耦（服务）。</p>
@@ -1471,13 +1467,13 @@
 <blockquote>
 <p>并且，一个设计良好的架构在上述过程中还应该能保护系统的大部分源码不受变更影响。对整个系统来说，解耦模式也应该是一个可选项。我们在进行大型部署时可以采用一种模式，而在进行小型部署时则可以釆用另一种模式。</p>
 </blockquote>
-<h2 id="conclusion-本章小结">CONCLUSION 本章小结</h2>
+<h2 id="conclusion-本章小结"><a name="conclusion-本章小结" class="anchor-navigation-ex-anchor" href="#conclusion-本章小结"><i class="fa fa-link" aria-hidden="true"></i></a>1.13. CONCLUSION 本章小结</h2>
 <p>Yes, this is tricky. And I’m not saying that the change of decoupling modes should be a trivial configuration option (though sometimes that is appropriate). What I’m saying is that the decoupling mode of a system is one of those things that is likely to change with time, and a good architect foresees and appropriately facilitates those changes.</p>
 <blockquote>
 <p>是的，要达到上述要求难度不小。我并没有说系统的部署模式就一定要是某种简单的配置项（虽然在某些情况下的确应该这样做）。这里的主要观点认为，一个系统所适用的解耦模式可能会随着时间而变化，优秀的架构师应该能预见这一点，并且做岀相应的对策。</p>
 </blockquote>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-26 21:50:34
+2022-07-26 15:54:49
 </span></footer>
                                 
                                 </section>
@@ -1521,7 +1517,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"独立性","level":"1.9.5.2","depth":3,"next":{"title":"划分边界","level":"1.9.5.3","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/17-划分边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/17-划分边界.md","articles":[]},"previous":{"title":"什么是软件架构","level":"1.9.5.1","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/15-什么是软件架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/15-什么是软件架构.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/05-第五部分-软件架构/16-独立性.md","mtime":"2022-07-26T13:50:34.434Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"独立性","level":"1.9.5.2","depth":3,"next":{"title":"划分边界","level":"1.9.5.3","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/17-划分边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/17-划分边界.md","articles":[]},"previous":{"title":"什么是软件架构","level":"1.9.5.1","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/15-什么是软件架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/15-什么是软件架构.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/05-第五部分-软件架构/16-独立性.md","mtime":"2022-07-26T07:54:49.795Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1587,19 +1583,7 @@
         
     
         
-        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

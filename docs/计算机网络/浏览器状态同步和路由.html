@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,18 +1190,18 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="浏览器状态同步和路由">浏览器状态同步和路由</h2>
-<h3 id="前端路由和服务端路由">前端路由和服务端路由</h3>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#浏览器状态同步和路由"><b>1.1. </b>浏览器状态同步和路由</a></li><ul><li><span class="title-icon "></span><a href="#前端路由和服务端路由"><b>1.1.1. </b>前端路由和服务端路由</a></li><li><span class="title-icon "></span><a href="#sessioncookiestate单点登录系统"><b>1.1.2. </b>Session&amp;Cookie&amp;State&amp;单点登录系统</a></li><li><span class="title-icon "></span><a href="#ssr和单页面应用"><b>1.1.3. </b>SSR和单页面应用</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="浏览器状态同步和路由"><a name="浏览器状态同步和路由" class="anchor-navigation-ex-anchor" href="#浏览器状态同步和路由"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. 浏览器状态同步和路由</h2>
+<h3 id="前端路由和服务端路由"><a name="前端路由和服务端路由" class="anchor-navigation-ex-anchor" href="#前端路由和服务端路由"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. 前端路由和服务端路由</h3>
 <blockquote>
 <p>工作日常、面试重点、前端架构</p>
 </blockquote>
-<h4 id="前端路由和history-api">前端路由和History API</h4>
+<h4 id="前端路由和history-api"><a name="前端路由和history-api" class="anchor-navigation-ex-anchor" href="#前端路由和history-api"><i class="fa fa-link" aria-hidden="true"></i></a>前端路由和History API</h4>
 <p>浏览文境（Browser Context）</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/浏览器上下文.png" alt="浏览器上下文"></p>
 <p>会话历史（Session History）</p>
 <p>会话栈是共享的，可以通过前进后退进行跳转。</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/会话栈.png" alt="Session-Stack"></p>
-<h5 id="history-api">History API</h5>
+<h5 id="history-api"><a name="history-api" class="anchor-navigation-ex-anchor" href="#history-api"><i class="fa fa-link" aria-hidden="true"></i></a>History API</h5>
 <p>操控浏览器会话历史，也就是控制History API</p>
 <p><code>history.go()</code></p>
 <p>1-前边的页面 <code>forward()</code></p>
@@ -1227,31 +1223,31 @@
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/replaceState(" alt="replaceState">.png)</p>
 <p>实战服务端路由</p>
 <p>实战前端路由（单页面应用）</p>
-<h3 id="sessioncookiestate单点登录系统">Session&amp;Cookie&amp;State&amp;单点登录系统</h3>
+<h3 id="sessioncookiestate单点登录系统"><a name="sessioncookiestate单点登录系统" class="anchor-navigation-ex-anchor" href="#sessioncookiestate单点登录系统"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. Session&amp;Cookie&amp;State&amp;单点登录系统</h3>
 <blockquote>
 <p>工作日常、面试重点、前端架构</p>
 </blockquote>
-<h4 id="seesion和storage">Seesion和Storage</h4>
+<h4 id="seesion和storage"><a name="seesion和storage" class="anchor-navigation-ex-anchor" href="#seesion和storage"><i class="fa fa-link" aria-hidden="true"></i></a>Seesion和Storage</h4>
 <p>Session代表一次会话</p>
 <p>SessionID是这一次会话的唯一标识，由服务端发送</p>
 <p>客户端接收到SessionID就是Cookie</p>
-<h5 id="登录场景">登录场景</h5>
+<h5 id="登录场景"><a name="登录场景" class="anchor-navigation-ex-anchor" href="#登录场景"><i class="fa fa-link" aria-hidden="true"></i></a>登录场景</h5>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/登录场景中的Session.png" alt="登录场景"></p>
 <blockquote>
 <p>在用户刚登录时是无状态的，发给服务端做验证，验证成功后就创建一个会话记录并发送SessionID，前端浏览器拿到之后用Cookie储存。</p>
 </blockquote>
-<h5 id="跨域场景中的set-cookie">跨域场景中的Set-Cookie</h5>
+<h5 id="跨域场景中的set-cookie"><a name="跨域场景中的set-cookie" class="anchor-navigation-ex-anchor" href="#跨域场景中的set-cookie"><i class="fa fa-link" aria-hidden="true"></i></a>跨域场景中的Set-Cookie</h5>
 <p>跨二级域</p>
 <p>如果需要带上Cookie需要额外设置一个Headers（Access-Control-Allow- Credentials）</p>
 <p>跨主域</p>
 <p><strong>一般很少做这样的事情</strong></p>
 <p>需要给Cookie设置额外的标识（SameSite=None;Secure...），不然Cookie传递不过去</p>
-<h5 id="cookie浏览器端存储">Cookie浏览器端存储</h5>
+<h5 id="cookie浏览器端存储"><a name="cookie浏览器端存储" class="anchor-navigation-ex-anchor" href="#cookie浏览器端存储"><i class="fa fa-link" aria-hidden="true"></i></a>Cookie浏览器端存储</h5>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/Cookie.png" alt="Cookie"></p>
 <p>localStorage写入时需要加try-catch，因为会出错。</p>
 <p>SessionStorage只在这次会话中有用。</p>
 <p>Storage可以用来在单页面应用中传参，数据共享</p>
-<h4 id="token">Token</h4>
+<h4 id="token"><a name="token" class="anchor-navigation-ex-anchor" href="#token"><i class="fa fa-link" aria-hidden="true"></i></a>Token</h4>
 <p>Oauth协议：</p>
 <p>用户在互联网获取资源的开放（委托形式）授权标准</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/Oauth协议.png" alt="Oauth"></p>
@@ -1260,7 +1256,7 @@
 <p>第三方应用去腾讯拿用户的资源，本质上第三方应用是去找用户拿资源的，但是用户把资源委托给了腾讯，腾讯在检查第三方应用具有获取用户资源的权限后，就会代用户下发给第三方应用许可。</p>
 <p>第三方应用拿到许可就会去授权服务器拿令牌。</p>
 <p>拿到令牌之后，再去资源服务器拿资源。</p>
-<h5 id="摘要算法">摘要算法</h5>
+<h5 id="摘要算法"><a name="摘要算法" class="anchor-navigation-ex-anchor" href="#摘要算法"><i class="fa fa-link" aria-hidden="true"></i></a>摘要算法</h5>
 <p>将数据运算成一段不可逆的唯一摘要</p>
 <p>不重复，不可逆。</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/摘要算法.png" alt="摘要算法"></p>
@@ -1268,29 +1264,29 @@
 <p>如何确保Token唯一：</p>
 <p>通过随机数，散列算法<code>sha(client_id + rnd + timestamp)</code>，查重。</p>
 <p>id+随机数+时间戳</p>
-<h4 id="单点登录系统">单点登录系统</h4>
+<h4 id="单点登录系统"><a name="单点登录系统" class="anchor-navigation-ex-anchor" href="#单点登录系统"><i class="fa fa-link" aria-hidden="true"></i></a>单点登录系统</h4>
 <p>SSO为单点登录平台，比如微信、Github</p>
 <p>也就是业务整合</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/单点登录.png" alt="单点登录"></p>
 <p>通过Oauth实现SSO</p>
 <p>Oauth服务器就是将资源所有者和授权服务器绑定在一起，比如腾讯。</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/Oauth-with-SSO.png" alt="Oauth-SSO"></p>
-<h3 id="ssr和单页面应用">SSR和单页面应用</h3>
+<h3 id="ssr和单页面应用"><a name="ssr和单页面应用" class="anchor-navigation-ex-anchor" href="#ssr和单页面应用"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. SSR和单页面应用</h3>
 <blockquote>
 <p>工作日常、面试重点、前端架构</p>
 </blockquote>
-<h4 id="单页面应用（single-page-application）">单页面应用（Single Page Application）</h4>
+<h4 id="单页面应用（single-page-application）"><a name="单页面应用（single-page-application）" class="anchor-navigation-ex-anchor" href="#单页面应用（single-page-application）"><i class="fa fa-link" aria-hidden="true"></i></a>单页面应用（Single Page Application）</h4>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/SPA的优点.png" alt="SPA优点"></p>
 <p>用户体验：更加流畅、想用更快，浏览器不会重新加载刷新</p>
 <p>架构方面：更容易组件化，前后端分离，前端更容易数据驱动。</p>
 <p>生态方面：BaaS/FaaS（只把服务器当作一个服务），服务端渲染。</p>
 <p>性能&amp;安全：节省IO，性能有很大的提升；组件化做好之后，容错率会更高。</p>
-<h5 id="缺点">缺点</h5>
+<h5 id="缺点"><a name="缺点" class="anchor-navigation-ex-anchor" href="#缺点"><i class="fa fa-link" aria-hidden="true"></i></a>缺点</h5>
 <p>CPU开销大（组件vs时间）：都使用js渲染页面，浏览器CPU开销会比较大</p>
 <p>流量开销大（一次加载多张页面）：首次进入需要请求多个组件和页面。其实流量不太重要。</p>
 <p>需要好的系统架构：单页面应用需要一个好的架构设计</p>
 <p>搜索引擎不友好：搜索引擎是看不到页面内容的。</p>
-<h4 id="服务端渲染（server-side-rendering）">服务端渲染（Server Side Rendering）</h4>
+<h4 id="服务端渲染（server-side-rendering）"><a name="服务端渲染（server-side-rendering）" class="anchor-navigation-ex-anchor" href="#服务端渲染（server-side-rendering）"><i class="fa fa-link" aria-hidden="true"></i></a>服务端渲染（Server Side Rendering）</h4>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/服务端渲染.png" alt="服务端渲染"></p>
 <p>服务端渲染是没法加事件的，需要客户端重建并加上事件</p>
 <p>SSR：服务端渲染函数。</p>
@@ -1310,7 +1306,7 @@
 <p>内网数据组装，是服务端渲染，在内网将组件组装成一个页面再返回给客户端，这样子客户端只请求了一次，减少了请求次数，速度提升是极快的</p>
 <p>服务端渲染的话，相对于SPA的SEO是一种解决方案，爬虫是可以拿到部分页面而不是空页面。</p>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-20 10:55:44
+2022-07-21 08:53:32
 </span></footer>
                                 
                                 </section>
@@ -1354,7 +1350,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"浏览器状态同步和路由","level":"1.2.2","depth":2,"next":{"title":"网络安全攻防","level":"1.2.3","depth":2,"path":"计算机网络/网络安全攻防.md","ref":"计算机网络/网络安全攻防.md","articles":[]},"previous":{"title":"工具链和其他","level":"1.2.1","depth":2,"path":"计算机网络/工具链和其他.md","ref":"计算机网络/工具链和其他.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"计算机网络/浏览器状态同步和路由.md","mtime":"2022-07-20T02:55:44.668Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"浏览器状态同步和路由","level":"1.2.2","depth":2,"next":{"title":"网络安全攻防","level":"1.2.3","depth":2,"path":"计算机网络/网络安全攻防.md","ref":"计算机网络/网络安全攻防.md","articles":[]},"previous":{"title":"工具链和其他","level":"1.2.1","depth":2,"path":"计算机网络/工具链和其他.md","ref":"计算机网络/工具链和其他.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"计算机网络/浏览器状态同步和路由.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1420,19 +1416,7 @@
         
     
         
-        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

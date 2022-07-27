@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,16 +1190,16 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>[TOC]</p>
-<h2 id="javascript进阶">javascript进阶</h2>
-<h3 id="高阶函数函数抽象">高阶函数&amp;函数抽象</h3>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#javascript进阶"><b>1.1. </b>javascript进阶</a></li><ul><li><span class="title-icon "></span><a href="#高阶函数函数抽象"><b>1.1.1. </b>高阶函数&amp;函数抽象</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p>[TOC]</p>
+<h2 id="javascript进阶"><a name="javascript进阶" class="anchor-navigation-ex-anchor" href="#javascript进阶"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. javascript进阶</h2>
+<h3 id="高阶函数函数抽象"><a name="高阶函数函数抽象" class="anchor-navigation-ex-anchor" href="#高阶函数函数抽象"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. 高阶函数&amp;函数抽象</h3>
 <p>js的一些本质</p>
 <blockquote>
 <p>js中引用类型的值是按<strong>引用访问</strong>的</p>
 <p>js始终是<strong>单线程</strong>的，不同的语句块是以队列的形式排列在EventLoop中按顺序执行的</p>
 </blockquote>
-<h4 id="内存管理">内存管理</h4>
-<h5 id="管理内存的意义">管理内存的意义</h5>
+<h4 id="内存管理"><a name="内存管理" class="anchor-navigation-ex-anchor" href="#内存管理"><i class="fa fa-link" aria-hidden="true"></i></a>内存管理</h4>
+<h5 id="管理内存的意义"><a name="管理内存的意义" class="anchor-navigation-ex-anchor" href="#管理内存的意义"><i class="fa fa-link" aria-hidden="true"></i></a>管理内存的意义</h5>
 <blockquote>
 <ul>
 <li>减少浏览器负担</li>
@@ -1214,9 +1210,9 @@
 </ul>
 <p>内存如果不够，服务就会中断，而nodejs开启的服务，如果不管理内存，就会中断</p>
 </blockquote>
-<h5 id="堆和栈">堆和栈</h5>
+<h5 id="堆和栈"><a name="堆和栈" class="anchor-navigation-ex-anchor" href="#堆和栈"><i class="fa fa-link" aria-hidden="true"></i></a>堆和栈</h5>
 <p><strong>普通类型</strong>是通过栈储存；<strong>引用类型</strong>是通过堆储存，再由栈存储<strong>引用</strong></p>
-<h5 id="v8引擎">v8引擎</h5>
+<h5 id="v8引擎"><a name="v8引擎" class="anchor-navigation-ex-anchor" href="#v8引擎"><i class="fa fa-link" aria-hidden="true"></i></a>v8引擎</h5>
 <ul>
 <li>64位下是1.4g，32位下是700mb</li>
 </ul>
@@ -1268,23 +1264,23 @@
     arrayBuffers:<span class="hljs-number">111</span>
   }
 </code></pre>
-<h5 id="优化内存">优化内存</h5>
+<h5 id="优化内存"><a name="优化内存" class="anchor-navigation-ex-anchor" href="#优化内存"><i class="fa fa-link" aria-hidden="true"></i></a>优化内存</h5>
 <ol>
 <li>尽量不要定义全局，定义了要及时手动释放</li>
 <li>注意闭包（闭包其实是局部引用）</li>
 <li>限制数组长度</li>
 </ol>
-<h5 id="node的特殊点">node的特殊点</h5>
+<h5 id="node的特殊点"><a name="node的特殊点" class="anchor-navigation-ex-anchor" href="#node的特殊点"><i class="fa fa-link" aria-hidden="true"></i></a>node的特殊点</h5>
 <p>node可以手动触发垃圾回收 <code>global.gc</code></p>
 <p>node可以设置内存限制<code>--max-old-space-size=1000</code>和<code>--max-new-space-size=1000</code></p>
-<h5 id="为什么v8为14">为什么v8为1.4</h5>
+<h5 id="为什么v8为14"><a name="为什么v8为14" class="anchor-navigation-ex-anchor" href="#为什么v8为14"><i class="fa fa-link" aria-hidden="true"></i></a>为什么v8为1.4</h5>
 <ol>
 <li>1.4g对于浏览器脚本是够用的</li>
 <li>垃圾回收的时候是阻塞式的，在回收的时候会中断代码的执行；如果内存越大，垃圾回收耗时也会更久。</li>
 </ol>
 <hr>
-<h4 id="代码性能指标">代码性能指标</h4>
-<h5 id="健壮性">健壮性</h5>
+<h4 id="代码性能指标"><a name="代码性能指标" class="anchor-navigation-ex-anchor" href="#代码性能指标"><i class="fa fa-link" aria-hidden="true"></i></a>代码性能指标</h4>
+<h5 id="健壮性"><a name="健壮性" class="anchor-navigation-ex-anchor" href="#健壮性"><i class="fa fa-link" aria-hidden="true"></i></a>健壮性</h5>
 <blockquote>
 <p> 健壮性就是代码抗击风险的能力</p>
 </blockquote>
@@ -1338,7 +1334,7 @@
 </ul>
 </li>
 </ul>
-<h5 id="可读性">可读性</h5>
+<h5 id="可读性"><a name="可读性" class="anchor-navigation-ex-anchor" href="#可读性"><i class="fa fa-link" aria-hidden="true"></i></a>可读性</h5>
 <ul>
 <li><p>优化丑陋的结构</p>
 <ol>
@@ -1359,7 +1355,7 @@
 <li><p>良好的注释</p>
 </li>
 </ul>
-<h5 id="可复用性">可复用性</h5>
+<h5 id="可复用性"><a name="可复用性" class="anchor-navigation-ex-anchor" href="#可复用性"><i class="fa fa-link" aria-hidden="true"></i></a>可复用性</h5>
 <ul>
 <li><p>重复的操作不用写第二遍</p>
 </li>
@@ -1375,7 +1371,7 @@
 <li><p>低耦合，高内聚，模块遵循如此原则</p>
 </li>
 </ul>
-<h5 id="可扩展性">可扩展性</h5>
+<h5 id="可扩展性"><a name="可扩展性" class="anchor-navigation-ex-anchor" href="#可扩展性"><i class="fa fa-link" aria-hidden="true"></i></a>可扩展性</h5>
 <p>增加新需求，不用变动现有的结构</p>
 <p>增加新功能，只需要写新功能就好</p>
 <p><strong>做法</strong> （具体参考设计模式）</p>
@@ -1384,9 +1380,9 @@
 <p>良好的模块组织，只有消息交流</p>
 <p>良好的扩展方案</p>
 <hr>
-<h4 id="函数式编程">函数式编程</h4>
+<h4 id="函数式编程"><a name="函数式编程" class="anchor-navigation-ex-anchor" href="#函数式编程"><i class="fa fa-link" aria-hidden="true"></i></a>函数式编程</h4>
 <p>常见的编程规范有：面向过程、面向对象、函数式编程</p>
-<h5 id="什么时候使用函数式编程">什么时候使用函数式编程</h5>
+<h5 id="什么时候使用函数式编程"><a name="什么时候使用函数式编程" class="anchor-navigation-ex-anchor" href="#什么时候使用函数式编程"><i class="fa fa-link" aria-hidden="true"></i></a>什么时候使用函数式编程</h5>
 <p>写一些工具库，或者第三方库</p>
 <p>要是纯函数，不与实际业务耦合</p>
 <p>工具库：（underscore）</p>
@@ -1395,7 +1391,7 @@
 <li>一些常见的数据操作</li>
 <li>一些业务面常见操作（比如请求后端api）</li>
 </ul>
-<h5 id="为什么要用函数式编程">为什么要用函数式编程</h5>
+<h5 id="为什么要用函数式编程"><a name="为什么要用函数式编程" class="anchor-navigation-ex-anchor" href="#为什么要用函数式编程"><i class="fa fa-link" aria-hidden="true"></i></a>为什么要用函数式编程</h5>
 <p>能提高复用性和可扩展性</p>
 <blockquote>
 <p>每一个函数就是一块积木，我们能随时拼入新的积木，随时能够去除积木去复用</p>
@@ -1405,9 +1401,9 @@
 <p>什么是Tree-shaking？</p>
 <p>在打包时，（通过查找文档流）把没有用到的方法给去掉</p>
 </blockquote>
-<h5 id="函数式编程的缺点">函数式编程的缺点</h5>
+<h5 id="函数式编程的缺点"><a name="函数式编程的缺点" class="anchor-navigation-ex-anchor" href="#函数式编程的缺点"><i class="fa fa-link" aria-hidden="true"></i></a>函数式编程的缺点</h5>
 <p>逻辑性差，过多的函数难以管理，在处理业务逻辑的时候还是面向对象更好一点。</p>
-<h5 id="如何写好函数式编程">如何写好函数式编程</h5>
+<h5 id="如何写好函数式编程"><a name="如何写好函数式编程" class="anchor-navigation-ex-anchor" href="#如何写好函数式编程"><i class="fa fa-link" aria-hidden="true"></i></a>如何写好函数式编程</h5>
 <p>函数要求</p>
 <ul>
 <li><p>保证纯函数</p>
@@ -1424,7 +1420,7 @@
 <p>引用类型消除函数副作用（通过浅拷贝）</p>
 <p>对象通过<code>Object.create()</code></p>
 <p>数组通过<code>[...arr]</code></p>
-<h5 id="工程化下的函数式编程">工程化下的函数式编程</h5>
+<h5 id="工程化下的函数式编程"><a name="工程化下的函数式编程" class="anchor-navigation-ex-anchor" href="#工程化下的函数式编程"><i class="fa fa-link" aria-hidden="true"></i></a>工程化下的函数式编程</h5>
 <p>(为了更好的配合Tree-shaking)</p>
 <pre><code class="lang-javascript">    <span class="hljs-comment">//es6</span>
     <span class="hljs-comment">// 导出</span>
@@ -1445,7 +1441,7 @@
   <span class="hljs-keyword">const</span> f1 = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;./model.js&quot;</span>).f1
 </code></pre>
 <hr>
-<h4 id="compose和pipe">compose和pipe</h4>
+<h4 id="compose和pipe"><a name="compose和pipe" class="anchor-navigation-ex-anchor" href="#compose和pipe"><i class="fa fa-link" aria-hidden="true"></i></a>compose和pipe</h4>
 <p>为什么需要compose和pipe</p>
 <ul>
 <li><p>值的传递写起来不方便</p>
@@ -1481,11 +1477,11 @@
 <pre><code class="lang-javascript">    <span class="hljs-built_in">Promise</span>.resolve(<span class="hljs-number">10</span>).then(multi1).then(add2).then(other).then(<span class="hljs-function">(<span class="hljs-params">res</span>)=&gt;</span> <span class="hljs-built_in">console</span>.log(res))
 </code></pre>
 <hr>
-<h4 id="高阶函数">高阶函数</h4>
+<h4 id="高阶函数"><a name="高阶函数" class="anchor-navigation-ex-anchor" href="#高阶函数"><i class="fa fa-link" aria-hidden="true"></i></a>高阶函数</h4>
 <blockquote>
 <p>如果一个函数接受另一个函数作为参数， 那么我们称该函数为高阶函数</p>
 </blockquote>
-<h5 id="常见的高阶函数"><strong>常见的高阶函数</strong></h5>
+<h5 id="常见的高阶函数"><a name="常见的高阶函数" class="anchor-navigation-ex-anchor" href="#常见的高阶函数"><i class="fa fa-link" aria-hidden="true"></i></a><strong>常见的高阶函数</strong></h5>
 <ul>
 <li>forEach和Maps</li>
 </ul>
@@ -1555,7 +1551,7 @@
   <span class="hljs-keyword">return</span> res
 }
 </code></pre>
-<h5 id="自己的高阶函数"><strong>自己的高阶函数</strong></h5>
+<h5 id="自己的高阶函数"><a name="自己的高阶函数" class="anchor-navigation-ex-anchor" href="#自己的高阶函数"><i class="fa fa-link" aria-hidden="true"></i></a><strong>自己的高阶函数</strong></h5>
 <ul>
 <li>保持纯函数，减少函数副作用</li>
 <li>调用选择call还是apply（确定参数使用call，不确定使用apply）</li>
@@ -1568,7 +1564,7 @@
 }
 </code></pre>
 <hr>
-<h4 id="函数柯里化">函数柯里化</h4>
+<h4 id="函数柯里化"><a name="函数柯里化" class="anchor-navigation-ex-anchor" href="#函数柯里化"><i class="fa fa-link" aria-hidden="true"></i></a>函数柯里化</h4>
 <blockquote>
 <p>定义：把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受剩余参数而且返回结果的新函数的技术</p>
 </blockquote>
@@ -1590,8 +1586,8 @@
 }
 </code></pre>
 <hr>
-<h4 id="防抖与节流">防抖与节流</h4>
-<h5 id="防抖">防抖</h5>
+<h4 id="防抖与节流"><a name="防抖与节流" class="anchor-navigation-ex-anchor" href="#防抖与节流"><i class="fa fa-link" aria-hidden="true"></i></a>防抖与节流</h4>
+<h5 id="防抖"><a name="防抖" class="anchor-navigation-ex-anchor" href="#防抖"><i class="fa fa-link" aria-hidden="true"></i></a>防抖</h5>
 <blockquote>
 <p>为了避免高频的事件触发，只选择最后一次触发作为真正的触发；比如输入框输入，用户在输入文本时，是快速的，不应该在每一次按键事件触发就去操作页面（比如联想），而是在用户输入停下时，去触发操作。</p>
 <p>特点：防抖会等到用户停止触发，才会执行操作</p>
@@ -1608,7 +1604,7 @@
   }
 }
 </code></pre>
-<h5 id="节流">节流</h5>
+<h5 id="节流"><a name="节流" class="anchor-navigation-ex-anchor" href="#节流"><i class="fa fa-link" aria-hidden="true"></i></a>节流</h5>
 <blockquote>
 <p>在第一次触发的时候，就进行操作，而不论紧接着多少次的触发，都会只进行第一次的操作，直到第一次操作结束。</p>
 <p>特点：某个操作希望上一次的完成后再进行下一次，或者说希望隔一定时间触发一次。规定时间内只触发一次。</p>
@@ -1643,7 +1639,7 @@
 }
 </code></pre>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-20 10:55:44
+2022-07-21 08:53:32
 </span></footer>
                                 
                                 </section>
@@ -1687,7 +1683,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"高阶函数","level":"1.5.1","depth":2,"next":{"title":"轮播图设计","level":"1.5.2","depth":2,"path":"js进阶/轮播图设计.md","ref":"js进阶/轮播图设计.md","articles":[]},"previous":{"title":"js进阶","level":"1.5","depth":1,"path":"js进阶/README.md","ref":"js进阶/README.md","articles":[{"title":"高阶函数","level":"1.5.1","depth":2,"path":"js进阶/高阶函数.md","ref":"js进阶/高阶函数.md","articles":[]},{"title":"轮播图设计","level":"1.5.2","depth":2,"path":"js进阶/轮播图设计.md","ref":"js进阶/轮播图设计.md","articles":[]},{"title":"设计模式","level":"1.5.3","depth":2,"path":"js进阶/设计模式.md","ref":"js进阶/设计模式.md","articles":[]},{"title":"异步编程","level":"1.5.4","depth":2,"path":"js进阶/异步编程.md","ref":"js进阶/异步编程.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"js进阶/高阶函数.md","mtime":"2022-07-20T02:55:44.780Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"高阶函数","level":"1.5.1","depth":2,"next":{"title":"轮播图设计","level":"1.5.2","depth":2,"path":"js进阶/轮播图设计.md","ref":"js进阶/轮播图设计.md","articles":[]},"previous":{"title":"js进阶","level":"1.5","depth":1,"path":"js进阶/README.md","ref":"js进阶/README.md","articles":[{"title":"高阶函数","level":"1.5.1","depth":2,"path":"js进阶/高阶函数.md","ref":"js进阶/高阶函数.md","articles":[]},{"title":"轮播图设计","level":"1.5.2","depth":2,"path":"js进阶/轮播图设计.md","ref":"js进阶/轮播图设计.md","articles":[]},{"title":"设计模式","level":"1.5.3","depth":2,"path":"js进阶/设计模式.md","ref":"js进阶/设计模式.md","articles":[]},{"title":"异步编程","level":"1.5.4","depth":2,"path":"js进阶/异步编程.md","ref":"js进阶/异步编程.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"js进阶/高阶函数.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1753,19 +1749,7 @@
         
     
         
-        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,15 +1190,15 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h4 id="ejs模板">EJS模板</h4>
+                                <h4 id="ejs模板"><a name="ejs模板" class="anchor-navigation-ex-anchor" href="#ejs模板"><i class="fa fa-link" aria-hidden="true"></i></a>EJS模板</h4>
 <p>后端渲染页面，返回给前端</p>
-<h4 id="get">get</h4>
+<h4 id="get"><a name="get" class="anchor-navigation-ex-anchor" href="#get"><i class="fa fa-link" aria-hidden="true"></i></a>get</h4>
 <pre><code class="lang-javascript">req = http:<span class="hljs-comment">//127.0.0.1:3000/news?name=jasonk%page=2</span>
 query = url.parse(req).query
 <span class="hljs-comment">// { name: jasonk, page: 2 }</span>
 </code></pre>
 <p><strong>name=jasonk%page=2</strong>  即为get请求</p>
-<h4 id="封装express的路由部分">封装express的路由部分</h4>
+<h4 id="封装express的路由部分"><a name="封装express的路由部分" class="anchor-navigation-ex-anchor" href="#封装express的路由部分"><i class="fa fa-link" aria-hidden="true"></i></a>封装express的路由部分</h4>
 <ul>
 <li><p>get方法</p>
 </li>
@@ -1216,7 +1212,7 @@ query = url.parse(req).query
 </li>
 </ul>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-20 10:55:44
+2022-07-21 08:53:32
 </span></footer>
                                 
                                 </section>
@@ -1260,7 +1256,7 @@ query = url.parse(req).query
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"node_02","level":"1.6.2","depth":2,"next":{"title":"node_03","level":"1.6.3","depth":2,"path":"node/node_03.md","ref":"node/node_03.md","articles":[]},"previous":{"title":"node_01","level":"1.6.1","depth":2,"path":"node/node_01.md","ref":"node/node_01.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"node/node_02.md","mtime":"2022-07-20T02:55:44.866Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"node_02","level":"1.6.2","depth":2,"next":{"title":"node_03","level":"1.6.3","depth":2,"path":"node/node_03.md","ref":"node/node_03.md","articles":[]},"previous":{"title":"node_01","level":"1.6.1","depth":2,"path":"node/node_01.md","ref":"node/node_01.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"node/node_02.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1326,19 +1322,7 @@ query = url.parse(req).query
         
     
         
-        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

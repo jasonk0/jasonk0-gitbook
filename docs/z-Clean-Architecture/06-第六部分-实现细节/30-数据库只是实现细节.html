@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,7 +1190,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="chap30-the-database-is-a-detail-数据库只是实现细节">Chap30. THE DATABASE IS A DETAIL 数据库只是实现细节</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#chap30-the-database-is-a-detail-数据库只是实现细节"><b>1. </b>Chap30. THE DATABASE IS A DETAIL 数据库只是实现细节</a></li><ul><li><span class="title-icon "></span><a href="#relational-databases-关系型数据库"><b>1.1. </b>RELATIONAL DATABASES 关系型数据库</a></li><li><span class="title-icon "></span><a href="#why-are-database-systems-so-prevalent-为什么数据库系统如此流行"><b>1.2. </b>WHY ARE DATABASE SYSTEMS SO PREVALENT? 为什么数据库系统如此流行</a></li><li><span class="title-icon "></span><a href="#what-if-there-were-no-disk-假设磁盘不存在会怎样"><b>1.3. </b>WHAT IF THERE WERE NO DISK? 假设磁盘不存在会怎样</a></li><li><span class="title-icon "></span><a href="#details-实现细节"><b>1.4. </b>DETAILS 实现细节</a></li><li><span class="title-icon "></span><a href="#but-what-about-performance-但性能怎么办呢"><b>1.5. </b>BUT WHAT ABOUT PERFORMANCE? 但性能怎么办呢</a></li><li><span class="title-icon "></span><a href="#anecdote-一段轶事"><b>1.6. </b>ANECDOTE 一段轶事</a></li><li><span class="title-icon "></span><a href="#conclusion-本章小结"><b>1.7. </b>CONCLUSION 本章小结</a></li></ul></ul></div><a href="#chap30-the-database-is-a-detail-数据库只是实现细节" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="chap30-the-database-is-a-detail-数据库只是实现细节"><a name="chap30-the-database-is-a-detail-数据库只是实现细节" class="anchor-navigation-ex-anchor" href="#chap30-the-database-is-a-detail-数据库只是实现细节"><i class="fa fa-link" aria-hidden="true"></i></a>1. Chap30. THE DATABASE IS A DETAIL 数据库只是实现细节</h1>
 <p><img src="../un/CH-UN30.jpg" alt></p>
 <p>From an architectural point of view, the database is a non-entity—it is a detail that does not rise to the level of an architectural element. Its relationship to the architecture of a software system is rather like the relationship of a doorknob to the architecture of your home.</p>
 <blockquote>
@@ -1204,7 +1200,7 @@
 <blockquote>
 <p>这个比喻肯定会招来非议。相信我，这种架我吵过很多次了。所以我在这里要把话说得清楚一点：这里讨论的不是数据模型。为应用程序中的数据设计结构，对于系统架构来说当然是很重要的，但是数据库并不是数据模型。数据库只是一款软件，是用来存取数据的工具。从系统架构的角度来看，工具通常是无关紧要的——因为这只是一个底层的实现细节，一种达成目标的手段。一个优秀的架构师是不会让实现细节污染整个系统架构的。</p>
 </blockquote>
-<h2 id="relational-databases-关系型数据库">RELATIONAL DATABASES 关系型数据库</h2>
+<h2 id="relational-databases-关系型数据库"><a name="relational-databases-关系型数据库" class="anchor-navigation-ex-anchor" href="#relational-databases-关系型数据库"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. RELATIONAL DATABASES 关系型数据库</h2>
 <p>Edgar Codd defined the principles of relational databases in 1970. By the mid-1980s, the relational model had grown to become the dominant form of data storage. There was a good reason for this popularity: The relational model is elegant, disciplined, and robust. It is an excellent data storage and access technology.</p>
 <blockquote>
 <p>关系型数据库的基本原理是 Edgar Codd 在 1970 年定义的。到了 20 世纪 80 年代中期，这种关系模型已经成为数据存储设计的主流。由于关系模型优雅、自律、非常稳健，因此得到了非常广泛的应用。总之，关系型数据库是一种非常优秀的数据存储与访问技术。</p>
@@ -1221,7 +1217,7 @@
 <blockquote>
 <p>很多数据访问框架允许将数据行和数据表以对象的形式在系统内部传递。这么做在系统架构上来说是完全错误的，这会导致程序的用例、业务逻辑、甚至 UI 与数据的关系模型相互绑定在一起。</p>
 </blockquote>
-<h2 id="why-are-database-systems-so-prevalent-为什么数据库系统如此流行">WHY ARE DATABASE SYSTEMS SO PREVALENT? 为什么数据库系统如此流行</h2>
+<h2 id="why-are-database-systems-so-prevalent-为什么数据库系统如此流行"><a name="why-are-database-systems-so-prevalent-为什么数据库系统如此流行" class="anchor-navigation-ex-anchor" href="#why-are-database-systems-so-prevalent-为什么数据库系统如此流行"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. WHY ARE DATABASE SYSTEMS SO PREVALENT? 为什么数据库系统如此流行</h2>
 <p>Why are software systems and software enterprises dominated by database systems? What accounts for the preeminence of Oracle, MySQL, and SQL Server? In a word: disks.</p>
 <blockquote>
 <p>为什么数据库系统在软件系统和企业软件领域如此流行？ Oracle、MySQL 和 SQL Server 这些产品广泛流行的原因是什么？答案是硬盘。</p>
@@ -1254,7 +1250,7 @@
 <blockquote>
 <p>这两种系统都是为了优化磁盘存储而设计的，人们需要根据它们的特点来将数据组织成最便于访问的模式。每个系统都有一套索引和安排数据的方式。同时，每种系统最终都会将数据缓存在内存中，方便快速操作。</p>
 </blockquote>
-<h2 id="what-if-there-were-no-disk-假设磁盘不存在会怎样">WHAT IF THERE WERE NO DISK? 假设磁盘不存在会怎样</h2>
+<h2 id="what-if-there-were-no-disk-假设磁盘不存在会怎样"><a name="what-if-there-were-no-disk-假设磁盘不存在会怎样" class="anchor-navigation-ex-anchor" href="#what-if-there-were-no-disk-假设磁盘不存在会怎样"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. WHAT IF THERE WERE NO DISK? 假设磁盘不存在会怎样</h2>
 <p>As prevalent as disks once were, they are now a dying breed. Soon they will have gone the way of tape drives, floppy drives, and CDs. They are being replaced by RAM.</p>
 <blockquote>
 <p>虽然硬盘现在还是很常见，但其实已经在走下坡路了。很快它们就会和磁带、软盘、CD 一样成为历史，RAM 正在替代一切。</p>
@@ -1271,7 +1267,7 @@
 <blockquote>
 <p>事实上，如果你再仔细想想，就会发现我们已经在这样做了。即使数据保存在数据库或者文件系统中，我们最终也会将其读取到内存中，并按照最方便的形式将其组织成列表、集合、堆栈、队列、树等各种数据结构，继续按文件和表格的形式来操作数据是非常少见的。</p>
 </blockquote>
-<h2 id="details-实现细节">DETAILS 实现细节</h2>
+<h2 id="details-实现细节"><a name="details-实现细节" class="anchor-navigation-ex-anchor" href="#details-实现细节"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. DETAILS 实现细节</h2>
 <p>This reality is why I say that the database is a detail. It’s just a mechanism we use to move the data back and forth between the surface of the disk and RAM. The database is really nothing more than a big bucket of bits where we store our data on a long-term basis. But we seldom use the data in that form.</p>
 <blockquote>
 <p>上面所说的，就是为什么我们认为数据库只是一种实现细节的原因。数据库终究只是在硬盘与内存之间相互传输数据的一种手段而已，它真的可以被认为只是一个长期存储数据的、装满字节的大桶。我们通常并不会真的以这种形式来使用数据。</p>
@@ -1280,12 +1276,12 @@
 <blockquote>
 <p>因此，从系统架构的视角来看，真的不应该关系数据在旋转的磁盘表面上以什么样的格式存在。实际上，系统架构应该对磁盘本身的存在完全不关心。</p>
 </blockquote>
-<h2 id="but-what-about-performance-但性能怎么办呢">BUT WHAT ABOUT PERFORMANCE? 但性能怎么办呢</h2>
+<h2 id="but-what-about-performance-但性能怎么办呢"><a name="but-what-about-performance-但性能怎么办呢" class="anchor-navigation-ex-anchor" href="#but-what-about-performance-但性能怎么办呢"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. BUT WHAT ABOUT PERFORMANCE? 但性能怎么办呢</h2>
 <p>Isn’t performance an architectural concern? Of course it is—but when it comes to data storage, it’s a concern that can be entirely encapsulated and separated from the business rules. Yes, we need to get the data in and out of the data store quickly, but that’s a low-level concern. We can address that concern with low-level data access mechanisms. It has nothing whatsoever to do with the overall architecture of our systems.</p>
 <blockquote>
 <p>性能难道不是系统架构的一个考量标准吗？当然是——但当问题涉及数据存储时，这方面的操作通常是被封装起来，隔离在业务逻辑之外的。也就是说，我们确实需要从数据存储中快速地存取数据，但这终究只是一个底层实现问题。我们完全可以在数据访问这一较低的层面上解决这个问题，而不需要让它与系统架构相关联。</p>
 </blockquote>
-<h2 id="anecdote-一段轶事">ANECDOTE 一段轶事</h2>
+<h2 id="anecdote-一段轶事"><a name="anecdote-一段轶事" class="anchor-navigation-ex-anchor" href="#anecdote-一段轶事"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. ANECDOTE 一段轶事</h2>
 <p>In the late 1980s, I led a team of software engineers at a startup company that was trying to build and market a network management system that measured the communications integrity of T1 telecommunication lines. The system retrieved data from the devices at the endpoints of those lines, and then ran a series of predictive algorithms to detect and report problems.</p>
 <blockquote>
 <p>在 20 世纪 80 年代末，我曾在一家创业公司中带领一组软件工程师开发和推广一个用于监控 T1 线路通信质量的网络管理系统。该系统从 T1 线路两端的设备抓取数据，然后利用预测算法来检测和汇报问题。</p>
@@ -1330,13 +1326,13 @@
 <blockquote>
 <p>回头想想，我在这个场景中应该怎么做呢？事实上，我当时应该在系统的某个角落接上一个关系型数据库，在维持系统核心数据结构的同时给关系型数据库提供一些安全的、受限的数据访问方式。但我没这么做，我辞职了，干起了咨询这一行。</p>
 </blockquote>
-<h2 id="conclusion-本章小结">CONCLUSION 本章小结</h2>
+<h2 id="conclusion-本章小结"><a name="conclusion-本章小结" class="anchor-navigation-ex-anchor" href="#conclusion-本章小结"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. CONCLUSION 本章小结</h2>
 <p>The organizational structure of data, the data model, is architecturally significant. The technologies and systems that move data on and off a rotating magnetic surface are not. Relational database systems that force the data to be organized into tables and accessed with SQL have much more to do with the latter than with the former. The data is significant. The database is a detail.</p>
 <blockquote>
 <p>数据的组织结构，数据的模型，都是系统架构中的重要部分，但是从磁盘上存储、读取数据的机制和手段却没那么重要。关系型数据库强制我们将数据存储成表格并且以 SQL 访问，主要是为了后者。总而言之，数据本身很重要，但数据库系统仅仅是一个实现细节。</p>
 </blockquote>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-26 21:50:34
+2022-07-26 15:54:50
 </span></footer>
                                 
                                 </section>
@@ -1380,7 +1376,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"数据库只是实现细节","level":"1.9.6.1","depth":3,"next":{"title":"Web是实现细节","level":"1.9.6.2","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/31-Web是实现细节.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/31-Web是实现细节.md","articles":[]},"previous":{"title":"第六部分-实现细节","level":"1.9.6","depth":2,"path":"z-Clean-Architecture/06-第六部分-实现细节/README.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/README.md","articles":[{"title":"数据库只是实现细节","level":"1.9.6.1","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/30-数据库只是实现细节.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/30-数据库只是实现细节.md","articles":[]},{"title":"Web是实现细节","level":"1.9.6.2","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/31-Web是实现细节.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/31-Web是实现细节.md","articles":[]},{"title":"应用程序框架是实现细节","level":"1.9.6.3","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/32-应用程序框架是实现细节.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/32-应用程序框架是实现细节.md","articles":[]},{"title":"案例分析：视频销售网站","level":"1.9.6.4","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/33-案例分析：视频销售网站.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/33-案例分析：视频销售网站.md","articles":[]},{"title":"拾遗","level":"1.9.6.5","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/34-拾遗.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/34-拾遗.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/06-第六部分-实现细节/30-数据库只是实现细节.md","mtime":"2022-07-26T13:50:34.439Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"数据库只是实现细节","level":"1.9.6.1","depth":3,"next":{"title":"Web是实现细节","level":"1.9.6.2","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/31-Web是实现细节.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/31-Web是实现细节.md","articles":[]},"previous":{"title":"第六部分-实现细节","level":"1.9.6","depth":2,"path":"z-Clean-Architecture/06-第六部分-实现细节/README.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/README.md","articles":[{"title":"数据库只是实现细节","level":"1.9.6.1","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/30-数据库只是实现细节.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/30-数据库只是实现细节.md","articles":[]},{"title":"Web是实现细节","level":"1.9.6.2","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/31-Web是实现细节.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/31-Web是实现细节.md","articles":[]},{"title":"应用程序框架是实现细节","level":"1.9.6.3","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/32-应用程序框架是实现细节.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/32-应用程序框架是实现细节.md","articles":[]},{"title":"案例分析：视频销售网站","level":"1.9.6.4","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/33-案例分析：视频销售网站.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/33-案例分析：视频销售网站.md","articles":[]},{"title":"拾遗","level":"1.9.6.5","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/34-拾遗.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/34-拾遗.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/06-第六部分-实现细节/30-数据库只是实现细节.md","mtime":"2022-07-26T07:54:50.395Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1446,19 +1442,7 @@
         
     
         
-        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,7 +1190,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="chap27-services-great-and-small-服务：宏观与微观">Chap27. SERVICES: GREAT AND SMALL 服务：宏观与微观</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#chap27-services-great-and-small-服务：宏观与微观"><b>1. </b>Chap27. SERVICES: GREAT AND SMALL 服务：宏观与微观</a></li><ul><li><span class="title-icon "></span><a href="#service-architecture-面向服务的架构"><b>1.1. </b>SERVICE ARCHITECTURE? 面向服务的架构</a></li><li><span class="title-icon "></span><a href="#service-benefits-服务所带来的好处"><b>1.2. </b>SERVICE BENEFITS? 服务所带来的好处</a></li><ul><li><span class="title-icon "></span><a href="#the-decoupling-fallacy-解耦合的谬论"><b>1.2.1. </b>THE DECOUPLING FALLACY 解耦合的谬论</a></li><li><span class="title-icon "></span><a href="#the-fallacy-of-independent-development-and-deployment-独立开发部署的谬论"><b>1.2.2. </b>THE FALLACY OF INDEPENDENT DEVELOPMENT AND DEPLOYMENT 独立开发部署的谬论</a></li></ul><li><span class="title-icon "></span><a href="#the-kitty-problem-运送猫咪的难题"><b>1.3. </b>THE KITTY PROBLEM 运送猫咪的难题</a></li><li><span class="title-icon "></span><a href="#objects-to-the-rescue-对象化是救星"><b>1.4. </b>OBJECTS TO THE RESCUE 对象化是救星</a></li><li><span class="title-icon "></span><a href="#component-based-services-基于组件的服务"><b>1.5. </b>COMPONENT-BASED SERVICES 基于组件的服务</a></li><li><span class="title-icon "></span><a href="#cross-cutting-concerns-横跨型变更"><b>1.6. </b>CROSS-CUTTING CONCERNS 横跨型变更</a></li><li><span class="title-icon "></span><a href="#conclusion-本章小结"><b>1.7. </b>CONCLUSION 本章小结</a></li></ul></ul></div><a href="#chap27-services-great-and-small-服务：宏观与微观" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="chap27-services-great-and-small-服务：宏观与微观"><a name="chap27-services-great-and-small-服务：宏观与微观" class="anchor-navigation-ex-anchor" href="#chap27-services-great-and-small-服务：宏观与微观"><i class="fa fa-link" aria-hidden="true"></i></a>1. Chap27. SERVICES: GREAT AND SMALL 服务：宏观与微观</h1>
 <p><img src="../un/CH-UN27.jpg" alt></p>
 <p>Service-oriented “architectures” and micro-service “architectures” have become very popular of late. The reasons for their current popularity include the following:</p>
 <blockquote>
@@ -1211,7 +1207,7 @@
 <li>服务被认为是支持独立开发和部署的，同样，下文我们也会讲到，并不完全是这样。</li>
 </ul>
 </blockquote>
-<h2 id="service-architecture-面向服务的架构">SERVICE ARCHITECTURE? 面向服务的架构</h2>
+<h2 id="service-architecture-面向服务的架构"><a name="service-architecture-面向服务的架构" class="anchor-navigation-ex-anchor" href="#service-architecture-面向服务的架构"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. SERVICE ARCHITECTURE? 面向服务的架构</h2>
 <p>First, let’s consider the notion that using services, by their nature, is an architecture. This is patently untrue. The architecture of a system is defined by boundaries that separate high-level policy from low-level detail and follow the Dependency Rule. Services that simply separate application behaviors are little more than expensive function calls, and are not necessarily architecturally significant.</p>
 <blockquote>
 <p>首先，我们来批判“只要使用了服务，就等于有了一套架构”这种思想。这显然是完全错误的。如前文所述，架构设计的任务就是找到高层策略与低层细节之间的架构边界，同时保证这些边界遵守依赖关系规则。所谓的服务本身只是一种比函数调用方式成本稍高的，分割应用程序行为的一种形式，与系统架构无关。</p>
@@ -1228,12 +1224,12 @@
 <blockquote>
 <p>服务的情况也一样，服务这种形式说到底不过是一种跨进程/平台边界的函数调用而己。有些服务会具有架构上的意义，有些则没有。我们这里重点要讨论的，当然是前者。</p>
 </blockquote>
-<h2 id="service-benefits-服务所带来的好处">SERVICE BENEFITS? 服务所带来的好处</h2>
+<h2 id="service-benefits-服务所带来的好处"><a name="service-benefits-服务所带来的好处" class="anchor-navigation-ex-anchor" href="#service-benefits-服务所带来的好处"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. SERVICE BENEFITS? 服务所带来的好处</h2>
 <p>The question mark in the preceding heading indicates that this section is going to challenge the current popular orthodoxy of service architecture. Let’s tackle the benefits one at a time.</p>
 <blockquote>
 <p>我在本节的标题后面打了个问号，意味着我打算在这一节好好挑战一下目前流行的针对服务架构的崇拜情节。下面就让我们针对那些所谓的好处，一个一个地来批驳。</p>
 </blockquote>
-<h3 id="the-decoupling-fallacy-解耦合的谬论">THE DECOUPLING FALLACY 解耦合的谬论</h3>
+<h3 id="the-decoupling-fallacy-解耦合的谬论"><a name="the-decoupling-fallacy-解耦合的谬论" class="anchor-navigation-ex-anchor" href="#the-decoupling-fallacy-解耦合的谬论"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. THE DECOUPLING FALLACY 解耦合的谬论</h3>
 <p>One of the big supposed benefits of breaking a system up into services is that services are strongly decoupled from each other. After all, each service runs in a different process, or even a different processor; therefore those services do not have access to each other’s variables. What’s more, the interface of each service must be well defined.</p>
 <blockquote>
 <p>很多人认为将系统拆分成服务的一个最忙要的好处就是让每个服务之间实现强解耦。毕竟，每个服务都是以一个不同的进程来运行的，甚至运行在不同处理器上。因此，服务之间通常不能访问彼此的变量。其外，服务之间的接口一定是充分定义的。</p>
@@ -1250,7 +1246,7 @@
 <blockquote>
 <p>再来说说服务能很好地定义接口——它确实能很好地定义接口——但函数也能做到这一点。事实上，服务的接口与普通的函数接口相比，并没有比后者更正式、更严谨，也没有更好，这一点根本算不上什么好处。</p>
 </blockquote>
-<h3 id="the-fallacy-of-independent-development-and-deployment-独立开发部署的谬论">THE FALLACY OF INDEPENDENT DEVELOPMENT AND DEPLOYMENT 独立开发部署的谬论</h3>
+<h3 id="the-fallacy-of-independent-development-and-deployment-独立开发部署的谬论"><a name="the-fallacy-of-independent-development-and-deployment-独立开发部署的谬论" class="anchor-navigation-ex-anchor" href="#the-fallacy-of-independent-development-and-deployment-独立开发部署的谬论"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.2. THE FALLACY OF INDEPENDENT DEVELOPMENT AND DEPLOYMENT 独立开发部署的谬论</h3>
 <p>Another of the supposed benefits of services is that they can be owned and operated by a dedicated team. That team can be responsible for writing, maintaining, and operating the service as part of a dev-ops strategy. This independence of development and deployment is presumed to be scalable. It is believed that large enterprise systems can be created from dozens, hundreds, or even thousands of independently developable and deployable services. Development, maintenance, and operation of the system can be partitioned between a similar number of independent teams.</p>
 <blockquote>
 <p>人们认为的另一个使用服务的好处就是，不同的服务可以由不同的专门团队负责和运维。这让开发团队可以釆用 dev-ops 混合的形式来编写、维护以及运维各自的服务，这种开发和部署上的独立性被认为是可扩展的。这种观点认为大型系统可以由几十个、几百个、甚至几千个独立开发部署的服务组成。整个系统的研发、维护以及运维工作就可以由同等量级的团队来共同完成。</p>
@@ -1263,7 +1259,7 @@
 <blockquote>
 <p>其次，上文说到的解耦合谬论已经说明拆分服务并不意味着这些服务可以彼此独立开发、部署和运维。如果这些服务之间以数据形式或者行为形式相耦合，那么它们的开发、部署和运维也必须彼此协调来进行。</p>
 </blockquote>
-<h2 id="the-kitty-problem-运送猫咪的难题">THE KITTY PROBLEM 运送猫咪的难题</h2>
+<h2 id="the-kitty-problem-运送猫咪的难题"><a name="the-kitty-problem-运送猫咪的难题" class="anchor-navigation-ex-anchor" href="#the-kitty-problem-运送猫咪的难题"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. THE KITTY PROBLEM 运送猫咪的难题</h2>
 <p>As an example of these two fallacies, let’s look at our taxi aggregator system again. Remember, this system knows about many taxi providers in a given city, and allows customers to order rides. Let’s assume that the customers select taxis based on a number of criteria, such as pickup time, cost, luxury, and driver experience.</p>
 <blockquote>
 <p>下面，我们再以之前那个出租车调度系统为例来说明上面那两个谬论。各位还记得吗？该系统会负责统一调度给定城市中的多个出租车提供商，而用户可以集中在它那里下订单。在这里，我们假设用户在租车时往往会附带一组参考条件，例如接送时间、价格、豪华程度、司机的经验，等等。</p>
@@ -1310,7 +1306,7 @@
 <blockquote>
 <p>这就是所谓的横跨型变更（cross-cutting concern）问题，它是所有软件系统都要面对的问题，无论服务化还是非服务化的。其中，图 27.1 所示的这种按功能划分服务的架构方式，在跨系统的功能变更时是最脆弱的。</p>
 </blockquote>
-<h2 id="objects-to-the-rescue-对象化是救星">OBJECTS TO THE RESCUE 对象化是救星</h2>
+<h2 id="objects-to-the-rescue-对象化是救星"><a name="objects-to-the-rescue-对象化是救星" class="anchor-navigation-ex-anchor" href="#objects-to-the-rescue-对象化是救星"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. OBJECTS TO THE RESCUE 对象化是救星</h2>
 <p>How would we have solved this problem in a component-based architecture? Careful consideration of the SOLID design principles would have prompted us to create a set of classes that could be polymorphically extended to handle new features.</p>
 <blockquote>
 <p>如果采用组件化的系统架构，如何解决这个难题呢？通过对 SOLID 设计原则的仔细考虑，我们应该一开始就设计一系列多态化的类，以应对将来新功能的扩展需要。</p>
@@ -1337,7 +1333,7 @@
 </blockquote>
 <figures figure="27-2">Using an object-oriented approach to deal with cross-cutting concerns</figures>
 
-<h2 id="component-based-services-基于组件的服务">COMPONENT-BASED SERVICES 基于组件的服务</h2>
+<h2 id="component-based-services-基于组件的服务"><a name="component-based-services-基于组件的服务" class="anchor-navigation-ex-anchor" href="#component-based-services-基于组件的服务"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. COMPONENT-BASED SERVICES 基于组件的服务</h2>
 <p>The obvious question is: Can we do that for services? And the answer is, of course: Yes! Services do not need to be little monoliths. Services can, instead, be designed using the SOLID principles, and given a component structure so that new components can be added to them without changing the existing components within the service.</p>
 <blockquote>
 <p>那么，问题来了：服务化也可以做到这一点吗？答案是肯定的。服务并不一定必须是小型的单体程序。服务也可以按照 SOLID 原则来设计，按照组件结构来部署，这样就可以做到在添加/删除组件时不影响服务中的其他组件。</p>
@@ -1352,7 +1348,7 @@
 </blockquote>
 <figures figure="27-3">Each service has its own internal component design, enabling new features to be added as new derivative classes</figures>
 
-<h2 id="cross-cutting-concerns-横跨型变更">CROSS-CUTTING CONCERNS 横跨型变更</h2>
+<h2 id="cross-cutting-concerns-横跨型变更"><a name="cross-cutting-concerns-横跨型变更" class="anchor-navigation-ex-anchor" href="#cross-cutting-concerns-横跨型变更"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. CROSS-CUTTING CONCERNS 横跨型变更</h2>
 <p>What we have learned is that architectural boundaries do not fall between services. Rather, those boundaries run through the services, dividing them into components.</p>
 <blockquote>
 <p>现在我们应该已经明白了，系统的架构边界事实上并不落在服务之间，而是穿透所有服务，在服务内部以组件的形式存在。</p>
@@ -1363,7 +1359,7 @@
 </blockquote>
 <figures figure="27-4">Services must be designed with internal component architectures that follow the Dependency Rule</figures>
 
-<h2 id="conclusion-本章小结">CONCLUSION 本章小结</h2>
+<h2 id="conclusion-本章小结"><a name="conclusion-本章小结" class="anchor-navigation-ex-anchor" href="#conclusion-本章小结"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. CONCLUSION 本章小结</h2>
 <p>As useful as services are to the scalability and develop-ability of a system, they are not, in and of themselves, architecturally significant elements. The architecture of a system is defined by the boundaries drawn within that system, and by the dependencies that cross those boundaries. That architecture is not defined by the physical mechanisms by which elements communicate and execute.</p>
 <blockquote>
 <p>虽然服务化可能有助于提升系统的可扩展性和可研发性，但服务本身却并不能代表整个系统的架构设计。系统的架构是由系统内部的架构边界，以及边界之间的依赖关系所定义的，与系统中各组件之间的调用和通信方式无关。</p>
@@ -1373,7 +1369,7 @@
 <p>一个服务可能是一个独立组件，以系统架构边界的形式隔开。一个服务也可能由几个组件组成，其中的组件以架构边界的形式互相隔离。在极端情况下，客户端和服务端甚至可能会由于耦合得过于紧密而不具备系统架构意义上的隔离性。</p>
 </blockquote>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-26 21:50:34
+2022-07-26 15:54:49
 </span></footer>
                                 
                                 </section>
@@ -1417,7 +1413,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"服务：宏观和微观","level":"1.9.5.13","depth":3,"next":{"title":"测试边界","level":"1.9.5.14","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/28-测试边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/28-测试边界.md","articles":[]},"previous":{"title":"Main组件","level":"1.9.5.12","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/26-Main组件.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/26-Main组件.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/05-第五部分-软件架构/27-服务：宏观和微观.md","mtime":"2022-07-26T13:50:34.437Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"服务：宏观和微观","level":"1.9.5.13","depth":3,"next":{"title":"测试边界","level":"1.9.5.14","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/28-测试边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/28-测试边界.md","articles":[]},"previous":{"title":"Main组件","level":"1.9.5.12","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/26-Main组件.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/26-Main组件.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/05-第五部分-软件架构/27-服务：宏观和微观.md","mtime":"2022-07-26T07:54:49.795Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1483,19 +1479,7 @@
         
     
         
-        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

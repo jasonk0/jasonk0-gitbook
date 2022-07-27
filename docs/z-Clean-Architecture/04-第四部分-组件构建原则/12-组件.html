@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,7 +1190,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="chap12-components-组件">Chap12. COMPONENTS 组件</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#chap12-components-组件"><b>1. </b>Chap12. COMPONENTS 组件</a></li><ul><li><span class="title-icon "></span><a href="#a-brief-history-of-components-组件发展史"><b>1.1. </b>A BRIEF HISTORY OF COMPONENTS 组件发展史</a></li><li><span class="title-icon "></span><a href="#relocatability-重定位技术"><b>1.2. </b>RELOCATABILITY 重定位技术</a></li><li><span class="title-icon "></span><a href="#linkers-链接器"><b>1.3. </b>LINKERS 链接器</a></li><li><span class="title-icon "></span><a href="#conclusion-本章小结"><b>1.4. </b>CONCLUSION 本章小结</a></li></ul></ul></div><a href="#chap12-components-组件" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="chap12-components-组件"><a name="chap12-components-组件" class="anchor-navigation-ex-anchor" href="#chap12-components-组件"><i class="fa fa-link" aria-hidden="true"></i></a>1. Chap12. COMPONENTS 组件</h1>
 <p><img src="../un/CH-UN12.jpg" alt></p>
 <p>Components are the units of deployment. They are the smallest entities that can be deployed as part of a system. In Java, they are jar files. In Ruby, they are gem files. In .Net, they are DLLs. In compiled languages, they are aggregations of binary files. In interpreted languages, they are aggregations of source files. In all languages, they are the granule of deployment.</p>
 <blockquote>
@@ -1204,7 +1200,7 @@
 <blockquote>
 <p>我们可以将多个组件链接成一个独立可执行文件，也可以将它们汇总成类似.W3：文件这样的部署单元，又或者，组件也可以被打包成 .jar、.dll 或者 .exe 文件，并以可动态加载的插件形式来独立部署。但无论采用哪种部署形式，设计良好的组件都应该永远保持可被独立部署的特性，这同时也意味着这些组件应该可以被单独开发。</p>
 </blockquote>
-<h2 id="a-brief-history-of-components-组件发展史">A BRIEF HISTORY OF COMPONENTS 组件发展史</h2>
+<h2 id="a-brief-history-of-components-组件发展史"><a name="a-brief-history-of-components-组件发展史" class="anchor-navigation-ex-anchor" href="#a-brief-history-of-components-组件发展史"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. A BRIEF HISTORY OF COMPONENTS 组件发展史</h2>
 <p>In the early years of software development, programmers controlled the memory location and layout of their programs. One of the first lines of code in a program would be the origin statement, which declared the address at which the program was to be loaded.</p>
 <blockquote>
 <p>在早期的软件开发中，程序员可以完全掌控自己编写的程序所处的内存地址和存放格式。在那时，程序中的第一条语句被称为起源（origin）语句，它的作用是声明该程序应该被加载到的内存位置。</p>
@@ -1279,7 +1275,7 @@
 <blockquote>
 <p>显而易见，这个问题必须要有一个解决方案。</p>
 </blockquote>
-<h2 id="relocatability-重定位技术">RELOCATABILITY 重定位技术</h2>
+<h2 id="relocatability-重定位技术"><a name="relocatability-重定位技术" class="anchor-navigation-ex-anchor" href="#relocatability-重定位技术"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. RELOCATABILITY 重定位技术</h2>
 <p>The solution was relocatable binaries. The idea behind them was very simple. The compiler was changed to output binary code that could be relocated in memory by a smart loader. The loader would be told where to load the relocatable code. The relocatable code was instrumented with flags that told the loader which parts of the loaded data had to be altered to be loaded at the selected address. Usually this just meant adding the starting address to any memory reference addresses in the binary.</p>
 <blockquote>
 <p>该解决方案就是生成可重定位的二进制文件。其背后的原理非常简单，即程序员修改编译器输出文件的二进制格式，使其可以由一个智能加载器加载到任意内存位置。当然，这需要我们在加载器启动时为这些文件指定要加载到的内存地址，而且可重定位的代码中还包含了一些记号，加载器将其加载到指定位置时会修改这些记号对应的地址值。一般来说，这个过程只不过就是将二进制文件中包含的内存地址都按照其加载到的内存基础位置进行递增。</p>
@@ -1296,7 +1292,7 @@
 <blockquote>
 <p>这就是链接加载器（linking loader）的由来。</p>
 </blockquote>
-<h2 id="linkers-链接器">LINKERS 链接器</h2>
+<h2 id="linkers-链接器"><a name="linkers-链接器" class="anchor-navigation-ex-anchor" href="#linkers-链接器"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. LINKERS 链接器</h2>
 <p>The linking loader allowed programmers to divide their programs up onto separately compilable and loadable segments. This worked well when relatively small programs were being linked with relatively small libraries. However, in the late 1960s and early 1970s, programmers got more ambitious, and their programs got a lot bigger.</p>
 <blockquote>
 <p>链接加载器让程序员们可以将程序切分成多个可被分别编译、加载的程序段。在程序规模较小、外部链接也较少的情况，这个方案一直都很好用。然而在 20 世纪 60 年代末期到 70 年代初期的那段时间里，程序的规模突然有了大幅的增长，情况就有所不同了。</p>
@@ -1345,13 +1341,13 @@
 <blockquote>
 <p>如今，我们用 .jar 文件、DLL 文件和共享库方式来部署应用的插件已经非常司空见惯了。如果现在我们想要给 Minecraft 增加一个模块，只需要将 .jar 文件放到一个指定的目录中即可。同样的，如果你想给 Visual Studio 增加 Resharper 插件，也只需要安装对应的 DLL 文件即可。</p>
 </blockquote>
-<h2 id="conclusion-本章小结">CONCLUSION 本章小结</h2>
+<h2 id="conclusion-本章小结"><a name="conclusion-本章小结" class="anchor-navigation-ex-anchor" href="#conclusion-本章小结"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. CONCLUSION 本章小结</h2>
 <p>These dynamically linked files, which can be plugged together at runtime, are the software components of our architectures. It has taken 50 years, but we have arrived at a place where component plugin architecture can be the casual default as opposed to the herculean effort it once was.</p>
 <blockquote>
 <p>我们常常会在程序运行时插入某些动态链接文件，这些动态链接文件所使用的就是软件架构中的组件概念。在经历了 50 年的演进之后，组件化的插件式架构己经成为我们习以为常的软件构建形式了。</p>
 </blockquote>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-26 21:50:34
+2022-07-26 15:54:49
 </span></footer>
                                 
                                 </section>
@@ -1395,7 +1391,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"组件","level":"1.9.4.1","depth":3,"next":{"title":"组件聚合","level":"1.9.4.2","depth":3,"path":"z-Clean-Architecture/04-第四部分-组件构建原则/13-组件聚合.md","ref":"z-Clean-Architecture/04-第四部分-组件构建原则/13-组件聚合.md","articles":[]},"previous":{"title":"第四部分-组件构建原则","level":"1.9.4","depth":2,"path":"z-Clean-Architecture/04-第四部分-组件构建原则/README.md","ref":"z-Clean-Architecture/04-第四部分-组件构建原则/README.md","articles":[{"title":"组件","level":"1.9.4.1","depth":3,"path":"z-Clean-Architecture/04-第四部分-组件构建原则/12-组件.md","ref":"z-Clean-Architecture/04-第四部分-组件构建原则/12-组件.md","articles":[]},{"title":"组件聚合","level":"1.9.4.2","depth":3,"path":"z-Clean-Architecture/04-第四部分-组件构建原则/13-组件聚合.md","ref":"z-Clean-Architecture/04-第四部分-组件构建原则/13-组件聚合.md","articles":[]},{"title":"组件耦合","level":"1.9.4.3","depth":3,"path":"z-Clean-Architecture/04-第四部分-组件构建原则/14-组件耦合.md","ref":"z-Clean-Architecture/04-第四部分-组件构建原则/14-组件耦合.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/04-第四部分-组件构建原则/12-组件.md","mtime":"2022-07-26T13:50:34.431Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"组件","level":"1.9.4.1","depth":3,"next":{"title":"组件聚合","level":"1.9.4.2","depth":3,"path":"z-Clean-Architecture/04-第四部分-组件构建原则/13-组件聚合.md","ref":"z-Clean-Architecture/04-第四部分-组件构建原则/13-组件聚合.md","articles":[]},"previous":{"title":"第四部分-组件构建原则","level":"1.9.4","depth":2,"path":"z-Clean-Architecture/04-第四部分-组件构建原则/README.md","ref":"z-Clean-Architecture/04-第四部分-组件构建原则/README.md","articles":[{"title":"组件","level":"1.9.4.1","depth":3,"path":"z-Clean-Architecture/04-第四部分-组件构建原则/12-组件.md","ref":"z-Clean-Architecture/04-第四部分-组件构建原则/12-组件.md","articles":[]},{"title":"组件聚合","level":"1.9.4.2","depth":3,"path":"z-Clean-Architecture/04-第四部分-组件构建原则/13-组件聚合.md","ref":"z-Clean-Architecture/04-第四部分-组件构建原则/13-组件聚合.md","articles":[]},{"title":"组件耦合","level":"1.9.4.3","depth":3,"path":"z-Clean-Architecture/04-第四部分-组件构建原则/14-组件耦合.md","ref":"z-Clean-Architecture/04-第四部分-组件构建原则/14-组件耦合.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/04-第四部分-组件构建原则/12-组件.md","mtime":"2022-07-26T07:54:49.795Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1461,19 +1457,7 @@
         
     
         
-        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

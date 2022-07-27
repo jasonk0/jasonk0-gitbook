@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,9 +1190,9 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>[TOC]</p>
-<h2 id="计算机网络">计算机网络</h2>
-<h3 id="计算机网络历史">计算机网络历史</h3>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#计算机网络"><b>1.1. </b>计算机网络</a></li><ul><li><span class="title-icon "></span><a href="#计算机网络历史"><b>1.1.1. </b>计算机网络历史</a></li><li><span class="title-icon "></span><a href="#osi七层模型"><b>1.1.2. </b>OSI七层模型</a></li><li><span class="title-icon "></span><a href="#网络协议"><b>1.1.3. </b>网络协议</a></li><li><span class="title-icon "></span><a href="#网络请求实战"><b>1.1.4. </b>网络请求实战</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p>[TOC]</p>
+<h2 id="计算机网络"><a name="计算机网络" class="anchor-navigation-ex-anchor" href="#计算机网络"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. 计算机网络</h2>
+<h3 id="计算机网络历史"><a name="计算机网络历史" class="anchor-navigation-ex-anchor" href="#计算机网络历史"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. 计算机网络历史</h3>
 <p>ARPAnet</p>
 <p>封包(pack-switching)</p>
 <p><img src="http://g.recordit.co/BeC31jlvCe.gif" alt="fengbao"></p>
@@ -1270,8 +1266,8 @@
 <li>现在</li>
 </ul>
 <p>移动互联网、5G、边缘计算、云、物联网、VR</p>
-<h3 id="osi七层模型">OSI七层模型</h3>
-<h4 id="osi模型简介">OSI模型简介</h4>
+<h3 id="osi七层模型"><a name="osi七层模型" class="anchor-navigation-ex-anchor" href="#osi七层模型"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. OSI七层模型</h3>
+<h4 id="osi模型简介"><a name="osi模型简介" class="anchor-navigation-ex-anchor" href="#osi模型简介"><i class="fa fa-link" aria-hidden="true"></i></a>OSI模型简介</h4>
 <p>（ISO/IEC 7498-1）</p>
 <ul>
 <li><p>开放式系统互联模型</p>
@@ -1283,41 +1279,41 @@
 </ul>
 <p>国际标准化组织（ISO）</p>
 <p>始于欧洲，发扬于美国，中国获利</p>
-<h5 id="应用层（application-layeer）">应用层（Application Layeer）</h5>
+<h5 id="应用层（application-layeer）"><a name="应用层（application-layeer）" class="anchor-navigation-ex-anchor" href="#应用层（application-layeer）"><i class="fa fa-link" aria-hidden="true"></i></a>应用层（Application Layeer）</h5>
 <p>提供高级API</p>
 <blockquote>
 <p>定义了网络主机提供的方法和接口（业务协议），往往直接对应用户行为，例如：HTTP、FTP、SMTP等</p>
 </blockquote>
-<h5 id="展示层（presentation-layer）">展示层（Presentation Layer）</h5>
+<h5 id="展示层（presentation-layer）"><a name="展示层（presentation-layer）" class="anchor-navigation-ex-anchor" href="#展示层（presentation-layer）"><i class="fa fa-link" aria-hidden="true"></i></a>展示层（Presentation Layer）</h5>
 <blockquote>
 <p>也被称作语法层，将应用层中的数据转化为传输格式，保留语义（序列化、加密解密、字符串编码解码）；确保数据发送出去后可以被接收者理解。</p>
 </blockquote>
-<h5 id="会话层（session-layer）">会话层（Session Layer）</h5>
+<h5 id="会话层（session-layer）"><a name="会话层（session-layer）" class="anchor-navigation-ex-anchor" href="#会话层（session-layer）"><i class="fa fa-link" aria-hidden="true"></i></a>会话层（Session Layer）</h5>
 <blockquote>
 <p>提供管理会话的方法（Open/Close/ReOpen/检查状态等），提供对底层连续断断续续的隐藏，甚至对多种底层流的隐藏，保证上层看不到细节</p>
 </blockquote>
-<h5 id="传输层（transport-layer）">传输层（Transport Layer）</h5>
+<h5 id="传输层（transport-layer）"><a name="传输层（transport-layer）" class="anchor-navigation-ex-anchor" href="#传输层（transport-layer）"><i class="fa fa-link" aria-hidden="true"></i></a>传输层（Transport Layer）</h5>
 <p>提供主机到主机（host-to-host）的数据通信能力</p>
 <blockquote>
 <p>建立简介保证数据封包发送、接收到的顺序一致；提供可靠性（发送者知道数据有没有被完整送达）；提供流控制（同步发送者和接受者的速率）；提供多路复用（「多工」，Multiplexing，多种信号复用一个信道）</p>
 </blockquote>
 <p><img src="https://www.hualigs.cn/image/61e7ba2f14104.jpg" alt="多路复用"></p>
-<h5 id="网络层（network-layer）">网络层（Network Layer）</h5>
+<h5 id="网络层（network-layer）"><a name="网络层（network-layer）" class="anchor-navigation-ex-anchor" href="#网络层（network-layer）"><i class="fa fa-link" aria-hidden="true"></i></a>网络层（Network Layer）</h5>
 <p>提供数据在逻辑单元（IP地址）之间的传递能力</p>
 <blockquote>
 <p>「路由」：决定数据的下一站在哪里；「寻址」：为数据封包增加头信息（地址等）</p>
 </blockquote>
-<h5 id="数据链路层（data-link-layer）">数据链路层（Data Link Layer）</h5>
+<h5 id="数据链路层（data-link-layer）"><a name="数据链路层（data-link-layer）" class="anchor-navigation-ex-anchor" href="#数据链路层（data-link-layer）"><i class="fa fa-link" aria-hidden="true"></i></a>数据链路层（Data Link Layer）</h5>
 <p>提供数据在设别和设备间的传输能力</p>
 <blockquote>
 <p>「流控制」：发送者接受者之间同步数据首发速度和数据量，「错误控制」：检测数据有没有出错，并重发出错的信息</p>
 </blockquote>
-<h5 id="物理层（physical-layer">物理层（Physical Layer)</h5>
+<h5 id="物理层（physical-layer"><a name="物理层（physical-layer" class="anchor-navigation-ex-anchor" href="#物理层（physical-layer"><i class="fa fa-link" aria-hidden="true"></i></a>物理层（Physical Layer)</h5>
 <p>定义底层一个个位（bit）的数据如何变成物理信号</p>
 <blockquote>
 <p>数据链路层发生的数据传递行为转化为物理设备识别的信号（电流）；封装了大量底层物理设备的能力</p>
 </blockquote>
-<h4 id="实际应用">实际应用</h4>
+<h4 id="实际应用"><a name="实际应用" class="anchor-navigation-ex-anchor" href="#实际应用"><i class="fa fa-link" aria-hidden="true"></i></a>实际应用</h4>
 <ul>
 <li>Alice想Bob发微信</li>
 </ul>
@@ -1328,7 +1324,7 @@
 <p>一个个数据封包从主机传输到服务器——「网络层」</p>
 <p>数据帧在一个个设备之间传输——「数据链路层」</p>
 <p>数据最终以光电信号的形式在物理设备间传输——「物理层」</p>
-<h4 id="深入思考osi">深入思考OSI</h4>
+<h4 id="深入思考osi"><a name="深入思考osi" class="anchor-navigation-ex-anchor" href="#深入思考osi"><i class="fa fa-link" aria-hidden="true"></i></a>深入思考OSI</h4>
 <p><img src="https://www.hualigs.cn/image/61e7bd77c14d5.jpg" alt="OSI七层和对应的事情"></p>
 <p>分层架构</p>
 <p>替换其中一层不用重构整个应用（比如换了一家快递，我依然可以把快递送到目标地址）</p>
@@ -1338,9 +1334,9 @@
 <li>数据可追踪性</li>
 </ul>
 <hr>
-<h3 id="网络协议">网络协议</h3>
-<h4 id="tcpip协议和互联网">TCP/IP协议和互联网</h4>
-<h5 id="tcpip协议群（internet-protocol-suite）">TCP/IP协议群（Internet Protocol Suite）</h5>
+<h3 id="网络协议"><a name="网络协议" class="anchor-navigation-ex-anchor" href="#网络协议"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. 网络协议</h3>
+<h4 id="tcpip协议和互联网"><a name="tcpip协议和互联网" class="anchor-navigation-ex-anchor" href="#tcpip协议和互联网"><i class="fa fa-link" aria-hidden="true"></i></a>TCP/IP协议和互联网</h4>
+<h5 id="tcpip协议群（internet-protocol-suite）"><a name="tcpip协议群（internet-protocol-suite）" class="anchor-navigation-ex-anchor" href="#tcpip协议群（internet-protocol-suite）"><i class="fa fa-link" aria-hidden="true"></i></a>TCP/IP协议群（Internet Protocol Suite）</h5>
 <p>类似OSI模型，一种网络协议的概念模型</p>
 <p><img src="https://i.jpg.dog/file/jpg-dog/ba139c3e8d94c4dcb794a77053b67bec.png" alt="TCP/IP"></p>
 <p>传输层（Transport Layer）</p>
@@ -1353,7 +1349,7 @@
 <p><strong>什么是设备、地址、应用？</strong></p>
 <p>分别对应链路层、网络层、传输层</p>
 <p>设备：MAC；地址：IP；应用：端口</p>
-<h5 id="tcpip封包">TCP/IP封包</h5>
+<h5 id="tcpip封包"><a name="tcpip封包" class="anchor-navigation-ex-anchor" href="#tcpip封包"><i class="fa fa-link" aria-hidden="true"></i></a>TCP/IP封包</h5>
 <p>各层之间的数据转换</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/TCP/IP数据转换和封包.png" alt="数据转换"></p>
 <p>TCP/IP的封包</p>
@@ -1371,12 +1367,12 @@
 </li>
 <li>Header后边跟着若干个byte数据，每个byte拥有自己的序列号</li>
 </ul>
-<h5 id="三次握手">三次握手</h5>
+<h5 id="三次握手"><a name="三次握手" class="anchor-navigation-ex-anchor" href="#三次握手"><i class="fa fa-link" aria-hidden="true"></i></a>三次握手</h5>
 <p>syn 请求同步</p>
 <p>syn-ack 请求并确认</p>
 <p>ack 确认</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/三次握手.png" alt="三次握手"></p>
-<h5 id="数据顺序问题">数据顺序问题</h5>
+<h5 id="数据顺序问题"><a name="数据顺序问题" class="anchor-navigation-ex-anchor" href="#数据顺序问题"><i class="fa fa-link" aria-hidden="true"></i></a>数据顺序问题</h5>
 <p>TCP/IP的处理方法：</p>
 <p>消息的绝对顺序用（SEQ，ACK）这一对元组描述，这个元组就保存在TCP的header中</p>
 <blockquote>
@@ -1384,16 +1380,16 @@
 <p>ACK(Acknowledge)：这个消息发送前一共收到了多少个字节</p>
 </blockquote>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/改良的三次握手.png" alt="改良的三次握手"></p>
-<h5 id="四次挥手">四次挥手</h5>
+<h5 id="四次挥手"><a name="四次挥手" class="anchor-navigation-ex-anchor" href="#四次挥手"><i class="fa fa-link" aria-hidden="true"></i></a>四次挥手</h5>
 <p>在断开连接的时候，每一端都要发送Finish和Ackonwledge，在接收完断开之前的信息之后再发送Ackownledge</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/四次挥手.png" alt="四次挥手"></p>
-<h5 id="总结">总结</h5>
+<h5 id="总结"><a name="总结" class="anchor-navigation-ex-anchor" href="#总结"><i class="fa fa-link" aria-hidden="true"></i></a>总结</h5>
 <p>「最简化原则」：没有足够的事情要做，就不必分层</p>
 <p>为什么需要三次握手？四次挥手？</p>
 <p>网络中的顺序问题，是通过(SEQ,ACK)这组绝对数据来解决的</p>
 <hr>
-<h4 id="dns（重点）">DNS（重点）</h4>
-<h5 id="dns基础知识">DNS基础知识</h5>
+<h4 id="dns（重点）"><a name="dns（重点）" class="anchor-navigation-ex-anchor" href="#dns（重点）"><i class="fa fa-link" aria-hidden="true"></i></a>DNS（重点）</h4>
+<h5 id="dns基础知识"><a name="dns基础知识" class="anchor-navigation-ex-anchor" href="#dns基础知识"><i class="fa fa-link" aria-hidden="true"></i></a>DNS基础知识</h5>
 <p>URL：也被称作「网址」，用于定位互联网上的资源。由方案（协议）、域名（主机/IP地址）、端口（应用）、路径、查询、片段（给客户端使用）组成</p>
 <p><img src="https://www.hualigs.cn/image/61e7efd5a4c11.jpg" alt="URL"></p>
 <p>DNS（Domain Name System）：域名系统，将域名解析为IP地址。</p>
@@ -1436,9 +1432,9 @@
 <li>TXT记录</li>
 </ul>
 <p>微信提供文本信息，将其加入到我的域名之下，在请求微信的域名的时候带上文本可以证明我的域名身份。</p>
-<h5 id="dns工具实战">DNS工具实战</h5>
+<h5 id="dns工具实战"><a name="dns工具实战" class="anchor-navigation-ex-anchor" href="#dns工具实战"><i class="fa fa-link" aria-hidden="true"></i></a>DNS工具实战</h5>
 <p>本地host修改：Switchhost工具</p>
-<h5 id="cdn工具">CDN工具</h5>
+<h5 id="cdn工具"><a name="cdn工具" class="anchor-navigation-ex-anchor" href="#cdn工具"><i class="fa fa-link" aria-hidden="true"></i></a>CDN工具</h5>
 <p>CDN：内容分发网络（Content Delivery Network）</p>
 <p><img src="https://www.hualigs.cn/image/61e7f5df5aea0.jpg" alt="CDN"></p>
 <p>基于地理位置的分布式代理服务器/数据中心</p>
@@ -1467,18 +1463,18 @@
 </ul>
 <p>CDN云测平台</p>
 <p><a href="https://17ce.com/" target="_blank">17ce</a></p>
-<h4 id="http入门和基础工具">Http入门和基础工具</h4>
-<h5 id="http协议">HTTP协议</h5>
+<h4 id="http入门和基础工具"><a name="http入门和基础工具" class="anchor-navigation-ex-anchor" href="#http入门和基础工具"><i class="fa fa-link" aria-hidden="true"></i></a>Http入门和基础工具</h4>
+<h5 id="http协议"><a name="http协议" class="anchor-navigation-ex-anchor" href="#http协议"><i class="fa fa-link" aria-hidden="true"></i></a>HTTP协议</h5>
 <p>超文本传输协议（Hyper Text Transfer Protocol）</p>
 <p>处理客户端和服务端之间的通信，可以使用<strong>文本</strong>传输信息，而不是二进制。</p>
 <p>http请求 - http返回</p>
 <p>主要用于请求网页/json/提交表单/xml……</p>
-<h5 id="纯文本无状态（stateless）">纯文本+无状态（stateless）</h5>
+<h5 id="纯文本无状态（stateless）"><a name="纯文本无状态（stateless）" class="anchor-navigation-ex-anchor" href="#纯文本无状态（stateless）"><i class="fa fa-link" aria-hidden="true"></i></a>纯文本+无状态（stateless）</h5>
 <blockquote>
 <p>无状态，相对简单，每一个请求都是独立的，互相不影响</p>
 </blockquote>
 <p>但是我们需要通过cookie，session等浏览器提供的手段维护状态</p>
-<h5 id="历史及设计优化">历史及设计优化</h5>
+<h5 id="历史及设计优化"><a name="历史及设计优化" class="anchor-navigation-ex-anchor" href="#历史及设计优化"><i class="fa fa-link" aria-hidden="true"></i></a>历史及设计优化</h5>
 <blockquote>
 <p>在网络协议设计中，带宽和延迟是非常重要的因素，和用户体验紧密联系；而延迟可以通过缓存、DNS查询等优化来降低</p>
 </blockquote>
@@ -1505,7 +1501,7 @@
 <p>利用多路复用技术同时传输多个请求</p>
 </li>
 </ul>
-<h5 id="压缩安全性">压缩/安全性</h5>
+<h5 id="压缩安全性"><a name="压缩安全性" class="anchor-navigation-ex-anchor" href="#压缩安全性"><i class="fa fa-link" aria-hidden="true"></i></a>压缩/安全性</h5>
 <ul>
 <li><p>压缩</p>
 <p>主流web服务器nginx/express都提供gzip压缩</p>
@@ -1516,7 +1512,7 @@
 <p>数据传输加密（非对称和对称）</p>
 </li>
 </ul>
-<h5 id="实战-实现简单http协议">实战-实现简单http协议</h5>
+<h5 id="实战-实现简单http协议"><a name="实战-实现简单http协议" class="anchor-navigation-ex-anchor" href="#实战-实现简单http协议"><i class="fa fa-link" aria-hidden="true"></i></a>实战-实现简单http协议</h5>
 <p>http传输内容分为两部分Header和Body。</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> net = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;net&apos;</span>)
 <span class="hljs-comment">// 基础能力 发送数据 传输层=》网络层 =〉 连接层 =》 物理层，也就是可以操纵TCP协议</span>
@@ -1536,7 +1532,7 @@ server.listen(<span class="hljs-number">80</span>,()=&gt;{
 
 })
 </code></pre>
-<h5 id="工具">工具</h5>
+<h5 id="工具"><a name="工具" class="anchor-navigation-ex-anchor" href="#工具"><i class="fa fa-link" aria-hidden="true"></i></a>工具</h5>
 <p>cURL 命令行工具 ，可以请求url</p>
 <blockquote>
 <p>它支持很多协议</p>
@@ -1555,11 +1551,11 @@ server.listen(<span class="hljs-number">80</span>,()=&gt;{
 <p>支持抓包、重放、替换、修改</p>
 </blockquote>
 <p>charles同上</p>
-<h4 id="http协议详情">Http协议详情</h4>
+<h4 id="http协议详情"><a name="http协议详情" class="anchor-navigation-ex-anchor" href="#http协议详情"><i class="fa fa-link" aria-hidden="true"></i></a>Http协议详情</h4>
 <blockquote>
 <p> 前端重点、面试重点、日常常用</p>
 </blockquote>
-<h5 id="http协议内容和方法">Http协议内容和方法</h5>
+<h5 id="http协议内容和方法"><a name="http协议内容和方法" class="anchor-navigation-ex-anchor" href="#http协议内容和方法"><i class="fa fa-link" aria-hidden="true"></i></a>Http协议内容和方法</h5>
 <ul>
 <li><p>GET</p>
 <p>从服务器获取资源</p>
@@ -1586,7 +1582,7 @@ server.listen(<span class="hljs-number">80</span>,()=&gt;{
 <p>对资源进行部分更新（很少使用）</p>
 </li>
 </ul>
-<h5 id="常见http状态吗">常见Http状态吗</h5>
+<h5 id="常见http状态吗"><a name="常见http状态吗" class="anchor-navigation-ex-anchor" href="#常见http状态吗"><i class="fa fa-link" aria-hidden="true"></i></a>常见Http状态吗</h5>
 <p>1xx：提供信息</p>
 <ul>
 <li>100 continue</li>
@@ -1646,7 +1642,7 @@ server.listen(<span class="hljs-number">80</span>,()=&gt;{
 <li>504 Gateway Timeout 网关超时（网关给的）</li>
 <li>505 HTTP Version Not Supported版本不支持（http2.0请求http1.0时）</li>
 </ul>
-<h5 id="常见http头">常见Http头</h5>
+<h5 id="常见http头"><a name="常见http头" class="anchor-navigation-ex-anchor" href="#常见http头"><i class="fa fa-link" aria-hidden="true"></i></a>常见Http头</h5>
 <p><strong>Content-Length</strong> </p>
 <hr>
 <p>发送给接收者的Body内容长度（字节）</p>
@@ -1689,20 +1685,20 @@ server.listen(<span class="hljs-number">80</span>,()=&gt;{
 <p>决定连接是否在当前事务完成后关闭</p>
 <p>Http1.0默认是close</p>
 <p>Http1.1后默认是keep-alive</p>
-<h4 id="全栈角度看http协议">全栈角度看Http协议</h4>
+<h4 id="全栈角度看http协议"><a name="全栈角度看http协议" class="anchor-navigation-ex-anchor" href="#全栈角度看http协议"><i class="fa fa-link" aria-hidden="true"></i></a>全栈角度看Http协议</h4>
 <blockquote>
 <p>实践巩固、全栈应用、架构思想</p>
 </blockquote>
-<h5 id="method和解析body">Method和解析Body</h5>
-<h5 id="跳转header和3xx状态吗">跳转Header和3xx状态吗</h5>
+<h5 id="method和解析body"><a name="method和解析body" class="anchor-navigation-ex-anchor" href="#method和解析body"><i class="fa fa-link" aria-hidden="true"></i></a>Method和解析Body</h5>
+<h5 id="跳转header和3xx状态吗"><a name="跳转header和3xx状态吗" class="anchor-navigation-ex-anchor" href="#跳转header和3xx状态吗"><i class="fa fa-link" aria-hidden="true"></i></a>跳转Header和3xx状态吗</h5>
 <p>认真对待3xx状态码</p>
-<h5 id="错误处理4xx和5xx">错误处理4xx和5xx</h5>
+<h5 id="错误处理4xx和5xx"><a name="错误处理4xx和5xx" class="anchor-navigation-ex-anchor" href="#错误处理4xx和5xx"><i class="fa fa-link" aria-hidden="true"></i></a>错误处理4xx和5xx</h5>
 <p>错误处理遵循协议约定</p>
-<h4 id="加密和https证书">加密和Https证书</h4>
+<h4 id="加密和https证书"><a name="加密和https证书" class="anchor-navigation-ex-anchor" href="#加密和https证书"><i class="fa fa-link" aria-hidden="true"></i></a>加密和Https证书</h4>
 <blockquote>
 <p>面试重点、前端重点、架构思想</p>
 </blockquote>
-<h5 id="对称加密和非对称加密">对称加密和非对称加密</h5>
+<h5 id="对称加密和非对称加密"><a name="对称加密和非对称加密" class="anchor-navigation-ex-anchor" href="#对称加密和非对称加密"><i class="fa fa-link" aria-hidden="true"></i></a>对称加密和非对称加密</h5>
 <p>明文传输非常不安全，导致各大厂商需要自己加密。</p>
 <p>加密解密的方法称为「密钥」</p>
 <p>对称加密：</p>
@@ -1719,14 +1715,14 @@ server.listen(<span class="hljs-number">80</span>,()=&gt;{
 <li><p>创建者保留私钥，公钥向外界公开</p>
 </li>
 </ul>
-<h5 id="解决信任问题">解决信任问题</h5>
+<h5 id="解决信任问题"><a name="解决信任问题" class="anchor-navigation-ex-anchor" href="#解决信任问题"><i class="fa fa-link" aria-hidden="true"></i></a>解决信任问题</h5>
 <p>通过第三方机构的证书来验证 某网站的证书是否可信</p>
 <p><a href="https://jpg.dog/i/265bG" target="_blank"><img src="https://i.jpg.dog/file/jpg-dog/c913aa01863d1eb0fbf68e3d4b17fb77.png" alt="信任解决"></a></p>
 <p>在根证书上的验证方式</p>
 <p><img src="https://i.jpg.dog/file/jpg-dog/cd5f2234ec947a2f47d84546f358d702.png" alt="根证书"></p>
 <p>实际上的证书体系，比较复杂</p>
 <p><img src="https://i.jpg.dog/file/jpg-dog/3e8245938169918549c092feede9da89.png" alt="实际上的根证书"></p>
-<h5 id="常见算法介绍">常见算法介绍</h5>
+<h5 id="常见算法介绍"><a name="常见算法介绍" class="anchor-navigation-ex-anchor" href="#常见算法介绍"><i class="fa fa-link" aria-hidden="true"></i></a>常见算法介绍</h5>
 <p>DES（Data Encryption Standard）</p>
 <blockquote>
 <p>8bit = 1byte</p>
@@ -1737,17 +1733,17 @@ server.listen(<span class="hljs-number">80</span>,()=&gt;{
 <p>可旁道攻击（通过硬件表现，猜出来算法过程）</p>
 <p>RSA（Rivest-Shamir- Adleman）</p>
 <p><strong>非对称加密算法</strong>，三个人的名字命名</p>
-<h5 id="对称与非对称的区别">对称与非对称的区别</h5>
+<h5 id="对称与非对称的区别"><a name="对称与非对称的区别" class="anchor-navigation-ex-anchor" href="#对称与非对称的区别"><i class="fa fa-link" aria-hidden="true"></i></a>对称与非对称的区别</h5>
 <p>非对称加密安全性更好</p>
 <p>对称加密计算速度更快</p>
 <p>通常混合使用（利用非对称加密协商密钥，然后进行对称加密通信）</p>
-<h5 id="https建立连接到工作的过程">https建立连接到工作的过程</h5>
+<h5 id="https建立连接到工作的过程"><a name="https建立连接到工作的过程" class="anchor-navigation-ex-anchor" href="#https建立连接到工作的过程"><i class="fa fa-link" aria-hidden="true"></i></a>https建立连接到工作的过程</h5>
 <p><img src="https://i.jpg.dog/file/jpg-dog/b3d9bcdc05a5d50839898919066a2c4a.png" alt="https"></p>
-<h4 id="udp和tcp、https2030">UDP和TCP、Https2.0/3.0</h4>
+<h4 id="udp和tcp、https2030"><a name="udp和tcp、https2030" class="anchor-navigation-ex-anchor" href="#udp和tcp、https2030"><i class="fa fa-link" aria-hidden="true"></i></a>UDP和TCP、Https2.0/3.0</h4>
 <blockquote>
 <p>面试重点、前端重点、架构思想</p>
 </blockquote>
-<h5 id="tcp-vs-udp">TCP vs UDP</h5>
+<h5 id="tcp-vs-udp"><a name="tcp-vs-udp" class="anchor-navigation-ex-anchor" href="#tcp-vs-udp"><i class="fa fa-link" aria-hidden="true"></i></a>TCP vs UDP</h5>
 <p>TCP面向流（API接收流）、UDP面向消息（API接收数据包）</p>
 <p>场景上：TCP远程控制、UDP查询DNS</p>
 <p>UDP：User Data Diagram</p>
@@ -1760,7 +1756,7 @@ server.listen(<span class="hljs-number">80</span>,()=&gt;{
 <li>不关心数据顺序（不需要ACK</li>
 <li>不保证数据不丢失</li>
 </ul>
-<h5 id="http20">http2.0</h5>
+<h5 id="http20"><a name="http20" class="anchor-navigation-ex-anchor" href="#http20"><i class="fa fa-link" aria-hidden="true"></i></a>http2.0</h5>
 <p>http2.0最显著的特征是帧(Frame)和流(Steam)</p>
 <p>h2中数据的传输单位以二进制数据帧的形式存在，传输形式依赖于流（也就是多个帧组成），每一个数据帧都会标识出属于哪一个流（通过流的ID），而在每一个TCP连接中可以存在并行的多个流，也就是可以发出多个请求，这便是多路复用；h1中的序列与阻塞机制被摒弃后，也就避免了队头阻塞的发生，接收端只管接收数据帧便可，不用担心丢失阻塞问题，每一个帧都有ID标识，在接受完毕后就可以组成完整的请求文件。</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/http的发展模型.png" alt="发展模型"></p>
@@ -1783,9 +1779,9 @@ server.listen(<span class="hljs-number">80</span>,()=&gt;{
 <p>还需要GZIP，</p>
 <p>不需要js/css文件合并，但需要js压缩</p>
 <p>需要首屏优化</p>
-<h5 id="http30">http3.0</h5>
+<h5 id="http30"><a name="http30" class="anchor-navigation-ex-anchor" href="#http30"><i class="fa fa-link" aria-hidden="true"></i></a>http3.0</h5>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/http3.0模型.png" alt="http3.0"></p>
-<h5 id="详解帧frame和流stream">详解帧(Frame)和流(Stream)</h5>
+<h5 id="详解帧frame和流stream"><a name="详解帧frame和流stream" class="anchor-navigation-ex-anchor" href="#详解帧frame和流stream"><i class="fa fa-link" aria-hidden="true"></i></a>详解帧(Frame)和流(Stream)</h5>
 <p>帧（frame）</p>
 <p>HTTP/2 中<strong>数据传输的最小单位</strong>，因此帧不仅要细分表达 HTTP/1.x 中的各个部份，也优化了 HTTP/1.x 表达得不好的地方，同时还增加了 HTTP/1.x 表达不了的方式。 每一帧都包含几个字段，有<strong>length、type、flags、stream identifier、frame playload</strong>等</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/数据帧的结构.png" alt="数据帧的结构"></p>
@@ -1905,12 +1901,12 @@ server.listen(<span class="hljs-number">80</span>,()=&gt;{
 <li><strong>HEADERS 帧在 DATA 帧前面</strong>。</li>
 <li><strong>流的 ID 都是奇数，说明是由客户端发起的，这是标准规定的，那么服务端发起的就是偶数了</strong>。</li>
 </ul>
-<h3 id="网络请求实战">网络请求实战</h3>
-<h4 id="restful约定和postman工具">RESTFUL约定和Postman工具</h4>
+<h3 id="网络请求实战"><a name="网络请求实战" class="anchor-navigation-ex-anchor" href="#网络请求实战"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.4. 网络请求实战</h3>
+<h4 id="restful约定和postman工具"><a name="restful约定和postman工具" class="anchor-navigation-ex-anchor" href="#restful约定和postman工具"><i class="fa fa-link" aria-hidden="true"></i></a>RESTFUL约定和Postman工具</h4>
 <blockquote>
 <p>工作日常、面试重点、大厂生态</p>
 </blockquote>
-<h5 id="restful（representationnal-state-transfer）">RESTFUL（Representationnal state transfer）</h5>
+<h5 id="restful（representationnal-state-transfer）"><a name="restful（representationnal-state-transfer）" class="anchor-navigation-ex-anchor" href="#restful（representationnal-state-transfer）"><i class="fa fa-link" aria-hidden="true"></i></a>RESTFUL（Representationnal state transfer）</h5>
 <p>表现层状态转化</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/RESTFUL.png" alt="RETFUL"></p>
 <p>资源（Resource）</p>
@@ -1951,15 +1947,15 @@ server.listen(<span class="hljs-number">80</span>,()=&gt;{
 <li>资源独立，接口间独立（缓存好设计）</li>
 <li>对协议依赖不严重（可迁移）</li>
 </ul>
-<h5 id="postman的使用">Postman的使用</h5>
+<h5 id="postman的使用"><a name="postman的使用" class="anchor-navigation-ex-anchor" href="#postman的使用"><i class="fa fa-link" aria-hidden="true"></i></a>Postman的使用</h5>
 <p>mocha/jest</p>
 <p>mock.js</p>
-<h4 id="fetch和promise">Fetch和Promise</h4>
+<h4 id="fetch和promise"><a name="fetch和promise" class="anchor-navigation-ex-anchor" href="#fetch和promise"><i class="fa fa-link" aria-hidden="true"></i></a>Fetch和Promise</h4>
 <blockquote>
 <p>工作日常、面试重点、程序架构</p>
 </blockquote>
-<h5 id="promise神器">Promise神器</h5>
-<h5 id="fetch的基本用法">Fetch的基本用法</h5>
+<h5 id="promise神器"><a name="promise神器" class="anchor-navigation-ex-anchor" href="#promise神器"><i class="fa fa-link" aria-hidden="true"></i></a>Promise神器</h5>
+<h5 id="fetch的基本用法"><a name="fetch的基本用法" class="anchor-navigation-ex-anchor" href="#fetch的基本用法"><i class="fa fa-link" aria-hidden="true"></i></a>Fetch的基本用法</h5>
 <ul>
 <li><p>返回Promise</p>
 </li>
@@ -1972,7 +1968,7 @@ server.listen(<span class="hljs-number">80</span>,()=&gt;{
 </ul>
 <p>一个处理http pipeline更容易的工具</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/pipeline.png" alt="pipeline"></p>
-<h5 id="实战">实战</h5>
+<h5 id="实战"><a name="实战" class="anchor-navigation-ex-anchor" href="#实战"><i class="fa fa-link" aria-hidden="true"></i></a>实战</h5>
 <p>应对不稳定的网络环境-指数补偿</p>
 <blockquote>
 <p>按照指数的时间倍数重复发送请求</p>
@@ -2012,11 +2008,11 @@ server.listen(<span class="hljs-number">80</span>,()=&gt;{
 
 }
 </code></pre>
-<h4 id="实战文件上传">实战文件上传</h4>
+<h4 id="实战文件上传"><a name="实战文件上传" class="anchor-navigation-ex-anchor" href="#实战文件上传"><i class="fa fa-link" aria-hidden="true"></i></a>实战文件上传</h4>
 <blockquote>
 <p>工作日常、面试重点</p>
 </blockquote>
-<h5 id="表单提交方式">表单提交方式</h5>
+<h5 id="表单提交方式"><a name="表单提交方式" class="anchor-navigation-ex-anchor" href="#表单提交方式"><i class="fa fa-link" aria-hidden="true"></i></a>表单提交方式</h5>
 <ul>
 <li>FormData是用来表示表单数据的一个对象<ul>
 <li>里边是key/value</li>
@@ -2027,7 +2023,7 @@ server.listen(<span class="hljs-number">80</span>,()=&gt;{
 <li>观察用表单提交文件时body是怎样的？</li>
 <li>Express如何接受表单提交的数据？</li>
 </ul>
-<h5 id="html5方式">HTML5方式</h5>
+<h5 id="html5方式"><a name="html5方式" class="anchor-navigation-ex-anchor" href="#html5方式"><i class="fa fa-link" aria-hidden="true"></i></a>HTML5方式</h5>
 <p>H5通过将文件(这里的文件是blob数据)转为base64放入body里，然后JSON化提交，服务端拿到之后，直接把base64转成文件。</p>
 <p>base64:</p>
 <p>用64个可打印字符来编码二进制（A-Za-z0-9+，）</p>
@@ -2042,11 +2038,11 @@ server.listen(<span class="hljs-number">80</span>,()=&gt;{
 <p>上传文件和提交输入框中的字段没有本质的区别</p>
 <p>Base64方法速度慢，没有特殊原因通常用blob转FormData上传</p>
 </blockquote>
-<h4 id="实战websocket聊天室">实战websocket聊天室</h4>
+<h4 id="实战websocket聊天室"><a name="实战websocket聊天室" class="anchor-navigation-ex-anchor" href="#实战websocket聊天室"><i class="fa fa-link" aria-hidden="true"></i></a>实战websocket聊天室</h4>
 <blockquote>
 <p>工作日常、面试重点、程序训练</p>
 </blockquote>
-<h5 id="websocket协议初探">WebSocket协议初探</h5>
+<h5 id="websocket协议初探"><a name="websocket协议初探" class="anchor-navigation-ex-anchor" href="#websocket协议初探"><i class="fa fa-link" aria-hidden="true"></i></a>WebSocket协议初探</h5>
 <p>一个基于TCP的通信协议，会（带着特定头部）复用HTTP的握手，在连接中会有websocket的自己的封包以二进制传输。</p>
 <blockquote>
 <p>因为服务端无法主动的向客户端发送信息，所以建立一个稳定的通道WebSocket，可以频繁的互相的主动发消息。</p>
@@ -2085,7 +2081,7 @@ Sec-Websocket-Accept: ${acceptKey}
   })
 })
 </code></pre>
-<h5 id="聊天室-node端">聊天室-node端</h5>
+<h5 id="聊天室-node端"><a name="聊天室-node端" class="anchor-navigation-ex-anchor" href="#聊天室-node端"><i class="fa fa-link" aria-hidden="true"></i></a>聊天室-node端</h5>
 <blockquote>
 <p>如果需要下载聊天记录，那就新建一个连接，这个链接是socket还是http都可以</p>
 </blockquote>
@@ -2113,7 +2109,7 @@ io.on(<span class="hljs-string">&apos;connect&apos;</span>,socket =&gt;{
   })
 })
 </code></pre>
-<h5 id="聊天室-web端">聊天室-web端</h5>
+<h5 id="聊天室-web端"><a name="聊天室-web端" class="anchor-navigation-ex-anchor" href="#聊天室-web端"><i class="fa fa-link" aria-hidden="true"></i></a>聊天室-web端</h5>
 <p>socket.io</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> socket = io(<span class="hljs-string">&apos;ws://chat.svc:8080&apos;</span>)
 <span class="hljs-keyword">const</span> name = <span class="hljs-string">&apos;user &apos;</span>+ <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().getTime()
@@ -2142,11 +2138,11 @@ ipt.addEventLisetener(<span class="hljs-string">&apos;keyup&apos;</span>,e=&gt;{
 </code></pre>
 <p>websocket中tcp握手和协议转换的过程很<strong>自然</strong></p>
 <p>socket（网络插座）为客户端。服务端提供通信机制</p>
-<h4 id="缓存、缓存清理和http缓存">缓存、缓存清理和HTTP缓存</h4>
+<h4 id="缓存、缓存清理和http缓存"><a name="缓存、缓存清理和http缓存" class="anchor-navigation-ex-anchor" href="#缓存、缓存清理和http缓存"><i class="fa fa-link" aria-hidden="true"></i></a>缓存、缓存清理和HTTP缓存</h4>
 <blockquote>
 <p>工作日常、面试重点、架构思想</p>
 </blockquote>
-<h5 id="缓存介绍">缓存介绍</h5>
+<h5 id="缓存介绍"><a name="缓存介绍" class="anchor-navigation-ex-anchor" href="#缓存介绍"><i class="fa fa-link" aria-hidden="true"></i></a>缓存介绍</h5>
 <p>存储将被用到的数据，让数据访问更快。</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/缓存的过程.png" alt="缓存的过程"></p>
 <ul>
@@ -2163,7 +2159,7 @@ ipt.addEventLisetener(<span class="hljs-string">&apos;keyup&apos;</span>,e=&gt;{
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/LFU.png" alt="LFU"></p>
 <p>LRU-Least Recently used</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/LRU.png" alt="LRU"></p>
-<h5 id="实战：fifo的memory函数">实战：FIFO的memory函数</h5>
+<h5 id="实战：fifo的memory函数"><a name="实战：fifo的memory函数" class="anchor-navigation-ex-anchor" href="#实战：fifo的memory函数"><i class="fa fa-link" aria-hidden="true"></i></a>实战：FIFO的memory函数</h5>
 <pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">_fib</span>(<span class="hljs-params">n</span>)</span>{
     <span class="hljs-keyword">if</span>(n==<span class="hljs-number">1</span> || n==<span class="hljs-number">2</span>){
     <span class="hljs-keyword">return</span> n
@@ -2192,7 +2188,7 @@ ipt.addEventLisetener(<span class="hljs-string">&apos;keyup&apos;</span>,e=&gt;{
 }
 <span class="hljs-keyword">const</span> fib = memory(_fib, <span class="hljs-number">10</span>)
 </code></pre>
-<h5 id="实战：lru算法的缓存">实战：LRU算法的缓存</h5>
+<h5 id="实战：lru算法的缓存"><a name="实战：lru算法的缓存" class="anchor-navigation-ex-anchor" href="#实战：lru算法的缓存"><i class="fa fa-link" aria-hidden="true"></i></a>实战：LRU算法的缓存</h5>
 <pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">memory</span>(<span class="hljs-params">f,maxSize = <span class="hljs-number">10</span></span>)</span>{
   <span class="hljs-keyword">let</span> cache = []
   <span class="hljs-keyword">return</span> <span class="hljs-function">(<span class="hljs-params">...args</span>) =&gt;</span> {
@@ -2226,7 +2222,7 @@ ipt.addEventLisetener(<span class="hljs-string">&apos;keyup&apos;</span>,e=&gt;{
   }
 }
 </code></pre>
-<h5 id="缓存策略">缓存策略</h5>
+<h5 id="缓存策略"><a name="缓存策略" class="anchor-navigation-ex-anchor" href="#缓存策略"><i class="fa fa-link" aria-hidden="true"></i></a>缓存策略</h5>
 <p>Cache-Control：定义所有缓存都要遵守的行为</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/可缓存性设置属性.png" alt="可缓存行字段"></p>
 <p>常见用法：</p>
@@ -2237,7 +2233,7 @@ ipt.addEventLisetener(<span class="hljs-string">&apos;keyup&apos;</span>,e=&gt;{
 <p>一个是：last-Modified 和 if-Modified-Since</p>
 <p>另一个是：Etag 和 if-None-Match</p>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-20 10:55:44
+2022-07-21 08:53:32
 </span></footer>
                                 
                                 </section>
@@ -2281,7 +2277,7 @@ ipt.addEventLisetener(<span class="hljs-string">&apos;keyup&apos;</span>,e=&gt;{
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"计算机网络","level":"1.2","depth":1,"next":{"title":"工具链和其他","level":"1.2.1","depth":2,"path":"计算机网络/工具链和其他.md","ref":"计算机网络/工具链和其他.md","articles":[]},"previous":{"title":"简介","level":"1.1","depth":1,"path":"README.md","ref":"./README.md","articles":[]},"articles":[{"title":"工具链和其他","level":"1.2.1","depth":2,"path":"计算机网络/工具链和其他.md","ref":"计算机网络/工具链和其他.md","articles":[]},{"title":"浏览器状态同步和路由","level":"1.2.2","depth":2,"path":"计算机网络/浏览器状态同步和路由.md","ref":"计算机网络/浏览器状态同步和路由.md","articles":[]},{"title":"网络安全攻防","level":"1.2.3","depth":2,"path":"计算机网络/网络安全攻防.md","ref":"计算机网络/网络安全攻防.md","articles":[]}],"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"计算机网络/计算机网络.md","mtime":"2022-07-20T02:55:44.674Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"计算机网络","level":"1.2","depth":1,"next":{"title":"工具链和其他","level":"1.2.1","depth":2,"path":"计算机网络/工具链和其他.md","ref":"计算机网络/工具链和其他.md","articles":[]},"previous":{"title":"简介","level":"1.1","depth":1,"path":"README.md","ref":"./README.md","articles":[]},"articles":[{"title":"工具链和其他","level":"1.2.1","depth":2,"path":"计算机网络/工具链和其他.md","ref":"计算机网络/工具链和其他.md","articles":[]},{"title":"浏览器状态同步和路由","level":"1.2.2","depth":2,"path":"计算机网络/浏览器状态同步和路由.md","ref":"计算机网络/浏览器状态同步和路由.md","articles":[]},{"title":"网络安全攻防","level":"1.2.3","depth":2,"path":"计算机网络/网络安全攻防.md","ref":"计算机网络/网络安全攻防.md","articles":[]}],"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"计算机网络/计算机网络.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -2347,19 +2343,7 @@ ipt.addEventLisetener(<span class="hljs-string">&apos;keyup&apos;</span>,e=&gt;{
         
     
         
-        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

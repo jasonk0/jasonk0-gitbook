@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,7 +1190,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="chap31-the-web-is-a-detail-web-是实现细节">Chap31. THE WEB IS A DETAIL Web 是实现细节</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#chap31-the-web-is-a-detail-web-是实现细节"><b>1. </b>Chap31. THE WEB IS A DETAIL Web 是实现细节</a></li><ul><li><span class="title-icon "></span><a href="#the-endless-pendulum-无尽的钟摆"><b>1.1. </b>THE ENDLESS PENDULUM 无尽的钟摆</a></li><li><span class="title-icon "></span><a href="#the-upshot-总结一下"><b>1.2. </b>THE UPSHOT 总结一下</a></li><li><span class="title-icon "></span><a href="#conclusion-本章小结"><b>1.3. </b>CONCLUSION 本章小结</a></li></ul></ul></div><a href="#chap31-the-web-is-a-detail-web-是实现细节" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="chap31-the-web-is-a-detail-web-是实现细节"><a name="chap31-the-web-is-a-detail-web-是实现细节" class="anchor-navigation-ex-anchor" href="#chap31-the-web-is-a-detail-web-是实现细节"><i class="fa fa-link" aria-hidden="true"></i></a>1. Chap31. THE WEB IS A DETAIL Web 是实现细节</h1>
 <p><img src="../un/CH-UN31.jpg" alt></p>
 <p>Were you a developer in the 1990s? Do you remember how the web changed everything? Do you remember how we looked at our old client–server architectures with disdain in the face of the shiny new technology of The Web?</p>
 <blockquote>
@@ -1212,7 +1208,7 @@
 <blockquote>
 <p>一声叹息!</p>
 </blockquote>
-<h2 id="the-endless-pendulum-无尽的钟摆">THE ENDLESS PENDULUM 无尽的钟摆</h2>
+<h2 id="the-endless-pendulum-无尽的钟摆"><a name="the-endless-pendulum-无尽的钟摆" class="anchor-navigation-ex-anchor" href="#the-endless-pendulum-无尽的钟摆"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. THE ENDLESS PENDULUM 无尽的钟摆</h2>
 <p>Of course, it would be incorrect to think that those oscillations started with the web. Before the web, there was client–server architecture. Before that, there were central minicomputers with arrays of dumb terminals. Before that, there were mainframes with smart green-screen terminals (that were very much analogous to modern-day browsers). Before that, there were computer rooms and punched cards …</p>
 <blockquote>
 <p>当然，这些振荡也不是从 Web 技术开始的。在 Web 出现之前，这种振荡在客户端/服务器架构中就很普遍。再往前，就是中央小型机/瘦终端的模型（这里的瘦终端和现在我们所谓的现代浏览器非常相似）。再往前则是大型计算机与打孔卡……</p>
@@ -1257,7 +1253,7 @@
 <blockquote>
 <p>我不了解这个设备中软件的细节，所以不知道这次改动是否显著影响了那些给 A 公司的手机开发应用程序的人。我只能希望 A 公司的系统架构师，以及应用程序的系统架构师能将 UI 和业务逻辑分离，因为这些市场推广人员是不会错过这里任何一丁点儿的耦合关系的。</p>
 </blockquote>
-<h2 id="the-upshot-总结一下">THE UPSHOT 总结一下</h2>
+<h2 id="the-upshot-总结一下"><a name="the-upshot-总结一下" class="anchor-navigation-ex-anchor" href="#the-upshot-总结一下"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. THE UPSHOT 总结一下</h2>
 <p>The upshot is simply this: The GUI is a detail. The web is a GUI. So the web is a detail. And, as an architect, you want to put details like that behind boundaries that keep them separate from your core business logic.</p>
 <blockquote>
 <p>将上面的故事总结成一句话，就是：GUI 只是一个实现细节。而 Web 则是 GUI 的一种，所以也是一个实现细节。作为一名软件架构师，我们需要将这类细节与核心业务逻辑隔离开来。</p>
@@ -1286,13 +1282,13 @@
 <blockquote>
 <p>这样一来，完整的输入数据，以及完整的输出数据就可以被标准化为数据结构，并提供给执行用例的进程了。通过这种方法，我们就可以认为用例都是以设备无关的方式在操作 I/O 设备。</p>
 </blockquote>
-<h2 id="conclusion-本章小结">CONCLUSION 本章小结</h2>
+<h2 id="conclusion-本章小结"><a name="conclusion-本章小结" class="anchor-navigation-ex-anchor" href="#conclusion-本章小结"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. CONCLUSION 本章小结</h2>
 <p>This kind of abstraction is not easy, and it will likely take several iterations to get just right. But it is possible. And since the world is full of marketing geniuses, it’s not hard to make the case that it’s often very necessary.</p>
 <blockquote>
 <p>这种抽象化处理并不容易，很有可能需要经历几个来回才能找到正确的方向，但这是完全可行的。由于世界上最不缺少的就是市场“大神”，很多时候做这些事情还真的是非常有必要的。</p>
 </blockquote>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-26 21:50:34
+2022-07-26 16:10:31
 </span></footer>
                                 
                                 </section>
@@ -1336,7 +1332,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Web是实现细节","level":"1.9.6.2","depth":3,"next":{"title":"应用程序框架是实现细节","level":"1.9.6.3","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/32-应用程序框架是实现细节.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/32-应用程序框架是实现细节.md","articles":[]},"previous":{"title":"数据库只是实现细节","level":"1.9.6.1","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/30-数据库只是实现细节.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/30-数据库只是实现细节.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/06-第六部分-实现细节/31-Web是实现细节.md","mtime":"2022-07-26T13:50:34.439Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Web是实现细节","level":"1.9.6.2","depth":3,"next":{"title":"应用程序框架是实现细节","level":"1.9.6.3","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/32-应用程序框架是实现细节.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/32-应用程序框架是实现细节.md","articles":[]},"previous":{"title":"数据库只是实现细节","level":"1.9.6.1","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/30-数据库只是实现细节.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/30-数据库只是实现细节.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/06-第六部分-实现细节/31-Web是实现细节.md","mtime":"2022-07-26T08:10:31.875Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1402,19 +1398,7 @@
         
     
         
-        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,13 +1190,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="typescript">TypeScript</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#typescript"><b>1. </b>TypeScript</a></li><ul><li><span class="title-icon "></span><a href="#小思考"><b>1.1. </b>小思考</a></li><ul><li><span class="title-icon "></span><a href="#类型类"><b>1.1.1. </b>类型类</a></li></ul><li><span class="title-icon "></span><a href="#介绍"><b>1.2. </b>介绍</a></li><li><span class="title-icon "></span><a href="#ts环境和helloworld"><b>1.3. </b>TS环境和Helloworld</a></li><li><span class="title-icon "></span><a href="#reactvuets环境实战"><b>1.4. </b>React/Vue+TS环境实战</a></li><ul><li><span class="title-icon "></span><a href="#react--ts"><b>1.4.1. </b>React + TS</a></li><li><span class="title-icon "></span><a href="#vue--ts"><b>1.4.2. </b>Vue + TS</a></li></ul><li><span class="title-icon "></span><a href="#ts日常篇（一些语法）"><b>1.5. </b>TS日常篇（一些语法）</a></li><li><span class="title-icon "></span><a href="#ts的窄化"><b>1.6. </b>TS的窄化</a></li><li><span class="title-icon "></span><a href="#泛型"><b>1.7. </b>泛型</a></li><li><span class="title-icon "></span><a href="#函数"><b>1.8. </b>函数</a></li><li><span class="title-icon "></span><a href="#class"><b>1.9. </b>Class</a></li><ul><li><span class="title-icon "></span><a href="#public、private、protected"><b>1.9.1. </b>public、private、protected</a></li><li><span class="title-icon "></span><a href="#抽象类"><b>1.9.2. </b>抽象类</a></li><li><span class="title-icon "></span><a href="#类型一致"><b>1.9.3. </b>类型一致</a></li></ul><li><span class="title-icon "></span><a href="#ts的模块"><b>1.10. </b>TS的模块</a></li><ul><li><span class="title-icon "></span><a href="#resolution"><b>1.10.1. </b>resolution</a></li></ul><li><span class="title-icon "></span><a href="#ts的实战"><b>1.11. </b>TS的实战</a></li></ul></ul></div><a href="#typescript" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="typescript"><a name="typescript" class="anchor-navigation-ex-anchor" href="#typescript"><i class="fa fa-link" aria-hidden="true"></i></a>1. TypeScript</h1>
 <p>[TOC]</p>
-<h2 id="小思考">小思考</h2>
+<h2 id="小思考"><a name="小思考" class="anchor-navigation-ex-anchor" href="#小思考"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. 小思考</h2>
 <p>接口等价于类型类</p>
 <p>「接口」是属于「面向对象」</p>
 <p>「类型类」属于「函数式编程」</p>
-<h3 id="类型类">类型类</h3>
+<h3 id="类型类"><a name="类型类" class="anchor-navigation-ex-anchor" href="#类型类"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. 类型类</h3>
 <ol>
 <li><p>整型可以被比较</p>
 </li>
@@ -1217,7 +1213,7 @@
 <blockquote>
 <p>类型的演化体现在系统的进步</p>
 </blockquote>
-<h2 id="介绍">介绍</h2>
+<h2 id="介绍"><a name="介绍" class="anchor-navigation-ex-anchor" href="#介绍"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. 介绍</h2>
 <p>2012年微软发布的一门编程语言</p>
 <ul>
 <li><p>Transcompiler - 翻译编译器 - 编译成JS</p>
@@ -1239,15 +1235,15 @@
 <p>TS是一种工具，并作为思考方式</p>
 <p>分清楚理解记忆和死记硬背</p>
 </blockquote>
-<h2 id="ts环境和helloworld">TS环境和Helloworld</h2>
+<h2 id="ts环境和helloworld"><a name="ts环境和helloworld" class="anchor-navigation-ex-anchor" href="#ts环境和helloworld"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. TS环境和Helloworld</h2>
 <p>Node环境的TS解释执行器（TS-Node）<strong>REPL</strong>（Read eval print loop）</p>
 <p>ts需要在有tsconfig的地方执行</p>
 <p>翻译编译器<strong>TSC</strong>，编译成js文件，需要编译的文件和编译后文件的位置都在tsconfig中配置好了。</p>
-<h2 id="reactvuets环境实战">React/Vue+TS环境实战</h2>
-<h3 id="react--ts">React + TS</h3>
+<h2 id="reactvuets环境实战"><a name="reactvuets环境实战" class="anchor-navigation-ex-anchor" href="#reactvuets环境实战"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. React/Vue+TS环境实战</h2>
+<h3 id="react--ts"><a name="react--ts" class="anchor-navigation-ex-anchor" href="#react--ts"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.1. React + TS</h3>
 <p>webpack</p>
 <p>rollup</p>
-<h3 id="vue--ts">Vue + TS</h3>
+<h3 id="vue--ts"><a name="vue--ts" class="anchor-navigation-ex-anchor" href="#vue--ts"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.2. Vue + TS</h3>
 <p>webpack</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">const</span> path = requires(<span class="hljs-string">&quot;path&quot;</span>)
 <span class="hljs-built_in">module</span>.exports = {
@@ -1310,7 +1306,7 @@
   ]
 }]
 </code></pre>
-<h2 id="ts日常篇（一些语法）">TS日常篇（一些语法）</h2>
+<h2 id="ts日常篇（一些语法）"><a name="ts日常篇（一些语法）" class="anchor-navigation-ex-anchor" href="#ts日常篇（一些语法）"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. TS日常篇（一些语法）</h2>
 <p>ts是js的一种「标注」</p>
 <p><strong>泛型</strong></p>
 <p><code>const a = new Array&lt;string&gt;()</code></p>
@@ -1472,7 +1468,7 @@ bear.meat
 <blockquote>
 <p>减少any和unknown的使用，尽可能的窄化类型</p>
 </blockquote>
-<h2 id="ts的窄化">TS的窄化</h2>
+<h2 id="ts的窄化"><a name="ts的窄化" class="anchor-navigation-ex-anchor" href="#ts的窄化"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. TS的窄化</h2>
 <p>类型的窄化Narrowing Conversion</p>
 <blockquote>
 <p>TS是通过控制流分析实现的类型窄化</p>
@@ -1547,7 +1543,7 @@ bear.meat
 <blockquote>
 <p>as、is是TS特有的关键字</p>
 </blockquote>
-<h2 id="泛型">泛型</h2>
+<h2 id="泛型"><a name="泛型" class="anchor-navigation-ex-anchor" href="#泛型"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. 泛型</h2>
 <p>interface 接口（Aspect）是各种能力接口组合在一起</p>
 <p>&lt;&gt;泛型（Generics）是对共性的提取。</p>
 <p>DeskMaker<t> 木头和石头都可以坐桌子，把这个特性提取出来，便是泛型</t></p>
@@ -1556,7 +1552,7 @@ bear.meat
 <p><strong><em>泛型可以对共性的抽象，可以将类型作为参数，更好的分离关注点</em></strong></p>
 <p>当我们想约束一个类型的成员的时候用接口</p>
 <p>当我们想提取一些类型的共性的时候去用泛型</p>
-<h2 id="函数">函数</h2>
+<h2 id="函数"><a name="函数" class="anchor-navigation-ex-anchor" href="#函数"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. 函数</h2>
 <p>构造函数的表达</p>
 <pre><code class="lang-typescript"><span class="hljs-keyword">type</span> SomeConstructor = {
   <span class="hljs-keyword">new</span> (s:int) :Sring
@@ -1577,31 +1573,31 @@ cosnt str = fn(<span class="hljs-built_in">String</span>) <span class="hljs-comm
 <p>函数的重载</p>
 <p>函数可以多写几次，从而让泛型模版的类型被提前确定。</p>
 <p>让一切都尽可能明确就是重载的意义</p>
-<h2 id="class">Class</h2>
+<h2 id="class"><a name="class" class="anchor-navigation-ex-anchor" href="#class"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. Class</h2>
 <p>继承是非常重的耦合，尽可能通过接口的组合或者泛型的标注，来实现行为的定义。</p>
-<h3 id="public、private、protected">public、private、protected</h3>
+<h3 id="public、private、protected"><a name="public、private、protected" class="anchor-navigation-ex-anchor" href="#public、private、protected"><i class="fa fa-link" aria-hidden="true"></i></a>1.9.1. public、private、protected</h3>
 <p>public公开</p>
 <p>private除了这个block中都不可以访问</p>
 <p>protected可以通过子类去访问 </p>
-<h3 id="抽象类">抽象类</h3>
+<h3 id="抽象类"><a name="抽象类" class="anchor-navigation-ex-anchor" href="#抽象类"><i class="fa fa-link" aria-hidden="true"></i></a>1.9.2. 抽象类</h3>
 <p>abstract 抽象类可以定义抽象方法，类似于接口，没有具体的实现</p>
 <p>抽象类不可以被new但是可以继承他，并且必须要实现抽象方法。</p>
-<h3 id="类型一致">类型一致</h3>
+<h3 id="类型一致"><a name="类型一致" class="anchor-navigation-ex-anchor" href="#类型一致"><i class="fa fa-link" aria-hidden="true"></i></a>1.9.3. 类型一致</h3>
 <p>ts会根据成员来判断两者类型是否一致，或者是否是继承关系。</p>
-<h2 id="ts的模块">TS的模块</h2>
+<h2 id="ts的模块"><a name="ts的模块" class="anchor-navigation-ex-anchor" href="#ts的模块"><i class="fa fa-link" aria-hidden="true"></i></a>1.10. TS的模块</h2>
 <p>模块是一个程序的集合（包括函数、变量、类等）</p>
 <p>模块是可见域的分离：模块内的成员仅仅在包内可见，包外成员无法访问</p>
 <p>模块是可以主动Export成员：外部就可以访问了</p>
 <p>TS中可以import type 只引入类型。 </p>
-<h3 id="resolution">resolution</h3>
+<h3 id="resolution"><a name="resolution" class="anchor-navigation-ex-anchor" href="#resolution"><i class="fa fa-link" aria-hidden="true"></i></a>1.10.1. resolution</h3>
 <p>import模块的查找方法Classic，从当前位置一个个去找模块</p>
 <p>另一个方法Node，他会去找module.ts/.tsx/.d.ts或者package.json</p>
-<h2 id="ts的实战">TS的实战</h2>
+<h2 id="ts的实战"><a name="ts的实战" class="anchor-navigation-ex-anchor" href="#ts的实战"><i class="fa fa-link" aria-hidden="true"></i></a>1.11. TS的实战</h2>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/花田的模型层.png" alt="模型层"></p>
 <p>服务端设计</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/花田服务端设计.png" alt="服务端"></p>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-20 10:55:46
+2022-07-21 08:53:32
 </span></footer>
                                 
                                 </section>
@@ -1645,7 +1641,7 @@ cosnt str = fn(<span class="hljs-built_in">String</span>) <span class="hljs-comm
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"TypeScript","level":"1.8.1","depth":2,"next":{"title":"vue3","level":"1.8.2","depth":2,"path":"vue/vue3.md","ref":"vue/vue3.md","articles":[]},"previous":{"title":"vue","level":"1.8","depth":1,"path":"vue/README.md","ref":"vue/README.md","articles":[{"title":"TypeScript","level":"1.8.1","depth":2,"path":"vue/TypeScript.md","ref":"vue/TypeScript.md","articles":[]},{"title":"vue3","level":"1.8.2","depth":2,"path":"vue/vue3.md","ref":"vue/vue3.md","articles":[]},{"title":"vue基础","level":"1.8.3","depth":2,"path":"vue/vue基础.md","ref":"vue/vue基础.md","articles":[]},{"title":"vue生态","level":"1.8.4","depth":2,"path":"vue/vue生态.md","ref":"vue/vue生态.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"vue/TypeScript.md","mtime":"2022-07-20T02:55:46.150Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"TypeScript","level":"1.8.1","depth":2,"next":{"title":"vue3","level":"1.8.2","depth":2,"path":"vue/vue3.md","ref":"vue/vue3.md","articles":[]},"previous":{"title":"vue","level":"1.8","depth":1,"path":"vue/README.md","ref":"vue/README.md","articles":[{"title":"TypeScript","level":"1.8.1","depth":2,"path":"vue/TypeScript.md","ref":"vue/TypeScript.md","articles":[]},{"title":"vue3","level":"1.8.2","depth":2,"path":"vue/vue3.md","ref":"vue/vue3.md","articles":[]},{"title":"vue基础","level":"1.8.3","depth":2,"path":"vue/vue基础.md","ref":"vue/vue基础.md","articles":[]},{"title":"vue生态","level":"1.8.4","depth":2,"path":"vue/vue生态.md","ref":"vue/vue生态.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"vue/TypeScript.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1711,19 +1707,7 @@ cosnt str = fn(<span class="hljs-built_in">String</span>) <span class="hljs-comm
         
     
         
-        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

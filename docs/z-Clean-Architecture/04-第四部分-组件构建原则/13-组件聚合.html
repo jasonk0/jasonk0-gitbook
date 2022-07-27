@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,7 +1190,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="chap13-component-cohesion-组件聚合">Chap13. COMPONENT COHESION 组件聚合</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#chap13-component-cohesion-组件聚合"><b>1. </b>Chap13. COMPONENT COHESION 组件聚合</a></li><ul><li><span class="title-icon "></span><a href="#the-reuserelease-equivalence-principle-复用发布等同原则"><b>1.1. </b>THE REUSE/RELEASE EQUIVALENCE PRINCIPLE 复用/发布等同原则</a></li><li><span class="title-icon "></span><a href="#the-common-closure-principle-共同闭包原则"><b>1.2. </b>THE COMMON CLOSURE PRINCIPLE 共同闭包原则</a></li><ul><li><span class="title-icon "></span><a href="#similarity-with-srp-与-srp-原则的相似点"><b>1.2.1. </b>SIMILARITY WITH SRP 与 SRP 原则的相似点</a></li></ul><li><span class="title-icon "></span><a href="#the-common-reuse-principle-共同复用原则"><b>1.3. </b>THE COMMON REUSE PRINCIPLE 共同复用原则</a></li><ul><li><span class="title-icon "></span><a href="#relation-to-isp-与-isp-原则的关系"><b>1.3.1. </b>RELATION TO ISP 与 ISP 原则的关系</a></li></ul><li><span class="title-icon "></span><a href="#the-tension-diagram-for-component-cohesion-组件聚合张力图"><b>1.4. </b>THE TENSION DIAGRAM FOR COMPONENT COHESION 组件聚合张力图</a></li><li><span class="title-icon "></span><a href="#conclusion-本章小结"><b>1.5. </b>CONCLUSION 本章小结</a></li></ul></ul></div><a href="#chap13-component-cohesion-组件聚合" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="chap13-component-cohesion-组件聚合"><a name="chap13-component-cohesion-组件聚合" class="anchor-navigation-ex-anchor" href="#chap13-component-cohesion-组件聚合"><i class="fa fa-link" aria-hidden="true"></i></a>1. Chap13. COMPONENT COHESION 组件聚合</h1>
 <p><img src="../un/CH-UN13.jpg" alt></p>
 <p>Which classes belong in which components? This is an important decision, and requires guidance from good software engineering principles. Unfortunately, over the years, this decision has been made in an ad hoc manner based almost entirely on context.</p>
 <blockquote>
@@ -1217,7 +1213,7 @@
 <li>CRP：共同复用原则。</li>
 </ul>
 </blockquote>
-<h2 id="the-reuserelease-equivalence-principle-复用发布等同原则">THE REUSE/RELEASE EQUIVALENCE PRINCIPLE 复用/发布等同原则</h2>
+<h2 id="the-reuserelease-equivalence-principle-复用发布等同原则"><a name="the-reuserelease-equivalence-principle-复用发布等同原则" class="anchor-navigation-ex-anchor" href="#the-reuserelease-equivalence-principle-复用发布等同原则"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. THE REUSE/RELEASE EQUIVALENCE PRINCIPLE 复用/发布等同原则</h2>
 <p>The granule of reuse is the granule of release.</p>
 <blockquote>
 <p>软件复用的最小粒度应等同于其发布的最小粒度。</p>
@@ -1254,7 +1250,7 @@
 <blockquote>
 <p>而且，REP 原则的上述薄弱性也会由以下两个原则所补充。CCP 和 CRP 会从相反的角度对这个原则进行有力的补偿。</p>
 </blockquote>
-<h2 id="the-common-closure-principle-共同闭包原则">THE COMMON CLOSURE PRINCIPLE 共同闭包原则</h2>
+<h2 id="the-common-closure-principle-共同闭包原则"><a name="the-common-closure-principle-共同闭包原则" class="anchor-navigation-ex-anchor" href="#the-common-closure-principle-共同闭包原则"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. THE COMMON CLOSURE PRINCIPLE 共同闭包原则</h2>
 <p>Gather into components those classes that change for the same reasons and at the same times. Separate into different components those classes that change at different times and for different reasons.</p>
 <blockquote>
 <p>我们应该将那些会同时修改，并且为相同目的而修改的类放到同一个组件中，而将不会同时修改，并且不会为了相同目的而修改的那些类放到不同的组件中。</p>
@@ -1279,7 +1275,7 @@
 <blockquote>
 <p>对于 CCP，我们还可以在此基础上做进一步的延伸，即可以将某一类变更所涉及的所有类尽量聚合在一处。这样当此类变更出现时，我们就可以最大限度地做到使该类变更只影响到有限的相关组件。</p>
 </blockquote>
-<h3 id="similarity-with-srp-与-srp-原则的相似点">SIMILARITY WITH SRP 与 SRP 原则的相似点</h3>
+<h3 id="similarity-with-srp-与-srp-原则的相似点"><a name="similarity-with-srp-与-srp-原则的相似点" class="anchor-navigation-ex-anchor" href="#similarity-with-srp-与-srp-原则的相似点"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. SIMILARITY WITH SRP 与 SRP 原则的相似点</h3>
 <p>As stated earlier, the CCP is the component form of the SRP. The SRP tells us to separate methods into different classes, if they change for different reasons. The CCP tells us to separate classes into different components, if they change for different reasons. Both principles can be summarized by the following sound bite:</p>
 <blockquote>
 <p>如前所述，CCP 原则实际上就是 SRP 原则的组件版。在 SRP 原则的指导下，我们将会把变更原因不同的函数放入不同的类中。而 CCP 原则指导我们应该将变更原因不同的类放入不同的组件中。简而言之，这两个原则都可以用以下一句简短的话来概括：</p>
@@ -1288,7 +1284,7 @@
 <blockquote>
 <p>将由于相同原因而修改，并且需要同时修改的东西放在一起，将由于不同原因而修改，并且不同时修改的东西分开。</p>
 </blockquote>
-<h2 id="the-common-reuse-principle-共同复用原则">THE COMMON REUSE PRINCIPLE 共同复用原则</h2>
+<h2 id="the-common-reuse-principle-共同复用原则"><a name="the-common-reuse-principle-共同复用原则" class="anchor-navigation-ex-anchor" href="#the-common-reuse-principle-共同复用原则"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. THE COMMON REUSE PRINCIPLE 共同复用原则</h2>
 <p>Don’t force users of a component to depend on things they don’t need.</p>
 <blockquote>
 <p>不要强迫一个组件的用户依赖他们不需要的东西。</p>
@@ -1321,14 +1317,14 @@
 <blockquote>
 <p>因此在 CRP 原则中，关于哪些类不应该被放在一起的建议是其更为重要的内容。简而言之，CRP 原则实际上是在指导我们：不是紧密相连的类不应该被放在同一个组件里。</p>
 </blockquote>
-<h3 id="relation-to-isp-与-isp-原则的关系">RELATION TO ISP 与 ISP 原则的关系</h3>
+<h3 id="relation-to-isp-与-isp-原则的关系"><a name="relation-to-isp-与-isp-原则的关系" class="anchor-navigation-ex-anchor" href="#relation-to-isp-与-isp-原则的关系"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. RELATION TO ISP 与 ISP 原则的关系</h3>
 <p>The CRP is the generic version of the ISP. The ISP advises us not to depend on classes that have methods we don’t use. The CRP advises us not to depend on components that have classes we don’t use.</p>
 <blockquote>
 <p>CRP 原则实际上是 LSP 原则的一个普适版。ISP 原则是建议我们不要依赖带有不需要的函数的类，而 CRP 原则则是建议我们不要依赖带有不需要的类的组件。不要依赖不需要用到的东西。</p>
 </blockquote>
 <p>All of this advice can be reduced to a single sound bite:</p>
 <p>Don’t depend on things you don’t need.</p>
-<h2 id="the-tension-diagram-for-component-cohesion-组件聚合张力图">THE TENSION DIAGRAM FOR COMPONENT COHESION 组件聚合张力图</h2>
+<h2 id="the-tension-diagram-for-component-cohesion-组件聚合张力图"><a name="the-tension-diagram-for-component-cohesion-组件聚合张力图" class="anchor-navigation-ex-anchor" href="#the-tension-diagram-for-component-cohesion-组件聚合张力图"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. THE TENSION DIAGRAM FOR COMPONENT COHESION 组件聚合张力图</h2>
 <p>You may have already realized that the three cohesion principles tend to fight each other. The REP and CCP are inclusive principles: Both tend to make components larger. The CRP is an exclusive principle, driving components to be smaller. It is the tension between these principles that good architects seek to resolve.</p>
 <blockquote>
 <p>读到这里，读者可能已经意识到上述三个原则之间彼此存在着竞争关系。REP 和 CCP 原则是黏合性原则，它们会让组件变得更大，而 CRP 原则是排除性原则，它会尽量让组件变小。软件架构师的任务就是要在这三个原则中间进行取舍。</p>
@@ -1351,13 +1347,13 @@
 <blockquote>
 <p>一般来说，一个软件项目的重心会从该三角区域的右侧开始，先期主要牺牲的是复用性。然后，随着项目逐渐成熟，其他项目会逐渐开始对其产生依赖，项目重心就会逐渐向该二角区域的左侧滑动。换句话说，一个项目在组件结构设计上的重心是根据该项目的开发时间和成熟度不断变动的，我们对组件结构的安排主要与项目开发的进度和它被使用的方式有关，与项目本身功能的关系其实很小。</p>
 </blockquote>
-<h2 id="conclusion-本章小结">CONCLUSION 本章小结</h2>
+<h2 id="conclusion-本章小结"><a name="conclusion-本章小结" class="anchor-navigation-ex-anchor" href="#conclusion-本章小结"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. CONCLUSION 本章小结</h2>
 <p>In the past, our view of cohesion was much simpler than the REP, CCP, and CRP implied. We once thought that cohesion was simply the attribute that a module performs one, and only one, function. However, the three principles of component cohesion describe a much more complex variety of cohesion. In choosing the classes to group together into components, we must consider the opposing forces involved in reusability and develop-ability. Balancing these forces with the needs of the application is nontrivial. Moreover, the balance is almost always dynamic. That is, the partitioning that is appropriate today might not be appropriate next year. As a consequence, the composition of the components will likely jitter and evolve with time as the focus of the project changes from develop-ability to reusability.</p>
 <blockquote>
 <p>过去，我们对组件在构建过程中要遵循的组合原则的理解要比 REP、CCP、CRP 这三个原则更有限。我们最初所理解的组合原则可能完全基于单一职责原则。然而，本章介绍的这三个原则为我们描述了一个更为复杂的决策过程。在决定将哪些类归为同一个组件时，必须要考虑到研发性与复用性之间的矛盾，并根据应用程序的需要来平衡这两个矛盾，这是一件很不容易的事。而且，这种平衡本身也在不断变化。也就是说，当下适用的分割方式可能明年就不再适用了。所以，组件的构成安排应随着项目重心的不同，以及研发性与复用性的不同而不断演化。</p>
 </blockquote>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-26 21:50:34
+2022-07-26 15:54:49
 </span></footer>
                                 
                                 </section>
@@ -1401,7 +1397,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"组件聚合","level":"1.9.4.2","depth":3,"next":{"title":"组件耦合","level":"1.9.4.3","depth":3,"path":"z-Clean-Architecture/04-第四部分-组件构建原则/14-组件耦合.md","ref":"z-Clean-Architecture/04-第四部分-组件构建原则/14-组件耦合.md","articles":[]},"previous":{"title":"组件","level":"1.9.4.1","depth":3,"path":"z-Clean-Architecture/04-第四部分-组件构建原则/12-组件.md","ref":"z-Clean-Architecture/04-第四部分-组件构建原则/12-组件.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/04-第四部分-组件构建原则/13-组件聚合.md","mtime":"2022-07-26T13:50:34.431Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"组件聚合","level":"1.9.4.2","depth":3,"next":{"title":"组件耦合","level":"1.9.4.3","depth":3,"path":"z-Clean-Architecture/04-第四部分-组件构建原则/14-组件耦合.md","ref":"z-Clean-Architecture/04-第四部分-组件构建原则/14-组件耦合.md","articles":[]},"previous":{"title":"组件","level":"1.9.4.1","depth":3,"path":"z-Clean-Architecture/04-第四部分-组件构建原则/12-组件.md","ref":"z-Clean-Architecture/04-第四部分-组件构建原则/12-组件.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/04-第四部分-组件构建原则/13-组件聚合.md","mtime":"2022-07-26T07:54:49.795Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1467,19 +1463,7 @@
         
     
         
-        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

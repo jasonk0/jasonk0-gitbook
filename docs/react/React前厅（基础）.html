@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,8 +1190,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="react">React</h1>
-<h2 id="前言">前言</h2>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#react"><b>1. </b>React</a></li><ul><li><span class="title-icon "></span><a href="#前言"><b>1.1. </b>前言</a></li><li><span class="title-icon "></span><a href="#基础入门（前厅）"><b>1.2. </b>基础入门（前厅）</a></li><ul><li><span class="title-icon "></span><a href="#环境配置"><b>1.2.1. </b>环境配置</a></li><li><span class="title-icon "></span><a href="#jsx"><b>1.2.2. </b>JSX</a></li><li><span class="title-icon "></span><a href="#css"><b>1.2.3. </b>CSS</a></li><li><span class="title-icon "></span><a href="#props"><b>1.2.4. </b>Props</a></li></ul><li><span class="title-icon "></span><a href="#进阶知识（正殿）"><b>1.3. </b>进阶知识（正殿）</a></li><ul><li><span class="title-icon "></span><a href="#事件处理"><b>1.3.1. </b>事件处理</a></li><li><span class="title-icon "></span><a href="#state"><b>1.3.2. </b>state</a></li><li><span class="title-icon "></span><a href="#生命周期"><b>1.3.3. </b>生命周期</a></li><li><span class="title-icon "></span><a href="#react的组件设计模式"><b>1.3.4. </b>React的组件设计模式</a></li></ul><li><span class="title-icon "></span><a href="#生态工具（花园）"><b>1.4. </b>生态工具（花园）</a></li><ul><li><span class="title-icon "></span><a href="#react-router"><b>1.4.1. </b>React router</a></li><li><span class="title-icon "></span><a href="#antdesign"><b>1.4.2. </b>AntDesign</a></li></ul><li><span class="title-icon "></span><a href="#高级应用（边廊）"><b>1.5. </b>高级应用（边廊）</a></li><ul><li><span class="title-icon "></span><a href="#_1"><b>1.5.1. </b> </a></li><li><span class="title-icon "></span><a href="#_2"><b>1.5.2. </b> </a></li><li><span class="title-icon "></span><a href="#_3"><b>1.5.3. </b> </a></li></ul><li><span class="title-icon "></span><a href="#原理讲解（穹顶）"><b>1.6. </b>原理讲解（穹顶）</a></li></ul></ul></div><a href="#react" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="react"><a name="react" class="anchor-navigation-ex-anchor" href="#react"><i class="fa fa-link" aria-hidden="true"></i></a>1. React</h1>
+<h2 id="前言"><a name="前言" class="anchor-navigation-ex-anchor" href="#前言"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. 前言</h2>
 <p>基础 + 进阶</p>
 <p>facebook的工程师2011年开发的</p>
 <p>专注于业务开发，减少与DOM的交互</p>
@@ -1205,8 +1201,8 @@
 <p>相比于vue、angular，应用更加广泛。</p>
 <p>生态完善、友好的开发环境</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/react生态.png" alt="生态"></p>
-<h2 id="基础入门（前厅）">基础入门（前厅）</h2>
-<h3 id="环境配置">环境配置</h3>
+<h2 id="基础入门（前厅）"><a name="基础入门（前厅）" class="anchor-navigation-ex-anchor" href="#基础入门（前厅）"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. 基础入门（前厅）</h2>
+<h3 id="环境配置"><a name="环境配置" class="anchor-navigation-ex-anchor" href="#环境配置"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. 环境配置</h3>
 <p>NVM：node版本管理</p>
 <p>VSCode</p>
 <p>Node</p>
@@ -1216,11 +1212,11 @@
 <p>跟着选项选择就可以了</p>
 <p><code>npm install</code> 项目创建好后，安装依赖</p>
 <p><code>vite/npm run dev</code>就可以跑起来了</p>
-<h4 id="工具插件：bootsrap、第三方插件、eject">工具插件：bootsrap、第三方插件、eject</h4>
+<h4 id="工具插件：bootsrap、第三方插件、eject"><a name="工具插件：bootsrap、第三方插件、eject" class="anchor-navigation-ex-anchor" href="#工具插件：bootsrap、第三方插件、eject"><i class="fa fa-link" aria-hidden="true"></i></a>工具插件：bootsrap、第三方插件、eject</h4>
 <p>扩展：simple react snippets</p>
 <p>eject命令将一些隐藏的内容和配置展示出来。 </p>
 <p>codesandbox：在线网站（提供各种环境）</p>
-<h3 id="jsx">JSX</h3>
+<h3 id="jsx"><a name="jsx" class="anchor-navigation-ex-anchor" href="#jsx"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.2. JSX</h3>
 <p>构建组件的要点：</p>
 <ul>
 <li>组件位置，在树状图里的位置</li>
@@ -1236,14 +1232,14 @@
 <li>遵循JS语法</li>
 </ul>
 <p>渲染逻辑是UI中逻辑的耦合(事件绑定等)，这也遵循了「关注点分离原则」</p>
-<h4 id="关于babel">关于Babel</h4>
+<h4 id="关于babel"><a name="关于babel" class="anchor-navigation-ex-anchor" href="#关于babel"><i class="fa fa-link" aria-hidden="true"></i></a>关于Babel</h4>
 <p>他是一个Javascript编译器，比如将箭头函数编译为低版本亦可使用的正常函数。</p>
 <p>babel会把JSX中的XML转化成浏览器可以执行的代码，也就是生成DOM树:evergreen_tree:所需要的DOM操作。</p>
-<h4 id="fragment">Fragment</h4>
+<h4 id="fragment"><a name="fragment" class="anchor-navigation-ex-anchor" href="#fragment"><i class="fa fa-link" aria-hidden="true"></i></a>Fragment</h4>
 <p>一个虚拟的节点包裹两个并列的子节点，来保证babel可以解析并列的子节点。但是真实DOM中是没有这个节点的。</p>
 <p>简写：<code>&lt;&gt;&lt;/&gt;</code></p>
 <p>除了以上的情形，还可用作表格父子组件中子组件「列」的包裹。</p>
-<h4 id="拓展">拓展</h4>
+<h4 id="拓展"><a name="拓展" class="anchor-navigation-ex-anchor" href="#拓展"><i class="fa fa-link" aria-hidden="true"></i></a>拓展</h4>
 <p>babel的运行原理：解析（parse），转换（transform），生成（generate）。</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/babel原理.png" alt="babel原理"></p>
 <p><strong>解析</strong></p>
@@ -1255,7 +1251,7 @@
 <p><strong>生成</strong></p>
 <p>利用 babel-generator 将 AST 树输出为转码后的代码字符串</p>
 <p>资料阅读<a href="https://github.com/barretlee/babel-plugin-ast" target="_blank">https://github.com/barretlee/babel-plugin-ast</a></p>
-<h3 id="css">CSS</h3>
+<h3 id="css"><a name="css" class="anchor-navigation-ex-anchor" href="#css"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.3. CSS</h3>
 <p>行内样式</p>
 <pre><code class="lang-JSX">render(){
   <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{color:</span> &apos;#<span class="hljs-attr">777</span>&apos;,<span class="hljs-attr">fontSize</span> <span class="hljs-attr">:</span> &apos;<span class="hljs-attr">80px</span>&apos;}&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>
@@ -1281,11 +1277,11 @@
   )
 }
 </code></pre>
-<h3 id="props">Props</h3>
+<h3 id="props"><a name="props" class="anchor-navigation-ex-anchor" href="#props"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.4. Props</h3>
 <p>什么是Pros？</p>
 <p>当React元素作为自定义组件，将JSX所接受的属性转化为单个对象传递给组件，这个对象被称为props</p>
 <p>也就是父组件传给子组件的对象。也是一个组件的固有属性。</p>
-<h4 id="函数组件与类组件">函数组件与类组件</h4>
+<h4 id="函数组件与类组件"><a name="函数组件与类组件" class="anchor-navigation-ex-anchor" href="#函数组件与类组件"><i class="fa fa-link" aria-hidden="true"></i></a>函数组件与类组件</h4>
 <p>他们的不同在于参数的传递和拿取</p>
 <pre><code class="lang-jsx"><span class="hljs-keyword">const</span> listItem = <span class="hljs-function">(<span class="hljs-params">props</span>) =&gt;</span> {
   <span class="hljs-keyword">return</span> (
@@ -1307,7 +1303,7 @@
 }
 </code></pre>
 <p>函数组件也称作无状态组件，组件内没有this（组件示实例），也没有生命周期。是一个轻量的组件。</p>
-<h4 id="列表渲染">列表渲染</h4>
+<h4 id="列表渲染"><a name="列表渲染" class="anchor-navigation-ex-anchor" href="#列表渲染"><i class="fa fa-link" aria-hidden="true"></i></a>列表渲染</h4>
 <pre><code class="lang-jsx"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ListItem</span> </span>{
     <span class="hljs-keyword">const</span> listData = []
   <span class="hljs-keyword">return</span> (
@@ -1321,7 +1317,7 @@
   )
 }
 </code></pre>
-<h4 id="条件渲染">条件渲染</h4>
+<h4 id="条件渲染"><a name="条件渲染" class="anchor-navigation-ex-anchor" href="#条件渲染"><i class="fa fa-link" aria-hidden="true"></i></a>条件渲染</h4>
 <pre><code class="lang-jsx"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ListItem</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Component</span> </span>{
   <span class="hljs-keyword">let</span> count = <span class="hljs-number">0</span>
   <span class="hljs-keyword">constructor</span>(props) {
@@ -1341,8 +1337,8 @@
   )
 }
 </code></pre>
-<h2 id="进阶知识（正殿）">进阶知识（正殿）</h2>
-<h3 id="事件处理">事件处理</h3>
+<h2 id="进阶知识（正殿）"><a name="进阶知识（正殿）" class="anchor-navigation-ex-anchor" href="#进阶知识（正殿）"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. 进阶知识（正殿）</h2>
+<h3 id="事件处理"><a name="事件处理" class="anchor-navigation-ex-anchor" href="#事件处理"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. 事件处理</h3>
 <p>React事件和DOM事件大相径庭</p>
 <p>在使用this调用其他方法时，会发现this为undefined，此时可以使用bind方法绑定this：</p>
 <ol>
@@ -1350,7 +1346,7 @@
 <li>在构造函数里绑定this，并代替原来的方法。</li>
 <li>使用箭头函数创建方法</li>
 </ol>
-<h4 id="向事件处理函数传递参数">向事件处理函数传递参数</h4>
+<h4 id="向事件处理函数传递参数"><a name="向事件处理函数传递参数" class="anchor-navigation-ex-anchor" href="#向事件处理函数传递参数"><i class="fa fa-link" aria-hidden="true"></i></a>向事件处理函数传递参数</h4>
 <p>在XML中传入参数：用bind传递；用箭头函数传递参数。</p>
 <p>两个方法的前提都是为了this指向明确，然后传递参数。</p>
 <pre><code class="lang-jsx">// 自己包装的方法
@@ -1374,16 +1370,16 @@ handel = (name,ev)=&gt;{
   render() { 
     return (&lt;button onClick={(ev)=&gt;this.handel(this.state.name,ev)}&gt;hello&lt;/button&gt;);
 </code></pre>
-<h4 id="向父组件传递参数">向父组件传递参数</h4>
+<h4 id="向父组件传递参数"><a name="向父组件传递参数" class="anchor-navigation-ex-anchor" href="#向父组件传递参数"><i class="fa fa-link" aria-hidden="true"></i></a>向父组件传递参数</h4>
 <p>在子组件上定义一个事件<code>onDel</code>绑定到父组件的处理函数上，然后在子组件里通过并绑定点击事件<code>onClick</code>到自定义事件<code>onDel</code>上来传参；子组件可以引用父组件的事件<code>onClick = this.props.onDel(id)</code></p>
-<h4 id="事件机制">事件机制</h4>
+<h4 id="事件机制"><a name="事件机制" class="anchor-navigation-ex-anchor" href="#事件机制"><i class="fa fa-link" aria-hidden="true"></i></a>事件机制</h4>
 <p>DOM的事件机制：捕获 =&gt; 目标事件处理 =&gt; 冒泡</p>
 <p>所以可以进行「事件委托」</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/DOM事件处理机制.png" alt="DOM事件"></p>
 <p>React事件机制：事件都会被绑定在document上，一般会在冒泡阶段处理</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/React的事件机制.png" alt="React事件"></p>
 <p>React事件是合成事件，在document监听所有的支持事件，使用统一的分发函数dispatchEvent</p>
-<h4 id="拓展">拓展</h4>
+<h4 id="拓展_1"><a name="拓展_1" class="anchor-navigation-ex-anchor" href="#拓展_1"><i class="fa fa-link" aria-hidden="true"></i></a>拓展</h4>
 <blockquote>
 <p>合成事件（SyntheticEvent）：React自己实现了一套高效的事件注册，存储，分发和重用逻辑，在DOM事件体系基础上做了很大改进，减少了内存消耗，简化了事件逻辑，并最大化的解决了IE等浏览器的不兼容问题。</p>
 </blockquote>
@@ -1393,9 +1389,9 @@ handel = (name,ev)=&gt;{
 <li>由于原生事件是先于合成事件的，而且合成事件的冒泡机制是通过将目标组件和处理函数加入「事件处理模型」生成「处理函数队列」，再使用统一的分发函数dispatchEvent去执行处理函数的方式实现的；所以使用<code>stopPropagation()</code>是无法停止事件冒泡的，应该使用<code>preventDefault()</code>来阻止事件传播。</li>
 <li>React使用对象池来管理合成事件对象的创建和销毁，减少了垃圾生成和新内存的分配，大大提高性能。</li>
 </ol>
-<h3 id="state">state</h3>
+<h3 id="state"><a name="state" class="anchor-navigation-ex-anchor" href="#state"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.2. state</h3>
 <p>React-devTools调试工具</p>
-<h4 id="基础">基础</h4>
+<h4 id="基础"><a name="基础" class="anchor-navigation-ex-anchor" href="#基础"><i class="fa fa-link" aria-hidden="true"></i></a>基础</h4>
 <p>定义：在constructor里定义state</p>
 <p><strong>何时定义？</strong></p>
 <p>是否可以通过props父组件获取；是否可以通过其他state和props计算得到；是否在render方法中使用。</p>
@@ -1427,7 +1423,7 @@ handel = (name,ev)=&gt;{
 </ul>
 <p>state 可以通过 proos 传入子组件</p>
 <p>props 可以初始化 state</p>
-<h4 id="进阶">进阶</h4>
+<h4 id="进阶"><a name="进阶" class="anchor-navigation-ex-anchor" href="#进阶"><i class="fa fa-link" aria-hidden="true"></i></a>进阶</h4>
 <p>一般情况下porps、state即使不变仍然会调用render函数，完全没必要。可以通过shouldComponentUpdata来进行判断前后值是否一样，一样的话就不render；或者可以使用更方便的PureComponent</p>
 <p><strong>单一数据源</strong></p>
 <p>同一页面下的组件使用一个数据源</p>
@@ -1444,7 +1440,7 @@ handel = (name,ev)=&gt;{
 <p>使用不可变数据：方便管理响应式属性</p>
 <p>单一数据源及状态提升：保证单一数据流，方便状态管理</p>
 <p>无状态组件：使用函数组件书写更加简洁（仅展示）</p>
-<h3 id="生命周期">生命周期</h3>
+<h3 id="生命周期"><a name="生命周期" class="anchor-navigation-ex-anchor" href="#生命周期"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.3. 生命周期</h3>
 <p>三个阶段：创建阶段-更新阶段-卸载阶段</p>
 <p><strong>创建阶段</strong></p>
 <p>初始化：<code>constructor</code></p>
@@ -1463,12 +1459,12 @@ handel = (name,ev)=&gt;{
 <p>​    可以比对props的前后变化，发生变化的话可以进行一些操作</p>
 <p><code>componentWillUnmount</code></p>
 <p>​    组件即将卸载</p>
-<h3 id="react的组件设计模式">React的组件设计模式</h3>
+<h3 id="react的组件设计模式"><a name="react的组件设计模式" class="anchor-navigation-ex-anchor" href="#react的组件设计模式"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.4. React的组件设计模式</h3>
 <p>高阶组件和函数作为子组件renderProps</p>
-<h4 id="高阶组件hoc">高阶组件HOC</h4>
+<h4 id="高阶组件hoc"><a name="高阶组件hoc" class="anchor-navigation-ex-anchor" href="#高阶组件hoc"><i class="fa fa-link" aria-hidden="true"></i></a>高阶组件HOC</h4>
 <p>提供可复用性高，健壮性好的通用组件，减少重复代码。</p>
 <p>高阶组件是对现有组件的封装，接收组件作为参数返回一个新的组件。</p>
-<h4 id="函数作为子组件renderprops">函数作为子组件renderProps</h4>
+<h4 id="函数作为子组件renderprops"><a name="函数作为子组件renderprops" class="anchor-navigation-ex-anchor" href="#函数作为子组件renderprops"><i class="fa fa-link" aria-hidden="true"></i></a>函数作为子组件renderProps</h4>
 <p>可以理解为子组件拿到父组件传入的props（包含着父组件的渲染函数内容）然后渲染出来</p>
 <pre><code class="lang-react">// 作为子组件被调用，使用props传来的render函数渲染
 // 状态依旧是在这里管理
@@ -1489,17 +1485,17 @@ render(){
     )
 }
 </code></pre>
-<h2 id="生态工具（花园）">生态工具（花园）</h2>
-<h3 id="react-router">React router</h3>
-<h3 id="antdesign">AntDesign</h3>
-<h2 id="高级应用（边廊）">高级应用（边廊）</h2>
+<h2 id="生态工具（花园）"><a name="生态工具（花园）" class="anchor-navigation-ex-anchor" href="#生态工具（花园）"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. 生态工具（花园）</h2>
+<h3 id="react-router"><a name="react-router" class="anchor-navigation-ex-anchor" href="#react-router"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.1. React router</h3>
+<h3 id="antdesign"><a name="antdesign" class="anchor-navigation-ex-anchor" href="#antdesign"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.2. AntDesign</h3>
+<h2 id="高级应用（边廊）"><a name="高级应用（边廊）" class="anchor-navigation-ex-anchor" href="#高级应用（边廊）"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. 高级应用（边廊）</h2>
 <h2 id>#</h2>
-<h3 id> </h3>
-<h3 id> </h3>
-<h3 id> </h3>
-<h2 id="原理讲解（穹顶）">原理讲解（穹顶）</h2>
+<h3 id="_1"><a name="_1" class="anchor-navigation-ex-anchor" href="#_1"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.1.  </h3>
+<h3 id="_2"><a name="_2" class="anchor-navigation-ex-anchor" href="#_2"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.2.  </h3>
+<h3 id="_3"><a name="_3" class="anchor-navigation-ex-anchor" href="#_3"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.3.  </h3>
+<h2 id="原理讲解（穹顶）"><a name="原理讲解（穹顶）" class="anchor-navigation-ex-anchor" href="#原理讲解（穹顶）"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. 原理讲解（穹顶）</h2>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-20 10:55:45
+2022-07-21 08:53:32
 </span></footer>
                                 
                                 </section>
@@ -1543,7 +1539,7 @@ render(){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"React前厅（基础）","level":"1.7.1","depth":2,"next":{"title":"vue","level":"1.8","depth":1,"path":"vue/README.md","ref":"vue/README.md","articles":[{"title":"TypeScript","level":"1.8.1","depth":2,"path":"vue/TypeScript.md","ref":"vue/TypeScript.md","articles":[]},{"title":"vue3","level":"1.8.2","depth":2,"path":"vue/vue3.md","ref":"vue/vue3.md","articles":[]},{"title":"vue基础","level":"1.8.3","depth":2,"path":"vue/vue基础.md","ref":"vue/vue基础.md","articles":[]},{"title":"vue生态","level":"1.8.4","depth":2,"path":"vue/vue生态.md","ref":"vue/vue生态.md","articles":[]}]},"previous":{"title":"react","level":"1.7","depth":1,"path":"react/README.md","ref":"react/README.md","articles":[{"title":"React前厅（基础）","level":"1.7.1","depth":2,"path":"react/React前厅（基础）.md","ref":"react/React前厅（基础）.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"react/React前厅（基础）.md","mtime":"2022-07-20T02:55:45.723Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"React前厅（基础）","level":"1.7.1","depth":2,"next":{"title":"vue","level":"1.8","depth":1,"path":"vue/README.md","ref":"vue/README.md","articles":[{"title":"TypeScript","level":"1.8.1","depth":2,"path":"vue/TypeScript.md","ref":"vue/TypeScript.md","articles":[]},{"title":"vue3","level":"1.8.2","depth":2,"path":"vue/vue3.md","ref":"vue/vue3.md","articles":[]},{"title":"vue基础","level":"1.8.3","depth":2,"path":"vue/vue基础.md","ref":"vue/vue基础.md","articles":[]},{"title":"vue生态","level":"1.8.4","depth":2,"path":"vue/vue生态.md","ref":"vue/vue生态.md","articles":[]}]},"previous":{"title":"react","level":"1.7","depth":1,"path":"react/README.md","ref":"react/README.md","articles":[{"title":"React前厅（基础）","level":"1.7.1","depth":2,"path":"react/React前厅（基础）.md","ref":"react/React前厅（基础）.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"react/React前厅（基础）.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1609,19 +1605,7 @@ render(){
         
     
         
-        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

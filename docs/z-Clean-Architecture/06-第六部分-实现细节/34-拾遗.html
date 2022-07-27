@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,7 +1190,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="chap34-the-missing-chapter-拾遗">Chap34. THE MISSING CHAPTER 拾遗</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#chap34-the-missing-chapter-拾遗"><b>1. </b>Chap34. THE MISSING CHAPTER 拾遗</a></li><ul><li><span class="title-icon "></span><a href="#package-by-layer-按层封装"><b>1.1. </b>PACKAGE BY LAYER 按层封装</a></li><li><span class="title-icon "></span><a href="#package-by-feature-按功能封装"><b>1.2. </b>PACKAGE BY FEATURE 按功能封装</a></li><li><span class="title-icon "></span><a href="#ports-and-adapters-端口和适配器"><b>1.3. </b>PORTS AND ADAPTERS 端口和适配器</a></li><li><span class="title-icon "></span><a href="#package-by-component-按组件封装"><b>1.4. </b>PACKAGE BY COMPONENT 按组件封装</a></li><li><span class="title-icon "></span><a href="#the-devil-is-in-the-implementation-details-具体实现细节中的陷阱"><b>1.5. </b>THE DEVIL IS IN THE IMPLEMENTATION DETAILS 具体实现细节中的陷阱</a></li><li><span class="title-icon "></span><a href="#organization-versus-encapsulation-组织形式与封装的区别"><b>1.6. </b>ORGANIZATION VERSUS ENCAPSULATION 组织形式与封装的区别</a></li><li><span class="title-icon "></span><a href="#other-decoupling-modes-其他的解耦合模式"><b>1.7. </b>OTHER DECOUPLING MODES 其他的解耦合模式</a></li><li><span class="title-icon "></span><a href="#conclusion-the-missing-advice-本章小结：本书拾遗"><b>1.8. </b>CONCLUSION: THE MISSING ADVICE 本章小结：本书拾遗</a></li></ul></ul></div><a href="#chap34-the-missing-chapter-拾遗" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="chap34-the-missing-chapter-拾遗"><a name="chap34-the-missing-chapter-拾遗" class="anchor-navigation-ex-anchor" href="#chap34-the-missing-chapter-拾遗"><i class="fa fa-link" aria-hidden="true"></i></a>1. Chap34. THE MISSING CHAPTER 拾遗</h1>
 <p><img src="../un/CH-UN34.jpg" alt></p>
 <p>By Simon Brown</p>
 <p>All of the advice you’ve read so far will certainly help you design better software, composed of classes and components with well-defined boundaries, clear responsibilities, and controlled dependencies. But it turns out that the devil is in the implementation details, and it’s really easy to fall at the last hurdle if you don’t give that some thought, too.</p>
@@ -1205,7 +1201,7 @@
 <blockquote>
 <p>下面我们再来看一个例子，假设正在构建一个在线书店，这个例子的任务是实现一个客户査看订单状态的用例，虽然这是一个 Java 程序的示例，但其所示范的原理适用于任何语言。现在，让我们暂时将整洁架构的概念放在一边，先来看一下如何具体安排代码设计和代码结构。</p>
 </blockquote>
-<h2 id="package-by-layer-按层封装">PACKAGE BY LAYER 按层封装</h2>
+<h2 id="package-by-layer-按层封装"><a name="package-by-layer-按层封装" class="anchor-navigation-ex-anchor" href="#package-by-layer-按层封装"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. PACKAGE BY LAYER 按层封装</h2>
 <p>The first, and perhaps simplest, design approach is the traditional horizontal layered architecture, where we separate our code based on what it does from a technical perspective. This is often called “package by layer.” Figure 34.1 shows what this might look like as a UML class diagram.</p>
 <blockquote>
 <p>我们首先想到的，也可能是最简单的设计方式，就是传统的水平分层架构。在这个架构里，我们将代码从技术角度进行分类。这通常被称为“按层封装”。图 34.1 用 UML 类图展示了这种设计。</p>
@@ -1241,7 +1237,7 @@
 <blockquote>
 <p>如 Bob 所说，这里还存在另外一个问题是，分层架构无法展现具体的业务领域信息。把两个不同业务领域的、但是都采用了分层架构的代码进行对比，你会发现它们的相似程度极高：都有 Web 层、服务层和数据仓库层。这是分层架构的另外一个问题，后文会具体讲述。</p>
 </blockquote>
-<h2 id="package-by-feature-按功能封装">PACKAGE BY FEATURE 按功能封装</h2>
+<h2 id="package-by-feature-按功能封装"><a name="package-by-feature-按功能封装" class="anchor-navigation-ex-anchor" href="#package-by-feature-按功能封装"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. PACKAGE BY FEATURE 按功能封装</h2>
 <p>Another option for organizing your code is to adopt a “package by feature” style. This is a vertical slicing, based on related features, domain concepts, or aggregate roots (to use domain-driven design terminology). In the typical implementations that I’ve seen, all of the types are placed into a single Java package, which is named to reflect the concept that is being grouped.</p>
 <blockquote>
 <p>另外一种组织代码的形式是“按功能封装”，即垂直切分，根据相关的功能、业务概念或者聚合根（领域驱动设计原则中的术语）来切分。在常见的实现中，所有的类型都会放在一个相同的包中，以业务概念来命名。</p>
@@ -1256,7 +1252,7 @@
 </blockquote>
 <figures figure="34-2">Package by feature</figures>
 
-<h2 id="ports-and-adapters-端口和适配器">PORTS AND ADAPTERS 端口和适配器</h2>
+<h2 id="ports-and-adapters-端口和适配器"><a name="ports-and-adapters-端口和适配器" class="anchor-navigation-ex-anchor" href="#ports-and-adapters-端口和适配器"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. PORTS AND ADAPTERS 端口和适配器</h2>
 <p>As Uncle Bob has said, approaches such as “ports and adapters,” the “hexagonal architecture,” “boundaries, controllers, entities,” and so on aim to create architectures where business/domain-focused code is independent and separate from the technical implementation details such as frameworks and databases. To summarize, you often see such code bases being composed of an “inside” (domain) and an “outside” (infrastructure), as suggested in Figure 34.3.</p>
 <blockquote>
 <p>如 Bob 大叔所说，通过采用“端口和适配器”“六边形架构”“边界、控制器、实体”等，我们可以创造出一个业务领域代码与具体实现细节（数据库、框架等）隔离的架构。总结下来，如图 34.3 所示，我们可以区分出代码中的内部代码（领域，Domain）与外部代码（基础设施，Infrastructure）。</p>
@@ -1277,7 +1273,7 @@
 <blockquote>
 <p>值得注意的是，这里是 UML 类图的一个简化版，这里缺少了交互器，以及跨边界调用时对应的数据编码解码对象。</p>
 </blockquote>
-<h2 id="package-by-component-按组件封装">PACKAGE BY COMPONENT 按组件封装</h2>
+<h2 id="package-by-component-按组件封装"><a name="package-by-component-按组件封装" class="anchor-navigation-ex-anchor" href="#package-by-component-按组件封装"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. PACKAGE BY COMPONENT 按组件封装</h2>
 <p>Although I agree wholeheartedly with the discussions about SOLID, REP, CCP, and CRP and most of the advice in this book, I come to a slightly different conclusion about how to organize code. So I’m going to present another option here, which I call “package by component.” To give you some background, I’ve spent most of my career building enterprise software, primarily in Java, across a number of different business domains. Those software systems have varied immensely, too. A large number have been web-based, but others have been client–server4, distributed, message-based, or something else. Although the technologies differed, the common theme was that the architecture for most of these software systems was based on a traditional layered architecture.</p>
 <blockquote>
 <p>虽然我对本书中的 SOLID、REP、CCP、CRP 以及其他大部分建议完全认同，我想提出对代码组织方式的一个不同看法——“按组件封装”。一些背景信息：在我的职业生涯中，我基于 Java 构建了大量不同领域的企业软件，这些软件系统要求各异。大部分系统都是基于 Web 的，也有一些是 CS 架构，或者是分布式架构的、基于消息的，或者其他的。虽然具体采用的技术不同，但大部分系统都是基于传统的分层架构的。</p>
@@ -1338,7 +1334,7 @@
 <blockquote>
 <p>这种“按组件封装”的方式的一个好处是，如果我们需要编写和订单有关的代码，只有一个位置需要修改 OrdersComponet。在这个组件中，仍然应该关注重点隔离原则，但这是组件内部|可题，使用者不需要关心。这就有点像采用微服务架构，或者是面向服务架构的结果——独立的 Orderservice 会将所有订单相关的东西封装起来。这里关键的区别是解耦的方式。我们可以认为，单体程序中的一个良好定义的组件，是微服务化架构的一个前提条件。</p>
 </blockquote>
-<h2 id="the-devil-is-in-the-implementation-details-具体实现细节中的陷阱">THE DEVIL IS IN THE IMPLEMENTATION DETAILS 具体实现细节中的陷阱</h2>
+<h2 id="the-devil-is-in-the-implementation-details-具体实现细节中的陷阱"><a name="the-devil-is-in-the-implementation-details-具体实现细节中的陷阱" class="anchor-navigation-ex-anchor" href="#the-devil-is-in-the-implementation-details-具体实现细节中的陷阱"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. THE DEVIL IS IN THE IMPLEMENTATION DETAILS 具体实现细节中的陷阱</h2>
 <p>On the face of it, the four approaches do all look like different ways to organize code and, therefore, could be considered different architectural styles. This perception starts to unravel very quickly if you get the implementation details wrong, though.</p>
 <blockquote>
 <p>表面上看，四种代码组织方式各不相同，可以认为是不同的架构设计风格。可是，如果具体实现中不严加注意，很快就会出现偏差。</p>
@@ -1347,7 +1343,7 @@
 <blockquote>
 <p>我经常遇到的一个问题是，Java 中 public 访问控制修饰符的滥用。我们作为程序员，好像天生就喜欢使用严 public 关键词。这就好像是肌肉记忆一样。如果不信，请看一下各种书籍的代码示范、各种入门教程，以及 GitHub 上的开源框架。这个趋势是显而易见的，不管采用了哪种系统架构风格。将所有的类都设置为 public 意味着就无法利用编程语言提供的封装手段。这样一来，没有任何东西可以阻碍某人写一段直接初始化具体实现类的代码，哪怕它违反了架构设计的要求。</p>
 </blockquote>
-<h2 id="organization-versus-encapsulation-组织形式与封装的区别">ORGANIZATION VERSUS ENCAPSULATION 组织形式与封装的区别</h2>
+<h2 id="organization-versus-encapsulation-组织形式与封装的区别"><a name="organization-versus-encapsulation-组织形式与封装的区别" class="anchor-navigation-ex-anchor" href="#organization-versus-encapsulation-组织形式与封装的区别"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. ORGANIZATION VERSUS ENCAPSULATION 组织形式与封装的区别</h2>
 <p>Looking at this issue another way, if you make all types in your Java application public, the packages are simply an organization mechanism (a grouping, like folders), rather than being used for encapsulation. Since public types can be used from anywhere in a code base, you can effectively ignore the packages because they provide very little real value. The net result is that if you ignore the packages (because they don’t provide any means of encapsulation and hiding), it doesn’t really matter which architectural style you’re aspiring to create. If we look back at the example UML diagrams, the Java packages become an irrelevant detail if all of the types are marked as public. In essence, all four architectural approaches presented earlier in this chapter are exactly the same when we overuse this designation (Figure 34.7).</p>
 <blockquote>
 <p>从另外一个角度来看，如果我们将 Java 程序中的所有类型都设置为 public，那么包就仅仅是一种组织形式了（类似文件夹一样的分组方式），而不是一种封装方式，由于 public 类型可以在代码库的任何位置调用，我们事实上就可以忽略包的概念，因为它并不提供什么价值。最终，如果忽视包的概念（因为并不起到任何封装和隐藏的功能），那么想要采用的任何架构风格就都不重要了。我们回过头来看一下例子中的 UML 图，如果所有的类型都是 public，那么 Java 包就成了一个无关紧要的细节信息。于是，所有四种架构方式事实上并没有任何区别（参见图 34.7）。</p>
@@ -1384,7 +1380,7 @@
 <blockquote>
 <p>再澄清一点，这里描述的全都和单体程序有关，所有代码都存放在同一个代码树下。如果你在构建这种程序（大部分程序都是如此），那么我强烈建议利用编译器来维护架构设计原理，而不要依赖个人自律和编译过程之后的工具。</p>
 </blockquote>
-<h2 id="other-decoupling-modes-其他的解耦合模式">OTHER DECOUPLING MODES 其他的解耦合模式</h2>
+<h2 id="other-decoupling-modes-其他的解耦合模式"><a name="other-decoupling-modes-其他的解耦合模式" class="anchor-navigation-ex-anchor" href="#other-decoupling-modes-其他的解耦合模式"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. OTHER DECOUPLING MODES 其他的解耦合模式</h2>
 <p>In addition to the programming language you’re using, there are often other ways that you can decouple your source code dependencies. With Java, you have module frameworks like OSGi and the new Java 9 module system. With module systems, when used properly, you can make a distinction between types that are public and types that are published. For example, you could create an Orders module where all of the types are marked as public, but publish only a small subset of those types for external consumption. It’s been a long time coming, but I’m enthusiastic that the Java 9 module system will give us another tool to build better software, and spark people’s interest in design thinking once again.</p>
 <blockquote>
 <p>除编程语言自带的工具之外，通常还有其他方式可以进一步解耦源代码级别的依赖关系。在 Java 语言中，有模块化框架 OSGi，以及最新的 Java 9 模块系统。正确利用模块系统，我们可以进一步区分 public 类型和对外发布的类型。例如，我们可以创建一个 Orders 模块。将所有的类型标记为 public，但仅仅公布一小部分类供外部调用。虽然耗时很久，但是我十分期待 Java 9 的模块系统，它能提供构建更好软件的另一套工具，希望能够再次点燃人们思考设计的热情。</p>
@@ -1435,13 +1431,13 @@
 <blockquote>
 <p>这种代码组织方式是可行的，但是需要额外注意随之而来的问题。我称这个问题为“端口与适配器模式中的 Peripherique 反模式”。法国巴黎有一条环形公路，名字是 Peripherique 大道。这条大道允许车辆环绕巴黎而不需要进入社区。同样的，将所有的基础设施代码放在同一个源代码树中，就有可能使得应用中的一个区域的基础设施代码（Web 控制器）直接调用另外一个区域的代码（数据库访问），而不经过领域代码。如果没有设置正确的访问修饰符，就更是如此了。</p>
 </blockquote>
-<h2 id="conclusion-the-missing-advice-本章小结：本书拾遗">CONCLUSION: THE MISSING ADVICE 本章小结：本书拾遗</h2>
+<h2 id="conclusion-the-missing-advice-本章小结：本书拾遗"><a name="conclusion-the-missing-advice-本章小结：本书拾遗" class="anchor-navigation-ex-anchor" href="#conclusion-the-missing-advice-本章小结：本书拾遗"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. CONCLUSION: THE MISSING ADVICE 本章小结：本书拾遗</h2>
 <p>The whole point of this chapter is to highlight that your best design intentions can be destroyed in a flash if you don’t consider the intricacies of the implementation strategy. Think about how to map your desired design on to code structures, how to organize that code, and which decoupling modes to apply during runtime and compile-time. Leave options open where applicable, but be pragmatic, and take into consideration the size of your team, their skill level, and the complexity of the solution in conjunction with your time and budgetary constraints. Also think about using your compiler to help you enforce your chosen architectural style, and watch out for coupling in other areas, such as data models. The devil is in the implementation details.</p>
 <blockquote>
 <p>这一章的中心思想就是，如果不考虑具体实现细节，再好的设计也无法长久。必须要将设计映射到对应的代码结构上，考虑如何组织代码树，以及在编译期和运行期采用哪种解耦合的模式。保持开放，但是一定要务实，同时要考虑到团队的大小、技术水平，以及对应的时间和预算限制。最好能利用编译器来维护所选的系统架构设计风格，小心防范来自其他地方的耦合模式，例如数据结构。所有的实现细节都是关键的！</p>
 </blockquote>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-26 21:50:34
+2022-07-26 15:54:50
 </span></footer>
                                 
                                 </section>
@@ -1485,7 +1481,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"拾遗","level":"1.9.6.5","depth":3,"next":{"title":"afterword","level":"1.9.7","depth":2,"path":"z-Clean-Architecture/afterword.md","ref":"z-Clean-Architecture/afterword.md","articles":[]},"previous":{"title":"案例分析：视频销售网站","level":"1.9.6.4","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/33-案例分析：视频销售网站.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/33-案例分析：视频销售网站.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/06-第六部分-实现细节/34-拾遗.md","mtime":"2022-07-26T13:50:34.440Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"拾遗","level":"1.9.6.5","depth":3,"next":{"title":"afterword","level":"1.9.7","depth":2,"path":"z-Clean-Architecture/afterword.md","ref":"z-Clean-Architecture/afterword.md","articles":[]},"previous":{"title":"案例分析：视频销售网站","level":"1.9.6.4","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/33-案例分析：视频销售网站.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/33-案例分析：视频销售网站.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/06-第六部分-实现细节/34-拾遗.md","mtime":"2022-07-26T07:54:50.395Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1551,19 +1547,7 @@
         
     
         
-        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

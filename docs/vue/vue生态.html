@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,9 +1190,9 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="vue生态">vue生态</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#vue生态"><b>1. </b>vue生态</a></li><ul><li><span class="title-icon "></span><a href="#vuex"><b>1.1. </b>Vuex</a></li><li><span class="title-icon "></span><a href="#vue-router"><b>1.2. </b>Vue-Router</a></li><ul><li><span class="title-icon "></span><a href="#路由原理"><b>1.2.1. </b>路由原理</a></li></ul></ul><li><span class="title-icon "></span><a href="#后边即为hash值"><b>2. </b>后边即为hash值</a></li><ul><ul><li><span class="title-icon "></span><a href="#导航守卫"><b>2.1.1. </b>导航守卫</a></li></ul><li><span class="title-icon "></span><a href="#实践"><b>2.2. </b>实践</a></li><ul><li><span class="title-icon "></span><a href="#keepalive"><b>2.2.1. </b>keepalive</a></li><li><span class="title-icon "></span><a href="#无限列表长列表优化"><b>2.2.2. </b>无限列表&amp;长列表优化</a></li></ul><li><span class="title-icon "></span><a href="#ssr"><b>2.3. </b>SSR</a></li><ul><li><span class="title-icon "></span><a href="#同构实践"><b>2.3.1. </b>同构实践</a></li></ul><li><span class="title-icon "></span><a href="#nuxtjs"><b>2.4. </b>Nuxt.js</a></li></ul></ul></div><a href="#vue生态" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="vue生态"><a name="vue生态" class="anchor-navigation-ex-anchor" href="#vue生态"><i class="fa fa-link" aria-hidden="true"></i></a>1. vue生态</h1>
 <p>[TOC]</p>
-<h2 id="vuex">Vuex</h2>
+<h2 id="vuex"><a name="vuex" class="anchor-navigation-ex-anchor" href="#vuex"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. Vuex</h2>
 <p>vuex主要是为了兄弟组件之间的沟通，虽然有<code>$root</code> <code>$parrent</code> <code>$refs</code>等属性可以方便的获取父组件的数据，但是兄弟组件之间仍然是很难沟通到，而且耦合度很高。</p>
 <p>vuex使用「单一状态树」</p>
 <ul>
@@ -1238,8 +1234,8 @@
   <span class="hljs-attr">getters</span>:{}
 }
 </code></pre>
-<h2 id="vue-router">Vue-Router</h2>
-<h3 id="路由原理">路由原理</h3>
+<h2 id="vue-router"><a name="vue-router" class="anchor-navigation-ex-anchor" href="#vue-router"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. Vue-Router</h2>
+<h3 id="路由原理"><a name="路由原理" class="anchor-navigation-ex-anchor" href="#路由原理"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. 路由原理</h3>
 <blockquote>
 <p>路由就是通过互联网把信息从原地址传输到目的地址的活动</p>
 </blockquote>
@@ -1247,18 +1243,18 @@
 <p>Mode</p>
 <p>window上提供onhashchange和onpopstate两种方法来监听hietory栈的变化</p>
 <p><strong>vue-router中默认是使用HashMode</strong></p>
-<h4 id="h5">h5</h4>
+<h4 id="h5"><a name="h5" class="anchor-navigation-ex-anchor" href="#h5"><i class="fa fa-link" aria-hidden="true"></i></a>h5</h4>
 <p>HTML5 Mode</p>
 <p>监听popstate，当history改变的时候触发事件</p>
 <p>依赖 HTML5 History API 和服务器配置</p>
-<h4 id="abstract">Abstract</h4>
+<h4 id="abstract"><a name="abstract" class="anchor-navigation-ex-anchor" href="#abstract"><i class="fa fa-link" aria-hidden="true"></i></a>Abstract</h4>
 <p>支持所有 JavaScript 运行环境，如 Node.js 服务器端。如果发现没有浏览器的 API，路由会自动强制进入这个模式.</p>
-<h4 id="hash">hash</h4>
+<h4 id="hash"><a name="hash" class="anchor-navigation-ex-anchor" href="#hash"><i class="fa fa-link" aria-hidden="true"></i></a>hash</h4>
 <p>Hash Mode</p>
 <p>使用 URL hash 值来作路由。支持所有浏览器</p>
 <p><code>https://www.baidu.com#/hashtag</code></p>
-<h1 id="后边即为hash值">后边即为hash值</h1>
-<h3 id="导航守卫">导航守卫</h3>
+<h1 id="后边即为hash值"><a name="后边即为hash值" class="anchor-navigation-ex-anchor" href="#后边即为hash值"><i class="fa fa-link" aria-hidden="true"></i></a>2. 后边即为hash值</h1>
+<h3 id="导航守卫"><a name="导航守卫" class="anchor-navigation-ex-anchor" href="#导航守卫"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.1. 导航守卫</h3>
 <p>就是一系列钩子函数，可以决定是否跳转。</p>
 <p>全局守卫</p>
 <ul>
@@ -1282,10 +1278,10 @@
 <li><p>beforeRouteLeave </p>
 </li>
 </ul>
-<h2 id="实践">实践</h2>
-<h3 id="keepalive">keepalive</h3>
+<h2 id="实践"><a name="实践" class="anchor-navigation-ex-anchor" href="#实践"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. 实践</h2>
+<h3 id="keepalive"><a name="keepalive" class="anchor-navigation-ex-anchor" href="#keepalive"><i class="fa fa-link" aria-hidden="true"></i></a>2.2.1. keepalive</h3>
 <p>其底层实现是依赖LRU算法，比对接下来的Virtual DOM和缓存中的Virtual DOM是否一致，一致的话就直接沿用，并更新其为最近使用。不一致的话就创建Virtual DOM并加入缓存；最后验证缓存是否超过规定长度，超过了去销毁最久没有使用的DOM缓存。</p>
-<h3 id="无限列表长列表优化">无限列表&amp;长列表优化</h3>
+<h3 id="无限列表长列表优化"><a name="无限列表长列表优化" class="anchor-navigation-ex-anchor" href="#无限列表长列表优化"><i class="fa fa-link" aria-hidden="true"></i></a>2.2.2. 无限列表&amp;长列表优化</h3>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/无限列表.png" alt="无限列表"></p>
 <p>Show-Container：浏览器展示的内容</p>
 <p>Later-Container：浏览器窗口上方划过去的内容</p>
@@ -1293,7 +1289,7 @@
 <p>「无限列表」：就是通过每个item的高度，算出浏览器可以展示的item的数量，加上划过去的也就是Later-Container中item的数量（这个是自己定的），再加上预加载的Pre-Container中item的数量；这个总数就是当前浏览器需要加载的item。</p>
 <p>在发生滑动时，我们去动态的计算item的起始位置，因为item总数是一定的；假设拿过来的数据itemAll有100个，item的加载数量为9，那么第一屏肯定是itemAll.slice(0，9)也就是前九个；随着滑动，第n屏时，我们可能已经加载过三四十个item了，此时的item应该是itemAll.slice(31，40)。</p>
 <p>这样既保证了滚动条不会变的特别短，也保证了往上回顾时能找到之前用户看到的信息。而且用户不会加载到重复的信息，还能无限下拉。</p>
-<h2 id="ssr">SSR</h2>
+<h2 id="ssr"><a name="ssr" class="anchor-navigation-ex-anchor" href="#ssr"><i class="fa fa-link" aria-hidden="true"></i></a>2.3. SSR</h2>
 <p>ServerSideRender</p>
 <ol>
 <li><p>用户请求网页</p>
@@ -1344,7 +1340,7 @@
 </ol>
 <p>何时使用SSR？</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/SSR的使用时机.png" alt="SSR的时机"></p>
-<h3 id="同构实践">同构实践</h3>
+<h3 id="同构实践"><a name="同构实践" class="anchor-navigation-ex-anchor" href="#同构实践"><i class="fa fa-link" aria-hidden="true"></i></a>2.3.1. 同构实践</h3>
 <p>通用代码的一些原则：</p>
 <ul>
 <li><p>数据响应： 在纯客户端应用程序（client-only app）中，每个用户会在他们各自的浏览器中使用新的应用程序实例。将数据进行响应式的过程在服务器上是多余的，所以默认情况下禁用。还可以避免将数据转化为响应式对象的性能开销。</p>
@@ -1356,7 +1352,7 @@
 </ul>
 <p>结构图：</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/SSR同构.png" alt="结构图"></p>
-<h2 id="nuxtjs">Nuxt.js</h2>
+<h2 id="nuxtjs"><a name="nuxtjs" class="anchor-navigation-ex-anchor" href="#nuxtjs"><i class="fa fa-link" aria-hidden="true"></i></a>2.4. Nuxt.js</h2>
 <ul>
 <li><p>是一个基于vuejs的通用应用框架</p>
 </li>
@@ -1377,7 +1373,7 @@
 <p>最后是渲染</p>
 <p>用 户可以通过<code>&lt;nuxt-link&gt;</code>进入新的页面</p>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-20 10:55:46
+2022-07-21 08:53:32
 </span></footer>
                                 
                                 </section>
@@ -1421,7 +1417,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"vue生态","level":"1.8.4","depth":2,"next":{"title":"Clean-Architecture","level":"1.9","depth":1,"path":"z-Clean-Architecture/README.md","ref":"z-Clean-Architecture/README.md","articles":[{"title":"第一部分-概述","level":"1.9.1","depth":2,"path":"z-Clean-Architecture/01-第一部分-概述/README.md","ref":"z-Clean-Architecture/01-第一部分-概述/README.md","articles":[{"title":"设计与架构究竟是什么","level":"1.9.1.1","depth":3,"path":"z-Clean-Architecture/01-第一部分-概述/1-设计与架构究竟是什么.md","ref":"z-Clean-Architecture/01-第一部分-概述/1-设计与架构究竟是什么.md","articles":[]},{"title":"两个价值维度","level":"1.9.1.2","depth":3,"path":"z-Clean-Architecture/01-第一部分-概述/2-两个价值维度.md","ref":"z-Clean-Architecture/01-第一部分-概述/2-两个价值维度.md","articles":[]}]},{"title":"第二部分-从基础构件开始：编程范式","level":"1.9.2","depth":2,"path":"z-Clean-Architecture/02-第二部分-从基础构件开始：编程范式/README.md","ref":"z-Clean-Architecture/02-第二部分-从基础构件开始：编程范式/README.md","articles":[{"title":"编程范式总览","level":"1.9.2.1","depth":3,"path":"z-Clean-Architecture/02-第二部分-从基础构件开始：编程范式/3-编程范式总览.md","ref":"z-Clean-Architecture/02-第二部分-从基础构件开始：编程范式/3-编程范式总览.md","articles":[]},{"title":"结构化编程","level":"1.9.2.2","depth":3,"path":"z-Clean-Architecture/02-第二部分-从基础构件开始：编程范式/4-结构化编程.md","ref":"z-Clean-Architecture/02-第二部分-从基础构件开始：编程范式/4-结构化编程.md","articles":[]},{"title":"面向对象编程","level":"1.9.2.3","depth":3,"path":"z-Clean-Architecture/02-第二部分-从基础构件开始：编程范式/5-面向对象编程.md","ref":"z-Clean-Architecture/02-第二部分-从基础构件开始：编程范式/5-面向对象编程.md","articles":[]},{"title":"函数式编程","level":"1.9.2.4","depth":3,"path":"z-Clean-Architecture/02-第二部分-从基础构件开始：编程范式/6-函数式编程.md","ref":"z-Clean-Architecture/02-第二部分-从基础构件开始：编程范式/6-函数式编程.md","articles":[]}]},{"title":"第三部分-设计原则","level":"1.9.3","depth":2,"path":"z-Clean-Architecture/03-第三部分-设计原则/README.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/README.md","articles":[{"title":"SRP：单一职责原则","level":"1.9.3.1","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/7-SRP：单一职责原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/7-SRP：单一职责原则.md","articles":[]},{"title":"OCP：开闭原则","level":"1.9.3.2","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/8-OCP：开闭原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/8-OCP：开闭原则.md","articles":[]},{"title":"LSP：里氏替换原则","level":"1.9.3.3","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/9-LSP：里氏替换原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/9-LSP：里氏替换原则.md","articles":[]},{"title":"ISP：接口隔离原则","level":"1.9.3.4","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/10-ISP：接口隔离原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/10-ISP：接口隔离原则.md","articles":[]},{"title":"DIP：依赖反转原则","level":"1.9.3.5","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/11-DIP：依赖反转原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/11-DIP：依赖反转原则.md","articles":[]}]},{"title":"第四部分-组件构建原则","level":"1.9.4","depth":2,"path":"z-Clean-Architecture/04-第四部分-组件构建原则/README.md","ref":"z-Clean-Architecture/04-第四部分-组件构建原则/README.md","articles":[{"title":"组件","level":"1.9.4.1","depth":3,"path":"z-Clean-Architecture/04-第四部分-组件构建原则/12-组件.md","ref":"z-Clean-Architecture/04-第四部分-组件构建原则/12-组件.md","articles":[]},{"title":"组件聚合","level":"1.9.4.2","depth":3,"path":"z-Clean-Architecture/04-第四部分-组件构建原则/13-组件聚合.md","ref":"z-Clean-Architecture/04-第四部分-组件构建原则/13-组件聚合.md","articles":[]},{"title":"组件耦合","level":"1.9.4.3","depth":3,"path":"z-Clean-Architecture/04-第四部分-组件构建原则/14-组件耦合.md","ref":"z-Clean-Architecture/04-第四部分-组件构建原则/14-组件耦合.md","articles":[]}]},{"title":"第五部分-软件架构","level":"1.9.5","depth":2,"path":"z-Clean-Architecture/05-第五部分-软件架构/README.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/README.md","articles":[{"title":"什么是软件架构","level":"1.9.5.1","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/15-什么是软件架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/15-什么是软件架构.md","articles":[]},{"title":"独立性","level":"1.9.5.2","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/16-独立性.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/16-独立性.md","articles":[]},{"title":"划分边界","level":"1.9.5.3","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/17-划分边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/17-划分边界.md","articles":[]},{"title":"边界剖析","level":"1.9.5.4","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/18-边界剖析.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/18-边界剖析.md","articles":[]},{"title":"策略与层次","level":"1.9.5.5","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/19-策略与层次.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/19-策略与层次.md","articles":[]},{"title":"业务逻辑","level":"1.9.5.6","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/20-业务逻辑.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/20-业务逻辑.md","articles":[]},{"title":"尖叫的软件架构","level":"1.9.5.7","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/21-尖叫的软件架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/21-尖叫的软件架构.md","articles":[]},{"title":"整洁架构","level":"1.9.5.8","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/22-整洁架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/22-整洁架构.md","articles":[]},{"title":"展示器和谦卑对象","level":"1.9.5.9","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/23-展示器和谦卑对象.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/23-展示器和谦卑对象.md","articles":[]},{"title":"不完全边界","level":"1.9.5.10","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/24-不完全边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/24-不完全边界.md","articles":[]},{"title":"层次与边界","level":"1.9.5.11","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/25-层次与边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/25-层次与边界.md","articles":[]},{"title":"Main组件","level":"1.9.5.12","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/26-Main组件.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/26-Main组件.md","articles":[]},{"title":"服务：宏观和微观","level":"1.9.5.13","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/27-服务：宏观和微观.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/27-服务：宏观和微观.md","articles":[]},{"title":"测试边界","level":"1.9.5.14","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/28-测试边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/28-测试边界.md","articles":[]},{"title":"整洁的嵌入式架构","level":"1.9.5.15","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/29-整洁的嵌入式架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/29-整洁的嵌入式架构.md","articles":[]}]},{"title":"第六部分-实现细节","level":"1.9.6","depth":2,"path":"z-Clean-Architecture/06-第六部分-实现细节/README.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/README.md","articles":[{"title":"数据库只是实现细节","level":"1.9.6.1","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/30-数据库只是实现细节.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/30-数据库只是实现细节.md","articles":[]},{"title":"Web是实现细节","level":"1.9.6.2","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/31-Web是实现细节.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/31-Web是实现细节.md","articles":[]},{"title":"应用程序框架是实现细节","level":"1.9.6.3","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/32-应用程序框架是实现细节.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/32-应用程序框架是实现细节.md","articles":[]},{"title":"案例分析：视频销售网站","level":"1.9.6.4","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/33-案例分析：视频销售网站.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/33-案例分析：视频销售网站.md","articles":[]},{"title":"拾遗","level":"1.9.6.5","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/34-拾遗.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/34-拾遗.md","articles":[]}]},{"title":"afterword","level":"1.9.7","depth":2,"path":"z-Clean-Architecture/afterword.md","ref":"z-Clean-Architecture/afterword.md","articles":[]}]},"previous":{"title":"vue基础","level":"1.8.3","depth":2,"path":"vue/vue基础.md","ref":"vue/vue基础.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"vue/vue生态.md","mtime":"2022-07-20T02:55:46.158Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"vue生态","level":"1.8.4","depth":2,"next":{"title":"Clean-Architecture","level":"1.9","depth":1,"path":"z-Clean-Architecture/README.md","ref":"z-Clean-Architecture/README.md","articles":[{"title":"第一部分-概述","level":"1.9.1","depth":2,"path":"z-Clean-Architecture/01-第一部分-概述/README.md","ref":"z-Clean-Architecture/01-第一部分-概述/README.md","articles":[{"title":"设计与架构究竟是什么","level":"1.9.1.1","depth":3,"path":"z-Clean-Architecture/01-第一部分-概述/1-设计与架构究竟是什么.md","ref":"z-Clean-Architecture/01-第一部分-概述/1-设计与架构究竟是什么.md","articles":[]},{"title":"两个价值维度","level":"1.9.1.2","depth":3,"path":"z-Clean-Architecture/01-第一部分-概述/2-两个价值维度.md","ref":"z-Clean-Architecture/01-第一部分-概述/2-两个价值维度.md","articles":[]}]},{"title":"第二部分-从基础构件开始：编程范式","level":"1.9.2","depth":2,"path":"z-Clean-Architecture/02-第二部分-从基础构件开始：编程范式/README.md","ref":"z-Clean-Architecture/02-第二部分-从基础构件开始：编程范式/README.md","articles":[{"title":"编程范式总览","level":"1.9.2.1","depth":3,"path":"z-Clean-Architecture/02-第二部分-从基础构件开始：编程范式/3-编程范式总览.md","ref":"z-Clean-Architecture/02-第二部分-从基础构件开始：编程范式/3-编程范式总览.md","articles":[]},{"title":"结构化编程","level":"1.9.2.2","depth":3,"path":"z-Clean-Architecture/02-第二部分-从基础构件开始：编程范式/4-结构化编程.md","ref":"z-Clean-Architecture/02-第二部分-从基础构件开始：编程范式/4-结构化编程.md","articles":[]},{"title":"面向对象编程","level":"1.9.2.3","depth":3,"path":"z-Clean-Architecture/02-第二部分-从基础构件开始：编程范式/5-面向对象编程.md","ref":"z-Clean-Architecture/02-第二部分-从基础构件开始：编程范式/5-面向对象编程.md","articles":[]},{"title":"函数式编程","level":"1.9.2.4","depth":3,"path":"z-Clean-Architecture/02-第二部分-从基础构件开始：编程范式/6-函数式编程.md","ref":"z-Clean-Architecture/02-第二部分-从基础构件开始：编程范式/6-函数式编程.md","articles":[]}]},{"title":"第三部分-设计原则","level":"1.9.3","depth":2,"path":"z-Clean-Architecture/03-第三部分-设计原则/README.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/README.md","articles":[{"title":"SRP：单一职责原则","level":"1.9.3.1","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/7-SRP：单一职责原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/7-SRP：单一职责原则.md","articles":[]},{"title":"OCP：开闭原则","level":"1.9.3.2","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/8-OCP：开闭原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/8-OCP：开闭原则.md","articles":[]},{"title":"LSP：里氏替换原则","level":"1.9.3.3","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/9-LSP：里氏替换原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/9-LSP：里氏替换原则.md","articles":[]},{"title":"ISP：接口隔离原则","level":"1.9.3.4","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/10-ISP：接口隔离原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/10-ISP：接口隔离原则.md","articles":[]},{"title":"DIP：依赖反转原则","level":"1.9.3.5","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/11-DIP：依赖反转原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/11-DIP：依赖反转原则.md","articles":[]}]},{"title":"第四部分-组件构建原则","level":"1.9.4","depth":2,"path":"z-Clean-Architecture/04-第四部分-组件构建原则/README.md","ref":"z-Clean-Architecture/04-第四部分-组件构建原则/README.md","articles":[{"title":"组件","level":"1.9.4.1","depth":3,"path":"z-Clean-Architecture/04-第四部分-组件构建原则/12-组件.md","ref":"z-Clean-Architecture/04-第四部分-组件构建原则/12-组件.md","articles":[]},{"title":"组件聚合","level":"1.9.4.2","depth":3,"path":"z-Clean-Architecture/04-第四部分-组件构建原则/13-组件聚合.md","ref":"z-Clean-Architecture/04-第四部分-组件构建原则/13-组件聚合.md","articles":[]},{"title":"组件耦合","level":"1.9.4.3","depth":3,"path":"z-Clean-Architecture/04-第四部分-组件构建原则/14-组件耦合.md","ref":"z-Clean-Architecture/04-第四部分-组件构建原则/14-组件耦合.md","articles":[]}]},{"title":"第五部分-软件架构","level":"1.9.5","depth":2,"path":"z-Clean-Architecture/05-第五部分-软件架构/README.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/README.md","articles":[{"title":"什么是软件架构","level":"1.9.5.1","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/15-什么是软件架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/15-什么是软件架构.md","articles":[]},{"title":"独立性","level":"1.9.5.2","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/16-独立性.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/16-独立性.md","articles":[]},{"title":"划分边界","level":"1.9.5.3","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/17-划分边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/17-划分边界.md","articles":[]},{"title":"边界剖析","level":"1.9.5.4","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/18-边界剖析.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/18-边界剖析.md","articles":[]},{"title":"策略与层次","level":"1.9.5.5","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/19-策略与层次.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/19-策略与层次.md","articles":[]},{"title":"业务逻辑","level":"1.9.5.6","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/20-业务逻辑.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/20-业务逻辑.md","articles":[]},{"title":"尖叫的软件架构","level":"1.9.5.7","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/21-尖叫的软件架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/21-尖叫的软件架构.md","articles":[]},{"title":"整洁架构","level":"1.9.5.8","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/22-整洁架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/22-整洁架构.md","articles":[]},{"title":"展示器和谦卑对象","level":"1.9.5.9","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/23-展示器和谦卑对象.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/23-展示器和谦卑对象.md","articles":[]},{"title":"不完全边界","level":"1.9.5.10","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/24-不完全边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/24-不完全边界.md","articles":[]},{"title":"层次与边界","level":"1.9.5.11","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/25-层次与边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/25-层次与边界.md","articles":[]},{"title":"Main组件","level":"1.9.5.12","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/26-Main组件.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/26-Main组件.md","articles":[]},{"title":"服务：宏观和微观","level":"1.9.5.13","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/27-服务：宏观和微观.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/27-服务：宏观和微观.md","articles":[]},{"title":"测试边界","level":"1.9.5.14","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/28-测试边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/28-测试边界.md","articles":[]},{"title":"整洁的嵌入式架构","level":"1.9.5.15","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/29-整洁的嵌入式架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/29-整洁的嵌入式架构.md","articles":[]}]},{"title":"第六部分-实现细节","level":"1.9.6","depth":2,"path":"z-Clean-Architecture/06-第六部分-实现细节/README.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/README.md","articles":[{"title":"数据库只是实现细节","level":"1.9.6.1","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/30-数据库只是实现细节.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/30-数据库只是实现细节.md","articles":[]},{"title":"Web是实现细节","level":"1.9.6.2","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/31-Web是实现细节.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/31-Web是实现细节.md","articles":[]},{"title":"应用程序框架是实现细节","level":"1.9.6.3","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/32-应用程序框架是实现细节.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/32-应用程序框架是实现细节.md","articles":[]},{"title":"案例分析：视频销售网站","level":"1.9.6.4","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/33-案例分析：视频销售网站.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/33-案例分析：视频销售网站.md","articles":[]},{"title":"拾遗","level":"1.9.6.5","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/34-拾遗.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/34-拾遗.md","articles":[]}]},{"title":"afterword","level":"1.9.7","depth":2,"path":"z-Clean-Architecture/afterword.md","ref":"z-Clean-Architecture/afterword.md","articles":[]}]},"previous":{"title":"vue基础","level":"1.8.3","depth":2,"path":"vue/vue基础.md","ref":"vue/vue基础.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"vue/vue生态.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1487,19 +1483,7 @@
         
     
         
-        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

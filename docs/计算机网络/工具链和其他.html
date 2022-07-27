@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,23 +1190,23 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="工具链和其他">工具链和其他</h2>
-<h3 id="异步模块加载">异步模块加载</h3>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#工具链和其他"><b>1.1. </b>工具链和其他</a></li><ul><li><span class="title-icon "></span><a href="#异步模块加载"><b>1.1.1. </b>异步模块加载</a></li><li><span class="title-icon "></span><a href="#超级好用的web调试工具whistle"><b>1.1.2. </b>超级好用的web调试工具whistle</a></li><li><span class="title-icon "></span><a href="#web服务器和caddy"><b>1.1.3. </b>Web服务器和caddy</a></li><li><span class="title-icon "></span><a href="#实战b站爬虫"><b>1.1.4. </b>实战B站爬虫</a></li><li><span class="title-icon "></span><a href="#移动端网络优化的指标和策略"><b>1.1.5. </b>移动端网络优化的指标和策略</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="工具链和其他"><a name="工具链和其他" class="anchor-navigation-ex-anchor" href="#工具链和其他"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. 工具链和其他</h2>
+<h3 id="异步模块加载"><a name="异步模块加载" class="anchor-navigation-ex-anchor" href="#异步模块加载"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. 异步模块加载</h3>
 <blockquote>
 <p>工作日常、面试重点、前端架构</p>
 </blockquote>
 <p>整体结构</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/整体结构.png" alt="整体结构"></p>
 <p>在传输时，会转化成CMD/AMD给到浏览器，因为浏览器不支持CommonJS，需要执行CMD/AMD，在加载执行时，是通过一些加载器进行加载的require.js、webpack等</p>
-<h4 id="amdcmd">AMD&amp;CMD</h4>
+<h4 id="amdcmd"><a name="amdcmd" class="anchor-navigation-ex-anchor" href="#amdcmd"><i class="fa fa-link" aria-hidden="true"></i></a>AMD&amp;CMD</h4>
 <p>是底层建设</p>
 <p>AMD（Asynchronous Module Definition）</p>
 <p>解析依赖，创建模块，使用模块，</p>
 <p>CMD（Common Module Definition）</p>
 <p>依赖后置，使用时再require，模块后置，模块使用按需加载</p>
-<h4 id="es6commonjs">ES6/CommonJS</h4>
+<h4 id="es6commonjs"><a name="es6commonjs" class="anchor-navigation-ex-anchor" href="#es6commonjs"><i class="fa fa-link" aria-hidden="true"></i></a>ES6/CommonJS</h4>
 <p>编写程序时的模块化实现。是一种书写规范</p>
-<h4 id="加载器示例">加载器示例</h4>
+<h4 id="加载器示例"><a name="加载器示例" class="anchor-navigation-ex-anchor" href="#加载器示例"><i class="fa fa-link" aria-hidden="true"></i></a>加载器示例</h4>
 <pre><code class="lang-javascript"><span class="hljs-keyword">let</span> modules = {}
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">define</span>(<span class="hljs-params">name,fn</span>)</span>{
   modules[name] = fn
@@ -1236,7 +1232,7 @@ fucntion <span class="hljs-built_in">require</span>(deps,callback){
   })
 }
 </code></pre>
-<h3 id="超级好用的web调试工具whistle">超级好用的web调试工具whistle</h3>
+<h3 id="超级好用的web调试工具whistle"><a name="超级好用的web调试工具whistle" class="anchor-navigation-ex-anchor" href="#超级好用的web调试工具whistle"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. 超级好用的web调试工具whistle</h3>
 <blockquote>
 <p>工作日常、工具链、前端生态</p>
 </blockquote>
@@ -1246,23 +1242,23 @@ fucntion <span class="hljs-built_in">require</span>(deps,callback){
 <li>基于模式匹配：hosts/文件替换/请求返回调试</li>
 <li>移动端远程调试</li>
 </ul>
-<h4 id="修改host">修改host</h4>
-<h4 id="代理">代理</h4>
+<h4 id="修改host"><a name="修改host" class="anchor-navigation-ex-anchor" href="#修改host"><i class="fa fa-link" aria-hidden="true"></i></a>修改host</h4>
+<h4 id="代理"><a name="代理" class="anchor-navigation-ex-anchor" href="#代理"><i class="fa fa-link" aria-hidden="true"></i></a>代理</h4>
 <p>正向代理：指向外部网站</p>
 <p><code>www.dev.com proxy://127.0.0.1:2299</code></p>
 <p>反向代理：指向本地地址</p>
 <p><code>www.dev.com/api http://127.0.0.1:3000</code></p>
-<h4 id="替换文件">替换文件</h4>
+<h4 id="替换文件"><a name="替换文件" class="anchor-navigation-ex-anchor" href="#替换文件"><i class="fa fa-link" aria-hidden="true"></i></a>替换文件</h4>
 <p>在上线后，可能会出现错误，但是线上的js文件已经压缩过了，会很难调试，就可以替换文件，替换成本地的开发时js文件。</p>
 <p><code>www.dev.com/require.js 「本地文件地址」</code> </p>
-<h4 id="替换ua">替换UA</h4>
+<h4 id="替换ua"><a name="替换ua" class="anchor-navigation-ex-anchor" href="#替换ua"><i class="fa fa-link" aria-hidden="true"></i></a>替换UA</h4>
 <p><code>www.baidu.com ua://{i-ua}</code></p>
-<h4 id="远程调试">远程调试</h4>
+<h4 id="远程调试"><a name="远程调试" class="anchor-navigation-ex-anchor" href="#远程调试"><i class="fa fa-link" aria-hidden="true"></i></a>远程调试</h4>
 <p>winerer</p>
-<h4 id="js注入">js注入</h4>
+<h4 id="js注入"><a name="js注入" class="anchor-navigation-ex-anchor" href="#js注入"><i class="fa fa-link" aria-hidden="true"></i></a>js注入</h4>
 <p>vconsole：腾讯的调试代码</p>
 <p>把这个注入到页面中通过<code>jsAppend://{文件名}</code></p>
-<h3 id="web服务器和caddy">Web服务器和caddy</h3>
+<h3 id="web服务器和caddy"><a name="web服务器和caddy" class="anchor-navigation-ex-anchor" href="#web服务器和caddy"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. Web服务器和caddy</h3>
 <blockquote>
 <p>工作日常、工具链、前端生态</p>
 </blockquote>
@@ -1300,14 +1296,14 @@ fucntion <span class="hljs-built_in">require</span>(deps,callback){
 </ul>
 <p>服务内部的协议用tcp会更快，tls终结就是将加密服务终结掉，换用tcp协议。</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/TLS.png" alt="TLS"></p>
-<h4 id="caddy">caddy</h4>
+<h4 id="caddy"><a name="caddy" class="anchor-navigation-ex-anchor" href="#caddy"><i class="fa fa-link" aria-hidden="true"></i></a>caddy</h4>
 <blockquote>
 <p>apache、nginx</p>
 </blockquote>
 <p>go语言编写的高性能https服务器</p>
 <p>提供命令行工具和cli</p>
 <p>caddy run 前台启动，caddy start 后台启动</p>
-<h3 id="实战b站爬虫">实战B站爬虫</h3>
+<h3 id="实战b站爬虫"><a name="实战b站爬虫" class="anchor-navigation-ex-anchor" href="#实战b站爬虫"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.4. 实战B站爬虫</h3>
 <blockquote>
 <p>工作日常、工具链、前端生态</p>
 </blockquote>
@@ -1316,14 +1312,14 @@ fucntion <span class="hljs-built_in">require</span>(deps,callback){
 <p>downloader：下载器</p>
 <p>storage：存储</p>
 <p>quene：下载器获取到的urls推到队列</p>
-<h4 id="爬取b站卡片数据">爬取B站卡片数据</h4>
-<h4 id="模拟登录">模拟登录</h4>
-<h3 id="移动端网络优化的指标和策略">移动端网络优化的指标和策略</h3>
+<h4 id="爬取b站卡片数据"><a name="爬取b站卡片数据" class="anchor-navigation-ex-anchor" href="#爬取b站卡片数据"><i class="fa fa-link" aria-hidden="true"></i></a>爬取B站卡片数据</h4>
+<h4 id="模拟登录"><a name="模拟登录" class="anchor-navigation-ex-anchor" href="#模拟登录"><i class="fa fa-link" aria-hidden="true"></i></a>模拟登录</h4>
+<h3 id="移动端网络优化的指标和策略"><a name="移动端网络优化的指标和策略" class="anchor-navigation-ex-anchor" href="#移动端网络优化的指标和策略"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.5. 移动端网络优化的指标和策略</h3>
 <blockquote>
 <p>工作日常、数据分析、前端优化</p>
 </blockquote>
 <p>浏览器一次最多发六个请求。</p>
-<h4 id="一个请求的时间消耗：">一个请求的时间消耗：</h4>
+<h4 id="一个请求的时间消耗："><a name="一个请求的时间消耗：" class="anchor-navigation-ex-anchor" href="#一个请求的时间消耗："><i class="fa fa-link" aria-hidden="true"></i></a>一个请求的时间消耗：</h4>
 <p>准备</p>
 <ul>
 <li><p>scheduling（排队时间）</p>
@@ -1346,7 +1342,7 @@ fucntion <span class="hljs-built_in">require</span>(deps,callback){
 <li>waiting（TTFB）（第一个字节的返回时间）包含网络延迟和服务器处理时间</li>
 <li>content download（内容下载）</li>
 </ul>
-<h4 id="常见的性能指标">常见的性能指标</h4>
+<h4 id="常见的性能指标"><a name="常见的性能指标" class="anchor-navigation-ex-anchor" href="#常见的性能指标"><i class="fa fa-link" aria-hidden="true"></i></a>常见的性能指标</h4>
 <p>是否显示？</p>
 <ul>
 <li>首次绘制时间（FC）（白屏可能也算），首次内容绘制（FCP）</li>
@@ -1363,7 +1359,7 @@ fucntion <span class="hljs-built_in">require</span>(deps,callback){
 <ul>
 <li>CPU消耗（API可以直接监控）、输入延迟</li>
 </ul>
-<h4 id="网络优化策略">网络优化策略</h4>
+<h4 id="网络优化策略"><a name="网络优化策略" class="anchor-navigation-ex-anchor" href="#网络优化策略"><i class="fa fa-link" aria-hidden="true"></i></a>网络优化策略</h4>
 <ul>
 <li>本地缓存：</li>
 </ul>
@@ -1389,7 +1385,7 @@ fucntion <span class="hljs-built_in">require</span>(deps,callback){
 <p>APP预加载完整容器（Webview）</p>
 <p>H5应用预加载下一个页面的数据 </p>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-20 10:55:44
+2022-07-21 08:53:32
 </span></footer>
                                 
                                 </section>
@@ -1433,7 +1429,7 @@ fucntion <span class="hljs-built_in">require</span>(deps,callback){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"工具链和其他","level":"1.2.1","depth":2,"next":{"title":"浏览器状态同步和路由","level":"1.2.2","depth":2,"path":"计算机网络/浏览器状态同步和路由.md","ref":"计算机网络/浏览器状态同步和路由.md","articles":[]},"previous":{"title":"计算机网络","level":"1.2","depth":1,"path":"计算机网络/计算机网络.md","ref":"计算机网络/计算机网络.md","articles":[{"title":"工具链和其他","level":"1.2.1","depth":2,"path":"计算机网络/工具链和其他.md","ref":"计算机网络/工具链和其他.md","articles":[]},{"title":"浏览器状态同步和路由","level":"1.2.2","depth":2,"path":"计算机网络/浏览器状态同步和路由.md","ref":"计算机网络/浏览器状态同步和路由.md","articles":[]},{"title":"网络安全攻防","level":"1.2.3","depth":2,"path":"计算机网络/网络安全攻防.md","ref":"计算机网络/网络安全攻防.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"计算机网络/工具链和其他.md","mtime":"2022-07-20T02:55:44.665Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"工具链和其他","level":"1.2.1","depth":2,"next":{"title":"浏览器状态同步和路由","level":"1.2.2","depth":2,"path":"计算机网络/浏览器状态同步和路由.md","ref":"计算机网络/浏览器状态同步和路由.md","articles":[]},"previous":{"title":"计算机网络","level":"1.2","depth":1,"path":"计算机网络/计算机网络.md","ref":"计算机网络/计算机网络.md","articles":[{"title":"工具链和其他","level":"1.2.1","depth":2,"path":"计算机网络/工具链和其他.md","ref":"计算机网络/工具链和其他.md","articles":[]},{"title":"浏览器状态同步和路由","level":"1.2.2","depth":2,"path":"计算机网络/浏览器状态同步和路由.md","ref":"计算机网络/浏览器状态同步和路由.md","articles":[]},{"title":"网络安全攻防","level":"1.2.3","depth":2,"path":"计算机网络/网络安全攻防.md","ref":"计算机网络/网络安全攻防.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"计算机网络/工具链和其他.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1499,19 +1495,7 @@ fucntion <span class="hljs-built_in">require</span>(deps,callback){
         
     
         
-        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,13 +1190,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="chap18-boundary-anatomy-边界剖析">Chap18. BOUNDARY ANATOMY 边界剖析</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#chap18-boundary-anatomy-边界剖析"><b>1. </b>Chap18. BOUNDARY ANATOMY 边界剖析</a></li><ul><li><span class="title-icon "></span><a href="#boundary-crossing-跨边界调用"><b>1.1. </b>BOUNDARY CROSSING 跨边界调用</a></li><li><span class="title-icon "></span><a href="#the-dreaded-monolith-令人生畏的单体结构"><b>1.2. </b>THE DREADED MONOLITH 令人生畏的单体结构</a></li><li><span class="title-icon "></span><a href="#deployment-components-部署层次的组件"><b>1.3. </b>DEPLOYMENT COMPONENTS 部署层次的组件</a></li><li><span class="title-icon "></span><a href="#threads-线程"><b>1.4. </b>THREADS 线程</a></li><li><span class="title-icon "></span><a href="#local-processes-本地进程"><b>1.5. </b>LOCAL PROCESSES 本地进程</a></li><li><span class="title-icon "></span><a href="#services-服务"><b>1.6. </b>SERVICES 服务</a></li><li><span class="title-icon "></span><a href="#conclusion-本章小结"><b>1.7. </b>CONCLUSION 本章小结</a></li></ul></ul></div><a href="#chap18-boundary-anatomy-边界剖析" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="chap18-boundary-anatomy-边界剖析"><a name="chap18-boundary-anatomy-边界剖析" class="anchor-navigation-ex-anchor" href="#chap18-boundary-anatomy-边界剖析"><i class="fa fa-link" aria-hidden="true"></i></a>1. Chap18. BOUNDARY ANATOMY 边界剖析</h1>
 <p><img src="../un/CH-UN18.jpg" alt></p>
 <p>The architecture of a system is defined by a set of software components and the boundaries that separate them. Those boundaries come in many different forms. In this chapter we’ll look at some of the most common.</p>
 <blockquote>
 <p>一个系统的架构是由一系列软件组件以及它们之间的边界共同定义的。而这些边界有着多种不同的存在形式。在本章中和我们看看其中最常见的一些形式。</p>
 </blockquote>
-<h2 id="boundary-crossing-跨边界调用">BOUNDARY CROSSING 跨边界调用</h2>
+<h2 id="boundary-crossing-跨边界调用"><a name="boundary-crossing-跨边界调用" class="anchor-navigation-ex-anchor" href="#boundary-crossing-跨边界调用"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. BOUNDARY CROSSING 跨边界调用</h2>
 <p>At runtime, a boundary crossing is nothing more than a function on one side of the boundary calling a function on the other side and passing along some data. The trick to creating an appropriate boundary crossing is to manage the source code dependencies.</p>
 <blockquote>
 <p>在运行时，跨边界调用指的是边界线一侧的函数调用另一侧的函数，并同时传递数据的行为。构造合理的跨边界调用需要我们对源码中的依赖关系进行合理管控。</p>
@@ -1209,7 +1205,7 @@
 <blockquote>
 <p>为什么需要管控源码中的依赖关系呢？因为当一个模块的源码发生变更时，其他模块的源码也可能会随之发生变更或重新编译，并需要重新部署。所谓划分边界，就是指在这些模块之间建立这种针对变更的防火墙。</p>
 </blockquote>
-<h2 id="the-dreaded-monolith-令人生畏的单体结构">THE DREADED MONOLITH 令人生畏的单体结构</h2>
+<h2 id="the-dreaded-monolith-令人生畏的单体结构"><a name="the-dreaded-monolith-令人生畏的单体结构" class="anchor-navigation-ex-anchor" href="#the-dreaded-monolith-令人生畏的单体结构"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. THE DREADED MONOLITH 令人生畏的单体结构</h2>
 <p>The simplest and most common of the architectural boundaries has no strict physical representation. It is simply a disciplined segregation of functions and data within a single processor and a single address space. In a previous chapter, I called this the source-level decoupling mode.</p>
 <blockquote>
 <p>最简单、最常见的架构边界通常并没有一个固定的物理形式，它们只是对同一个进程、同一个地址空间内的函数和数据进行了某种划分。在第 16 章中，我们称之为源码层次上的解耦模式。</p>
@@ -1258,7 +1254,7 @@
 <blockquote>
 <p>由于单体结构的部署需要编译所有源码，并且进行静态链接，这就意味着这些系统中的组件一般都会以源码形式交付。</p>
 </blockquote>
-<h2 id="deployment-components-部署层次的组件">DEPLOYMENT COMPONENTS 部署层次的组件</h2>
+<h2 id="deployment-components-部署层次的组件"><a name="deployment-components-部署层次的组件" class="anchor-navigation-ex-anchor" href="#deployment-components-部署层次的组件"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. DEPLOYMENT COMPONENTS 部署层次的组件</h2>
 <p>The simplest physical representation of an architectural boundary is a dynamically linked library like a .Net DLL, a Java jar file, a Ruby Gem, or a UNIX shared library. Deployment does not involve compilation. Instead, the components are delivered in binary, or some equivalent deployable form. This is the deployment-level decoupling mode. The act of deployment is simply the gathering of these deployable units together in some convenient form, such as a WAR file, or even just a directory.</p>
 <blockquote>
 <p>下面我们来看看系统架构最常见的物理边界形式：动态链接库。这种形式包括 .Net 的 DLL、Java 的 jar 文件、Ruby Gem 以及 UNIX 的共享库等。这种类型的组件在部署时不需要重新编译，因为它们都是以二进制形式或其他等价的可部署形式交付的。这里采用的就是部署层次上的解耦模式。部署这种类型的项目，就是将其所有可部署的单元打包成一个便于操作的文件格式，例如 WAR 文件，甚至可以只是一个目录（或者文件夹）。</p>
@@ -1271,12 +1267,12 @@
 <blockquote>
 <p>与单体结构类似，按部署层次解耦的组件之间的跨也界调用也只是普通的函数调用，成本很低。虽然动态链接或运行时加载的过程本身可能会有一个一次性的调用成本，但它们之间的跨边界通信调用依然会很频繁。</p>
 </blockquote>
-<h2 id="threads-线程">THREADS 线程</h2>
+<h2 id="threads-线程"><a name="threads-线程" class="anchor-navigation-ex-anchor" href="#threads-线程"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. THREADS 线程</h2>
 <p>Both monoliths and deployment components can make use of threads. Threads are not architectural boundaries or units of deployment, but rather a way to organize the schedule and order of execution. They may be wholly contained within a component, or spread across many components.</p>
 <blockquote>
 <p>单体结构和按部署层次划分的组件都可以采用线程模型。当然，线程既不属于架构边界，也不属于部署单元，它们仅仅是一种管理并调度程序执行的方式。一个线程既可以被包含在单一组件中，也可以横跨多个组件。</p>
 </blockquote>
-<h2 id="local-processes-本地进程">LOCAL PROCESSES 本地进程</h2>
+<h2 id="local-processes-本地进程"><a name="local-processes-本地进程" class="anchor-navigation-ex-anchor" href="#local-processes-本地进程"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. LOCAL PROCESSES 本地进程</h2>
 <p>A much stronger physical architectural boundary is the local process. A local process is typically created from the command line or an equivalent system call. Local processes run in the same processor, or in the same set of processors within a multicore, but run in separate address spaces. Memory protection generally prevents such processes from sharing memory, although shared memory partitions are often used.</p>
 <blockquote>
 <p>系统架构还有一个更明显的物理边界形式，那就是本地进程。本地进程一般是由命令行启动或其他等价的系统调用产生的。本地进程往往运行于单个处理器或多核系统的同一组处理器上，但它们拥有各自不同的地址空间。一般来说，现有的内存保护机制会使这些进程无法共享其内存，但它们通常可以用某种独立的内存区域来实现共享。</p>
@@ -1305,7 +1301,7 @@
 <blockquote>
 <p>本地进程之间的跨边界通信需要用到系统调用、数据的编码和解码，以及进程间的上下文切换，成本相对来说会更高一些，所以这里而要谨慎地控制通信的次数。</p>
 </blockquote>
-<h2 id="services-服务">SERVICES 服务</h2>
+<h2 id="services-服务"><a name="services-服务" class="anchor-navigation-ex-anchor" href="#services-服务"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. SERVICES 服务</h2>
 <p>The strongest boundary is a service. A service is a process, generally started from the command line or through an equivalent system call. Services do not depend on their physical location. Two communicating services may, or may not, operate in the same physical processor or multicore. The services assume that all communications take place over the network.</p>
 <blockquote>
 <p>系统架构中最强的边界形式就是服务。一个服务就是一个进程，它们通常由命令行环境或其他等价的系统调用来产生。服务并不依赖于具体的运行位置，两个互相通信的服务既可以处于单一物理处理器或多核系统的同一组处理器上，也可以彼此位于不同的处理器上。服务会始终假设它们之间的通信将全部通过网络进行。</p>
@@ -1318,7 +1314,7 @@
 <blockquote>
 <p>除此之外，我们可以在服务层次上使用与本地进程相同的规则。也就是让较低层次服务成为较高层次服务的“插件”。为此，我们要确保高层服务的源码中没有包含任何与低层服务相关的物理信息（例如 URI）。</p>
 </blockquote>
-<h2 id="conclusion-本章小结">CONCLUSION 本章小结</h2>
+<h2 id="conclusion-本章小结"><a name="conclusion-本章小结" class="anchor-navigation-ex-anchor" href="#conclusion-本章小结"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. CONCLUSION 本章小结</h2>
 <p>Most systems, other than monoliths, use more than one boundary strategy. A system that makes use of service boundaries may also have some local process boundaries. Indeed, a service is often just a facade for a set of interacting local processes. A service, or a local process, will almost certainly be either a monolith composed of source code components or a set of dynamically linked deployment components.</p>
 <blockquote>
 <p>除单体结构以外，大部分系统都会同时采用多种边界划分策略。一个按照服务层次划分边界的系统也可能会在某一部分采用本地进程的边界划分模式。事实上，服务经常不过就是一系列互相作用的本地进程的某种外在形式。无论是服务还是本地进程，它们几乎肯定都是由一个或多个源码组件组成的单体结构，或者一组动态链接的可部署组件。</p>
@@ -1328,7 +1324,7 @@
 <p>这也意味着一个系统中通常会同时包含高通信量、低延迟的本地架构边界和低通信量、高延迟的服务边界。</p>
 </blockquote>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-26 21:50:34
+2022-07-26 15:54:49
 </span></footer>
                                 
                                 </section>
@@ -1372,7 +1368,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"边界剖析","level":"1.9.5.4","depth":3,"next":{"title":"策略与层次","level":"1.9.5.5","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/19-策略与层次.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/19-策略与层次.md","articles":[]},"previous":{"title":"划分边界","level":"1.9.5.3","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/17-划分边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/17-划分边界.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/05-第五部分-软件架构/18-边界剖析.md","mtime":"2022-07-26T13:50:34.434Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"边界剖析","level":"1.9.5.4","depth":3,"next":{"title":"策略与层次","level":"1.9.5.5","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/19-策略与层次.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/19-策略与层次.md","articles":[]},"previous":{"title":"划分边界","level":"1.9.5.3","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/17-划分边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/17-划分边界.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/05-第五部分-软件架构/18-边界剖析.md","mtime":"2022-07-26T07:54:49.795Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1438,19 +1434,7 @@
         
     
         
-        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

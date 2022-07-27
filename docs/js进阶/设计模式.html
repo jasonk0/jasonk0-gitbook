@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,10 +1190,10 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>[TOC]</p>
-<h2 id="javascript进阶">javascript进阶</h2>
-<h3 id="设计模式">设计模式</h3>
-<h4 id="设计模式概论">设计模式概论</h4>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#javascript进阶"><b>1.1. </b>javascript进阶</a></li><ul><li><span class="title-icon "></span><a href="#设计模式"><b>1.1.1. </b>设计模式</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p>[TOC]</p>
+<h2 id="javascript进阶"><a name="javascript进阶" class="anchor-navigation-ex-anchor" href="#javascript进阶"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. javascript进阶</h2>
+<h3 id="设计模式"><a name="设计模式" class="anchor-navigation-ex-anchor" href="#设计模式"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. 设计模式</h3>
+<h4 id="设计模式概论"><a name="设计模式概论" class="anchor-navigation-ex-anchor" href="#设计模式概论"><i class="fa fa-link" aria-hidden="true"></i></a>设计模式概论</h4>
 <p>项目 = 模块 + 沟通</p>
 <ul>
 <li><p>更好的组织模块</p>
@@ -1207,7 +1203,7 @@
 <li><p>提高代码质量，更加优雅</p>
 </li>
 </ul>
-<h5 id="设计原则">设计原则</h5>
+<h5 id="设计原则"><a name="设计原则" class="anchor-navigation-ex-anchor" href="#设计原则"><i class="fa fa-link" aria-hidden="true"></i></a>设计原则</h5>
 <ol>
 <li><p>开闭原则（对拓展开放，对源码关闭）</p>
 </li>
@@ -1223,7 +1219,7 @@
 <li><p>里氏替换原则（任何父类使用的地方，子类可以替换）</p>
 </li>
 </ol>
-<h5 id="设计模式的分类">设计模式的分类</h5>
+<h5 id="设计模式的分类"><a name="设计模式的分类" class="anchor-navigation-ex-anchor" href="#设计模式的分类"><i class="fa fa-link" aria-hidden="true"></i></a>设计模式的分类</h5>
 <ul>
 <li>创建型</li>
 </ul>
@@ -1245,7 +1241,7 @@
 <p>一些帮助我们优化代码的技巧</p>
 <p>链模式 - 链式调用、惰性模式 - 机器学习、委托模式 - 让别人代替你收快递、等待着模式 - 等你们都回来在吃饭、数据访问模式 - 一个方便的数据管理器</p>
 <hr>
-<h4 id="封装与对象">封装与对象</h4>
+<h4 id="封装与对象"><a name="封装与对象" class="anchor-navigation-ex-anchor" href="#封装与对象"><i class="fa fa-link" aria-hidden="true"></i></a>封装与对象</h4>
 <p>封装的目的</p>
 <ul>
 <li>定义变量不会污染外部</li>
@@ -1258,7 +1254,7 @@
 <li>调用接口来使用</li>
 <li>流出扩展接口</li>
 </ol>
-<h5 id="工厂模式---大量创建对象">工厂模式 - 大量创建对象</h5>
+<h5 id="工厂模式---大量创建对象"><a name="工厂模式---大量创建对象" class="anchor-navigation-ex-anchor" href="#工厂模式---大量创建对象"><i class="fa fa-link" aria-hidden="true"></i></a>工厂模式 - 大量创建对象</h5>
 <p>当某一个对象需要经常创建的时候（弹窗模块）</p>
 <pre><code class="lang-javascript">fuction Facroty(type){
   <span class="hljs-keyword">switch</span>(type){
@@ -1270,7 +1266,7 @@
 }
 </code></pre>
 <p>示例：多彩的弹窗、Jquery、underscore</p>
-<h5 id="建造者模式---精细化组合一个全局对象">建造者模式 - 精细化组合一个全局对象</h5>
+<h5 id="建造者模式---精细化组合一个全局对象"><a name="建造者模式---精细化组合一个全局对象" class="anchor-navigation-ex-anchor" href="#建造者模式---精细化组合一个全局对象"><i class="fa fa-link" aria-hidden="true"></i></a>建造者模式 - 精细化组合一个全局对象</h5>
 <p>当需要创建单个、庞大的组合对象时（轮播图）</p>
 <pre><code class="lang-javascript"><span class="hljs-comment">// 模块1</span>
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">model1</span>(<span class="hljs-params"></span>)</span>{}
@@ -1283,7 +1279,7 @@
 }
 </code></pre>
 <p>示例：编辑器插件，vue的初始化</p>
-<h5 id="单例模式---全局只能有我一个">单例模式 - 全局只能有我一个</h5>
+<h5 id="单例模式---全局只能有我一个"><a name="单例模式---全局只能有我一个" class="anchor-navigation-ex-anchor" href="#单例模式---全局只能有我一个"><i class="fa fa-link" aria-hidden="true"></i></a>单例模式 - 全局只能有我一个</h5>
 <p>为了避免重复新建，避免多个对象存在互相干扰</p>
 <p>做法：通过定义一个方法，使用时只允许通过此方法拿到存在内部的同一个实例话对象</p>
 <pre><code class="lang-javascript"><span class="hljs-keyword">let</span> Single = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">name</span>)</span>{
@@ -1297,7 +1293,7 @@ Single.getInstance = <span class="hljs-function"><span class="hljs-keyword">func
 }
 </code></pre>
 <p>示例：全局数据储存对象，vue-router</p>
-<h4 id="提高可复用性">提高可复用性</h4>
+<h4 id="提高可复用性"><a name="提高可复用性" class="anchor-navigation-ex-anchor" href="#提高可复用性"><i class="fa fa-link" aria-hidden="true"></i></a>提高可复用性</h4>
 <p>可复用性的目的</p>
 <ul>
 <li>遵循DRY原则</li>
@@ -1309,7 +1305,7 @@ Single.getInstance = <span class="hljs-function"><span class="hljs-keyword">func
 <li>重复代码少</li>
 <li>模块功能单一</li>
 </ol>
-<h5 id="桥接模式">桥接模式</h5>
+<h5 id="桥接模式"><a name="桥接模式" class="anchor-navigation-ex-anchor" href="#桥接模式"><i class="fa fa-link" aria-hidden="true"></i></a>桥接模式</h5>
 <p>目的：桥接代替耦合</p>
 <p>场景：减少模块之间的耦合</p>
 <p>三种形状，每种形状有三种颜色</p>
@@ -1363,7 +1359,7 @@ Single.getInstance = <span class="hljs-function"><span class="hljs-keyword">func
   }
 }
 </code></pre>
-<h5 id="模版方法模式">模版方法模式</h5>
+<h5 id="模版方法模式"><a name="模版方法模式" class="anchor-navigation-ex-anchor" href="#模版方法模式"><i class="fa fa-link" aria-hidden="true"></i></a>模版方法模式</h5>
 <p>目的：定义系列操作的股价，简化后面类似操作的内容</p>
 <p>场景：当项目中出现很多类似操作内容</p>
 <p>先写一个基础类，特异性传入回调函数，具体实现放在回调函数。</p>
@@ -1371,9 +1367,9 @@ Single.getInstance = <span class="hljs-function"><span class="hljs-keyword">func
 <p>当一个功能朝着多样化发展，不妨先定义一个基础类，把具体实现延迟到后面</p>
 </blockquote>
 <p>示例：行为，大小，文字都会不同的一系列弹窗、封装一个算法计算器（不同地方增加不同操作）</p>
-<h5 id="js组合和继承">JS组合和继承</h5>
+<h5 id="js组合和继承"><a name="js组合和继承" class="anchor-navigation-ex-anchor" href="#js组合和继承"><i class="fa fa-link" aria-hidden="true"></i></a>JS组合和继承</h5>
 <p><img src="https://www.hualigs.cn/image/61dfe6b080c7e.jpg" alt="组合和继承"></p>
-<h4 id="提高代码质量">提高代码质量</h4>
+<h4 id="提高代码质量"><a name="提高代码质量" class="anchor-navigation-ex-anchor" href="#提高代码质量"><i class="fa fa-link" aria-hidden="true"></i></a>提高代码质量</h4>
 <p>目的：</p>
 <ul>
 <li>高质量的代码，方便后续的一切操作</li>
@@ -1385,13 +1381,13 @@ Single.getInstance = <span class="hljs-function"><span class="hljs-keyword">func
 <li>结构规整，没有漫长的结构</li>
 <li>阅读好理解</li>
 </ul>
-<h5 id="策略模式状态模式">策略模式/状态模式</h5>
+<h5 id="策略模式状态模式"><a name="策略模式状态模式" class="anchor-navigation-ex-anchor" href="#策略模式状态模式"><i class="fa fa-link" aria-hidden="true"></i></a>策略模式/状态模式</h5>
 <p>将方法分为几个策略放在策略对象里，直接调用对象的相应策略就可以了</p>
 <p>在策略对象里，加入状态变量，使用时通过盖面状态来调用相应的策略</p>
 <p>示例：动态的内容（不同用户权限不同内容）</p>
-<h5 id="外观模式">外观模式</h5>
+<h5 id="外观模式"><a name="外观模式" class="anchor-navigation-ex-anchor" href="#外观模式"><i class="fa fa-link" aria-hidden="true"></i></a>外观模式</h5>
 <p>多个简单的接口合并成一个高级的接口</p>
-<h5 id="迭代器模式">迭代器模式</h5>
+<h5 id="迭代器模式"><a name="迭代器模式" class="anchor-navigation-ex-anchor" href="#迭代器模式"><i class="fa fa-link" aria-hidden="true"></i></a>迭代器模式</h5>
 <p>在不暴露对象内部的同时，可以按顺序的访问对象内部</p>
 <p>示例：自己的<code>forEach</code></p>
 <pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Iteratpr</span>(<span class="hljs-params">data</span>)</span>{
@@ -1409,9 +1405,9 @@ Iterator.prototype.dealEach = <span class="hljs-function"><span class="hljs-keyw
   }
 }
 </code></pre>
-<h5 id="备忘录模式">备忘录模式</h5>
+<h5 id="备忘录模式"><a name="备忘录模式" class="anchor-navigation-ex-anchor" href="#备忘录模式"><i class="fa fa-link" aria-hidden="true"></i></a>备忘录模式</h5>
 <p>缓存对象记录对象内部的状态，有需要时回滚到之前的状态 </p>
-<h4 id="设计轮播图">设计轮播图</h4>
+<h4 id="设计轮播图"><a name="设计轮播图" class="anchor-navigation-ex-anchor" href="#设计轮播图"><i class="fa fa-link" aria-hidden="true"></i></a>设计轮播图</h4>
 <p>需求描述</p>
 <ul>
 <li>多种播放方式（渐显渐隐，左右滑动切换，上下滑动切换）</li>
@@ -1427,13 +1423,13 @@ Iterator.prototype.dealEach = <span class="hljs-function"><span class="hljs-keyw
 <li>触摸移动模块（在拖动图片的时候，会暂停<strong>自动播放模块</strong>，并根据用户的操作让图片产生暂时移动，并将上下的滑动按比例转化为水平滑动，检测滑动幅度超过阈值就调用<strong>位置移动模块</strong>，不超过则在触摸事件结束的时候弹回原位置，并开启<strong>自动播放模块</strong>）</li>
 <li>轮播图模块（综合以上几个模块，可以传入图片url，是否渐显渐隐等参数，并将参数传给相应模块将其进行柯里化，方便其他模块在调用的时候，不需要在传入初始值）</li>
 </ol>
-<h4 id="商品信息缓存器">商品信息缓存器</h4>
+<h4 id="商品信息缓存器"><a name="商品信息缓存器" class="anchor-navigation-ex-anchor" href="#商品信息缓存器"><i class="fa fa-link" aria-hidden="true"></i></a>商品信息缓存器</h4>
 <p>需求描述：</p>
 <p>（1）可根据商品id判断商品是否加载过，如果加载过，直接从缓存里拿；如没有，则请求；</p>
 <p>（2）如果是热门商品，缓存于全局的对象里；如果是非热门商品，则缓存于localStorage中；全局对象和localStorage中的商品数量上限可以配置；</p>
 <p>（3）可主动调用api来更新某个商品的信息。</p>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-20 10:55:44
+2022-07-21 08:53:32
 </span></footer>
                                 
                                 </section>
@@ -1477,7 +1473,7 @@ Iterator.prototype.dealEach = <span class="hljs-function"><span class="hljs-keyw
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"设计模式","level":"1.5.3","depth":2,"next":{"title":"异步编程","level":"1.5.4","depth":2,"path":"js进阶/异步编程.md","ref":"js进阶/异步编程.md","articles":[]},"previous":{"title":"轮播图设计","level":"1.5.2","depth":2,"path":"js进阶/轮播图设计.md","ref":"js进阶/轮播图设计.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"js进阶/设计模式.md","mtime":"2022-07-20T02:55:44.755Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"设计模式","level":"1.5.3","depth":2,"next":{"title":"异步编程","level":"1.5.4","depth":2,"path":"js进阶/异步编程.md","ref":"js进阶/异步编程.md","articles":[]},"previous":{"title":"轮播图设计","level":"1.5.2","depth":2,"path":"js进阶/轮播图设计.md","ref":"js进阶/轮播图设计.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"js进阶/设计模式.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1543,19 +1539,7 @@ Iterator.prototype.dealEach = <span class="hljs-function"><span class="hljs-keyw
         
     
         
-        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

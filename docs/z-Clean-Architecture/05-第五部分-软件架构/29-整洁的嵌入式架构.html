@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,7 +1190,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="chap29-clean-embedded-architecture-整洁的嵌入式架构">Chap29. CLEAN EMBEDDED ARCHITECTURE 整洁的嵌入式架构</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#chap29-clean-embedded-architecture-整洁的嵌入式架构"><b>1. </b>Chap29. CLEAN EMBEDDED ARCHITECTURE 整洁的嵌入式架构</a></li><ul><li><span class="title-icon "></span><a href="#app-titude-test-程序适用测试测试"><b>1.1. </b>APP-TITUDE TEST “程序适用测试”测试</a></li><li><span class="title-icon "></span><a href="#the-target-hardware-bottleneck-目标硬件瓶颈"><b>1.2. </b>THE TARGET-HARDWARE BOTTLENECK 目标硬件瓶颈</a></li><ul><li><span class="title-icon "></span><a href="#a-clean-embedded-architecture-is-a-testable-embedded-architecture-整洁的嵌入式架构就是可测试的嵌入式架构"><b>1.2.1. </b>A CLEAN EMBEDDED ARCHITECTURE IS A TESTABLE EMBEDDED ARCHITECTURE 整洁的嵌入式架构就是可测试的嵌入式架构</a></li><li><span class="title-icon "></span><a href="#layers-分层"><b>1.2.2. </b>Layers 分层</a></li><li><span class="title-icon "></span><a href="#the-hardware-is-a-detail-硬件是实现细节"><b>1.2.3. </b>The Hardware Is a Detail 硬件是实现细节</a></li><li><span class="title-icon "></span><a href="#dont-reveal-hardware-details-to-the-user-of-the-hal-不要向-hal-的用户暴露硬件细节"><b>1.2.4. </b>DON’T REVEAL HARDWARE DETAILS TO THE USER OF THE HAL 不要向 HAL 的用户暴露硬件细节</a></li><li><span class="title-icon "></span><a href="#the-processor-is-a-detail"><b>1.2.5. </b>The Processor Is a Detail</a></li><li><span class="title-icon "></span><a href="#the-operating-system-is-a-detail-操作系统是实现细节"><b>1.2.6. </b>The Operating System Is a Detail 操作系统是实现细节</a></li><li><span class="title-icon "></span><a href="#programming-to-interfaces-and-substitutability-面向接口编程与可替代性"><b>1.2.7. </b>PROGRAMMING TO INTERFACES AND SUBSTITUTABILITY 面向接口编程与可替代性</a></li><li><span class="title-icon "></span><a href="#dry-conditional-compilation-directives-dry-条件性编译命令"><b>1.2.8. </b>DRY CONDITIONAL COMPILATION DIRECTIVES DRY 条件性编译命令</a></li></ul><li><span class="title-icon "></span><a href="#conclusion-本章小结"><b>1.3. </b>CONCLUSION 本章小结</a></li></ul></ul></div><a href="#chap29-clean-embedded-architecture-整洁的嵌入式架构" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="chap29-clean-embedded-architecture-整洁的嵌入式架构"><a name="chap29-clean-embedded-architecture-整洁的嵌入式架构" class="anchor-navigation-ex-anchor" href="#chap29-clean-embedded-architecture-整洁的嵌入式架构"><i class="fa fa-link" aria-hidden="true"></i></a>1. Chap29. CLEAN EMBEDDED ARCHITECTURE 整洁的嵌入式架构</h1>
 <p><img src="../un/CH-UN29.jpg" alt></p>
 <p>By James Grenning</p>
 <p>A while ago I read an article entitled “The Growing Importance of Sustaining Software for the DoD”1 on Doug Schmidt’s blog. Doug made the following claim:</p>
@@ -1272,7 +1268,7 @@
 <blockquote>
 <p>对于程序员和工程师，我的意思很明确：不要再写固件代码了，让我们的代码活得更久点！当然，我们也不能总是空谈理念，下面就来看一下应该如何通过好的架构设计让嵌入式代码拥有更长的有效生命周期。</p>
 </blockquote>
-<h2 id="app-titude-test-程序适用测试测试">APP-TITUDE TEST “程序适用测试”测试</h2>
+<h2 id="app-titude-test-程序适用测试测试"><a name="app-titude-test-程序适用测试测试" class="anchor-navigation-ex-anchor" href="#app-titude-test-程序适用测试测试"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. APP-TITUDE TEST “程序适用测试”测试</h2>
 <p>Why does so much potential embedded software become firmware? It seems that most of the emphasis is on getting the embedded code to work, and not so much emphasis is placed on structuring it for a long useful life. Kent Beck describes three activities in building software (the quoted text is Kent’s words and the italics are my commentary):</p>
 <blockquote>
 <p>为什么这么多嵌入式软件最后都成了固件？看起来，很可能是因为我们在做嵌入式设计时只关注代码能否顺利运行，并不太关心其结构能否撑起一个较长的有效生命周期。Kent Beck 描述了软件构建过程中的三个阶段（引号部分是他的原话，楷体部分是我的注解）：</p>
@@ -1405,7 +1401,7 @@ ISR(INT2_vect) { ... }
 <blockquote>
 <p>所以你看，这段代码的确能够正常工作：它的工程师也通过了“程序适用性测试”，但我们不能说该应用程序有一套整洁的嵌入式架构。</p>
 </blockquote>
-<h2 id="the-target-hardware-bottleneck-目标硬件瓶颈">THE TARGET-HARDWARE BOTTLENECK 目标硬件瓶颈</h2>
+<h2 id="the-target-hardware-bottleneck-目标硬件瓶颈"><a name="the-target-hardware-bottleneck-目标硬件瓶颈" class="anchor-navigation-ex-anchor" href="#the-target-hardware-bottleneck-目标硬件瓶颈"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. THE TARGET-HARDWARE BOTTLENECK 目标硬件瓶颈</h2>
 <p>There are many special concerns that embedded developers have to deal with that non-embedded developers do not—for example, limited memory space, real-time constraints and deadlines, limited IO, unconventional user interfaces, and sensors and connections to the real world. Most of the time the hardware is concurrently developed with the software and firmware. As an engineer developing code for this kind of system, you may have no place to run the code. If that’s not bad enough, once you get the hardware, it is likely that the hardware will have its own defects, making software development progress even slower than usual.</p>
 <blockquote>
 <p>嵌入式系统的程序员通常需要处理很多在写非嵌入式系统时不需要关心的事情——例如，有限的地址空间、实时性限制、运行截止时间、有限的 I/O 能力、非常规的用户接口、感应器，以及其他与物理世界的实际链接。大部分时候，这些系统的硬件是和它的软件、固件并行开发的。工程师在为这种系统编写代码的时候，往往没有任何地方可以运行。如果你认为这还不算糟糕的话，请想象一下，如果我们要等到真正拿到硬件时，才能了解代码在该硬件上存在着哪些意料之外的缺陷，这会在多大程度上拖慢我们的开发进度?</p>
@@ -1418,12 +1414,12 @@ ISR(INT2_vect) { ... }
 <blockquote>
 <p>标硬件瓶颈（target-hardware bottleneck）是嵌入式开发所特有的一个问题，如果我们没有采用某种清晰的架构来设计嵌入式系统的代码结构，就经常会面临只能在目标系统平台上测试代码的难题。如果只能在特定的平台上测试代码，那么这一定会拖慢项目的开发进度。</p>
 </blockquote>
-<h3 id="a-clean-embedded-architecture-is-a-testable-embedded-architecture-整洁的嵌入式架构就是可测试的嵌入式架构">A CLEAN EMBEDDED ARCHITECTURE IS A TESTABLE EMBEDDED ARCHITECTURE 整洁的嵌入式架构就是可测试的嵌入式架构</h3>
+<h3 id="a-clean-embedded-architecture-is-a-testable-embedded-architecture-整洁的嵌入式架构就是可测试的嵌入式架构"><a name="a-clean-embedded-architecture-is-a-testable-embedded-architecture-整洁的嵌入式架构就是可测试的嵌入式架构" class="anchor-navigation-ex-anchor" href="#a-clean-embedded-architecture-is-a-testable-embedded-architecture-整洁的嵌入式架构就是可测试的嵌入式架构"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. A CLEAN EMBEDDED ARCHITECTURE IS A TESTABLE EMBEDDED ARCHITECTURE 整洁的嵌入式架构就是可测试的嵌入式架构</h3>
 <p>Let’s see how to apply some of the architectural principles to embedded software and firmware to help you eliminate the target-hardware bottleneck.</p>
 <blockquote>
 <p>下面，我们来看一下具体应如何将架构设计的原则应用在嵌入式软件和固件上，以避免陷入目标硬件瓶颈。</p>
 </blockquote>
-<h3 id="layers-分层">Layers 分层</h3>
+<h3 id="layers-分层"><a name="layers-分层" class="anchor-navigation-ex-anchor" href="#layers-分层"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.2. Layers 分层</h3>
 <p>Layering comes in many flavors. Let’s start with three layers, as shown in Figure 29.1. At the bottom, there is the hardware. As Doug warns us, due to technology advances and Moore’s law, the hardware will change. Parts become obsolete, and new parts use less power or provide better performance or are cheaper. Whatever the reason, as an embedded engineer, I don’t want to have a bigger job than is necessary when the inevitable hardware change finally happens.</p>
 <blockquote>
 <p>分层可以有很多种方式，这里先按图 29.1 所示的设计将系统分成三层。首先，底层是硬件层。正如 Doug 警告我们的那样，由于科技的进步与摩尔定律，硬件是一定会改变的。旧的硬件不见将会被淘汰，新的硬件部件可能耗电量更少，或者性能更好，或者价格更便宜。不管硬件更新的原因是什么，作为嵌入式工程师，我们都不会希望这些不可避免的硬件变动带来更多的工作量。</p>
@@ -1440,7 +1436,7 @@ ISR(INT2_vect) { ... }
 <blockquote>
 <p>另外，软件与固件集成在一起也属于设计上的反模式（anti-pattern）。符合这种反模式的代码修改起来都会很困难。同时，这种代码也很危险，容易造成意外事故，这导致它经历任何微少的改动都需要进行完整的回归测试。如果没有完善的测试流程，那么你就等着无穷无尽的手工测试吧——同时还有纷沓而来的 Bug 报告。</p>
 </blockquote>
-<h3 id="the-hardware-is-a-detail-硬件是实现细节">The Hardware Is a Detail 硬件是实现细节</h3>
+<h3 id="the-hardware-is-a-detail-硬件是实现细节"><a name="the-hardware-is-a-detail-硬件是实现细节" class="anchor-navigation-ex-anchor" href="#the-hardware-is-a-detail-硬件是实现细节"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.3. The Hardware Is a Detail 硬件是实现细节</h3>
 <p>The line between software and firmware is typically not so well defined as the line between code and hardware, as shown in Figure 29.3.</p>
 <blockquote>
 <p>软件与固件之间的边界往往没有代码与硬件之间的边界那么清晰，如图 29.3 所示。</p>
@@ -1461,12 +1457,12 @@ ISR(INT2_vect) { ... }
 <blockquote>
 <p>我们再来看另一个例子：有一个 LED 被连接到一个 GPIO 比特位上。固件可以直接操作 GPIO 比特位，而 HAL 则会提供一个 Led_TurnOn(5) 数。这种硬件抽象层的层次是相当低的。现在，假设我们想将抽象层次从硬件层次提升到软件/产品的层次。这时候就要弄清楚这个 LED 到底代表的是什么。假设它代表了电池电量不足，那么其固码（或该电路板的支持包）可能就会负责提供 Led_TurnOn(5) 函数，而 HAL 则负责提供 Indicate_LowBattery() 函数。由此可见，HAL 层是按照应用程序的需要来提供服务的。同时，我们也能看出来系统的每一个分层中都可以包含许多分层。相对于之前的固定分层法，这里更像是一种无限分层模式。总之，GPIO 位的对应关系应该是一个具体的实现细节，它应该与软件部分隔离。</p>
 </blockquote>
-<h3 id="dont-reveal-hardware-details-to-the-user-of-the-hal-不要向-hal-的用户暴露硬件细节">DON’T REVEAL HARDWARE DETAILS TO THE USER OF THE HAL 不要向 HAL 的用户暴露硬件细节</h3>
+<h3 id="dont-reveal-hardware-details-to-the-user-of-the-hal-不要向-hal-的用户暴露硬件细节"><a name="dont-reveal-hardware-details-to-the-user-of-the-hal-不要向-hal-的用户暴露硬件细节" class="anchor-navigation-ex-anchor" href="#dont-reveal-hardware-details-to-the-user-of-the-hal-不要向-hal-的用户暴露硬件细节"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.4. DON’T REVEAL HARDWARE DETAILS TO THE USER OF THE HAL 不要向 HAL 的用户暴露硬件细节</h3>
 <p>A clean embedded architecture’s software is testable off the target hardware. A successful HAL provides that seam or set of substitution points that facilitate off-target testing.</p>
 <blockquote>
 <p>依照整洁的嵌入式架构所建构的软件应该是可以脱离目标硬件平台来进行测试的。因为设计合理的 HAL 可以为我们脱离硬件平台的测试提供相应的支撑。</p>
 </blockquote>
-<h3 id="the-processor-is-a-detail">The Processor Is a Detail</h3>
+<h3 id="the-processor-is-a-detail"><a name="the-processor-is-a-detail" class="anchor-navigation-ex-anchor" href="#the-processor-is-a-detail"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.5. The Processor Is a Detail</h3>
 <p>When your embedded application uses a specialized tool chain, it will often provide header files to <code>&lt;i&gt;</code>help you<code>&lt;/i&gt;</code>.4 These compilers often take liberties with the C language, adding new keywords to access their processor features. The code will look like C, but it is no longer C.</p>
 <blockquote>
 <p>当我们的嵌入式应用依赖于某种特殊的工具链时，该工具链通常会为我们提供一些“<code>&lt;i&gt;帮助&lt;/i&gt;</code>&quot;性质的头文件。这些编译器往往会自带一些基于 C 语言的扩展库，并添加一些用于访问特殊功能的关键词。这会导致这些程序的代码看起来仍然用的是 C 语言，但实际上它们已经不是 C 语言了。</p>
@@ -1578,7 +1574,7 @@ ISR(INT2_vect) { ... }
 <blockquote>
 <p>如果我们真的需要使用这种微处理器，固件就必须将这类底层函数隔离成处理器抽象层（PAL），这样一来，使用 PAL 的固件代码就可以在目标平台之外被测试了。</p>
 </blockquote>
-<h3 id="the-operating-system-is-a-detail-操作系统是实现细节">The Operating System Is a Detail 操作系统是实现细节</h3>
+<h3 id="the-operating-system-is-a-detail-操作系统是实现细节"><a name="the-operating-system-is-a-detail-操作系统是实现细节" class="anchor-navigation-ex-anchor" href="#the-operating-system-is-a-detail-操作系统是实现细节"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.6. The Operating System Is a Detail 操作系统是实现细节</h3>
 <p>A HAL is necessary, but is it sufficient? In bare-metal embedded systems, a HAL may be all you need to keep your code from getting too addicted to the operating environment. But what about embedded systems that use a real-time operating system (RTOS) or some embedded version of Linux or Windows?</p>
 <blockquote>
 <p>HAL 的必要性是不言而喻的，但光有 HAL 就够了吗？在裸机的嵌入式系统中，HAL 的确可能可以保证我们的代码不会和运行环境绑定得太紧密。但如果嵌入式系统使用了某种实时操作系统（RTOS），或者某种嵌入式的 Linux 或 Windows 呢？</p>
@@ -1611,7 +1607,7 @@ ISR(INT2_vect) { ... }
 <blockquote>
 <p>另外，OSAL 还可以帮助高价值的应用程序实现在目标平台、目标操作系统之外进行测试。一个由整洁的嵌入式架构所构建出来的软件是可以在目标操作系统之外被测试的。设计良好的 OSAL 会为这种目标环境外的测试提供支撑点。</p>
 </blockquote>
-<h3 id="programming-to-interfaces-and-substitutability-面向接口编程与可替代性">PROGRAMMING TO INTERFACES AND SUBSTITUTABILITY 面向接口编程与可替代性</h3>
+<h3 id="programming-to-interfaces-and-substitutability-面向接口编程与可替代性"><a name="programming-to-interfaces-and-substitutability-面向接口编程与可替代性" class="anchor-navigation-ex-anchor" href="#programming-to-interfaces-and-substitutability-面向接口编程与可替代性"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.7. PROGRAMMING TO INTERFACES AND SUBSTITUTABILITY 面向接口编程与可替代性</h3>
 <p>In addition to adding a HAL and potentially an OSAL inside each of the major layers (software, OS, firmware, and hardware), you can—and should—apply the principles described throughout this book. These principles encourage separation of concerns, programming to interfaces, and substitutability.</p>
 <blockquote>
 <p>除了在嵌入式系统的主要分层（指软件、操作系统、固件、硬件这四层）之中增加 HAL 和 OSAL 之外，我们还可以——也应该——应用本书中提到的其他设计原则。这些设计原则可以帮助我们按功能模块、接口编程以及可替代性来划分系统。</p>
@@ -1632,7 +1628,7 @@ ISR(INT2_vect) { ... }
 <blockquote>
 <p>由整洁的嵌入式架构所构建的系统应该在每一个分层中都是可测试的，因为它的模块之间采用接口通信，每一个接口都为平台之外的测试提供了替换点。</p>
 </blockquote>
-<h3 id="dry-conditional-compilation-directives-dry-条件性编译命令">DRY CONDITIONAL COMPILATION DIRECTIVES DRY 条件性编译命令</h3>
+<h3 id="dry-conditional-compilation-directives-dry-条件性编译命令"><a name="dry-conditional-compilation-directives-dry-条件性编译命令" class="anchor-navigation-ex-anchor" href="#dry-conditional-compilation-directives-dry-条件性编译命令"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.8. DRY CONDITIONAL COMPILATION DIRECTIVES DRY 条件性编译命令</h3>
 <p>One use of substitutability that is often overlooked relates to how embedded C and C++ programs handle different targets or operating systems. There is a tendency to use conditional compilation to turn on and off segments of code. I recall one especially problematic case where the statement #ifdef BOARD_V2 was mentioned several thousand times in a telecom application.</p>
 <blockquote>
 <p>另一个经常被忽视的可替代换性规则的实际案例是嵌入式 C/C++ 程序对不同平台和操作系统的处理方式。这些程序经常会用条件性编译命令来根据不同的平台启用和禁用某一段代码。例如，我曾经遇到过 <code>#ifdef BOARD_V2</code> 这条语句在一个电信应用程序中出现了几千次的情况。</p>
@@ -1645,7 +1641,7 @@ ISR(INT2_vect) { ... }
 <blockquote>
 <p>使用硬件抽象层如何？这样的话，硬件类型就只是 HAL 中的一个实现细节了。而且，如果系统中使用的是 HAL 所提供的一系列接口，而不是条件性编译语句，那么我们就可以用链接器，或者某种运行时加载器来将软件与硬件相结合了。</p>
 </blockquote>
-<h2 id="conclusion-本章小结">CONCLUSION 本章小结</h2>
+<h2 id="conclusion-本章小结"><a name="conclusion-本章小结" class="anchor-navigation-ex-anchor" href="#conclusion-本章小结"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. CONCLUSION 本章小结</h2>
 <p>People who are developing embedded software have a lot to learn from experiences outside of embedded software. If you are an embedded developer who has picked up this book, you will find a wealth of software development wisdom in the words and ideas.</p>
 <blockquote>
 <p>嵌入式编程人员应该多学习一些非嵌入式系统的编程经验。如果你从事的是嵌入式编程工作，相信你一定会从本章的建议中得到很多启发。</p>
@@ -1655,7 +1651,7 @@ ISR(INT2_vect) { ... }
 <p>为了让我们的产品能长期地保持健康，请别让你的代码都变成固件。如果一个系统的代码只能在目标硬件上测试，那么它的开发过程会变得非常艰难。总之，为产品的长期健康着想而采用一套整洁的嵌入式架构是很有必要的。</p>
 </blockquote>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-26 21:50:34
+2022-07-26 15:54:49
 </span></footer>
                                 
                                 </section>
@@ -1699,7 +1695,7 @@ ISR(INT2_vect) { ... }
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"整洁的嵌入式架构","level":"1.9.5.15","depth":3,"next":{"title":"第六部分-实现细节","level":"1.9.6","depth":2,"path":"z-Clean-Architecture/06-第六部分-实现细节/README.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/README.md","articles":[{"title":"数据库只是实现细节","level":"1.9.6.1","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/30-数据库只是实现细节.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/30-数据库只是实现细节.md","articles":[]},{"title":"Web是实现细节","level":"1.9.6.2","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/31-Web是实现细节.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/31-Web是实现细节.md","articles":[]},{"title":"应用程序框架是实现细节","level":"1.9.6.3","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/32-应用程序框架是实现细节.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/32-应用程序框架是实现细节.md","articles":[]},{"title":"案例分析：视频销售网站","level":"1.9.6.4","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/33-案例分析：视频销售网站.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/33-案例分析：视频销售网站.md","articles":[]},{"title":"拾遗","level":"1.9.6.5","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/34-拾遗.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/34-拾遗.md","articles":[]}]},"previous":{"title":"测试边界","level":"1.9.5.14","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/28-测试边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/28-测试边界.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/05-第五部分-软件架构/29-整洁的嵌入式架构.md","mtime":"2022-07-26T13:50:34.438Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"整洁的嵌入式架构","level":"1.9.5.15","depth":3,"next":{"title":"第六部分-实现细节","level":"1.9.6","depth":2,"path":"z-Clean-Architecture/06-第六部分-实现细节/README.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/README.md","articles":[{"title":"数据库只是实现细节","level":"1.9.6.1","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/30-数据库只是实现细节.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/30-数据库只是实现细节.md","articles":[]},{"title":"Web是实现细节","level":"1.9.6.2","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/31-Web是实现细节.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/31-Web是实现细节.md","articles":[]},{"title":"应用程序框架是实现细节","level":"1.9.6.3","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/32-应用程序框架是实现细节.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/32-应用程序框架是实现细节.md","articles":[]},{"title":"案例分析：视频销售网站","level":"1.9.6.4","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/33-案例分析：视频销售网站.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/33-案例分析：视频销售网站.md","articles":[]},{"title":"拾遗","level":"1.9.6.5","depth":3,"path":"z-Clean-Architecture/06-第六部分-实现细节/34-拾遗.md","ref":"z-Clean-Architecture/06-第六部分-实现细节/34-拾遗.md","articles":[]}]},"previous":{"title":"测试边界","level":"1.9.5.14","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/28-测试边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/28-测试边界.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/05-第五部分-软件架构/29-整洁的嵌入式架构.md","mtime":"2022-07-26T07:54:49.795Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1765,19 +1761,7 @@ ISR(INT2_vect) { ... }
         
     
         
-        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

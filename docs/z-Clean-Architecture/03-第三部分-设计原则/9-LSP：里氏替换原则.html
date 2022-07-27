@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,7 +1190,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="chap9-lsp-the-liskov-substitution-principle-lsp：里氏替换原则">Chap9. LSP: THE LISKOV SUBSTITUTION PRINCIPLE LSP：里氏替换原则</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#chap9-lsp-the-liskov-substitution-principle-lsp：里氏替换原则"><b>1. </b>Chap9. LSP: THE LISKOV SUBSTITUTION PRINCIPLE LSP：里氏替换原则</a></li><ul><li><span class="title-icon "></span><a href="#guiding-the-use-of-inheritance-继承的使用指导"><b>1.1. </b>GUIDING THE USE OF INHERITANCE 继承的使用指导</a></li><li><span class="title-icon "></span><a href="#the-squarerectangle-problem-正方形长方形问题"><b>1.2. </b>THE SQUARE/RECTANGLE PROBLEM 正方形/长方形问题</a></li><li><span class="title-icon "></span><a href="#lsp-and-architecture-lsp-与软件架构"><b>1.3. </b>LSP AND ARCHITECTURE LSP 与软件架构</a></li><li><span class="title-icon "></span><a href="#example-lsp-violation-违反-lsp-的案例"><b>1.4. </b>EXAMPLE LSP VIOLATION 违反 LSP 的案例</a></li><li><span class="title-icon "></span><a href="#conclusion-本章小结"><b>1.5. </b>CONCLUSION 本章小结</a></li></ul></ul></div><a href="#chap9-lsp-the-liskov-substitution-principle-lsp：里氏替换原则" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="chap9-lsp-the-liskov-substitution-principle-lsp：里氏替换原则"><a name="chap9-lsp-the-liskov-substitution-principle-lsp：里氏替换原则" class="anchor-navigation-ex-anchor" href="#chap9-lsp-the-liskov-substitution-principle-lsp：里氏替换原则"><i class="fa fa-link" aria-hidden="true"></i></a>1. Chap9. LSP: THE LISKOV SUBSTITUTION PRINCIPLE LSP：里氏替换原则</h1>
 <p><img src="../un/CH-UN09.jpg" alt></p>
 <p>In 1988, Barbara Liskov wrote the following as a way of defining subtypes.</p>
 <blockquote>
@@ -1208,7 +1204,7 @@
 <blockquote>
 <p>为了让读者理解这段话中所体现的设计理念，也就是里氏替换原则（LSP），我们可以来看几个例子。</p>
 </blockquote>
-<h2 id="guiding-the-use-of-inheritance-继承的使用指导">GUIDING THE USE OF INHERITANCE 继承的使用指导</h2>
+<h2 id="guiding-the-use-of-inheritance-继承的使用指导"><a name="guiding-the-use-of-inheritance-继承的使用指导" class="anchor-navigation-ex-anchor" href="#guiding-the-use-of-inheritance-继承的使用指导"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. GUIDING THE USE OF INHERITANCE 继承的使用指导</h2>
 <p>Imagine that we have a class named License, as shown in Figure 9.1. This class has a method named calcFee(), which is called by the Billing application. There are two “subtypes” of License: PersonalLicense and BusinessLicense. They use different algorithms to calculate the license fee.</p>
 <blockquote>
 <p>假设我们有一个 License 类，其结构如图 9.1 所示。该类中有一个名为 calcFee() 的方法，该方法将由 Billing 应用程序来调用。而 License 类有两个“子类型”：PersonalLicense 与 BusinessLicense，这两个类会用不同的算法来计算授权费用。</p>
@@ -1219,7 +1215,7 @@
 <blockquote>
 <p>上述设计是符合 LSP 原则的，因为 Billing 应用程序的行为并不依赖于其使用的任何一个衍生类。也就是说，这两个衍生类的对象都是可以用来替换 License 类对象的。</p>
 </blockquote>
-<h2 id="the-squarerectangle-problem-正方形长方形问题">THE SQUARE/RECTANGLE PROBLEM 正方形/长方形问题</h2>
+<h2 id="the-squarerectangle-problem-正方形长方形问题"><a name="the-squarerectangle-problem-正方形长方形问题" class="anchor-navigation-ex-anchor" href="#the-squarerectangle-problem-正方形长方形问题"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. THE SQUARE/RECTANGLE PROBLEM 正方形/长方形问题</h2>
 <p>The canonical example of a violation of the LSP is the famed (or infamous, depending on your perspective) square/rectangle problem (Figure 9.2).</p>
 <blockquote>
 <p>正方形/长方形问题是个著名（或者说臭名远扬）的违反 LSP 的设计案例（这个问题的结构如图 9.2 所示）。</p>
@@ -1243,7 +1239,7 @@ r.setH(<span class="hljs-number">2</span>);
 <blockquote>
 <p>如果想要防范这种违反 LSP 的行为，唯一的办法就是在 user 类中增加用于区分 Rectangle 和 Square 的检测逻辑（例如增加 if 语句）。但这样一来，user 为的行为又将依赖于它所使用的类，这两个类就不能互相替换了。</p>
 </blockquote>
-<h2 id="lsp-and-architecture-lsp-与软件架构">LSP AND ARCHITECTURE LSP 与软件架构</h2>
+<h2 id="lsp-and-architecture-lsp-与软件架构"><a name="lsp-and-architecture-lsp-与软件架构" class="anchor-navigation-ex-anchor" href="#lsp-and-architecture-lsp-与软件架构"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. LSP AND ARCHITECTURE LSP 与软件架构</h2>
 <p>In the early years of the object-oriented revolution, we thought of the LSP as a way to guide the use of inheritance, as shown in the previous sections. However, over the years the LSP has morphed into a broader principle of software design that pertains to interfaces and implementations.</p>
 <blockquote>
 <p>在面向对象这场编程革命兴起的早期，我们的普遍认知正如上文所说，认为 LSP 只不过是指导如何使用继承关系的一种方法，然而随着时间的推移，LSP 逐渐演变成了一种更广泛的、指导接口与其实现方式的设计原则。</p>
@@ -1260,7 +1256,7 @@ r.setH(<span class="hljs-number">2</span>);
 <blockquote>
 <p>想要从软件架构的角度来理解 LSP 的意义，最好的办法还是来看几个反面案例。</p>
 </blockquote>
-<h2 id="example-lsp-violation-违反-lsp-的案例">EXAMPLE LSP VIOLATION 违反 LSP 的案例</h2>
+<h2 id="example-lsp-violation-违反-lsp-的案例"><a name="example-lsp-violation-违反-lsp-的案例" class="anchor-navigation-ex-anchor" href="#example-lsp-violation-违反-lsp-的案例"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. EXAMPLE LSP VIOLATION 违反 LSP 的案例</h2>
 <p>Assume that we are building an aggregator for many taxi dispatch services. Customers use our website to find the most appropriate taxi to use, regardless of taxi company. Once the customer makes a decision, our system dispatches the chosen taxi by using a restful service.</p>
 <blockquote>
 <p>假设我们现在正在构建一个提供出租车调度服务的系统。在该系统中，用户可以通过访问我们的网站，从多个出租车公司内寻找最适合自己的出租车。当用户选定车子时，该系统会通过调用 restful 服务接口来调度这辆车。</p>
@@ -1334,13 +1330,13 @@ r.setH(<span class="hljs-number">2</span>);
 <blockquote>
 <p>但这样一来，软件架构师就需要通过增加一个复杂的组件来应对并不完全能实现互相替换的 restful 服务接口。</p>
 </blockquote>
-<h2 id="conclusion-本章小结">CONCLUSION 本章小结</h2>
+<h2 id="conclusion-本章小结"><a name="conclusion-本章小结" class="anchor-navigation-ex-anchor" href="#conclusion-本章小结"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. CONCLUSION 本章小结</h2>
 <p>The LSP can, and should, be extended to the level of architecture. A simple violation of substitutability, can cause a system’s architecture to be polluted with a significant amount of extra mechanisms.</p>
 <blockquote>
 <p>LSP 可以且应该被应用于软件架构层面，因为一旦违背了可替换也该系统架构就不得不为此增添大量复杂的应对机制。</p>
 </blockquote>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-26 21:50:34
+2022-07-26 15:54:50
 </span></footer>
                                 
                                 </section>
@@ -1384,7 +1380,7 @@ r.setH(<span class="hljs-number">2</span>);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"LSP：里氏替换原则","level":"1.9.3.3","depth":3,"next":{"title":"ISP：接口隔离原则","level":"1.9.3.4","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/10-ISP：接口隔离原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/10-ISP：接口隔离原则.md","articles":[]},"previous":{"title":"OCP：开闭原则","level":"1.9.3.2","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/8-OCP：开闭原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/8-OCP：开闭原则.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/03-第三部分-设计原则/9-LSP：里氏替换原则.md","mtime":"2022-07-26T13:50:34.430Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"LSP：里氏替换原则","level":"1.9.3.3","depth":3,"next":{"title":"ISP：接口隔离原则","level":"1.9.3.4","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/10-ISP：接口隔离原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/10-ISP：接口隔离原则.md","articles":[]},"previous":{"title":"OCP：开闭原则","level":"1.9.3.2","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/8-OCP：开闭原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/8-OCP：开闭原则.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/03-第三部分-设计原则/9-LSP：里氏替换原则.md","mtime":"2022-07-26T07:54:50.395Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1450,19 +1446,7 @@ r.setH(<span class="hljs-number">2</span>);
         
     
         
-        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

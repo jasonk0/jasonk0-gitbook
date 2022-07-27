@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,13 +1190,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="chap23-presenters-and-humble-objects-展示器和谦卑对象">Chap23. PRESENTERS AND HUMBLE OBJECTS 展示器和谦卑对象</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#chap23-presenters-and-humble-objects-展示器和谦卑对象"><b>1. </b>Chap23. PRESENTERS AND HUMBLE OBJECTS 展示器和谦卑对象</a></li><ul><li><span class="title-icon "></span><a href="#the-humble-object-pattern-谦卑对象模式"><b>1.1. </b>THE HUMBLE OBJECT PATTERN 谦卑对象模式</a></li><li><span class="title-icon "></span><a href="#presenters-and-views-展示器与视图"><b>1.2. </b>PRESENTERS AND VIEWS 展示器与视图</a></li><li><span class="title-icon "></span><a href="#testing-and-architecture-测试与架构"><b>1.3. </b>TESTING AND ARCHITECTURE 测试与架构</a></li><li><span class="title-icon "></span><a href="#database-gateways-数据库网关"><b>1.4. </b>DATABASE GATEWAYS 数据库网关</a></li><li><span class="title-icon "></span><a href="#data-mappers-数据映射器"><b>1.5. </b>DATA MAPPERS 数据映射器</a></li><li><span class="title-icon "></span><a href="#service-listeners-服务监听器"><b>1.6. </b>SERVICE LISTENERS 服务监听器</a></li><li><span class="title-icon "></span><a href="#conclusion-本章小结"><b>1.7. </b>CONCLUSION 本章小结</a></li></ul></ul></div><a href="#chap23-presenters-and-humble-objects-展示器和谦卑对象" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="chap23-presenters-and-humble-objects-展示器和谦卑对象"><a name="chap23-presenters-and-humble-objects-展示器和谦卑对象" class="anchor-navigation-ex-anchor" href="#chap23-presenters-and-humble-objects-展示器和谦卑对象"><i class="fa fa-link" aria-hidden="true"></i></a>1. Chap23. PRESENTERS AND HUMBLE OBJECTS 展示器和谦卑对象</h1>
 <p><img src="../un/CH-UN23.jpg" alt></p>
 <p>In Chapter 22, we introduced the notion of presenters. Presenters are a form of the Humble Object pattern, which helps us identify and protect architectural boundaries. Actually, the Clean Architecture in the last chapter was full of Humble Object implementations.</p>
 <blockquote>
 <p>在第 22 章中，我们引入了展示器（presenter）的概念，展示器实际上是采用谦卑对象（humble object）模式的一种形式，这种设计模式可以很好地帮助识别和系统架构的边界。事实上，第 22 章所介绍的整洁架构中就充满了大量谦卑对象的实现体。</p>
 </blockquote>
-<h2 id="the-humble-object-pattern-谦卑对象模式">THE HUMBLE OBJECT PATTERN 谦卑对象模式</h2>
+<h2 id="the-humble-object-pattern-谦卑对象模式"><a name="the-humble-object-pattern-谦卑对象模式" class="anchor-navigation-ex-anchor" href="#the-humble-object-pattern-谦卑对象模式"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. THE HUMBLE OBJECT PATTERN 谦卑对象模式</h2>
 <p>The Humble Object pattern1 is a design pattern that was originally identified as a way to help unit testers to separate behaviors that are hard to test from behaviors that are easy to test. The idea is very simple: Split the behaviors into two modules or classes. One of those modules is humble; it contains all the hard-to-test behaviors stripped down to their barest essence. The other module contains all the testable behaviors that were stripped out of the humble object.</p>
 <blockquote>
 <p>谦卑对象模式最初的设计目的是帮助单元测试的编写者区分容易测试的行为与难以测试的行为，并将它们隔离。其设计思路非常简单，就是将这两类行为拆分成两组模块或类。其中一组模块被称为谦卑（Humble）组，包含了系统中所有难以 测试的行为，而这些行为已经被简化到不能再简化了。另一组模块则包含了所有不属于谦卑对象的行为。</p>
@@ -1209,7 +1205,7 @@
 <blockquote>
 <p>例如，GUI 通常是很难进行单元测试的，因为让计算机自行检视屏幕内容，并检查指定元素是否出现是非常难的事情。然而，GUI 中的大部分行为实际上是很容易被测试的。这时候，我们就可以利用谦卑对象模式将 GUI 的这两种行为拆分成展示器与视图两部分。</p>
 </blockquote>
-<h2 id="presenters-and-views-展示器与视图">PRESENTERS AND VIEWS 展示器与视图</h2>
+<h2 id="presenters-and-views-展示器与视图"><a name="presenters-and-views-展示器与视图" class="anchor-navigation-ex-anchor" href="#presenters-and-views-展示器与视图"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. PRESENTERS AND VIEWS 展示器与视图</h2>
 <p>The View is the humble object that is hard to test. The code in this object is kept as simple as possible. It moves data into the GUI but does not process that data.</p>
 <blockquote>
 <p>视图部分属于难以测试的谦卑对象。这种对象的代码通常应该越简单越好，它只应负责将数据填充到 GUI 上，而不应该对数据进行任何处理。</p>
@@ -1230,12 +1226,12 @@
 <blockquote>
 <p>总而言之，应用程序所能控制的、要在屏幕上显示的一切东西，都应该在视图模型中以字符串、布尔值或枚举值的形式存在。然后，视图部分除了加载视图模型所需要的值，不应该再做任何其他事情。因此，我们才能说视图是谦卑对象。</p>
 </blockquote>
-<h2 id="testing-and-architecture-测试与架构">TESTING AND ARCHITECTURE 测试与架构</h2>
+<h2 id="testing-and-architecture-测试与架构"><a name="testing-and-architecture-测试与架构" class="anchor-navigation-ex-anchor" href="#testing-and-architecture-测试与架构"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. TESTING AND ARCHITECTURE 测试与架构</h2>
 <p>It has long been known that testability is an attribute of good architectures. The Humble Object pattern is a good example, because the separation of the behaviors into testable and non-testable parts often defines an architectural boundary. The Presenter/View boundary is one of these boundaries, but there are many others.</p>
 <blockquote>
 <p>众所周知，强大的可测试性是一个架构的设计是否优秀的显著衡量标准之一。谦卑对象模式就是这方面的一个非常好的例子。我们将系统行为分割成可测试和不可测试两部分的过程常常就也定义了系统的架构边界。展示器与视图之间的边界只是多种架构边界中的一种，另外还有许多其他边界。</p>
 </blockquote>
-<h2 id="database-gateways-数据库网关">DATABASE GATEWAYS 数据库网关</h2>
+<h2 id="database-gateways-数据库网关"><a name="database-gateways-数据库网关" class="anchor-navigation-ex-anchor" href="#database-gateways-数据库网关"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. DATABASE GATEWAYS 数据库网关</h2>
 <p>Between the use case interactors and the database are the database gateways.2 These gateways are polymorphic interfaces that contain methods for every create, read, update, or delete operation that can be performed by the application on the database. For example, if the application needs to know the last names of all the users who logged in yesterday, then the UserGateway interface will have a method named getLastNamesOfUsersWhoLoggedInAfter that takes a Date as its argument and returns a list of last names.</p>
 <blockquote>
 <p>对于用例交互（interactor）与数据库中间的组件，我们通常称之为数据库网关。这些数据库网关本身是一个多态接口，包含了应用程序在数据库上所要执行的创建、读取、更新、删除等所有操作。例如，如果应用程序需要知道所有昨天登录系统的用户姓，那么 UserGateway 接口就应该包含一个 getLastNamesOfUsersWhoLoggedlnAfter 方法，接收一个 Date 参数，并返回一个包含姓的列表。</p>
@@ -1244,7 +1240,7 @@
 <blockquote>
 <p>另外，我们之前说过，SQL 不应该出现在用例层的代码中，所以这部分的功能就需要通过网关接口来提供，而这些接口的实现则要由数据库层的类来负责。显然，这些实现也应该都属于谦卑对象，它们应该只利用 SQL 或其他数据库提供的接口来昉问所需要的数据。与之相反，交互器则不属于谦卑对象，因为它们封装的是特定应用场景下的业务逻辑。不过，交互器尽管不属于谦卑对象，却是可测试的，因为数据库网关通常可以被替换成对应的测试桩和测试替身类。</p>
 </blockquote>
-<h2 id="data-mappers-数据映射器">DATA MAPPERS 数据映射器</h2>
+<h2 id="data-mappers-数据映射器"><a name="data-mappers-数据映射器" class="anchor-navigation-ex-anchor" href="#data-mappers-数据映射器"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. DATA MAPPERS 数据映射器</h2>
 <p>Going back to the topic of databases, in which layer do you think ORMs like Hibernate belong?</p>
 <blockquote>
 <p>让我们继续数据库方面的话题，现在我们来思考一下 Hibernate 这类的 ORM 框架应该属于系统架构中的哪一层呢？</p>
@@ -1261,7 +1257,7 @@
 <blockquote>
 <p>那么，这样的 ORM 系统应该属于系统架构中的哪一层呢？当然是数据库层。ORM 其实就是在数据库和数据库网关之间构建了另一种谦卑对象的边界。</p>
 </blockquote>
-<h2 id="service-listeners-服务监听器">SERVICE LISTENERS 服务监听器</h2>
+<h2 id="service-listeners-服务监听器"><a name="service-listeners-服务监听器" class="anchor-navigation-ex-anchor" href="#service-listeners-服务监听器"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. SERVICE LISTENERS 服务监听器</h2>
 <p>What about services? If your application must communicate with other services, or if your application provides a set of services, will we find the Humble Object pattern creating a service boundary?</p>
 <blockquote>
 <p>如果我们的应用程序需要与其他服务进行某种交互，或者该应用本身要提供某一套服务，我们在相关服务的边界处也会看到谦卑对象模式吗？</p>
@@ -1270,13 +1266,13 @@
 <blockquote>
 <p>答案是肯定的。我们的应用程序会将数据加载到简单的数据结构中，并将这些数据结构跨边界传输给那些能够将其格式化并传递其他外部服务的模块。在输入端，服务监听器会负责从服务接口中接收数据，并将其格式化成该应用程序易用的格式。总而言之，上述数据结构可以进行跨服务边界的传输。</p>
 </blockquote>
-<h2 id="conclusion-本章小结">CONCLUSION 本章小结</h2>
+<h2 id="conclusion-本章小结"><a name="conclusion-本章小结" class="anchor-navigation-ex-anchor" href="#conclusion-本章小结"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. CONCLUSION 本章小结</h2>
 <p>At each architectural boundary, we are likely to find the Humble Object pattern lurking somewhere nearby. The communication across that boundary will almost always involve some kind of simple data structure, and the boundary will frequently divide something that is hard to test from something that is easy to test. The use of this pattern at architectural boundaries vastly increases the testability of the entire system.</p>
 <blockquote>
 <p>在每个系统架构的边界处，都有可能发现谦卑对象模式的存在。因为跨边界的通信肯定需要用到某种简单的数据结构，而边界会自然而然地将系统分割成难以测试的部分与容易测试的部分，所以通过在系统的边界处运用谦卑对象模式，我们可以大幅地提高整个系统的可测试性。</p>
 </blockquote>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-26 21:50:34
+2022-07-26 15:54:49
 </span></footer>
                                 
                                 </section>
@@ -1320,7 +1316,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"展示器和谦卑对象","level":"1.9.5.9","depth":3,"next":{"title":"不完全边界","level":"1.9.5.10","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/24-不完全边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/24-不完全边界.md","articles":[]},"previous":{"title":"整洁架构","level":"1.9.5.8","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/22-整洁架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/22-整洁架构.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/05-第五部分-软件架构/23-展示器和谦卑对象.md","mtime":"2022-07-26T13:50:34.436Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"展示器和谦卑对象","level":"1.9.5.9","depth":3,"next":{"title":"不完全边界","level":"1.9.5.10","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/24-不完全边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/24-不完全边界.md","articles":[]},"previous":{"title":"整洁架构","level":"1.9.5.8","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/22-整洁架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/22-整洁架构.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/05-第五部分-软件架构/23-展示器和谦卑对象.md","mtime":"2022-07-26T07:54:49.795Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1386,19 +1382,7 @@
         
     
         
-        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

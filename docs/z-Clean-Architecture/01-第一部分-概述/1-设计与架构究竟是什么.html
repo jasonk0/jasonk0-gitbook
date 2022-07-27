@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,7 +1190,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="chap1-what-is-design-and-architecture-设计与架构到底是什么">Chap1. WHAT IS DESIGN AND ARCHITECTURE? 设计与架构到底是什么</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#chap1-what-is-design-and-architecture-设计与架构到底是什么"><b>1. </b>Chap1. WHAT IS DESIGN AND ARCHITECTURE? 设计与架构到底是什么</a></li><ul><li><span class="title-icon "></span><a href="#the-goal-目标是什么"><b>1.1. </b>THE GOAL? 目标是什么</a></li><li><span class="title-icon "></span><a href="#case-study-案例分析"><b>1.2. </b>CASE STUDY 案例分析</a></li><ul><li><span class="title-icon "></span><a href="#the-signature-of-a-mess-乱麻系统的特点"><b>1.2.1. </b>THE SIGNATURE OF A MESS 乱麻系统的特点</a></li><li><span class="title-icon "></span><a href="#the-executive-view-管理层视角"><b>1.2.2. </b>THE EXECUTIVE VIEW 管理层视角</a></li><li><span class="title-icon "></span><a href="#what-went-wrong-问题到底在哪里"><b>1.2.3. </b>WHAT WENT WRONG? 问题到底在哪里</a></li></ul><li><span class="title-icon "></span><a href="#conclusion-本章小结"><b>1.3. </b>CONCLUSION 本章小结</a></li></ul></ul></div><a href="#chap1-what-is-design-and-architecture-设计与架构到底是什么" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="chap1-what-is-design-and-architecture-设计与架构到底是什么"><a name="chap1-what-is-design-and-architecture-设计与架构到底是什么" class="anchor-navigation-ex-anchor" href="#chap1-what-is-design-and-architecture-设计与架构到底是什么"><i class="fa fa-link" aria-hidden="true"></i></a>1. Chap1. WHAT IS DESIGN AND ARCHITECTURE? 设计与架构到底是什么</h1>
 <p><img src="../un/CH-UN01.jpg" alt></p>
 <p>There has been a lot of confusion about design and architecture over the years. What is design? What is architecture? What are the differences between the two?</p>
 <blockquote>
@@ -1220,7 +1216,7 @@
 <blockquote>
 <p>软件设计也是如此。底层设计细节和高层架构信息是不可分割的。它们组合在一起，共同定义了整个软件系统，缺一不可。所谓的底层和高层本身就是一系列决策组成的连续体，并没有清晰的分界线。</p>
 </blockquote>
-<h2 id="the-goal-目标是什么">THE GOAL? 目标是什么</h2>
+<h2 id="the-goal-目标是什么"><a name="the-goal-目标是什么" class="anchor-navigation-ex-anchor" href="#the-goal-目标是什么"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. THE GOAL? 目标是什么</h2>
 <p>And the goal of those decisions? The goal of good software design? That goal is nothing less than my utopian description:</p>
 <blockquote>
 <p>所有这些决策的终极目标是什么呢？ 一个好的软件设计的终极目标是什么呢？就像我之前描述过的：</p>
@@ -1233,7 +1229,7 @@
 <blockquote>
 <p>一个软件架构的优劣，可以用它满足用户需求所需要的成本来衡量。如果该成本很低，并且在系统的整个生命周期内一直都能维持这样的低成本，那么这个系统的设计就是优良的。如果该系统的每次发布都会提升下一次变更的成本，那么这个设计就是不好的。就这么简单。</p>
 </blockquote>
-<h2 id="case-study-案例分析">CASE STUDY 案例分析</h2>
+<h2 id="case-study-案例分析"><a name="case-study-案例分析" class="anchor-navigation-ex-anchor" href="#case-study-案例分析"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. CASE STUDY 案例分析</h2>
 <p>As an example, consider the following case study. It includes real data from a real company that wishes to remain anonymous.</p>
 <blockquote>
 <p>下面来看一个真实案例，该案例中的数据均来源于一个要求匿名的真实公司。</p>
@@ -1269,7 +1265,7 @@
 </blockquote>
 <figures figure="1-3">Cost per line of code over time</figures>
 
-<h3 id="the-signature-of-a-mess-乱麻系统的特点">THE SIGNATURE OF A MESS 乱麻系统的特点</h3>
+<h3 id="the-signature-of-a-mess-乱麻系统的特点"><a name="the-signature-of-a-mess-乱麻系统的特点" class="anchor-navigation-ex-anchor" href="#the-signature-of-a-mess-乱麻系统的特点"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. THE SIGNATURE OF A MESS 乱麻系统的特点</h3>
 <p>What you are looking at is the signature of a mess. When systems are thrown together in a hurry, when the sheer number of programmers is the sole driver of output, and when little or no thought is given to the cleanliness of the code or the structure of the design, then you can bank on riding this curve to its ugly end.</p>
 <blockquote>
 <p>我们在这里看到的是一个典型的乱麻系统。这种系统一般都是没有经过设计，匆匆忙忙被构建起来的。然后为了加快发布的速度，拼命地往团队里加入新人，同时加上决策层对代码质量提升和设计结构优化存在着持续的、长久的忽视，这种状态能持续下去就怪了。</p>
@@ -1288,7 +1284,7 @@
 <blockquote>
 <p>然而，不管他们投入了多少个人时间，救了多少次火，加了多少次班，他们的产出始终上不去。工程师的大部分时间都消耗在对现有系统的修修补补上，而不是真正完成实际的新功能。这些工程师真正的任务是：拆了东墙补西墙，周而往复，偶尔有精力能顺便实现一点小功能。</p>
 </blockquote>
-<h3 id="the-executive-view-管理层视角">THE EXECUTIVE VIEW 管理层视角</h3>
+<h3 id="the-executive-view-管理层视角"><a name="the-executive-view-管理层视角" class="anchor-navigation-ex-anchor" href="#the-executive-view-管理层视角"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.2. THE EXECUTIVE VIEW 管理层视角</h3>
 <p>If you think that’s bad, imagine what this picture looks like to the executives! Consider Figure 1.5, which depicts monthly development payroll for the same period.</p>
 <blockquote>
 <p>如果你觉得开发者们这样就已经够苦了，那么就再想想公司髙管们的感受吧! 请看图 1.5，该部门月工资同期图。</p>
@@ -1311,7 +1307,7 @@
 <blockquote>
 <p>但是具体采取什么样的行动才能解决问题呢？究竟问题出在哪里？是什么造成了工程师生产力的直线下降？高管们除了跺脚、发飙，还能做什么呢？</p>
 </blockquote>
-<h3 id="what-went-wrong-问题到底在哪里">WHAT WENT WRONG? 问题到底在哪里</h3>
+<h3 id="what-went-wrong-问题到底在哪里"><a name="what-went-wrong-问题到底在哪里" class="anchor-navigation-ex-anchor" href="#what-went-wrong-问题到底在哪里"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.3. WHAT WENT WRONG? 问题到底在哪里</h3>
 <p>Nearly 2600 years ago, Aesop told the story of the Tortoise and the Hare. The moral of that story has been stated many times in many different ways:</p>
 <blockquote>
 <p>大约 2600 年前，《伊索寓言》里写到了龟兔赛跑的故事。这个故事的主题思想可以归纳为以下几种：</p>
@@ -1383,7 +1379,7 @@
 <blockquote>
 <p>那么，我们有什么理由认为让他们从头第 1 章设计与架构究竟是什么过度自信只会使得重构设计陷入和原项目一样的困局中。</p>
 </blockquote>
-<h2 id="conclusion-本章小结">CONCLUSION 本章小结</h2>
+<h2 id="conclusion-本章小结"><a name="conclusion-本章小结" class="anchor-navigation-ex-anchor" href="#conclusion-本章小结"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. CONCLUSION 本章小结</h2>
 <p>In every case, the best option is for the development organization to recognize and avoid its own overconfidence and to start taking the quality of its software architecture seriously.</p>
 <blockquote>
 <p>不管怎么看，研发团队最好的选择是清晰地认识并避开工程师们过度自信的特点，开始认真地对待自己的代码架构，对其质量负责。</p>
@@ -1397,7 +1393,7 @@
 <p>这就是这本书的主题。本书为读者描述了什么是优秀的、整洁的软件架构与设计，读者可以参考这些设计来构建一个长期稳定的、持久优秀的系统。</p>
 </blockquote>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-26 21:50:34
+2022-07-26 15:54:49
 </span></footer>
                                 
                                 </section>
@@ -1441,7 +1437,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"设计与架构究竟是什么","level":"1.9.1.1","depth":3,"next":{"title":"两个价值维度","level":"1.9.1.2","depth":3,"path":"z-Clean-Architecture/01-第一部分-概述/2-两个价值维度.md","ref":"z-Clean-Architecture/01-第一部分-概述/2-两个价值维度.md","articles":[]},"previous":{"title":"第一部分-概述","level":"1.9.1","depth":2,"path":"z-Clean-Architecture/01-第一部分-概述/README.md","ref":"z-Clean-Architecture/01-第一部分-概述/README.md","articles":[{"title":"设计与架构究竟是什么","level":"1.9.1.1","depth":3,"path":"z-Clean-Architecture/01-第一部分-概述/1-设计与架构究竟是什么.md","ref":"z-Clean-Architecture/01-第一部分-概述/1-设计与架构究竟是什么.md","articles":[]},{"title":"两个价值维度","level":"1.9.1.2","depth":3,"path":"z-Clean-Architecture/01-第一部分-概述/2-两个价值维度.md","ref":"z-Clean-Architecture/01-第一部分-概述/2-两个价值维度.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/01-第一部分-概述/1-设计与架构究竟是什么.md","mtime":"2022-07-26T13:50:34.424Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"设计与架构究竟是什么","level":"1.9.1.1","depth":3,"next":{"title":"两个价值维度","level":"1.9.1.2","depth":3,"path":"z-Clean-Architecture/01-第一部分-概述/2-两个价值维度.md","ref":"z-Clean-Architecture/01-第一部分-概述/2-两个价值维度.md","articles":[]},"previous":{"title":"第一部分-概述","level":"1.9.1","depth":2,"path":"z-Clean-Architecture/01-第一部分-概述/README.md","ref":"z-Clean-Architecture/01-第一部分-概述/README.md","articles":[{"title":"设计与架构究竟是什么","level":"1.9.1.1","depth":3,"path":"z-Clean-Architecture/01-第一部分-概述/1-设计与架构究竟是什么.md","ref":"z-Clean-Architecture/01-第一部分-概述/1-设计与架构究竟是什么.md","articles":[]},{"title":"两个价值维度","level":"1.9.1.2","depth":3,"path":"z-Clean-Architecture/01-第一部分-概述/2-两个价值维度.md","ref":"z-Clean-Architecture/01-第一部分-概述/2-两个价值维度.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/01-第一部分-概述/1-设计与架构究竟是什么.md","mtime":"2022-07-26T07:54:49.795Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1507,19 +1503,7 @@
         
     
         
-        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

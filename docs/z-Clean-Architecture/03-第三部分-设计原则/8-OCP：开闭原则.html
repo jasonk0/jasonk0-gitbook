@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,7 +1190,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="chap8-ocp-the-open-closed-principle-ocp：开闭原则">Chap8. OCP: THE OPEN-CLOSED PRINCIPLE OCP：开闭原则</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#chap8-ocp-the-open-closed-principle-ocp：开闭原则"><b>1. </b>Chap8. OCP: THE OPEN-CLOSED PRINCIPLE OCP：开闭原则</a></li><ul><li><span class="title-icon "></span><a href="#a-thought-experiment-思想实验"><b>1.1. </b>A THOUGHT EXPERIMENT 思想实验</a></li><li><span class="title-icon "></span><a href="#directional-control-依赖方向的控制"><b>1.2. </b>DIRECTIONAL CONTROL 依赖方向的控制</a></li><li><span class="title-icon "></span><a href="#information-hiding-信息隐藏"><b>1.3. </b>INFORMATION HIDING 信息隐藏</a></li><li><span class="title-icon "></span><a href="#conclusion-本章小结"><b>1.4. </b>CONCLUSION 本章小结</a></li></ul></ul></div><a href="#chap8-ocp-the-open-closed-principle-ocp：开闭原则" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="chap8-ocp-the-open-closed-principle-ocp：开闭原则"><a name="chap8-ocp-the-open-closed-principle-ocp：开闭原则" class="anchor-navigation-ex-anchor" href="#chap8-ocp-the-open-closed-principle-ocp：开闭原则"><i class="fa fa-link" aria-hidden="true"></i></a>1. Chap8. OCP: THE OPEN-CLOSED PRINCIPLE OCP：开闭原则</h1>
 <p><img src="../un/CH-UN08.jpg" alt></p>
 <p>The Open-Closed Principle (OCP) was coined in 1988 by Bertrand Meyer.1 It says:</p>
 <blockquote>
@@ -1220,7 +1216,7 @@
 <blockquote>
 <p>下面，让我们用一个思想实验来做一些说明。</p>
 </blockquote>
-<h2 id="a-thought-experiment-思想实验">A THOUGHT EXPERIMENT 思想实验</h2>
+<h2 id="a-thought-experiment-思想实验"><a name="a-thought-experiment-思想实验" class="anchor-navigation-ex-anchor" href="#a-thought-experiment-思想实验"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. A THOUGHT EXPERIMENT 思想实验</h2>
 <p>Imagine, for a moment, that we have a system that displays a financial summary on a web page. The data on the page is scrollable, and negative numbers are rendered in red.</p>
 <blockquote>
 <p>假设我们现在要设计一个在 Web 页面上展示财务数据的系统，页面上的数据要可以滚动显示，其中负值应显示为红色。</p>
@@ -1303,7 +1299,7 @@
 <blockquote>
 <p>以上就是我们在软件架构层次上对 OCP 这一设计原则的应用。软件架构师可以根据相关函数被修改的原因、修改的方式及修改的时间来对其进行分组隔离，并将这些互相隔离的函数分组整理成组件结构，使得高阶组件不会因低阶组件被修改而受到影响。</p>
 </blockquote>
-<h2 id="directional-control-依赖方向的控制">DIRECTIONAL CONTROL 依赖方向的控制</h2>
+<h2 id="directional-control-依赖方向的控制"><a name="directional-control-依赖方向的控制" class="anchor-navigation-ex-anchor" href="#directional-control-依赖方向的控制"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. DIRECTIONAL CONTROL 依赖方向的控制</h2>
 <p>If you recoiled in horror from the class design shown earlier, look again. Much of the complexity in that diagram was intended to make sure that the dependencies between the components pointed in the correct direction.</p>
 <blockquote>
 <p>如果刚刚的类设计把你吓着了，别害怕！你刚刚在图表中所看到的复杂度是我们想要对组件之间的依赖方向进行控制而产生的。</p>
@@ -1312,7 +1308,7 @@
 <blockquote>
 <p>例如，FinanciaIReportGenerator 和 FinancialDataMapper 之间的 Financial Da taGateway 接口是为了反转 Interactor 与 Database 之间的依赖关系而产生的。同样的，FinancialReportPresenter 接口与两个 View 接口之间也类似于这种情况。</p>
 </blockquote>
-<h2 id="information-hiding-信息隐藏">INFORMATION HIDING 信息隐藏</h2>
+<h2 id="information-hiding-信息隐藏"><a name="information-hiding-信息隐藏" class="anchor-navigation-ex-anchor" href="#information-hiding-信息隐藏"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. INFORMATION HIDING 信息隐藏</h2>
 <p>The FinancialReportRequester interface serves a different purpose. It is there to protect the FinancialReportController from knowing too much about the internals of the Interactor. If that interface were not there, then the Controller would have transitive dependencies on the FinancialEntities.</p>
 <blockquote>
 <p>当然，FinancialReportRequester 接口的作用则完全不同，它的作用是保护 FinancialReportController 不过度依赖于 Interactor 的内部细节。如果没有这个接口，则 Controller 将会传递性地依赖于 FinancialEntities。</p>
@@ -1325,13 +1321,13 @@
 <blockquote>
 <p>所以，虽然我们的首要目的是为了让 Interactor 屏蔽掉发生在 Controller 上的修改，但也需要通过隐藏 Interactor 内部细节的方法来让其屏蔽掉来自 Controller 的依赖。</p>
 </blockquote>
-<h2 id="conclusion-本章小结">CONCLUSION 本章小结</h2>
+<h2 id="conclusion-本章小结"><a name="conclusion-本章小结" class="anchor-navigation-ex-anchor" href="#conclusion-本章小结"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. CONCLUSION 本章小结</h2>
 <p>The OCP is one of the driving forces behind the architecture of systems. The goal is to make the system easy to extend without incurring a high impact of change. This goal is accomplished by partitioning the system into components, and arranging those components into a dependency hierarchy that protects higher-level components from changes in lower-level components.</p>
 <blockquote>
 <p>OCP 是我们进行系统架构设计的主导原则，其主要目标是让系统易于扩展，同时限制其每次被修改所影响的范围。实现方式是通过将系统划分为一系列组件，并且将这些组件间的依赖关系按层次结构进行组织，使得高阶组件不会因低阶组件被修改而受到影响。</p>
 </blockquote>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-26 21:50:34
+2022-07-26 15:54:49
 </span></footer>
                                 
                                 </section>
@@ -1375,7 +1371,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"OCP：开闭原则","level":"1.9.3.2","depth":3,"next":{"title":"LSP：里氏替换原则","level":"1.9.3.3","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/9-LSP：里氏替换原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/9-LSP：里氏替换原则.md","articles":[]},"previous":{"title":"SRP：单一职责原则","level":"1.9.3.1","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/7-SRP：单一职责原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/7-SRP：单一职责原则.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/03-第三部分-设计原则/8-OCP：开闭原则.md","mtime":"2022-07-26T13:50:34.429Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"OCP：开闭原则","level":"1.9.3.2","depth":3,"next":{"title":"LSP：里氏替换原则","level":"1.9.3.3","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/9-LSP：里氏替换原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/9-LSP：里氏替换原则.md","articles":[]},"previous":{"title":"SRP：单一职责原则","level":"1.9.3.1","depth":3,"path":"z-Clean-Architecture/03-第三部分-设计原则/7-SRP：单一职责原则.md","ref":"z-Clean-Architecture/03-第三部分-设计原则/7-SRP：单一职责原则.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/03-第三部分-设计原则/8-OCP：开闭原则.md","mtime":"2022-07-26T07:54:49.795Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1441,19 +1437,7 @@
         
     
         
-        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

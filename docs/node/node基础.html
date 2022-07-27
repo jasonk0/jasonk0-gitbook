@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,8 +1190,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="node">Node</h1>
-<h2 id="前言">前言</h2>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#node"><b>1. </b>Node</a></li><ul><li><span class="title-icon "></span><a href="#前言"><b>1.1. </b>前言</a></li><li><span class="title-icon "></span><a href="#基础知识（要扎实！）"><b>1.2. </b>基础知识（要扎实！）</a></li><ul><li><span class="title-icon "></span><a href="#node的安装和版本"><b>1.2.1. </b>node的安装和版本</a></li><li><span class="title-icon "></span><a href="#nodejs的原生api能力"><b>1.2.2. </b>Nodejs的原生API能力</a></li><li><span class="title-icon "></span><a href="#底层机制和原理"><b>1.2.3. </b>底层机制和原理</a></li><li><span class="title-icon "></span><a href="#网络编程能力"><b>1.2.4. </b>网络编程能力</a></li></ul><li><span class="title-icon "></span><a href="#实践内容"><b>1.3. </b>实践内容</a></li><ul><li><span class="title-icon "></span><a href="#web-server实战"><b>1.3.1. </b>Web Server实战</a></li></ul><li><span class="title-icon "></span><a href="#express"><b>1.4. </b>Express</a></li><ul><li><span class="title-icon "></span><a href="#邮件实践"><b>1.4.1. </b>邮件实践</a></li><li><span class="title-icon "></span><a href="#restful-api"><b>1.4.2. </b>RESTful API</a></li><li><span class="title-icon "></span><a href="#web-server的测试"><b>1.4.3. </b>Web Server的测试</a></li></ul></ul></ul></div><a href="#node" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="node"><a name="node" class="anchor-navigation-ex-anchor" href="#node"><i class="fa fa-link" aria-hidden="true"></i></a>1. Node</h1>
+<h2 id="前言"><a name="前言" class="anchor-navigation-ex-anchor" href="#前言"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. 前言</h2>
 <p>进阶的条件和难点：</p>
 <ol>
 <li>到了需要进阶的时候</li>
@@ -1233,8 +1229,8 @@
 <li>深入浅出node</li>
 <li>nodejs实战2</li>
 </ul>
-<h2 id="基础知识（要扎实！）">基础知识（要扎实！）</h2>
-<h3 id="node的安装和版本">node的安装和版本</h3>
+<h2 id="基础知识（要扎实！）"><a name="基础知识（要扎实！）" class="anchor-navigation-ex-anchor" href="#基础知识（要扎实！）"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. 基础知识（要扎实！）</h2>
+<h3 id="node的安装和版本"><a name="node的安装和版本" class="anchor-navigation-ex-anchor" href="#node的安装和版本"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. node的安装和版本</h3>
 <p>Mac下：</p>
 <ul>
 <li><p>官方的安装包 </p>
@@ -1257,7 +1253,7 @@
 <p>实验项目可以用current版本</p>
 <p>奇数为不稳定版本，偶数稳定。</p>
 <p>不必保持最新</p>
-<h4 id="模块机制">模块机制</h4>
+<h4 id="模块机制"><a name="模块机制" class="anchor-navigation-ex-anchor" href="#模块机制"><i class="fa fa-link" aria-hidden="true"></i></a>模块机制</h4>
 <ol>
 <li>采用CJM/ESM来组织</li>
 <li>每一个文件就是一个模块，有自己的作用域</li>
@@ -1274,7 +1270,7 @@
 <li><p>npx 执行命令、很全能</p>
 </li>
 </ul>
-<h4 id="nodejs的能力">Nodejs的能力</h4>
+<h4 id="nodejs的能力"><a name="nodejs的能力" class="anchor-navigation-ex-anchor" href="#nodejs的能力"><i class="fa fa-link" aria-hidden="true"></i></a>Nodejs的能力</h4>
 <ol>
 <li>跨平台：web + H5 + hybird + PC</li>
 <li>Node后端：Web应用、API rpc、微服务</li>
@@ -1285,11 +1281,11 @@
 <blockquote>
 <p>node不适合做计算量比较大的事情、适合做吞吐量大的事情。</p>
 </blockquote>
-<h3 id="nodejs的原生api能力">Nodejs的原生API能力</h3>
+<h3 id="nodejs的原生api能力"><a name="nodejs的原生api能力" class="anchor-navigation-ex-anchor" href="#nodejs的原生api能力"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.2. Nodejs的原生API能力</h3>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/node的架构.png" alt="node的架构"></p>
 <p>libuv：灵魂、异步任务、线程池；</p>
 <p>binding：胶水代码、将不同语言的代码粘合在一起。</p>
-<h4 id="了解数据类型">了解数据类型</h4>
+<h4 id="了解数据类型"><a name="了解数据类型" class="anchor-navigation-ex-anchor" href="#了解数据类型"><i class="fa fa-link" aria-hidden="true"></i></a>了解数据类型</h4>
 <p>Buffer-缓存 ： 对象占用内存空间，不计算在进程限制上。</p>
 <ul>
 <li><p>处理流式数据</p>
@@ -1359,7 +1355,7 @@
 <p><code>Buffer、process、URL、WebAssembly</code></p>
 <hr>
 <p>这些数据类型的意义在于，方便我们在实现高级功能时，可以直接调用底层的东西</p>
-<h4 id="了解几个工具库">了解几个工具库</h4>
+<h4 id="了解几个工具库"><a name="了解几个工具库" class="anchor-navigation-ex-anchor" href="#了解几个工具库"><i class="fa fa-link" aria-hidden="true"></i></a>了解几个工具库</h4>
 <p>工具库-util</p>
 <ul>
 <li>风格转换：promisify &lt;=&gt; callbackify等</li>
@@ -1380,7 +1376,7 @@
 <li>查询字符串转键值对： parse</li>
 <li>键值对转查询字符串：stringfy</li>
 </ul>
-<h4 id="掌握文件系统能力">掌握文件系统能力</h4>
+<h4 id="掌握文件系统能力"><a name="掌握文件系统能力" class="anchor-navigation-ex-anchor" href="#掌握文件系统能力"><i class="fa fa-link" aria-hidden="true"></i></a>掌握文件系统能力</h4>
 <p>OS模块：提供与操作系统相关的使用方法和属性</p>
 <p>可以兼容的调用不同平台的底层命令，形成系统快照</p>
 <blockquote>
@@ -1400,7 +1396,7 @@
 <li>操作文件：chomd、open、read、write</li>
 </ul>
 <hr>
-<h3 id="底层机制和原理">底层机制和原理</h3>
+<h3 id="底层机制和原理"><a name="底层机制和原理" class="anchor-navigation-ex-anchor" href="#底层机制和原理"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.3. 底层机制和原理</h3>
 <p>模块机制——CommonJS</p>
 <p>模块引用（require）、模块定义（export）、模块标识（路径）</p>
 <p>过程：路径分析 =&gt; 文件定位 =&gt; 编译执行 =&gt; 加入缓存</p>
@@ -1447,22 +1443,22 @@
 <li>加载全部代码</li>
 </ul>
 <hr>
-<h3 id="网络编程能力">网络编程能力</h3>
+<h3 id="网络编程能力"><a name="网络编程能力" class="anchor-navigation-ex-anchor" href="#网络编程能力"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.4. 网络编程能力</h3>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/网络模型的比对.png" alt="网络模型的比对"></p>
 <p>Socket：套接字，是底层通信，用来描述端口和主机；几乎所有的应用层都是通过socket进行通信</p>
 <p>从何而来？对TCP/IP进行封装，并向应用层协议暴露接口调用。</p>
 <p>TCP和UDP的不同，在于不同参数的socket实现过程不同</p>
-<h4 id="netdgram模块">net/dgram模块</h4>
+<h4 id="netdgram模块"><a name="netdgram模块" class="anchor-navigation-ex-anchor" href="#netdgram模块"><i class="fa fa-link" aria-hidden="true"></i></a>net/dgram模块</h4>
 <p>net是TCP/IP的node实现，提供一些用于底层的网络通信的方法</p>
 <p>http客户端和服务端通信均依赖于socket</p>
 <p>net.Server：TCP server，内部通过socket来实现与客户端的通信</p>
 <p>net.Socket：本地socket的node版实现，她实现了全双工的stream接口</p>
 <p>API：连接connet、读写write、属性bufferSize、地址address</p>
-<h4 id="httphttpshttp2模块">http/https/http2模块</h4>
+<h4 id="httphttpshttp2模块"><a name="httphttpshttp2模块" class="anchor-navigation-ex-anchor" href="#httphttpshttp2模块"><i class="fa fa-link" aria-hidden="true"></i></a>http/https/http2模块</h4>
 <p>编写Web Server最常见的模块</p>
 <p>Server部分继承自net.Server并对请求和相应数据进行封装方便实用。</p>
 <p>也提供了像其他服务端发起HTTP请求的能力</p>
-<h4 id="进程管理">进程管理</h4>
+<h4 id="进程管理"><a name="进程管理" class="anchor-navigation-ex-anchor" href="#进程管理"><i class="fa fa-link" aria-hidden="true"></i></a>进程管理</h4>
 <hr>
 <p> <img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/进程线程基本概念.png" alt="基本概念"></p>
 <p>线程：单一顺序控制流程、程序执行流的最小单元</p>
@@ -1510,12 +1506,12 @@
 <p>node的模块机制<a href="https://juejin.im/entry/5b4b5081e51d451984696cb7" target="_blank">https://juejin.im/entry/5b4b5081e51d451984696cb7</a></p>
 <p>node的进程与线程<a href="https://juejin.im/post/5d43017be51d4561f40adcf9" target="_blank">https://juejin.im/post/5d43017be51d4561f40adcf9</a></p>
 <p><a href="http://nodejs.cn/" target="_blank">http://nodejs.cn/</a></p>
-<h2 id="实践内容">实践内容</h2>
+<h2 id="实践内容"><a name="实践内容" class="anchor-navigation-ex-anchor" href="#实践内容"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. 实践内容</h2>
 <p>使用Express编写Restful API</p>
 <p>编写 Web Server 测试</p>
 <p>Web服务及Koa源码分析</p>
 <p>使用Egg编写企业项目</p>
-<h3 id="web-server实战">Web Server实战</h3>
+<h3 id="web-server实战"><a name="web-server实战" class="anchor-navigation-ex-anchor" href="#web-server实战"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. Web Server实战</h3>
 <p>Web Server的构成：</p>
 <ul>
 <li>处理HTTP：对HTTP的请求进行响应</li>
@@ -1534,7 +1530,7 @@
 <li>框架高度包容</li>
 <li>社区氛围友好</li>
 </ul>
-<h2 id="express">Express</h2>
+<h2 id="express"><a name="express" class="anchor-navigation-ex-anchor" href="#express"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. Express</h2>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/express的能力.png" alt="能力"></p>
 <p>express的强大之处在于中间件。</p>
 <p><img src="https://raw.githubusercontent.com/jasonk0/myImage-blog/master/imgs/中间件的位置.png" alt="中间件"></p>
@@ -1560,12 +1556,12 @@
 <li><p>需要重启的时候立刻重启，保证可以自动重启</p>
 </li>
 </ul>
-<h3 id="邮件实践">邮件实践</h3>
+<h3 id="邮件实践"><a name="邮件实践" class="anchor-navigation-ex-anchor" href="#邮件实践"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.1. 邮件实践</h3>
 <p>整体流程</p>
 <p><img src="../Users/jasonk0/Library/Application Support/typora-user-images/image-20220421112219940.png" alt="image-20220421112219940"></p>
 <p>功能设计</p>
 <p><img src="../Users/jasonk0/Library/Application Support/typora-user-images/image-20220421112253282.png" alt="image-20220421112253282"></p>
-<h3 id="restful-api">RESTful API</h3>
+<h3 id="restful-api"><a name="restful-api" class="anchor-navigation-ex-anchor" href="#restful-api"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.2. RESTful API</h3>
 <p>基于REST架构的Web server 就称为RESTful</p>
 <p>特点： </p>
 <ul>
@@ -1590,7 +1586,7 @@
 <li>REST只是一个规范，适合的才是最好的</li>
 <li>找一个好的框架胜过自己造轮子GraphQ</li>
 </ul>
-<h3 id="web-server的测试">Web Server的测试</h3>
+<h3 id="web-server的测试"><a name="web-server的测试" class="anchor-navigation-ex-anchor" href="#web-server的测试"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.3. Web Server的测试</h3>
 <p>测试需要知道的：</p>
 <p>编写测试代码的时间远比编写大妈时间要长</p>
 <p>更多的测试代码代表着更多bug出现概率</p>
@@ -1601,22 +1597,22 @@
 <p>TDD只适合种狗自己代码的场景，不要盲目尝试</p>
 <p>不要着急实现测试细节，只关注输入输出，先开始轻量测试 </p>
 <p>挑选适合的测试框架，避免做无意义的“编程卡顿”</p>
-<h4 id="最佳实践first原则">最佳实践FIRST原则</h4>
+<h4 id="最佳实践first原则"><a name="最佳实践first原则" class="anchor-navigation-ex-anchor" href="#最佳实践first原则"><i class="fa fa-link" aria-hidden="true"></i></a>最佳实践FIRST原则</h4>
 <p>Fast 快速执行</p>
 <p>Independent 不依赖环境和顺序，有自己的3A环节</p>
 <p>Repeatable 一次执行和多次执行结果相同</p>
 <p>Self-Valid 测试要给是否通过，检验结果</p>
 <p>Through 尽量覆盖所有应用场景</p>
-<h4 id="rest接口的测试">REST接口的测试</h4>
+<h4 id="rest接口的测试"><a name="rest接口的测试" class="anchor-navigation-ex-anchor" href="#rest接口的测试"><i class="fa fa-link" aria-hidden="true"></i></a>REST接口的测试</h4>
 <p>mocha框架，同类还有ava、jasmine、tap</p>
 <p>使用supertest做客户端代理，向服务器发请求</p>
 <p>chai断言库，配合mocha编写单测</p>
 <p>在钩子中初始化服务器环境，种植数据库数据，处理掉require混存</p>
-<h4 id="基准测试和压力测试">基准测试和压力测试</h4>
+<h4 id="基准测试和压力测试"><a name="基准测试和压力测试" class="anchor-navigation-ex-anchor" href="#基准测试和压力测试"><i class="fa fa-link" aria-hidden="true"></i></a>基准测试和压力测试</h4>
 <p>使用benchmark 对核心代码进行基准测试</p>
 <p>根据服务业务场景和经验估算业务访问量PV</p>
 <p>使用ab对服务的吞吐量、响应时间、并发数进行测试。</p>
-<h4 id="预估服务性能和资源">预估服务性能和资源</h4>
+<h4 id="预估服务性能和资源"><a name="预估服务性能和资源" class="anchor-navigation-ex-anchor" href="#预估服务性能和资源"><i class="fa fa-link" aria-hidden="true"></i></a>预估服务性能和资源</h4>
 <p><img src="../Users/jasonk0/Library/Application Support/typora-user-images/image-20220516113905129.png" alt="image-20220516113905129"></p>
 <ul>
 <li>单机QPS = 总请求数 / （进程总数 * 请求时间），从压测得到</li>
@@ -1625,7 +1621,7 @@
 <li>需要的机器 = 峰值时间QPS / 单机QPS</li>
 </ul>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-20 10:55:44
+2022-07-21 08:53:32
 </span></footer>
                                 
                                 </section>
@@ -1669,7 +1665,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"node基础","level":"1.6.5","depth":2,"next":{"title":"node与mongDB","level":"1.6.6","depth":2,"path":"node/node与mongDB.md","ref":"node/node与mongDB.md","articles":[]},"previous":{"title":"node的web框架koa","level":"1.6.4","depth":2,"path":"node/node的web框架koa.md","ref":"node/node的web框架koa.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"node/node基础.md","mtime":"2022-07-20T02:55:44.895Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"node基础","level":"1.6.5","depth":2,"next":{"title":"node与mongDB","level":"1.6.6","depth":2,"path":"node/node与mongDB.md","ref":"node/node与mongDB.md","articles":[]},"previous":{"title":"node的web框架koa","level":"1.6.4","depth":2,"path":"node/node的web框架koa.md","ref":"node/node的web框架koa.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"node/node基础.md","mtime":"2022-07-21T00:53:32.683Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1735,19 +1731,7 @@
         
     
         
-        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

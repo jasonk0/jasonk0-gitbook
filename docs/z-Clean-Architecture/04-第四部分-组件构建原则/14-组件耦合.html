@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,13 +1190,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="chap14-component-coupling-组件耦合">Chap14. COMPONENT COUPLING 组件耦合</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#chap14-component-coupling-组件耦合"><b>1. </b>Chap14. COMPONENT COUPLING 组件耦合</a></li><ul><li><span class="title-icon "></span><a href="#the-acyclic-dependencies-principle-无依赖环原则"><b>1.1. </b>THE ACYCLIC DEPENDENCIES PRINCIPLE 无依赖环原则</a></li><ul><li><span class="title-icon "></span><a href="#the-weekly-build-每周构建"><b>1.1.1. </b>THE WEEKLY BUILD 每周构建</a></li><li><span class="title-icon "></span><a href="#eliminating-dependency-cycles-消除循环依赖"><b>1.1.2. </b>ELIMINATING DEPENDENCY CYCLES 消除循环依赖</a></li><li><span class="title-icon "></span><a href="#the-effect-of-a-cycle-in-the-component-dependency-graph-循环依赖在组件依赖图中的影响"><b>1.1.3. </b>THE EFFECT OF A CYCLE IN THE COMPONENT DEPENDENCY GRAPH 循环依赖在组件依赖图中的影响</a></li><li><span class="title-icon "></span><a href="#breaking-the-cycle-打破循环依赖"><b>1.1.4. </b>BREAKING THE CYCLE 打破循环依赖</a></li><li><span class="title-icon "></span><a href="#the-jitters-抖动"><b>1.1.5. </b>THE “JITTERS” “抖动”</a></li></ul><li><span class="title-icon "></span><a href="#top-down-design-自上而下的设计"><b>1.2. </b>TOP-DOWN DESIGN 自上而下的设计</a></li><li><span class="title-icon "></span><a href="#the-stable-dependencies-principle-稳定依赖原则"><b>1.3. </b>THE STABLE DEPENDENCIES PRINCIPLE 稳定依赖原则</a></li><ul><li><span class="title-icon "></span><a href="#stability-稳定性"><b>1.3.1. </b>STABILITY 稳定性</a></li><li><span class="title-icon "></span><a href="#stability-metrics-稳定性指标"><b>1.3.2. </b>STABILITY METRICS 稳定性指标</a></li><li><span class="title-icon "></span><a href="#not-all-components-should-be-stable-并不是所有组件都应该是稳定的"><b>1.3.3. </b>NOT ALL COMPONENTS SHOULD BE STABLE 并不是所有组件都应该是稳定的</a></li><li><span class="title-icon "></span><a href="#abstract-components-抽象组件"><b>1.3.4. </b>Abstract Components 抽象组件</a></li></ul><li><span class="title-icon "></span><a href="#the-stable-abstractions-principle-稳定抽象原则"><b>1.4. </b>THE STABLE ABSTRACTIONS PRINCIPLE 稳定抽象原则</a></li><ul><li><span class="title-icon "></span><a href="#where-do-we-put-the-high-level-policy-高阶策略应该放在哪里"><b>1.4.1. </b>WHERE DO WE PUT THE HIGH-LEVEL POLICY? 高阶策略应该放在哪里</a></li><li><span class="title-icon "></span><a href="#introducing-the-stable-abstractions-principle-稳定抽象原则简介"><b>1.4.2. </b>INTRODUCING THE STABLE ABSTRACTIONS PRINCIPLE 稳定抽象原则简介</a></li><li><span class="title-icon "></span><a href="#measuring-abstraction-衡量抽象化程度"><b>1.4.3. </b>MEASURING ABSTRACTION 衡量抽象化程度</a></li><li><span class="title-icon "></span><a href="#the-main-sequence-主序列"><b>1.4.4. </b>THE MAIN SEQUENCE 主序列</a></li><li><span class="title-icon "></span><a href="#the-zone-of-pain-痛苦区"><b>1.4.5. </b>The Zone of Pain 痛苦区</a></li><li><span class="title-icon "></span><a href="#the-zone-of-uselessness-无用区"><b>1.4.6. </b>The Zone of Uselessness 无用区</a></li><li><span class="title-icon "></span><a href="#avoiding-the-zones-of-exclusion-避开这两个区域"><b>1.4.7. </b>AVOIDING THE ZONES OF EXCLUSION 避开这两个区域</a></li><li><span class="title-icon "></span><a href="#distance-from-the-main-sequence-离主序列线的距离"><b>1.4.8. </b>DISTANCE FROM THE MAIN SEQUENCE 离主序列线的距离</a></li></ul><li><span class="title-icon "></span><a href="#conclusion-本章小结"><b>1.5. </b>CONCLUSION 本章小结</a></li></ul></ul></div><a href="#chap14-component-coupling-组件耦合" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="chap14-component-coupling-组件耦合"><a name="chap14-component-coupling-组件耦合" class="anchor-navigation-ex-anchor" href="#chap14-component-coupling-组件耦合"><i class="fa fa-link" aria-hidden="true"></i></a>1. Chap14. COMPONENT COUPLING 组件耦合</h1>
 <p><img src="../un/CH-UN14.jpg" alt></p>
 <p>The next three principles deal with the relationships between components. Here again we will run into the tension between develop-ability and logical design. The forces that impinge upon the architecture of a component structure are technical, political, and volatile.</p>
 <blockquote>
 <p>接下来要讨论的三条原则主要关注的是组件之间的关系。在这些原则中，我们同样会面临着研发能力和逻辑设计之间的冲突。毕竟，影响组件结构的不仅有技术水平和公司内部政治斗争这两个因素，其结构本身更是不断变化的。</p>
 </blockquote>
-<h2 id="the-acyclic-dependencies-principle-无依赖环原则">THE ACYCLIC DEPENDENCIES PRINCIPLE 无依赖环原则</h2>
+<h2 id="the-acyclic-dependencies-principle-无依赖环原则"><a name="the-acyclic-dependencies-principle-无依赖环原则" class="anchor-navigation-ex-anchor" href="#the-acyclic-dependencies-principle-无依赖环原则"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. THE ACYCLIC DEPENDENCIES PRINCIPLE 无依赖环原则</h2>
 <p>Allow no cycles in the component dependency graph.</p>
 <blockquote>
 <p>组件依赖关系图中不应该出现环。</p>
@@ -1217,7 +1213,7 @@
 <blockquote>
 <p>在过去几十年中，针对这个问题逐渐演化出了两种解决方案，它们都来自电信行业。第一种是“每周构建”，第二种是“无依赖环原则（ADP）”。</p>
 </blockquote>
-<h3 id="the-weekly-build-每周构建">THE WEEKLY BUILD 每周构建</h3>
+<h3 id="the-weekly-build-每周构建"><a name="the-weekly-build-每周构建" class="anchor-navigation-ex-anchor" href="#the-weekly-build-每周构建"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. THE WEEKLY BUILD 每周构建</h3>
 <p>The weekly build used to be common in medium-sized projects. It works like this: All the developers ignore each other for the first four days of the week. They all work on private copies of the code, and don’t worry about integrating their work on a collective basis. Then, on Friday, they integrate all their changes and build the system.</p>
 <blockquote>
 <p>每周构建方案是中型项目中很常见的一种管理手段。其具体做法如下：在每周的前四天中，让所有的程序员在自己的私有库上工作，忽略其他人的修改，也不考虑互相之间的集成问题；然后在每周五要求所有人将自己所做的变更提交，进行统一构建。</p>
@@ -1235,7 +1231,7 @@
 <p>事实上，这个问题最终还会造成更大的麻烦。因为如果我们想歩保持高效率的开发，就不能频繁地进行构建操作，但是如果我们减少了构建次数，延长了项目被构建的时间间隔，又会影响到该项目的质量，增大它的风险。整个项目会变得越来越难以构建与测试，团队反馈周期会越来越长，研发质量自然也会越来越差。</p>
 </blockquote>
 <p>Eventually, this scenario leads to a crisis. To maintain efficiency, the build schedule has to be continually lengthened—but lengthening the build schedule increases project risks. Integration and testing become increasingly harder to do, and the team loses the benefit of rapid feedback.</p>
-<h3 id="eliminating-dependency-cycles-消除循环依赖">ELIMINATING DEPENDENCY CYCLES 消除循环依赖</h3>
+<h3 id="eliminating-dependency-cycles-消除循环依赖"><a name="eliminating-dependency-cycles-消除循环依赖" class="anchor-navigation-ex-anchor" href="#eliminating-dependency-cycles-消除循环依赖"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. ELIMINATING DEPENDENCY CYCLES 消除循环依赖</h3>
 <p>The solution to this problem is to partition the development environment into releasable components. The components become units of work that can be the responsibility of a single developer, or a team of developers. When developers get a component working, they release it for use by the other developers. They give it a release number and move it into a directory for other teams to use. They then continue to modify their component in their own private areas. Everyone else uses the released version.</p>
 <blockquote>
 <p>对于上述情景，我们的解决办法是将研发项目划分为一些可单独发布的组件，这些组件可以交由单人或者某一组程序员来独立完成。当有人或团队完成某个组件的某个版本时，他们就会通过发布机制通知其他程序员，并给该组件打一个版本号，放入一个共享目录。这样一来，每个人都可以依赖于这些组件公开发布的版本来进行开发，而组件开发者则可以继续去修改自己的私有版本。</p>
@@ -1278,7 +1274,7 @@
 <blockquote>
 <p>当我们需要发布整个系统时，可以让整个过程从下至上来进行。貝体来说就是首先对 Entities 组件进行编译、测试、发布。随后是 Database 和 Interactors 这两个组件。再紧随其后的是 Presenters、View、Controllers，以及 Authorizer 四个组件。最后是 Main 组件。这样一来，整个流程会非常清晰，也很容易。只要我们了解系统各部分之间的依赖关系，构建整套系统就会变得很容易。</p>
 </blockquote>
-<h3 id="the-effect-of-a-cycle-in-the-component-dependency-graph-循环依赖在组件依赖图中的影响">THE EFFECT OF A CYCLE IN THE COMPONENT DEPENDENCY GRAPH 循环依赖在组件依赖图中的影响</h3>
+<h3 id="the-effect-of-a-cycle-in-the-component-dependency-graph-循环依赖在组件依赖图中的影响"><a name="the-effect-of-a-cycle-in-the-component-dependency-graph-循环依赖在组件依赖图中的影响" class="anchor-navigation-ex-anchor" href="#the-effect-of-a-cycle-in-the-component-dependency-graph-循环依赖在组件依赖图中的影响"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. THE EFFECT OF A CYCLE IN THE COMPONENT DEPENDENCY GRAPH 循环依赖在组件依赖图中的影响</h3>
 <p>Suppose that a new requirement forces us to change one of the classes in Entities such that it makes use of a class in Authorizer. For example, let’s say that the User class in Entities uses the Permissions class in Authorizer. This creates a dependency cycle, as shown in Figure 14.2.</p>
 <blockquote>
 <p>假设某个新需求使我们修改了 Entities 组件中的某个类，而这个类又依赖于 Authorizer 组件中的某个类。例如，Entities 组件中的 User 类使用了 Authorizer 组件中的 Permissions 类。这就形成了一个循环依赖关系，如图 14.2 所示。</p>
@@ -1301,7 +1297,7 @@
 <blockquote>
 <p>所以，当组件结构依赖图中存在循环依赖时，想要按正确的顺序构建组件几乎是不可能的。这种依赖关系将会在 Java 这种需要在编译好的二级制文件中读取声明信息的语言中导致一些非常棘手的问题。</p>
 </blockquote>
-<h3 id="breaking-the-cycle-打破循环依赖">BREAKING THE CYCLE 打破循环依赖</h3>
+<h3 id="breaking-the-cycle-打破循环依赖"><a name="breaking-the-cycle-打破循环依赖" class="anchor-navigation-ex-anchor" href="#breaking-the-cycle-打破循环依赖"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.4. BREAKING THE CYCLE 打破循环依赖</h3>
 <p>It is always possible to break a cycle of components and reinstate the dependency graph as a DAG. There are two primary mechanisms for doing so:</p>
 <blockquote>
 <p>当然，我们可以打破这些组件中的循环依赖，并将其依赖图转化为 DAG。目前有以下两种主要机制可以做到这件事情。</p>
@@ -1326,12 +1322,12 @@
 </blockquote>
 <figures figure="14-4">The new component that both Entities and Authorizer depend on</figures>
 
-<h3 id="the-jitters-抖动">THE “JITTERS” “抖动”</h3>
+<h3 id="the-jitters-抖动"><a name="the-jitters-抖动" class="anchor-navigation-ex-anchor" href="#the-jitters-抖动"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.5. THE “JITTERS” “抖动”</h3>
 <p>The second solution implies that the component structure is volatile in the presence of changing requirements. Indeed, as the application grows, the component dependency structure jitters and grows. Thus the dependency structure must always be monitored for cycles. When cycles occur, they must be broken somehow. Sometimes this will mean creating new components, making the dependency structure grow.</p>
 <blockquote>
 <p>当然，采用第二种解决方案也意味着在需求变更时，项目的组件结构也要随之变更。确实是这样的，随着应用程序的不断演进，其组件结构也会不停地抖动和扩张。因此，我们必须要持续地监控顶目中的循环依赖关系。当循环依赖出现时，必须以某种力式消除它们。为此，我们有时候不可避免地需要创建新的组件，而使整个组件结构变得更大。</p>
 </blockquote>
-<h2 id="top-down-design-自上而下的设计">TOP-DOWN DESIGN 自上而下的设计</h2>
+<h2 id="top-down-design-自上而下的设计"><a name="top-down-design-自上而下的设计" class="anchor-navigation-ex-anchor" href="#top-down-design-自上而下的设计"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. TOP-DOWN DESIGN 自上而下的设计</h2>
 <p>The issues we have discussed so far lead to an inescapable conclusion: The component structure cannot be designed from the top down. It is not one of the first things about the system that is designed, but rather evolves as the system grows and changes.</p>
 <blockquote>
 <p>根据上述讨论，我们可以得出一个无法逃避的结论：组件结构图是不可能自上而下被设计出来的。它必须随着软件系统的变化而变化和扩张，而不可能在系统构建的最初就被完美设计出来。</p>
@@ -1360,7 +1356,7 @@
 <blockquote>
 <p>如果我们在设计具体类之前就来设计组件依赖关系，那么几乎是必然要失败的。因为在当下，我们对项目中的共同闭包一无所知，也不可能知道哪些组件可以复用，这样几乎一定会创造出循环依赖的组件。因此，组件依赖关系是必须要随着项目的逻辑设计一起扩张和演进的。</p>
 </blockquote>
-<h2 id="the-stable-dependencies-principle-稳定依赖原则">THE STABLE DEPENDENCIES PRINCIPLE 稳定依赖原则</h2>
+<h2 id="the-stable-dependencies-principle-稳定依赖原则"><a name="the-stable-dependencies-principle-稳定依赖原则" class="anchor-navigation-ex-anchor" href="#the-stable-dependencies-principle-稳定依赖原则"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. THE STABLE DEPENDENCIES PRINCIPLE 稳定依赖原则</h2>
 <p>Depend in the direction of stability.</p>
 <blockquote>
 <p>依赖关系必须要指向更稳定的方向。</p>
@@ -1377,7 +1373,7 @@
 <blockquote>
 <p>这就是软件开发的困难之处，我们精心设计的一个容易被修改的组件很可能会由于别人的一条简单依赖而变得非常难以被修改。即使该模块中没有一行代码需要被修改，但是整个模块在被修改时所面临的挑战性也已经存在了。而通过遵守稳定依赖原则（SDP），我们就可以确保自己设计中那些容易变更的模块不会被那些难于修改的组件所依赖。</p>
 </blockquote>
-<h3 id="stability-稳定性">STABILITY 稳定性</h3>
+<h3 id="stability-稳定性"><a name="stability-稳定性" class="anchor-navigation-ex-anchor" href="#stability-稳定性"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. STABILITY 稳定性</h3>
 <p>What is meant by “stability”? Stand a penny on its side. Is it stable in that position? You would likely say “no.” However, unless disturbed, it will remain in that position for a very long time. Thus stability has nothing directly to do with frequency of change. The penny is not changing, but it is difficult to think of it as stable.</p>
 <blockquote>
 <p>我们该如何定义“稳定性”呢？譬如说将一个硬币立起来放，你认为它会处于一个稳定的位置吗？当然不会。然而，除非受到外界因素干扰，否则硬币本身可以在这个位置保持相当长的一段时间。因此稳定性应该与变更的频繁度没有直接关系但问题是硬币并没有倒，为什么我们却并不认为它是稳定的呢?</p>
@@ -1402,7 +1398,7 @@
 </blockquote>
 <figures figure="14-6">Y: a very unstable component</figures>
 
-<h3 id="stability-metrics-稳定性指标">STABILITY METRICS 稳定性指标</h3>
+<h3 id="stability-metrics-稳定性指标"><a name="stability-metrics-稳定性指标" class="anchor-navigation-ex-anchor" href="#stability-metrics-稳定性指标"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.2. STABILITY METRICS 稳定性指标</h3>
 <p>How can we measure the stability of a component? One way is to count the number of dependencies that enter and leave that component. These counts will allow us to calculate the positional stability of the component.</p>
 <blockquote>
 <p>那么，究竟该如何来量化一个组件的稳定性呢？其中一种方法是计算所有入和出的依赖关系。通过这种方法，我们就可以计算出一个组件的位置稳定性（positional stability）。</p>
@@ -1446,7 +1442,7 @@
 <blockquote>
 <p>稳定依赖原则（SDP）的要求是让每个组件的/指标都必须大于其所依赖组件的 I 指标。也就是说，组件结构依赖图中各组件的/指标必须要按其依赖关系方向递减。</p>
 </blockquote>
-<h3 id="not-all-components-should-be-stable-并不是所有组件都应该是稳定的">NOT ALL COMPONENTS SHOULD BE STABLE 并不是所有组件都应该是稳定的</h3>
+<h3 id="not-all-components-should-be-stable-并不是所有组件都应该是稳定的"><a name="not-all-components-should-be-stable-并不是所有组件都应该是稳定的" class="anchor-navigation-ex-anchor" href="#not-all-components-should-be-stable-并不是所有组件都应该是稳定的"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.3. NOT ALL COMPONENTS SHOULD BE STABLE 并不是所有组件都应该是稳定的</h3>
 <p>If all the components in a system were maximally stable, the system would be unchangeable. This is not a desirable situation. Indeed, we want to design our component structure so that some components are unstable and some are stable. The diagram in Figure 14.8 shows an ideal configuration for a system with three components.</p>
 <blockquote>
 <p>如果一个系统中的所有组件都处于最高稳定性状态，那么系统就一定无法再进行变更了，这显然不是我们想要的。事实上，我们设计组件架构图的目的就是要决定应该让哪些组件稳定，让哪些组件不稳定。譬如在图 14.8 中，我们所示范的就是一个具有三个组件的系统的理想配置。</p>
@@ -1479,7 +1475,7 @@
 </blockquote>
 <figures figure="14-11">C implements the interface class US</figures>
 
-<h3 id="abstract-components-抽象组件">Abstract Components 抽象组件</h3>
+<h3 id="abstract-components-抽象组件"><a name="abstract-components-抽象组件" class="anchor-navigation-ex-anchor" href="#abstract-components-抽象组件"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.4. Abstract Components 抽象组件</h3>
 <p>You may find it strange that we would create a component—in this example, UService—that contains nothing but an interface. Such a component contains no executable code! It turns out, however, that this is a very common, and necessary, tactic when using statically typed languages like Java and C#. These abstract components are very stable and, therefore, are ideal targets for less stable components to depend on.</p>
 <blockquote>
 <p>读者可能会觉得创造新组件（譬如上述例子中的 UService 组件，它其实只包含了一个接口类）这种做法挺奇怪的。因为这样的组件中几乎不包含任何可执行的代码！但事实上，这种做法在 C# 或者 Java 这种静态类型语言中是非常普遍的，而且也必须这样做。因为这些抽象组件通常会非常稳定，可以被那些相对不稳定的组件依赖。</p>
@@ -1488,12 +1484,12 @@
 <blockquote>
 <p>而当我们使用 Ruby 和 Python 这种动态类型语言时，这些抽象接口事实上并不存在，因此也就没有对它们的依赖。动态类型语言中的依赖关系是非常简单的，因为其依赖反转的过程并不需要声明和继承接口。</p>
 </blockquote>
-<h2 id="the-stable-abstractions-principle-稳定抽象原则">THE STABLE ABSTRACTIONS PRINCIPLE 稳定抽象原则</h2>
+<h2 id="the-stable-abstractions-principle-稳定抽象原则"><a name="the-stable-abstractions-principle-稳定抽象原则" class="anchor-navigation-ex-anchor" href="#the-stable-abstractions-principle-稳定抽象原则"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. THE STABLE ABSTRACTIONS PRINCIPLE 稳定抽象原则</h2>
 <p>A component should be as abstract as it is stable.</p>
 <blockquote>
 <p>一个组件的抽象化程度应该与其稳定性保持一致。</p>
 </blockquote>
-<h3 id="where-do-we-put-the-high-level-policy-高阶策略应该放在哪里">WHERE DO WE PUT THE HIGH-LEVEL POLICY? 高阶策略应该放在哪里</h3>
+<h3 id="where-do-we-put-the-high-level-policy-高阶策略应该放在哪里"><a name="where-do-we-put-the-high-level-policy-高阶策略应该放在哪里" class="anchor-navigation-ex-anchor" href="#where-do-we-put-the-high-level-policy-高阶策略应该放在哪里"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.1. WHERE DO WE PUT THE HIGH-LEVEL POLICY? 高阶策略应该放在哪里</h3>
 <p>Some software in the system should not change very often. This software represents high-level architecture and policy decisions. We don’t want these business and architectural decisions to be volatile. Thus the software that encapsulates the high-level policies of the system should be placed into stable components (I = 0). Unstable components (I = 1) should contain only the software that is volatile—software that we want to be able to quickly and easily change.</p>
 <blockquote>
 <p>在一个软件系统中，总有些部分是不应该经常发生变更的。这些部分通常用于表现该系统的高阶架构设计及一些策略相关的高阶决策。我们不想让这些业务决策和架构设计经常发生变更，因此这些代表了系统咼阶策略的组件应该被放到稳定组件（I=0）中，而不稳定的组件（I=1）中应该只包含那些我们想要快速和方便修改的部分。</p>
@@ -1502,7 +1498,7 @@
 <blockquote>
 <p>然而，如果我们将高阶策略放入稳定组件中，那么用于描述那些策略的源代码就很难被修改了。这可能会导致整个系统的架构设计难于被修改。如何才能让一个无限稳定的组件（I=0）接受变更呢？开闭原则（OCP）为我们提供了答案。这个原则告诉我们：创造一个足够灵活、能够被扩展，而且不需要修改的类是可能的，而这正是我们所需要的。哪一种类符合这个原则呢？答案是抽象类。</p>
 </blockquote>
-<h3 id="introducing-the-stable-abstractions-principle-稳定抽象原则简介">INTRODUCING THE STABLE ABSTRACTIONS PRINCIPLE 稳定抽象原则简介</h3>
+<h3 id="introducing-the-stable-abstractions-principle-稳定抽象原则简介"><a name="introducing-the-stable-abstractions-principle-稳定抽象原则简介" class="anchor-navigation-ex-anchor" href="#introducing-the-stable-abstractions-principle-稳定抽象原则简介"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.2. INTRODUCING THE STABLE ABSTRACTIONS PRINCIPLE 稳定抽象原则简介</h3>
 <p>The Stable Abstractions Principle (SAP) sets up a relationship between stability and abstractness. On the one hand, it says that a stable component should also be abstract so that its stability does not prevent it from being extended. On the other hand, it says that an unstable component should be concrete since its instability allows the concrete code within it to be easily changed.</p>
 <blockquote>
 <p>稳定抽象原则（SAP）为组件的稳定性与它的抽象化程度建立了一种关联。一方面，该原则要求稳定的组件同时应该是抽象的，这样它的稳定性就不会影响到扩展性。另一方面，该原则也要求一个不稳定的组件应该包含具体的实现代码，这样它的稳定性就可以通过具体的代码被轻易修改。</p>
@@ -1519,7 +1515,7 @@
 <blockquote>
 <p>然而，DIP 毕竟是与类这个层次有关的原则——对类来说，设计是没有灰色地带的。一个类要么是抽象类，要么就不是。SDP 与 SAP 这对原则是应用在组件层面上的，我们要允许一个组件部分抽象，部分稳定。</p>
 </blockquote>
-<h3 id="measuring-abstraction-衡量抽象化程度">MEASURING ABSTRACTION 衡量抽象化程度</h3>
+<h3 id="measuring-abstraction-衡量抽象化程度"><a name="measuring-abstraction-衡量抽象化程度" class="anchor-navigation-ex-anchor" href="#measuring-abstraction-衡量抽象化程度"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.3. MEASURING ABSTRACTION 衡量抽象化程度</h3>
 <p>The A metric is a measure of the abstractness of a component. Its value is simply the ratio of interfaces and abstract classes in a component to the total number of classes in the component.</p>
 <blockquote>
 <p>下面，假设 A 指标是对组件抽象化程度的一个衡量，它的值是组件中抽象类与接口所占的比例。那么：</p>
@@ -1541,7 +1537,7 @@
 <blockquote>
 <p>A 指标的取值范围是从 0 到 1，值为 0 代表组件中没有任何抽象类，值为 1 就意味着组件中只有抽象类。</p>
 </blockquote>
-<h3 id="the-main-sequence-主序列">THE MAIN SEQUENCE 主序列</h3>
+<h3 id="the-main-sequence-主序列"><a name="the-main-sequence-主序列" class="anchor-navigation-ex-anchor" href="#the-main-sequence-主序列"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.4. THE MAIN SEQUENCE 主序列</h3>
 <p>We are now in a position to define the relationship between stability (I) and abstractness (A). To do so, we create a graph with A on the vertical axis and I on the horizontal axis (Figure 14.12). If we plot the two “good” kinds of components on this graph, we will find the components that are maximally stable and abstract at the upper left at (0, 1). The components that are maximally unstable and concrete are at the lower right at (1, 0).</p>
 <blockquote>
 <p>现在，我们可以来定义组件的稳定性 I 与其抽象化程度 A 之间的关系了，具体如图 14.12 所示。在该图中，纵轴为 A 值，横轴为 I 值。如果我们将两个“设计良好”的组件绘制在该图上，那么最稳定的、包含了无限抽象类的组件应该位于左上角(0,1)，最不稳定的、最具体的组件应该位于右下角(1,0)。</p>
@@ -1558,7 +1554,7 @@
 </blockquote>
 <figures figure="14-13">Zones of exclusion</figures>
 
-<h3 id="the-zone-of-pain-痛苦区">The Zone of Pain 痛苦区</h3>
+<h3 id="the-zone-of-pain-痛苦区"><a name="the-zone-of-pain-痛苦区" class="anchor-navigation-ex-anchor" href="#the-zone-of-pain-痛苦区"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.5. The Zone of Pain 痛苦区</h3>
 <p>Consider a component in the area of (0, 0). This is a highly stable and concrete component. Such a component is not desirable because it is rigid. It cannot be extended because it is not abstract, and it is very difficult to change because of its stability. Thus we do not normally expect to see well-designed components sitting near (0, 0). The area around (0, 0) is a zone of exclusion called the Zone of Pain.</p>
 <blockquote>
 <p>在图 14.13 中，假设某个组件处于(0,0)位置，那么它应该是一个非常稳定但也非常具体的组件。这样的组件在设计上是不佳的，因为它很难被修改，这意味着该组件不能被扩展。这样一来，因为这个组件不是抽象的，而且它又由于稳定性的原因变得特别难以被修改，我们并不希望一个设计良好的组件贴近这个区域，因此(0,0)周围的这个区域被我们称为痛苦区（zone of pain）。</p>
@@ -1575,7 +1571,7 @@
 <blockquote>
 <p>不可变组件落在(0,0)这一区域中是无害的，因为它们不太可能会发生变更。正因为如此，只有多变的软件组件落在痛苦区中才会造成麻烦，而且组件的多变性越强，造成的麻烦就会越大。其实，我们应该将多变性作为图 14.13 的第三个轴，这时图 14.13 所展示的便是多变性=1 时的情况，也就是最痛苦的切面。</p>
 </blockquote>
-<h3 id="the-zone-of-uselessness-无用区">The Zone of Uselessness 无用区</h3>
+<h3 id="the-zone-of-uselessness-无用区"><a name="the-zone-of-uselessness-无用区" class="anchor-navigation-ex-anchor" href="#the-zone-of-uselessness-无用区"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.6. The Zone of Uselessness 无用区</h3>
 <p>Consider a component near (1, 1). This location is undesirable because it is maximally abstract, yet has no dependents. Such components are useless. Thus this area is called the Zone of Uselessness.</p>
 <blockquote>
 <p>现在我们来看看靠近(1,1)这一位置点的组件。该位置上的组件不会是我们想要的，因为这些组件通常是无限抽象的，但是没有被其他组件依赖，这样的组件往往无法使用。因此我们将这个区域称为无用区。</p>
@@ -1588,7 +1584,7 @@
 <blockquote>
 <p>同样的，落在无用区中的组件也一定会包含大量的无用代码。很明显，这类组件也不是我们想要的。</p>
 </blockquote>
-<h3 id="avoiding-the-zones-of-exclusion-避开这两个区域">AVOIDING THE ZONES OF EXCLUSION 避开这两个区域</h3>
+<h3 id="avoiding-the-zones-of-exclusion-避开这两个区域"><a name="avoiding-the-zones-of-exclusion-避开这两个区域" class="anchor-navigation-ex-anchor" href="#avoiding-the-zones-of-exclusion-避开这两个区域"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.7. AVOIDING THE ZONES OF EXCLUSION 避开这两个区域</h3>
 <p>It seems clear that our most volatile components should be kept as far from both zones of exclusion as possible. The locus of points that are maximally distant from each zone is the line that connects (1, 0) and (0, 1). I call this line the Main Sequence.2</p>
 <blockquote>
 <p>很明显，最多变的组件应该离上述两个区域越远越好。在图 14.13 中，我们可以将距离两个区域最远的点连成一条线，即从(1,0)连接到(0,1)。我将这条线称为主序列线（main sequence）。</p>
@@ -1601,7 +1597,7 @@
 <blockquote>
 <p>在这条主序列线上，组件所能处于最优的位置是线的两端。一个优秀的软件架构师应该争取将自己设计的大部分组件尽可能地推向这两个位置。然而，以我的个人经验来说，大型系统中的组件不可能做到完全抽象，也不可能做到完全稳定。所以我们只要追求让这些组件位于主序列线上，或者贴近这条线即可。</p>
 </blockquote>
-<h3 id="distance-from-the-main-sequence-离主序列线的距离">DISTANCE FROM THE MAIN SEQUENCE 离主序列线的距离</h3>
+<h3 id="distance-from-the-main-sequence-离主序列线的距离"><a name="distance-from-the-main-sequence-离主序列线的距离" class="anchor-navigation-ex-anchor" href="#distance-from-the-main-sequence-离主序列线的距离"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.8. DISTANCE FROM THE MAIN SEQUENCE 离主序列线的距离</h3>
 <p>This leads us to our last metric. If it is desirable for components to be on, or close, to the Main Sequence, then we can create a metric that measures how far away a component is from this ideal.</p>
 <blockquote>
 <p>接下来介绍最后一个指标：如果让组件位于或者靠近主序列是可取的目标，那么我们就可以创建一个指标来衡量一个组件距离最佳位置的距离。</p>
@@ -1634,13 +1630,13 @@
 </blockquote>
 <figures figure="14-15">Plot of D for a single component over time</figures>
 
-<h2 id="conclusion-本章小结">CONCLUSION 本章小结</h2>
+<h2 id="conclusion-本章小结"><a name="conclusion-本章小结" class="anchor-navigation-ex-anchor" href="#conclusion-本章小结"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. CONCLUSION 本章小结</h2>
 <p>The dependency management metrics described in this chapter measure the conformance of a design to a pattern of dependency and abstraction that I think is a “good” pattern. Experience has shown that certain dependencies are good and others are bad. This pattern reflects that experience. However, a metric is not a god; it is merely a measurement against an arbitrary standard. These metrics are imperfect, at best, but it is my hope that you find them useful.</p>
 <blockquote>
 <p>本章介绍了各种可用于依赖关系管理的指标，它们可以被用来里化分析某个系统设计与“优秀”设计模式之间的契合度。根据以往的经验，组件之间有些依赖关系是好的，有些依赖关系则是不好的，这些经验最后都会体现在这个设计模式中。当然，指标并不等同于真理，它只是对我们所定义标准的一个衡量。这些指标肯定是不完美的，但是我希望它们对读者有价值。</p>
 </blockquote>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-26 21:50:34
+2022-07-26 15:54:49
 </span></footer>
                                 
                                 </section>
@@ -1684,7 +1680,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"组件耦合","level":"1.9.4.3","depth":3,"next":{"title":"第五部分-软件架构","level":"1.9.5","depth":2,"path":"z-Clean-Architecture/05-第五部分-软件架构/README.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/README.md","articles":[{"title":"什么是软件架构","level":"1.9.5.1","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/15-什么是软件架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/15-什么是软件架构.md","articles":[]},{"title":"独立性","level":"1.9.5.2","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/16-独立性.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/16-独立性.md","articles":[]},{"title":"划分边界","level":"1.9.5.3","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/17-划分边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/17-划分边界.md","articles":[]},{"title":"边界剖析","level":"1.9.5.4","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/18-边界剖析.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/18-边界剖析.md","articles":[]},{"title":"策略与层次","level":"1.9.5.5","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/19-策略与层次.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/19-策略与层次.md","articles":[]},{"title":"业务逻辑","level":"1.9.5.6","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/20-业务逻辑.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/20-业务逻辑.md","articles":[]},{"title":"尖叫的软件架构","level":"1.9.5.7","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/21-尖叫的软件架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/21-尖叫的软件架构.md","articles":[]},{"title":"整洁架构","level":"1.9.5.8","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/22-整洁架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/22-整洁架构.md","articles":[]},{"title":"展示器和谦卑对象","level":"1.9.5.9","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/23-展示器和谦卑对象.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/23-展示器和谦卑对象.md","articles":[]},{"title":"不完全边界","level":"1.9.5.10","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/24-不完全边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/24-不完全边界.md","articles":[]},{"title":"层次与边界","level":"1.9.5.11","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/25-层次与边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/25-层次与边界.md","articles":[]},{"title":"Main组件","level":"1.9.5.12","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/26-Main组件.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/26-Main组件.md","articles":[]},{"title":"服务：宏观和微观","level":"1.9.5.13","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/27-服务：宏观和微观.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/27-服务：宏观和微观.md","articles":[]},{"title":"测试边界","level":"1.9.5.14","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/28-测试边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/28-测试边界.md","articles":[]},{"title":"整洁的嵌入式架构","level":"1.9.5.15","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/29-整洁的嵌入式架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/29-整洁的嵌入式架构.md","articles":[]}]},"previous":{"title":"组件聚合","level":"1.9.4.2","depth":3,"path":"z-Clean-Architecture/04-第四部分-组件构建原则/13-组件聚合.md","ref":"z-Clean-Architecture/04-第四部分-组件构建原则/13-组件聚合.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/04-第四部分-组件构建原则/14-组件耦合.md","mtime":"2022-07-26T13:50:34.432Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"组件耦合","level":"1.9.4.3","depth":3,"next":{"title":"第五部分-软件架构","level":"1.9.5","depth":2,"path":"z-Clean-Architecture/05-第五部分-软件架构/README.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/README.md","articles":[{"title":"什么是软件架构","level":"1.9.5.1","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/15-什么是软件架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/15-什么是软件架构.md","articles":[]},{"title":"独立性","level":"1.9.5.2","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/16-独立性.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/16-独立性.md","articles":[]},{"title":"划分边界","level":"1.9.5.3","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/17-划分边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/17-划分边界.md","articles":[]},{"title":"边界剖析","level":"1.9.5.4","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/18-边界剖析.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/18-边界剖析.md","articles":[]},{"title":"策略与层次","level":"1.9.5.5","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/19-策略与层次.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/19-策略与层次.md","articles":[]},{"title":"业务逻辑","level":"1.9.5.6","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/20-业务逻辑.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/20-业务逻辑.md","articles":[]},{"title":"尖叫的软件架构","level":"1.9.5.7","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/21-尖叫的软件架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/21-尖叫的软件架构.md","articles":[]},{"title":"整洁架构","level":"1.9.5.8","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/22-整洁架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/22-整洁架构.md","articles":[]},{"title":"展示器和谦卑对象","level":"1.9.5.9","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/23-展示器和谦卑对象.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/23-展示器和谦卑对象.md","articles":[]},{"title":"不完全边界","level":"1.9.5.10","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/24-不完全边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/24-不完全边界.md","articles":[]},{"title":"层次与边界","level":"1.9.5.11","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/25-层次与边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/25-层次与边界.md","articles":[]},{"title":"Main组件","level":"1.9.5.12","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/26-Main组件.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/26-Main组件.md","articles":[]},{"title":"服务：宏观和微观","level":"1.9.5.13","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/27-服务：宏观和微观.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/27-服务：宏观和微观.md","articles":[]},{"title":"测试边界","level":"1.9.5.14","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/28-测试边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/28-测试边界.md","articles":[]},{"title":"整洁的嵌入式架构","level":"1.9.5.15","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/29-整洁的嵌入式架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/29-整洁的嵌入式架构.md","articles":[]}]},"previous":{"title":"组件聚合","level":"1.9.4.2","depth":3,"path":"z-Clean-Architecture/04-第四部分-组件构建原则/13-组件聚合.md","ref":"z-Clean-Architecture/04-第四部分-组件构建原则/13-组件聚合.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/04-第四部分-组件构建原则/14-组件耦合.md","mtime":"2022-07-26T07:54:49.795Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1750,19 +1746,7 @@
         
     
         
-        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

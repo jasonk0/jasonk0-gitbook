@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,7 +1190,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="chap15-what-is-architecture-什么是软件架构">Chap15. WHAT IS ARCHITECTURE? 什么是软件架构</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#chap15-what-is-architecture-什么是软件架构"><b>1. </b>Chap15. WHAT IS ARCHITECTURE? 什么是软件架构</a></li><ul><li><span class="title-icon "></span><a href="#development-开发（development）"><b>1.1. </b>DEVELOPMENT 开发（Development）</a></li><li><span class="title-icon "></span><a href="#deployment-部署（deployment）"><b>1.2. </b>DEPLOYMENT 部署（Deployment）</a></li><li><span class="title-icon "></span><a href="#operation-运行（operation）"><b>1.3. </b>OPERATION 运行（Operation）</a></li><li><span class="title-icon "></span><a href="#maintenance-维护（maintenance）"><b>1.4. </b>MAINTENANCE 维护（Maintenance）</a></li><li><span class="title-icon "></span><a href="#keeping-options-open-保持可选项"><b>1.5. </b>KEEPING OPTIONS OPEN 保持可选项</a></li><li><span class="title-icon "></span><a href="#device-independence-设备无关性"><b>1.6. </b>DEVICE INDEPENDENCE 设备无关性</a></li><li><span class="title-icon "></span><a href="#junk-mail-垃圾邮件"><b>1.7. </b>JUNK MAIL 垃圾邮件</a></li><li><span class="title-icon "></span><a href="#physical-addressing-物理地址寻址"><b>1.8. </b>PHYSICAL ADDRESSING 物理地址寻址</a></li><li><span class="title-icon "></span><a href="#conclusion-本章小结"><b>1.9. </b>CONCLUSION 本章小结</a></li></ul></ul></div><a href="#chap15-what-is-architecture-什么是软件架构" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="chap15-what-is-architecture-什么是软件架构"><a name="chap15-what-is-architecture-什么是软件架构" class="anchor-navigation-ex-anchor" href="#chap15-what-is-architecture-什么是软件架构"><i class="fa fa-link" aria-hidden="true"></i></a>1. Chap15. WHAT IS ARCHITECTURE? 什么是软件架构</h1>
 <p><img src="../un/CH-UN15.jpg" alt></p>
 <p>The word “architecture” conjures visions of power and mystery. It makes us think of weighty decisions and deep technical prowess. Software architecture is at the pinnacle of technical achievement. When we think of a software architect, we think of someone who has power, and who commands respect. What young aspiring software developer has not dreamed of one day becoming a software architect?</p>
 <blockquote>
@@ -1236,7 +1232,7 @@
 <blockquote>
 <p>软件架构设计的主要目标是支撑软件系统的全生命周期，设计良好的架构可以让系统便于理解、易于修改、方便维护，并且能轻松部署。软件架构的终极目标就是最大化程序员的生产力，同时最小化系统的总运营成本。</p>
 </blockquote>
-<h2 id="development-开发（development）">DEVELOPMENT 开发（Development）</h2>
+<h2 id="development-开发（development）"><a name="development-开发（development）" class="anchor-navigation-ex-anchor" href="#development-开发（development）"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. DEVELOPMENT 开发（Development）</h2>
 <p>A software system that is hard to develop is not likely to have a long and healthy lifetime. So the architecture of a system should make that system easy to develop, for the team(s) who develop it.</p>
 <blockquote>
 <p>一个开发起来很困难的软件系统一般不太可能会有一个长久、健康的生命周期，所以系统架构的作用就是要方便其开发团队对它的开发。</p>
@@ -1253,7 +1249,7 @@
 <blockquote>
 <p>当然，这种一个组件对应一个团队的架构不太可能是该系统在部署、运行以及维护方面的最优方案。但不管怎样，如果研发团队只受开发进度来驱动的话，他们的架构设计最终一定会倾向于这个方向。</p>
 </blockquote>
-<h2 id="deployment-部署（deployment）">DEPLOYMENT 部署（Deployment）</h2>
+<h2 id="deployment-部署（deployment）"><a name="deployment-部署（deployment）" class="anchor-navigation-ex-anchor" href="#deployment-部署（deployment）"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. DEPLOYMENT 部署（Deployment）</h2>
 <p>To be effective, a software system must be deployable. The higher the cost of deployment, the less useful the system is. A goal of a software architecture, then, should be to make a system that can be easily deployed with a single action.</p>
 <blockquote>
 <p>为了让开发成为有效的工作，软件系统就必须是可部署的。在通常情况下，一个系统的部署成本越高，可用性就越低。因此，实现一键式的轻松部署应该是我们设计软件架构的一个目标。</p>
@@ -1270,7 +1266,7 @@
 <blockquote>
 <p>如果软件架构师早先就考虑到这些部署问题，可能就会有意地减少微服务的数量，采用进程内部组件与外部服务混合的架构，以及更加集成式的连接管理方式。</p>
 </blockquote>
-<h2 id="operation-运行（operation）">OPERATION 运行（Operation）</h2>
+<h2 id="operation-运行（operation）"><a name="operation-运行（operation）" class="anchor-navigation-ex-anchor" href="#operation-运行（operation）"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. OPERATION 运行（Operation）</h2>
 <p>The impact of architecture on system operation tends to be less dramatic than the impact of architecture on development, deployment, and maintenance. Almost any operational difficulty can be resolved by throwing more hardware at the system without drastically impacting the software architecture.</p>
 <blockquote>
 <p>软件架构对系统运行的影响远不及它对开发、部署和维护的影响。几乎任何运行问题都可以通过增加硬件的方式来解决，这避免了软件架构的重新设计。</p>
@@ -1291,7 +1287,7 @@
 <blockquote>
 <p>也许我们可以换一个更好的说法，那就是设计良好的系架构应该可以使开发人员对系统的运行过程一目了然。架构应该起到揭示系统运行过程的作用。具体来说，就是该架构应该将系统中的用例、功能以及该系统的必备行为设置为对开发者可见的一级实体，简化它们对于系统的理解，这将为整个系统的开发与维护提供很大的帮助。</p>
 </blockquote>
-<h2 id="maintenance-维护（maintenance）">MAINTENANCE 维护（Maintenance）</h2>
+<h2 id="maintenance-维护（maintenance）"><a name="maintenance-维护（maintenance）" class="anchor-navigation-ex-anchor" href="#maintenance-维护（maintenance）"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. MAINTENANCE 维护（Maintenance）</h2>
 <p>Of all the aspects of a software system, maintenance is the most costly. The never-ending parade of new features and the inevitable trail of defects and corrections consume vast amounts of human resources.</p>
 <blockquote>
 <p>在软件系统的所有方面中，维护所需的成本是最高的。满足永不停歇的新功能需求，以及修改层出不穷的系统缺陷这些工作将会占去绝大部分的人力资源。</p>
@@ -1304,7 +1300,7 @@
 <blockquote>
 <p>我们可以通过精雕细琢的架构设计极大地降低这两项成本。通过将系统切分为组件，并使用稳定的接口将组件隔离，我们可以将未来新功能的添加方式明确出来，并大幅度地降低在修改过程中对系统其他部分造成伤害的可能性。</p>
 </blockquote>
-<h2 id="keeping-options-open-保持可选项">KEEPING OPTIONS OPEN 保持可选项</h2>
+<h2 id="keeping-options-open-保持可选项"><a name="keeping-options-open-保持可选项" class="anchor-navigation-ex-anchor" href="#keeping-options-open-保持可选项"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. KEEPING OPTIONS OPEN 保持可选项</h2>
 <p>As we described in an earlier chapter, software has two types of value: the value of its behavior and the value of its structure. The second of these is the greater of the two because it is this value that makes software soft.</p>
 <blockquote>
 <p>正如我们在之前章节中所说的，软件有行为价值与架构价值两种价值。这其中的第二种价值又比第一种更重要，因为它正是软件之所以“软”的原因。</p>
@@ -1368,7 +1364,7 @@
 <blockquote>
 <p>一个优秀的软件架构师应该致力于最大化可选项数量。</p>
 </blockquote>
-<h2 id="device-independence-设备无关性">DEVICE INDEPENDENCE 设备无关性</h2>
+<h2 id="device-independence-设备无关性"><a name="device-independence-设备无关性" class="anchor-navigation-ex-anchor" href="#device-independence-设备无关性"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. DEVICE INDEPENDENCE 设备无关性</h2>
 <p>As an example of this kind of thinking, let’s take a trip back to the 1960s, when computers were teenagers and most programmers were mathematicians or engineers from other disciplines (and-one third or more were women).</p>
 <blockquote>
 <p>如果想要找反映这方面思想的例子，我们还得先回到 20 世纪 60 年代。由于当时的计算机行业还处于萌芽阶段，大部分程序员都来自数学专业，或者是其他工程类专业（当时超过三分之一的程序员是女性）。</p>
@@ -1418,7 +1414,7 @@
 <blockquote>
 <p>这样一来，同一段程序不经任何修改就既可以读/写卡片，也可以读/写磁带。开闭原则（OCP）此时就诞生了（当然，那时候还不叫这个名字）。</p>
 </blockquote>
-<h2 id="junk-mail-垃圾邮件">JUNK MAIL 垃圾邮件</h2>
+<h2 id="junk-mail-垃圾邮件"><a name="junk-mail-垃圾邮件" class="anchor-navigation-ex-anchor" href="#junk-mail-垃圾邮件"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. JUNK MAIL 垃圾邮件</h2>
 <p>In the late 1960s, I worked for a company that printed junk mail for clients. The clients would send us magnetic tapes with unit records containing the names and addresses of their customers, and we would write programs that printed nice personalized advertisements.</p>
 <blockquote>
 <p>20 世纪 60 年底末期，我曾经在一家为客户打印群发垃圾邮件的公司工作。当时，客户会将一条条与消费者名字和地址相关的记录存储在磁带中并寄给我们，我们则负责编写程序为他们打印个人化的广告。</p>
@@ -1462,7 +1458,7 @@
 <blockquote>
 <p>这段程序是有架构设计的，并且在设计中实现了高层策略与底层实现细节的分离。其策略部分负责格式化姓名和地址，细节部分负责操作具体的 I/O 设备。而我们具体采用哪个设备的决策是最后才做出的。</p>
 </blockquote>
-<h2 id="physical-addressing-物理地址寻址">PHYSICAL ADDRESSING 物理地址寻址</h2>
+<h2 id="physical-addressing-物理地址寻址"><a name="physical-addressing-物理地址寻址" class="anchor-navigation-ex-anchor" href="#physical-addressing-物理地址寻址"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. PHYSICAL ADDRESSING 物理地址寻址</h2>
 <p>In the early 1970s, I worked on a large accounting system for a local truckers union. We had a 25MB disk drive on which we stored records for Agents, Employers, and Members. The different records had different sizes, so we formatted the first few cylinders of the disk so that each sector was just the size of an Agent record. The next few cylinders were formatted to have sectors that fit the Employer records. The last few cylinders were formatted to fit the Member records.</p>
 <blockquote>
 <p>20 世纪 70 年代早期，我曾为本地卡车工会编写过一套大型的账务系统。当时，Agent、Employer、Member 这些记录都被存储在一块 25MB 大小的磁盘上。由于不同的记录尺寸不同，所以我们将磁盘的前几个柱面（cylinder）按 Agent 记录的大小格式化每个扇区，中间的按 Employer 记录的大小格式化，最后几个柱面按照 Member 记录的大小格式化。</p>
@@ -1491,13 +1487,13 @@
 <blockquote>
 <p>幸运的是，我们釆纳了他的建议。我们修改了系统的高层策略，使其与磁盘的物理结构脱钩。这样一来，我们就可以将具体选择哪种磁盘的决策从该应用程序中分离出来。</p>
 </blockquote>
-<h2 id="conclusion-本章小结">CONCLUSION 本章小结</h2>
+<h2 id="conclusion-本章小结"><a name="conclusion-本章小结" class="anchor-navigation-ex-anchor" href="#conclusion-本章小结"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. CONCLUSION 本章小结</h2>
 <p>The two stories in this chapter are examples, in the small, of a principle that architects employ in the large. Good architects carefully separate details from policy, and then decouple the policy from the details so thoroughly that the policy has no knowledge of the details and does not depend on the details in any way. Good architects design the policy so that decisions about the details can be delayed and deferred for as long as possible.</p>
 <blockquote>
 <p>在本章中，我们用两个小故事示范了一些架构师们普遍会采用的设计原则。优秀的架构师会小心地将软件的高层策略与其底层实现隔离开，让高层策略与实现细节脱钩，使其策略部分完全不需要关心底层细节，当然也不会对这些细节有任何形式的依赖。另外，优秀的架构师所设计的策略应该允许系统尽可能地推迟与实现细节相关的决策，越晚做决策越好。</p>
 </blockquote>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-26 21:50:34
+2022-07-26 15:54:49
 </span></footer>
                                 
                                 </section>
@@ -1541,7 +1537,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"什么是软件架构","level":"1.9.5.1","depth":3,"next":{"title":"独立性","level":"1.9.5.2","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/16-独立性.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/16-独立性.md","articles":[]},"previous":{"title":"第五部分-软件架构","level":"1.9.5","depth":2,"path":"z-Clean-Architecture/05-第五部分-软件架构/README.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/README.md","articles":[{"title":"什么是软件架构","level":"1.9.5.1","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/15-什么是软件架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/15-什么是软件架构.md","articles":[]},{"title":"独立性","level":"1.9.5.2","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/16-独立性.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/16-独立性.md","articles":[]},{"title":"划分边界","level":"1.9.5.3","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/17-划分边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/17-划分边界.md","articles":[]},{"title":"边界剖析","level":"1.9.5.4","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/18-边界剖析.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/18-边界剖析.md","articles":[]},{"title":"策略与层次","level":"1.9.5.5","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/19-策略与层次.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/19-策略与层次.md","articles":[]},{"title":"业务逻辑","level":"1.9.5.6","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/20-业务逻辑.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/20-业务逻辑.md","articles":[]},{"title":"尖叫的软件架构","level":"1.9.5.7","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/21-尖叫的软件架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/21-尖叫的软件架构.md","articles":[]},{"title":"整洁架构","level":"1.9.5.8","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/22-整洁架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/22-整洁架构.md","articles":[]},{"title":"展示器和谦卑对象","level":"1.9.5.9","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/23-展示器和谦卑对象.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/23-展示器和谦卑对象.md","articles":[]},{"title":"不完全边界","level":"1.9.5.10","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/24-不完全边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/24-不完全边界.md","articles":[]},{"title":"层次与边界","level":"1.9.5.11","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/25-层次与边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/25-层次与边界.md","articles":[]},{"title":"Main组件","level":"1.9.5.12","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/26-Main组件.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/26-Main组件.md","articles":[]},{"title":"服务：宏观和微观","level":"1.9.5.13","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/27-服务：宏观和微观.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/27-服务：宏观和微观.md","articles":[]},{"title":"测试边界","level":"1.9.5.14","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/28-测试边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/28-测试边界.md","articles":[]},{"title":"整洁的嵌入式架构","level":"1.9.5.15","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/29-整洁的嵌入式架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/29-整洁的嵌入式架构.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/05-第五部分-软件架构/15-什么是软件架构.md","mtime":"2022-07-26T13:50:34.433Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"什么是软件架构","level":"1.9.5.1","depth":3,"next":{"title":"独立性","level":"1.9.5.2","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/16-独立性.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/16-独立性.md","articles":[]},"previous":{"title":"第五部分-软件架构","level":"1.9.5","depth":2,"path":"z-Clean-Architecture/05-第五部分-软件架构/README.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/README.md","articles":[{"title":"什么是软件架构","level":"1.9.5.1","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/15-什么是软件架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/15-什么是软件架构.md","articles":[]},{"title":"独立性","level":"1.9.5.2","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/16-独立性.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/16-独立性.md","articles":[]},{"title":"划分边界","level":"1.9.5.3","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/17-划分边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/17-划分边界.md","articles":[]},{"title":"边界剖析","level":"1.9.5.4","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/18-边界剖析.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/18-边界剖析.md","articles":[]},{"title":"策略与层次","level":"1.9.5.5","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/19-策略与层次.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/19-策略与层次.md","articles":[]},{"title":"业务逻辑","level":"1.9.5.6","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/20-业务逻辑.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/20-业务逻辑.md","articles":[]},{"title":"尖叫的软件架构","level":"1.9.5.7","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/21-尖叫的软件架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/21-尖叫的软件架构.md","articles":[]},{"title":"整洁架构","level":"1.9.5.8","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/22-整洁架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/22-整洁架构.md","articles":[]},{"title":"展示器和谦卑对象","level":"1.9.5.9","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/23-展示器和谦卑对象.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/23-展示器和谦卑对象.md","articles":[]},{"title":"不完全边界","level":"1.9.5.10","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/24-不完全边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/24-不完全边界.md","articles":[]},{"title":"层次与边界","level":"1.9.5.11","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/25-层次与边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/25-层次与边界.md","articles":[]},{"title":"Main组件","level":"1.9.5.12","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/26-Main组件.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/26-Main组件.md","articles":[]},{"title":"服务：宏观和微观","level":"1.9.5.13","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/27-服务：宏观和微观.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/27-服务：宏观和微观.md","articles":[]},{"title":"测试边界","level":"1.9.5.14","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/28-测试边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/28-测试边界.md","articles":[]},{"title":"整洁的嵌入式架构","level":"1.9.5.15","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/29-整洁的嵌入式架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/29-整洁的嵌入式架构.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/05-第五部分-软件架构/15-什么是软件架构.md","mtime":"2022-07-26T07:54:49.795Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1607,19 +1603,7 @@
         
     
         
-        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

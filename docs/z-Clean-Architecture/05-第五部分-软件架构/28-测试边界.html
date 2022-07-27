@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,13 +1190,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="chap28-the-test-boundary-测试边界">Chap28. THE TEST BOUNDARY 测试边界</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#chap28-the-test-boundary-测试边界"><b>1. </b>Chap28. THE TEST BOUNDARY 测试边界</a></li><ul><li><span class="title-icon "></span><a href="#tests-as-system-components-测试也是一种系统组件"><b>1.1. </b>TESTS AS SYSTEM COMPONENTS 测试也是一种系统组件</a></li><li><span class="title-icon "></span><a href="#design-for-testability-可测试性设计"><b>1.2. </b>DESIGN FOR TESTABILITY 可测试性设计</a></li><li><span class="title-icon "></span><a href="#the-testing-api-测试专用-api"><b>1.3. </b>THE TESTING API 测试专用 API</a></li><ul><li><span class="title-icon "></span><a href="#structural-coupling-结构性耦合"><b>1.3.1. </b>STRUCTURAL COUPLING 结构性耦合</a></li><li><span class="title-icon "></span><a href="#security-安全性"><b>1.3.2. </b>SECURITY 安全性</a></li></ul><li><span class="title-icon "></span><a href="#conclusion-本章小结"><b>1.4. </b>CONCLUSION 本章小结</a></li></ul></ul></div><a href="#chap28-the-test-boundary-测试边界" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="chap28-the-test-boundary-测试边界"><a name="chap28-the-test-boundary-测试边界" class="anchor-navigation-ex-anchor" href="#chap28-the-test-boundary-测试边界"><i class="fa fa-link" aria-hidden="true"></i></a>1. Chap28. THE TEST BOUNDARY 测试边界</h1>
 <p><img src="../un/CH-UN28.jpg" alt></p>
 <p>Yes, that’s right: The tests are part of the system, and they participate in the architecture just like every other part of the system does. In some ways, that participation is pretty normal. In other ways, it can be pretty unique.</p>
 <blockquote>
 <p>对，你没看错：和程序代码一样，测试代码也是系统的一部分。甚至，测试代码有时在系统架构中的地位还要比其他部分更独特一些。</p>
 </blockquote>
-<h2 id="tests-as-system-components-测试也是一种系统组件">TESTS AS SYSTEM COMPONENTS 测试也是一种系统组件</h2>
+<h2 id="tests-as-system-components-测试也是一种系统组件"><a name="tests-as-system-components-测试也是一种系统组件" class="anchor-navigation-ex-anchor" href="#tests-as-system-components-测试也是一种系统组件"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. TESTS AS SYSTEM COMPONENTS 测试也是一种系统组件</h2>
 <p>There is a great deal of confusion about tests. Are they part of the system? Are they separate from the system? Which kinds of tests are there? Are unit tests and integration tests different things? What about acceptance tests, functional tests, Cucumber tests, TDD tests, BDD tests, component tests, and so on?</p>
 <blockquote>
 <p>讨论测试的时候，业界总会有许多自相矛盾的声音。测试应该是系统的一部分吗？还是应该独立于系统之外存在呢？测试分为哪几种？单元测试与集成测试是不同的东西吗？质量检查测试、功能性测试、Cucumber 测试、TDD 测试、BDD 测试、组件测试分别又都是什么？</p>
@@ -1221,7 +1217,7 @@
 <blockquote>
 <p>测试组件通常是一个系统中最独立的组件。系统的正常运行并不需要用到测试组件，用户也不依赖于测试组件。测试组件的存在是为了支持开发过程，而不是运行过程。然而，测试组件仍然是系统中不可或缺的一个组件。事实上，测试组件在许多方面都反映了系统中其他组件所应遵循的设计模型。</p>
 </blockquote>
-<h2 id="design-for-testability-可测试性设计">DESIGN FOR TESTABILITY 可测试性设计</h2>
+<h2 id="design-for-testability-可测试性设计"><a name="design-for-testability-可测试性设计" class="anchor-navigation-ex-anchor" href="#design-for-testability-可测试性设计"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. DESIGN FOR TESTABILITY 可测试性设计</h2>
 <p>The extreme isolation of the tests, combined with the fact that they are not usually deployed, often causes developers to think that tests fall outside of the design of the system. This is a catastrophic point of view. Tests that are not well integrated into the design of the system tend to be fragile, and they make the system rigid and difficult to change.</p>
 <blockquote>
 <p>由于测试代码的独立性，以及往往不会被部署到生产坏境的特点，开发者常常会在系统设计中忽视测试的重要性，这种做法是极为错误的。测试如果没有被集成到系统设计中，往往是非常脆弱的，这种脆弱性会使得系统变得死板，非常难以更改。</p>
@@ -1246,7 +1242,7 @@
 <blockquote>
 <p>要想解决这个问题，就必须在设计中考虑到系统的可测试性。软件设计的第一条原则——不管是为了可测试性还是其他什么东西——是不变的，就是不要依赖于多变的东西。譬如，GUI 往往是多变的，因此通过 GUI 来验证系统的测试一定是脆弱的。因此，我们在系统设汁与测试设计时，应该让业务逻辑不通过 GUI 也可以被测试。</p>
 </blockquote>
-<h2 id="the-testing-api-测试专用-api">THE TESTING API 测试专用 API</h2>
+<h2 id="the-testing-api-测试专用-api"><a name="the-testing-api-测试专用-api" class="anchor-navigation-ex-anchor" href="#the-testing-api-测试专用-api"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. THE TESTING API 测试专用 API</h2>
 <p>The way to accomplish this goal is to create a specific API that the tests can use to verify all the business rules. This API should have superpowers that allow the tests to avoid security constraints, bypass expensive resources (such as databases), and force the system into particular testable states. This API will be a superset of the suite of interactors and interface adapters that are used by the user interface.</p>
 <blockquote>
 <p>设计这样一个系统的方法之一就是专门为验证业务逻辑的测试创建一个 API。这个 API 应该被授予超级用户权限，允许测试代码可以忽视安全限制，绕过那些成本高昂的资源（例如数据库），强制将系统设置到某种可测试的状态中。总而言之，该 API 应该成为用户界面所用到的交互器与接口适配器的一个超集。</p>
@@ -1255,7 +1251,7 @@
 <blockquote>
 <p>设置测试 API 是为了将测试部分从应用程序中分离出来。换句话说，这种解耦动作不只是为了分隔测试部分与 UI 部分，而是要将测试代码的结构与应用程序其他部分的代码结构分开。</p>
 </blockquote>
-<h3 id="structural-coupling-结构性耦合">STRUCTURAL COUPLING 结构性耦合</h3>
+<h3 id="structural-coupling-结构性耦合"><a name="structural-coupling-结构性耦合" class="anchor-navigation-ex-anchor" href="#structural-coupling-结构性耦合"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. STRUCTURAL COUPLING 结构性耦合</h3>
 <p>Structural coupling is one of the strongest, and most insidious, forms of test coupling. Imagine a test suite that has a test class for every production class, and a set of test methods for every production method. Such a test suite is deeply coupled to the structure of the application.</p>
 <blockquote>
 <p>结构性耦合是测试代码所具有的耦合关系中最强大、最阴险的一种形式。假设我们现在有一组测试套件，它针对每个产品类都有一个对应的测试类，每个产品函数都有一个对应的测试函数。显然，该测试套件与应用程序在结构上是紧耦合的。</p>
@@ -1272,18 +1268,18 @@
 <blockquote>
 <p>这种对演进过程的隔离是很重要的，因为随着时间的推移，测试代码趋向于越来越具体和详细。相比之下，我们的产品代码则会趋向于越来越抽象和通用。结构性的强耦合可能会让这种必需的演进无法进行——至少会形成强烈的干扰。</p>
 </blockquote>
-<h3 id="security-安全性">SECURITY 安全性</h3>
+<h3 id="security-安全性"><a name="security-安全性" class="anchor-navigation-ex-anchor" href="#security-安全性"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.2. SECURITY 安全性</h3>
 <p>The superpowers of the testing API could be dangerous if they were deployed in production systems. If this is a concern, then the testing API, and the dangerous parts of its implementation, should be kept in a separate, independently deployable component.</p>
 <blockquote>
 <p>当然，这种具有超级权限的测试专用 API 如果被部署到我们的产品系统中，可能会是非常危险的。如果要避免这种情况发生，应该将测试专用 API 及其对应的具体实现放置在一个单独的、可独立部署的组件中。</p>
 </blockquote>
-<h2 id="conclusion-本章小结">CONCLUSION 本章小结</h2>
+<h2 id="conclusion-本章小结"><a name="conclusion-本章小结" class="anchor-navigation-ex-anchor" href="#conclusion-本章小结"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. CONCLUSION 本章小结</h2>
 <p>Tests are not outside the system; rather, they are parts of the system that must be well designed if they are to provide the desired benefits of stability and regression. Tests that are not designed as part of the system tend to be fragile and difficult to maintain. Such tests often wind up on the maintenance room floor—discarded because they are too difficult to maintain.</p>
 <blockquote>
 <p>测试并不是独立于整个系统之外的，恰恰相反，它们是系统的一个重要组成部分。我们需要精心设计这些测试，才能让它们发挥验证系统稳定性和预防问题复发的作用。没有按系统组成部分来设计的测试代码，往往是非常脆弱且难以维护的。这种测试最后常常会被抛弃，因为它们终究会出问题。</p>
 </blockquote>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-26 21:50:34
+2022-07-26 15:54:49
 </span></footer>
                                 
                                 </section>
@@ -1327,7 +1323,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"测试边界","level":"1.9.5.14","depth":3,"next":{"title":"整洁的嵌入式架构","level":"1.9.5.15","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/29-整洁的嵌入式架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/29-整洁的嵌入式架构.md","articles":[]},"previous":{"title":"服务：宏观和微观","level":"1.9.5.13","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/27-服务：宏观和微观.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/27-服务：宏观和微观.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/05-第五部分-软件架构/28-测试边界.md","mtime":"2022-07-26T13:50:34.437Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"测试边界","level":"1.9.5.14","depth":3,"next":{"title":"整洁的嵌入式架构","level":"1.9.5.15","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/29-整洁的嵌入式架构.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/29-整洁的嵌入式架构.md","articles":[]},"previous":{"title":"服务：宏观和微观","level":"1.9.5.13","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/27-服务：宏观和微观.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/27-服务：宏观和微观.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/05-第五部分-软件架构/28-测试边界.md","mtime":"2022-07-26T07:54:49.795Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1393,19 +1389,7 @@
         
     
         
-        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         

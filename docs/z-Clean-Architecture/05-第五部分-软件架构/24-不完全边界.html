@@ -32,15 +32,11 @@
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
-                
-            
-                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-cmb-pageview/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
                 
             
                 
@@ -1194,7 +1190,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="chap24-partial-boundaries-不完全边界">Chap24. PARTIAL BOUNDARIES 不完全边界</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#chap24-partial-boundaries-不完全边界"><b>1. </b>Chap24. PARTIAL BOUNDARIES 不完全边界</a></li><ul><li><span class="title-icon "></span><a href="#skip-the-last-step-省掉最后一步"><b>1.1. </b>SKIP THE LAST STEP 省掉最后一步</a></li><li><span class="title-icon "></span><a href="#one-dimensional-boundaries-单向边界"><b>1.2. </b>ONE-DIMENSIONAL BOUNDARIES 单向边界</a></li><li><span class="title-icon "></span><a href="#facades-门户模式"><b>1.3. </b>FACADES 门户模式</a></li><li><span class="title-icon "></span><a href="#conclusion-本章小结"><b>1.4. </b>CONCLUSION 本章小结</a></li></ul></ul></div><a href="#chap24-partial-boundaries-不完全边界" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="chap24-partial-boundaries-不完全边界"><a name="chap24-partial-boundaries-不完全边界" class="anchor-navigation-ex-anchor" href="#chap24-partial-boundaries-不完全边界"><i class="fa fa-link" aria-hidden="true"></i></a>1. Chap24. PARTIAL BOUNDARIES 不完全边界</h1>
 <p><img src="../un/CH-UN24.jpg" alt></p>
 <p>Full-fledged architectural boundaries are expensive. They require reciprocal polymorphic Boundary interfaces, Input and Output data structures, and all of the dependency management necessary to isolate the two sides into independently compilable and deployable components. That takes a lot of work. It’s also a lot of work to maintain.</p>
 <blockquote>
@@ -1208,7 +1204,7 @@
 <blockquote>
 <p>但这种预防性设计在敏捷社区里是饱受诟病的，因为它显然违背了 YAGNI 原则（&quot;You Are’t Going to Need It”，意即“不要预测未来的需要”）。然而，架构师的工作本身就是要做这样的预见性设计，这时候，我们就需要引入不完全边界（partial boundary）的概念了。</p>
 </blockquote>
-<h2 id="skip-the-last-step-省掉最后一步">SKIP THE LAST STEP 省掉最后一步</h2>
+<h2 id="skip-the-last-step-省掉最后一步"><a name="skip-the-last-step-省掉最后一步" class="anchor-navigation-ex-anchor" href="#skip-the-last-step-省掉最后一步"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. SKIP THE LAST STEP 省掉最后一步</h2>
 <p>One way to construct a partial boundary is to do all the work necessary to create independently compilable and deployable components, and then simply keep them together in the same component. The reciprocal interfaces are there, the input/output data structures are there, and everything is all set up—but we compile and deploy all of them as a single component.</p>
 <blockquote>
 <p>构建不完全边界的一种方式就是在将系统分割成一系列可以独立编译、独立部署的组件之后，再把它们构建成一个组件。换句话说，在将系统中所有的接口、用于输入/输出的数据格式等每一件事都设置好之后，仍选择将它们统一编译和部署为一个组件。</p>
@@ -1225,7 +1221,7 @@
 <blockquote>
 <p>在这里，FitNcssc 项目的故事也可以作为一个反例来说明这种设计的危害性。随着时间的推移，我们慢慢发现，将 Web 组件独立的需求越来越少，Wiki 组件与 Web 组件的隔离也弱化了。到如今，如果真想要再分离 Web 组件的话，会需要不少工作量。</p>
 </blockquote>
-<h2 id="one-dimensional-boundaries-单向边界">ONE-DIMENSIONAL BOUNDARIES 单向边界</h2>
+<h2 id="one-dimensional-boundaries-单向边界"><a name="one-dimensional-boundaries-单向边界" class="anchor-navigation-ex-anchor" href="#one-dimensional-boundaries-单向边界"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. ONE-DIMENSIONAL BOUNDARIES 单向边界</h2>
 <p>The full-fledged architectural boundary uses reciprocal boundary interfaces to maintain isolation in both directions. Maintaining separation in both directions is expensive both in initial setup and in ongoing maintenance.</p>
 <blockquote>
 <p>在设计一套完整的系统架构边界时，往往需要用反向接口来维护边界两侧组件的隔离性。而且，维护这种双向的隔离性，通常不会是一次性的工作，它需要我们持续地长期投入资源维护下去。</p>
@@ -1240,7 +1236,7 @@
 <blockquote>
 <p>很明显，上述设计为未来构建完整的系统架构边界打下了坚实基础。为了未来将 Client 与 ServiceImpl 隔离，必要的依赖反转已经做完了。同时，我们也能清楚地看到，图中的虚线箭头代表了未来有可能很快就会出问题的隔离问题。由于没有采用双向反向接口，这部分就只能依赖开发者和架构师的自律性来保证组件持久隔离了。</p>
 </blockquote>
-<h2 id="facades-门户模式">FACADES 门户模式</h2>
+<h2 id="facades-门户模式"><a name="facades-门户模式" class="anchor-navigation-ex-anchor" href="#facades-门户模式"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. FACADES 门户模式</h2>
 <p>An even simpler boundary is the Facade pattern, illustrated in Figure 24.2. In this case, even the dependency inversion is sacrificed. The boundary is simply defined by the Facade class, which lists all the services as methods, and deploys the service calls to classes that the client is not supposed to access.</p>
 <blockquote>
 <p>下面，我们再来看一个更简单的架构边界设计：采用门户模式（facade pattern），其架构如图 24.2 所示。在这种模式下，我们连依赖反转的工作都可以省了。这里的边界将只能由 Facade 类来定义，这个类的背后是一份包含了所有服务函数的列表，它会负责将 Client 的调用传递给对 client 不可见的服务函数。</p>
@@ -1251,7 +1247,7 @@
 <blockquote>
 <p>但需要注意的是，在该设计中 Client 会传递性地依赖于所有的 Service 类。在静态类型语言中，这就意味着对 Service 类的源码所做的任何修改都会导致 Client 的重新编译。另外，我们应该也能想象得到为这种结构建立反向通道是多容易的事。</p>
 </blockquote>
-<h2 id="conclusion-本章小结">CONCLUSION 本章小结</h2>
+<h2 id="conclusion-本章小结"><a name="conclusion-本章小结" class="anchor-navigation-ex-anchor" href="#conclusion-本章小结"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. CONCLUSION 本章小结</h2>
 <p>We’ve seen three simple ways to partially implement an architectural boundary. There are, of course, many others. These three strategies are simply offered as examples.</p>
 <blockquote>
 <p>在本章，我们介绍了三种不完全地实现架构边界的简单方法。当然，这类边界还有许多种其他实现方式，本章所介绍的这三种策略只为示范之用。</p>
@@ -1265,7 +1261,7 @@
 <p>架构师的职责之一就是预判未来哪里有可能会需要设置架构边界，并决定应该以完全形式还是不完全形式来实现它们。</p>
 </blockquote>
 <footer class="page-footer"><span class="copyright">© Jasonk0 all right reserved，powered by Gitbook</span><span class="footer-modification">该文件修订时间：
-2022-07-26 21:50:34
+2022-07-26 15:54:49
 </span></footer>
                                 
                                 </section>
@@ -1309,7 +1305,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"不完全边界","level":"1.9.5.10","depth":3,"next":{"title":"层次与边界","level":"1.9.5.11","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/25-层次与边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/25-层次与边界.md","articles":[]},"previous":{"title":"展示器和谦卑对象","level":"1.9.5.9","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/23-展示器和谦卑对象.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/23-展示器和谦卑对象.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","back-to-top-button","cmb-pageview","page-toc","custom-favicon"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"icon/favicon.ico","back-to-top-button":{},"custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/05-第五部分-软件架构/24-不完全边界.md","mtime":"2022-07-26T13:50:34.436Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-26T15:00:13.117Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"不完全边界","level":"1.9.5.10","depth":3,"next":{"title":"层次与边界","level":"1.9.5.11","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/25-层次与边界.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/25-层次与边界.md","articles":[]},"previous":{"title":"展示器和谦卑对象","level":"1.9.5.9","depth":3,"path":"z-Clean-Architecture/05-第五部分-软件架构/23-展示器和谦卑对象.md","ref":"z-Clean-Architecture/05-第五部分-软件架构/23-展示器和谦卑对象.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","hide-element","tbfed-pagefooter","highlight","code","cmb-pageview","custom-favicon","anchor-navigation-ex"],"root":"bookEdit","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy Jasonk0","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"search":{},"cmb-pageview":{},"page-toc":{"selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","position":"top","showByDefault":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"showLevel":true,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"favicon":"icon/favicon.ico","custom-favicon":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"producer":"jasonk0","structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":"*"},"file":{"path":"z-Clean-Architecture/05-第五部分-软件架构/24-不完全边界.md","mtime":"2022-07-26T07:54:49.795Z","type":"markdown"},"gitbook":{"version":"3.7.5","time":"2022-07-27T00:38:34.392Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1375,19 +1371,7 @@
         
     
         
-        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
-        
-    
-        
         <script src="../../gitbook/gitbook-plugin-cmb-pageview/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
         
     
         
