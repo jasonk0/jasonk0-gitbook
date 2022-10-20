@@ -1,30 +1,30 @@
 {
-	"producer": "jasonk0",
-	"root": "bookEdit",
-	"plugins": [
-		"chapter-fold",
-		"hide-element",
-		"tbfed-pagefooter",
-		"highlight",
-		"code",
-		"cmb-pageview",
-		"custom-favicon",
-		"anchor-navigation-ex"
-	],
-	"pluginsConfig": {
-		"hide-element": {
-			"elements": [".gitbook-link"]
-		},
-		"tbfed-pagefooter": {
-			"copyright": "&copy Jasonk0",
-			"modify_label": "该文件修订时间：",
-			"modify_format": "YYYY-MM-DD HH:mm:ss"
-		},
-		"page-toc": {
-			"selector": ".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4",
-			"position": "top",
-			"showByDefault": false
-		},
-		"favicon": "icon/favicon.ico"
-	}
+  "producer": "jasonk0",
+  "root": "bookEdit",
+  "plugins": [
+    "chapter-fold",
+    "hide-element",
+    "tbfed-pagefooter",
+    "highlight",
+    "code",
+    "pageview-count",
+    "custom-favicon",
+    "anchor-navigation-ex"
+  ],
+  "pluginsConfig": {
+    "hide-element": {
+      "elements": [".gitbook-link"]
+    },
+    "tbfed-pagefooter": {
+      "copyright": "&copy Jasonk0",
+      "modify_label": "该文件修订时间：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "page-toc": {
+      "selector": ".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4",
+      "position": "top",
+      "showByDefault": false
+    },
+    "favicon": "icon/favicon.ico"
+  }
 }
