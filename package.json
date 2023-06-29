@@ -35,6 +35,7 @@
 		"gitbook-plugin-highlight": "^2.0.3",
 		"gitbook-plugin-pageview-count": "^1.0.1",
 		"gitbook-plugin-tbfed-pagefooter": "^0.0.1",
-		"gitbook-plugin-terminal": "^0.3.2"
+		"gitbook-plugin-terminal": "^0.3.2",
+		"gitbook-summary-xiayu": "^1.2.5"
 	}
 }
